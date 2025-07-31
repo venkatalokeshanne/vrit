@@ -26,7 +26,7 @@ export default function AboutUs() {
             About <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">VR IT Solutions</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-4xl mx-auto leading-relaxed">
-            Let your investment reap huge returns – it's the knowledge that drives the intellect and powers you to be a next generation technocrat!
+            Let your investment reap huge returns – it&apos;s the knowledge that drives the intellect and powers you to be a next generation technocrat!
           </p>
         </div>
       </section>
@@ -86,7 +86,7 @@ export default function AboutUs() {
                 This means, you will always stay ahead of other professionals in the industry, equipped with the latest tools in emerging platforms or technologies to get started for next generation careers. Rest assured, your money is worth the investment and you will never be disappointed.
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
-                What's more? To compliment your technical expertise, we also offer courses in basic etiquette – how to communicate, face interviews and above all certain valuable tips to succeed in this competitive world. These skills are quite vital from a professional stand point, boosting your confidence level and helping you face stringent competition.
+                What&apos;s more? To compliment your technical expertise, we also offer courses in basic etiquette – how to communicate, face interviews and above all certain valuable tips to succeed in this competitive world. These skills are quite vital from a professional stand point, boosting your confidence level and helping you face stringent competition.
               </p>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function AboutUs() {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">About VR IT Solutions</h2>
             <div className="text-center space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
-                VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room trainings from Hyderabad. VR IT solutions is trained & placed thousands of people in major MNC's like Infosys, Wipro, Accenture, Deloitte, Cognizant, Cap Gemini... and other companies as well.
+                VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room trainings from Hyderabad. VR IT solutions is trained & placed thousands of people in major MNC&apos;s like Infosys, Wipro, Accenture, Deloitte, Cognizant, Cap Gemini... and other companies as well.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mt-8">
                 {['Infosys', 'Wipro', 'Accenture', 'Deloitte', 'Cognizant', 'Cap Gemini'].map((company, index) => (
