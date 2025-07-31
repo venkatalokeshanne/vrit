@@ -32,30 +32,30 @@ import Link from 'next/link';
 
 export default function Home() {
   const courses = [
-    { name: 'ServiceNow', duration: '40 Days', icon: Cloud, color: 'from-blue-500 to-cyan-500' },
-    { name: 'Salesforce', duration: '40 Days', icon: Zap, color: 'from-green-500 to-teal-500' },
-    { name: 'SAP FICO', duration: '50 Days', icon: Database, color: 'from-purple-500 to-pink-500' },
-    { name: 'Pega', duration: '40 Days', icon: Zap, color: 'from-pink-500 to-rose-500' },
-    { name: 'Azure DevOps & AWS Cloud', duration: '90 Days', icon: Cpu, color: 'from-indigo-500 to-purple-500' },
-    { name: 'Mulesoft', duration: '40 Days', icon: Cloud, color: 'from-teal-500 to-blue-500' },
-    { name: 'SAS Clinical', duration: '40 Days', icon: Database, color: 'from-emerald-500 to-green-500' },
-    { name: 'SAP Basis', duration: '50 Days', icon: Database, color: 'from-orange-500 to-red-500' },
-    { name: 'SAP EWM', duration: '70 Days', icon: Database, color: 'from-yellow-500 to-orange-500' },
-    { name: 'SAP HANA Admin', duration: '40 Days', icon: Database, color: 'from-purple-600 to-pink-600' },
-    { name: 'S/4 HANA Finance', duration: '40 Days', icon: Database, color: 'from-blue-600 to-cyan-600' },
-    { name: 'SAP Leonardo', duration: '50 Days', icon: Brain, color: 'from-green-600 to-teal-600' },
-    { name: 'SAP Security & GRC', duration: '60 Days', icon: Shield, color: 'from-red-500 to-pink-500' },
-    { name: 'SAP Logistics', duration: '40 Days', icon: Database, color: 'from-indigo-600 to-purple-600' },
-    { name: 'Data Science', duration: '90 Hours', icon: Brain, color: 'from-orange-500 to-red-500' },
-    { name: 'Python', duration: '40 Days', icon: Code, color: 'from-yellow-500 to-orange-500' },
-    { name: 'Python With AWS', duration: '40 Days', icon: Code, color: 'from-green-500 to-blue-500' },
-    { name: 'Workday', duration: '60 Days', icon: Users, color: 'from-purple-500 to-pink-500' },
-    { name: 'Machine Learning With Python', duration: '60 Days', icon: Brain, color: 'from-blue-500 to-purple-500' },
-    { name: 'DevOps With AWS', duration: '60 Days', icon: Cpu, color: 'from-teal-500 to-cyan-500' },
-    { name: 'Informatica MDM', duration: '30 Days', icon: Database, color: 'from-pink-500 to-red-500' },
-    { name: 'Full Stack Developer', duration: '45 Days', icon: Code, color: 'from-indigo-500 to-blue-500' },
-    { name: 'EDI Training', duration: '45 Days', icon: Code, color: 'from-emerald-500 to-teal-500' },
-    { name: 'Hadoop', duration: '60 Days', icon: Database, color: 'from-orange-600 to-yellow-600' }
+    { name: 'ServiceNow', duration: '40 Days', icon: Cloud, color: 'from-blue-500 to-cyan-500', link: '/servicenow-training-in-hyderabad' },
+    { name: 'Salesforce', duration: '40 Days', icon: Zap, color: 'from-green-500 to-teal-500', link: null },
+    { name: 'SAP FICO', duration: '50 Days', icon: Database, color: 'from-purple-500 to-pink-500', link: null },
+    { name: 'Pega', duration: '40 Days', icon: Zap, color: 'from-pink-500 to-rose-500', link: null },
+    { name: 'Azure DevOps & AWS Cloud', duration: '90 Days', icon: Cpu, color: 'from-indigo-500 to-purple-500', link: null },
+    { name: 'Mulesoft', duration: '40 Days', icon: Cloud, color: 'from-teal-500 to-blue-500', link: null },
+    { name: 'SAS Clinical', duration: '40 Days', icon: Database, color: 'from-emerald-500 to-green-500', link: null },
+    { name: 'SAP Basis', duration: '50 Days', icon: Database, color: 'from-orange-500 to-red-500', link: null },
+    { name: 'SAP EWM', duration: '70 Days', icon: Database, color: 'from-yellow-500 to-orange-500', link: null },
+    { name: 'SAP HANA Admin', duration: '40 Days', icon: Database, color: 'from-purple-600 to-pink-600', link: null },
+    { name: 'S/4 HANA Finance', duration: '40 Days', icon: Database, color: 'from-blue-600 to-cyan-600', link: null },
+    { name: 'SAP Leonardo', duration: '50 Days', icon: Brain, color: 'from-green-600 to-teal-600', link: null },
+    { name: 'SAP Security & GRC', duration: '60 Days', icon: Shield, color: 'from-red-500 to-pink-500', link: null },
+    { name: 'SAP Logistics', duration: '40 Days', icon: Database, color: 'from-indigo-600 to-purple-600', link: null },
+    { name: 'Data Science', duration: '90 Hours', icon: Brain, color: 'from-orange-500 to-red-500', link: null },
+    { name: 'Python', duration: '40 Days', icon: Code, color: 'from-yellow-500 to-orange-500', link: null },
+    { name: 'Python With AWS', duration: '40 Days', icon: Code, color: 'from-green-500 to-blue-500', link: null },
+    { name: 'Workday', duration: '60 Days', icon: Users, color: 'from-purple-500 to-pink-500', link: null },
+    { name: 'Machine Learning With Python', duration: '60 Days', icon: Brain, color: 'from-blue-500 to-purple-500', link: null },
+    { name: 'DevOps With AWS', duration: '60 Days', icon: Cpu, color: 'from-teal-500 to-cyan-500', link: null },
+    { name: 'Informatica MDM', duration: '30 Days', icon: Database, color: 'from-pink-500 to-red-500', link: null },
+    { name: 'Full Stack Developer', duration: '45 Days', icon: Code, color: 'from-indigo-500 to-blue-500', link: null },
+    { name: 'EDI Training', duration: '45 Days', icon: Code, color: 'from-emerald-500 to-teal-500', link: null },
+    { name: 'Hadoop', duration: '60 Days', icon: Database, color: 'from-orange-600 to-yellow-600', link: null }
   ];
 
   const features = [
@@ -571,12 +571,22 @@ export default function Home() {
                     {course.name}
                   </h3>
                   <p className="text-white/60 mb-4 text-sm">Duration: {course.duration}</p>
-                  <button
-                    className={`w-full bg-gradient-to-r ${course.color} text-white py-2 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm`}
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
+                  {course.link ? (
+                    <Link
+                      href={course.link}
+                      className={`w-full bg-gradient-to-r ${course.color} text-white py-2 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm`}
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  ) : (
+                    <button
+                      className={`w-full bg-gradient-to-r ${course.color} text-white py-2 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 text-sm`}
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
