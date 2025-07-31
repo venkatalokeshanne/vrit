@@ -1,7 +1,36 @@
-'use client';
-
 import React from 'react';
 import { CheckCircle, Users, Target, TrendingUp, Award, Clock, MapPin, Mail, Phone, Globe, BookOpen, Monitor, Code, Briefcase, Star, ArrowRight } from 'lucide-react';
+
+export const metadata = {
+  title: 'About VR IT Solutions | Best Software Training Institute Hyderabad',
+  description: 'Learn about VR IT Solutions - Leading software training institute in Hyderabad since 2019. Expert trainers, practical learning, 100% placement assistance. Discover our story, mission & values.',
+  keywords: 'about VR IT Solutions, software training institute hyderabad history, IT training institute ameerpet, expert trainers, practical learning, corporate training, placement assistance, technology courses, professional development',
+  openGraph: {
+    title: 'About VR IT Solutions | Best Software Training Institute Hyderabad',
+    description: 'Learn about VR IT Solutions - Leading software training institute in Hyderabad since 2019. Expert trainers, practical learning, 100% placement assistance.',
+    url: 'https://www.vritsol.com/aboutus',
+    siteName: 'VR IT Solutions',
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+        alt: 'About VR IT Solutions - Best Software Training Institute in Hyderabad',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About VR IT Solutions | Best Software Training Institute Hyderabad',
+    description: 'Learn about VR IT Solutions - Leading software training institute in Hyderabad since 2019. Expert trainers, practical learning, 100% placement assistance.',
+    images: ['/logo.png'],
+  },
+  alternates: {
+    canonical: 'https://www.vritsol.com/aboutus',
+  },
+};
 
 export default function AboutUs() {
   const courses = [

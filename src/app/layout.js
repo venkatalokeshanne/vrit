@@ -14,9 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Best Software Training Institute In Hyderabad | VR IT Solutions',
-  description: 'Get knowledge in practical way, Everyone satisfied with our innovation way of knowledge transfer. Best Software Training Institute in Hyderabad for best brains! Online & Classroom training available.',
-  keywords: 'software training institute hyderabad, best training institute hyderabad, online training, classroom training, placement assistance, job support, IT training, python training, data science training, servicenow training, salesforce training, SAP training, AWS training, DevOps training, Hadoop training, Pega training, Workday training, Mulesoft training, VR IT Solutions, Hyderabad IT training, software courses, placement guarantee, industry experts, IIT, NIT, live projects, mock interviews, certification support, corporate training',
+  title: {
+    default: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
+    template: '%s | VR IT Solutions'
+  },
+  description: 'Leading software training institute in Hyderabad offering 20+ technology courses with 100% placement assistance. Expert trainers, practical learning, online & classroom training.',
+  keywords: 'software training institute hyderabad, IT training, placement assistance, technology courses, VR IT Solutions',
   authors: [{ name: 'VR IT Solutions' }],
   creator: 'VR IT Solutions',
   publisher: 'VR IT Solutions',
@@ -32,32 +35,29 @@ export const metadata = {
     telephone: false,
   },
   metadataBase: new URL('https://www.vritsol.com'),
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
-    title: 'Best Software Training Institute In Hyderabad | VR IT Solutions',
-    description: 'Transform your career with VR IT Solutions - Best Software Training Institute in Hyderabad. 100% placement assistance, expert trainers, online & classroom training available.',
+    title: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
+    description: 'Leading software training institute in Hyderabad offering 20+ technology courses with 100% placement assistance.',
     url: 'https://www.vritsol.com',
     siteName: 'VR IT Solutions',
     type: 'website',
     locale: 'en_US',
     images: [
       {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
+        url: '/logo.png',
+        width: 800,
+        height: 600,
         alt: 'VR IT Solutions - Best Software Training Institute in Hyderabad',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Software Training Institute In Hyderabad | VR IT Solutions',
-    description: 'Transform your career with VR IT Solutions - Best Software Training Institute in Hyderabad. 100% placement assistance, expert trainers.',
+    title: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
+    description: 'Leading software training institute in Hyderabad offering 20+ technology courses with 100% placement assistance.',
     site: '@vritsolutions',
     creator: '@vritsolutions',
-    images: ['/twitter-image.jpg'],
+    images: ['/logo.png'],
   },
   robots: {
     index: true,

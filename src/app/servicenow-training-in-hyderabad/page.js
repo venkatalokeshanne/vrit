@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import { 
@@ -26,6 +24,37 @@ import {
   Mail,
   Briefcase
 } from 'lucide-react';
+
+export const metadata = {
+  title: 'ServiceNow Training in Hyderabad | Best ServiceNow Course | VR IT Solutions',
+  description: 'Master ServiceNow with expert training in Hyderabad. 40-day comprehensive course covering ITSM, ITOM, HR Service Delivery. 100% placement assistance, live projects, certification guidance.',
+  keywords: 'ServiceNow training hyderabad, ServiceNow course, ServiceNow certification, ITSM training, ITOM training, ServiceNow developer, ServiceNow admin, ServiceNow online training, ServiceNow classroom training, ServiceNow placement, ServiceNow job support, ServiceNow ameerpet',
+  openGraph: {
+    title: 'ServiceNow Training in Hyderabad | Best ServiceNow Course | VR IT Solutions',
+    description: 'Master ServiceNow with expert training in Hyderabad. 40-day comprehensive course covering ITSM, ITOM, HR Service Delivery. 100% placement assistance.',
+    url: 'https://www.vritsol.com/servicenow-training-in-hyderabad',
+    siteName: 'VR IT Solutions',
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+        alt: 'VR IT Solutions - ServiceNow Training in Hyderabad',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ServiceNow Training in Hyderabad | Best ServiceNow Course',
+    description: 'Master ServiceNow with expert training in Hyderabad. 40-day comprehensive course covering ITSM, ITOM, HR Service Delivery. 100% placement assistance.',
+    images: ['/logo.png'],
+  },
+  alternates: {
+    canonical: 'https://www.vritsol.com/servicenow-training-in-hyderabad',
+  },
+};
 
 export default function ServiceNowTraining() {
   const courseModules = [
@@ -116,14 +145,20 @@ export default function ServiceNowTraining() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                  <a 
+                    href="mailto:info@vritsol.com?subject=ServiceNow Training Enquiry&body=Hi, I am interested in ServiceNow training. Please provide more details."
+                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                  >
                     <ArrowRight className="w-5 h-5" />
                     Enquire Now
-                  </button>
-                  <button className="border border-blue-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                  </a>
+                  <a 
+                    href="mailto:info@vritsol.com?subject=ServiceNow Course Content Request&body=Hi, Please send me the ServiceNow course content and syllabus."
+                    className="border border-blue-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                  >
                     <Download className="w-5 h-5" />
                     Download Course Content
-                  </button>
+                  </a>
                 </div>
               </div>
             </section>
@@ -240,14 +275,20 @@ export default function ServiceNowTraining() {
                 So, what are you waiting for? Join now to make ServiceNow as your career and get a highly paid job!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                <a 
+                  href="mailto:info@vritsol.com?subject=ServiceNow Training Enquiry&body=Hi, I am interested in joining ServiceNow training. Please provide more details about the course, fees, and next batch."
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                >
                   <ArrowRight className="w-5 h-5" />
                   Join Now
-                </button>
-                <button className="border border-blue-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                </a>
+                <a 
+                  href="tel:+919032734343"
+                  className="border border-blue-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                >
                   <Phone className="w-5 h-5" />
                   Call +91-9032734343
-                </button>
+                </a>
               </div>
             </section>
 

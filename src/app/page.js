@@ -28,6 +28,37 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Best Software Training Institute In Hyderabad | VR IT Solutions',
+  description: 'Transform your career with VR IT Solutions - Best Software Training Institute in Hyderabad. 20+ courses including Python, Data Science, ServiceNow, SAP, Salesforce with 100% placement assistance.',
+  keywords: 'software training institute hyderabad, best training institute hyderabad, online training, classroom training, placement assistance, job support, IT training, python training, data science training, servicenow training, salesforce training, SAP training, AWS training, DevOps training, Hadoop training, Pega training, Workday training, Mulesoft training, VR IT Solutions',
+  openGraph: {
+    title: 'Best Software Training Institute In Hyderabad | VR IT Solutions',
+    description: 'Transform your career with VR IT Solutions - Best Software Training Institute in Hyderabad. 20+ courses with 100% placement assistance.',
+    url: 'https://www.vritsol.com',
+    siteName: 'VR IT Solutions',
+    images: [
+      {
+        url: '/logo.png',
+        width: 800,
+        height: 600,
+        alt: 'VR IT Solutions - Best Software Training Institute in Hyderabad',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Software Training Institute In Hyderabad | VR IT Solutions',
+    description: 'Transform your career with VR IT Solutions - Best Software Training Institute in Hyderabad. 20+ courses with 100% placement assistance.',
+    images: ['/logo.png'],
+  },
+  alternates: {
+    canonical: 'https://www.vritsol.com',
+  },
+};
+
 
 
 export default function Home() {
