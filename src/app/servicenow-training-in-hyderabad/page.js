@@ -108,7 +108,7 @@ export default function ServiceNowTraining() {
                 </div>
 
                 <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                  <span className="text-orange-400 font-bold">VRIT Solutions</span> is a prominent name in the Hyderabad's best ServiceNow training. We are one stop solution for people looking for top and best ServiceNow Training.
+                  <span className="text-orange-400 font-bold">VRIT Solutions</span> is a prominent name in the Hyderabad&apos;s best ServiceNow training. We are one stop solution for people looking for top and best ServiceNow Training.
                 </p>
 
                 <p className="text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -148,10 +148,10 @@ export default function ServiceNowTraining() {
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Why should you join this course?</h2>
               <div className="prose prose-lg prose-invert max-w-none space-y-4">
                 <p className="text-gray-300 leading-relaxed">
-                  With ServiceNow having great future in both India and abroad, it offers excellent value for professionals working in this platform and also for existing technocrats, who are interested to migrate to this new platform. ServiceNow is being used by most of the world's top multinationals, wherein professionals in this area are earning very high salaries when compared to other technologies.
+                  With ServiceNow having great future in both India and abroad, it offers excellent value for professionals working in this platform and also for existing technocrats, who are interested to migrate to this new platform. ServiceNow is being used by most of the world&apos;s top multinationals, wherein professionals in this area are earning very high salaries when compared to other technologies.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Make <span className="text-teal-400 font-semibold">VR IT solutions</span> as your first choice for Servicenow training in Hyderabad due to its systematic training methodology and state-of-the-art practical sessions! So, don't stay behind. Join now for a lucrative career.
+                  Make <span className="text-teal-400 font-semibold">VR IT solutions</span> as your first choice for Servicenow training in Hyderabad due to its systematic training methodology and state-of-the-art practical sessions! So, don&apos;t stay behind. Join now for a lucrative career.
                 </p>
               </div>
             </section>
@@ -182,7 +182,7 @@ export default function ServiceNowTraining() {
               <section className="bg-gradient-to-br from-blue-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-6">Pre-requisites</h2>
                 <p className="text-gray-300 leading-relaxed">
-                  VR IT solutions haven't specified any key pre-requisites for doing this course. However, participants, who have prior knowledge on any similar platforms, may better appreciate this course.
+                  VR IT solutions haven&apos;t specified any key pre-requisites for doing this course. However, participants, who have prior knowledge on any similar platforms, may better appreciate this course.
                 </p>
               </section>
 
@@ -220,7 +220,7 @@ export default function ServiceNowTraining() {
                   In order to work on practicals, some basic pre-requisites are required. You need a good internet connection, along with the required software that needs to be installed.
                 </p>
                 <p className="text-gray-300 leading-relaxed mt-3">
-                  This ServiceNow training in Hyderabad and ServiceNow Online Training course is designed to train the students with experience of the ServiceNow Tool from the end user, support team member, administrator and developer's perspective.
+                  This ServiceNow training in Hyderabad and ServiceNow Online Training course is designed to train the students with experience of the ServiceNow Tool from the end user, support team member, administrator and developer&apos;s perspective.
                 </p>
               </div>
 

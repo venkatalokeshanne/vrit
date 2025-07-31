@@ -227,7 +227,7 @@ export default function Home() {
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
-                What's unique about
+                What&apos;s unique about
               </span>
               <br />
               <span className="text-white">VR IT Training Center?</span>
@@ -446,7 +446,7 @@ export default function Home() {
               </h2>
               
               <p className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed">
-                That's what we would precisely define ourselves. In this competitive world, nothing succeeds like knowledge and knowledge is true wealth, which manifests and grows in leaps and bounds. We earnestly believe that every student or a professional, who acquires software training with us should be equipped with the necessary weapons to face the fierce competitive world and emerge victorious. For this, we leverage the best platforms and impart the latest courses in software – be it Hadoop Training, Python Training, Data Science Training, Informatica Training, Servicenow Training, SAP HANA Training, SAP MDM Training, Google Cloud Training, Azure Training or Pega Training etc., to transform you into a full fledged professional, where your success is only measured by your knowledge. So, it's time to tighten your belts to jump start your career to dizzying heights – get the best out of your investment.
+                That&apos;s what we would precisely define ourselves. In this competitive world, nothing succeeds like knowledge and knowledge is true wealth, which manifests and grows in leaps and bounds. We earnestly believe that every student or a professional, who acquires software training with us should be equipped with the necessary weapons to face the fierce competitive world and emerge victorious. For this, we leverage the best platforms and impart the latest courses in software – be it Hadoop Training, Python Training, Data Science Training, Informatica Training, Servicenow Training, SAP HANA Training, SAP MDM Training, Google Cloud Training, Azure Training or Pega Training etc., to transform you into a full fledged professional, where your success is only measured by your knowledge. So, it&apos;s time to tighten your belts to jump start your career to dizzying heights – get the best out of your investment.
               </p>
 
               <div className="bg-gradient-to-r from-orange-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -506,7 +506,7 @@ export default function Home() {
               Our Students Work At
             </h3>
             <p className="text-white/70">
-              VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room tainings from Hyderabad. VR IT solutions is trained & placed thousands of people in majour MNC's like Infosys, Wipro, Accenture, Delloite, Cognizent, Cap Gemini and other companies as well.
+              VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room tainings from Hyderabad. VR IT solutions is trained & placed thousands of people in majour MNC&apos;s like Infosys, Wipro, Accenture, Delloite, Cognizent, Cap Gemini and other companies as well.
             </p>
           </div>
           
