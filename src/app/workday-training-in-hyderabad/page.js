@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -34,72 +35,7 @@ import {
   Network
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best Workday Training in Hyderabad | #1 Workday Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best Workday Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Workday online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'Workday training in Hyderabad, Best Workday training in Hyderabad, Workday training in Ameerpet, Workday online training in Ameerpet, Workday course training, Workday HCM training in hyderabad, Workday training institutes in Hyderabad, Workday training institute in Ameerpet, Workday Finance training Hyderabad, Workday HR training, Workday certification training, Workday placement assistance, Workday job support, Workday training Kukatpally, Workday training Madhapur, Workday training SR Nagar, Workday training Dilsukhnagar, top Workday institute Hyderabad, Workday corporate training, Workday weekend batches, Workday live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best Workday Training in Hyderabad | #1 Workday Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best Workday Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Workday online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/workday-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Workday Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best Workday Training in Hyderabad | #1 Workday Course Institute | 100% Placement',
-    description: 'Best Workday Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/workday-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/workday-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best Workday Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'Workday Training, HCM Training, Finance Training, Technology Education',
-    'DC.description': 'Professional Workday training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('workday-training-in-hyderabad');
 
 export default function WorkdayTraining() {
   const workdayFaqs = [
@@ -606,6 +542,20 @@ export default function WorkdayTraining() {
 
         </div>
       </div>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('workday-training-in-hyderabad'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('workday-training-in-hyderabad'))
+        }}
+      />
       </div>
     </>
   );

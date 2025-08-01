@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -29,72 +30,7 @@ import {
   Shield
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best Pega Training in Hyderabad | #1 Pega Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best Pega Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Pega online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'Pega training in Hyderabad, Best Pega training in Hyderabad, Pega training in Ameerpet, Pega online training in Ameerpet, Pega BPM training, Pega CRM training in hyderabad, Pega training institutes in Hyderabad, Pega training institute in Ameerpet, Pega certification training, Pega placement assistance, Pega job support, Pega training Kukatpally, Pega training Madhapur, Pega training SR Nagar, Pega training Dilsukhnagar, top Pega institute Hyderabad, Pega corporate training, Pega weekend batches, Pega live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best Pega Training in Hyderabad | #1 Pega Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best Pega Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Pega online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/pega-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/pega.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Pega Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best Pega Training in Hyderabad | #1 Pega Course Institute | 100% Placement',
-    description: 'Best Pega Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/pega.jpg'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/pega-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/pega-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best Pega Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'Pega Training, BPM Training, Technology Education',
-    'DC.description': 'Professional Pega training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('pega-training-in-hyderabad');
 
 export default function PegaTraining() {
   const pegaFaqs = [
@@ -464,6 +400,20 @@ export default function PegaTraining() {
         </div>
       </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('pega-training-in-hyderabad'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('pega-training-in-hyderabad'))
+        }}
+      />
     </>
   );
 }

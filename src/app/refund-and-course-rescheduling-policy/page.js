@@ -1,5 +1,6 @@
 import React from 'react';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata';
 
 // FAQ Data for Refund and Course Rescheduling Policy
 const refundPolicyFaqs = [
@@ -45,56 +46,7 @@ const refundPolicyFaqs = [
   }
 ];
 
-export const metadata = {
-  title: 'Refund and Course Rescheduling Policy | VR IT Solutions',
-  description: 'Refund and Course Rescheduling Policy for VR IT Solutions - Learn about our refund terms and conditions for training courses.',
-  keywords: 'refund policy, course rescheduling, cancellation, training courses, VR IT Solutions',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Legal',
-  classification: 'Policy',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Refund and Course Rescheduling Policy | VR IT Solutions',
-    description: 'Refund and Course Rescheduling Policy for VR IT Solutions - Learn about our refund terms and conditions for training courses.',
-    url: 'https://vrit-ten.vercel.app/refund-and-course-rescheduling-policy',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Refund and Course Rescheduling Policy - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Refund and Course Rescheduling Policy | VR IT Solutions',
-    description: 'Refund and Course Rescheduling Policy for VR IT Solutions - Learn about our refund terms and conditions for training courses.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/refund-and-course-rescheduling-policy',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/refund-and-course-rescheduling-policy',
-    },
-  },
-};
+export const metadata = getPageMetadata('refund-and-course-rescheduling-policy');
 
 export default function RefundAndCourseReschedulingPolicy() {
   return (
@@ -169,6 +121,14 @@ export default function RefundAndCourseReschedulingPolicy() {
 
         </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('refund-and-course-rescheduling-policy'))
+        }}
+      />
     </div>
   );
 }

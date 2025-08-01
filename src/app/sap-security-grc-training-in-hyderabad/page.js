@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Phone,
   Star, 
@@ -34,65 +35,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'SAP GRC & Security Online Training In Hyderabad | VR IT Solutions',
-  description: 'Master SAP Security and GRC with VR IT Solutions in Hyderabad. Expert-led training covering User Administration, Role Administration, SOX compliance, and audit requirements. 60 days course with placement assistance.',
-  keywords: 'SAP Security training, SAP GRC training, SAP Security online training Hyderabad, GRC access controls, SAP audit, SOX compliance, user administration, role administration, SAP training institute Hyderabad',
-  openGraph: {
-    title: 'SAP GRC & Security Online Training In Hyderabad | VR IT Solutions',
-    description: 'Master SAP Security and GRC with expert training in User Administration, Role Administration, and compliance. 60 days comprehensive course with placement support.',
-    url: 'https://www.vritsol.com/sap-security-grc-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: '/sap-security-training.jpg',
-        width: 800,
-        height: 600,
-        alt: 'SAP Security & GRC Training in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'SAP GRC & Security Online Training In Hyderabad | VR IT Solutions',
-    description: 'Master SAP Security and GRC with expert training in User Administration, Role Administration, and compliance. 60 days comprehensive course.',
-    images: ['/sap-security-training.jpg'],
-  },
-  alternates: {
-    canonical: 'https://www.vritsol.com/sap-security-grc-training-in-hyderabad',
-  },
-};
-
-// JSON-LD structured data
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "SAP GRC & Security Training",
-  "description": "Comprehensive SAP Security and GRC training covering User Administration, Role Administration, SOX compliance, and audit requirements with hands-on experience.",
-  "provider": {
-    "@type": "Organization",
-    "name": "VR IT Solutions",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Telangana",
-      "postalCode": "500016",
-      "addressCountry": "IN"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-9032734343",
-      "contactType": "Admissions"
-    }
-  },
-  "courseMode": ["Online", "Classroom"],
-  "duration": "60 Days",
-  "educationalLevel": "Intermediate to Advanced",
-  "teaches": ["SAP Security", "SAP GRC", "User Administration", "Role Administration", "SOX Compliance", "Audit Requirements"]
-};
+export const metadata = getPageMetadata('sap-security-grc-training-in-hyderabad');
 
 export default function SAPSecurityGRCTraining() {
   const courseBenefits = [
@@ -473,6 +416,24 @@ export default function SAPSecurityGRCTraining() {
         </div>
 
       </div>
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('sap-security-grc-training-in-hyderabad'))
+        }}
+      />
+      
+      {/* Review Structured Data */}
+      {getReviewStructuredData('sap-security-grc-training-in-hyderabad') && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getReviewStructuredData('sap-security-grc-training-in-hyderabad'))
+          }}
+        />
+      )}
     </>
   );
 }

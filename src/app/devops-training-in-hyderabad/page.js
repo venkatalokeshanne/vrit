@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -41,72 +42,7 @@ import {
   HardDrive
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best AWS with DevOps Training in Hyderabad | #1 DevOps Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best AWS with DevOps Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best DevOps online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'DevOps training in Hyderabad, Best DevOps training in Hyderabad, AWS DevOps training in Ameerpet, DevOps online training in Ameerpet, DevOps course training, AWS DevOps training in hyderabad, DevOps training institutes in Hyderabad, DevOps training institute in Ameerpet, AWS DevOps training Hyderabad, Jenkins training, Docker training, DevOps certification training, DevOps placement assistance, DevOps job support, DevOps training Kukatpally, DevOps training Madhapur, DevOps training SR Nagar, DevOps training Dilsukhnagar, top DevOps institute Hyderabad, DevOps corporate training, DevOps weekend batches, DevOps live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best AWS with DevOps Training in Hyderabad | #1 DevOps Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best AWS with DevOps Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best DevOps online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/devops-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'AWS with DevOps Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best AWS with DevOps Training in Hyderabad | #1 DevOps Course Institute | 100% Placement',
-    description: 'Best AWS with DevOps Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/devops-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/devops-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best AWS with DevOps Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'DevOps Training, AWS Training, Cloud DevOps Training, Technology Education',
-    'DC.description': 'Professional AWS with DevOps training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('devops-training-in-hyderabad');
 
 export default function DevOpsTraining() {
   const curriculumTopics = [
@@ -594,6 +530,20 @@ export default function DevOpsTraining() {
         </div>
       </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('devops-training-in-hyderabad'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('devops-training-in-hyderabad'))
+        }}
+      />
     </>
   );
 }

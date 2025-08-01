@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -28,72 +29,7 @@ import {
   Shield
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best SAP FICO Training in Hyderabad | #1 SAP FICO Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best SAP FICO Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAP FICO online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'SAP FICO training in Hyderabad, Best SAP FICO training in Hyderabad, SAP FICO training in Ameerpet, SAP FICO online training in Ameerpet, SAP Financial Accounting training, SAP Controlling training in hyderabad, SAP FICO training institutes in Hyderabad, SAP FICO training institute in Ameerpet, SAP FICO certification training, SAP FICO placement assistance, SAP FICO job support, SAP FICO training Kukatpally, SAP FICO training Madhapur, SAP FICO training SR Nagar, SAP FICO training Dilsukhnagar, top SAP FICO institute Hyderabad, SAP FICO corporate training, SAP FICO weekend batches, SAP FICO live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best SAP FICO Training in Hyderabad | #1 SAP FICO Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best SAP FICO Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAP FICO online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/sap-fico-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/sap-fico.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'SAP FICO Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best SAP FICO Training in Hyderabad | #1 SAP FICO Course Institute | 100% Placement',
-    description: 'Best SAP FICO Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/sap-fico.jpg'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/sap-fico-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/sap-fico-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best SAP FICO Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'SAP FICO Training, SAP Training, Technology Education',
-    'DC.description': 'Professional SAP FICO training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('sap-fico-training-in-hyderabad');
 
 export default function SapFicoTraining() {
   const sapFicoFaqs = [
@@ -442,6 +378,24 @@ export default function SapFicoTraining() {
 
         </div>
       </div>
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('sap-fico-training-in-hyderabad'))
+        }}
+      />
+      
+      {/* Review Structured Data */}
+      {getReviewStructuredData('sap-fico-training-in-hyderabad') && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getReviewStructuredData('sap-fico-training-in-hyderabad'))
+          }}
+        />
+      )}
       </div>
     </>
   );

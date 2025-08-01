@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -47,72 +48,7 @@ import {
   Palette
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best Full Stack Developer Training in Hyderabad | #1 Full Stack Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best Full Stack Developer Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Full Stack Developer online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'Full Stack Developer training in Hyderabad, Best Full Stack training in Hyderabad, Full Stack Developer training in Ameerpet, Full Stack online training in Ameerpet, Full Stack course training, Java Full Stack training in hyderabad, Full Stack Developer training institutes in Hyderabad, Full Stack training institute in Ameerpet, Angular training Hyderabad, Spring Boot training, Full Stack certification training, Full Stack placement assistance, Full Stack job support, Full Stack training Kukatpally, Full Stack training Madhapur, Full Stack training SR Nagar, Full Stack training Dilsukhnagar, top Full Stack institute Hyderabad, Full Stack corporate training, Full Stack weekend batches, Full Stack live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best Full Stack Developer Training in Hyderabad | #1 Full Stack Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best Full Stack Developer Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Full Stack Developer online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/full-stack-developer-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Full Stack Developer Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best Full Stack Developer Training in Hyderabad | #1 Full Stack Course Institute | 100% Placement',
-    description: 'Best Full Stack Developer Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/full-stack-developer-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/full-stack-developer-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best Full Stack Developer Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'Full Stack Developer Training, Java Training, Angular Training, Technology Education',
-    'DC.description': 'Professional Full Stack Developer training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('full-stack-developer-training-in-hyderabad');
 
 export default function FullStackDeveloperTraining() {
   const curriculumTopics = [
@@ -591,6 +527,20 @@ export default function FullStackDeveloperTraining() {
         </div>
       </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('full-stack-developer-training-in-hyderabad'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('full-stack-developer-training-in-hyderabad'))
+        }}
+      />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Phone,
   Star, 
@@ -34,65 +35,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'SAP Leonardo Training In Hyderabad | VR IT Solutions',
-  description: 'Master SAP Leonardo with VR IT Solutions in Hyderabad. Expert-led training covering Machine Learning, IoT, Big Data, and Blockchain integration. 50 days course with placement assistance.',
-  keywords: 'SAP Leonardo training, SAP Leonardo course Hyderabad, Machine Learning SAP, IoT SAP training, SAP Cloud Platform, SAP Leonardo certification, SAP training institute Hyderabad',
-  openGraph: {
-    title: 'SAP Leonardo Training In Hyderabad | VR IT Solutions',
-    description: 'Master SAP Leonardo with expert training in Machine Learning, IoT, and emerging technologies. 50 days comprehensive course with placement support.',
-    url: 'https://www.vritsol.com/sap-leonardo-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: '/sap-leonardo-training.jpg',
-        width: 800,
-        height: 600,
-        alt: 'SAP Leonardo Training in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'SAP Leonardo Training In Hyderabad | VR IT Solutions',
-    description: 'Master SAP Leonardo with expert training in Machine Learning, IoT, and emerging technologies. 50 days comprehensive course.',
-    images: ['/sap-leonardo-training.jpg'],
-  },
-  alternates: {
-    canonical: 'https://www.vritsol.com/sap-leonardo-training-in-hyderabad',
-  },
-};
-
-// JSON-LD structured data
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "SAP Leonardo Training",
-  "description": "Comprehensive SAP Leonardo training covering Machine Learning, IoT, Big Data, and Blockchain integration with hands-on experience.",
-  "provider": {
-    "@type": "Organization",
-    "name": "VR IT Solutions",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Telangana",
-      "postalCode": "500016",
-      "addressCountry": "IN"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-9032734343",
-      "contactType": "Admissions"
-    }
-  },
-  "courseMode": ["Online", "Classroom"],
-  "duration": "50 Days",
-  "educationalLevel": "Intermediate to Advanced",
-  "teaches": ["SAP Leonardo", "Machine Learning", "IoT", "Big Data", "Blockchain", "Predictive Analytics"]
-};
+export const metadata = getPageMetadata('sap-leonardo-training-in-hyderabad');
 
 export default function SAPLeonardoTraining() {
   const courseBenefits = [
@@ -563,6 +506,24 @@ export default function SAPLeonardoTraining() {
         </div>
 
       </div>
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('sap-leonardo-training-in-hyderabad'))
+        }}
+      />
+      
+      {/* Review Structured Data */}
+      {getReviewStructuredData('sap-leonardo-training-in-hyderabad') && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getReviewStructuredData('sap-leonardo-training-in-hyderabad'))
+          }}
+        />
+      )}
     </>
   );
 }

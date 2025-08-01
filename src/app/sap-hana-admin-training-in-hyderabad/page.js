@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -34,72 +35,7 @@ import {
   Activity
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best SAP HANA Admin Training in Hyderabad | #1 SAP HANA Admin Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best SAP HANA Admin Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAP HANA Admin online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'SAP HANA Admin training in Hyderabad, Best SAP HANA Admin training in Hyderabad, SAP HANA Admin training in Ameerpet, SAP HANA Admin online training in Ameerpet, SAP HANA Administration training, SAP HANA Database Administration training, SAP HANA Admin training institutes in Hyderabad, SAP HANA Admin training institute in Ameerpet, SAP HANA performance tuning training, SAP HANA Admin certification training, SAP HANA Admin placement assistance, SAP HANA Admin job support, SAP HANA Admin training Kukatpally, SAP HANA Admin training Madhapur, SAP HANA Admin training SR Nagar, SAP HANA Admin training Dilsukhnagar, top SAP HANA Admin institute Hyderabad, SAP HANA Admin corporate training, SAP HANA Admin weekend batches, SAP HANA Admin live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best SAP HANA Admin Training in Hyderabad | #1 SAP HANA Admin Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best SAP HANA Admin Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAP HANA Admin online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/sap-hana-admin-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/sap-hana-admin.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'SAP HANA Admin Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best SAP HANA Admin Training in Hyderabad | #1 SAP HANA Admin Course Institute | 100% Placement',
-    description: 'Best SAP HANA Admin Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/sap-hana-admin.jpg'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/sap-hana-admin-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/sap-hana-admin-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best SAP HANA Admin Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'SAP HANA Admin Training, SAP HANA Administration Training, Technology Education',
-    'DC.description': 'Professional SAP HANA Admin training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('sap-hana-admin-training-in-hyderabad');
 
 export default function SAPHANAAdminTraining() {
   const whoCanJoin = [
@@ -421,6 +357,24 @@ export default function SAPHANAAdminTraining() {
 
         </div>
       </div>
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('sap-hana-admin-training-in-hyderabad'))
+        }}
+      />
+      
+      {/* Review Structured Data */}
+      {getReviewStructuredData('sap-hana-admin-training-in-hyderabad') && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getReviewStructuredData('sap-hana-admin-training-in-hyderabad'))
+          }}
+        />
+      )}
       </div>
     </>
   );

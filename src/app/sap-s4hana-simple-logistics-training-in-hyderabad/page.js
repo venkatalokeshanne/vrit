@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Phone,
   Star, 
@@ -34,65 +35,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Simple Logistics Training In Hyderabad | SAP S/4HANA | VR IT Solutions',
-  description: 'Master SAP S/4HANA Simple Logistics with VR IT Solutions in Hyderabad. Expert-led training covering Material Management, Supply Chain, and Production Planning. 40 days course with placement assistance.',
-  keywords: 'SAP Simple Logistics training, SAP S/4HANA Simple Logistics, Material Management, Supply Chain Management, Production Planning, SAP training institute Hyderabad, logistics training',
-  openGraph: {
-    title: 'Simple Logistics Training In Hyderabad | SAP S/4HANA | VR IT Solutions',
-    description: 'Master SAP S/4HANA Simple Logistics with expert training in Material Management, Supply Chain, and Production Planning. 40 days comprehensive course with placement support.',
-    url: 'https://www.vritsol.com/sap-s4hana-simple-logistics-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: '/sap-simple-logistics-training.jpg',
-        width: 800,
-        height: 600,
-        alt: 'SAP S/4HANA Simple Logistics Training in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Simple Logistics Training In Hyderabad | SAP S/4HANA | VR IT Solutions',
-    description: 'Master SAP S/4HANA Simple Logistics with expert training in Material Management, Supply Chain, and Production Planning. 40 days comprehensive course.',
-    images: ['/sap-simple-logistics-training.jpg'],
-  },
-  alternates: {
-    canonical: 'https://www.vritsol.com/sap-s4hana-simple-logistics-training-in-hyderabad',
-  },
-};
-
-// JSON-LD structured data
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Course",
-  "name": "SAP S/4HANA Simple Logistics Training",
-  "description": "Comprehensive SAP S/4HANA Simple Logistics training covering Material Management, Supply Chain, Production Planning, and Sales & Distribution with hands-on experience.",
-  "provider": {
-    "@type": "Organization",
-    "name": "VR IT Solutions",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Telangana",
-      "postalCode": "500016",
-      "addressCountry": "IN"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91-9032734343",
-      "contactType": "Admissions"
-    }
-  },
-  "courseMode": ["Online", "Classroom"],
-  "duration": "40 Days",
-  "educationalLevel": "Intermediate to Advanced",
-  "teaches": ["SAP S/4HANA Simple Logistics", "Material Management", "Supply Chain Management", "Production Planning", "Sales & Distribution"]
-};
+export const metadata = getPageMetadata('sap-s4hana-simple-logistics-training-in-hyderabad');
 
 export default function SAPSimpleLogisticsTraining() {
   const courseBenefits = [
@@ -647,6 +590,24 @@ export default function SAPSimpleLogisticsTraining() {
         </div>
 
       </div>
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('sap-s4hana-simple-logistics-training-in-hyderabad'))
+        }}
+      />
+      
+      {/* Review Structured Data */}
+      {getReviewStructuredData('sap-s4hana-simple-logistics-training-in-hyderabad') && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getReviewStructuredData('sap-s4hana-simple-logistics-training-in-hyderabad'))
+          }}
+        />
+      )}
     </>
   );
 }

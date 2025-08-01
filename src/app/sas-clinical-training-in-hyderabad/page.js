@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -31,6 +32,8 @@ import {
   Activity,
   Heart
 } from 'lucide-react';
+
+export const metadata = getPageMetadata('sas-clinical-training-in-hyderabad');
 
 // FAQ Data for SAS Clinical Training
 const sasClinicalFaqs = [
@@ -75,73 +78,6 @@ const sasClinicalFaqs = [
     answer: "We provide lifetime access to course materials, monthly updates on regulatory changes, job support for initial 6 months, access to clinical datasets for practice, networking with pharmaceutical professionals, and ongoing mentorship. Our support includes help with real-world clinical programming challenges and career advancement guidance."
   }
 ];
-
-export const metadata = {
-  title: 'Best SAS Clinical Training in Hyderabad | #1 SAS Clinical Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best SAS Clinical Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAS Clinical online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'SAS Clinical training in Hyderabad, Best SAS Clinical training in Hyderabad, SAS Clinical training in Ameerpet, SAS Clinical online training in Ameerpet, Clinical SAS training, SAS Programming training, SAS Clinical training institutes in Hyderabad, SAS Clinical training institute in Ameerpet, Clinical data analysis training, SAS Clinical certification training, SAS Clinical placement assistance, SAS Clinical job support, SAS Clinical training Kukatpally, SAS Clinical training Madhapur, SAS Clinical training SR Nagar, SAS Clinical training Dilsukhnagar, top SAS Clinical institute Hyderabad, SAS Clinical corporate training, SAS Clinical weekend batches, SAS Clinical live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best SAS Clinical Training in Hyderabad | #1 SAS Clinical Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best SAS Clinical Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAS Clinical online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/sas-clinical-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/sas-clinical.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'SAS Clinical Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best SAS Clinical Training in Hyderabad | #1 SAS Clinical Course Institute | 100% Placement',
-    description: 'Best SAS Clinical Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/sas-clinical.jpg'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/sas-clinical-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/sas-clinical-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best SAS Clinical Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'SAS Clinical Training, Clinical Data Analysis Training, Technology Education',
-    'DC.description': 'Professional SAS Clinical training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
 
 export default function SASClinicalTraining() {
   const courseStructure = [
@@ -511,6 +447,24 @@ export default function SASClinicalTraining() {
 
         </div>
       </div>
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('sas-clinical-training-in-hyderabad'))
+        }}
+      />
+      
+      {/* Review Structured Data */}
+      {getReviewStructuredData('sas-clinical-training-in-hyderabad') && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getReviewStructuredData('sas-clinical-training-in-hyderabad'))
+          }}
+        />
+      )}
       </div>
     </>
   );

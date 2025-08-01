@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -32,72 +33,7 @@ import {
   Zap
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best Python with AWS Training in Hyderabad | #1 Python AWS Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best Python with AWS Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Python with AWS online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'Python with AWS training in Hyderabad, Best Python AWS training in Hyderabad, Python AWS training in Ameerpet, Python boto3 training in Ameerpet, Python AWS course training, Python cloud training in hyderabad, Python AWS training institutes in Hyderabad, Python AWS training institute in Ameerpet, AWS SDK training Hyderabad, boto3 python training, Python AWS certification training, Python AWS placement assistance, Python AWS job support, Python AWS training Kukatpally, Python AWS training Madhapur, Python AWS training SR Nagar, Python AWS training Dilsukhnagar, top Python AWS institute Hyderabad, Python AWS corporate training, Python AWS weekend batches, Python AWS live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best Python with AWS Training in Hyderabad | #1 Python AWS Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best Python with AWS Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Python with AWS online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/python-with-aws-training',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Python with AWS Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best Python with AWS Training in Hyderabad | #1 Python AWS Course Institute | 100% Placement',
-    description: 'Best Python with AWS Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/python-with-aws-training',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/python-with-aws-training',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best Python with AWS Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'Python with AWS Training, Cloud Computing Training, Technology Education',
-    'DC.description': 'Professional Python with AWS training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('python-with-aws-training');
 
 export default function PythonWithAWSTraining() {
   const pythonAWSFaqs = [
@@ -418,6 +354,20 @@ export default function PythonWithAWSTraining() {
         </div>
       </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('python-with-aws-training'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('python-with-aws-training'))
+        }}
+      />
     </>
   );
 }

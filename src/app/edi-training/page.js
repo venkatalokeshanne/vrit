@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -50,72 +51,7 @@ import {
   Shuffle
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best EDI Training in Hyderabad | #1 EDI Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best EDI Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best EDI online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'EDI training in Hyderabad, Best EDI training in Hyderabad, EDI training in Ameerpet, EDI online training in Ameerpet, EDI course training, Sterling B2B Integrator training in hyderabad, EDI training institutes in Hyderabad, EDI training institute in Ameerpet, Electronic Data Interchange training Hyderabad, IBM Sterling Integrator training, EDI certification training, EDI placement assistance, EDI job support, EDI training Kukatpally, EDI training Madhapur, EDI training SR Nagar, EDI training Dilsukhnagar, top EDI institute Hyderabad, EDI corporate training, EDI weekend batches, EDI live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best EDI Training in Hyderabad | #1 EDI Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best EDI Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best EDI online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/edi-training',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'EDI Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best EDI Training in Hyderabad | #1 EDI Course Institute | 100% Placement',
-    description: 'Best EDI Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/edi-training',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/edi-training',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best EDI Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'EDI Training, Sterling B2B Integrator Training, Electronic Data Interchange Training, Technology Education',
-    'DC.description': 'Professional EDI training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('edi-training');
 
 export default function EDITraining() {
   const ediFaqs = [
@@ -496,6 +432,20 @@ export default function EDITraining() {
         </div>
       </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('edi-training'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('edi-training'))
+        }}
+      />
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -32,72 +33,7 @@ import {
   Layers
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best SAP Basis Training in Hyderabad | #1 SAP Basis Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best SAP Basis Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAP Basis online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'SAP Basis training in Hyderabad, Best SAP Basis training in Hyderabad, SAP Basis training in Ameerpet, SAP Basis online training in Ameerpet, SAP Administration training, SAP System Administration training, SAP Basis training institutes in Hyderabad, SAP Basis training institute in Ameerpet, SAP Security training, SAP Basis certification training, SAP Basis placement assistance, SAP Basis job support, SAP Basis training Kukatpally, SAP Basis training Madhapur, SAP Basis training SR Nagar, SAP Basis training Dilsukhnagar, top SAP Basis institute Hyderabad, SAP Basis corporate training, SAP Basis weekend batches, SAP Basis live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best SAP Basis Training in Hyderabad | #1 SAP Basis Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best SAP Basis Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAP Basis online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/sap-basis-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/sap-basis.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'SAP Basis Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best SAP Basis Training in Hyderabad | #1 SAP Basis Course Institute | 100% Placement',
-    description: 'Best SAP Basis Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/sap-basis.jpg'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/sap-basis-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/sap-basis-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best SAP Basis Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'SAP Basis Training, SAP Administration Training, Technology Education',
-    'DC.description': 'Professional SAP Basis training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('sap-basis-training-in-hyderabad');
 
 export default function SAPBasisTraining() {
   const courseStructure = [
@@ -511,6 +447,20 @@ export default function SAPBasisTraining() {
         </div>
       </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('sap-basis-training-in-hyderabad'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('sap-basis-training-in-hyderabad'))
+        }}
+      />
     </>
   );
 }

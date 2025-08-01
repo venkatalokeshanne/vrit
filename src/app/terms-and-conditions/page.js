@@ -1,5 +1,6 @@
 import React from 'react';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 
 // FAQ Data for Terms and Conditions
 const termsAndConditionsFaqs = [
@@ -45,56 +46,7 @@ const termsAndConditionsFaqs = [
   }
 ];
 
-export const metadata = {
-  title: 'Terms and Conditions | VR IT Solutions',
-  description: 'Terms and Conditions for VR IT Solutions - Read about the terms of service and website usage guidelines.',
-  keywords: 'terms and conditions, terms of service, website usage, VR IT Solutions',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Legal',
-  classification: 'Terms',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Terms and Conditions | VR IT Solutions',
-    description: 'Terms and Conditions for VR IT Solutions - Read about the terms of service and website usage guidelines.',
-    url: 'https://vrit-ten.vercel.app/terms-and-conditions',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Terms and Conditions - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Terms and Conditions | VR IT Solutions',
-    description: 'Terms and Conditions for VR IT Solutions - Read about the terms of service and website usage guidelines.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/terms-and-conditions',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/terms-and-conditions',
-    },
-  },
-};
+export const metadata = getPageMetadata('terms-and-conditions');
 
 export default function TermsAndConditions() {
   return (
@@ -257,6 +209,14 @@ export default function TermsAndConditions() {
 
         </div>
       </div>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('terms-and-conditions'))
+        }}
+      />
     </div>
   );
 }

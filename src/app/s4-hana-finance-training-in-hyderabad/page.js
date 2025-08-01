@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -78,72 +79,7 @@ const s4HanaFinanceFaqs = [
   }
 ];
 
-export const metadata = {
-  title: 'Best S/4 HANA Finance Training in Hyderabad | #1 S/4 HANA Finance Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best S/4 HANA Finance Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best S/4 HANA Finance online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'S/4 HANA Finance training in Hyderabad, Best S/4 HANA Finance training in Hyderabad, S/4 HANA Finance training in Ameerpet, S/4 HANA Finance online training in Ameerpet, SAP Simple Finance training, S/4 HANA Finance training, S/4 HANA Finance training institutes in Hyderabad, S/4 HANA Finance training institute in Ameerpet, S/4 HANA Finance migration training, S/4 HANA Finance certification training, S/4 HANA Finance placement assistance, S/4 HANA Finance job support, S/4 HANA Finance training Kukatpally, S/4 HANA Finance training Madhapur, S/4 HANA Finance training SR Nagar, S/4 HANA Finance training Dilsukhnagar, top S/4 HANA Finance institute Hyderabad, S/4 HANA Finance corporate training, S/4 HANA Finance weekend batches, S/4 HANA Finance live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best S/4 HANA Finance Training in Hyderabad | #1 S/4 HANA Finance Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best S/4 HANA Finance Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best S/4 HANA Finance online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/s4-hana-finance-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/s4-hana-finance.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'S/4 HANA Finance Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best S/4 HANA Finance Training in Hyderabad | #1 S/4 HANA Finance Course Institute | 100% Placement',
-    description: 'Best S/4 HANA Finance Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/s4-hana-finance.jpg'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/s4-hana-finance-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/s4-hana-finance-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best S/4 HANA Finance Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'S/4 HANA Finance Training, SAP Simple Finance Training, Technology Education',
-    'DC.description': 'Professional S/4 HANA Finance training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('s4-hana-finance-training-in-hyderabad');
 
 export default function S4HANAFinanceTraining() {
   const topicsCovered = [
@@ -441,6 +377,20 @@ export default function S4HANAFinanceTraining() {
         </div>
       </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('s4-hana-finance-training-in-hyderabad'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('s4-hana-finance-training-in-hyderabad'))
+        }}
+      />
     </>
   );
 }

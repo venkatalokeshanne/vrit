@@ -1,56 +1,8 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 
-export const metadata = {
-  title: 'Contact Us | VR IT Solutions',
-  description: 'Contact VR IT Solutions - Best Software Training Institute in Hyderabad. Get in touch for course inquiries, training programs, and placement assistance.',
-  keywords: 'contact VR IT Solutions, training institute contact, Hyderabad training center, course inquiries, placement assistance',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Contact',
-  classification: 'Contact',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Contact Us | VR IT Solutions',
-    description: 'Contact VR IT Solutions - Best Software Training Institute in Hyderabad. Get in touch for course inquiries, training programs, and placement assistance.',
-    url: 'https://vrit-ten.vercel.app/contactus',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Contact Us - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Contact Us | VR IT Solutions',
-    description: 'Contact VR IT Solutions - Best Software Training Institute in Hyderabad. Get in touch for course inquiries, training programs, and placement assistance.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/contactus',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/contactus',
-    },
-  },
-};
+export const metadata = getPageMetadata('contactus');
 
 export default function ContactUs() {
   return (
@@ -263,6 +215,14 @@ export default function ContactUs() {
 
           </div>
         </div>
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getStructuredData('contactus'))
+          }}
+        />
       </div>
     </div>
   );

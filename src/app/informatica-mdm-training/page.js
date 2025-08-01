@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -45,72 +46,7 @@ import {
   Link
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best Informatica MDM Training in Hyderabad | #1 Informatica MDM Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best Informatica MDM Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Informatica MDM online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'Informatica MDM training in Hyderabad, Best Informatica MDM training in Hyderabad, Informatica MDM training in Ameerpet, Informatica MDM online training in Ameerpet, Informatica MDM course training, master data management training in hyderabad, Informatica MDM training institutes in Hyderabad, Informatica MDM training institute in Ameerpet, MDM Hub training Hyderabad, data stewardship training, Informatica MDM certification training, Informatica MDM placement assistance, Informatica MDM job support, Informatica MDM training Kukatpally, Informatica MDM training Madhapur, Informatica MDM training SR Nagar, Informatica MDM training Dilsukhnagar, top Informatica MDM institute Hyderabad, Informatica MDM corporate training, Informatica MDM weekend batches, Informatica MDM live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best Informatica MDM Training in Hyderabad | #1 Informatica MDM Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best Informatica MDM Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Informatica MDM online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/informatica-mdm-training',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Informatica MDM Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best Informatica MDM Training in Hyderabad | #1 Informatica MDM Course Institute | 100% Placement',
-    description: 'Best Informatica MDM Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/informatica-mdm-training',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/informatica-mdm-training',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best Informatica MDM Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'Informatica MDM Training, Master Data Management Training, Technology Education',
-    'DC.description': 'Professional Informatica MDM training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('informatica-mdm-training');
 
 export default function InformaticaMDMTraining() {
   const curriculumTopics = [
@@ -606,6 +542,20 @@ export default function InformaticaMDMTraining() {
         </div>
       </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('informatica-mdm-training'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('informatica-mdm-training'))
+        }}
+      />
     </>
   );
 }

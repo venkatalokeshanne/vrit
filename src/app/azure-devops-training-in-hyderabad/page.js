@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -32,72 +33,7 @@ import {
   Server
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best Azure DevOps Training in Hyderabad | #1 Azure DevOps Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best Azure DevOps Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Azure DevOps AWS Cloud online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'Azure DevOps training in Hyderabad, Best Azure DevOps training in Hyderabad, Azure DevOps training in Ameerpet, Azure DevOps online training in Ameerpet, Azure DevOps AWS Cloud training, DevOps training in hyderabad, Azure DevOps training institutes in Hyderabad, Azure DevOps training institute in Ameerpet, Azure DevOps certification training, Azure DevOps placement assistance, Azure DevOps job support, Azure DevOps training Kukatpally, Azure DevOps training Madhapur, Azure DevOps training SR Nagar, Azure DevOps training Dilsukhnagar, top Azure DevOps institute Hyderabad, Azure DevOps corporate training, Azure DevOps weekend batches, Azure DevOps live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best Azure DevOps Training in Hyderabad | #1 Azure DevOps Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best Azure DevOps Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Azure DevOps AWS Cloud online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/azure-devops-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/azure-devops.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Azure DevOps Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best Azure DevOps Training in Hyderabad | #1 Azure DevOps Course Institute | 100% Placement',
-    description: 'Best Azure DevOps Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/azure-devops.jpg'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/azure-devops-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/azure-devops-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best Azure DevOps Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'Azure DevOps Training, Cloud Computing Training, Technology Education',
-    'DC.description': 'Professional Azure DevOps training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('azure-devops-training-in-hyderabad');
 
 export default function AzureDevOpsTraining() {
   const azureDevOpsFaqs = [
@@ -529,6 +465,20 @@ export default function AzureDevOpsTraining() {
 
         </div>
       </div>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('azure-devops-training-in-hyderabad'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('azure-devops-training-in-hyderabad'))
+        }}
+      />
       </div>
     </>
   );

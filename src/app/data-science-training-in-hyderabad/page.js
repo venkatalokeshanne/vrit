@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -32,72 +33,7 @@ import {
   Activity
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best Data Science Training in Hyderabad | #1 Data Science Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best Data Science Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Data Science online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'Data Science training in Hyderabad, Best Data Science training in Hyderabad, Data Science training in Ameerpet, Data Science online training in Ameerpet, Data Science course training, Data Science developer training in hyderabad, Data Science training institutes in Hyderabad, Data Science training institute in Ameerpet, Machine Learning training Hyderabad, Python for Data Science training, Data Science certification training, Data Science placement assistance, Data Science job support, Data Science training Kukatpally, Data Science training Madhapur, Data Science training SR Nagar, Data Science training Dilsukhnagar, top Data Science institute Hyderabad, Data Science corporate training, Data Science weekend batches, Data Science live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best Data Science Training in Hyderabad | #1 Data Science Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best Data Science Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Data Science online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/data-science-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Data Science Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best Data Science Training in Hyderabad | #1 Data Science Course Institute | 100% Placement',
-    description: 'Best Data Science Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/data-science-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/data-science-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best Data Science Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'Data Science Training, Machine Learning Training, Technology Education',
-    'DC.description': 'Professional Data Science training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('data-science-training-in-hyderabad');
 
 export default function DataScienceTraining() {
   const dataScienceFaqs = [
@@ -527,6 +463,20 @@ export default function DataScienceTraining() {
 
         </div>
       </div>
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('data-science-training-in-hyderabad'))
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getReviewStructuredData('data-science-training-in-hyderabad'))
+        }}
+      />
       </div>
     </>
   );

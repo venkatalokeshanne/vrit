@@ -1,5 +1,6 @@
 import React from 'react';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata';
 
 // FAQ Data for Privacy Policy
 const privacyPolicyFaqs = [
@@ -45,56 +46,7 @@ const privacyPolicyFaqs = [
   }
 ];
 
-export const metadata = {
-  title: 'Privacy Policy | VR IT Solutions',
-  description: 'Privacy Policy for VR IT Solutions - Learn about how we collect, use, and protect your personal information.',
-  keywords: 'privacy policy, data protection, personal information, VR IT Solutions',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Legal',
-  classification: 'Policy',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Privacy Policy | VR IT Solutions',
-    description: 'Privacy Policy for VR IT Solutions - Learn about how we collect, use, and protect your personal information.',
-    url: 'https://vrit-ten.vercel.app/privacy-policy',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/logo.png',
-        width: 1200,
-        height: 630,
-        alt: 'Privacy Policy - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Privacy Policy | VR IT Solutions',
-    description: 'Privacy Policy for VR IT Solutions - Learn about how we collect, use, and protect your personal information.',
-    images: ['https://vrit-ten.vercel.app/logo.png'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/privacy-policy',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/privacy-policy',
-    },
-  },
-};
+export const metadata = getPageMetadata('privacy-policy');
 
 export default function PrivacyPolicy() {
   return (
@@ -164,6 +116,14 @@ export default function PrivacyPolicy() {
 
         </div>
       </div>
+
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('privacy-policy'))
+        }}
+      />
     </div>
   );
 }

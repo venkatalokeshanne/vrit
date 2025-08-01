@@ -1,7 +1,6 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Search,
   Star,
@@ -444,27 +443,11 @@ const courses = [
   }
 ];
 
+export const metadata = getPageMetadata('courses');
+
 export default function CoursesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredCourses, setFilteredCourses] = useState(courses);
-
-  useEffect(() => {
-    let filtered = courses;
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(course =>
-        course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        course.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        course.category.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    // Sort by trending first, then by rating
-    filtered = filtered.sort((a, b) => b.trending - a.trending || b.rating - a.rating);
-
-    setFilteredCourses(filtered);
-  }, [searchTerm]);
+  // Sort courses by trending first, then by rating for static display
+  const sortedCourses = courses.sort((a, b) => b.trending - a.trending || b.rating - a.rating);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
@@ -505,9 +488,8 @@ export default function CoursesPage() {
               <input
                 type="text"
                 placeholder="Search courses, technologies, or skills..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all"
+                readOnly
+                className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none transition-all cursor-default"
               />
             </div>
           </div>
@@ -548,14 +530,14 @@ export default function CoursesPage() {
                 All Courses
               </h2>
               <p className="text-gray-400">
-                {filteredCourses.length} course{filteredCourses.length !== 1 ? 's' : ''} found
+                {sortedCourses.length} course{sortedCourses.length !== 1 ? 's' : ''} found
               </p>
             </div>
           </div>
 
           {/* Courses Grid */}
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredCourses.map((course) => (
+            {sortedCourses.map((course) => (
               <div
                 key={course.id}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl overflow-hidden"
@@ -650,23 +632,6 @@ export default function CoursesPage() {
           </div>
 
           {/* No Results */}
-          {filteredCourses.length === 0 && (
-            <div className="text-center py-16">
-              <div className="mb-6">
-                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">No courses found</h3>
-                <p className="text-gray-400">Try adjusting your search or filter criteria</p>
-              </div>
-              <button
-                onClick={() => {
-                  setSearchTerm('');
-                }}
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-semibold hover:shadow-lg transition-all"
-              >
-                Clear Search
-              </button>
-            </div>
-          )}
         </div>
       </section>
 
@@ -721,23 +686,33 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      <style jsx>{`
-        @keyframes blob {
-          0% { transform: translate(0px, 0px) scale(1); }
-          33% { transform: translate(30px, -50px) scale(1.1); }
-          66% { transform: translate(-20px, 20px) scale(0.9); }
-          100% { transform: translate(0px, 0px) scale(1); }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+          }
+          .animate-blob {
+            animation: blob 7s infinite;
+          }
+          .animation-delay-2000 {
+            animation-delay: 2s;
+          }
+          .animation-delay-4000 {
+            animation-delay: 4s;
+          }
+        `
+      }} />
+
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('courses'))
+        }}
+      />
     </div>
   );
 }

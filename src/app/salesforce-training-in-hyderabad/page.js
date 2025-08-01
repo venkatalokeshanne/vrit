@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -29,72 +30,7 @@ import {
   Shield
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best Salesforce Training in Hyderabad | #1 Salesforce Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best Salesforce Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Salesforce online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'Salesforce training in Hyderabad, Best Salesforce training in Hyderabad, Salesforce training in Ameerpet, Salesforce online training in Ameerpet, Salesforce admin training, Salesforce developer training in hyderabad, Salesforce training institutes in Hyderabad, Salesforce training institute in Ameerpet, CRM training Hyderabad, Salesforce certification training, Salesforce placement assistance, Salesforce job support, Salesforce training Kukatpally, Salesforce training Madhapur, Salesforce training SR Nagar, Salesforce training Dilsukhnagar, top Salesforce institute Hyderabad, Salesforce corporate training, Salesforce weekend batches, Salesforce live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best Salesforce Training in Hyderabad | #1 Salesforce Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best Salesforce Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Salesforce online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/salesforce-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/salesforce.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Salesforce Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best Salesforce Training in Hyderabad | #1 Salesforce Course Institute | 100% Placement',
-    description: 'Best Salesforce Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/salesforce.jpg'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/salesforce-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/salesforce-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best Salesforce Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'Salesforce Training, CRM Training, Technology Education',
-    'DC.description': 'Professional Salesforce training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('salesforce-training-in-hyderabad');
 
 export default function SalesforceTraining() {
   const salesforceFaqs = [
@@ -402,6 +338,24 @@ export default function SalesforceTraining() {
         </div>
       </div>
       </div>
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('salesforce-training-in-hyderabad'))
+        }}
+      />
+      
+      {/* Review Structured Data */}
+      {getReviewStructuredData('salesforce-training-in-hyderabad') && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getReviewStructuredData('salesforce-training-in-hyderabad'))
+          }}
+        />
+      )}
     </>
   );
 }

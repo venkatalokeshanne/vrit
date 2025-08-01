@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -26,72 +27,7 @@ import {
   Briefcase
 } from 'lucide-react';
 
-export const metadata = {
-  title: 'Best ServiceNow Training in Hyderabad | #1 ServiceNow Course Institute | 100% Placement | VR IT Solutions',
-  description: 'Best ServiceNow Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best ServiceNow online training in hyderabad with affordable fee and advanced curriculum.',
-  keywords: 'ServiceNow training in Hyderabad, Best ServiceNow training in Hyderabad, ServiceNow training in Ameerpet, ServiceNow online training in Ameerpet, ServiceNow admin training, ServiceNow developer training in hyderabad, ServiceNow training institutes in Hyderabad, ServiceNow training institute in Ameerpet, ITSM training Hyderabad, ITOM training, ServiceNow certification training, ServiceNow placement assistance, ServiceNow job support, ServiceNow training Kukatpally, ServiceNow training Madhapur, ServiceNow training SR Nagar, ServiceNow training Dilsukhnagar, top ServiceNow institute Hyderabad, ServiceNow corporate training, ServiceNow weekend batches, ServiceNow live project training',
-  authors: [{ name: 'VR IT Solutions' }],
-  publisher: 'VR IT Solutions',
-  category: 'Education',
-  classification: 'Training',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    title: 'Best ServiceNow Training in Hyderabad | #1 ServiceNow Course Institute | 100% Placement | VR IT Solutions',
-    description: 'Call@9032734343. Best ServiceNow Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best ServiceNow online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://vrit-ten.vercel.app/servicenow-training-in-hyderabad',
-    siteName: 'VR IT Solutions',
-    images: [
-      {
-        url: 'https://vrit-ten.vercel.app/servicenow.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'ServiceNow Training Course in Hyderabad - VR IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Best ServiceNow Training in Hyderabad | #1 ServiceNow Course Institute | 100% Placement',
-    description: 'Best ServiceNow Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['https://vrit-ten.vercel.app/servicenow.jpg'],
-    creator: '@vritsolutions',
-    site: '@vritsolutions',
-  },
-  alternates: {
-    canonical: 'https://vrit-ten.vercel.app/servicenow-training-in-hyderabad',
-    languages: {
-      'en-US': 'https://vrit-ten.vercel.app/servicenow-training-in-hyderabad',
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code-here',
-  },
-  other: {
-    'geo.region': 'IN-TG',
-    'geo.placename': 'Hyderabad',
-    'geo.position': '17.3850;78.4867',
-    'ICBM': '17.3850, 78.4867',
-    'DC.title': 'Best ServiceNow Training in Hyderabad',
-    'DC.creator': 'VR IT Solutions',
-    'DC.subject': 'ServiceNow Training, ITSM Training, Technology Education',
-    'DC.description': 'Professional ServiceNow training institute in Hyderabad offering comprehensive courses',
-    author: 'vr it solutions',
-    publisher: 'vr it solutions',
-    owner: 'vr it solutions',
-  },
-};
+export const metadata = getPageMetadata('servicenow-training-in-hyderabad');
 
 export default function ServiceNowTraining() {
   const courseModules = [
@@ -532,6 +468,24 @@ export default function ServiceNowTraining() {
 
         </div>
       </div>
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getStructuredData('servicenow-training-in-hyderabad'))
+        }}
+      />
+      
+      {/* Review Structured Data */}
+      {getReviewStructuredData('servicenow-training-in-hyderabad') && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getReviewStructuredData('servicenow-training-in-hyderabad'))
+          }}
+        />
+      )}
       </div>
     </>
   );
