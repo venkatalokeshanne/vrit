@@ -258,6 +258,18 @@ export default function ServiceNowTraining() {
                   <span className="text-white text-3xl md:text-4xl">in Hyderabad</span>
                 </h1>
                 
+                {/* Course Image - Facebook Post Dimensions */}
+                <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
+                  <img
+                    src="/servicenow.png"
+                    alt="ServiceNow Training Course in Hyderabad - VR IT Solutions"
+                    className="w-full object-cover border-2 border-orange-400/30"
+                    style={{ aspectRatio: '1200/630' }}
+                  />
+                  {/* Overlay gradient for better text readability if needed */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
+                </div>
+                
                 <div className="inline-block bg-gradient-to-r from-orange-500/25 to-teal-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-orange-400/40 animate-pulse">
                   <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-3">
                     <div className="flex items-center gap-2">
