@@ -19,33 +19,60 @@ export default function Footer() {
               VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room trainings from Hyderabad.
             </p>
             <div className="flex space-x-4">
-              {[
-                { name: 'Facebook', icon: '📘' },
-                { name: 'Twitter', icon: '🐦' },
-                { name: 'YouTube', icon: '📺' }
-              ].map((social) => (
-                <a
-                  key={social.name}
-                  href="#"
-                  className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-blue-500 transition-all duration-300 text-xl"
-                >
-                  {social.icon}
-                </a>
-              ))}
+              <a
+                href="https://www.facebook.com/vritsolutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-blue-500 transition-all duration-300 text-xl"
+              >
+                📘
+              </a>
+              <a
+                href="https://twitter.com/vritsolutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-blue-500 transition-all duration-300 text-xl"
+              >
+                🐦
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCNbaPhgRjVUDcJSh70X-ZtA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-orange-500 hover:to-blue-500 transition-all duration-300 text-xl"
+              >
+                📺
+              </a>
             </div>
           </div>
 
           <div>
             <h4 className="text-xl font-bold text-white mb-6">Policies & Terms</h4>
             <ul className="space-y-3">
-              {['Privacy Policy', 'Terms & Conditions', 'Refund and Course Rescheduling Policy', 'Contact Us'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
-                    <ChevronRight className="w-4 h-4" />
-                    <span>{link}</span>
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="/privacy-policy" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                  <ChevronRight className="w-4 h-4" />
+                  <span>Privacy Policy</span>
+                </a>
+              </li>
+              <li>
+                <a href="/terms-and-conditions" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                  <ChevronRight className="w-4 h-4" />
+                  <span>Terms & Conditions</span>
+                </a>
+              </li>
+              <li>
+                <a href="/refund-and-course-rescheduling-policy" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                  <ChevronRight className="w-4 h-4" />
+                  <span>Refund and Course Rescheduling Policy</span>
+                </a>
+              </li>
+              <li>
+                <a href="/contactus" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                  <ChevronRight className="w-4 h-4" />
+                  <span>Contact Us</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -98,7 +125,7 @@ export default function Footer() {
 
         <div className="border-t border-white/10 mt-16 pt-8 text-center">
           <p className="text-white/60">
-            © 2025, all rights reserved. VR IT Solutions
+            © 2019, all rights reserved. VR IT Solutions
           </p>
         </div>
       </div>

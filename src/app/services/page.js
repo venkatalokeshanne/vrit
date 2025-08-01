@@ -1,0 +1,378 @@
+import React from 'react';
+import { 
+  Monitor, 
+  Users, 
+  Headphones, 
+  Clock, 
+  Award, 
+  CheckCircle, 
+  ArrowRight, 
+  Phone, 
+  Mail, 
+  MapPin,
+  Play,
+  BookOpen,
+  Target,
+  Zap,
+  Star,
+  Rocket
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'Services - Online/ClassRoom Training | VR IT Solutions',
+  description: 'VR IT Solutions offers Online Training, ClassRoom Training, and Job Support services. Best software training institute in Hyderabad with complete career support.',
+  keywords: 'online training, classroom training, job support, VR IT Solutions, software training services, Hyderabad training institute, career support',
+  authors: [{ name: 'VR IT Solutions' }],
+  publisher: 'VR IT Solutions',
+  category: 'Services',
+  classification: 'Training Services',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Services - Online/ClassRoom Training | VR IT Solutions',
+    description: 'VR IT Solutions offers Online Training, ClassRoom Training, and Job Support services. Best software training institute in Hyderabad with complete career support.',
+    url: 'https://vrit-ten.vercel.app/services',
+    siteName: 'VR IT Solutions',
+    images: [
+      {
+        url: 'https://vrit-ten.vercel.app/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Services - VR IT Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Services - Online/ClassRoom Training | VR IT Solutions',
+    description: 'VR IT Solutions offers Online Training, ClassRoom Training, and Job Support services. Best software training institute in Hyderabad with complete career support.',
+    images: ['https://vrit-ten.vercel.app/logo.png'],
+    creator: '@vritsolutions',
+    site: '@vritsolutions',
+  },
+  alternates: {
+    canonical: 'https://vrit-ten.vercel.app/services',
+    languages: {
+      'en-US': 'https://vrit-ten.vercel.app/services',
+    },
+  },
+};
+
+export default function Services() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-8">
+            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-transparent">
+              Online/ClassRoom Training's
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+            We offer complete support in your career initiatives to take you to the next level of career progression. Join VR IT now, get ahead of others and make an enriching career!
+          </p>
+          
+          {/* Service Categories */}
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            <div className="bg-gradient-to-br from-blue-500/20 via-blue-600/20 to-blue-700/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl hover:scale-105 transition-all duration-300">
+              <Monitor className="w-16 h-16 text-blue-400 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Online Training</h3>
+              <p className="text-blue-200">Learn anytime, anywhere with our comprehensive online training programs</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-purple-500/20 via-purple-600/20 to-purple-700/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl hover:scale-105 transition-all duration-300">
+              <Users className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">ClassRoom Training</h3>
+              <p className="text-purple-200">Interactive classroom sessions with expert trainers and hands-on experience</p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-teal-500/20 via-teal-600/20 to-teal-700/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 shadow-xl hover:scale-105 transition-all duration-300">
+              <Headphones className="w-16 h-16 text-teal-400 mx-auto mb-6" />
+              <h3 className="text-2xl font-bold text-white mb-4">Job Support</h3>
+              <p className="text-teal-200">Complete career support and job placement assistance for your success</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Online Training Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Online Training Content */}
+            <div className="space-y-8">
+              <div className="flex items-center gap-4 mb-8">
+                <Monitor className="w-12 h-12 text-blue-400" />
+                <h2 className="text-4xl md:text-5xl font-bold text-white">
+                  <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    Online Training
+                  </span>
+                </h2>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-500/10 via-cyan-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/20 shadow-xl">
+                <div className="prose prose-lg prose-invert max-w-none">
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    A busy professional like you may not have the required bandwidth to attend class room training and hence to facilitate easy and effective learning, VR IT solutions has specially designed online mode of training for all the courses. We adopt the best practices, excellent learning pedagogies and easy to follow examples to make your learning experience, quite pleasurable and enriching. This online training is supported by exemplary practical training to make you a complete professional and job ready. We offer training in basic and advanced courses to meet your specific career goals. So, get started now to learn anytime, anywhere.
+                  </p>
+                  
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    What's more? We offer complete support in your career initiatives to take you to the next level of career progression.
+                  </p>
+                  
+                  <p className="text-blue-200 font-semibold text-lg">
+                    Join VR IT now, get ahead of others and make an enriching career!
+                  </p>
+                </div>
+                
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105">
+                    <Play className="w-5 h-5" />
+                    Get Started Now
+                  </button>
+                  <button className="border border-blue-400/60 hover:bg-blue-400/10 text-blue-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-300 transition-all duration-300 flex items-center justify-center gap-2">
+                    <Phone className="w-5 h-5" />
+                    Call +91-9032734343
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Online Training Image */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-2xl">
+                <img
+                  src="/logo.png"
+                  alt="Online Training institutes in Hyderabad"
+                  className="w-full rounded-xl shadow-lg"
+                />
+                <div className="absolute -top-4 -right-4 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-bounce shadow-lg">
+                  🎯 Learn Anywhere!
+                </div>
+              </div>
+              
+              {/* Floating Benefits */}
+              <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-blue-600/90 to-cyan-600/90 backdrop-blur-sm rounded-xl p-4 border border-blue-400/30 shadow-xl">
+                <div className="flex items-center gap-2 text-white">
+                  <Clock className="w-5 h-5" />
+                  <span className="font-semibold">Flexible Timing</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Classroom Training Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-gray-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Classroom Training Image */}
+            <div className="lg:order-1 relative">
+              <div className="bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-red-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-2xl">
+                <img
+                  src="/logo.png"
+                  alt="ClassRoom Training institutes in Hyderabad"
+                  className="w-full rounded-xl shadow-lg"
+                />
+                <div className="absolute -top-4 -left-4 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-bounce shadow-lg">
+                  👥 Interactive Learning!
+                </div>
+              </div>
+              
+              {/* Floating Benefits */}
+              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-purple-600/90 to-pink-600/90 backdrop-blur-sm rounded-xl p-4 border border-purple-400/30 shadow-xl">
+                <div className="flex items-center gap-2 text-white">
+                  <Users className="w-5 h-5" />
+                  <span className="font-semibold">Expert Trainers</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Classroom Training Content */}
+            <div className="lg:order-2 space-y-8">
+              <div className="flex items-center gap-4 mb-8">
+                <Users className="w-12 h-12 text-purple-400" />
+                <h2 className="text-4xl md:text-5xl font-bold text-white">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    ClassRoom Training
+                  </span>
+                </h2>
+              </div>
+              
+              <div className="bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-red-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/20 shadow-xl">
+                <div className="prose prose-lg prose-invert max-w-none">
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    Experience hands-on learning with our interactive classroom training sessions. Our expert trainers provide personalized attention and real-time guidance to ensure you master every concept thoroughly. The classroom environment fosters collaborative learning and immediate doubt resolution.
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 gap-6 my-8">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Interactive Sessions</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Expert Trainers</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Hands-on Practice</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <span className="text-gray-300">Immediate Support</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105">
+                    <BookOpen className="w-5 h-5" />
+                    Join Classroom
+                  </button>
+                  <button className="border border-purple-400/60 hover:bg-purple-400/10 text-purple-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-purple-300 transition-all duration-300 flex items-center justify-center gap-2">
+                    <MapPin className="w-5 h-5" />
+                    Visit Center
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Job Support Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Job Support Content */}
+            <div className="space-y-8">
+              <div className="flex items-center gap-4 mb-8">
+                <Headphones className="w-12 h-12 text-teal-400" />
+                <h2 className="text-4xl md:text-5xl font-bold text-white">
+                  <span className="bg-gradient-to-r from-teal-400 to-green-400 bg-clip-text text-transparent">
+                    Job Support
+                  </span>
+                </h2>
+              </div>
+              
+              <div className="bg-gradient-to-br from-teal-500/10 via-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/20 shadow-xl">
+                <div className="prose prose-lg prose-invert max-w-none">
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    Our comprehensive job support services ensure your successful career transition. From resume preparation to interview coaching and placement assistance, we provide end-to-end support to help you secure your dream job in top MNCs.
+                  </p>
+                  
+                  <div className="grid gap-6 my-8">
+                    <div className="flex items-start gap-4 p-4 bg-teal-500/10 rounded-lg border border-teal-400/20">
+                      <Award className="w-6 h-6 text-teal-400 mt-1" />
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">100% Placement Assistance</h4>
+                        <p className="text-gray-300 text-sm">Dedicated placement team to help you find the right job opportunities.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4 p-4 bg-green-500/10 rounded-lg border border-green-400/20">
+                      <Target className="w-6 h-6 text-green-400 mt-1" />
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Resume & Interview Prep</h4>
+                        <p className="text-gray-300 text-sm">Professional resume building and mock interview sessions.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4 p-4 bg-emerald-500/10 rounded-lg border border-emerald-400/20">
+                      <Rocket className="w-6 h-6 text-emerald-400 mt-1" />
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Career Guidance</h4>
+                        <p className="text-gray-300 text-sm">Expert guidance to help you choose the right career path.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <button className="bg-gradient-to-r from-teal-500 to-green-500 hover:from-teal-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105">
+                    <Zap className="w-5 h-5" />
+                    Get Job Support
+                  </button>
+                  <button className="border border-teal-400/60 hover:bg-teal-400/10 text-teal-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-300 transition-all duration-300 flex items-center justify-center gap-2">
+                    <Star className="w-5 h-5" />
+                    Success Stories
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Job Support Image */}
+            <div className="relative">
+              <div className="bg-gradient-to-br from-teal-500/20 via-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 shadow-2xl">
+                <img
+                  src="/logo.png"
+                  alt="Job Support services in Hyderabad"
+                  className="w-full rounded-xl shadow-lg"
+                />
+                <div className="absolute -top-4 -right-4 bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-bounce shadow-lg">
+                  💼 Career Success!
+                </div>
+              </div>
+              
+              {/* Floating Benefits */}
+              <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-teal-600/90 to-green-600/90 backdrop-blur-sm rounded-xl p-4 border border-teal-400/30 shadow-xl">
+                <div className="flex items-center gap-2 text-white">
+                  <Award className="w-5 h-5" />
+                  <span className="font-semibold">100% Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/50 via-purple-900/50 to-teal-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-br from-slate-800/50 via-gray-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-12 border border-gray-700/30 shadow-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Career?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Join thousands of professionals who have advanced their careers with VR IT Solutions. Get started with our comprehensive training and job support services today!
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <a
+                href="tel:+919032734343"
+                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                <Phone className="w-5 h-5" />
+                Call +91-9032734343
+              </a>
+              <a
+                href="mailto:info@vritsol.com"
+                className="border border-blue-400/60 hover:bg-blue-400/10 text-blue-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-300 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Mail className="w-5 h-5" />
+                Email Your Query
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}

@@ -1,0 +1,358 @@
+import React from 'react';
+import CourseSidebar from '../components/CourseSidebar';
+import { 
+  Target, 
+  BookOpen, 
+  Award, 
+  Users, 
+  TrendingUp,
+  Cloud,
+  Monitor,
+  Rocket,
+  Clock,
+  Calendar,
+  Download,
+  CheckCircle,
+  ArrowRight,
+  FileText,
+  Settings,
+  Code,
+  Star,
+  Play,
+  Phone,
+  Globe,
+  Mail,
+  Briefcase,
+  Zap,
+  Database,
+  Shield
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'Best Salesforce Training in Hyderabad | #1 Salesforce Course Institute | 100% Placement | VR IT Solutions',
+  description: 'Best Salesforce Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Salesforce online training in hyderabad with affordable fee and advanced curriculum.',
+  keywords: 'Salesforce training in Hyderabad, Best Salesforce training in Hyderabad, Salesforce training in Ameerpet, Salesforce online training in Ameerpet, Salesforce admin training, Salesforce developer training in hyderabad, Salesforce training institutes in Hyderabad, Salesforce training institute in Ameerpet, CRM training Hyderabad, Salesforce certification training, Salesforce placement assistance, Salesforce job support, Salesforce training Kukatpally, Salesforce training Madhapur, Salesforce training SR Nagar, Salesforce training Dilsukhnagar, top Salesforce institute Hyderabad, Salesforce corporate training, Salesforce weekend batches, Salesforce live project training',
+  authors: [{ name: 'VR IT Solutions' }],
+  publisher: 'VR IT Solutions',
+  category: 'Education',
+  classification: 'Training',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Best Salesforce Training in Hyderabad | #1 Salesforce Course Institute | 100% Placement | VR IT Solutions',
+    description: 'Call@9032734343. Best Salesforce Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Salesforce online training in hyderabad with affordable fee and advanced curriculum.',
+    url: 'https://vrit-ten.vercel.app/salesforce-training-in-hyderabad',
+    siteName: 'VR IT Solutions',
+    images: [
+      {
+        url: 'https://vrit-ten.vercel.app/salesforce.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Salesforce Training Course in Hyderabad - VR IT Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Salesforce Training in Hyderabad | #1 Salesforce Course Institute | 100% Placement',
+    description: 'Best Salesforce Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
+    images: ['https://vrit-ten.vercel.app/salesforce.jpg'],
+    creator: '@vritsolutions',
+    site: '@vritsolutions',
+  },
+  alternates: {
+    canonical: 'https://vrit-ten.vercel.app/salesforce-training-in-hyderabad',
+    languages: {
+      'en-US': 'https://vrit-ten.vercel.app/salesforce-training-in-hyderabad',
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code-here',
+  },
+  other: {
+    'geo.region': 'IN-TG',
+    'geo.placename': 'Hyderabad',
+    'geo.position': '17.3850;78.4867',
+    'ICBM': '17.3850, 78.4867',
+    'DC.title': 'Best Salesforce Training in Hyderabad',
+    'DC.creator': 'VR IT Solutions',
+    'DC.subject': 'Salesforce Training, CRM Training, Technology Education',
+    'DC.description': 'Professional Salesforce training institute in Hyderabad offering comprehensive courses',
+    author: 'vr it solutions',
+    publisher: 'vr it solutions',
+    owner: 'vr it solutions',
+  },
+};
+
+export default function SalesforceTraining() {
+  return (
+    <>
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Best Salesforce Training in Hyderabad | Salesforce Online Training | VR IT Solutions",
+            "url": "https://vrit-ten.vercel.app/salesforce-training-in-hyderabad",
+            "logo": "https://vrit-ten.vercel.app/logo.png",
+            "sameAs": [
+              "https://www.facebook.com/vritsolutions/",
+              "https://twitter.com/vritsolutions",
+              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
+            ],
+            "address": [
+              {
+                "type": "PostalAddress",
+                "addressCountry": "INDIA",
+                "addressLocality": "Hyderabad",
+                "addressRegion": "Telangana",
+                "postalCode": "500016",
+                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
+              }
+            ],
+            "openingHours": [
+              "Mo-Sa 8:00-21:30",
+              "Su 9:00-13:00"
+            ],
+            "contactPoint": [
+              {
+                "type": "ContactPoint",
+                "telephone": "9032734343",
+                "contactType": "Enquiry",
+                "email": "info@vritsol.com"
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Course Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "Salesforce Training in Hyderabad",
+            "description": "Comprehensive 70-day Salesforce training covering Sales Cloud, Service Cloud, Development, and certification preparation with 100% placement assistance",
+            "provider": {
+              "@type": "Organization",
+              "name": "VR IT Solutions",
+              "sameAs": "https://vrit-ten.vercel.app"
+            },
+            "educationalCredentialAwarded": "Salesforce Certification",
+            "courseMode": ["Online", "Classroom"],
+            "duration": "P70D",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2024-01-01"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "9656",
+              "bestRating": "5"
+            }
+          })
+        }}
+      />
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-8">
+            
+            {/* Hero Section - Salesforce Training in Hyderabad with 100% Placement Guarantee */}
+            <section className="bg-gradient-to-br from-green-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-green-400/30 shadow-2xl shadow-green-500/10">
+              <div className="text-center mb-8">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                    Salesforce Training in Hyderabad
+                  </span>
+                  <br />
+                  <span className="text-white text-2xl md:text-3xl">with 100% Placement Guarantee</span>
+                </h1>
+                
+                {/* Course Image */}
+                <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
+                  <img
+                    src="/salesforce.jpg"
+                    alt="Salesforce Training Course in Hyderabad - VR IT Solutions"
+                    className="w-full object-cover border-2 border-green-400/30"
+                    style={{ aspectRatio: '1200/630' }}
+                  />
+                </div>
+                
+                <div className="inline-block bg-gradient-to-r from-green-500/25 to-teal-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-green-400/40">
+                  <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-3">
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-5 h-5 text-green-400" />
+                      <span className="text-green-300 font-semibold">+91-9032734343</span>
+                    </div>
+                    <span className="hidden sm:block text-gray-300">|</span>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-teal-400" />
+                      <span className="text-teal-300 font-semibold">Duration: 70 Days (Online & Classroom)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                    <ArrowRight className="w-5 h-5" />
+                    Enquire Now
+                  </button>
+                  <button className="border border-teal-400/60 hover:bg-teal-400/10 text-teal-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                    <Download className="w-5 h-5" />
+                    Download Course Content
+                  </button>
+                </div>
+              </div>
+            </section>
+            
+            {/* Salesforce Training */}
+            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Salesforce Training
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-400/20">
+                  <p className="text-blue-100 leading-relaxed">
+                    VRIT Solutions distinguished itself as the leading Salesforce Training institute in Hyderabad and Salesforce Online Trainings. Our Trainers are highly qualified and have high experience in providing quality classroom and online training on Salesforce
+                  </p>
+                </div>
+                <div className="bg-cyan-500/10 rounded-xl p-6 border border-cyan-400/20">
+                  <p className="text-cyan-100 leading-relaxed">
+                    Salesforce is known for being one of the most versatile CRM platforms. It helps companies manage their customer relationships, sales channels, and tasks efficiently. This platform can be a massive boon for entrepreneurs looking to expand their businesses. However, learning how to use Salesforce effectively can be tricky.
+                  </p>
+                </div>
+                <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
+                  <p className="text-indigo-100 leading-relaxed">
+                    That's where the best Salesforce training comes in. At VRIT Solutions, we offer the best Salesforce training|coaching available in the city. Our trainers are experienced professionals who will teach you everything you need to know about this powerful CRM system.
+                  </p>
+                </div>
+                <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-400/20">
+                  <p className="text-blue-100 leading-relaxed">
+                    VR IT Solutions is one of the best Salesforce training in Hyderabad to offer well focused and career-oriented training program in Salesforce.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* The Best Highlights Of Salesforce : */}
+            <section className="bg-gradient-to-br from-purple-600/15 via-pink-600/20 to-rose-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                The Best Highlights Of Salesforce :
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-purple-500/10 rounded-xl p-6 border border-purple-400/20">
+                  <p className="text-purple-100 leading-relaxed">
+                    VR IT Solutions provides complete knowledge of Salesforce and the opportunity to work with the best and most experienced trainers in your field.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-purple-500/10 rounded-xl p-4 border border-purple-400/20">
+                    <p className="text-purple-100">• We offer you an excellent platform for career growth.</p>
+                  </div>
+                  <div className="bg-pink-500/10 rounded-xl p-4 border border-pink-400/20">
+                    <p className="text-pink-100">• The complete Salesforce training is customized with real-time online sessions and project work.</p>
+                  </div>
+                  <div className="bg-rose-500/10 rounded-xl p-4 border border-rose-400/20">
+                    <p className="text-rose-100">• Added to these highlights, We provide a 100% guarantee of your success.</p>
+                  </div>
+                  <div className="bg-purple-500/10 rounded-xl p-4 border border-purple-400/20">
+                    <p className="text-purple-100">• We have a record of working closely with trainers who are industry experts.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Why should you do this course? */}
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Why should you do this course?
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-400/20">
+                  <p className="text-emerald-100 leading-relaxed">
+                    With rapid technological advancements, this course is slowly gaining importance in the market. The uniqueness of this course is it teaches you mule in step by step manner starting from basics to advanced without the requirement of any previous integration background.
+                  </p>
+                </div>
+                <div className="bg-teal-500/10 rounded-xl p-6 border border-teal-400/20">
+                  <p className="text-teal-100 leading-relaxed">
+                    VR IT Solutions is one of the few institutes in Hyderabad to offer the best and innovative training in Salesforce online training that is well suited to help you get started and embark on a fruitful journey. So, get started by clicking here.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Salesforce prerequisites for taking up this online Salesforce course */}
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Salesforce prerequisites for taking up this online Salesforce course
+              </h2>
+              <div className="space-y-4">
+                <div className="bg-rose-500/10 rounded-xl p-6 border border-rose-400/20">
+                  <p className="text-rose-100 leading-relaxed">
+                    • If you are looking to take up an online Salesforce course, then the prerequisites you will need are a working computer with internet access, a valid email address, and a desire to learn. Additionally, you will need to understand the English language, as this is the language of the course.
+                  </p>
+                </div>
+                <div className="bg-pink-500/10 rounded-xl p-6 border border-pink-400/20">
+                  <p className="text-pink-100 leading-relaxed">
+                    • This course is designed for people who want to learn how to use Salesforce for their business. Therefore, the prerequisites for this course include understanding how to use a computer, using Microsoft Word and Excel, and being familiar with internet usage.
+                  </p>
+                </div>
+                <div className="bg-red-500/10 rounded-xl p-6 border border-red-400/20">
+                  <p className="text-red-100 leading-relaxed">
+                    • The course starts with an introduction to Salesforce and how it can be used in business. You will then move on to learn how to create and manage a Salesforce account. After that, you will learn to use Salesforce features such as leads, contacts, and deals. You will also learn how to use Salesforce for marketing purposes. The last part of the course focuses on learning how to use Salesforce for enterprise-scale deployments.
+                  </p>
+                </div>
+                <div className="bg-rose-500/10 rounded-xl p-6 border border-rose-400/20">
+                  <p className="text-rose-100 leading-relaxed">
+                    The course is divided into different modules, and each module is roughly five weeks long. Each module covers a different topic: setting up Salesforce, creating and managing sales processes, creating and managing sales channels, and forecasting and managing sales results. Upon completing the course, you will be able to use Salesforce to manage your business and achieve your goals.
+                  </p>
+                </div>
+                <div className="bg-pink-500/10 rounded-xl p-6 border border-pink-400/20">
+                  <p className="text-pink-100 leading-relaxed">
+                    So if you are ready to take your business to the next level learn more about Salesforce and its various features, this is the perfect online course for you!
+                  </p>
+                </div>
+                <div className="bg-red-500/10 rounded-xl p-6 border border-red-400/20">
+                  <p className="text-red-100 leading-relaxed font-semibold">
+                    VRIT Solutions offers 100% placement Guaranteed program for deserving students.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-8">
+              <CourseSidebar courseName="Salesforce" phoneNumber="+91-9032734343" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </>
+  );
+}

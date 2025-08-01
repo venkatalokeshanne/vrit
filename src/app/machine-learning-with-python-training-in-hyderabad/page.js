@@ -1,0 +1,505 @@
+import React from 'react';
+import CourseSidebar from '../components/CourseSidebar';
+import { 
+  Target, 
+  BookOpen, 
+  Award, 
+  Users, 
+  TrendingUp,
+  Cloud,
+  Monitor,
+  Rocket,
+  Clock,
+  Calendar,
+  Download,
+  CheckCircle,
+  ArrowRight,
+  FileText,
+  Settings,
+  Code,
+  Star,
+  Play,
+  Phone,
+  Globe,
+  Mail,
+  Briefcase,
+  Database,
+  Brain,
+  Cpu,
+  Network,
+  BarChart3,
+  Activity,
+  Zap
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'Best Machine Learning with Python Training in Hyderabad | #1 ML Python Course Institute | 100% Placement | VR IT Solutions',
+  description: 'Best Machine Learning with Python Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Machine Learning Python online training in hyderabad with affordable fee and advanced curriculum.',
+  keywords: 'Machine Learning with Python training in Hyderabad, Best ML Python training in Hyderabad, Machine Learning training in Ameerpet, ML Python online training in Ameerpet, Machine Learning course training, AI ML training in hyderabad, Machine Learning training institutes in Hyderabad, ML training institute in Ameerpet, Python ML training Hyderabad, Scikit-learn training, TensorFlow training, Machine Learning certification training, ML placement assistance, ML job support, Machine Learning training Kukatpally, ML training Madhapur, ML training SR Nagar, ML training Dilsukhnagar, top ML institute Hyderabad, Machine Learning corporate training, ML weekend batches, Machine Learning live project training',
+  authors: [{ name: 'VR IT Solutions' }],
+  publisher: 'VR IT Solutions',
+  category: 'Education',
+  classification: 'Training',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Best Machine Learning with Python Training in Hyderabad | #1 ML Python Course Institute | 100% Placement | VR IT Solutions',
+    description: 'Call@9032734343. Best Machine Learning with Python Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Machine Learning Python online training in hyderabad with affordable fee and advanced curriculum.',
+    url: 'https://vrit-ten.vercel.app/machine-learning-with-python-training-in-hyderabad',
+    siteName: 'VR IT Solutions',
+    images: [
+      {
+        url: 'https://vrit-ten.vercel.app/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Machine Learning with Python Training Course in Hyderabad - VR IT Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Machine Learning with Python Training in Hyderabad | #1 ML Python Course Institute | 100% Placement',
+    description: 'Best Machine Learning with Python Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
+    images: ['https://vrit-ten.vercel.app/logo.png'],
+    creator: '@vritsolutions',
+    site: '@vritsolutions',
+  },
+  alternates: {
+    canonical: 'https://vrit-ten.vercel.app/machine-learning-with-python-training-in-hyderabad',
+    languages: {
+      'en-US': 'https://vrit-ten.vercel.app/machine-learning-with-python-training-in-hyderabad',
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code-here',
+  },
+  other: {
+    'geo.region': 'IN-TG',
+    'geo.placename': 'Hyderabad',
+    'geo.position': '17.3850;78.4867',
+    'ICBM': '17.3850, 78.4867',
+    'DC.title': 'Best Machine Learning with Python Training in Hyderabad',
+    'DC.creator': 'VR IT Solutions',
+    'DC.subject': 'Machine Learning Training, Python Training, AI Training, Technology Education',
+    'DC.description': 'Professional Machine Learning with Python training institute in Hyderabad offering comprehensive courses',
+    author: 'vr it solutions',
+    publisher: 'vr it solutions',
+    owner: 'vr it solutions',
+  },
+};
+
+export default function MachineLearningPythonTraining() {
+  const pythonLibraries = [
+    "Numpy",
+    "Scipy", 
+    "Scikit-learn",
+    "Theano",
+    "TensorFlow",
+    "Keras",
+    "PyTorch",
+    "Pandas",
+    "Matplotlib"
+  ];
+
+  const dataScienceSkills = [
+    "Communication",
+    "Data visualization",
+    "Domain knowledge",
+    "Experiment design",
+    "Statistical inference"
+  ];
+
+  return (
+    <>
+      {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Best Machine Learning with Python Training in Hyderabad | ML Python Online Training | VR IT Solutions",
+            "url": "https://vrit-ten.vercel.app/machine-learning-with-python-training-in-hyderabad",
+            "logo": "https://vrit-ten.vercel.app/logo.png",
+            "sameAs": [
+              "https://www.facebook.com/vritsolutions/",
+              "https://twitter.com/vritsolutions",
+              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
+            ],
+            "address": [
+              {
+                "type": "PostalAddress",
+                "addressCountry": "INDIA",
+                "addressLocality": "Hyderabad",
+                "addressRegion": "Telangana",
+                "postalCode": "500016",
+                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
+              }
+            ],
+            "openingHours": [
+              "Mo-Sa 8:00-21:30",
+              "Su 9:00-13:00"
+            ],
+            "contactPoint": [
+              {
+                "type": "ContactPoint",
+                "telephone": "9032734343",
+                "contactType": "Enquiry",
+                "email": "info@vritsol.com"
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Additional Review Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "review",
+            "name": "Machine Learning with Python Training in Hyderabad - VR IT Solutions",
+            "aggregateRating": {
+              "type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "9656"
+            }
+          })
+        }}
+      />
+
+      {/* Course Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "Machine Learning with Python Training in Hyderabad",
+            "description": "Comprehensive 45-day Machine Learning with Python training covering AI, ML algorithms, data science with 100% placement assistance",
+            "provider": {
+              "@type": "Organization",
+              "name": "VR IT Solutions",
+              "sameAs": "https://vrit-ten.vercel.app"
+            },
+            "educationalCredentialAwarded": "Machine Learning with Python Certification",
+            "courseMode": ["Online", "Classroom"],
+            "duration": "P45D",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2024-01-01"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "9656",
+              "bestRating": "5"
+            }
+          })
+        }}
+      />
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-8">
+            
+            {/* Hero Section - Vibrant Orange/Blue */}
+            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in relative">
+              {/* Floating Alert Badge */}
+              <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-bounce shadow-lg">
+                🔥 Limited Seats!
+              </div>
+              
+              <div className="text-center mb-8">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-slide-up">
+                  <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
+                    Machine Learning With Python Training
+                  </span>
+                  <br />
+                  <span className="text-white text-3xl md:text-4xl">in Hyderabad</span>
+                </h1>
+                
+                {/* Course Image - Facebook Post Dimensions */}
+                <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
+                  <img
+                    src="/logo.png"
+                    alt="Machine Learning With Python Training Course in Hyderabad - VR IT Solutions"
+                    className="w-full object-cover border-2 border-orange-400/30"
+                    style={{ aspectRatio: '1200/630' }}
+                  />
+                  {/* Overlay gradient for better text readability if needed */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
+                </div>
+                
+                <div className="inline-block bg-gradient-to-r from-orange-500/25 to-teal-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-orange-400/40 animate-pulse">
+                  <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-3">
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-5 h-5 text-orange-400 animate-bounce" />
+                      <span className="text-orange-300 font-semibold">+91-9032734343</span>
+                    </div>
+                    <span className="hidden sm:block text-gray-300">|</span>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-teal-400 animate-spin" />
+                      <span className="text-teal-300 font-semibold text-center sm:text-left">Duration: 45 Days (Online & Classroom)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg hover:scale-110 shadow-lg hover:shadow-xl">
+                    <ArrowRight className="w-5 h-5 animate-pulse" />
+                    Enquire Now
+                  </button>
+                  <button className="border border-teal-400/60 hover:bg-teal-400/10 text-teal-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg shadow-lg hover:shadow-teal-400/20 hover:scale-105">
+                    <Download className="w-5 h-5 animate-bounce" />
+                    Download Course Content
+                  </button>
+                </div>
+              </div>
+            </section>
+            
+            {/* ML | What Is Machine Learning - Purple Theme */}
+            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <Brain className="w-8 h-8 text-purple-400 animate-pulse" />
+                ML | What Is Machine Learning ?
+              </h2>
+              <div className="prose prose-lg prose-invert max-w-none space-y-6">
+                <div className="bg-purple-500/10 rounded-xl p-6 border border-purple-400/20">
+                  <p className="text-purple-100 leading-relaxed">
+                    Arthur Samuel, a pioneer in the field of artificial intelligence and computer gaming, coined the term "Machine Learning". He defined machine learning as – "Field of study that gives computers the capability to learn without being explicitly programmed".
+                  </p>
+                </div>
+                <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
+                  <p className="text-indigo-100 leading-relaxed">
+                    In a very layman manner, Machine Learning(ML) can be explained as automating and improving the learning process of computers based on their experiences without being actually programmed i.e. without any human assistance. The process starts with feeding good quality data and then training our machines(computers) by building machine learning models using the data and different algorithms. The choice of algorithms depends on what type of data do we have and what kind of task we are trying to automate.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Introduction To Machine Learning - Green Theme */}
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <Activity className="w-8 h-8 text-emerald-400 animate-pulse" />
+                Introduction To Machine Learning
+              </h2>
+              <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-400/20">
+                <p className="text-emerald-100 leading-relaxed">
+                  Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of Computer Programs that can change when exposed to new data. In this article, we&apos;ll see basics of Machine Learning, and implementation of a simple machine learning algorithm using python.
+                </p>
+              </div>
+            </section>
+
+            {/* Best Python Libraries For Machine Learning - Amber/Yellow Theme */}
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <Code className="w-8 h-8 text-amber-400" />
+                Best Python Libraries For Machine Learning
+              </h2>
+              <div className="prose prose-lg prose-invert max-w-none space-y-6">
+                <div className="bg-amber-500/10 rounded-xl p-6 border border-amber-400/20">
+                  <p className="text-amber-100 leading-relaxed mb-4">
+                    Machine Learning, as the name suggests, is the science of programming a computer by which they are able to learn from different kinds of data. A more general definition given by Arthur Samuel is - "Machine Learning is the field of study that gives computers the ability to learn without being explicitly programmed. They are typically used to solve various types of life problems.
+                  </p>
+                  <p className="text-amber-100 leading-relaxed">
+                    In the older days, people used to perform Machine Learning tasks by manually coding all the algorithms and mathematical and statistical formula. This made the process time consuming, tedious and inefficient. But in the modern days, it is become very much easy and efficient compared to the olden days by various python libraries, frameworks, and modules. Today, Python is one of the most popular programming languages for this task and it has replaced many languages in the industry, one of the reason is its vast collection of libraries. Python libraries that used in Machine Learning are:
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-3 gap-4">
+                  {pythonLibraries.map((library, index) => (
+                    <div key={index} className="flex items-center gap-3 p-4 bg-yellow-500/10 rounded-xl border border-yellow-400/20 hover:bg-yellow-500/15 transition-all duration-300">
+                      <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                      <span className="text-yellow-100 font-medium">{library}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Overview - Cyan Theme */}
+            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <BarChart3 className="w-8 h-8 text-cyan-400" />
+                Overview
+              </h2>
+              <div className="prose prose-lg prose-invert max-w-none space-y-6">
+                <div className="bg-cyan-500/10 rounded-xl p-6 border border-cyan-400/20">
+                  <p className="text-cyan-100 leading-relaxed mb-4">
+                    Data science is a collection of research-based methods and processes often with difficulty insights from data. machine learning in data science is a activity will become ever more important as the amount of data available continues to increase, and the challenge of extracting discernment from the data follows.
+                  </p>
+                  <p className="text-cyan-100 leading-relaxed mb-4">
+                    This observation defines of the difference among these three fields:
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3 p-3 bg-blue-500/10 rounded-lg border border-blue-400/20">
+                      <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-blue-100 font-medium">Data science produces insights.</span>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 bg-indigo-500/10 rounded-lg border border-indigo-400/20">
+                      <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-indigo-100 font-medium">Machine learning produces predictions.</span>
+                    </div>
+                    <div className="flex items-start gap-3 p-3 bg-purple-500/10 rounded-lg border border-purple-400/20">
+                      <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-purple-100 font-medium">Artificial intelligence produces actions.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* The Components Of Data Science - Rose Theme */}
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <Database className="w-8 h-8 text-rose-400 animate-pulse" />
+                The Components Of Data Science
+              </h2>
+              <div className="prose prose-lg prose-invert max-w-none space-y-6">
+                <div className="bg-rose-500/10 rounded-xl p-6 border border-rose-400/20">
+                  <p className="text-rose-100 leading-relaxed">
+                    Data science contents like machine learning, R, python and Deep learning..etc.. is a combination of mathematics, programming, problem-solving, and data capturing in "inventive ways". It is also the ability to find patterns, along with cleaning, preparing, and aligning data.
+                  </p>
+                </div>
+                <div className="bg-pink-500/10 rounded-xl p-6 border border-pink-400/20">
+                  <p className="text-pink-100 leading-relaxed">
+                    Data science is a field that encompasses anything related to data cleansing, preparation, and analysis. It is an umbrella term for techniques used when trying to extract insights and information from data.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Artificial Intelligence(AI) - Violet Theme */}
+            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <Cpu className="w-8 h-8 text-violet-400" />
+                Artificial Intelligence(AI)
+              </h2>
+              <div className="prose prose-lg prose-invert max-w-none space-y-6">
+                <div className="bg-violet-500/10 rounded-xl p-6 border border-violet-400/20">
+                  <p className="text-violet-100 leading-relaxed">
+                    An artificial intelligence (AI) tools to find an accurate and deep understanding that they are looking for.
+                  </p>
+                </div>
+                <div className="bg-purple-500/10 rounded-xl p-6 border border-purple-400/20">
+                  <p className="text-purple-100 leading-relaxed">
+                    The fabulous data science as an occupation is that it does not necessarily need a degree to get into the field, Skills in maths , statistics or operations research, business or many others, can be leveraged as long as they are supported by a base knowledge of mathematics and programming.
+                  </p>
+                </div>
+                <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
+                  <p className="text-indigo-100 leading-relaxed">
+                    This role to play as data and AI evolve, and its complexities multiply. The increasing intelligence of AI has a lot to do with how neural networks are being applied within the field.
+                  </p>
+                </div>
+                
+                {/* Neural Network subsection */}
+                <div className="bg-gradient-to-r from-violet-500/15 to-purple-500/15 rounded-xl p-6 border border-violet-400/30">
+                  <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                    <Network className="w-5 h-5 text-violet-400" />
+                    Neural Network
+                  </h3>
+                  <p className="text-violet-100 leading-relaxed">
+                    A neural network is either a system software or hardware that works similar to the tasks performed by neurons of human brain. Neural networks include various technologies like deep learning, and machine learning as a part of Artificial Intelligence (AI).
+                  </p>
+                </div>
+
+                {/* Proposed three properties subsection */}
+                <div className="bg-gradient-to-r from-purple-500/15 to-indigo-500/15 rounded-xl p-6 border border-purple-400/30">
+                  <h3 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
+                    <Star className="w-5 h-5 text-purple-400" />
+                    Proposed three properties
+                  </h3>
+                  <p className="text-purple-100 leading-relaxed">
+                    Most professionals in these fields have been classified as data science, machine learning, or artificial intelligence, even if these are very hard tie together. But they&apos;re not interchangeable , The fields do have a great deal of overlap, and there&apos;s enough promotion around each of them that the possibility can feel like a matter of marketing.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Data Science Produces Insights - Blue Theme */}
+            <section className="bg-gradient-to-br from-blue-600/15 via-indigo-600/20 to-purple-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <TrendingUp className="w-8 h-8 text-blue-400 animate-pulse" />
+                Data Science Produces Insights
+              </h2>
+              <div className="prose prose-lg prose-invert max-w-none space-y-6">
+                <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-400/20">
+                  <p className="text-blue-100 leading-relaxed">
+                    Data science is prominent from the other two fields because its agenda is to gain insight and understanding. It is descriptive , exploratory and causal, not everything that produces insights qualifies as data science. Traditionally data science involves a combination of statistics, software engineering, and domain expertise.
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {dataScienceSkills.map((skill, index) => (
+                    <div key={index} className="flex items-center gap-3 p-4 bg-indigo-500/10 rounded-xl border border-indigo-400/20 hover:bg-indigo-500/15 transition-all duration-300">
+                      <CheckCircle className="w-5 h-5 text-indigo-400 flex-shrink-0" />
+                      <span className="text-indigo-100 font-medium">{skill}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="bg-purple-500/10 rounded-xl p-6 border border-purple-400/20">
+                  <p className="text-purple-100 leading-relaxed">
+                    Data scientists might use simple tools on SQL queries. They could also use very complex methods. They might work with distributed data stores to illustrates of records, developing most advanced statistical techniques, and build interactive with set of information as a chart or other image. Whatever they use, the hope strongly to achieve to gain a better understanding of their data.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Call to Action - Final Orange/Red Theme */}
+            <section className="bg-gradient-to-br from-orange-600/20 via-red-600/25 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/40 text-center shadow-2xl shadow-orange-500/15 relative">
+              {/* Pulsing Alert Ring */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-30 animate-pulse"></div>
+              
+              <div className="relative">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center justify-center gap-3">
+                  <Rocket className="w-8 h-8 text-orange-400 animate-bounce" />
+                  Ready to Start Your Machine Learning Journey?
+                </h2>
+                <div className="bg-red-500/10 rounded-xl p-6 border border-red-400/20 mb-6">
+                  <p className="text-red-100 mb-6 leading-relaxed text-lg">
+                    Master Machine Learning with Python and become proficient in AI, data science, and predictive analytics. Join our comprehensive training program today!
+                  </p>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg shadow-xl hover:shadow-orange-500/30 hover:scale-105">
+                    <ArrowRight className="w-5 h-5 animate-pulse" />
+                    Join Now
+                  </button>
+                  <button className="border border-pink-400/60 hover:bg-pink-400/10 text-pink-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-pink-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg shadow-lg hover:shadow-pink-400/20">
+                    <Phone className="w-5 h-5 animate-bounce" />
+                    Call +91-9032734343
+                  </button>
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-8">
+              <CourseSidebar courseName="Machine Learning With Python" phoneNumber="+91-9032734343" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </>
+  );
+}

@@ -1,0 +1,474 @@
+import React from 'react';
+import CourseSidebar from '../components/CourseSidebar';
+import { 
+  Target, 
+  BookOpen, 
+  Award, 
+  Users, 
+  TrendingUp,
+  Cloud,
+  Monitor,
+  Rocket,
+  Clock,
+  Calendar,
+  Download,
+  CheckCircle,
+  ArrowRight,
+  FileText,
+  Settings,
+  Code,
+  Star,
+  Play,
+  Phone,
+  Globe,
+  Mail,
+  Briefcase,
+  Zap,
+  Database,
+  Shield,
+  Server,
+  Network,
+  Layers,
+  Warehouse,
+  Package,
+  Truck
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'Best SAP EWM Training in Hyderabad | #1 SAP EWM Course Institute | 100% Placement | VR IT Solutions',
+  description: 'Best SAP EWM Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAP EWM online training in hyderabad with affordable fee and advanced curriculum.',
+  keywords: 'SAP EWM training in Hyderabad, Best SAP EWM training in Hyderabad, SAP EWM training in Ameerpet, SAP EWM online training in Ameerpet, SAP Extended Warehouse Management training, SAP Warehouse Management training, SAP EWM training institutes in Hyderabad, SAP EWM training institute in Ameerpet, SAP logistics training, SAP EWM certification training, SAP EWM placement assistance, SAP EWM job support, SAP EWM training Kukatpally, SAP EWM training Madhapur, SAP EWM training SR Nagar, SAP EWM training Dilsukhnagar, top SAP EWM institute Hyderabad, SAP EWM corporate training, SAP EWM weekend batches, SAP EWM live project training',
+  authors: [{ name: 'VR IT Solutions' }],
+  publisher: 'VR IT Solutions',
+  category: 'Education',
+  classification: 'Training',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    title: 'Best SAP EWM Training in Hyderabad | #1 SAP EWM Course Institute | 100% Placement | VR IT Solutions',
+    description: 'Call@9032734343. Best SAP EWM Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best SAP EWM online training in hyderabad with affordable fee and advanced curriculum.',
+    url: 'https://vrit-ten.vercel.app/sap-ewm-training-in-hyderabad',
+    siteName: 'VR IT Solutions',
+    images: [
+      {
+        url: 'https://vrit-ten.vercel.app/sap-ewm.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'SAP EWM Training Course in Hyderabad - VR IT Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best SAP EWM Training in Hyderabad | #1 SAP EWM Course Institute | 100% Placement',
+    description: 'Best SAP EWM Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
+    images: ['https://vrit-ten.vercel.app/sap-ewm.jpg'],
+    creator: '@vritsolutions',
+    site: '@vritsolutions',
+  },
+  alternates: {
+    canonical: 'https://vrit-ten.vercel.app/sap-ewm-training-in-hyderabad',
+    languages: {
+      'en-US': 'https://vrit-ten.vercel.app/sap-ewm-training-in-hyderabad',
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code-here',
+  },
+  other: {
+    'geo.region': 'IN-TG',
+    'geo.placename': 'Hyderabad',
+    'geo.position': '17.3850;78.4867',
+    'ICBM': '17.3850, 78.4867',
+    'DC.title': 'Best SAP EWM Training in Hyderabad',
+    'DC.creator': 'VR IT Solutions',
+    'DC.subject': 'SAP EWM Training, SAP Extended Warehouse Management Training, Technology Education',
+    'DC.description': 'Professional SAP EWM training institute in Hyderabad offering comprehensive courses',
+    author: 'vr it solutions',
+    publisher: 'vr it solutions',
+    owner: 'vr it solutions',
+  },
+};
+
+export default function SAPEWMTraining() {
+  const courseStructure = [
+    "Introduction to EWM (Extended Warehouse Management)",
+    "Get an overview of the EWM Structure",
+    "Learn about Master Data and its uses",
+    "Get an overview of the integration process",
+    "Learn some advanced concepts on structural elements and master data",
+    "Learn about various warehouse process types",
+    "Learn about Warehouse Monitor",
+    "Get an overview of RF Frame work",
+    "Learn how to handle business processes such as:",
+    "• Goods Receipt and Inbound Process",
+    "• Goods Issue and Outbound process",
+    "• Storage Control",
+    "• Warehouse Order Creation",
+    "• Posting Changes, Stock Transfers and Replenishment",
+    "• Physical Inventory",
+    "Learn about slotting and rearrangement",
+    "Get an overview of Post Processing Framework (PPF)",
+    "Learn advanced concepts on Material Flow System, Labor Management and Yard Management Live Project"
+  ];
+
+  const whoCanDo = [
+    "SAP MM & SAP WM consultants can learn SAP EWM Functional",
+    "SAP Functional Consultants and SAP ABAP consultants can learn SAP EWM Technical",
+    "Software professionals, who want to make a career in SAP",
+    "Fresh graduates, who are looking for a career in SAP",
+    "Business Analysts",
+    "Database consultants"
+  ];
+
+  const prerequisites = [
+    "Knowledge about SAP products and its ecosystem",
+    "Basic overview of standard warehouse processes",
+    "Technical (ABAP) knowledge"
+  ];
+
+  const keyDifferentiators = [
+    {
+      title: "Comprehensive practical sessions",
+      desc: "Every theory session is adequately supported by a practical session with ample time given to students to practice at their own pace. This way, you tend to gain deeper insights and help you understand the concepts better."
+    },
+    {
+      title: "Live project",
+      desc: "Our curriculum is designed to have a live project to help you apply the skills learnt in these sessions successfully to real life scenarios."
+    },
+    {
+      title: "Top notch faculty",
+      desc: "Our faculty is drawn from experienced professionals across industry, occupying various positions such as middle level managers, data scientists and even experienced faculty from IIMs, IITs and other reputed institutes."
+    },
+    {
+      title: "Get trained in SAP EWM in just 60 hours - select either weekend or weekday mode",
+      desc: "This is not exaggeration and you can surely achieve this. We assure you to provide the best training within the required time without compromising on quality at any cost. Our curriculum is designed in such a way that we ensure that you get up to the speed as early as possible to start a career as a SAP EWM professional."
+    },
+    {
+      title: "Industry relevant curriculum",
+      desc: "You learn the latest from us! Our curriculum is constantly updated once in 6 months to keep pace with the emerging technologies in this area, so you are always ahead of others."
+    }
+  ];
+
+  const trainingModes = [
+    "Online Training",
+    "Classroom Training", 
+    "Job Support"
+  ];
+
+  const whyChooseUs = [
+    "Real time project Explanation",
+    "Free Resume preparation",
+    "Backup Classes",
+    "Career guidance",
+    "Mock Tests and Interviews",
+    "24/7 support"
+  ];
+
+  return (
+    <>
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Best SAP EWM Training in Hyderabad | SAP EWM Online Training | VR IT Solutions",
+            "url": "https://vrit-ten.vercel.app/sap-ewm-training-in-hyderabad",
+            "logo": "https://vrit-ten.vercel.app/logo.png",
+            "sameAs": [
+              "https://www.facebook.com/vritsolutions/",
+              "https://twitter.com/vritsolutions",
+              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
+            ],
+            "address": [
+              {
+                "type": "PostalAddress",
+                "addressCountry": "INDIA",
+                "addressLocality": "Hyderabad",
+                "addressRegion": "Telangana",
+                "postalCode": "500016",
+                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
+              }
+            ],
+            "openingHours": [
+              "Mo-Sa 8:00-21:30",
+              "Su 9:00-13:00"
+            ],
+            "contactPoint": [
+              {
+                "type": "ContactPoint",
+                "telephone": "9032734343",
+                "contactType": "Enquiry",
+                "email": "info@vritsol.com"
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Course Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "SAP EWM Training in Hyderabad",
+            "description": "Comprehensive 65-day SAP EWM training covering Extended Warehouse Management, master data, integration processes, and warehouse operations with 100% placement assistance",
+            "provider": {
+              "@type": "Organization",
+              "name": "VR IT Solutions",
+              "sameAs": "https://vrit-ten.vercel.app"
+            },
+            "educationalCredentialAwarded": "SAP EWM Certification",
+            "courseMode": ["Online", "Classroom"],
+            "duration": "P65D",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2024-01-01"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "9656",
+              "bestRating": "5"
+            }
+          })
+        }}
+      />
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid lg:grid-cols-3 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-8">
+            
+            {/* Hero Section - SAP EWM Training in Hyderabad */}
+            <section className="bg-gradient-to-br from-yellow-500/15 via-orange-600/20 to-amber-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-yellow-400/30 shadow-2xl shadow-yellow-500/10">
+              <div className="text-center mb-8">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                    SAP EWM Training in Hyderabad
+                  </span>
+                </h1>
+                
+                {/* Course Image */}
+                <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
+                  <img
+                    src="/sap-ewm.jpg"
+                    alt="SAP EWM Training Course in Hyderabad - VR IT Solutions"
+                    className="w-full object-cover border-2 border-yellow-400/30"
+                    style={{ aspectRatio: '1200/630' }}
+                  />
+                </div>
+                
+                <div className="inline-block bg-gradient-to-r from-yellow-500/25 to-orange-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-yellow-400/40">
+                  <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-3">
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-5 h-5 text-yellow-400" />
+                      <span className="text-yellow-300 font-semibold">+91-9032734343</span>
+                    </div>
+                    <span className="hidden sm:block text-gray-300">|</span>
+                    <div className="flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-orange-400" />
+                      <span className="text-orange-300 font-semibold">Duration: 65 Days (Online & Classroom)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                    <ArrowRight className="w-5 h-5" />
+                    Enquire Now
+                  </button>
+                  <button className="border border-orange-400/60 hover:bg-orange-400/10 text-orange-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-orange-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                    <Download className="w-5 h-5" />
+                    Download Course Content
+                  </button>
+                </div>
+              </div>
+            </section>
+            
+            {/* About SAP Extended Warehouse Management (SAP EWM) */}
+            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                About SAP Extended Warehouse Management (SAP EWM)
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-400/20">
+                  <p className="text-blue-100 leading-relaxed">
+                    Extended Warehouse Management (EWM) offers a flexible and automated support for processing various movements of goods and for managing stocks in a warehouse. The system supports planned and efficient processing of all logistics processes in a warehouse. The beauty of this application is that it offers an option to manage your entire warehouse complex in detail in the system – right up to the storage bin level. Not just getting an overview of the entire quantity of a material in the warehouse, you can also predict accurately, where a specific material is currently in your warehouse complex.
+                  </p>
+                </div>
+                <div className="bg-cyan-500/10 rounded-xl p-6 border border-cyan-400/20">
+                  <p className="text-cyan-100 leading-relaxed">
+                    VR IT Solutions is one of the best sap ewm training to offer well focused and career-oriented training program in SAP EWM. So, get started by clicking here.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Why should you join this course? */}
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Why should you join this course?
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-400/20">
+                  <p className="text-emerald-100 leading-relaxed">
+                    With logistics and supply chain management being complex business areas and moreover with more number of organization adopting the automation route, this course is particularly useful for those who want to make a career in the supply chain automation. EWM offers high level integration with inventory management and delivery processing. Using EWM, you can organize, control and monitor the movement of goods.
+                  </p>
+                </div>
+                <div className="bg-teal-500/10 rounded-xl p-6 border border-teal-400/20">
+                  <p className="text-teal-100 leading-relaxed">
+                    VR IT Solutions is one of the best software training institutes in Hyderabad to offer the best and balanced in Sap ewm Training that is well suited to help you embark on the right path of success. So, get started by clicking here.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Course Structure */}
+            <section className="bg-gradient-to-br from-purple-600/15 via-violet-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Course Structure
+              </h2>
+              <div className="grid gap-4 mb-6">
+                {courseStructure.map((topic, index) => (
+                  <div key={index} className="flex items-start gap-3 p-4 bg-purple-500/10 rounded-xl border border-purple-400/20">
+                    <Warehouse className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
+                    <p className="text-purple-100">{topic}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="space-y-4">
+                <div className="bg-violet-500/10 rounded-xl p-6 border border-violet-400/20">
+                  <p className="text-violet-100 leading-relaxed font-semibold">
+                    Note: The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.
+                  </p>
+                </div>
+                <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
+                  <p className="text-indigo-100 leading-relaxed">
+                    With VR IT Solutions providing the best sap ewm online training, this course helps professionals to manage and process a variety of operations in supply chain management (SCM) domain in an automated SAP environment.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Who can do this course? */}
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Who can do this course?
+              </h2>
+              <div className="grid gap-4 mb-6">
+                {whoCanDo.map((candidate, index) => (
+                  <div key={index} className="flex items-start gap-3 p-4 bg-amber-500/10 rounded-xl border border-amber-400/20">
+                    <Users className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                    <p className="text-amber-100">{candidate}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-yellow-500/10 rounded-xl p-6 border border-yellow-400/20">
+                <p className="text-yellow-100 leading-relaxed">
+                  Learn SAP EWM in both online and offline modes by real-time experts from VR IT Solutions with practical scenarios and in-depth explanation of each and every topic.
+                </p>
+              </div>
+            </section>
+
+            {/* What are the pre-requisites for this course? */}
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                What are the pre-requisites for this course?
+              </h2>
+              <div className="space-y-6">
+                <div className="bg-rose-500/10 rounded-xl p-6 border border-rose-400/20">
+                  <p className="text-rose-100 leading-relaxed mb-4">
+                    VR IT Solutions hasn't prescribed any specific pre-requisites to do this course, however the following list of pre-requisites will do help to make a good start.
+                  </p>
+                </div>
+                <div className="grid gap-4">
+                  {prerequisites.map((prerequisite, index) => (
+                    <div key={index} className="flex items-start gap-3 p-4 bg-rose-500/10 rounded-xl border border-rose-400/20">
+                      <CheckCircle className="w-5 h-5 text-rose-400 flex-shrink-0 mt-0.5" />
+                      <p className="text-rose-100">{prerequisite}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Our Key Differentiators */}
+            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Our Key Differentiators
+              </h2>
+              <div className="space-y-6">
+                {keyDifferentiators.map((differentiator, index) => (
+                  <div key={index} className="bg-cyan-500/10 rounded-xl p-6 border border-cyan-400/20">
+                    <h3 className="text-xl font-bold text-cyan-200 mb-3">{differentiator.title}</h3>
+                    <p className="text-cyan-100 leading-relaxed">{differentiator.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Training Features */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
+                <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
+                  Training Modes
+                </h2>
+                <div className="space-y-3">
+                  {trainingModes.map((mode, index) => (
+                    <div key={index} className="flex items-start gap-3 p-3 bg-slate-500/10 rounded-xl border border-slate-400/20">
+                      <CheckCircle className="w-4 h-4 text-slate-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-slate-100 text-sm font-medium">{mode}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+                <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
+                  Why to choose VR IT solutions?
+                </h2>
+                <div className="space-y-3">
+                  {whyChooseUs.map((feature, index) => (
+                    <div key={index} className="flex items-start gap-3 p-3 bg-emerald-500/10 rounded-xl border border-emerald-400/20">
+                      <Star className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-emerald-100 text-sm font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-8">
+              <CourseSidebar courseName="SAP EWM" phoneNumber="+91-9032734343" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </>
+  );
+}

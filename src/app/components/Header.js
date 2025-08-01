@@ -11,9 +11,9 @@ export default function Header() {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/aboutus' },
     { name: 'Courses', href: '#courses' },
-    { name: 'Services', href: '/servicenow-training-in-hyderabad' },
+    { name: 'Services', href: '/services' },
     { name: 'Blog', href: '#blog' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact', href: '/contactus' },
   ];
 
   return (
@@ -54,7 +54,7 @@ export default function Header() {
             </a>
             
             <a
-              href="mailto:info@vritsolutions.com"
+              href="mailto:info@vritsol.com"
               className="bg-white/10 text-white px-4 py-2 rounded-lg font-medium border border-white/20 hover:bg-white/20 transition-colors flex items-center space-x-2"
             >
               <Mail className="w-4 h-4" />
@@ -100,7 +100,7 @@ export default function Header() {
                 <span>Call Now</span>
               </a>
               <a
-                href="mailto:info@vritsolutions.com"
+                href="mailto:info@vritsol.com"
                 className="flex items-center justify-center space-x-2 bg-white/10 text-white px-4 py-2 rounded-lg font-medium border border-white/20"
               >
                 <Mail className="w-4 h-4" />
