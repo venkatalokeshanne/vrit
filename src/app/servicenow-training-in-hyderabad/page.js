@@ -47,11 +47,11 @@ export const metadata = {
   openGraph: {
     title: 'Best ServiceNow Training in Hyderabad | #1 ServiceNow Course Institute | 100% Placement | VR IT Solutions',
     description: 'Call@9032734343. Best ServiceNow Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best ServiceNow online training in hyderabad with affordable fee and advanced curriculum.',
-    url: 'https://www.vritsol.com/servicenow-training-in-hyderabad',
+    url: 'https://vrit-ten.vercel.app/servicenow-training-in-hyderabad',
     siteName: 'VR IT Solutions',
     images: [
       {
-        url: '/servicenow.png',
+        url: 'https://vrit-ten.vercel.app/servicenow.png',
         width: 1200,
         height: 630,
         alt: 'ServiceNow Training Course in Hyderabad - VR IT Solutions',
@@ -64,14 +64,14 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Best ServiceNow Training in Hyderabad | #1 ServiceNow Course Institute | 100% Placement',
     description: 'Best ServiceNow Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['/servicenow.png'],
+    images: ['https://vrit-ten.vercel.app/servicenow.png'],
     creator: '@vritsolutions',
     site: '@vritsolutions',
   },
   alternates: {
-    canonical: 'https://www.vritsol.com/servicenow-training-in-hyderabad',
+    canonical: 'https://vrit-ten.vercel.app/servicenow-training-in-hyderabad',
     languages: {
-      'en-US': 'https://www.vritsol.com/servicenow-training-in-hyderabad',
+      'en-US': 'https://vrit-ten.vercel.app/servicenow-training-in-hyderabad',
     },
   },
   verification: {
@@ -153,8 +153,8 @@ export default function ServiceNowTraining() {
             "@context": "http://schema.org",
             "@type": "Organization",
             "name": "Best ServiceNow Training in Hyderabad | ServiceNow Online Training | VR IT Solutions",
-            "url": "https://www.vritsol.com/servicenow-training-in-hyderabad",
-            "logo": "https://www.vritsol.com/logo.png",
+            "url": "https://vrit-ten.vercel.app/servicenow-training-in-hyderabad",
+            "logo": "https://vrit-ten.vercel.app/logo.png",
             "sameAs": [
               "https://www.facebook.com/vritsolutions/",
               "https://twitter.com/vritsolutions",
@@ -215,7 +215,7 @@ export default function ServiceNowTraining() {
             "provider": {
               "@type": "Organization",
               "name": "VR IT Solutions",
-              "sameAs": "https://www.vritsol.com"
+              "sameAs": "https://vrit-ten.vercel.app"
             },
             "educationalCredentialAwarded": "ServiceNow Certification",
             "courseMode": ["Online", "Classroom"],
