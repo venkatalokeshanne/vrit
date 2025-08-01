@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -130,6 +131,49 @@ export default function SAPHANAAdminTraining() {
     "Career guidance",
     "Mock Tests and Interviews",
     "24/7 support"
+  ];
+
+  const sapHanaAdminFaqs = [
+    {
+      question: "What is SAP HANA Administration and why is it in high demand?",
+      answer: "SAP HANA Administration involves managing SAP's in-memory database platform including installation, configuration, monitoring, performance tuning, backup/recovery, and security management. It's in high demand because HANA is the foundation for S/4HANA and modern SAP applications, requiring specialized administrators."
+    },
+    {
+      question: "What are the prerequisites for SAP HANA Admin training?",
+      answer: "Basic understanding of databases (SQL, database concepts), operating systems (Linux/Windows), networking fundamentals, and basic SAP knowledge. Having experience with database administration or system administration is beneficial but not mandatory as we cover HANA-specific concepts."
+    },
+    {
+      question: "What key areas will I learn in SAP HANA Administration?",
+      answer: "You'll learn HANA architecture, installation and configuration, system monitoring, performance optimization, backup and recovery, user and authorization management, high availability setup, disaster recovery, system replication, and troubleshooting techniques."
+    },
+    {
+      question: "What is the duration of the SAP HANA Admin training course?",
+      answer: "Our comprehensive SAP HANA Admin training is designed to be completed in 50-60 hours, which can be taken as weekend batches (8-10 weeks) or weekday batches (6-8 weeks) depending on your schedule with extensive hands-on practice on HANA systems."
+    },
+    {
+      question: "Will I get hands-on experience with real SAP HANA systems?",
+      answer: "Yes! You'll work on actual SAP HANA systems with hands-on exercises including HANA installation, system monitoring using HANA Studio/Cockpit, performance analysis, backup operations, user administration, and system maintenance activities in real HANA environments."
+    },
+    {
+      question: "What career opportunities are available after SAP HANA Admin training?",
+      answer: "SAP HANA Admin professionals can work as HANA Database Administrator, SAP HANA Technical Consultant, HANA System Administrator, Database Architect, HANA Performance Specialist, or HANA Infrastructure Manager with salaries ranging from ₹5-18 LPA depending on experience."
+    },
+    {
+      question: "How does SAP HANA Administration differ from traditional database administration?",
+      answer: "HANA is an in-memory database with column-based storage, real-time analytics capabilities, and integrated application server. Unlike traditional databases, HANA administration involves managing memory optimization, data compression, real-time replication, and advanced analytics workloads."
+    },
+    {
+      question: "Do you cover both on-premise and cloud HANA administration?",
+      answer: "Yes, our training covers on-premise HANA administration as well as SAP HANA Cloud, HANA Enterprise Cloud, and hybrid scenarios. You'll learn administration techniques for different deployment models and cloud-specific management tools."
+    },
+    {
+      question: "Do you provide SAP HANA certification guidance and placement assistance?",
+      answer: "Yes, we provide guidance for SAP HANA certification exams and offer 100% placement assistance including resume building, HANA admin project portfolio creation, interview preparation with technical scenarios, and connecting with companies hiring HANA administrators."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for HANA admin projects, access to updated HANA materials, latest HANA features and tools, performance tuning best practices, and alumni network for continuous professional development."
+    }
   ];
 
   return (
@@ -360,6 +404,11 @@ export default function SAPHANAAdminTraining() {
                 </div>
               </section>
             </div>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-orange-600/15 via-red-600/20 to-pink-600/15 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 shadow-xl shadow-orange-500/10">
+              <FAQ faqs={sapHanaAdminFaqs} theme="sap" />
+            </section>
 
           </div>
 

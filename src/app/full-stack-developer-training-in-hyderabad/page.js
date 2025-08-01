@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -155,6 +156,49 @@ export default function FullStackDeveloperTraining() {
     {
       title: "How will I execute the Practicals?",
       description: "In order to work on practicals, some basic pre-requisites are required. You need a good internet connection, along with the required software that needs to be installed. This software can easily run on all operating systems such as Windows OS."
+    }
+  ];
+
+  const fullStackFaqs = [
+    {
+      question: "What is Full Stack Development and why is it in high demand?",
+      answer: "Full Stack Development involves working on both front-end (client-side) and back-end (server-side) of web applications. It's in high demand because companies prefer developers who can handle complete web development lifecycle, making them versatile and cost-effective for businesses."
+    },
+    {
+      question: "What are the prerequisites for Full Stack Developer training?",
+      answer: "Basic understanding of HTML, CSS, and JavaScript is helpful but not mandatory. Having logical thinking, problem-solving skills, and basic computer knowledge is sufficient to start. We cover all concepts from fundamentals to advanced levels."
+    },
+    {
+      question: "What technologies will I learn in this Full Stack course?",
+      answer: "You'll learn front-end technologies (HTML5, CSS3, JavaScript, React.js, Angular), back-end technologies (Node.js, Java, Python), databases (MongoDB, MySQL), version control (Git), deployment tools, and cloud services like AWS."
+    },
+    {
+      question: "What is the duration of the Full Stack Developer training?",
+      answer: "Our comprehensive Full Stack Developer training is designed to be completed in 60 hours, which can be taken as weekend batches (8-10 weeks) or weekday batches (6-8 weeks) depending on your schedule and learning pace."
+    },
+    {
+      question: "Will I work on real projects during the training?",
+      answer: "Yes! Our training includes multiple hands-on projects including building responsive websites, REST APIs, full-stack web applications, and a final capstone project that you can showcase in your portfolio to potential employers."
+    },
+    {
+      question: "What career opportunities are available after Full Stack training?",
+      answer: "Full Stack Developers can work as Web Developer, Software Engineer, Frontend Developer, Backend Developer, JavaScript Developer, React Developer, Node.js Developer, Technical Lead, or freelance consultant with salaries ranging from ₹3-12 LPA."
+    },
+    {
+      question: "Do you provide both online and classroom training options?",
+      answer: "Yes, we offer flexible training modes including live online classes, classroom training at our Hyderabad center, and hybrid options. All modes include the same comprehensive curriculum, hands-on projects, and placement assistance."
+    },
+    {
+      question: "How does Full Stack Development compare to specializing in frontend or backend?",
+      answer: "Full Stack Development offers broader career opportunities and higher salary potential as you can handle complete projects independently. While specialization offers deep expertise, Full Stack skills make you more versatile and valuable in the job market."
+    },
+    {
+      question: "Do you provide placement assistance and job support?",
+      answer: "Yes, we offer 100% placement assistance including portfolio creation, resume building, interview preparation, mock interviews, and connecting you with our network of hiring partners looking for skilled Full Stack Developers."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support when you start working on projects, access to updated course materials, alumni network access, and assistance with advanced technology adoption."
     }
   ];
 
@@ -528,6 +572,11 @@ export default function FullStackDeveloperTraining() {
                   </button>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-purple-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+              <FAQ faqs={fullStackFaqs} theme="default" />
             </section>
 
           </div>

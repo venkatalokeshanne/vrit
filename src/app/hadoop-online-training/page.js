@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -126,6 +127,49 @@ export const metadata = {
 };
 
 export default function HadoopTraining() {
+  const hadoopFaqs = [
+    {
+      question: "What is Hadoop and why is it important for Big Data processing?",
+      answer: "Hadoop is an open-source framework for distributed storage and processing of large datasets across clusters. It's important because it enables cost-effective processing of massive amounts of structured and unstructured data that traditional databases cannot handle efficiently."
+    },
+    {
+      question: "What are the prerequisites for Hadoop training?",
+      answer: "Basic knowledge of Java programming, understanding of Linux/Unix commands, familiarity with SQL databases, and basic networking concepts. Having analytical thinking and problem-solving skills is beneficial. We provide foundational support for beginners."
+    },
+    {
+      question: "What components of Hadoop ecosystem will I learn?",
+      answer: "You'll learn HDFS (Hadoop Distributed File System), MapReduce, YARN, Hive, Pig, HBase, Sqoop, Flume, Oozie, Spark, Kafka, and other ecosystem tools. We cover both Hadoop 2.x and 3.x versions with hands-on practice."
+    },
+    {
+      question: "What is the duration of the Hadoop training course?",
+      answer: "Our comprehensive Hadoop training is designed to be completed in 50-60 hours, which can be taken as weekend batches (8-10 weeks) or weekday batches (6-8 weeks) depending on your schedule and learning pace."
+    },
+    {
+      question: "Will I work on real Big Data projects during training?",
+      answer: "Yes! You'll work on multiple hands-on projects including data ingestion using Sqoop/Flume, data processing with MapReduce/Spark, data warehousing with Hive, and real-time processing projects using industry datasets from various domains."
+    },
+    {
+      question: "What career opportunities are available after Hadoop training?",
+      answer: "Hadoop professionals can work as Big Data Developer, Hadoop Developer, Data Engineer, Big Data Analyst, Hadoop Administrator, Data Architect, ETL Developer, or Big Data Consultant with salaries ranging from ₹4-15 LPA depending on experience."
+    },
+    {
+      question: "How does Hadoop compare to traditional databases and cloud solutions?",
+      answer: "Hadoop excels in processing large volumes of unstructured data cost-effectively, offers horizontal scalability, and handles batch processing efficiently. While cloud solutions offer managed services, Hadoop provides flexibility and control over big data infrastructure."
+    },
+    {
+      question: "Do you cover both on-premise and cloud-based Hadoop deployments?",
+      answer: "Yes, our training covers on-premise Hadoop clusters, cloud distributions like Amazon EMR, Google Cloud Dataproc, Azure HDInsight, and hybrid deployments. You'll learn deployment strategies for different environments."
+    },
+    {
+      question: "Do you provide placement assistance and job support?",
+      answer: "Yes, we offer 100% placement assistance including portfolio development, resume building, interview preparation with big data case studies, mock interviews, and connecting you with our network of companies hiring Hadoop professionals."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for big data projects, access to updated course materials, latest Hadoop updates, industry trends, and alumni network for continuous learning."
+    }
+  ];
+
   return (
     <>
       {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
@@ -602,6 +646,11 @@ export default function HadoopTraining() {
                   </button>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-yellow-600/15 via-orange-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-yellow-400/30 shadow-xl shadow-yellow-500/10">
+              <FAQ faqs={hadoopFaqs} theme="default" />
             </section>
 
           </div>

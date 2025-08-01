@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -147,6 +148,49 @@ export default function MuleSoftTraining() {
     "Career guidance",
     "Mock Tests and Interviews",
     "24/7 support"
+  ];
+
+  const muleSoftFaqs = [
+    {
+      question: "What is MuleSoft and why is it important for integration?",
+      answer: "MuleSoft is a leading integration platform that provides Anypoint Platform for connecting applications, data, and devices. It's important because it enables organizations to build application networks, streamline API management, and create seamless digital experiences across cloud and on-premises systems."
+    },
+    {
+      question: "What are the prerequisites for MuleSoft training?",
+      answer: "Basic knowledge of Java programming, understanding of web services (REST/SOAP), XML/JSON concepts, and familiarity with databases. Having experience with Eclipse IDE and basic understanding of enterprise integration patterns is beneficial but not mandatory."
+    },
+    {
+      question: "What is the duration of the MuleSoft training course?",
+      answer: "Our comprehensive MuleSoft training is designed to be completed in 45 hours, which can be taken as weekend batches (6-8 weeks) or weekday batches (4-6 weeks) depending on your schedule and learning pace."
+    },
+    {
+      question: "Will I get hands-on practice with MuleSoft Anypoint Platform?",
+      answer: "Yes, absolutely! Our training includes extensive hands-on practice with MuleSoft Anypoint Studio, Anypoint Exchange, API Manager, Runtime Manager, and other Anypoint Platform components. You'll work on real-world integration scenarios and live projects."
+    },
+    {
+      question: "What career opportunities are available after MuleSoft training?",
+      answer: "MuleSoft professionals can pursue roles as Integration Developer, MuleSoft Developer, API Developer, Solution Architect, Integration Architect, Technical Consultant, and ESB Developer with salaries ranging from ₹4-15 LPA depending on experience."
+    },
+    {
+      question: "Do you provide MuleSoft certification preparation?",
+      answer: "Yes, our training covers all topics required for MuleSoft Certified Developer - Level 1 (Mule 4) certification. We provide certification guidance, practice tests, and exam preparation materials to help you achieve MuleSoft certification."
+    },
+    {
+      question: "What makes MuleSoft different from other integration platforms?",
+      answer: "MuleSoft's Anypoint Platform provides unified connectivity, API-led connectivity approach, comprehensive API lifecycle management, built-in security features, cloud-native architecture, and extensive pre-built connectors for various systems and applications."
+    },
+    {
+      question: "Do you provide placement assistance after MuleSoft training?",
+      answer: "Yes, we offer 100% placement assistance including resume building, interview preparation, mock interviews, and connecting you with our network of MuleSoft partner companies and clients looking for skilled MuleSoft professionals."
+    },
+    {
+      question: "What is the scope of MuleSoft in the current market?",
+      answer: "MuleSoft has excellent market scope with high demand for integration solutions. Organizations are rapidly adopting API-led connectivity and digital transformation initiatives, creating abundant opportunities for MuleSoft professionals in various industries."
+    },
+    {
+      question: "Do you provide support after course completion?",
+      answer: "Yes, we provide lifetime support including doubt resolution, interview preparation assistance, resume guidance, job support when you start working on MuleSoft projects, and access to updated course materials and community forums."
+    }
   ];
 
   return (
@@ -472,6 +516,11 @@ export default function MuleSoftTraining() {
                   </p>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-orange-600/15 via-red-600/20 to-pink-600/15 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 shadow-xl shadow-orange-500/10">
+              <FAQ faqs={muleSoftFaqs} theme="default" />
             </section>
 
           </div>

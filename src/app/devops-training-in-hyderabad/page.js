@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -161,6 +162,49 @@ export default function DevOpsTraining() {
     {
       title: "How will I execute the Practicals?",
       description: "In order to work on practicals, some basic pre-requisites are required. You need a good internet connection, along with the required software that needs to be installed. This software can easily run on all operating systems such as Windows, OS, Linux and Unix."
+    }
+  ];
+
+  const devOpsFaqs = [
+    {
+      question: "What is DevOps and why is it important in modern software development?",
+      answer: "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten development lifecycle and provide continuous delivery. It's important because it enables faster deployment, improved collaboration, reduced errors, and better reliability in software delivery."
+    },
+    {
+      question: "What are the prerequisites for DevOps training?",
+      answer: "Basic understanding of Linux operating systems, fundamental knowledge of networking concepts, familiarity with software development lifecycle, and basic scripting knowledge. Having experience with command-line operations and version control is beneficial but not mandatory."
+    },
+    {
+      question: "What tools and technologies will I learn in DevOps training?",
+      answer: "You'll learn Git for version control, Jenkins for CI/CD, Docker for containerization, Kubernetes for orchestration, Ansible for configuration management, AWS/Azure cloud services, monitoring tools like Nagios/Grafana, and scripting languages like Shell/Python."
+    },
+    {
+      question: "What is the duration of the DevOps training course?",
+      answer: "Our comprehensive DevOps training is designed to be completed in 100 hours, which can be taken as weekend batches (12-15 weeks) or weekday batches (10-12 weeks) depending on your schedule and learning pace."
+    },
+    {
+      question: "Will I work on real DevOps projects during training?",
+      answer: "Yes! You'll work on hands-on projects including setting up CI/CD pipelines, containerizing applications, automating deployment processes, infrastructure as code implementation, monitoring setup, and end-to-end DevOps implementation for web applications."
+    },
+    {
+      question: "What career opportunities are available after DevOps training?",
+      answer: "DevOps professionals can work as DevOps Engineer, Site Reliability Engineer (SRE), Cloud Engineer, Build Engineer, Release Manager, Infrastructure Engineer, Automation Engineer, or DevOps Consultant with salaries ranging from ₹4-15 LPA depending on experience."
+    },
+    {
+      question: "How does DevOps integrate with cloud platforms like AWS and Azure?",
+      answer: "DevOps practices are essential for cloud operations, enabling infrastructure as code, auto-scaling, cloud-native CI/CD pipelines, container orchestration, serverless deployments, and cloud monitoring. We cover AWS/Azure DevOps services extensively."
+    },
+    {
+      question: "Do you cover both traditional and cloud-native DevOps practices?",
+      answer: "Yes, our training covers traditional on-premise DevOps implementations as well as cloud-native practices including microservices architecture, serverless computing, container orchestration, and cloud-specific DevOps tools and services."
+    },
+    {
+      question: "Do you provide placement assistance and interview preparation?",
+      answer: "Yes, we offer 100% placement assistance including resume building, DevOps project portfolio creation, interview preparation with technical scenarios, hands-on DevOps challenges, and connecting you with our network of companies hiring DevOps professionals."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for DevOps implementations, access to updated course materials, latest DevOps trends and tools, and alumni network for continuous professional development."
     }
   ];
 
@@ -531,6 +575,11 @@ export default function DevOpsTraining() {
                   </button>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <FAQ faqs={devOpsFaqs} theme="aws" />
             </section>
 
           </div>

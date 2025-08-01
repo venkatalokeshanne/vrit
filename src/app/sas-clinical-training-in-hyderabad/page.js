@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -30,6 +31,50 @@ import {
   Activity,
   Heart
 } from 'lucide-react';
+
+// FAQ Data for SAS Clinical Training
+const sasClinicalFaqs = [
+  {
+    question: "What is SAS Clinical and its role in pharmaceutical industry?",
+    answer: "SAS Clinical is a specialized application of SAS programming focused on clinical data analysis in pharmaceutical and biotechnology industries. It involves analyzing clinical trial data, creating regulatory submissions (CDISC standards), generating safety and efficacy reports, and supporting drug development processes from Phase I to Phase IV trials."
+  },
+  {
+    question: "What prerequisites do I need to learn SAS Clinical?",
+    answer: "Basic knowledge of statistics and clinical research is helpful. Prior experience with SAS Base programming is highly recommended. Understanding of pharmaceutical terminology, clinical trial processes, and regulatory guidelines will be beneficial. Basic knowledge of CDISC standards (SDTM, ADaM) and medical terminology is advantageous."
+  },
+  {
+    question: "What career opportunities are available after SAS Clinical certification?",
+    answer: "Career opportunities include Clinical SAS Programmer, Biostatistician, Clinical Data Analyst, Regulatory Affairs Analyst, Clinical Research Associate, and Statistical Programming Manager. Pharmaceutical companies, CROs, and regulatory agencies actively hire SAS Clinical professionals with salaries ranging from ₹6-20 lakhs annually."
+  },
+  {
+    question: "How long does it take to complete SAS Clinical training?",
+    answer: "Our comprehensive SAS Clinical training program spans 8-10 weeks with flexible scheduling options. This includes 80+ hours of instructor-led training, hands-on practice with real clinical datasets, regulatory submission projects, and certification preparation. Weekend and evening batches are available for working professionals."
+  },
+  {
+    question: "What hands-on experience will I gain during the training?",
+    answer: "You'll work with real clinical trial datasets, create SDTM and ADaM datasets, develop Tables/Listings/Figures (TLFs), work on regulatory submissions, practice adverse event analysis, efficacy endpoint analysis, safety reporting, and integration with clinical databases like Oracle Clinical and Medidata Rave."
+  },
+  {
+    question: "Which SAS Clinical certifications should I pursue?",
+    answer: "Key certifications include SAS Certified Clinical Trials Programmer, SAS Certified Statistical Business Analyst, and SAS Certified Advanced Programmer. Additionally, CDISC certifications and knowledge of FDA/EMA guidelines enhance career prospects in pharmaceutical industry."
+  },
+  {
+    question: "Do you provide placement assistance after SAS Clinical training?",
+    answer: "Yes, we offer comprehensive placement support including resume building, interview preparation, technical mock interviews focused on clinical scenarios, and direct connections with 150+ pharmaceutical companies and CROs. Our placement team has successfully placed 90% of students in companies like Quintiles, PPD, Parexel, and major pharma companies."
+  },
+  {
+    question: "What is CDISC and its importance in SAS Clinical programming?",
+    answer: "CDISC (Clinical Data Interchange Standards Consortium) provides global standards for clinical research data. SDTM (Study Data Tabulation Model) and ADaM (Analysis Data Model) are key standards. Understanding CDISC is crucial for regulatory submissions to FDA, EMA, and other global regulatory authorities."
+  },
+  {
+    question: "How does SAS Clinical differ from regular SAS programming?",
+    answer: "SAS Clinical focuses specifically on pharmaceutical data with specialized requirements including regulatory compliance, CDISC standards adherence, safety data analysis, efficacy endpoints evaluation, adverse event reporting, and integration with clinical trial management systems. It requires domain knowledge of clinical research and pharmaceutical regulations."
+  },
+  {
+    question: "What ongoing support do you provide after course completion?",
+    answer: "We provide lifetime access to course materials, monthly updates on regulatory changes, job support for initial 6 months, access to clinical datasets for practice, networking with pharmaceutical professionals, and ongoing mentorship. Our support includes help with real-world clinical programming challenges and career advancement guidance."
+  }
+];
 
 export const metadata = {
   title: 'Best SAS Clinical Training in Hyderabad | #1 SAS Clinical Course Institute | 100% Placement | VR IT Solutions',
@@ -448,6 +493,13 @@ export default function SASClinicalTraining() {
               </section>
             </div>
 
+          </div>
+
+          {/* FAQ Section */}
+          <div className="lg:col-span-2 mb-8">
+            <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <FAQ faqs={sasClinicalFaqs} theme="default" />
+            </div>
           </div>
 
           {/* Sidebar */}

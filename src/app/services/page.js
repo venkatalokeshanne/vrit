@@ -17,6 +17,51 @@ import {
   Star,
   Rocket
 } from 'lucide-react';
+import FAQ from '../components/FAQ';
+
+// FAQ Data for Services Page
+const servicesFaqs = [
+  {
+    question: "What services does VR IT Solutions offer?",
+    answer: "VR IT Solutions offers three main services: Online Training for flexible remote learning, Classroom Training for interactive face-to-face sessions, and comprehensive Job Support including placement assistance, resume building, and interview preparation. All services are designed to provide complete career support and professional development."
+  },
+  {
+    question: "What are the advantages of online training at VR IT Solutions?",
+    answer: "Our online training offers maximum flexibility - learn anytime, anywhere with no geographical constraints. You get access to expert trainers, interactive sessions, recorded classes for revision, practical exercises, and the same quality curriculum as classroom training. Perfect for busy professionals who want to upskill without compromising their current commitments."
+  },
+  {
+    question: "How does classroom training differ from online training?",
+    answer: "Classroom training provides face-to-face interaction with trainers and peers, immediate doubt resolution, hands-on lab sessions, collaborative learning environment, and direct mentorship. While online training offers flexibility, classroom training provides more intensive, personalized attention and networking opportunities with fellow students."
+  },
+  {
+    question: "What does the job support service include?",
+    answer: "Our comprehensive job support includes 100% placement assistance, professional resume building, mock interview sessions, career guidance counseling, soft skills training, direct referrals to top MNCs like Infosys, Wipro, Accenture, and Deloitte, and ongoing support until you secure your desired job role."
+  },
+  {
+    question: "Can I switch between online and classroom training modes?",
+    answer: "Yes, we offer flexible learning options. You can start with one mode and switch to another based on your schedule and preferences. We also provide hybrid options where certain sessions can be attended online while practical sessions are conducted in classroom settings, ensuring you get the best of both worlds."
+  },
+  {
+    question: "What kind of practical training do you provide in your services?",
+    answer: "All our services include extensive hands-on practical training with real-world projects, live case studies, industry-standard tools and software, simulation exercises, and project-based learning. Whether online or classroom, you'll work on actual scenarios that prepare you for professional challenges."
+  },
+  {
+    question: "How experienced are the trainers providing these services?",
+    answer: "Our trainers have 10+ years of industry experience from top companies like TCS, Infosys, Microsoft, and other leading MNCs. They bring real-world expertise, current industry practices, and practical insights to all our services - online training, classroom sessions, and job support guidance."
+  },
+  {
+    question: "What is the success rate of your job support service?",
+    answer: "We have successfully placed over 95% of our students in leading companies with salary packages ranging from ₹4-15 lakhs annually. Our job support has helped thousands of professionals transition to better roles in companies like Accenture, Deloitte, Cognizant, Cap Gemini, and many other renowned organizations."
+  },
+  {
+    question: "Do you provide ongoing support after course completion?",
+    answer: "Yes, all our services include post-completion support. This includes lifetime access to updated course materials, alumni network access, periodic refresher sessions, job market updates, career advancement guidance, and continued placement assistance until you achieve your career goals."
+  },
+  {
+    question: "How can I choose the right service for my career needs?",
+    answer: "Our career counselors provide free consultation to assess your background, career goals, and constraints. Based on this evaluation, we recommend the most suitable service - online training for flexibility, classroom training for intensive learning, or focused job support for immediate career transition. Contact us at +91-9032734343 for personalized guidance."
+  }
+];
 
 export const metadata = {
   title: 'Services - Online/ClassRoom Training | VR IT Solutions',
@@ -338,6 +383,15 @@ export default function Services() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-500/10 via-purple-500/15 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/20 shadow-xl shadow-blue-500/5">
+            <FAQ faqs={servicesFaqs} theme="default" />
           </div>
         </div>
       </section>

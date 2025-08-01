@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -95,6 +96,49 @@ export const metadata = {
 };
 
 export default function SapFicoTraining() {
+  const sapFicoFaqs = [
+    {
+      question: "What is SAP FICO and why is it important for careers?",
+      answer: "SAP FICO (Financial Accounting and Controlling) is one of the most important modules in SAP ERP, handling financial transactions, reporting, and controlling activities. SAP FICO professionals are in high demand with excellent career prospects and salaries ranging from ₹8-25 LPA."
+    },
+    {
+      question: "What are the prerequisites for SAP FICO training?",
+      answer: "Basic knowledge of accounting principles and business processes is helpful but not mandatory. Our comprehensive training covers all fundamentals including accounting concepts, making it suitable for both beginners and experienced professionals."
+    },
+    {
+      question: "What is the duration and structure of SAP FICO training?",
+      answer: "Our SAP FICO training is an extensive 120-day program covering Financial Accounting (FI) and Controlling (CO) modules with hands-on practice on live SAP systems, real-world scenarios, and industry case studies."
+    },
+    {
+      question: "What career opportunities are available after SAP FICO training?",
+      answer: "SAP FICO opens doors to roles like SAP FICO Consultant, Functional Analyst, Finance Manager, SAP Project Manager, Business Analyst, and Implementation Specialist. Major companies like Accenture, IBM, Capgemini, TCS actively hire SAP FICO professionals."
+    },
+    {
+      question: "Do you provide SAP FICO certification preparation?",
+      answer: "Yes, our training prepares you for SAP FICO certification exams. We provide practice tests, certification guidance, exam tips, and study materials to help you achieve official SAP certification and enhance your career prospects."
+    },
+    {
+      question: "What topics are covered in SAP FICO curriculum?",
+      answer: "The curriculum covers General Ledger, Accounts Payable/Receivable, Asset Accounting, Bank Accounting, Cost Center Accounting, Profit Center Accounting, Product Costing, Profitability Analysis, and integration with other SAP modules."
+    },
+    {
+      question: "Do you provide hands-on practice on live SAP systems?",
+      answer: "Absolutely! Students get access to live SAP FICO systems for hands-on practice. We provide real-world business scenarios, configuration exercises, and end-to-end process implementations to ensure practical expertise."
+    },
+    {
+      question: "Is SAP FICO suitable for non-technical professionals?",
+      answer: "Yes, SAP FICO is ideal for non-technical professionals, especially those with finance and accounting backgrounds. The module focuses on business processes rather than technical programming, making it accessible to finance professionals."
+    },
+    {
+      question: "What support do you provide for job placement?",
+      answer: "We provide comprehensive placement assistance including resume building, interview preparation, mock interviews, job referrals, and continuous support until placement. Our strong industry connections help students secure positions in top companies."
+    },
+    {
+      question: "Can working professionals attend SAP FICO training?",
+      answer: "Yes, we offer flexible scheduling with weekend batches, evening classes, and online training options. Our course structure is designed to accommodate working professionals without disrupting their current commitments."
+    }
+  ];
+
   const topLearningBenefits = [
     "Learning SAP FICO can be exceptionally useful for both the person and the company.",
     "This SAP FICO certificate will build your skills and boost your career.",
@@ -380,6 +424,11 @@ export default function SapFicoTraining() {
                   </div>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="mb-8">
+              <FAQ faqs={sapFicoFaqs} title="SAP FICO Training FAQs" theme="sap" />
             </section>
 
           </div>

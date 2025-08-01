@@ -1,4 +1,49 @@
 import React from 'react';
+import FAQ from '../components/FAQ';
+
+// FAQ Data for Privacy Policy
+const privacyPolicyFaqs = [
+  {
+    question: "What personal information does VR IT Solutions collect?",
+    answer: "We collect information you provide when you register for courses, contact us, or use our services. This includes your name, email address, phone number, educational background, and payment information. We also collect usage data about how you interact with our website and learning platform to improve our services."
+  },
+  {
+    question: "How does VR IT Solutions use my personal information?",
+    answer: "We use your personal information to provide our training services, process course registrations, communicate course updates, provide customer support, send relevant educational content, and improve our services. We do not sell your personal information to third parties or use it for purposes other than providing our educational services."
+  },
+  {
+    question: "Is my personal information shared with third parties?",
+    answer: "We only share your personal information with trusted service providers who help us deliver our services, such as payment processors and learning management system providers. These partners are bound by strict confidentiality agreements. We may also share information when required by law or to protect our rights and safety."
+  },
+  {
+    question: "How long does VR IT Solutions retain my personal data?",
+    answer: "We retain your personal information for as long as necessary to provide our services and fulfill the purposes outlined in this privacy policy. Course completion records may be retained longer for certification purposes. You can request deletion of your data at any time, subject to legal and business requirements."
+  },
+  {
+    question: "What rights do I have regarding my personal information?",
+    answer: "You have the right to access, update, correct, or delete your personal information. You can also request data portability and object to certain processing activities. You may opt-out of marketing communications at any time. Contact our support team at info@vritsol.com to exercise these rights."
+  },
+  {
+    question: "How does VR IT Solutions protect my personal information?",
+    answer: "We implement industry-standard security measures including encryption, secure servers, access controls, and regular security audits. Our staff is trained on data protection practices, and we have incident response procedures in place. However, no system is 100% secure, and we encourage you to use strong passwords and protect your account credentials."
+  },
+  {
+    question: "What happens if I'm an end-user whose employer enrolled me in training?",
+    answer: "If your employer or an authorized training partner enrolled you, they are our customer and may have their own privacy policies. We collect information under their direction and may not have a direct relationship with you. For privacy inquiries, please contact your administrator first. We do not send personalized advertisements to end-users."
+  },
+  {
+    question: "Does VR IT Solutions use cookies and tracking technologies?",
+    answer: "Yes, we use cookies and similar technologies to enhance your browsing experience, remember your preferences, analyze website traffic, and improve our services. You can control cookie settings through your browser preferences. Some cookies are essential for website functionality and cannot be disabled."
+  },
+  {
+    question: "Is my data transferred internationally?",
+    answer: "Your personal data may be stored and processed in your region or in other countries where VR IT Solutions or our service providers operate facilities. We ensure appropriate safeguards are in place when transferring data internationally, including using standard contractual clauses and working with providers that comply with applicable data protection laws."
+  },
+  {
+    question: "How can I contact VR IT Solutions about privacy concerns?",
+    answer: "For any privacy-related questions, concerns, or requests, please contact us at info@vritsol.com or call +91-9032734343. You can also write to us with your privacy inquiries. We are committed to addressing your concerns promptly and transparently in accordance with applicable data protection laws."
+  }
+];
 
 export const metadata = {
   title: 'Privacy Policy | VR IT Solutions',
@@ -109,6 +154,14 @@ export default function PrivacyPolicy() {
             </section>
 
           </div>
+
+          {/* FAQ Section */}
+          <div className="mt-12">
+            <div className="bg-gradient-to-br from-blue-500/10 via-purple-500/15 to-indigo-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/20 shadow-xl shadow-blue-500/5">
+              <FAQ faqs={privacyPolicyFaqs} theme="default" />
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -93,6 +94,49 @@ export const metadata = {
 };
 
 export default function PythonOnlineTraining() {
+  const pythonFaqs = [
+    {
+      question: "What is Python and why is it popular for career growth?",
+      answer: "Python is a versatile, high-level programming language known for its simplicity and readability. It's highly popular for web development, data science, AI/ML, automation, and scientific computing. Python developers enjoy excellent career prospects with salaries ranging from ₹4-15 LPA."
+    },
+    {
+      question: "Do I need prior programming experience to learn Python?",
+      answer: "No prior programming experience is required. Python is beginner-friendly with simple syntax. Our course starts from absolute basics including programming fundamentals, making it perfect for both beginners and professionals looking to switch careers."
+    },
+    {
+      question: "What is the duration and structure of Python training?",
+      answer: "Our comprehensive Python training is a 45-day program covering core Python, advanced concepts, frameworks like Django/Flask, database integration, and real-world projects. The course includes both theoretical concepts and extensive hands-on practice."
+    },
+    {
+      question: "What career opportunities are available after Python training?",
+      answer: "Python opens doors to various roles including Python Developer, Data Scientist, Web Developer, Automation Engineer, Machine Learning Engineer, DevOps Engineer, and Full Stack Developer. Top companies like Google, Netflix, Instagram use Python extensively."
+    },
+    {
+      question: "Which Python frameworks and libraries will I learn?",
+      answer: "The course covers essential libraries like NumPy, Pandas, Matplotlib, Django, Flask, SQLAlchemy, and introduces you to data science libraries. You'll also learn about package management, virtual environments, and testing frameworks."
+    },
+    {
+      question: "Do you provide hands-on projects and practical experience?",
+      answer: "Absolutely! Our training includes multiple hands-on projects including web applications, data analysis projects, automation scripts, and a capstone project. Students build a portfolio of real-world applications during the course."
+    },
+    {
+      question: "Is Python training suitable for data science and machine learning?",
+      answer: "Yes, Python is the most popular language for data science and machine learning. Our training covers data manipulation with Pandas, visualization with Matplotlib, and introduces machine learning concepts, preparing you for advanced data science roles."
+    },
+    {
+      question: "What support do you provide for job placement?",
+      answer: "We provide 100% placement assistance including resume building, interview preparation, coding practice sessions, job referrals, and mock interviews. Our placement team has strong connections with companies hiring Python developers."
+    },
+    {
+      question: "Can I attend Python training while working full-time?",
+      answer: "Yes, we offer flexible batch timings including weekend batches and evening classes for working professionals. Online training options with live sessions and recorded content are also available for maximum flexibility."
+    },
+    {
+      question: "What makes your Python training different from others?",
+      answer: "Our training combines theoretical knowledge with extensive practical sessions, live projects, industry-relevant curriculum updated every 6 months, experienced faculty from top companies, and guaranteed placement assistance with lifetime support."
+    }
+  ];
+
   const objectives = [
     "Learn how to Implement the basics and advanced Python concepts",
     "Learn how to implement Python core objects and file handling operations",
@@ -452,6 +496,11 @@ export default function PythonOnlineTraining() {
                   A good internet connection is required to get any help from the software support team. You have the option to execute practical sessions either from your system or leveraging our remote training sessions to get an enriched learning experience.
                 </p>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="mb-8">
+              <FAQ faqs={pythonFaqs} title="Python Training FAQs" theme="python" />
             </section>
 
             {/* Call to Action - Final Orange/Red Theme */}

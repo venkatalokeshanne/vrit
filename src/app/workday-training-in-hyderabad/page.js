@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -101,6 +102,49 @@ export const metadata = {
 };
 
 export default function WorkdayTraining() {
+  const workdayFaqs = [
+    {
+      question: "What is Workday and why is it essential for HR and Finance professionals?",
+      answer: "Workday is a leading cloud-based ERP system for Human Capital Management (HCM) and Financial Management. It's essential for modern HR and finance operations, with Workday professionals earning ₹8-25 LPA due to high demand and specialized skills."
+    },
+    {
+      question: "What are the prerequisites for Workday training?",
+      answer: "Basic understanding of HR processes, finance concepts, and business operations is helpful. Knowledge of ERP systems is beneficial but not mandatory. Our course covers all fundamentals needed to master Workday functionality."
+    },
+    {
+      question: "What is the duration and structure of Workday training?",
+      answer: "Our comprehensive Workday training is a 50-day program covering Workday HCM, Financial Management, Reporting, Integration, Security, and Business Process Framework with extensive hands-on practice and real-world scenarios."
+    },
+    {
+      question: "What career opportunities are available after Workday training?",
+      answer: "Workday training opens doors to roles like Workday Consultant, Workday Analyst, HRIS Specialist, Workday Developer, Business Process Consultant, and Implementation Specialist. Top consulting firms and enterprises actively hire Workday professionals."
+    },
+    {
+      question: "Which Workday modules will I learn in the training?",
+      answer: "The training covers Workday HCM (Human Capital Management), Financial Management, Reporting and Analytics, Integration, Security, Business Process Framework, and Workday Studio for advanced integration scenarios."
+    },
+    {
+      question: "Do you provide access to Workday tenant for hands-on practice?",
+      answer: "Yes, we provide access to Workday sandbox environment for hands-on practice. Students work on real business scenarios, configure business processes, create reports, and perform end-to-end implementations."
+    },
+    {
+      question: "Is Workday training suitable for both HR and Finance professionals?",
+      answer: "Absolutely! Workday covers both HR and Finance functions. Our training is designed for HR professionals, Finance professionals, and IT professionals looking to specialize in Workday implementation and support."
+    },
+    {
+      question: "What Workday certifications can I pursue after training?",
+      answer: "You can pursue Workday Pro certifications in HCM, Financial Management, Integration, or Reporting. Our training prepares you thoroughly for these certification exams with practice tests and exam strategies."
+    },
+    {
+      question: "Do you provide placement assistance for Workday roles?",
+      answer: "Yes, we provide 100% placement assistance including resume building, interview preparation, mock interviews, and job referrals. We have partnerships with Workday consulting firms and implementation partners."
+    },
+    {
+      question: "What makes Workday different from other ERP systems?",
+      answer: "Workday is built on cloud-first architecture with unified data model, real-time reporting, mobile-first design, and continuous updates. It offers superior user experience, powerful analytics, and seamless integration capabilities compared to traditional ERP systems."
+    }
+  ];
+
   const courseModules = [
     {
       title: "Introduction to Workday",
@@ -516,6 +560,11 @@ export default function WorkdayTraining() {
                   </p>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="mb-8">
+              <FAQ faqs={workdayFaqs} title="Workday Training FAQs" theme="default" />
             </section>
 
             {/* Call to Action - Final Orange/Red Theme */}

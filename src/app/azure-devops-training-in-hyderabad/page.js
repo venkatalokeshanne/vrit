@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -99,6 +100,49 @@ export const metadata = {
 };
 
 export default function AzureDevOpsTraining() {
+  const azureDevOpsFaqs = [
+    {
+      question: "What is Azure DevOps and AWS, and why learn them together?",
+      answer: "Azure DevOps is Microsoft's cloud-based DevOps platform, while AWS is Amazon's cloud computing platform. Learning both provides comprehensive skills in CI/CD, cloud infrastructure, and automation, making you versatile in multi-cloud environments with excellent career prospects."
+    },
+    {
+      question: "What are the prerequisites for Azure DevOps and AWS training?",
+      answer: "Basic understanding of software development lifecycle and cloud concepts is helpful. No extensive prior experience required as our course covers fundamentals of both platforms, making it suitable for beginners and professionals."
+    },
+    {
+      question: "What is the duration and structure of this training?",
+      answer: "Our comprehensive Azure DevOps and AWS training is a 75-day program covering CI/CD pipelines, containerization, infrastructure automation, cloud services, monitoring, and hands-on projects with real-world scenarios."
+    },
+    {
+      question: "What career opportunities are available after this training?",
+      answer: "This training opens doors to roles like DevOps Engineer, Cloud Architect, Site Reliability Engineer, Infrastructure Engineer, and Automation Specialist with salaries ranging from ₹8-20 LPA in top companies."
+    },
+    {
+      question: "Which tools and technologies will I learn?",
+      answer: "You'll learn Azure DevOps Services, AWS services (EC2, S3, Lambda, RDS), Docker, Kubernetes, Terraform, Ansible, Jenkins, Git, monitoring tools, and infrastructure as code practices."
+    },
+    {
+      question: "Do you provide hands-on practice with real cloud environments?",
+      answer: "Yes, students get access to Azure and AWS accounts for hands-on practice. We provide real-world scenarios, CI/CD pipeline setups, infrastructure provisioning, and deployment exercises using actual cloud resources."
+    },
+    {
+      question: "Is this training suitable for developers and system administrators?",
+      answer: "Absolutely! The training is designed for both developers wanting to understand deployment and operations, and system administrators looking to modernize their skills with cloud and automation technologies."
+    },
+    {
+      question: "Do you cover containerization and orchestration?",
+      answer: "Yes, the curriculum includes comprehensive coverage of Docker containerization, Kubernetes orchestration, microservices architecture, and container deployment strategies on both Azure and AWS platforms."
+    },
+    {
+      question: "What support do you provide for job placement?",
+      answer: "We provide 100% placement assistance including resume optimization for DevOps roles, interview preparation, hands-on project portfolio building, job referrals, and continuous career guidance in the DevOps domain."
+    },
+    {
+      question: "How do you ensure practical learning in DevOps?",
+      answer: "Our training emphasizes hands-on learning with real projects, setting up complete CI/CD pipelines, infrastructure automation, monitoring implementations, and troubleshooting scenarios that mirror actual workplace challenges."
+    }
+  ];
+
   const keyBenefits = [
     "Reliability - Backed by an SLA of 99.9% uptime",
     "Scalability - Multi-tier and scalable architecture", 
@@ -467,6 +511,11 @@ export default function AzureDevOpsTraining() {
                   </p>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="mb-8">
+              <FAQ faqs={azureDevOpsFaqs} title="Azure DevOps & AWS Training FAQs" theme="aws" />
             </section>
 
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -174,6 +175,49 @@ export default function SAPEWMTraining() {
     "Career guidance",
     "Mock Tests and Interviews",
     "24/7 support"
+  ];
+
+  const sapEWMFaqs = [
+    {
+      question: "What is SAP EWM (Extended Warehouse Management) and why is it important?",
+      answer: "SAP EWM is an advanced warehouse management solution that provides comprehensive functionality for managing complex warehouse operations. It's important because it optimizes warehouse processes, improves inventory accuracy, enhances labor productivity, and provides real-time visibility into warehouse operations for better decision-making."
+    },
+    {
+      question: "What are the prerequisites for SAP EWM training?",
+      answer: "Basic understanding of SAP system navigation, knowledge of warehouse and logistics processes, familiarity with SAP MM (Materials Management) module, and understanding of basic supply chain concepts. Having experience with warehouse operations or SAP WM is beneficial but not mandatory."
+    },
+    {
+      question: "What key functionalities will I learn in SAP EWM?",
+      answer: "You'll learn warehouse structure and master data, inbound and outbound processing, internal warehouse processes, inventory management, wave management, labor management, warehouse monitoring, integration with SAP ERP, handheld device configuration, and advanced warehouse optimization techniques."
+    },
+    {
+      question: "What is the duration of the SAP EWM training course?",
+      answer: "Our comprehensive SAP EWM training is designed to be completed in 45-60 hours, which can be taken as weekend batches (8-10 weeks) or weekday batches (6-8 weeks) depending on your schedule with extensive hands-on practice on EWM system."
+    },
+    {
+      question: "Will I get hands-on experience with real SAP EWM scenarios?",
+      answer: "Yes! You'll work on actual SAP EWM systems with hands-on exercises including warehouse setup, master data configuration, process flow design, RF device simulation, inventory management, wave processing, and end-to-end warehouse process scenarios using real business cases."
+    },
+    {
+      question: "What career opportunities are available after SAP EWM training?",
+      answer: "SAP EWM professionals can work as EWM Consultant, Warehouse Management Specialist, SAP Logistics Consultant, Supply Chain Analyst, EWM Functional Consultant, or Warehouse Solutions Architect with salaries ranging from ₹5-16 LPA depending on experience and expertise."
+    },
+    {
+      question: "How does SAP EWM differ from SAP WM (Warehouse Management)?",
+      answer: "SAP EWM is a more advanced solution with enhanced functionality including better labor management, advanced analytics, flexible warehouse structure, improved mobile device support, better integration capabilities, and more sophisticated optimization algorithms compared to traditional SAP WM."
+    },
+    {
+      question: "Do you cover integration of EWM with other SAP modules?",
+      answer: "Yes, our training covers EWM integration with SAP ERP (MM, SD, PP modules), SAP TM (Transportation Management), SAP ECC, S/4HANA integration, and third-party systems. You'll learn how EWM fits into the overall SAP landscape and supply chain processes."
+    },
+    {
+      question: "Do you provide SAP EWM certification guidance and placement assistance?",
+      answer: "Yes, we provide guidance for SAP EWM certification preparation and offer 100% placement assistance including resume building, EWM project portfolio creation, interview preparation with warehouse scenarios, and connecting with companies hiring EWM professionals."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for EWM implementations, access to updated EWM materials, latest warehouse management trends, optimization techniques, and alumni network for continuous professional development."
+    }
   ];
 
   return (
@@ -459,6 +503,14 @@ export default function SAPEWMTraining() {
 
           </div>
 
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+              <FAQ faqs={sapEWMFaqs} theme="sap" />
+            </section>
+
+          </div>
+
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
@@ -467,7 +519,6 @@ export default function SAPEWMTraining() {
           </div>
 
         </div>
-      </div>
       </div>
     </>
   );

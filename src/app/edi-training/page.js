@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -117,6 +118,49 @@ export const metadata = {
 };
 
 export default function EDITraining() {
+  const ediFaqs = [
+    {
+      question: "What is EDI (Electronic Data Interchange) and why is it important for businesses?",
+      answer: "EDI is the electronic exchange of structured business documents between organizations using standardized formats. It's important because it eliminates manual data entry, reduces errors, speeds up transactions, improves data accuracy, and enables automated processing of business documents like purchase orders, invoices, and shipment notifications."
+    },
+    {
+      question: "What are the prerequisites for EDI training?",
+      answer: "No specific prerequisites are required for EDI training. Basic computer knowledge and understanding of business processes are helpful. Having familiarity with XML, data formats, and business document workflows is beneficial but not mandatory as we cover fundamentals from the beginning."
+    },
+    {
+      question: "What is Sterling B2B Integrator and how does it relate to EDI?",
+      answer: "Sterling B2B Integrator is IBM's comprehensive B2B integration platform that provides all components needed for EDI implementation including document translation, data mapping, secure communication protocols, workflow management, and partner connectivity. It's a complete solution for EDI automation."
+    },
+    {
+      question: "What is the duration of the EDI training course?",
+      answer: "Our comprehensive EDI training is designed to be completed in 45 days, which can be taken as weekend batches (8-10 weeks) or weekday batches (6-8 weeks) depending on your schedule and learning pace with hands-on practice sessions."
+    },
+    {
+      question: "What EDI standards and document types will I learn?",
+      answer: "You'll learn major EDI standards including ANSI X12, UN/EDIFACT, and TRADACOMS. We cover common document types like Purchase Orders (850), Invoices (810), Advance Ship Notices (856), Functional Acknowledgments (997), and industry-specific transaction sets."
+    },
+    {
+      question: "What career opportunities are available after EDI training?",
+      answer: "EDI professionals can work as EDI Developer, B2B Integration Specialist, EDI Analyst, Sterling Integrator Developer, Business Integration Consultant, Supply Chain Analyst, or EDI Support Engineer with salaries ranging from ₹4-12 LPA depending on experience and expertise."
+    },
+    {
+      question: "Will I work on real EDI implementation projects during training?",
+      answer: "Yes! You'll work on hands-on projects including EDI document mapping, partner onboarding, business process workflows, error handling scenarios, Sterling B2B Integrator configuration, and end-to-end EDI transaction processing using real business scenarios."
+    },
+    {
+      question: "How does EDI benefit organizations compared to traditional document exchange?",
+      answer: "EDI provides significant benefits including 80% reduction in processing time, elimination of manual errors, cost savings on paper and postage, faster payment cycles, improved inventory management, better supplier relationships, and enhanced data security and tracking capabilities."
+    },
+    {
+      question: "Do you provide placement assistance and certification guidance?",
+      answer: "Yes, we offer 100% placement assistance including resume building, EDI project portfolio creation, interview preparation with technical scenarios, mock interviews, and connecting you with our network of companies looking for EDI and Sterling B2B Integrator professionals."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for EDI implementations, access to updated Sterling B2B Integrator materials, latest EDI standards updates, industry best practices, and alumni network for continuous professional development."
+    }
+  ];
+
   return (
     <>
       {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
@@ -433,6 +477,11 @@ export default function EDITraining() {
                   </button>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-indigo-600/15 via-purple-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+              <FAQ faqs={ediFaqs} theme="default" />
             </section>
 
           </div>

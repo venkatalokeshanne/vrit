@@ -1,4 +1,49 @@
 import React from 'react';
+import FAQ from '../components/FAQ';
+
+// FAQ Data for Terms and Conditions
+const termsAndConditionsFaqs = [
+  {
+    question: "What do these Terms and Conditions cover?",
+    answer: "These Terms and Conditions govern your use of the VR IT Solutions website (vritsol.com), our educational services, content, and products. By using our website or services, you agree to be bound by these terms, which outline your rights and responsibilities as a user or customer."
+  },
+  {
+    question: "Who is responsible if a company provides access to employees?",
+    answer: "If you are a company or person providing access to VR IT Solutions products for others, you agree to take full responsibility for damages or indemnification that could properly apply to the customer. The company representative becomes liable for ensuring compliance with our terms."
+  },
+  {
+    question: "What are the main website usage guidelines I must follow?",
+    answer: "You must not engage in unlawful activities, abuse or harass others, publish offensive content, upload protected files, attempt hacking, run spam services, distribute unauthorized content, or violate intellectual property laws. Violation of these guidelines may result in blocked access to our services."
+  },
+  {
+    question: "Can I link to VR IT Solutions website from my site?",
+    answer: "You may provide legitimate links to our pages, but you cannot mirror or frame our content, use spam anchor text, include our copyrighted materials without permission, or link from sites containing illegal, pornographic, racist, or terrorist content. All links must comply with legal and ethical standards."
+  },
+  {
+    question: "Who owns the content on VR IT Solutions website?",
+    answer: "All content on our website, including text, graphics, code, software, and digital images, is protected by copyright and trademark laws owned by VR IT Solutions, its affiliates, or third-party licensors. You may not duplicate, modify, publish, or reproduce this content without written consent."
+  },
+  {
+    question: "How do subscription services work at VR IT Solutions?",
+    answer: "You can subscribe to individual courses or collections with automatic billing based on your chosen frequency (monthly/quarterly/yearly). You can freeze subscriptions anytime without charges, but access will be revoked during the freeze period. You can re-subscribe later with a new payment cycle."
+  },
+  {
+    question: "What happens if I violate intellectual property rights?",
+    answer: "VR IT Solutions reserves the right to disable or prohibit access for users who infringe on our intellectual property. If you believe your work has been used without permission, contact our support team with details. We take intellectual property violations seriously and will act appropriately."
+  },
+  {
+    question: "Can prices change after I make a purchase?",
+    answer: "All prices, products, and offers are subject to change without notice due to market conditions, course termination, or other circumstances. However, the price you paid at the time of purchase remains valid for your specific transaction. We strive to maintain accurate pricing but reserve the right to correct errors."
+  },
+  {
+    question: "What is VR IT Solutions' liability for damages or issues?",
+    answer: "VR IT Solutions shall not be liable for direct, indirect, incidental, special, or consequential damages including loss of profits, data, or other intangible losses. This includes issues from service use/inability to use, unauthorized access, third-party conduct, or other matters relating to our products."
+  },
+  {
+    question: "What are my responsibilities as a user regarding indemnification?",
+    answer: "You agree to indemnify and hold VR IT Solutions harmless from any third-party claims or demands (including legal expenses) arising from your breach of these terms, violation of laws, or infringement of third-party rights. This protects the company from issues caused by user misconduct."
+  }
+];
 
 export const metadata = {
   title: 'Terms and Conditions | VR IT Solutions',
@@ -202,6 +247,14 @@ export default function TermsAndConditions() {
             </section>
 
           </div>
+
+          {/* FAQ Section */}
+          <div className="mt-12">
+            <div className="bg-gradient-to-br from-orange-500/10 via-red-500/15 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/20 shadow-xl shadow-orange-500/5">
+              <FAQ faqs={termsAndConditionsFaqs} theme="default" />
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

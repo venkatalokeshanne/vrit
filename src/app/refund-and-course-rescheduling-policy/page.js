@@ -1,4 +1,49 @@
 import React from 'react';
+import FAQ from '../components/FAQ';
+
+// FAQ Data for Refund and Course Rescheduling Policy
+const refundPolicyFaqs = [
+  {
+    question: "How long do I have to request a refund after purchasing a course?",
+    answer: "You must raise a refund request within 7 days of the commencement of the first session. Any refund request beyond this 7-day period will not be accepted, and no refund will be provided. This policy ensures fair usage while protecting our training resources."
+  },
+  {
+    question: "Can I get a refund if I've already attended some training sessions?",
+    answer: "No, the refund request will not be accepted if you have attended the online classroom training for more than 1 day's session or have accessed/downloaded course material from the learning portal. This policy ensures that students cannot misuse the refund system after benefiting from our training content."
+  },
+  {
+    question: "Are discounted courses eligible for refunds?",
+    answer: "No, refunds are not provided on discounted courses. This includes promotional offers, early bird discounts, group discounts, or any specially priced courses. The discounted pricing is offered with the understanding that it's a final sale with no refund options."
+  },
+  {
+    question: "What happens if I don't attend my scheduled training session?",
+    answer: "If you don't turn up on the given schedule without prior notice, no refund will be provided. However, you may contact our support team to discuss rescheduling options to another available batch, subject to availability and our rescheduling policies."
+  },
+  {
+    question: "How long does the refund process take once approved?",
+    answer: "All approved refunds will be processed within 20 working days of receipt of the refund request. The refund will be credited back to the original payment method used during the course purchase. Please note that taxes amount will not be refunded as per our policy."
+  },
+  {
+    question: "Can I get a refund for self-paced learning courses?",
+    answer: "No, refunds are not provided for self-paced courses. Once you purchase a self-paced learning course and gain access to the content, the sale is considered final. This policy is in place because self-paced courses provide immediate access to all course materials upon purchase."
+  },
+  {
+    question: "What happens if I share my course access with others?",
+    answer: "Course sharing is strictly prohibited. If we find that a course is being shared with others or multiple users, or if the intention of course purchase is to copy the material/content, no refund will be provided, access will be revoked, and the account will be blocked immediately."
+  },
+  {
+    question: "Can VR IT Solutions cancel or postpone training sessions?",
+    answer: "Yes, VR IT Solutions reserves the right to postpone or cancel an event due to instructor illness or force-majeure events (like floods, earthquakes, political instability, pandemic situations like COVID-19, etc.). In such cases, we will reschedule the training or provide alternative arrangements."
+  },
+  {
+    question: "What if there's no available batch for me to re-attend the course?",
+    answer: "If you want to re-attend the online instructor-led classes for your purchased course and there's no availability of the batch in the near future, the maximum refund applicable will be 10% of the total amount paid. This partial refund acknowledges the inconvenience while covering our administrative costs."
+  },
+  {
+    question: "Who should I contact for refund requests or policy clarifications?",
+    answer: "For any queries regarding refunds or course rescheduling, please contact our support team at info@vritsol.com or call +91-9032734343. Our support team will guide you through the refund process and help clarify any aspects of our refund and rescheduling policies."
+  }
+];
 
 export const metadata = {
   title: 'Refund and Course Rescheduling Policy | VR IT Solutions',
@@ -114,6 +159,14 @@ export default function RefundAndCourseReschedulingPolicy() {
             </section>
 
           </div>
+
+          {/* FAQ Section */}
+          <div className="mt-12">
+            <div className="bg-gradient-to-br from-indigo-500/10 via-purple-500/15 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/20 shadow-xl shadow-indigo-500/5">
+              <FAQ faqs={refundPolicyFaqs} theme="default" />
+            </div>
+          </div>
+
         </div>
       </div>
     </div>

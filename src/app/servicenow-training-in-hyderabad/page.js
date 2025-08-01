@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -140,6 +141,49 @@ export default function ServiceNowTraining() {
     {
       title: "Industry relevant curriculum",
       description: "You learn the latest from us! Our curriculum is constantly updated once in 6 months to keep pace with the emerging technologies in this area, so you are always ahead of others."
+    }
+  ];
+
+  const serviceNowFaqs = [
+    {
+      question: "What is ServiceNow and why should I learn it?",
+      answer: "ServiceNow is a leading cloud-based platform for IT Service Management (ITSM), IT Operations Management (ITOM), and business process automation. Learning ServiceNow opens doors to high-paying careers in IT service management, workflow automation, and enterprise cloud solutions with average salaries ranging from ₹6-15 LPA."
+    },
+    {
+      question: "What are the prerequisites for ServiceNow training?",
+      answer: "Basic knowledge of ITIL processes is helpful but not mandatory. Understanding of web technologies, databases, and basic programming concepts is beneficial. Our course is designed for beginners and covers all foundational concepts needed to master ServiceNow."
+    },
+    {
+      question: "What is the duration and fee structure for ServiceNow training?",
+      answer: "Our ServiceNow training is a comprehensive 40-day program. The course fee is competitive and includes all study materials, lab access, and lifetime support. Contact us at +91-9032734343 for current fee structure and available discounts."
+    },
+    {
+      question: "Do you provide ServiceNow certification preparation?",
+      answer: "Yes, our training prepares you for ServiceNow Certified System Administrator (CSA) and other official ServiceNow certifications. We provide practice tests, exam tips, and additional study materials to help you pass the certification exams."
+    },
+    {
+      question: "What career opportunities are available after ServiceNow training?",
+      answer: "ServiceNow professionals can work as ServiceNow Administrator, ServiceNow Developer, ITSM Consultant, Workflow Analyst, ServiceNow Architect, and Implementation Specialist. Top companies like Accenture, Deloitte, IBM, and Wipro actively hire ServiceNow professionals."
+    },
+    {
+      question: "Do you provide hands-on practice and live projects?",
+      answer: "Absolutely! Our training includes extensive hands-on labs, real-world scenarios, and a live project. Students get access to ServiceNow Personal Developer Instance (PDI) for practice and work on actual business use cases throughout the course."
+    },
+    {
+      question: "What is covered in the ServiceNow curriculum?",
+      answer: "The curriculum covers ServiceNow platform basics, lists and forms, user management, CMDB, workflow creation, notifications, reporting, Service Catalog, Knowledge Base, SLAs, scripting, instance management, and live project implementation."
+    },
+    {
+      question: "Do you provide job placement assistance?",
+      answer: "Yes, we provide 100% placement assistance including resume preparation, interview coaching, job referrals, and continuous support until you get placed. We have tie-ups with 200+ companies looking for ServiceNow professionals."
+    },
+    {
+      question: "Can working professionals attend ServiceNow training?",
+      answer: "Yes, we offer flexible batch timings including weekend batches and evening classes specifically designed for working professionals. Online training options are also available with live instructor-led sessions."
+    },
+    {
+      question: "What support do you provide after course completion?",
+      answer: "We provide lifetime support including job assistance, interview preparation, access to updated materials, doubt clearing sessions, and alumni network access. Our trainers are available for guidance even after course completion."
     }
   ];
 
@@ -442,6 +486,11 @@ export default function ServiceNowTraining() {
                   🎯 VRIT Solutions offers 100% placement Guaranteed program for deserving students.
                 </p>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="mb-8">
+              <FAQ faqs={serviceNowFaqs} title="ServiceNow Training FAQs" theme="servicenow" />
             </section>
 
             {/* Call to Action - Final Orange/Red Theme */}

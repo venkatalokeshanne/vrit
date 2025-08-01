@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -150,6 +151,49 @@ export default function InformaticaMDMTraining() {
     "Complete assistance to help you crack interviews – we provide FAQs, sample resumes and tips.",
     "Get trained in Informatica MDM in just 50 hours - select either weekend or weekday mode.",
     "Industry relevant curriculum - Our curriculum is constantly updated to meet the growing needs of the industry"
+  ];
+
+  const informaticaMDMFaqs = [
+    {
+      question: "What is Informatica MDM and why is it crucial for enterprises?",
+      answer: "Informatica MDM (Master Data Management) is a comprehensive solution for managing and maintaining accurate, consistent master data across enterprise systems. It's crucial because it ensures data quality, eliminates data silos, enables single version of truth, and supports better business decisions through reliable data."
+    },
+    {
+      question: "What are the prerequisites for Informatica MDM training?",
+      answer: "Basic understanding of databases, SQL queries, data warehousing concepts, and familiarity with ETL processes. Knowledge of Informatica PowerCenter is beneficial but not mandatory. Having experience with data management concepts and business processes is helpful."
+    },
+    {
+      question: "What components of Informatica MDM will I learn?",
+      answer: "You'll learn MDM Hub, Data Director, ActiveVOS for workflow management, Hierarchy Manager, Match and Merge processes, SIF (Service Integration Framework), data stewardship, data governance, cleansing rules, and integration with various source systems."
+    },
+    {
+      question: "What is the duration of the Informatica MDM training course?",
+      answer: "Our comprehensive Informatica MDM training is designed to be completed in 45-55 hours, which can be taken as weekend batches (8-10 weeks) or weekday batches (6-8 weeks) depending on your schedule and learning pace."
+    },
+    {
+      question: "Will I work on real MDM implementation projects?",
+      answer: "Yes! You'll work on hands-on projects including customer master data creation, product hierarchy management, supplier data consolidation, data matching and merging scenarios, workflow configuration, and end-to-end MDM implementation using real business cases."
+    },
+    {
+      question: "What career opportunities are available after Informatica MDM training?",
+      answer: "MDM professionals can work as MDM Developer, Data Steward, MDM Consultant, Data Architect, MDM Analyst, Data Governance Specialist, Solution Architect, or Senior MDM Developer with salaries ranging from ₹5-18 LPA depending on experience and expertise."
+    },
+    {
+      question: "How does Informatica MDM integrate with other Informatica tools?",
+      answer: "Informatica MDM integrates seamlessly with PowerCenter for ETL operations, Data Quality for cleansing, Data Privacy for compliance, Cloud Data Integration, and other Informatica Cloud services to provide a comprehensive data management ecosystem."
+    },
+    {
+      question: "Do you cover both on-premise and cloud-based MDM implementations?",
+      answer: "Yes, our training covers traditional on-premise MDM Hub implementations as well as Informatica Cloud MDM (Multidomain MDM), hybrid architectures, and migration strategies from on-premise to cloud environments."
+    },
+    {
+      question: "Do you provide placement assistance and interview preparation?",
+      answer: "Yes, we offer 100% placement assistance including resume building, MDM project portfolio creation, interview preparation with technical scenarios, mock interviews, and connecting you with our network of companies looking for MDM professionals."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for MDM projects, access to updated course materials, latest MDM features, industry best practices, and alumni network for continuous professional development."
+    }
   ];
 
   return (
@@ -543,6 +587,11 @@ export default function InformaticaMDMTraining() {
                   </button>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-indigo-600/15 via-purple-600/20 to-pink-600/15 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+              <FAQ faqs={informaticaMDMFaqs} theme="default" />
             </section>
 
           </div>

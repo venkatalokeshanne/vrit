@@ -1,3 +1,6 @@
+import React from 'react';
+import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Phone,
   Star, 
@@ -105,6 +108,49 @@ export default function SAPSimpleLogisticsTraining() {
     { mode: "Online Training", icon: Globe, desc: "Live interactive sessions from anywhere" },
     { mode: "Classroom Training", icon: Users, desc: "In-person training in Hyderabad" },
     { mode: "Job Support", icon: Target, desc: "Real-time project assistance" }
+  ];
+
+  const sapSimpleLogisticsFaqs = [
+    {
+      question: "What is SAP S/4HANA Simple Logistics and how does it differ from traditional logistics?",
+      answer: "SAP S/4HANA Simple Logistics is a streamlined, integrated logistics solution within S/4HANA that combines Material Management, Production Planning, and Warehouse Management in a simplified approach. It differs from traditional logistics by offering real-time processing, embedded analytics, and unified user experience with modern Fiori apps."
+    },
+    {
+      question: "What are the prerequisites for SAP Simple Logistics training?",
+      answer: "Basic understanding of supply chain and logistics processes, familiarity with SAP system navigation, knowledge of business processes in procurement and production, and understanding of materials management concepts. Having experience with SAP MM or PP modules is beneficial but not mandatory."
+    },
+    {
+      question: "What key modules and processes will I learn in Simple Logistics?",
+      answer: "You'll learn Material Management (MM), Production Planning (PP), Inventory Management, Procurement processes, Production execution, Supply chain planning, Warehouse management basics, Integration between logistics modules, and S/4HANA-specific simplifications and enhancements."
+    },
+    {
+      question: "What is the duration of the SAP Simple Logistics training course?",
+      answer: "Our comprehensive SAP Simple Logistics training is designed to be completed in 40 days, which can be taken as weekend batches (8-10 weeks) or weekday batches (6-8 weeks) depending on your schedule with extensive hands-on practice on S/4HANA system."
+    },
+    {
+      question: "Will I get hands-on experience with real S/4HANA logistics scenarios?",
+      answer: "Yes! You'll work on actual S/4HANA systems with hands-on exercises including procurement cycles, production planning scenarios, inventory management, material master creation, vendor management, and end-to-end logistics processes using real business cases and S/4HANA Fiori apps."
+    },
+    {
+      question: "What career opportunities are available after Simple Logistics training?",
+      answer: "Simple Logistics professionals can work as SAP Logistics Consultant, Supply Chain Analyst, Materials Management Consultant, Production Planning Specialist, SAP Functional Consultant, or Logistics Coordinator with salaries ranging from ₹4-14 LPA depending on experience and domain expertise."
+    },
+    {
+      question: "How does S/4HANA Simple Logistics improve business processes?",
+      answer: "S/4HANA Simple Logistics provides real-time inventory visibility, streamlined procurement processes, integrated planning, embedded analytics for better decision-making, mobile-ready Fiori applications, simplified master data management, and enhanced user experience compared to traditional SAP ECC logistics."
+    },
+    {
+      question: "Do you cover integration between different logistics modules?",
+      answer: "Yes, our training comprehensively covers integration between MM, PP, WM modules, how data flows between procurement and production, inventory impact on financial modules, and how S/4HANA's unified data model enables seamless integration across logistics processes."
+    },
+    {
+      question: "Do you provide SAP certification guidance and placement assistance?",
+      answer: "Yes, we provide guidance for SAP S/4HANA logistics certification exams and offer 100% placement assistance including resume building, logistics project portfolio creation, interview preparation with supply chain scenarios, and connecting with companies implementing S/4HANA logistics."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for logistics implementations, access to updated S/4HANA materials, latest logistics features, supply chain best practices, and alumni network for continuous professional development."
+    }
   ];
 
   return (
@@ -589,6 +635,17 @@ export default function SAPSimpleLogisticsTraining() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <section className="bg-gradient-to-br from-green-600/15 via-blue-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10 mx-4 mb-8">
+          <FAQ faqs={sapSimpleLogisticsFaqs} theme="sap" />
+        </section>
+
+        {/* Sidebar */}
+        <div className="fixed top-20 right-4 z-40">
+          <CourseSidebar courseName="SAP Simple Logistics" phoneNumber="+91-9032734343" />
+        </div>
+
       </div>
     </>
   );

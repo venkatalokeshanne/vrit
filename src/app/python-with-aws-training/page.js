@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -99,6 +100,49 @@ export const metadata = {
 };
 
 export default function PythonWithAWSTraining() {
+  const pythonAWSFaqs = [
+    {
+      question: "What is Python with AWS and why is this combination powerful?",
+      answer: "Python with AWS combines Python programming with Amazon Web Services cloud platform. This combination is powerful because Python's boto3 SDK provides seamless integration with AWS services, enabling automation, infrastructure as code, serverless computing, and scalable cloud applications with minimal code."
+    },
+    {
+      question: "What are the prerequisites for Python with AWS training?",
+      answer: "Basic knowledge of Python programming, understanding of fundamental programming concepts, familiarity with command-line operations, and basic understanding of cloud computing concepts. Having some experience with web development and databases is beneficial but not mandatory."
+    },
+    {
+      question: "What AWS services and Python libraries will I learn?",
+      answer: "You'll learn boto3 (AWS SDK for Python), EC2, S3, Lambda, RDS, DynamoDB, CloudFormation, IAM, API Gateway, CloudWatch, SQS, SNS, and other core AWS services. We also cover Python frameworks like Flask/Django for web applications and automation scripts."
+    },
+    {
+      question: "What is the duration of the Python with AWS training course?",
+      answer: "Our comprehensive Python with AWS training is designed to be completed in 45 days, which can be taken as weekend batches (8-10 weeks) or weekday batches (6-8 weeks) depending on your schedule and learning pace."
+    },
+    {
+      question: "Will I work on real cloud automation projects during training?",
+      answer: "Yes! You'll work on hands-on projects including AWS resource automation using boto3, serverless applications with Lambda, web applications deployment, infrastructure as code, monitoring solutions, and end-to-end cloud automation projects using real-world scenarios."
+    },
+    {
+      question: "What career opportunities are available after Python AWS training?",
+      answer: "Python AWS professionals can work as Cloud Developer, DevOps Engineer, Solutions Architect, Python Developer, AWS Developer, Automation Engineer, Site Reliability Engineer, or Cloud Consultant with salaries ranging from ₹4-16 LPA depending on experience and skills."
+    },
+    {
+      question: "How does Python boto3 help in AWS automation?",
+      answer: "Boto3 is the official AWS SDK for Python that allows you to create, configure, and manage AWS services programmatically. It enables infrastructure automation, resource provisioning, monitoring, cost optimization, and building scalable cloud applications without manual AWS console operations."
+    },
+    {
+      question: "Do you cover both serverless and traditional cloud architectures?",
+      answer: "Yes, our training covers traditional cloud architectures using EC2, RDS, and VPC, as well as modern serverless architectures using Lambda, API Gateway, DynamoDB, and other managed services. You'll learn when to use each approach effectively."
+    },
+    {
+      question: "Do you provide AWS certification guidance and placement assistance?",
+      answer: "Yes, we provide guidance for AWS certifications like AWS Developer Associate and Solutions Architect Associate. We also offer 100% placement assistance including portfolio development, resume building, interview preparation, and connecting with companies hiring Python AWS professionals."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for AWS projects, access to updated course materials, latest AWS service updates, Python library updates, and alumni network for continuous learning and professional growth."
+    }
+  ];
+
   return (
     <>
       {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
@@ -355,6 +399,11 @@ export default function PythonWithAWSTraining() {
                   </button>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-blue-600/15 via-indigo-600/20 to-purple-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <FAQ faqs={pythonAWSFaqs} theme="aws" />
             </section>
 
           </div>

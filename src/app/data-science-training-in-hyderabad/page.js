@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -99,6 +100,49 @@ export const metadata = {
 };
 
 export default function DataScienceTraining() {
+  const dataScienceFaqs = [
+    {
+      question: "What is Data Science and why is it a high-demand career?",
+      answer: "Data Science combines statistics, programming, and domain expertise to extract insights from data. It's one of the fastest-growing fields with excellent career prospects, offering salaries ranging from ₹6-25 LPA for data scientists and analysts."
+    },
+    {
+      question: "What are the prerequisites for Data Science training?",
+      answer: "Basic knowledge of mathematics, statistics, and logical thinking is helpful. No prior programming experience is required as our course covers Python programming from basics. Background in any analytical field is advantageous but not mandatory."
+    },
+    {
+      question: "What is the duration and structure of Data Science training?",
+      answer: "Our comprehensive Data Science training is a 100-day program covering statistics, Python programming, machine learning, data visualization, big data technologies like Hadoop and Spark, and real-world projects with hands-on practice."
+    },
+    {
+      question: "Which tools and technologies will I learn in Data Science training?",
+      answer: "You'll learn Python, R, SQL, Tableau, Power BI, Hadoop, Spark, Azure, machine learning libraries (scikit-learn, pandas, numpy), statistical analysis, and data visualization tools with practical implementation."
+    },
+    {
+      question: "What career opportunities are available after Data Science training?",
+      answer: "Data Science opens doors to roles like Data Scientist, Data Analyst, Machine Learning Engineer, Business Intelligence Analyst, Data Engineer, Research Scientist, and Consultant. Companies across all industries actively hire data professionals."
+    },
+    {
+      question: "Do you provide hands-on projects and real-world experience?",
+      answer: "Yes, our training includes multiple hands-on projects using real datasets, case studies from various industries, and a capstone project. Students build a comprehensive portfolio demonstrating practical data science skills."
+    },
+    {
+      question: "Is Data Science suitable for non-technical professionals?",
+      answer: "Yes, Data Science welcomes professionals from various backgrounds including business, finance, marketing, and healthcare. Our course is designed to teach technical skills progressively, making it accessible to non-technical professionals."
+    },
+    {
+      question: "Do you cover machine learning and artificial intelligence concepts?",
+      answer: "Absolutely! The curriculum includes comprehensive machine learning concepts, algorithms, deep learning basics, artificial intelligence applications, and practical implementation using Python libraries and frameworks."
+    },
+    {
+      question: "What support do you provide for job placement in Data Science?",
+      answer: "We provide 100% placement assistance including portfolio development, interview preparation, mock interviews, job referrals to top companies, and guidance on building a strong professional profile in the data science community."
+    },
+    {
+      question: "How do you keep the curriculum updated with latest industry trends?",
+      answer: "Our curriculum is updated every 6 months to include latest tools, technologies, and industry best practices. We incorporate feedback from industry experts and alumni to ensure relevance to current market demands."
+    }
+  ];
+
   const curriculumItems = [
     "Get an overview of business intelligence and business analysis",
     "Get hands-on on descriptive statistics of data analysis",
@@ -437,6 +481,11 @@ export default function DataScienceTraining() {
                   <span className="text-green-400 font-semibold">VRIT solutions</span> is one of the best Data Science Online Training institutes in Hyderabad that offers industry relevant curriculum and Data science Interview Questions, backed by state-of-the-art infrastructure to make you a thorough bred professional in this area of knowledge. To manage large amounts of data, data scientists are required, who can handle large volumes of data; draw inferences and generate spot trends upon the data.
                 </p>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="mb-8">
+              <FAQ faqs={dataScienceFaqs} title="Data Science Training FAQs" theme="dataScience" />
             </section>
 
             {/* Call to Action - Final Orange/Red Theme */}

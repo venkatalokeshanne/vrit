@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -32,6 +33,50 @@ import {
   DollarSign,
   Calculator
 } from 'lucide-react';
+
+// FAQ Data for S/4 HANA Finance Training
+const s4HanaFinanceFaqs = [
+  {
+    question: "What are the key differences between traditional SAP FICO and S/4 HANA Finance?",
+    answer: "S/4 HANA Finance introduces the Universal Journal concept, eliminating the need for separate reconciliation between FI and CO modules. It provides real-time financial reporting, simplified data model, enhanced user experience with Fiori apps, and advanced analytics capabilities. The new architecture offers faster processing, improved cash flow management, and integrated financial planning."
+  },
+  {
+    question: "What prerequisites do I need to learn S/4 HANA Finance?",
+    answer: "Basic understanding of accounting principles and financial processes is essential. Prior experience with SAP ERP or FICO modules is highly recommended. Familiarity with SAP GUI navigation, basic SAP configuration concepts, and understanding of business processes like accounts payable, receivable, and general ledger will be beneficial for faster learning."
+  },
+  {
+    question: "What career opportunities are available after S/4 HANA Finance certification?",
+    answer: "Career opportunities include S/4 HANA Finance Consultant, Financial Systems Analyst, SAP Finance Migration Specialist, S/4 HANA Project Manager, Business Process Consultant, and Enterprise Finance Architect. With growing S/4 HANA adoption, professionals can expect salary ranges from ₹8-25 lakhs annually depending on experience and expertise level."
+  },
+  {
+    question: "How long does it take to complete S/4 HANA Finance training?",
+    answer: "Our comprehensive S/4 HANA Finance training program spans 6-8 weeks with flexible scheduling options. This includes 60+ hours of instructor-led training, hands-on practice sessions, real-world project work, and assessment preparation. Weekend and evening batches are available to accommodate working professionals."
+  },
+  {
+    question: "What hands-on experience will I gain during the training?",
+    answer: "You'll work on live S/4 HANA system with real business scenarios including Universal Journal configuration, Asset Accounting in S/4 HANA, Advanced Financial Closing, Cash Management, Financial Planning and Analysis, Integration with other S/4 HANA modules, Migration from ECC to S/4 HANA Finance, and Fiori apps for finance."
+  },
+  {
+    question: "Which S/4 HANA Finance certifications should I pursue?",
+    answer: "Key certifications include SAP Certified Application Associate - SAP S/4HANA Finance (C_TS4FI_2021), SAP Certified Application Associate - Management Accounting with SAP S/4HANA (C_TS4CO_2021), and SAP S/4HANA Finance Advanced certifications. These validate your expertise in S/4 HANA Finance implementation and migration projects."
+  },
+  {
+    question: "Do you provide placement assistance after S/4 HANA Finance training?",
+    answer: "Yes, we offer comprehensive placement support including resume building, interview preparation, technical mock interviews, and direct connections with 200+ hiring partners. Our placement team has successfully placed 95% of students in leading companies like Accenture, TCS, Infosys, Deloitte, and various SAP consulting firms."
+  },
+  {
+    question: "What is the Universal Journal concept in S/4 HANA Finance?",
+    answer: "Universal Journal is the revolutionary concept in S/4 HANA Finance that combines Financial Accounting (FI) and Controlling (CO) into a single source of truth. It eliminates reconciliation between modules, provides real-time reporting, supports multiple accounting principles simultaneously, and enables enhanced analytical capabilities with simplified data structure."
+  },
+  {
+    question: "How does S/4 HANA Finance integrate with other modules?",
+    answer: "S/4 HANA Finance seamlessly integrates with Materials Management (MM), Sales & Distribution (SD), Production Planning (PP), and Human Capital Management (HCM). The integration provides real-time financial impact visibility, automated journal entries, enhanced reporting across modules, and streamlined business processes with reduced manual interventions."
+  },
+  {
+    question: "What ongoing support do you provide after course completion?",
+    answer: "We provide lifetime access to course materials, monthly refresher sessions, job support for initial 6 months, access to our alumni network, regular updates on S/4 HANA Finance new features, and ongoing mentorship. Our support team is available to help with real-world implementation challenges and career guidance."
+  }
+];
 
 export const metadata = {
   title: 'Best S/4 HANA Finance Training in Hyderabad | #1 S/4 HANA Finance Course Institute | 100% Placement | VR IT Solutions',
@@ -377,6 +422,13 @@ export default function S4HANAFinanceTraining() {
               </section>
             </div>
 
+          </div>
+
+          {/* FAQ Section */}
+          <div className="lg:col-span-2 mb-8">
+            <div className="bg-gradient-to-br from-green-600/15 via-blue-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+              <FAQ faqs={s4HanaFinanceFaqs} theme="sap" />
+            </div>
           </div>
 
           {/* Sidebar */}

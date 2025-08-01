@@ -1,3 +1,6 @@
+import React from 'react';
+import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Phone,
   Star, 
@@ -105,6 +108,49 @@ export default function SAPSecurityGRCTraining() {
     { mode: "Online Training", icon: Globe, desc: "Live interactive sessions from anywhere" },
     { mode: "Classroom Training", icon: Users, desc: "In-person training in Hyderabad" },
     { mode: "Job Support", icon: Target, desc: "Real-time project assistance" }
+  ];
+
+  const sapSecurityGRCFaqs = [
+    {
+      question: "What is SAP Security & GRC and why is it essential for enterprises?",
+      answer: "SAP Security & GRC (Governance, Risk & Compliance) ensures secure access to SAP systems while maintaining compliance with regulatory requirements. It's essential because it protects sensitive business data, prevents unauthorized access, ensures audit compliance, and maintains segregation of duties in critical business processes."
+    },
+    {
+      question: "What are the prerequisites for SAP Security & GRC training?",
+      answer: "Basic understanding of SAP system navigation, fundamental knowledge of business processes, and familiarity with user management concepts. Having experience with SAP functional modules (FICO, MM, SD) is beneficial but not mandatory as we cover security concepts comprehensively."
+    },
+    {
+      question: "What key components will I learn in SAP Security & GRC?",
+      answer: "You'll learn User Administration, Role Administration, Profile Administration, Authorization Objects, GRC Access Control, Risk Analysis & Remediation, SOX compliance, User Access Reviews, Emergency Access Management, and Security Audit & Monitoring techniques."
+    },
+    {
+      question: "What is the duration of the SAP Security & GRC training course?",
+      answer: "Our comprehensive SAP Security & GRC training is designed to be completed in 60 days, which can be taken as weekend batches (10-12 weeks) or weekday batches (8-10 weeks) depending on your schedule with extensive hands-on practice."
+    },
+    {
+      question: "Will I get hands-on experience with real SAP Security scenarios?",
+      answer: "Yes! You'll work on actual SAP systems with hands-on exercises including role design, authorization testing, GRC rule configuration, access risk analysis, SOX compliance scenarios, and security audit activities using real business cases and compliance requirements."
+    },
+    {
+      question: "What career opportunities are available after SAP Security & GRC training?",
+      answer: "SAP Security & GRC professionals can work as SAP Security Consultant, GRC Analyst, SAP Authorization Specialist, Compliance Manager, Security Auditor, or GRC Solution Architect with salaries ranging from ₹5-20 LPA depending on experience and expertise."
+    },
+    {
+      question: "How does SAP GRC help with regulatory compliance like SOX?",
+      answer: "SAP GRC provides automated controls for segregation of duties, access risk analysis, continuous monitoring, emergency access management, and comprehensive audit trails. It ensures compliance with SOX, SOD requirements, and other regulatory frameworks through preventive and detective controls."
+    },
+    {
+      question: "Do you cover both traditional security and modern S/4HANA security?",
+      answer: "Yes, our training covers traditional SAP ECC security administration and modern S/4HANA security including Fiori authorization, embedded analytics security, simplified role concepts, and cloud security considerations for hybrid landscapes."
+    },
+    {
+      question: "Do you provide SAP Security certification guidance and placement assistance?",
+      answer: "Yes, we provide guidance for SAP Security & GRC certification exams and offer 100% placement assistance including resume building, security project portfolio creation, interview preparation with compliance scenarios, and connecting with companies hiring security professionals."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for security implementations, access to updated GRC materials, latest security features, compliance updates, and alumni network for continuous professional development."
+    }
   ];
 
   return (
@@ -415,6 +461,17 @@ export default function SAPSecurityGRCTraining() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <section className="bg-gradient-to-br from-blue-600/15 via-indigo-600/20 to-purple-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10 mx-4 mb-8">
+          <FAQ faqs={sapSecurityGRCFaqs} theme="sap" />
+        </section>
+
+        {/* Sidebar */}
+        <div className="fixed top-20 right-4 z-40">
+          <CourseSidebar courseName="SAP Security & GRC" phoneNumber="+91-9032734343" />
+        </div>
+
       </div>
     </>
   );

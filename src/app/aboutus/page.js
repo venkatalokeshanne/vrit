@@ -1,5 +1,50 @@
 import React from 'react';
 import { CheckCircle, Users, Target, TrendingUp, Award, Clock, MapPin, Mail, Phone, Globe, BookOpen, Monitor, Code, Briefcase, Star, ArrowRight } from 'lucide-react';
+import FAQ from '../components/FAQ';
+
+// FAQ Data for About Us Page
+const aboutUsFaqs = [
+  {
+    question: "What makes VR IT Solutions different from other training institutes?",
+    answer: "VR IT Solutions stands out with over 50+ years of combined faculty experience, industry-endorsed curriculum, hands-on practical training with live projects, 100% placement assistance, and both online and classroom training options. We focus on making you industry-ready from day one with personalized attention and affordable fees."
+  },
+  {
+    question: "How experienced are the trainers at VR IT Solutions?",
+    answer: "Our dynamic team comprises highly experienced professionals from renowned institutes like IIT, NIT, and other reputed universities. With over 50+ years of combined experience, our faculty brings real-world industry expertise and ensures training adheres to best practices with hands-on exercises and practical exposure."
+  },
+  {
+    question: "What training modes does VR IT Solutions offer?",
+    answer: "We offer both online and classroom training modes to suit different learning preferences and schedules. Our online training eliminates physical boundaries and allows flexible learning, while classroom sessions provide face-to-face interaction. Both modes include the same quality content and practical exposure."
+  },
+  {
+    question: "Do you provide corporate training for companies?",
+    answer: "Yes, we specialize in corporate training for companies of all sizes. Our programs are customized based on specific industry requirements, learning outcomes, and budgets. We've successfully trained employees from many reputed MNCs with both online and classroom-based training options at affordable costs."
+  },
+  {
+    question: "What kind of placement assistance does VR IT Solutions provide?",
+    answer: "We provide comprehensive 100% placement assistance including resume building, interview preparation, soft skills training, and direct connections with major MNCs like Infosys, Wipro, Accenture, Deloitte, Cognizant, and Cap Gemini. We've successfully placed thousands of professionals in leading companies."
+  },
+  {
+    question: "How does VR IT Solutions ensure courses are industry-relevant?",
+    answer: "We have an exclusive team that constantly monitors industry trends, interacts with industry giants, and understands their requirements. This ensures our courses are on the latest platforms and technologies, perfectly endorsed by industry professionals and veterans, keeping you ahead of the competition."
+  },
+  {
+    question: "What facilities and infrastructure does VR IT Solutions provide?",
+    answer: "We offer state-of-the-art infrastructure including audio-visual kits, comprehensive learning materials, spacious classrooms for offline training, and advanced online learning platforms. Our facilities are designed to provide the best possible learning environment for both theoretical knowledge and practical training."
+  },
+  {
+    question: "Does VR IT Solutions provide soft skills training along with technical courses?",
+    answer: "Yes, we complement technical expertise with courses in professional etiquette, communication skills, interview techniques, and valuable tips to succeed in the competitive IT industry. These skills boost confidence levels and help students face stringent competition effectively."
+  },
+  {
+    question: "What are the requirements to get started with VR IT Solutions training?",
+    answer: "You need a reliable internet connection with appropriate training software installed on your system, and most importantly, a passion to succeed and create a difference in your life. We provide guidance on software setup and system requirements for each specific course."
+  },
+  {
+    question: "How can I contact VR IT Solutions for more information?",
+    answer: "You can reach us at our office: 506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad - 500016. Call us at +91-9032734343 or email info@vritsol.com. We're always ready to help you transform your career with our comprehensive training programs."
+  }
+];
 
 export const metadata = {
   title: 'About VR IT Solutions | Best Software Training Institute Hyderabad',
@@ -253,6 +298,15 @@ export default function AboutUs() {
                 </a>
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-gradient-to-br from-orange-500/10 via-blue-500/15 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/20 shadow-xl shadow-orange-500/5">
+            <FAQ faqs={aboutUsFaqs} theme="default" />
           </div>
         </div>
       </section>

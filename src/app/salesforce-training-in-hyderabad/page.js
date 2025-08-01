@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -96,6 +97,49 @@ export const metadata = {
 };
 
 export default function SalesforceTraining() {
+  const salesforceFaqs = [
+    {
+      question: "What is Salesforce and why should I learn it?",
+      answer: "Salesforce is the world's leading CRM platform that helps businesses manage customer relationships, sales processes, and business operations. Learning Salesforce opens doors to high-paying careers with average salaries ranging from ₹5-12 LPA for administrators and ₹8-18 LPA for developers."
+    },
+    {
+      question: "What are the prerequisites for Salesforce training?",
+      answer: "Basic computer knowledge, understanding of business processes, and familiarity with internet usage are sufficient. No prior technical experience is required. Our course starts from basics and covers all concepts needed to become a Salesforce professional."
+    },
+    {
+      question: "What is the duration and fee structure for Salesforce training?",
+      answer: "Our comprehensive Salesforce training is a 70-day program covering Sales Cloud, Service Cloud, and development concepts. The fee is competitive and includes study materials, practice org access, and lifetime support. Contact us at +91-9032734343 for current pricing."
+    },
+    {
+      question: "Which Salesforce certifications can I pursue after training?",
+      answer: "You can pursue Salesforce Administrator, Platform App Builder, Sales Cloud Consultant, Service Cloud Consultant, and Platform Developer I certifications. Our training prepares you for these exams with practice tests and certification guidance."
+    },
+    {
+      question: "What career opportunities are available in Salesforce?",
+      answer: "Salesforce offers diverse career paths including Salesforce Administrator, Developer, Consultant, Business Analyst, Architect, and Project Manager. Companies like Accenture, Deloitte, TCS, IBM actively hire Salesforce professionals with excellent growth prospects."
+    },
+    {
+      question: "Do you provide hands-on practice and real projects?",
+      answer: "Yes, our training includes extensive hands-on practice using Salesforce Developer Edition and Trailhead. Students work on real business scenarios, create custom apps, workflows, and complete live projects that simulate actual workplace requirements."
+    },
+    {
+      question: "What topics are covered in the Salesforce curriculum?",
+      answer: "The curriculum covers Salesforce basics, object relationships, security model, workflows, Process Builder, Lightning components, Apex programming, Visualforce, Sales Cloud, Service Cloud, reports, dashboards, and integration concepts."
+    },
+    {
+      question: "Do you provide job placement assistance for Salesforce?",
+      answer: "Yes, we provide 100% placement assistance including resume optimization, interview preparation, job referrals, and mock interviews. We have partnerships with 150+ companies looking for certified Salesforce professionals."
+    },
+    {
+      question: "Is Salesforce training suitable for non-technical professionals?",
+      answer: "Absolutely! Salesforce has both technical and non-technical career paths. Business users can become administrators and consultants without coding, while technical professionals can pursue development roles. Our training caters to both audiences."
+    },
+    {
+      question: "What support do you provide during and after the course?",
+      answer: "We provide 24/7 doubt clearing support, access to practice orgs, recorded sessions, interview preparation, job assistance, and lifetime access to course updates. Our alumni network and mentorship programs ensure continuous career support."
+    }
+  ];
+
   return (
     <>
       {/* JSON-LD Structured Data for SEO */}
@@ -339,6 +383,11 @@ export default function SalesforceTraining() {
                   </p>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="mb-8">
+              <FAQ faqs={salesforceFaqs} title="Salesforce Training FAQs" theme="salesforce" />
             </section>
 
           </div>

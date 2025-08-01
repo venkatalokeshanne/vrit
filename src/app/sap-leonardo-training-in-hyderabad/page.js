@@ -1,3 +1,6 @@
+import React from 'react';
+import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Phone,
   Star, 
@@ -105,6 +108,49 @@ export default function SAPLeonardoTraining() {
     { mode: "Online Training", icon: Globe, desc: "Live interactive sessions from anywhere" },
     { mode: "Classroom Training", icon: Users, desc: "In-person training in Hyderabad" },
     { mode: "Job Support", icon: Target, desc: "Real-time project assistance" }
+  ];
+
+  const sapLeonardoFaqs = [
+    {
+      question: "What is SAP Leonardo and why is it important for digital transformation?",
+      answer: "SAP Leonardo is SAP's digital innovation platform that integrates Machine Learning, IoT, Analytics, Blockchain, and Big Data technologies. It's important because it enables organizations to leverage emerging technologies for intelligent automation, predictive insights, and innovative business models within their SAP landscape."
+    },
+    {
+      question: "What are the prerequisites for SAP Leonardo training?",
+      answer: "Basic understanding of SAP systems, fundamental knowledge of cloud computing concepts, familiarity with data analytics principles, and basic programming concepts. Having experience with SAP Cloud Platform or any SAP module is beneficial but not mandatory as we cover Leonardo-specific technologies."
+    },
+    {
+      question: "What key technologies will I learn in SAP Leonardo training?",
+      answer: "You'll learn Machine Learning services, IoT application enablement, Big Data processing, Blockchain implementation, Analytics & Business Intelligence, SAP Cloud Platform integration, conversational AI, and how to build intelligent applications using Leonardo's digital innovation portfolio."
+    },
+    {
+      question: "What is the duration of the SAP Leonardo training course?",
+      answer: "Our comprehensive SAP Leonardo training is designed to be completed in 50 days, which can be taken as weekend batches (10-12 weeks) or weekday batches (8-10 weeks) depending on your schedule with hands-on experience with Leonardo services."
+    },
+    {
+      question: "Will I work on real SAP Leonardo projects during training?",
+      answer: "Yes! You'll work on hands-on projects including IoT device integration, machine learning model development, blockchain proof-of-concepts, analytics dashboard creation, and building intelligent applications using SAP Cloud Platform and Leonardo services with real business scenarios."
+    },
+    {
+      question: "What career opportunities are available after SAP Leonardo training?",
+      answer: "SAP Leonardo professionals can work as Digital Innovation Consultant, SAP Cloud Developer, IoT Solutions Architect, Data Scientist (SAP), Machine Learning Engineer, Innovation Manager, or Digital Transformation Specialist with salaries ranging from ₹6-20 LPA depending on experience."
+    },
+    {
+      question: "How does SAP Leonardo integrate with existing SAP systems?",
+      answer: "SAP Leonardo seamlessly integrates with SAP ERP, S/4HANA, SuccessFactors, and other SAP solutions through SAP Cloud Platform. It extends existing business processes with intelligent capabilities while maintaining data consistency and leveraging existing SAP investments."
+    },
+    {
+      question: "Do you cover both technical and business aspects of SAP Leonardo?",
+      answer: "Yes, our training covers technical implementation including APIs, development tools, and integration methods, as well as business aspects like use case identification, ROI calculation, digital strategy, and change management for successful Leonardo adoption."
+    },
+    {
+      question: "Do you provide SAP Leonardo certification guidance and placement assistance?",
+      answer: "Yes, we provide guidance for SAP Leonardo certification preparation and offer 100% placement assistance including portfolio development with innovative projects, resume building, interview preparation with emerging technology scenarios, and connecting with forward-thinking companies."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for innovation projects, access to latest Leonardo updates, emerging technology trends, innovation methodologies, and alumni network for continuous learning in digital transformation."
+    }
   ];
 
   return (
@@ -505,6 +551,17 @@ export default function SAPLeonardoTraining() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <section className="bg-gradient-to-br from-indigo-600/15 via-purple-600/20 to-pink-600/15 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10 mx-4 mb-8">
+          <FAQ faqs={sapLeonardoFaqs} theme="sap" />
+        </section>
+
+        {/* Sidebar */}
+        <div className="fixed top-20 right-4 z-40">
+          <CourseSidebar courseName="SAP Leonardo" phoneNumber="+91-9032734343" />
+        </div>
+
       </div>
     </>
   );

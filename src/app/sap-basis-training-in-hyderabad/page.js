@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -174,6 +175,49 @@ export default function SAPBasisTraining() {
     "Career guidance",
     "Mock Tests and Interviews",
     "24/7 support"
+  ];
+
+  const sapBasisFaqs = [
+    {
+      question: "What is SAP Basis and why is it crucial for SAP implementations?",
+      answer: "SAP Basis is the technical foundation layer that supports SAP applications. It includes system administration, database management, user management, transport management, and system monitoring. It's crucial because it ensures SAP systems run efficiently, securely, and are properly maintained for optimal business operations."
+    },
+    {
+      question: "What are the prerequisites for SAP Basis training?",
+      answer: "Basic understanding of operating systems (Windows/Linux/Unix), fundamental knowledge of databases, networking concepts, and basic IT infrastructure knowledge. Having experience with system administration or server management is beneficial but not mandatory as we cover fundamentals."
+    },
+    {
+      question: "What key components and modules will I learn in SAP Basis?",
+      answer: "You'll learn SAP system architecture, client administration, user management, transport management system (TMS), system monitoring, performance tuning, background job scheduling, system copy procedures, patch management, SAP Solution Manager, and system security administration."
+    },
+    {
+      question: "What is the duration of the SAP Basis training course?",
+      answer: "Our comprehensive SAP Basis training is designed to be completed in 45-60 hours, which can be taken as weekend batches (8-10 weeks) or weekday batches (6-8 weeks) depending on your schedule and learning pace with extensive hands-on practice."
+    },
+    {
+      question: "Will I get hands-on experience with real SAP systems during training?",
+      answer: "Yes! You'll work on actual SAP systems with hands-on exercises including client creation, user administration, transport configuration, system monitoring, performance analysis, backup and recovery procedures, and system maintenance activities using real SAP environments."
+    },
+    {
+      question: "What career opportunities are available after SAP Basis training?",
+      answer: "SAP Basis professionals can work as SAP Basis Administrator, SAP System Administrator, SAP Technical Consultant, SAP Infrastructure Manager, SAP Security Administrator, or SAP Solution Manager Administrator with salaries ranging from ₹4-15 LPA depending on experience."
+    },
+    {
+      question: "How does SAP Basis relate to other SAP technical modules?",
+      answer: "SAP Basis is the foundation for all SAP modules. It integrates with ABAP development, SAP Security, Solution Manager, PI/PO for integrations, HANA database administration, and supports all functional modules like FICO, MM, SD by providing the underlying technical infrastructure."
+    },
+    {
+      question: "Do you cover both on-premise and cloud SAP Basis administration?",
+      answer: "Yes, our training covers traditional on-premise SAP Basis administration as well as SAP cloud solutions including SAP S/4HANA Cloud, SAP BTP (Business Technology Platform), and hybrid landscape management for comprehensive cloud and on-premise expertise."
+    },
+    {
+      question: "Do you provide SAP certification guidance and placement assistance?",
+      answer: "Yes, we provide guidance for SAP Basis certification exams and offer 100% placement assistance including resume building, SAP Basis project portfolio creation, interview preparation with technical scenarios, and connecting with companies hiring SAP Basis professionals."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for SAP Basis projects, access to updated course materials, latest SAP Basis features and tools, industry best practices, and alumni network for continuous professional development."
+    }
   ];
 
   return (
@@ -449,6 +493,11 @@ export default function SAPBasisTraining() {
                 </div>
               </section>
             </div>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-blue-600/15 via-indigo-600/20 to-purple-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <FAQ faqs={sapBasisFaqs} theme="sap" />
+            </section>
 
           </div>
 

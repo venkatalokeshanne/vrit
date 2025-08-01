@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -96,6 +97,49 @@ export const metadata = {
 };
 
 export default function PegaTraining() {
+  const pegaFaqs = [
+    {
+      question: "What is Pega and why is it important for business process management?",
+      answer: "Pega is a leading low-code platform for building enterprise applications focused on customer engagement and operational excellence. It's highly valued for BPM, CRM, and digital transformation initiatives, with Pega professionals earning ₹8-22 LPA."
+    },
+    {
+      question: "What are the prerequisites for Pega training?",
+      answer: "Basic understanding of business processes and logical thinking is helpful. Knowledge of Java is beneficial but not mandatory. Our course covers all fundamentals needed to become proficient in Pega development and system architecture."
+    },
+    {
+      question: "What is the duration and curriculum of Pega training?",
+      answer: "Our comprehensive Pega training spans 70 days, covering Pega PRPC (Process and Rules Process Commander), case management, user interface design, integration, and deployment with extensive hands-on practice on live Pega systems."
+    },
+    {
+      question: "What career opportunities are available after Pega training?",
+      answer: "Pega training opens doors to roles like Pega Developer, Pega System Architect, Business Analyst, Pega Consultant, and Technical Lead. Companies like Accenture, Cognizant, Infosys, and many Fortune 500 companies actively hire Pega professionals."
+    },
+    {
+      question: "Do you provide access to Pega Personal Edition for practice?",
+      answer: "Yes, we provide guidance on setting up Pega Personal Edition and access to Pega Cloud for hands-on practice. Students work on real business scenarios, create applications, and configure workflows using actual Pega environment."
+    },
+    {
+      question: "Which Pega certifications can I pursue after training?",
+      answer: "You can pursue Pega Certified System Architect (PCSA), Pega Certified Senior System Architect (PCSSA), and specialized certifications in Customer Service, Marketing, or Sales Automation based on your career goals."
+    },
+    {
+      question: "Is Pega suitable for non-technical professionals?",
+      answer: "Yes, Pega's low-code approach makes it accessible to business analysts and non-technical professionals. Our training covers both business and technical aspects, making it suitable for various backgrounds."
+    },
+    {
+      question: "What makes Pega different from other BPM platforms?",
+      answer: "Pega offers unified customer engagement, real-time AI-powered decisioning, low-code development, and robust case management capabilities. It's designed for complex enterprise scenarios with built-in best practices and industry frameworks."
+    },
+    {
+      question: "Do you provide placement assistance for Pega roles?",
+      answer: "Yes, we provide 100% placement assistance including resume optimization, interview preparation, mock interviews, and job referrals. We have partnerships with consulting companies and enterprises using Pega technology."
+    },
+    {
+      question: "What support do you provide during and after the course?",
+      answer: "We provide 24/7 doubt clearing support, access to Pega environments, recorded sessions, project guidance, interview preparation, and lifetime access to course updates with continuous mentorship from industry experts."
+    }
+  ];
+
   const courseTopics = [
     "Overview of BPM",
     "Project implementation methodology, class structures and hierarchy",
@@ -401,6 +445,11 @@ export default function PegaTraining() {
                   </p>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="mb-8">
+              <FAQ faqs={pegaFaqs} title="Pega Training FAQs" theme="default" />
             </section>
 
           </div>

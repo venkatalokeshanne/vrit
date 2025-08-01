@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -118,6 +119,49 @@ export default function MachineLearningPythonTraining() {
     "Domain knowledge",
     "Experiment design",
     "Statistical inference"
+  ];
+
+  const machineLearningFaqs = [
+    {
+      question: "What is Machine Learning and why learn it with Python?",
+      answer: "Machine Learning is a subset of AI that enables systems to learn and improve automatically from experience. Python is preferred for ML because of its extensive libraries (NumPy, Pandas, Scikit-learn, TensorFlow), simple syntax, and strong community support, making it ideal for data analysis and ML implementations."
+    },
+    {
+      question: "What are the prerequisites for Machine Learning with Python training?",
+      answer: "Basic knowledge of Python programming, understanding of mathematics (statistics, linear algebra, probability), and familiarity with data structures. Having analytical thinking and problem-solving skills is beneficial. We cover Python basics if needed."
+    },
+    {
+      question: "What Machine Learning algorithms and techniques will I learn?",
+      answer: "You'll learn supervised learning (Linear/Logistic Regression, Decision Trees, Random Forest, SVM), unsupervised learning (K-Means, Hierarchical Clustering), deep learning basics, neural networks, feature engineering, model evaluation, and deployment techniques."
+    },
+    {
+      question: "What is the duration of the Machine Learning with Python course?",
+      answer: "Our comprehensive Machine Learning with Python training is designed to be completed in 60-80 hours, which can be taken as weekend batches (10-12 weeks) or weekday batches (8-10 weeks) depending on your schedule and learning pace."
+    },
+    {
+      question: "Will I work on real Machine Learning projects during training?",
+      answer: "Yes! You'll work on multiple hands-on projects including data preprocessing, predictive modeling, classification problems, regression analysis, clustering projects, and a final capstone project using real-world datasets from various industries."
+    },
+    {
+      question: "What career opportunities are available after ML training?",
+      answer: "ML professionals can work as Data Scientist, Machine Learning Engineer, AI Developer, Research Scientist, Business Intelligence Analyst, Data Analyst, ML Consultant, or AI Product Manager with salaries ranging from ₹5-20 LPA depending on experience and skills."
+    },
+    {
+      question: "Which Python libraries and tools will I master?",
+      answer: "You'll master NumPy for numerical computing, Pandas for data manipulation, Matplotlib/Seaborn for visualization, Scikit-learn for ML algorithms, TensorFlow/Keras for deep learning, Jupyter notebooks, and cloud platforms for model deployment."
+    },
+    {
+      question: "How does this course prepare me for industry requirements?",
+      answer: "Our curriculum covers end-to-end ML pipeline including data collection, preprocessing, feature engineering, model selection, hyperparameter tuning, evaluation metrics, deployment strategies, and MLOps practices used in real industry projects."
+    },
+    {
+      question: "Do you provide placement assistance and career support?",
+      answer: "Yes, we offer 100% placement assistance including portfolio development, resume building, interview preparation with ML case studies, mock interviews, and connecting you with our network of companies hiring ML professionals."
+    },
+    {
+      question: "What ongoing support do you provide after course completion?",
+      answer: "We provide lifetime support including doubt resolution, career guidance, job support for ML projects, access to updated course materials, latest ML trends, research paper discussions, and alumni network for continuous learning and growth."
+    }
   ];
 
   return (
@@ -486,6 +530,11 @@ export default function MachineLearningPythonTraining() {
                   </button>
                 </div>
               </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <FAQ faqs={machineLearningFaqs} theme="dataScience" />
             </section>
 
           </div>

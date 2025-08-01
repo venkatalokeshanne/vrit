@@ -167,6 +167,27 @@ export default function ContactUs() {
                 Send Message
               </button>
             </form>
+            
+            {/* Quick Actions */}
+            <div className="mt-12 bg-gradient-to-br from-green-500/10 via-teal-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-400/20 shadow-xl">
+              <h3 className="text-xl font-bold text-white mb-6">Quick Actions</h3>
+              <div className="grid gap-4">
+                <a
+                  href="tel:+919032734343"
+                  className="flex items-center gap-3 p-4 bg-green-500/20 hover:bg-green-500/30 rounded-lg border border-green-400/30 transition-all duration-300 hover:scale-105"
+                >
+                  <Phone className="w-5 h-5 text-green-400" />
+                  <span className="text-white font-medium">Call Now for Free Demo</span>
+                </a>
+                <a
+                  href="mailto:info@vritsol.com"
+                  className="flex items-center gap-3 p-4 bg-blue-500/20 hover:bg-blue-500/30 rounded-lg border border-blue-400/30 transition-all duration-300 hover:scale-105"
+                >
+                  <Mail className="w-5 h-5 text-blue-400" />
+                  <span className="text-white font-medium">Email Your Queries</span>
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Contact Information */}
@@ -237,27 +258,6 @@ export default function ContactUs() {
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-lg"
                 ></iframe>
-              </div>
-            </div>
-
-            {/* Quick Actions */}
-            <div className="bg-gradient-to-br from-green-500/10 via-teal-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-400/20 shadow-xl">
-              <h3 className="text-xl font-bold text-white mb-6">Quick Actions</h3>
-              <div className="grid gap-4">
-                <a
-                  href="tel:+919032734343"
-                  className="flex items-center gap-3 p-4 bg-green-500/20 hover:bg-green-500/30 rounded-lg border border-green-400/30 transition-all duration-300 hover:scale-105"
-                >
-                  <Phone className="w-5 h-5 text-green-400" />
-                  <span className="text-white font-medium">Call Now for Free Demo</span>
-                </a>
-                <a
-                  href="mailto:info@vritsol.com"
-                  className="flex items-center gap-3 p-4 bg-blue-500/20 hover:bg-blue-500/30 rounded-lg border border-blue-400/30 transition-all duration-300 hover:scale-105"
-                >
-                  <Mail className="w-5 h-5 text-blue-400" />
-                  <span className="text-white font-medium">Email Your Queries</span>
-                </a>
               </div>
             </div>
 

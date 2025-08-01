@@ -1,5 +1,6 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
+import FAQ from '../components/FAQ';
 import { 
   Target, 
   BookOpen, 
@@ -30,6 +31,50 @@ import {
   Activity,
   Heart
 } from 'lucide-react';
+
+// FAQ Data for SAS Clinical Online Training
+const sasClinicalOnlineFaqs = [
+  {
+    question: "What are the advantages of taking SAS Clinical training online?",
+    answer: "Online SAS Clinical training offers flexibility to learn at your own pace, access to recorded sessions for revision, interactive virtual labs with real clinical datasets, live instructor support, and the ability to balance learning with work commitments. You get the same comprehensive curriculum and hands-on experience as in-person training."
+  },
+  {
+    question: "What technical requirements do I need for online SAS Clinical training?",
+    answer: "You need a stable internet connection, computer with minimum 8GB RAM, updated web browser, and access to SAS software (provided through our virtual lab environment). We provide cloud-based SAS access, so you don't need to install software locally. Headset with microphone is recommended for interactive sessions."
+  },
+  {
+    question: "How do online practical sessions work for SAS Clinical programming?",
+    answer: "Online practical sessions use cloud-based SAS environments with real clinical datasets. You'll have screen sharing capabilities, virtual breakout rooms for group projects, real-time code review with instructors, and collaborative workspace for CDISC standard implementations. All hands-on exercises mirror real pharmaceutical industry scenarios."
+  },
+  {
+    question: "What is the duration and schedule flexibility for online SAS Clinical training?",
+    answer: "Our online SAS Clinical program spans 8-10 weeks with multiple scheduling options including weekday evenings (7-9 PM), weekend batches (10 AM-5 PM), and accelerated weekend programs. All sessions are recorded and available for 1 year for unlimited revision and practice."
+  },
+  {
+    question: "How do you ensure quality interaction and doubt resolution in online mode?",
+    answer: "We maintain small batch sizes (max 15 students), dedicated Q&A sessions, one-on-one mentoring calls, active discussion forums, 24/7 support chat, and regular assessment with personalized feedback. Instructors are available for individual consultations via video calls throughout the program."
+  },
+  {
+    question: "What online resources and materials will I receive?",
+    answer: "You'll receive comprehensive study materials including clinical datasets, CDISC implementation guides, regulatory submission templates, video recordings of all sessions, practice exercises with solutions, sample TLFs (Tables/Listings/Figures), and access to our learning management system with progress tracking."
+  },
+  {
+    question: "How does online placement assistance work for SAS Clinical roles?",
+    answer: "Our online placement support includes virtual resume workshops, mock interview sessions via video calls, direct referrals to pharmaceutical companies and CROs, access to our job portal with exclusive openings, LinkedIn profile optimization, and networking opportunities with industry professionals through virtual meetups."
+  },
+  {
+    question: "Can I interact with instructors and peers effectively in online mode?",
+    answer: "Yes, through live interactive sessions, virtual study groups, collaborative project work, peer code review sessions, industry expert guest lectures, and alumni networking events. We use advanced online platforms that facilitate seamless interaction and create a community learning environment."
+  },
+  {
+    question: "What happens if I miss a live online session?",
+    answer: "All sessions are recorded and available within 24 hours. You can schedule one-on-one catch-up sessions with instructors, access detailed session notes and code samples, join makeup classes for hands-on exercises, and receive personalized assignments to cover missed content. No learning is compromised due to missed sessions."
+  },
+  {
+    question: "How do you provide hands-on experience with clinical data online?",
+    answer: "Through cloud-based SAS environment with real de-identified clinical datasets, virtual clinical trial simulations, online access to clinical databases like Oracle Clinical, remote access to regulatory submission tools, and collaborative projects that simulate real pharmaceutical company workflows and CDISC standard implementations."
+  }
+];
 
 export const metadata = {
   title: 'Best SAS Clinical Training in Hyderabad | #1 SAS Clinical Course Institute | 100% Placement | VR IT Solutions',
@@ -448,6 +493,13 @@ export default function SASClinicalTraining() {
               </section>
             </div>
 
+          </div>
+
+          {/* FAQ Section */}
+          <div className="lg:col-span-2 mb-8">
+            <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
+            </div>
           </div>
 
           {/* Sidebar */}
