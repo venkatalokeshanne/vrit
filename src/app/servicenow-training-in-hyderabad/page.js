@@ -26,20 +26,35 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'ServiceNow lokesh Training in Hyderabad | Best ServiceNow Course | VR IT Solutions',
-  description: 'Master lokesh ServiceNow with expert training in Hyderabad. 40-day comprehensive course covering ITSM, ITOM, HR Service Delivery. 100% placement assistance, live projects, certification guidance.',
-  keywords: 'ServiceNow training hyderabad, ServiceNow course, ServiceNow certification, ITSM training, ITOM training, ServiceNow developer, ServiceNow admin, ServiceNow online training, ServiceNow classroom training, ServiceNow placement, ServiceNow job support, ServiceNow ameerpet',
+  title: 'Best ServiceNow Training in Hyderabad | #1 ServiceNow Course Institute | 100% Placement | VR IT Solutions',
+  description: 'Best ServiceNow Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best ServiceNow online training in hyderabad with affordable fee and advanced curriculum.',
+  keywords: 'ServiceNow training in Hyderabad, Best ServiceNow training in Hyderabad, ServiceNow training in Ameerpet, ServiceNow online training in Ameerpet, ServiceNow admin training, ServiceNow developer training in hyderabad, ServiceNow training institutes in Hyderabad, ServiceNow training institute in Ameerpet, ITSM training Hyderabad, ITOM training, ServiceNow certification training, ServiceNow placement assistance, ServiceNow job support, ServiceNow training Kukatpally, ServiceNow training Madhapur, ServiceNow training SR Nagar, ServiceNow training Dilsukhnagar, top ServiceNow institute Hyderabad, ServiceNow corporate training, ServiceNow weekend batches, ServiceNow live project training',
+  authors: [{ name: 'VR IT Solutions' }],
+  publisher: 'VR IT Solutions',
+  category: 'Education',
+  classification: 'Training',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'ServiceNow Training in Hyderabad | Best ServiceNow Course | VR IT Solutions',
-    description: 'Master ServiceNow with expert training in Hyderabad. 40-day comprehensive course covering ITSM, ITOM, HR Service Delivery. 100% placement assistance.',
+    title: 'Best ServiceNow Training in Hyderabad | #1 ServiceNow Course Institute | 100% Placement | VR IT Solutions',
+    description: 'Call@9032734343. Best ServiceNow Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best ServiceNow online training in hyderabad with affordable fee and advanced curriculum.',
     url: 'https://www.vritsol.com/servicenow-training-in-hyderabad',
     siteName: 'VR IT Solutions',
     images: [
       {
-        url: '/servicenow-og.jpg',
+        url: '/logo.png',
         width: 1200,
         height: 630,
-        alt: 'ServiceNow Training in Hyderabad - VR IT Solutions',
+        alt: 'Best ServiceNow Training in Hyderabad - VR IT Solutions',
       },
     ],
     locale: 'en_US',
@@ -47,12 +62,33 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ServiceNow Training in Hyderabad | Best ServiceNow Course',
-    description: 'Master ServiceNow with expert training in Hyderabad. 40-day comprehensive course covering ITSM, ITOM, HR Service Delivery. 100% placement assistance.',
-    images: ['/servicenow-twitter.jpg'],
+    title: 'Best ServiceNow Training in Hyderabad | #1 ServiceNow Course Institute | 100% Placement',
+    description: 'Best ServiceNow Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
+    images: ['/logo.png'],
+    creator: '@vritsolutions',
+    site: '@vritsolutions',
   },
   alternates: {
     canonical: 'https://www.vritsol.com/servicenow-training-in-hyderabad',
+    languages: {
+      'en-US': 'https://www.vritsol.com/servicenow-training-in-hyderabad',
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code-here',
+  },
+  other: {
+    'geo.region': 'IN-TG',
+    'geo.placename': 'Hyderabad',
+    'geo.position': '17.3850;78.4867',
+    'ICBM': '17.3850, 78.4867',
+    'DC.title': 'Best ServiceNow Training in Hyderabad',
+    'DC.creator': 'VR IT Solutions',
+    'DC.subject': 'ServiceNow Training, ITSM Training, Technology Education',
+    'DC.description': 'Professional ServiceNow training institute in Hyderabad offering comprehensive courses',
+    author: 'vr it solutions',
+    publisher: 'vr it solutions',
+    owner: 'vr it solutions',
   },
 };
 
@@ -108,7 +144,98 @@ export default function ServiceNowTraining() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
+      {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Best ServiceNow Training in Hyderabad | ServiceNow Online Training | VR IT Solutions",
+            "url": "https://www.vritsol.com/servicenow-training-in-hyderabad",
+            "logo": "https://www.vritsol.com/logo.png",
+            "sameAs": [
+              "https://www.facebook.com/vritsolutions/",
+              "https://twitter.com/vritsolutions",
+              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
+            ],
+            "address": [
+              {
+                "type": "PostalAddress",
+                "addressCountry": "INDIA",
+                "addressLocality": "Hyderabad",
+                "addressRegion": "Telangana",
+                "postalCode": "500016",
+                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
+              }
+            ],
+            "openingHours": [
+              "Mo-Sa 8:00-21:30",
+              "Su 9:00-13:00"
+            ],
+            "contactPoint": [
+              {
+                "type": "ContactPoint",
+                "telephone": "9032734343",
+                "contactType": "Enquiry",
+                "email": "info@vritsol.com"
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Additional Review Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "review",
+            "name": "ServiceNow Training in Hyderabad - VR IT Solutions",
+            "aggregateRating": {
+              "type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "9656"
+            }
+          })
+        }}
+      />
+
+      {/* Course Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "ServiceNow Training in Hyderabad",
+            "description": "Comprehensive 60-day ServiceNow training covering ITSM, ITOM, and practical implementation with 100% placement assistance",
+            "provider": {
+              "@type": "Organization",
+              "name": "VR IT Solutions",
+              "sameAs": "https://www.vritsol.com"
+            },
+            "educationalCredentialAwarded": "ServiceNow Certification",
+            "courseMode": ["Online", "Classroom"],
+            "duration": "P60D",
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2024-01-01"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "9656",
+              "bestRating": "5"
+            }
+          })
+        }}
+      />
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid lg:grid-cols-3 gap-8">
@@ -291,6 +418,7 @@ export default function ServiceNowTraining() {
 
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
