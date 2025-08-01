@@ -51,10 +51,10 @@ export const metadata = {
     siteName: 'VR IT Solutions',
     images: [
       {
-        url: '/logo.png',
+        url: '/servicenow.png',
         width: 1200,
         height: 630,
-        alt: 'Best ServiceNow Training in Hyderabad - VR IT Solutions',
+        alt: 'ServiceNow Training Course in Hyderabad - VR IT Solutions',
       },
     ],
     locale: 'en_US',
@@ -64,7 +64,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Best ServiceNow Training in Hyderabad | #1 ServiceNow Course Institute | 100% Placement',
     description: 'Best ServiceNow Training in Hyderabad, Ameerpet. Live projects, Coaching Center, job Placements, training institute in Hyderabad.',
-    images: ['/logo.png'],
+    images: ['/servicenow.png'],
     creator: '@vritsolutions',
     site: '@vritsolutions',
   },
