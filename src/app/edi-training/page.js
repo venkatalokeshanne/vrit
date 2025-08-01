@@ -44,7 +44,7 @@ import {
   Link,
   Layout,
   Palette,
-  Exchange,
+  RefreshCw,
   Building2,
   Shuffle
 } from 'lucide-react';
@@ -274,7 +274,7 @@ export default function EDITraining() {
             {/* EDI Training & Sterling B2B Integrator Overview - Purple Theme */}
             <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Exchange className="w-8 h-8 text-purple-400 animate-pulse" />
+                <RefreshCw className="w-8 h-8 text-purple-400 animate-pulse" />
                 EDI Training & Sterling B2B Integrator Overview
               </h2>
               <div className="prose prose-lg prose-invert max-w-none space-y-6">
