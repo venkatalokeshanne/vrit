@@ -1,6 +1,6 @@
 [
   {
-    "id": "workday-training-in-hyderabad",
+    "slug": "workday-training-in-hyderabad",
     "title": "Workday Training in Hyderabad | Workday Online Training with Placement",
     "description": "Workday Training in Hyderabad by a real-time trainer with live project and 100% placement assistance. VR IT Solutions offer Workday online and Classroom Training course.",
     "keywords": ["Workday Training", "Workday Online Training", "Workday Placement", "VR IT Solutions"],
@@ -15,7 +15,7 @@
     "organizationName": "Workday Training in Hyderabad | Workday Online Training with Placement"
   },
   {
-    "id": "machine-learning-with-python-online-training-in-hyderabad",
+    "slug": "machine-learning-with-python-online-training-in-hyderabad",
     "title": "Machine Learning Online Training | Machine Learning with Python Online Training in Hyderabad",
     "description": "VR IT Solutions offer machine learning with python online training in hyderabad from industry experts. 100% training & placement on machine learning online training course & certification.",
     "keywords": ["Machine Learning with python Online Training in Hyderabad", "Machine Learning Online Training in Hyderabad", "Training Institutes For Machine Learning near me", "Machine Learning with python training in hyderabad", "Machine Learning training and placement in hyderabad", "Machine Learning with Python Certification", "python with machine learning course in hyderabad"],
@@ -30,7 +30,7 @@
     "organizationName": "Machine Learning Online Training | Machine Learning with Python Online Training in Hyderabad"
   },
   {
-    "id": "machine-learning-with-python-training-in-hyderabad",
+    "slug": "machine-learning-with-python-training-in-hyderabad",
     "title": "Machine Learning Training | Machine Learning with Python Training in Hyderabad | Machine Learning with Python Certification",
     "description": "VR IT Solutions offer classroom & online machine learning with python training in hyderabad from industry experts. 100% training & placement on machine learning with python course & certification.",
     "keywords": ["Machine Learning Training in Hyderabad", "Machine Learning Online Training in Hyderabad", "Training Institutes For Machine Learning near me", "Machine Learning with python training hyderabad", "Machine Learning training and placement in hyderabad", "Machine Learning with Python Certification", "python with machine learning course in hyderabad"],
@@ -45,7 +45,7 @@
     "organizationName": "Machine Learning with Python Training in Hyderabad - VR IT Solutions"
   },
   {
-    "id": "sap-ewm-online-training",
+    "slug": "sap-ewm-online-training",
     "title": "Sap EWM Training in Hyderabad | sap ewm online training in Hyderabad | VR IT SOLUTIONS",
     "description": "VR IT Solutions providing Sap EWM Online Training in Hyderabad, this course helps professionals to manage and process a variety of operations in supply chain management (SCM) domain in an automated SAP environment.",
     "keywords": ["Sap EWM online training", "Best sap EWM training in Ameerpet", "Sap EWM training in Hyderabad", "Best sap EWM training in Hyderabad", "SAP EWM Training in Hyderabad"],
@@ -60,7 +60,7 @@
     "organizationName": "Sap EWM Training - VR IT SOLUTIONS"
   },
   {
-    "id": "full-stack-developer-training-in-hyderabad",
+    "slug": "full-stack-developer-training-in-hyderabad",
     "title": "Full Stack Developer Training in Hyderabad | Full Stack Training | VR IT SOLUTIONS",
     "description": "VR IT Solutions providing Full Stack Training in Hyderabad.",
     "keywords": ["Full Stack Developer training"],
@@ -75,7 +75,7 @@
     "organizationName": "Full Stack Developer Training - VR IT SOLUTIONS"
   },
   {
-    "id": "sap-central-finance-online-training-in-hyderabad",
+    "slug": "sap-central-finance-online-training-in-hyderabad",
     "title": "SAP Central Finance Training in Hyderabad | SAP Central Finance Online Training in Hyderabad",
     "description": "Online SAP Central Finance training in Hyderabad at VR IT solutions enables you to work on a Central Finance project by doing end-to-end configuration.",
     "keywords": ["SAP Central Finance online training", "SAP Central Finance training in hyderabad", "best SAP Central Finance training", "Online SAP Central Finance training in hyderabad"],
@@ -92,7 +92,7 @@
     "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature road, Ameerpet, Hyderabad, Telangana"
   },
   {
-    "id": "sap-central-finance-online-training",
+    "slug": "sap-central-finance-online-training",
     "title": "SAP Central Finance Training in Hyderabad | SAP Central Finance Online Training in Hyderabad",
     "description": "Online SAP Central Finance training in Hyderabad at VR IT solutions enables you to work on a Central Finance project by doing end-to-end configuration.",
     "keywords": ["SAP Central Finance online training", "SAP Central Finance training in hyderabad", "best SAP Central Finance training", "Online SAP Central Finance training in hyderabad"],
@@ -109,7 +109,7 @@
     "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature road, Ameerpet, Hyderabad, Telangana"
   },
   {
-    "id": "sas-clinical-online-training-in-hyderabad",
+    "slug": "sas-clinical-online-training-in-hyderabad",
     "title": "SAS Clinical Training in Hyderabad | SAS Clinical Online Training in Hyderabad",
     "description": "VR IT solutions offers SAS clinical online training in Hyderabad. SAS programmers implement the analysis methods on the collected data and provide the study summary tables, data listing and graphs to the statisticians and/or clinicians to write clinical study report.",
     "keywords": ["sas clinical online training", "sas clinical training in hyderabad", "best sas clinical training"],
@@ -126,7 +126,7 @@
     "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature road, Ameerpet, Hyderabad, Telangana"
   },
   {
-    "id": "sas-clinical-training-in-bangalore",
+    "slug": "sas-clinical-training-in-bangalore",
     "title": "SAS Clinical Training in Bangalore | SAS Clinical Online Training in Bangalore | Best Clinical SAS Programming Training",
     "description": "SAS Clinical Training in Bangalore. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
     "keywords": ["sas clinical online training", "sas clinical training in Bangalore", "best sas clinical training", "Best Clinical SAS Programming Training"],
@@ -143,7 +143,7 @@
     "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana"
   },
   {
-    "id": "sas-clinical-training-in-chennai",
+    "slug": "sas-clinical-training-in-chennai",
     "title": "SAS Clinical Training in Chennai | SAS Clinical Online Training in Chennai | Best Clinical SAS Programming Training",
     "description": "SAS Clinical Training in Chennai. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
     "keywords": ["SAS Clinical Training in Chennai", "sas clinical online training", "best sas clinical training", "Best Clinical SAS Programming Training"],

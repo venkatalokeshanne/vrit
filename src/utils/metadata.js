@@ -7,7 +7,7 @@ import coursesMetadata from '../data/coursesMetadata.json';
  */
 export function getPageMetadata(slug) {
   // Find the metadata for the specific slug
-  const pageData = coursesMetadata.find(course => course.id === slug);
+  const pageData = coursesMetadata.find(course => course.slug === slug);
   
   if (!pageData) {
     // Return default metadata if slug not found
@@ -67,7 +67,7 @@ export function getPageMetadata(slug) {
  * @returns {object} - Structured data object
  */
 export function getStructuredData(slug) {
-  const pageData = coursesMetadata.find(course => course.id === slug);
+  const pageData = coursesMetadata.find(course => course.slug === slug);
   
   if (!pageData || !pageData.structuredData) {
     return null;
@@ -93,7 +93,7 @@ export function getStructuredData(slug) {
  * @returns {object} - Review structured data
  */
 export function getReviewStructuredData(slug) {
-  const pageData = coursesMetadata.find(course => course.id === slug);
+  const pageData = coursesMetadata.find(course => course.slug === slug);
   
   if (!pageData || !pageData.reviewCount || pageData.reviewCount === "0") {
     return null;
@@ -114,7 +114,7 @@ export function getReviewStructuredData(slug) {
  * @returns {string[]} - Array of all course slugs
  */
 export function getAllCourseSlugs() {
-  return coursesMetadata.map(course => course.id);
+  return coursesMetadata.map(course => course.slug);
 }
 
 /**
@@ -123,5 +123,5 @@ export function getAllCourseSlugs() {
  * @returns {object|null} - Course data object or null if not found
  */
 export function getCourseData(slug) {
-  return coursesMetadata.find(course => course.id === slug) || null;
+  return coursesMetadata.find(course => course.slug === slug) || null;
 }

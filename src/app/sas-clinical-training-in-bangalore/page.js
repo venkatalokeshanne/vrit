@@ -33,49 +33,49 @@ import {
   Heart
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sas-clinical-training-in-hyderabad');
+export const metadata = getPageMetadata('sas-clinical-online-training-in-bangalore');
 
-// FAQ Data for SAS Clinical Training
-const sasClinicalFaqs = [
+// FAQ Data for SAS Clinical Online Training
+const sasClinicalOnlineFaqs = [
   {
-    question: "What is SAS Clinical and its role in pharmaceutical industry?",
-    answer: "SAS Clinical is a specialized application of SAS programming focused on clinical data analysis in pharmaceutical and biotechnology industries. It involves analyzing clinical trial data, creating regulatory submissions (CDISC standards), generating safety and efficacy reports, and supporting drug development processes from Phase I to Phase IV trials."
+    question: "What are the advantages of taking SAS Clinical training online?",
+    answer: "Online SAS Clinical training offers flexibility to learn at your own pace, access to recorded sessions for revision, interactive virtual labs with real clinical datasets, live instructor support, and the ability to balance learning with work commitments. You get the same comprehensive curriculum and hands-on experience as in-person training."
   },
   {
-    question: "What prerequisites do I need to learn SAS Clinical?",
-    answer: "Basic knowledge of statistics and clinical research is helpful. Prior experience with SAS Base programming is highly recommended. Understanding of pharmaceutical terminology, clinical trial processes, and regulatory guidelines will be beneficial. Basic knowledge of CDISC standards (SDTM, ADaM) and medical terminology is advantageous."
+    question: "What technical requirements do I need for online SAS Clinical training?",
+    answer: "You need a stable internet connection, computer with minimum 8GB RAM, updated web browser, and access to SAS software (provided through our virtual lab environment). We provide cloud-based SAS access, so you don't need to install software locally. Headset with microphone is recommended for interactive sessions."
   },
   {
-    question: "What career opportunities are available after SAS Clinical certification?",
-    answer: "Career opportunities include Clinical SAS Programmer, Biostatistician, Clinical Data Analyst, Regulatory Affairs Analyst, Clinical Research Associate, and Statistical Programming Manager. Pharmaceutical companies, CROs, and regulatory agencies actively hire SAS Clinical professionals with salaries ranging from ₹6-20 lakhs annually."
+    question: "How do online practical sessions work for SAS Clinical programming?",
+    answer: "Online practical sessions use cloud-based SAS environments with real clinical datasets. You'll have screen sharing capabilities, virtual breakout rooms for group projects, real-time code review with instructors, and collaborative workspace for CDISC standard implementations. All hands-on exercises mirror real pharmaceutical industry scenarios."
   },
   {
-    question: "How long does it take to complete SAS Clinical training?",
-    answer: "Our comprehensive SAS Clinical training program spans 8-10 weeks with flexible scheduling options. This includes 80+ hours of instructor-led training, hands-on practice with real clinical datasets, regulatory submission projects, and certification preparation. Weekend and evening batches are available for working professionals."
+    question: "What is the duration and schedule flexibility for online SAS Clinical training?",
+    answer: "Our online SAS Clinical program spans 8-10 weeks with multiple scheduling options including weekday evenings (7-9 PM), weekend batches (10 AM-5 PM), and accelerated weekend programs. All sessions are recorded and available for 1 year for unlimited revision and practice."
   },
   {
-    question: "What hands-on experience will I gain during the training?",
-    answer: "You'll work with real clinical trial datasets, create SDTM and ADaM datasets, develop Tables/Listings/Figures (TLFs), work on regulatory submissions, practice adverse event analysis, efficacy endpoint analysis, safety reporting, and integration with clinical databases like Oracle Clinical and Medidata Rave."
+    question: "How do you ensure quality interaction and doubt resolution in online mode?",
+    answer: "We maintain small batch sizes (max 15 students), dedicated Q&A sessions, one-on-one mentoring calls, active discussion forums, 24/7 support chat, and regular assessment with personalized feedback. Instructors are available for individual consultations via video calls throughout the program."
   },
   {
-    question: "Which SAS Clinical certifications should I pursue?",
-    answer: "Key certifications include SAS Certified Clinical Trials Programmer, SAS Certified Statistical Business Analyst, and SAS Certified Advanced Programmer. Additionally, CDISC certifications and knowledge of FDA/EMA guidelines enhance career prospects in pharmaceutical industry."
+    question: "What online resources and materials will I receive?",
+    answer: "You'll receive comprehensive study materials including clinical datasets, CDISC implementation guides, regulatory submission templates, video recordings of all sessions, practice exercises with solutions, sample TLFs (Tables/Listings/Figures), and access to our learning management system with progress tracking."
   },
   {
-    question: "Do you provide placement assistance after SAS Clinical training?",
-    answer: "Yes, we offer comprehensive placement support including resume building, interview preparation, technical mock interviews focused on clinical scenarios, and direct connections with 150+ pharmaceutical companies and CROs. Our placement team has successfully placed 90% of students in companies like Quintiles, PPD, Parexel, and major pharma companies."
+    question: "How does online placement assistance work for SAS Clinical roles?",
+    answer: "Our online placement support includes virtual resume workshops, mock interview sessions via video calls, direct referrals to pharmaceutical companies and CROs, access to our job portal with exclusive openings, LinkedIn profile optimization, and networking opportunities with industry professionals through virtual meetups."
   },
   {
-    question: "What is CDISC and its importance in SAS Clinical programming?",
-    answer: "CDISC (Clinical Data Interchange Standards Consortium) provides global standards for clinical research data. SDTM (Study Data Tabulation Model) and ADaM (Analysis Data Model) are key standards. Understanding CDISC is crucial for regulatory submissions to FDA, EMA, and other global regulatory authorities."
+    question: "Can I interact with instructors and peers effectively in online mode?",
+    answer: "Yes, through live interactive sessions, virtual study groups, collaborative project work, peer code review sessions, industry expert guest lectures, and alumni networking events. We use advanced online platforms that facilitate seamless interaction and create a community learning environment."
   },
   {
-    question: "How does SAS Clinical differ from regular SAS programming?",
-    answer: "SAS Clinical focuses specifically on pharmaceutical data with specialized requirements including regulatory compliance, CDISC standards adherence, safety data analysis, efficacy endpoints evaluation, adverse event reporting, and integration with clinical trial management systems. It requires domain knowledge of clinical research and pharmaceutical regulations."
+    question: "What happens if I miss a live online session?",
+    answer: "All sessions are recorded and available within 24 hours. You can schedule one-on-one catch-up sessions with instructors, access detailed session notes and code samples, join makeup classes for hands-on exercises, and receive personalized assignments to cover missed content. No learning is compromised due to missed sessions."
   },
   {
-    question: "What ongoing support do you provide after course completion?",
-    answer: "We provide lifetime access to course materials, monthly updates on regulatory changes, job support for initial 6 months, access to clinical datasets for practice, networking with pharmaceutical professionals, and ongoing mentorship. Our support includes help with real-world clinical programming challenges and career advancement guidance."
+    question: "How do you provide hands-on experience with clinical data online?",
+    answer: "Through cloud-based SAS environment with real de-identified clinical datasets, virtual clinical trial simulations, online access to clinical databases like Oracle Clinical, remote access to regulatory submission tools, and collaborative projects that simulate real pharmaceutical company workflows and CDISC standard implementations."
   }
 ];
 
@@ -121,8 +121,8 @@ export default function SASClinicalTraining() {
           __html: JSON.stringify({
             "@context": "http://schema.org",
             "@type": "Organization",
-            "name": "Best SAS Clinical Training in Hyderabad | SAS Clinical Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/sas-clinical-training-in-hyderabad",
+            "name": "Best SAS Clinical Training in Bangalore | SAS Clinical Online Training | VR IT Solutions",
+            "url": "https://vrit-ten.vercel.app/sas-clinical-training-in-bangalore",
             "logo": "https://vrit-ten.vercel.app/logo.png",
             "sameAs": [
               "https://www.facebook.com/vritsolutions/",
@@ -133,10 +133,10 @@ export default function SASClinicalTraining() {
               {
                 "type": "PostalAddress",
                 "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
+                "addressLocality": "Bangalore",
                 "addressRegion": "Telangana",
                 "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
+                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Bangalore Telangana."
               }
             ],
             "openingHours": [
@@ -162,7 +162,7 @@ export default function SASClinicalTraining() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Course",
-            "name": "SAS Clinical Training in Hyderabad",
+            "name": "SAS Clinical Training in Bangalore",
             "description": "Comprehensive 120-day SAS Clinical training covering clinical trial data analysis, CDISC standards, and statistical programming with 100% placement assistance",
             "provider": {
               "@type": "Organization",
@@ -194,12 +194,12 @@ export default function SASClinicalTraining() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             
-            {/* Hero Section - SAS Clinical Training in Hyderabad */}
+            {/* Hero Section - SAS Clinical Training in Bangalore */}
             <section className="bg-gradient-to-br from-blue-500/15 via-indigo-600/20 to-purple-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-400/30 shadow-2xl shadow-blue-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                    SAS Clinical Training in Hyderabad
+                    SAS Clinical Training in Bangalore
                   </span>
                 </h1>
                 
@@ -207,7 +207,7 @@ export default function SASClinicalTraining() {
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
                   <img
                     src="/sas-clinical.jpg"
-                    alt="SAS Clinical Training Course in Hyderabad - VR IT Solutions"
+                    alt="SAS Clinical Training Course in Bangalore - VR IT Solutions"
                     className="w-full object-cover border-2 border-blue-400/30"
                     style={{ aspectRatio: '1200/630' }}
                   />
@@ -253,7 +253,7 @@ export default function SASClinicalTraining() {
                 </div>
                 <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-400/20">
                   <p className="text-blue-100 leading-relaxed">
-                    In between, SAS programmers implement the analysis methods on the collected data and provide the study summary tables, data listing and graphs to the statisticians and/or clinicians to write clinical study report. SAS programmers work closely with statisticians and data managers. They provide the link between raw data and the analysis.VR IT solutions offerd By SAS clinical online trainng in Hyderabad.
+                    In between, SAS programmers implement the analysis methods on the collected data and provide the study summary tables, data listing and graphs to the statisticians and/or clinicians to write clinical study report. SAS programmers work closely with statisticians and data managers. They provide the link between raw data and the analysis.VR IT solutions offerd By SAS clinical online trainng in Bangalore.
                   </p>
                 </div>
               </div>
@@ -272,7 +272,7 @@ export default function SASClinicalTraining() {
                 </div>
                 <div className="bg-teal-500/10 rounded-xl p-6 border border-teal-400/20">
                   <p className="text-teal-100 leading-relaxed">
-                    VR IT Solutions is one of the software training institute in Hyderabad to offer sas clinical training well focused and career-oriented training program in Clinical SAS.
+                    VR IT Solutions is one of the software training institute in Bangalore to offer sas clinical training well focused and career-oriented training program in Clinical SAS.
                   </p>
                 </div>
               </div>
@@ -306,7 +306,7 @@ export default function SASClinicalTraining() {
                 </div>
                 <div className="bg-pink-500/10 rounded-xl p-6 border border-pink-400/20">
                   <p className="text-pink-100 leading-relaxed">
-                    VR IT Solutions is one of the best sas clinical training in hyderabad to offer the best and balanced training with expert instructors on practical implementation and real time case studies in Clinical SAS that is well suited to help you embark on the right path of success and Job readiness.
+                    VR IT Solutions is one of the best sas clinical training in bangalore to offer the best and balanced training with expert instructors on practical implementation and real time case studies in Clinical SAS that is well suited to help you embark on the right path of success and Job readiness.
                   </p>
                 </div>
               </div>
@@ -434,7 +434,7 @@ export default function SASClinicalTraining() {
           {/* FAQ Section */}
           <div className="lg:col-span-2 mb-8">
             <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
-              <FAQ faqs={sasClinicalFaqs} theme="default" />
+              <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
             </div>
           </div>
 
@@ -452,16 +452,16 @@ export default function SASClinicalTraining() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sas-clinical-training-in-hyderabad'))
+          __html: JSON.stringify(getStructuredData('sas-clinical-online-training-in-bangalore'))
         }}
       />
       
       {/* Review Structured Data */}
-      {getReviewStructuredData('sas-clinical-training-in-hyderabad') && (
+      {getReviewStructuredData('sas-clinical-online-training-in-bangalore') && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('sas-clinical-training-in-hyderabad'))
+            __html: JSON.stringify(getReviewStructuredData('sas-clinical-online-training-in-bangalore'))
           }}
         />
       )}
