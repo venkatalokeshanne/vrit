@@ -1,0 +1,111 @@
+{
+  "mainSitelinks": [
+    {
+      "name": "Courses",
+      "url": "/courses",
+      "description": "Browse our comprehensive IT training courses",
+      "priority": 1,
+      "subsections": [
+        {
+          "name": "Data Science Training",
+          "url": "/data-science-training-in-hyderabad",
+          "description": "Complete Data Science course with Python, ML, AI"
+        },
+        {
+          "name": "Salesforce Training", 
+          "url": "/salesforce-training-in-hyderabad",
+          "description": "Salesforce Admin & Developer certification training"
+        },
+        {
+          "name": "Python Training",
+          "url": "/python-online-training", 
+          "description": "Python programming from basics to advanced"
+        },
+        {
+          "name": "SAP Training",
+          "url": "/sap-fico-online-training-in-hyderabad",
+          "description": "SAP FICO, SD, MM, EWM training programs"
+        }
+      ]
+    },
+    {
+      "name": "About Us",
+      "url": "/aboutus",
+      "description": "Learn about VR IT Solutions and our mission",
+      "priority": 2,
+      "subsections": [
+        {
+          "name": "Our Story",
+          "url": "/aboutus#our-story",
+          "description": "Journey and achievements of VR IT Solutions"
+        },
+        {
+          "name": "Expert Trainers",
+          "url": "/aboutus#trainers", 
+          "description": "Meet our industry-experienced trainers"
+        },
+        {
+          "name": "Success Stories",
+          "url": "/aboutus#success-stories",
+          "description": "Student placement success stories"
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "url": "/contactus",
+      "description": "Get in touch for course enquiries and support",
+      "priority": 3,
+      "subsections": [
+        {
+          "name": "Hyderabad Location",
+          "url": "/contactus#hyderabad",
+          "description": "Visit our Ameerpet, Hyderabad training center"
+        },
+        {
+          "name": "Online Training",
+          "url": "/contactus#online",
+          "description": "Enquire about online training programs"
+        },
+        {
+          "name": "Course Consultation",
+          "url": "/contactus#consultation",
+          "description": "Free career counseling and course guidance"
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "url": "/services",
+      "description": "Professional IT training and consulting services",
+      "priority": 4,
+      "subsections": [
+        {
+          "name": "Corporate Training",
+          "url": "/services#corporate",
+          "description": "Customized training for enterprises"
+        },
+        {
+          "name": "Placement Assistance",
+          "url": "/services#placement",
+          "description": "100% job placement support"
+        },
+        {
+          "name": "Online Learning",
+          "url": "/services#online",
+          "description": "Flexible online training options"
+        }
+      ]
+    }
+  ],
+  "searchBoxTargets": [
+    {
+      "target": "/courses",
+      "query-input": "required name=search_term_string"
+    },
+    {
+      "target": "/data-science-training-in-hyderabad",
+      "query-input": "required name=course_search"
+    }
+  ]
+}

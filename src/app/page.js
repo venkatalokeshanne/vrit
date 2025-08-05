@@ -28,6 +28,8 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import FAQRichSnippets from './components/FAQRichSnippets';
+import BreadcrumbRichSnippets from './components/BreadcrumbRichSnippets';
 import FAQ from './components/FAQ';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../utils/metadata';
 
@@ -753,6 +755,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Rich Snippets Section */}
+      <FAQRichSnippets />
 
       {/* Structured Data */}
       <script

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
+import RichSnippetsManager from '../utils/richSnippets';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -83,6 +84,12 @@ export const metadata = {
     yandex: 'your-yandex-verification-code',
     yahoo: 'your-yahoo-verification-code',
   },
+  alternates: {
+    canonical: 'https://www.vritsol.com',
+    languages: {
+      'en-US': 'https://www.vritsol.com',
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -98,88 +105,42 @@ export default function RootLayout({ children }) {
         <meta name="DC.subject" content="Software Training, IT Training, Programming Courses" />
         <meta name="DC.description" content="Best Software Training Institute in Hyderabad offering Python, Data Science, SAP, Salesforce, ServiceNow training with 100% placement assistance" />
         <meta name="DC.language" content="en" />
+        <meta name="DC.creator" content="VR IT Solutions" />
+        <meta name="DC.publisher" content="VR IT Solutions" />
+        <meta name="DC.rights" content="© 2024 VR IT Solutions. All rights reserved." />
+        
+        {/* Enhanced SEO Meta Tags */}
+        <meta name="theme-color" content="#3B82F6" />
+        <meta name="msapplication-TileColor" content="#3B82F6" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        
+        {/* Additional security and performance headers */}
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+        <meta httpEquiv="X-Frame-Options" content="DENY" />
+        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        
+        {/* Link to humans.txt and security.txt */}
+        <link rel="author" href="/humans.txt" />
+        <link rel="help" href="/.well-known/security.txt" />
         <meta name="DC.coverage" content="Hyderabad, India" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "EducationalOrganization",
-              "name": "VR IT Solutions",
-              "alternateName": "VR IT Training Institute",
-              "description": "Best Software Training Institute in Hyderabad offering comprehensive IT training courses with 100% placement assistance",
-              "url": "https://www.vritsol.com",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.vritsol.com/logo.png"
-              },
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor",
-                "addressLocality": "Ameerpet",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "addressCountry": "IN"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-9032734343",
-                "contactType": "customer service",
-                "email": "info@vritsol.com",
-                "availableLanguage": "English"
-              },
-              "sameAs": [
-                "https://www.facebook.com/vritsolutions/",
-                "https://twitter.com/vritsolutions",
-                "https://www.youtube.com/channel/UCNbaPhgRjVUDcJSh70X-ZtA"
-              ],
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Software Training Courses",
-                "itemListElement": [
-                  {
-                    "@type": "Course",
-                    "name": "Python Training",
-                    "description": "Comprehensive Python programming course",
-                    "provider": {
-                      "@type": "Organization",
-                      "name": "VR IT Solutions"
-                    }
-                  },
-                  {
-                    "@type": "Course",
-                    "name": "Data Science Training",
-                    "description": "Complete Data Science course with practical projects",
-                    "provider": {
-                      "@type": "Organization",
-                      "name": "VR IT Solutions"
-                    }
-                  },
-                  {
-                    "@type": "Course",
-                    "name": "ServiceNow Training",
-                    "description": "ServiceNow platform training with certification guidance",
-                    "provider": {
-                      "@type": "Organization",
-                      "name": "VR IT Solutions"
-                    }
-                  }
-                ]
-              },
-              "areaServed": {
-                "@type": "Place",
-                "name": "Hyderabad, India"
-              },
-              "foundingDate": "2019",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "500",
-                "bestRating": "5"
-              }
-            })
-          }}
-        />
+        
+        {/* Enhanced Rich Snippets and Schema Markup */}
+        {RichSnippetsManager.generateCompleteSchema('home').map((schema, index) => (
+          <script
+            key={index}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(schema)
+            }}
+          />
+        ))}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

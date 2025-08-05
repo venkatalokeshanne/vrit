@@ -1,0 +1,18 @@
+# Security.txt for VR IT Solutions
+# Contact information for security researchers
+
+Contact: mailto:security@vritsol.com
+Contact: mailto:info@vritsol.com
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://www.vritsol.com/.well-known/security.txt
+
+# Policy
+Policy: https://www.vritsol.com/privacy-policy
+
+# Acknowledgments
+Acknowledgments: Thank you for helping us keep VR IT Solutions secure.
+
+# Safe Harbor
+# We encourage responsible disclosure of security vulnerabilities.
+# We will not pursue legal action against researchers who follow responsible disclosure practices.

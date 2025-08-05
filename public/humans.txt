@@ -1,0 +1,19 @@
+# Humans.txt - The humans responsible for building this website
+
+/* TEAM */
+Developer: VR IT Solutions Development Team
+Site: https://www.vritsol.com
+Location: Hyderabad, Telangana, India
+
+/* THANKS */
+Next.js: https://nextjs.org
+Tailwind CSS: https://tailwindcss.com
+React: https://reactjs.org
+
+/* SITE */
+Last update: 2024/12/19
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: React, Next.js 15
+Software: VS Code, Git
+Language: English
+Doctype: HTML5
