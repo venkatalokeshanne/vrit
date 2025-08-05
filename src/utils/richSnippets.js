@@ -32,13 +32,15 @@ export class RichSnippetsManager {
         "addressLocality": "Ameerpet",
         "addressRegion": "Telangana", 
         "postalCode": "500073",
-        "addressCountry": "IN"
+        "addressCountry": "India"
       },
       "geo": {
         "@type": "GeoCoordinates",
         "latitude": "17.4399",
         "longitude": "78.3957"
       },
+      "telephone": "+91-9032734343",
+      "email": "info@vritsol.com",
       "contactPoint": [
         {
           "@type": "ContactPoint",
@@ -46,7 +48,7 @@ export class RichSnippetsManager {
           "contactType": "customer service",
           "email": "info@vritsol.com",
           "availableLanguage": ["English", "Hindi", "Telugu"],
-          "areaServed": "IN",
+          "areaServed": "India",
           "serviceArea": {
             "@type": "Place",
             "name": "Hyderabad, India"
@@ -188,15 +190,16 @@ export class RichSnippetsManager {
       "educationalLevel": "Beginner to Advanced",
       "timeRequired": course.duration,
       "inLanguage": ["en", "hi"],
-      "courseMode": ["Online", "In-Person"],
+      "courseMode": "blended",
       "hasCourseInstance": [
         {
           "@type": "CourseInstance",
-          "courseMode": "https://schema.org/OnlineEventAttendanceMode",
+          "courseMode": "online",
           "courseSchedule": {
             "@type": "Schedule",
             "duration": course.duration,
-            "repeatFrequency": "Weekly"
+            "repeatFrequency": "P1W",
+            "repeatCount": 12
           },
           "instructor": [
             {
@@ -212,11 +215,12 @@ export class RichSnippetsManager {
         },
         {
           "@type": "CourseInstance", 
-          "courseMode": "https://schema.org/OfflineEventAttendanceMode",
+          "courseMode": "onsite",
           "courseSchedule": {
             "@type": "Schedule",
             "duration": course.duration,
-            "repeatFrequency": "Weekly"
+            "repeatFrequency": "P1W",
+            "repeatCount": 12
           },
           "instructor": [
             {
@@ -234,7 +238,7 @@ export class RichSnippetsManager {
               "addressLocality": "Hyderabad",
               "addressRegion": "Telangana",
               "postalCode": "500073",
-              "addressCountry": "IN"
+              "addressCountry": "India"
             }
           }
         }
@@ -353,7 +357,7 @@ export class RichSnippetsManager {
         "addressLocality": "Ameerpet",
         "addressRegion": "Telangana",
         "postalCode": "500073",
-        "addressCountry": "IN"
+        "addressCountry": "India"
       },
       "geo": {
         "@type": "GeoCoordinates", 
