@@ -1,0 +1,64 @@
+# Robots.txt for VR IT Solutions - Professional IT Training Institute
+# Website: https://www.vr-it-sol.com
+# Last Updated: December 19, 2024
+
+# Allow all web crawlers to access the website (Static Website - No Restricted Areas)
+User-agent: *
+Allow: /
+
+# Note: This is a static website with no admin areas or sensitive directories
+# All content is publicly accessible
+
+# Block only Next.js build files that shouldn't be indexed
+Disallow: /_next/
+
+# Allow crawling of all static files and content
+Allow: /favicon.ico
+Allow: /sitemap.xml
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots and scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://www.vr-it-sol.com/sitemap.xml
+
+# Additional sitemaps (if needed in the future)
+# Sitemap: https://www.vr-it-sol.com/sitemap-courses.xml
+# Sitemap: https://www.vr-it-sol.com/sitemap-blogs.xml
+
+# Clean param for Google Search Console
+# This helps Google understand which URL parameters to ignore
+# Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&ref&source
+
+# Host directive (optional - helps specify preferred domain)
+# Host: https://www.vr-it-sol.com
