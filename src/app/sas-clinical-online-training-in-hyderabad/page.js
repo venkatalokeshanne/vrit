@@ -227,6 +227,28 @@ export default function SASClinicalTraining() {
                   </div>
                 </div>
 
+                {/* Our Locations */}
+                <div className="bg-gradient-to-r from-blue-500/15 to-indigo-500/15 rounded-xl p-6 border border-blue-400/30 mb-6">
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <Globe className="w-5 h-5 text-blue-400" />
+                    Our Locations
+                  </h3>
+                  <div className="flex flex-wrap gap-3">
+                    <a href="/sas-clinical-training-in-bangalore" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
+                      Bangalore
+                    </a>
+                    <a href="/sas-clinical-training-in-chennai" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
+                      Chennai
+                    </a>
+                    <a href="/sas-clinical-training-in-pune" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
+                      Pune
+                    </a>
+                    <a href="/sas-clinical-online-training-in-us-uk-canada-australia" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
+                      US/UK/Canada/Australia
+                    </a>
+                  </div>
+                </div>
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
                     <ArrowRight className="w-5 h-5" />
@@ -429,13 +451,13 @@ export default function SASClinicalTraining() {
               </section>
             </div>
 
-          </div>
-
-          {/* FAQ Section */}
-          <div className="lg:col-span-2 mb-8">
-            <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
-              <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
+            {/* FAQ Section */}
+            <div className="mb-8">
+              <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+                <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
+              </div>
             </div>
+
           </div>
 
           {/* Sidebar */}

@@ -33,7 +33,7 @@ import {
   Heart
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sas-clinical-online-training-in-chennai');
+export const metadata = getPageMetadata('sas-clinical-training-in-chennai');
 
 // FAQ Data for SAS Clinical Online Training
 const sasClinicalOnlineFaqs = [
@@ -447,6 +447,34 @@ export default function SASClinicalTraining() {
 
         </div>
       </div>
+
+      {/* Our Locations Section */}
+      <section className="bg-gradient-to-br from-indigo-900/30 via-purple-800/20 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+          Our SAS Clinical Training Locations
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <Link href="/sas-clinical-training-in-hyderabad" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Hyderabad</div>
+          </Link>
+          <Link href="/sas-clinical-training-in-bangalore" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Bangalore</div>
+          </Link>
+          <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 rounded-xl p-4 border-2 border-cyan-400/50 text-center">
+            <div className="text-cyan-200 font-bold">Chennai</div>
+            <div className="text-xs text-cyan-300 mt-1">Current Location</div>
+          </div>
+          <Link href="/sas-clinical-training-in-pune" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Pune</div>
+          </Link>
+          <Link href="/sas-clinical-online-training-in-us-uk-canada-australia" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+            <div className="text-blue-300 group-hover:text-blue-200 font-semibold text-sm">US/UK/Canada/Australia</div>
+          </Link>
+        </div>
+        <div className="text-center mt-6">
+          <p className="text-indigo-200">Choose your preferred location for SAS Clinical training</p>
+        </div>
+      </section>
       
       {/* Structured Data */}
       <script

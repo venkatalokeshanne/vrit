@@ -35,7 +35,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-export const metadata = getPageMetadata('sap-security-grc-training-in-hyderabad');
+export const metadata = getPageMetadata('sap-security-training');
 
 export default function SAPSecurityGRCTraining() {
   const courseBenefits = [

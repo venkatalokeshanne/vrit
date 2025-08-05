@@ -36,7 +36,7 @@ import {
   Truck
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-ewm-training-in-hyderabad');
+export const metadata = getPageMetadata('sap-ewm-online-training');
 
 export default function SAPEWMTraining() {
   const courseStructure = [

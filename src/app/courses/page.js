@@ -70,7 +70,7 @@ const courses = [
   {
     id: 3,
     title: "SAP FICO",
-    slug: "sap-fico-training-in-hyderabad",
+    slug: "sap-fico-online-training-in-hyderabad",
     category: "ERP & Finance",
     duration: "120 Days",
     level: "Beginner to Advanced",
@@ -155,7 +155,7 @@ const courses = [
   {
     id: 8,
     title: "SAP Basis",
-    slug: "sap-basis-training-in-hyderabad",
+    slug: "sap-basis-online-training",
     category: "SAP Administration",
     duration: "50 Days",
     level: "Intermediate to Advanced",
@@ -172,7 +172,7 @@ const courses = [
   {
     id: 9,
     title: "SAP EWM",
-    slug: "sap-ewm-training-in-hyderabad",
+    slug: "sap-ewm-online-training",
     category: "SAP Logistics",
     duration: "70 Days",
     level: "Advanced",
@@ -189,7 +189,7 @@ const courses = [
   {
     id: 10,
     title: "SAP HANA Admin",
-    slug: "sap-hana-admin-training-in-hyderabad",
+    slug: "sap-hana-admin-training",
     category: "SAP Database",
     duration: "40 Days",
     level: "Advanced",
@@ -206,7 +206,7 @@ const courses = [
   {
     id: 11,
     title: "S/4 HANA Finance",
-    slug: "s4-hana-finance-training-in-hyderabad",
+    slug: "simple-finance-training-in-hyderabad",
     category: "SAP Finance",
     duration: "40 Days",
     level: "Advanced",
@@ -223,7 +223,7 @@ const courses = [
   {
     id: 12,
     title: "SAP Leonardo",
-    slug: "sap-leonardo-training-in-hyderabad",
+    slug: "sap-leonardo-training-hyderabad",
     category: "SAP Innovation",
     duration: "50 Days",
     level: "Advanced",
@@ -240,7 +240,7 @@ const courses = [
   {
     id: 13,
     title: "SAP Security & GRC",
-    slug: "sap-security-grc-training-in-hyderabad",
+    slug: "sap-security-training",
     category: "SAP Security",
     duration: "60 Days",
     level: "Advanced",
@@ -257,7 +257,7 @@ const courses = [
   {
     id: 14,
     title: "SAP Logistics",
-    slug: "sap-s4hana-simple-logistics-training-in-hyderabad",
+    slug: "sap-s4Hana-simple-logistics-training",
     category: "SAP Logistics",
     duration: "40 Days",
     level: "Intermediate",
@@ -438,6 +438,40 @@ const courses = [
     icon: <Database className="w-8 h-8" />,
     color: "from-orange-600 to-yellow-600",
     bgColor: "from-orange-600/10 to-yellow-600/10",
+    trending: true,
+    new: false
+  },
+  {
+    id: 25,
+    title: "Snowflake",
+    slug: "snowflake-training-in-hyderabad",
+    category: "Cloud Data Platform",
+    duration: "45 Days",
+    level: "Intermediate to Advanced",
+    rating: 4.7,
+    students: 1876,
+    description: "Master Snowflake cloud data platform for data warehousing and analytics.",
+    features: ["Data Warehousing", "Cloud Architecture", "Data Sharing", "Performance Optimization"],
+    icon: <Cloud className="w-8 h-8" />,
+    color: "from-cyan-500 to-blue-500",
+    bgColor: "from-cyan-500/10 to-blue-500/10",
+    trending: true,
+    new: false
+  },
+  {
+    id: 26,
+    title: "Google Cloud",
+    slug: "google-cloud-training",
+    category: "Cloud Computing",
+    duration: "65 Days",
+    level: "Beginner to Advanced",
+    rating: 4.8,
+    students: 2234,
+    description: "Comprehensive Google Cloud Platform training covering infrastructure, AI, and data services.",
+    features: ["GCP Services", "Cloud Architecture", "BigQuery", "Kubernetes Engine"],
+    icon: <Cloud className="w-8 h-8" />,
+    color: "from-blue-500 to-green-500",
+    bgColor: "from-blue-500/10 to-green-500/10",
     trending: true,
     new: false
   }

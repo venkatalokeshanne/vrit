@@ -35,7 +35,7 @@ import {
   Activity
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-hana-admin-training-in-hyderabad');
+export const metadata = getPageMetadata('sap-hana-admin-training');
 
 export default function SAPHANAAdminTraining() {
   const whoCanJoin = [

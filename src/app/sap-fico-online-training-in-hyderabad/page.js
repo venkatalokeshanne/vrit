@@ -29,7 +29,7 @@ import {
   Shield
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-fico-training-in-hyderabad');
+export const metadata = getPageMetadata('sap-fico-online-training-in-hyderabad');
 
 export default function SapFicoTraining() {
   const sapFicoFaqs = [

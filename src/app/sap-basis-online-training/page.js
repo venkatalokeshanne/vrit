@@ -33,7 +33,7 @@ import {
   Layers
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-basis-training-in-hyderabad');
+export const metadata = getPageMetadata('sap-basis-online-training');
 
 export default function SAPBasisTraining() {
   const courseStructure = [

@@ -35,7 +35,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-export const metadata = getPageMetadata('sap-leonardo-training-in-hyderabad');
+export const metadata = getPageMetadata('sap-leonardo-training-hyderabad');
 
 export default function SAPLeonardoTraining() {
   const courseBenefits = [

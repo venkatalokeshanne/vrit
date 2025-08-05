@@ -27,7 +27,7 @@ import {
   Briefcase
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-sd-online-training-in-banglore');
+export const metadata = getPageMetadata('sap-sd-online-training-in-hyderabad');
 
 export default function SAPSDOnlineTraining() {
   const courseModules = [
@@ -388,13 +388,13 @@ export default function SAPSDOnlineTraining() {
               </div>
             </section>
 
-          </div>
-
-          {/* FAQ Section */}
-          <div className="lg:col-span-2 mb-8">
-            <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
-              <FAQ faqs={sapSdFaqs} theme="default" />
+            {/* FAQ Section */}
+            <div className="mb-8">
+              <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+                <FAQ faqs={sapSdFaqs} theme="default" />
+              </div>
             </div>
+
           </div>
 
           {/* Sidebar */}

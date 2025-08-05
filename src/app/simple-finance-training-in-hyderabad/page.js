@@ -79,7 +79,7 @@ const s4HanaFinanceFaqs = [
   }
 ];
 
-export const metadata = getPageMetadata('s4-hana-finance-training-in-hyderabad');
+export const metadata = getPageMetadata('simple-finance-training-in-hyderabad');
 
 export default function S4HANAFinanceTraining() {
   const topicsCovered = [
@@ -358,13 +358,13 @@ export default function S4HANAFinanceTraining() {
               </section>
             </div>
 
-          </div>
-
-          {/* FAQ Section */}
-          <div className="lg:col-span-2 mb-8">
-            <div className="bg-gradient-to-br from-green-600/15 via-blue-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
-              <FAQ faqs={s4HanaFinanceFaqs} theme="sap" />
+            {/* FAQ Section */}
+            <div className="mb-8">
+              <div className="bg-gradient-to-br from-green-600/15 via-blue-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+                <FAQ faqs={s4HanaFinanceFaqs} theme="sap" />
+              </div>
             </div>
+
           </div>
 
           {/* Sidebar */}

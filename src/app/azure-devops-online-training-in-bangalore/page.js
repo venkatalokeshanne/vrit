@@ -33,7 +33,7 @@ import {
   Server
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('azure-devops-training-in-hyderabad');
+export const metadata = getPageMetadata('azure-devops-online-training-in-bangalore');
 
 export default function AzureDevOpsTraining() {
   const azureDevOpsFaqs = [
@@ -215,7 +215,7 @@ export default function AzureDevOpsTraining() {
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
-                    Azure DevOps Training In Hyderabad
+                    Azure DevOps Online Training In Bangalore
                   </span>
                 </h1>
                 
@@ -243,15 +243,37 @@ export default function AzureDevOpsTraining() {
                   </div>
                 </div>
 
+                {/* Our Locations */}
+                <div className="bg-gradient-to-r from-indigo-500/15 to-blue-500/15 rounded-xl p-6 border border-indigo-400/30 mb-6">
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <Globe className="w-5 h-5 text-indigo-400" />
+                    Our Locations
+                  </h3>
+                  <div className="flex flex-wrap gap-3">
+                    <a href="/azure-devops-training-in-hyderabad" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
+                      Hyderabad
+                    </a>
+                    <a href="/azure-devops-online-training-in-chennai" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
+                      Chennai
+                    </a>
+                    <a href="/azure-devops-online-training-in-pune" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
+                      Pune
+                    </a>
+                    <a href="/azure-devops-online-training-in-noida" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
+                      Noida
+                    </a>
+                  </div>
+                </div>
+
                 <div className="space-y-6 mb-8">
                   <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
                     <p className="text-indigo-100 leading-relaxed">
-                      VRIT Solutions is recognized for providing Realtime Azure DevOps Training in Hyderabad and Azure DevOps Online Training throughout world.
+                      VRIT Solutions is recognized for providing Realtime Azure DevOps Training in Bangalore and Azure DevOps Online Training throughout world.
                     </p>
                   </div>
                   <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-400/20">
                     <p className="text-blue-100 leading-relaxed">
-                      VR IT Solutions is one of the best software training institute in Hyderabad. Azure DevOps (previously known as Visual Studio Team Services (VSTS) or Visual Studio Online) is the cloud based DevOps dashboard and provided by Microsoft. Azure DevOps captures over 15 years of investment and learnings in providing tools to support software development teams.
+                      VR IT Solutions is one of the best software training institute in Bangalore. Azure DevOps (previously known as Visual Studio Team Services (VSTS) or Visual Studio Online) is the cloud based DevOps dashboard and provided by Microsoft. Azure DevOps captures over 15 years of investment and learnings in providing tools to support software development teams.
                     </p>
                   </div>
                 </div>

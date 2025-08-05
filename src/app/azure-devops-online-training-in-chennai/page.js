@@ -33,7 +33,7 @@ import {
   Server
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('azure-devops-training-in-chennai');
+export const metadata = getPageMetadata('azure-devops-online-training-in-chennai');
 
 export default function AzureDevOpsTraining() {
   const azureDevOpsFaqs = [
