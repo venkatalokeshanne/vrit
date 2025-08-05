@@ -30,7 +30,8 @@ import {
   Shield,
   BarChart,
   Activity,
-  Heart
+  Heart,
+  Link
 } from 'lucide-react';
 
 export const metadata = getPageMetadata('sas-clinical-training-in-bangalore');

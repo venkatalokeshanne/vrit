@@ -228,8 +228,8 @@ export default function DataScienceTraining() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             
-            {/* Hero Section - Vibrant Orange/Blue */}
-            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in relative">
+            {/* Hero Section - Vibrant Orange/Red */}
+            <section className="bg-gradient-to-br from-orange-500/15 via-red-600/20 to-orange-600/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in relative">
               {/* Floating Alert Badge */}
               <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-bounce shadow-lg">
                 🔥 Limited Seats!
@@ -237,7 +237,7 @@ export default function DataScienceTraining() {
               
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-slide-up">
-                  <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
                     Data Science Training
                   </span>
                   <br />
@@ -256,7 +256,7 @@ export default function DataScienceTraining() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
                 </div>
                 
-                <div className="inline-block bg-gradient-to-r from-orange-500/25 to-teal-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-orange-400/40 animate-pulse">
+                <div className="inline-block bg-gradient-to-r from-orange-500/25 to-red-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-orange-400/40 animate-pulse">
                   <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-3">
                     <div className="flex items-center gap-2">
                       <Phone className="w-5 h-5 text-orange-400 animate-bounce" />
@@ -389,10 +389,10 @@ export default function DataScienceTraining() {
                 Who should do this course?
               </h2>
               <div className="bg-cyan-500/10 rounded-xl p-6 border border-cyan-400/20 mb-6">
-                <p className="text-cyan-100 leading-relaxed mb-4">
-                  <span className="text-cyan-400 font-semibold">VRIT solutions</span> is one of the top-notch institutes in Data Science course, providing the best learning experience with adequate practical exposure to groom you into a all round Data Science professional. This course is designed in such a way that you can immediately get started in the career and take up projects to showcase your expertise.
+                <p className="text-orange-100 leading-relaxed mb-4">
+                  <span className="text-orange-400 font-semibold">VRIT solutions</span> is one of the top-notch institutes in Data Science course, providing the best learning experience with adequate practical exposure to groom you into a all round Data Science professional. This course is designed in such a way that you can immediately get started in the career and take up projects to showcase your expertise.
                 </p>
-                <p className="text-cyan-100 leading-relaxed mb-4">
+                <p className="text-orange-100 leading-relaxed mb-4">
                   This course is suitable for the following set of professionals:
                 </p>
               </div>

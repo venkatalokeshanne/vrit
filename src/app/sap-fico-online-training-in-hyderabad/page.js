@@ -169,10 +169,10 @@ export default function SapFicoTraining() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - SAP FICO Training In Hyderabad With 100% Placement Guarantee */}
-            <section className="bg-gradient-to-br from-purple-500/15 via-blue-600/20 to-indigo-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-purple-400/30 shadow-2xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-500/15 via-pink-600/20 to-purple-600/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-purple-400/30 shadow-2xl shadow-purple-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                     SAP FICO Training In Hyderabad
                   </span>
                   <br />
@@ -204,11 +204,11 @@ export default function SapFicoTraining() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                  <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
                     <ArrowRight className="w-5 h-5" />
                     Enquire Now
                   </button>
-                  <button className="border border-blue-400/60 hover:bg-blue-400/10 text-blue-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
+                  <button className="border border-pink-400/60 hover:bg-pink-400/10 text-pink-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-pink-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
                     <Download className="w-5 h-5" />
                     Download Course Content
                   </button>
