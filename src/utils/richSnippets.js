@@ -14,7 +14,7 @@ export class RichSnippetsManager {
     
     return {
       "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
+      "@type": ["EducationalOrganization", "LocalBusiness"],
       "name": "VR IT Solutions",
       "alternateName": ["VRIT Solutions", "VR IT Training Institute"],
       "description": "Leading Software Training Institute in Hyderabad offering comprehensive IT courses with 100% placement assistance",
@@ -465,8 +465,8 @@ export class RichSnippetsManager {
     // Page-specific schemas
     switch (pageType) {
       case 'home':
-        schemas.push(this.generateLocalBusinessSchema());
-        schemas.push(this.generateFAQSchema());
+        // LocalBusiness properties already included in Organization schema via multiple @type
+        // FAQ schema is handled by FAQRichSnippets component
         break;
         
       case 'course':

@@ -20,7 +20,10 @@ function testPageSchemas() {
     try {
       const schema = JSON.parse(script.textContent);
       console.log(`📋 Schema ${index + 1}:`);
-      console.log(`   Type: ${schema['@type'] || 'Unknown'}`);
+      
+      // Handle multiple @type values
+      const schemaType = Array.isArray(schema['@type']) ? schema['@type'].join(', ') : (schema['@type'] || 'Unknown');
+      console.log(`   Type: ${schemaType}`);
       console.log(`   Context: ${schema['@context'] || 'Missing'}`);
       
       if (schema.name) {
@@ -44,7 +47,10 @@ function validateSchema(schemaType) {
     try {
       const schema = JSON.parse(script.textContent);
       
-      if (schema['@type'] === schemaType) {
+      // Handle multiple @type values
+      const schemaTypes = Array.isArray(schema['@type']) ? schema['@type'] : [schema['@type']];
+      
+      if (schemaTypes.includes(schemaType)) {
         console.log(`🔍 Validating ${schemaType} schema:`);
         
         // Basic validation
@@ -72,10 +78,11 @@ function validateSchema(schemaType) {
 function getRequiredFields(schemaType) {
   const requiredFields = {
     'Organization': ['@context', '@type', 'name', 'url'],
+    'EducationalOrganization': ['@context', '@type', 'name', 'url'],
+    'LocalBusiness': ['@context', '@type', 'name', 'address'],
     'Course': ['@context', '@type', 'name', 'description', 'provider', 'offers', 'hasCourseInstance'],
     'FAQPage': ['@context', '@type', 'mainEntity'],
     'BreadcrumbList': ['@context', '@type', 'itemListElement'],
-    'LocalBusiness': ['@context', '@type', 'name', 'address'],
     'Website': ['@context', '@type', 'name', 'url']
   };
   
@@ -100,7 +107,7 @@ function exportSchemas() {
       const schema = JSON.parse(script.textContent);
       schemas.push({
         index: index + 1,
-        type: schema['@type'],
+        type: Array.isArray(schema['@type']) ? schema['@type'].join(', ') : schema['@type'],
         schema: schema
       });
     } catch (error) {
