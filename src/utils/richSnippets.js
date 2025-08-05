@@ -198,7 +198,7 @@ export class RichSnippetsManager {
           "courseSchedule": {
             "@type": "Schedule",
             "duration": course.duration,
-            "repeatFrequency": "P1W",
+            "repeatFrequency": "Weekly",
             "repeatCount": 12
           },
           "instructor": [
@@ -219,7 +219,7 @@ export class RichSnippetsManager {
           "courseSchedule": {
             "@type": "Schedule",
             "duration": course.duration,
-            "repeatFrequency": "P1W",
+            "repeatFrequency": "Weekly",
             "repeatCount": 12
           },
           "instructor": [

@@ -24,7 +24,7 @@ function testCourseSchema() {
           "courseSchedule": {
             "@type": "Schedule",
             "duration": "3 months",
-            "repeatFrequency": "P1W", // Fixed: ISO 8601 duration format
+            "repeatFrequency": "Weekly", // Fixed: Valid enum value
             "repeatCount": 12 // Fixed: Added required repeatCount
           }
         },
@@ -34,7 +34,7 @@ function testCourseSchema() {
           "courseSchedule": {
             "@type": "Schedule",
             "duration": "3 months",
-            "repeatFrequency": "P1W", // Fixed: ISO 8601 duration format
+            "repeatFrequency": "Weekly", // Fixed: Valid enum value
             "repeatCount": 12 // Fixed: Added required repeatCount
           }
         }
@@ -54,7 +54,7 @@ function testCourseSchema() {
     courseSchema.hasCourseInstance.forEach((instance, index) => {
       const instanceModeValid = ['online', 'onsite'].includes(instance.courseMode);
       const hasRepeatCount = instance.courseSchedule.hasOwnProperty('repeatCount');
-      const hasValidRepeatFreq = instance.courseSchedule.repeatFrequency === 'P1W';
+      const hasValidRepeatFreq = instance.courseSchedule.repeatFrequency === 'Weekly';
       
       console.log(`\n   📚 Course Instance ${index + 1}:`);
       console.log(`      ${instanceModeValid ? '✅' : '❌'} Mode: ${instance.courseMode}`);
@@ -67,7 +67,7 @@ function testCourseSchema() {
                     courseSchema.hasCourseInstance.every(instance => 
                       ['online', 'onsite'].includes(instance.courseMode) &&
                       instance.courseSchedule.hasOwnProperty('repeatCount') &&
-                      instance.courseSchedule.repeatFrequency === 'P1W'
+                      instance.courseSchedule.repeatFrequency === 'Weekly'
                     );
     
     console.log(`\n📊 COURSE SCHEMA VALIDATION RESULT:`);
@@ -82,7 +82,7 @@ function testCourseSchema() {
     console.log('\n🔧 FIXES APPLIED:');
     console.log('   1. ✅ Changed courseMode from array to valid enum: "blended"');
     console.log('   2. ✅ Changed instance courseMode to valid enums: "online", "onsite"');
-    console.log('   3. ✅ Changed repeatFrequency to ISO 8601 format: "P1W" (weekly)');
+    console.log('   3. ✅ Changed repeatFrequency to valid enum: "Weekly"');
     console.log('   4. ✅ Added required repeatCount field: 12 (for 3-month courses)');
     
   } catch (error) {
