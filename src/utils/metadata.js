@@ -60,12 +60,13 @@ export async function getPageMetadata(slug) {
         },
       };
     }
-    // console.log('Fetched metadata for slug:', slug, pageData);
+    // console.log('Saibaba Fetched metadata for slug:', slug, pageData);
     // Return comprehensive metadata with all SEO optimizations
     return {
       metadataBase: new URL('https://www.vritsol.com'),
       title: pageData.title,
       description: pageData.description,
+      mainImage: pageData.mainImage,
       keywords: pageData.keywords || [],
       authors: [{ name: 'VR IT Solutions' }],
       creator: 'VR IT Solutions',

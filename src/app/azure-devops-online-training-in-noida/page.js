@@ -47,6 +47,9 @@ async function getPageStructuredData() {
 
 export default async  function AzureDevOpsTrainingInNoida() {
   const structuredDataJson = await getPageStructuredData();
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('azure-devops-online-training-in-noida');
+  const mainImageUrl = metadata?.mainImage || '/azure-devops.jpg';
   const azureDevOpsFaqs = [
     {
       question: "What is Azure DevOps and AWS, and why learn them together?",
@@ -178,7 +181,7 @@ export default async  function AzureDevOpsTrainingInNoida() {
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
                   <img
-                    src="/azure-devops.jpg"
+                    src={mainImageUrl}
                     alt="Azure DevOps Training Course in Noida - VR IT Solutions"
                     className="w-full object-cover border-2 border-indigo-400/30"
                     style={{ aspectRatio: '1200/630' }}

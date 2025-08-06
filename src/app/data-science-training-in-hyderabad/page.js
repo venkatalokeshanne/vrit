@@ -47,6 +47,10 @@ async function getPageStructuredData() {
 
 export default async function DataScienceTrainingInHyderabad() {
   const structuredDataJson = await getPageStructuredData();
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('data-science-training-in-hyderabad');
+  const mainImageUrl = metadata?.mainImage || '/data-science.jpg';
+
   const dataScienceFaqs = [
     {
       question: "What is Data Science and why is it a high-demand career?",
@@ -168,7 +172,7 @@ export default async function DataScienceTrainingInHyderabad() {
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
                   <img
-                    src="/logo.png"
+                    src={mainImageUrl}
                     alt="Data Science Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}

@@ -16,7 +16,28 @@ export const urlFor = (source) => builder.image(source)
 // Helper function to convert Sanity course data to the format your existing components expect
 export function transformSanityCourse(sanityCourse) {
   if (!sanityCourse) return null;
-  // console.log('Saibaba Transforming Sanity course:', sanityCourse)
+//   console.log('Saibaba Transforming Sanity course:', sanityCourse)
+  // Helper to get ogImage asset URL from referenced courseImages document
+  let ogImageUrl = '';
+  if (sanityCourse.ogImage && sanityCourse.ogImage.ogImage && sanityCourse.ogImage.ogImage.asset) {
+    ogImageUrl = urlFor(sanityCourse.ogImage.ogImage).url();
+  } else if (typeof sanityCourse.ogImage === 'string') {
+    ogImageUrl = sanityCourse.ogImage;
+  }
+  let twitterImageUrl = '';
+  if (sanityCourse.twitterImage && sanityCourse.twitterImage.twitterImage && sanityCourse.twitterImage.twitterImage.asset) {
+    twitterImageUrl = urlFor(sanityCourse.twitterImage.twitterImage).url();
+  } else if (typeof sanityCourse.twitterImage === 'string') {
+    twitterImageUrl = sanityCourse.twitterImage;
+  }
+
+    let mainImageUrl = '';
+  if (sanityCourse.mainImage && sanityCourse.mainImage.mainImage && sanityCourse.mainImage.mainImage.asset) {
+    mainImageUrl = urlFor(sanityCourse.mainImage.mainImage).url();
+  } else if (typeof sanityCourse.mainImage === 'string') {
+    mainImageUrl = sanityCourse.mainImage;
+  }
+// console.log('Saibaba ogImageUrl:', ogImageUrl)
   return {
     slug: sanityCourse.slug?.current || '',
     title: sanityCourse.title || '',
@@ -26,9 +47,9 @@ export function transformSanityCourse(sanityCourse) {
     ogDescription: sanityCourse.ogDescription || sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
     twitterTitle: sanityCourse.twitterTitle || sanityCourse.ogTitle || sanityCourse.title || '',
     twitterDescription: sanityCourse.twitterDescription || sanityCourse.ogDescription || sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
-    // ogImage and twitterImage are string paths (not image objects)
-    ogImage: sanityCourse.ogImage || '',
-    twitterImage: sanityCourse.twitterImage || sanityCourse.ogImage || '',
+    ogImage: ogImageUrl,
+    mainImage: mainImageUrl,
+    twitterImage: twitterImageUrl || ogImageUrl || '',
     reviewCount: sanityCourse.reviewsCount?.toString() || '0',
     ratingValue: sanityCourse.rating?.toString() || '5',
     organizationName: sanityCourse.organizationName || sanityCourse.title || '',
@@ -78,7 +99,11 @@ export const allCoursesQuery = `
     rating,
     reviewsCount,
     instructor,
-    mainImage,
+    mainImage->{
+      mainImage{
+        asset->
+      }
+    },
     courseDetails {
       description,
       objectives,
@@ -126,10 +151,18 @@ export const allCoursesQuery = `
     noFollow,
     ogTitle,
     ogDescription,
-    ogImage,
+    ogImage->{
+      ogImage{
+        asset->
+      }
+    },
     twitterTitle,
     twitterDescription,
-    twitterImage,
+    twitterImage->{
+      twitterImage{
+        asset->
+      }
+    },
     structuredData
   }
 `
@@ -164,7 +197,11 @@ export async function getCourseBySlug(slug) {
       rating,
       reviewsCount,
       instructor,
-      mainImage,
+      mainImage->{
+        mainImage{
+          asset->
+        }
+      },
       courseDetails {
         description,
         objectives,
@@ -212,10 +249,18 @@ export async function getCourseBySlug(slug) {
       noFollow,
       ogTitle,
       ogDescription,
-      ogImage,
+      ogImage->{
+        ogImage{
+          asset->
+        }
+      },
       twitterTitle,
       twitterDescription,
-      twitterImage,
+      twitterImage->{
+        twitterImage{
+          asset->
+        }
+      },
       structuredData
     }`
     

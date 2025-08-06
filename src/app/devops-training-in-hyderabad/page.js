@@ -57,6 +57,9 @@ async function getPageStructuredData() {
 export default async function DevOpsTraining() {
   const structuredDataJson = await getPageStructuredData();
   
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('devops-training-in-hyderabad');
+  const mainImageUrl = metadata?.mainImage || '/devops.jpg';
   const curriculumTopics = [
     "Introduction to DevOps",
     "Concepts in Linux and Automation", 
@@ -274,7 +277,7 @@ export default async function DevOpsTraining() {
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
                   <img
-                    src="/logo.png"
+                    src={mainImageUrl}
                     alt="AWS With DevOps Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}
