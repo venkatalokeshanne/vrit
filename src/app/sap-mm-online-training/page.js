@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata-enhanced';
 import { 
   Target, 
   BookOpen, 
@@ -36,9 +36,20 @@ import {
   Brain,
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-mm-online-training');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('sap-mm-online-training');
+}
 
-export default function SAPMMOnlineTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('sap-mm-online-training');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function SAPMMOnlineTraining() {
+  const structuredDataJson = await getPageStructuredData();
+  
   const courseModules = [
     "Overview of MM functions in a business setup",
     "Introduction to Master Data",
@@ -138,96 +149,6 @@ export default function SAPMMOnlineTraining() {
 
   return (
     <>
-      {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best SAP MM Online Training in Hyderabad | SAP Materials Management Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/sap-mm-online-training",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
-
-      {/* Additional Review Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "review",
-            "name": "SAP MM Online Training in Hyderabad - VR IT Solutions",
-            "aggregateRating": {
-              "type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656"
-            }
-          })
-        }}
-      />
-
-      {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "SAP MM Online Training in Hyderabad",
-            "description": "Comprehensive 120-day SAP MM online training covering materials management, purchasing, and inventory with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "SAP MM Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P120D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -513,21 +434,11 @@ export default function SAPMMOnlineTraining() {
         </div>
       </div>
       
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sap-mm-online-training'))
-        }}
-      />
-      
-      {/* Review Structured Data */}
-      {getReviewStructuredData('sap-mm-online-training') && (
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('sap-mm-online-training'))
-          }}
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
         />
       )}
       </div>

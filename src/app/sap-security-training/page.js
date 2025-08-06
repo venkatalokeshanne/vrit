@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata-enhanced';
 import { 
   Target, 
   BookOpen, 
@@ -40,7 +40,16 @@ import {
   Brain,
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-security-training');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('sap-security-training');
+}
+
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('sap-security-training');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
 
 // FAQ Data for SAP Security & GRC Training
 const sapSecurityFaqs = [
@@ -86,7 +95,8 @@ const sapSecurityFaqs = [
   }
 ];
 
-export default function SAPSecurityTraining() {
+export default async  function SAPSecurityTrainingInHyderabad() {
+  const structuredDataJson = await getPageStructuredData();
   const trainingModes = [
     "Online Training",
     "Classroom Training", 
@@ -105,77 +115,22 @@ export default function SAPSecurityTraining() {
   return (
     <>
       {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best SAP Security & GRC Training in Hyderabad | SAP Security Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/sap-security-training",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
       {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "SAP Security & GRC Training in Hyderabad",
-            "description": "Comprehensive 60-day SAP Security and GRC training covering user administration, authorization management, compliance, and risk controls with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "SAP Security & GRC Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P60D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -381,22 +336,15 @@ export default function SAPSecurityTraining() {
       </div>
       
       {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sap-security-training'))
-        }}
-      />
-      
-      {/* Review Structured Data */}
-      {getReviewStructuredData('sap-security-training') && (
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('sap-security-training'))
-          }}
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
         />
       )}
+      
+
       </div>
     </>
   );

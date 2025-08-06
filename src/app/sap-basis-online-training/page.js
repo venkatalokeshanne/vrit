@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata-enhanced';
 import { 
   Target, 
   BookOpen, 
@@ -37,9 +37,20 @@ import {
   Brain
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-basis-online-training');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('sap-basis-online-training');
+}
 
-export default function SAPBasisTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('sap-basis-online-training');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function SAPBasisTraining() {
+  const structuredDataJson = await getPageStructuredData();
+  
   const courseStructure = [
     "Introduction to ERP",
     "Get an overview of SAP R/3",
@@ -163,77 +174,7 @@ export default function SAPBasisTraining() {
   return (
     <>
       {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best SAP Basis Training in Hyderabad | SAP Basis Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/sap-basis-training-in-hyderabad",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
 
-      {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "SAP Basis Training in Hyderabad",
-            "description": "Comprehensive 50-day SAP Basis training covering system administration, installation, configuration, and performance optimization with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "SAP Basis Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P50D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -504,21 +445,15 @@ export default function SAPBasisTraining() {
 
         </div>
       </div>
+      
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
       </div>
-
-      {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sap-basis-training-in-hyderabad'))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getReviewStructuredData('sap-basis-training-in-hyderabad'))
-        }}
-      />
     </>
   );
 }

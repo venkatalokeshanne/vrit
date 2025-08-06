@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata-enhanced';
 import { 
   Target, 
   BookOpen, 
@@ -40,9 +40,20 @@ import {
   Truck
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-leonardo-training-hyderabad');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('sap-leonardo-training-hyderabad');
+}
 
-export default function SAPLeonardoTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('sap-leonardo-training-hyderabad');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function SAPLeonardoTrainingHyderabad() {
+  const structuredDataJson = await getPageStructuredData();
+  
   const targetAudience = [
     "Executive managers",
     "IT professionals",
@@ -362,22 +373,15 @@ export default function SAPLeonardoTraining() {
 
         </div>
       </div>
-      
       </div>
-
-      {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sap-leonardo-training-hyderabad'))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getReviewStructuredData('sap-leonardo-training-hyderabad'))
-        }}
-      />
+      
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
     </>
   );
 }

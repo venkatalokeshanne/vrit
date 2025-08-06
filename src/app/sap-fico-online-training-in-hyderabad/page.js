@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata-enhanced';
 import { 
   Target, 
   BookOpen, 
@@ -36,9 +36,20 @@ import {
   Brain
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-fico-online-training-in-hyderabad');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('sap-fico-online-training-in-hyderabad');
+}
 
-export default function SapFicoTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('sap-fico-online-training-in-hyderabad');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function SapFicoTraining() {
+  const structuredDataJson = await getPageStructuredData();
+  
   const sapFicoFaqs = [
     {
       question: "What is SAP FICO and why is it important for careers?",
@@ -441,20 +452,10 @@ export default function SapFicoTraining() {
       </div>
       
       {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sap-fico-training-in-hyderabad'))
-        }}
-      />
-      
-      {/* Review Structured Data */}
-      {getReviewStructuredData('sap-fico-training-in-hyderabad') && (
+      {structuredDataJson && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('sap-fico-training-in-hyderabad'))
-          }}
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
         />
       )}
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata-enhanced';
 import { 
   Target, 
   BookOpen, 
@@ -29,9 +29,20 @@ import {
   Shield
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('salesforce-training-in-hyderabad');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('salesforce-training-in-hyderabad');
+}
 
-export default function SalesforceTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('salesforce-training-in-hyderabad');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function SalesforceTraining() {
+  const structuredDataJson = await getPageStructuredData();
+  
   const salesforceFaqs = [
     {
       question: "What is Salesforce and why should I learn it?",
@@ -77,78 +88,7 @@ export default function SalesforceTraining() {
 
   return (
     <>
-      {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best Salesforce Training in Hyderabad | Salesforce Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/salesforce-training-in-hyderabad",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
 
-      {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "Salesforce Training in Hyderabad",
-            "description": "Comprehensive 70-day Salesforce training covering Sales Cloud, Service Cloud, Development, and certification preparation with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "Salesforce Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P70D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -343,15 +283,7 @@ export default function SalesforceTraining() {
         }}
       />
       
-      {/* Review Structured Data */}
-      {getReviewStructuredData('salesforce-training-in-hyderabad') && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('salesforce-training-in-hyderabad'))
-          }}
-        />
-      )}
+
     </>
   );
 }

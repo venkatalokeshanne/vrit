@@ -34,9 +34,19 @@ import {
   Link
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('mulesoft-training-in-hyderabad');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('mulesoft-training-in-hyderabad');
+}
 
-export default function MuleSoftTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('mulesoft-training-in-hyderabad');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async  function MuleSoftTrainingInHyderabad() {
+  const structuredDataJson = await getPageStructuredData();
   const courseStructure = [
     "Overview of Mule – Getting started",
     "Introduction to ESB",
@@ -132,78 +142,7 @@ export default function MuleSoftTraining() {
 
   return (
     <>
-      {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best MuleSoft Training in Hyderabad | MuleSoft Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/mulesoft-training-in-hyderabad",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
-
-      {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "MuleSoft Training in Hyderabad",
-            "description": "Comprehensive 45-day MuleSoft training covering Anypoint Platform, ESB, API integration, and certification preparation with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "MuleSoft Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P45D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
+      
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -471,18 +410,15 @@ export default function MuleSoftTraining() {
       </div>
 
       {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('mulesoft-training-in-hyderabad'))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getReviewStructuredData('mulesoft-training-in-hyderabad'))
-        }}
-      />
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
+      {/* Structured Data for SEO */}
+
     </>
   );
 }

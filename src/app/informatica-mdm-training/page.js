@@ -47,9 +47,20 @@ import {
   Link
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('informatica-mdm-training');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('informatica-mdm-training');
+}
 
-export default function InformaticaMDMTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('informatica-mdm-training');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async  function InformaticaMDMTraining() {
+  const structuredDataJson = await getPageStructuredData();
+
   const curriculumTopics = [
     "Informatica MDM Version 10.1 Overview and Architecture",
     "Basic overview of Data Models and Lookups",
@@ -135,95 +146,6 @@ export default function InformaticaMDMTraining() {
 
   return (
     <>
-      {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best Informatica MDM Training in Hyderabad | Informatica MDM Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/informatica-mdm-training",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
-
-      {/* Additional Review Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "review",
-            "name": "Informatica MDM Training in Hyderabad - VR IT Solutions",
-            "aggregateRating": {
-              "type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656"
-            }
-          })
-        }}
-      />
-
-      {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "Informatica MDM Training in Hyderabad",
-            "description": "Comprehensive 45-day Informatica MDM training covering master data management, data stewardship, and MDM Hub with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "Informatica MDM Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P45D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -542,18 +464,13 @@ export default function InformaticaMDMTraining() {
       </div>
 
       {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('informatica-mdm-training'))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getReviewStructuredData('informatica-mdm-training'))
-        }}
-      />
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
     </>
   );
 }

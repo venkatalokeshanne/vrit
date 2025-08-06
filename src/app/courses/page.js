@@ -477,9 +477,20 @@ const courses = [
   }
 ];
 
-export const metadata = getPageMetadata('courses');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('courses');
+}
 
-export default function CoursesPage() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('courses');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function CoursesPage() {
+  const structuredDataJson = await getPageStructuredData();
+  
   // Sort courses by trending first, then by rating for static display
   const sortedCourses = courses.sort((a, b) => b.trending - a.trending || b.rating - a.rating);
 
@@ -740,13 +751,13 @@ export default function CoursesPage() {
         `
       }} />
 
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('courses'))
-        }}
-      />
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
     </div>
   );
 }

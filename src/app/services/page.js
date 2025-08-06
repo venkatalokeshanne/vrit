@@ -65,9 +65,19 @@ const servicesFaqs = [
   }
 ];
 
-export const metadata = getPageMetadata('services');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('services');
+}
 
-export default function Services() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('services');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function Services() {
+  const structuredDataJson = await getPageStructuredData();
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -394,13 +404,13 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('services'))
-        }}
-      />
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
     </div>
   );

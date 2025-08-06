@@ -46,9 +46,19 @@ const termsAndConditionsFaqs = [
   }
 ];
 
-export const metadata = getPageMetadata('terms-and-conditions');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('terms-and-conditions');
+}
 
-export default function TermsAndConditions() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('terms-and-conditions');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function TermsAndConditions() {
+  const structuredDataJson = await getPageStructuredData();
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -210,13 +220,13 @@ export default function TermsAndConditions() {
         </div>
       </div>
 
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('terms-and-conditions'))
-        }}
-      />
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
     </div>
   );
 }

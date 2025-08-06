@@ -43,9 +43,20 @@ import {
   HardDrive
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('devops-training-in-hyderabad');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('devops-training-in-hyderabad');
+}
 
-export default function DevOpsTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('devops-training-in-hyderabad');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function DevOpsTraining() {
+  const structuredDataJson = await getPageStructuredData();
+  
   const curriculumTopics = [
     "Introduction to DevOps",
     "Concepts in Linux and Automation", 
@@ -530,18 +541,13 @@ export default function DevOpsTraining() {
       </div>
 
       {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('devops-training-in-hyderabad'))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getReviewStructuredData('devops-training-in-hyderabad'))
-        }}
-      />
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
     </>
   );
 }

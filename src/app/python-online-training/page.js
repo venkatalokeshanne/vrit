@@ -30,7 +30,18 @@ import {
 
 export const metadata = getPageMetadata('python-online-training');
 
+export async function generateMetadata() {
+  return await getPageMetadata('python-online-training');
+}
+
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('python-online-training');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
 export default function PythonOnlineTraining() {
+  const structuredDataJson = getPageStructuredData();
   const pythonFaqs = [
     {
       question: "What is Python and why is it popular for career growth?",
@@ -126,95 +137,7 @@ export default function PythonOnlineTraining() {
 
   return (
     <>
-      {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best Python Online Training in Hyderabad | Python Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/python-online-training",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
-
-      {/* Additional Review Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "review",
-            "name": "Python Online Training in Hyderabad - VR IT Solutions",
-            "aggregateRating": {
-              "type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656"
-            }
-          })
-        }}
-      />
-
-      {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "Python Online Training in Hyderabad",
-            "description": "Comprehensive 45-day Python training covering programming fundamentals, advanced concepts, and practical implementation with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "Python Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P45D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
+  
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -479,18 +402,12 @@ export default function PythonOnlineTraining() {
       </div>
 
       {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('python-online-training'))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getReviewStructuredData('python-online-training'))
-        }}
-      />
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
     </>
   );
 }

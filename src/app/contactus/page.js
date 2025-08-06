@@ -1,10 +1,20 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata';
 
-export const metadata = getPageMetadata('contactus');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('contactus');
+}
 
-export default function ContactUs() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('contactus');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function ContactUs() {
+  const structuredDataJson = await getPageStructuredData();
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -216,13 +226,13 @@ export default function ContactUs() {
           </div>
         </div>
 
-        {/* Structured Data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getStructuredData('contactus'))
-          }}
-        />
+        {/* Structured Data for SEO */}
+        {structuredDataJson && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+          />
+        )}
       </div>
     </div>
   );

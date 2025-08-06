@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata-enhanced';
 import { 
   Target, 
   BookOpen, 
@@ -37,9 +37,20 @@ import {
   Brain
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-hana-admin-training');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('sap-hana-admin-training');
+}
 
-export default function SAPHANAAdminTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('sap-hana-admin-training');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function SAPHANAAdminTraining() {
+  const structuredDataJson = await getPageStructuredData();
+  
   const whoCanJoin = [
     "SAP Basis administrators",
     "System administrators",
@@ -418,18 +429,12 @@ export default function SAPHANAAdminTraining() {
       </div>
 
       {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sap-hana-admin-training'))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getReviewStructuredData('sap-hana-admin-training'))
-        }}
-      />
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
     </>
   );
 }

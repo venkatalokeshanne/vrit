@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata-enhanced';
 import { 
   Target, 
   BookOpen, 
@@ -35,9 +35,20 @@ import {
   Brain,
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sap-s4hana-simple-logistics-training');
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('sap-s4hana-simple-logistics-training');
+}
 
-export default function SAPS4HANASimpleLogisticsTraining() {
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('sap-s4hana-simple-logistics-training');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
+export default async function SAPS4HANASimpleLogisticsTraining() {
+  const structuredDataJson = await getPageStructuredData();
+  
   const courseModules = [
     "Introduction to SAP HANA Topics include SAP In-Memory Strategy, Architecture Overview and various views (analytic, attribute, calculation, etc)",
     "SAP S/4 HANA Topics include S/4 HANA Roadmap, Benefits, introduction to SAP Fiori and deployment options",
@@ -144,96 +155,6 @@ export default function SAPS4HANASimpleLogisticsTraining() {
 
   return (
     <>
-      {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best SAP S/4 HANA Simple Logistics Training in Hyderabad | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/sap-s4hana-simple-logistics-training",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
-
-      {/* Additional Review Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "review",
-            "name": "SAP S/4 HANA Simple Logistics Training in Hyderabad - VR IT Solutions",
-            "aggregateRating": {
-              "type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656"
-            }
-          })
-        }}
-      />
-
-      {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "SAP S/4 HANA Simple Logistics Training in Hyderabad",
-            "description": "Comprehensive 45-hour SAP S/4 HANA Simple Logistics training covering material management, supply chain, and enterprise management with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "SAP S/4 HANA Simple Logistics Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P40D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5", 
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -497,21 +418,11 @@ export default function SAPS4HANASimpleLogisticsTraining() {
         </div>
       </div>
       
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sap-s4hana-simple-logistics-training'))
-        }}
-      />
-      
-      {/* Review Structured Data */}
-      {getReviewStructuredData('sap-s4hana-simple-logistics-training') && (
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('sap-s4hana-simple-logistics-training'))
-          }}
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
         />
       )}
       </div>
