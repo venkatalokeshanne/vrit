@@ -3,7 +3,7 @@
 import React from 'react';
 import { Phone, Mail, Download, Users, Monitor, Briefcase, CheckCircle, ArrowRight, Clock, Target, Award, TrendingUp, Code, Globe, Star, Rocket } from 'lucide-react';
 import Link from 'next/link';
-import { EnquireNowButton, DownloadCourseButton, CallNowButton } from './CourseActionButtons';
+import CourseActionButtons, { EnquireNowButton, DownloadCourseButton, CallNowButton } from './CourseActionButtons';
 
 export default function CourseSidebar({ courseName = "Course", phoneNumber = "+91-9032734343" }) {
   const trainingModes = [

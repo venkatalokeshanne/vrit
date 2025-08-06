@@ -4,7 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollingCourses from './components/ScrollingCourses';
 import RichSnippetsManager from '../utils/richSnippets';
-import { getPageMetadata } from '../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../utils/metadata';
+import Script from 'next/script';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,15 +18,66 @@ const geistMono = Geist_Mono({
 });
 
 // Generate metadata dynamically for the homepage
-export const metadata = getPageMetadata('index');
+export async function generateMetadata() {
+  return await getPageMetadata('index');
+}
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  // Get structured data for the homepage
+  const structuredData = await getStructuredData('index');
+
   return (
     <html lang="en">
       <head>
         <link rel="canonical" href="https://www.vritsol.com/" />
         <meta name="geo.region" content="IN-TG" />
         <meta name="geo.placename" content="Hyderabad" />
+        <meta name="geo.position" content="17.4399;78.4983" />
+        <meta name="ICBM" content="17.4399, 78.4983" />
+        <meta name="theme-color" content="#1e40af" />
+        <meta name="color-scheme" content="dark light" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://cdn.sanity.io" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        
+        {/* Structured Data */}
+        {structuredData && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(structuredData)
+            }}
+          />
+        )}
+        
+        {/* Additional Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "VR IT Solutions",
+              "url": "https://www.vritsol.com",
+              "logo": "https://www.vritsol.com/images/vritlogo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+919032734343",
+                "contactType": "customer service",
+                "areaServed": "IN",
+                "availableLanguage": ["en", "hi", "te"]
+              },
+              "sameAs": [
+                "https://www.facebook.com/vritsolutions/",
+                "https://twitter.com/vritsolutions",
+                "https://www.linkedin.com/company/vr-it-solutions",
+                "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
+              ]
+            })
+          }}
+        />
         <meta name="geo.position" content="17.3850;78.4867" />
         <meta name="ICBM" content="17.3850, 78.4867" />
         <meta name="DC.title" content="Best Software Training Institute In Hyderabad | VR IT Solutions" />

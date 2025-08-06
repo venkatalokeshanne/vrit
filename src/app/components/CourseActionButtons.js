@@ -307,11 +307,5 @@ export const CourseActionButtons = ({
   );
 };
 
-// Export all components as default for easy importing
-export default {
-  EnquireNowButton,
-  DownloadCourseButton,
-  JoinNowButton,
-  CallNowButton,
-  CourseActionButtons
-};
+// Export CourseActionButtons as default and others as named exports
+export default CourseActionButtons;

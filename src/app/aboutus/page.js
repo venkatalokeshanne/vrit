@@ -4,6 +4,17 @@ import FAQ from '../components/FAQ';
 import { EnquireNowButton, CallNowButton } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData } from '../../utils/metadata';
 
+// Generate metadata for this page
+export async function generateMetadata() {
+  return await getPageMetadata('aboutus');
+}
+
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('aboutus');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
 // FAQ Data for About Us Page
 const aboutUsFaqs = [
   {
@@ -48,9 +59,9 @@ const aboutUsFaqs = [
   }
 ];
 
-export const metadata = getPageMetadata('aboutus');
-
-export default function AboutUs() {
+export default async function AboutUs() {
+  const structuredDataJson = await getPageStructuredData();
+  
   const courses = [
     'Hadoop', 'Workday Online Training', 'DevOps Online Training', 'DataScience Training',
     'Python Online Training', 'Mulesoft online Training', 'Spark & Scala', 'ServiceNow',
@@ -310,6 +321,14 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
     </div>
   );

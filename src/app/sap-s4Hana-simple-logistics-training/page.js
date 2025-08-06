@@ -33,8 +33,6 @@ import {
   Layers,
   Package,
   Brain,
-  TrendingUp,
-  Users
 } from 'lucide-react';
 
 export const metadata = getPageMetadata('sap-s4hana-simple-logistics-training');

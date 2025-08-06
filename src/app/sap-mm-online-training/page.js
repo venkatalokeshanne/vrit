@@ -34,8 +34,6 @@ import {
   Package,
   Truck,
   Brain,
-  TrendingUp,
-  Users
 } from 'lucide-react';
 
 export const metadata = getPageMetadata('sap-mm-online-training');
