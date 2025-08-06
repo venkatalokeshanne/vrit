@@ -39,8 +39,13 @@ async function getPageStructuredData() {
   return structuredData ? JSON.stringify(structuredData) : null;
 }
 
-export default function PythonOnlineTraining() {
-  const structuredDataJson = getPageStructuredData();
+export default async function PythonOnlineTraining() {
+  const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('python-online-training');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   const pythonFaqs = [
     {
       question: "What is Python and why is it popular for career growth?",

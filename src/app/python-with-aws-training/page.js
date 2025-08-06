@@ -44,9 +44,11 @@ async function getPageStructuredData() {
   return structuredData ? JSON.stringify(structuredData) : null;
 }
 
-export default function PythonWithAWSTraining() {
-  const structuredDataJson = getPageStructuredData();
-
+export default async function PythonWithAWSTraining() {
+  const structuredDataJson = await getPageStructuredData();
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('python-online-training');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
   const pythonAWSFaqs = [
     {
       question: "What is Python with AWS and why is this combination powerful?",
