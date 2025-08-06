@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
