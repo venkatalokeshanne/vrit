@@ -35,7 +35,6 @@ import {
   Heart,
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('sas-clinical-training-in-chennai');
 
 export async function generateMetadata() {
   return await getPageMetadata('sas-clinical-training-in-chennai');
@@ -128,77 +127,7 @@ export default function SASClinicalTraining() {
   return (
     <>
       {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best SAS Clinical Training in Chennai | SAS Clinical Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/sas-clinical-training-in-chennai",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Chennai",
-                "addressRegion": "Tamil Nadu",
-                "postalCode": "600001",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Chennai Tamil Nadu."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
-
-      {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "SAS Clinical Training in Chennai",
-            "description": "Comprehensive 120-day SAS Clinical training covering clinical trial data analysis, CDISC standards, and statistical programming with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "SAS Clinical Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P120D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
+  
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
