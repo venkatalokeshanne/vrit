@@ -34,7 +34,6 @@ import {
   Server
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('azure-devops-online-training-in-bangalore');
 
 // Generate metadata for this page
 export async function generateMetadata() {
