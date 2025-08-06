@@ -46,7 +46,7 @@ async function getPageStructuredData() {
 
 export default function PythonWithAWSTraining() {
   const structuredDataJson = getPageStructuredData();
-  
+
   const pythonAWSFaqs = [
     {
       question: "What is Python with AWS and why is this combination powerful?",
@@ -120,8 +120,7 @@ export default function PythonWithAWSTraining() {
                 
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/logo.png"
+                  <img src={mainImageUrl}
                     alt="Python With AWS Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}

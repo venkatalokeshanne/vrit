@@ -49,6 +49,11 @@ async function getPageStructuredData() {
 
 export default async function SapFicoTraining() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('sap-fico-online-training-in-hyderabad');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   
   const sapFicoFaqs = [
     {
@@ -199,8 +204,7 @@ export default async function SapFicoTraining() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/sap-fico.jpg"
+                  <img src={mainImageUrl}
                     alt="SAP FICO Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-purple-400/30"
                     style={{ aspectRatio: '1200/630' }}

@@ -92,6 +92,11 @@ const sasClinicalOnlineFaqs = [
 
 export default async function SASClinicalTrainingInBangalore() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('sas-clinical-training-in-bangalore');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   const courseStructure = [
     "Introduction to SAS and Clinical Trials",
     "DATA step processing",
@@ -162,8 +167,7 @@ export default async function SASClinicalTrainingInBangalore() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/sas-clinical.jpg"
+                  <img src={mainImageUrl}
                     alt="SAS Clinical Training Course in Bangalore - VR IT Solutions"
                     className="w-full object-cover border-2 border-blue-400/30"
                     style={{ aspectRatio: '1200/630' }}

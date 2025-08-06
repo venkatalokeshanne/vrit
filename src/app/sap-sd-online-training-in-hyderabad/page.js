@@ -49,6 +49,11 @@ async function getPageStructuredData() {
 
 export default async  function SAPSDOnlineTrainingInHyderabad() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('sap-sd-online-training-in-hyderabad');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   const courseModules = [
     "Introduction to SAP and SAP SD Module",
     "Organizational Structure in Sales and Distribution",
@@ -196,8 +201,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
                 
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/sap-sd.jpg"
+                  <img src={mainImageUrl}
                     alt="SAP SD Online Training Course in Banglore - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}

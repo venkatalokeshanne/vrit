@@ -44,6 +44,11 @@ async function getPageStructuredData() {
 
 export default async  function PegaTrainingInHyderabad() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('pega-training-in-hyderabad');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   const pegaFaqs = [
     {
       question: "What is Pega and why is it important for business process management?",
@@ -155,8 +160,7 @@ export default async  function PegaTrainingInHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/pega.jpg"
+                  <img src={mainImageUrl}
                     alt="Pega Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-pink-400/30"
                     style={{ aspectRatio: '1200/630' }}

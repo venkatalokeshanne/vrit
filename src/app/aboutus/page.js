@@ -61,6 +61,11 @@ const aboutUsFaqs = [
 
 export default async function AboutUs() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('aboutus');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   
   const courses = [
     'Hadoop', 'Workday Online Training', 'DevOps Online Training', 'DataScience Training',

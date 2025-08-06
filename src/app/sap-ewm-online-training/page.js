@@ -51,6 +51,11 @@ async function getPageStructuredData() {
 
 export default async function SAPEWMTraining() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('sap-ewm-online-training');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   
   const courseStructure = [
     "Introduction to EWM (Extended Warehouse Management)",
@@ -192,8 +197,7 @@ export default async function SAPEWMTraining() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/sap-ewm.jpg"
+                  <img src={mainImageUrl}
                     alt="SAP EWM Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-yellow-400/30"
                     style={{ aspectRatio: '1200/630' }}

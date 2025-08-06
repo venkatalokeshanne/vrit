@@ -490,6 +490,11 @@ async function getPageStructuredData() {
 
 export default async function CoursesPage() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('courses');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   
   // Sort courses by trending first, then by rating for static display
   const sortedCourses = courses.sort((a, b) => b.trending - a.trending || b.rating - a.rating);

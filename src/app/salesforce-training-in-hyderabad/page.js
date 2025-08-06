@@ -42,6 +42,11 @@ async function getPageStructuredData() {
 
 export default async function SalesforceTraining() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('salesforce-training-in-hyderabad');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   
   const salesforceFaqs = [
     {
@@ -110,8 +115,7 @@ export default async function SalesforceTraining() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/salesforce.jpg"
+                  <img src={mainImageUrl}
                     alt="Salesforce Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-green-400/30"
                     style={{ aspectRatio: '1200/630' }}

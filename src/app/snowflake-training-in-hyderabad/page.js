@@ -42,6 +42,11 @@ async function getPageStructuredData() {
 export default async function SnowflakeTrainingInHyderabad() {
   const structuredDataJson = await getPageStructuredData();
 
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('snowflake-training-in-hyderabad');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
+
 
   const courseModules = [
     "An overview of Snowflake Platform and its applications in the business",
@@ -157,8 +162,7 @@ export default async function SnowflakeTrainingInHyderabad() {
                 
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/snowflake-training.jpg"
+                  <img src={mainImageUrl}
                     alt="Snowflake Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}

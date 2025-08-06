@@ -61,6 +61,11 @@ async function getPageStructuredData() {
 export default async  function InformaticaMDMTraining() {
   const structuredDataJson = await getPageStructuredData();
 
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('informatica-mdm-training');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
+
   const curriculumTopics = [
     "Informatica MDM Version 10.1 Overview and Architecture",
     "Basic overview of Data Models and Lookups",
@@ -172,8 +177,7 @@ export default async  function InformaticaMDMTraining() {
                 
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/logo.png"
+                  <img src={mainImageUrl}
                     alt="Informatica MDM Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}

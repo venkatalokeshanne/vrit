@@ -48,6 +48,11 @@ async function getPageStructuredData() {
 
 export default async function SAPS4HANASimpleLogisticsTraining() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('sap-s4Hana-simple-logistics-training');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   
   const courseModules = [
     "Introduction to SAP HANA Topics include SAP In-Memory Strategy, Architecture Overview and various views (analytic, attribute, calculation, etc)",
@@ -180,8 +185,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
                 
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/servicenow.jpg"
+                  <img src={mainImageUrl}
                     alt="SAP S/4 HANA Simple Logistics Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}

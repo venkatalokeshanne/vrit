@@ -49,6 +49,11 @@ async function getPageStructuredData() {
 
 export default async function SAPMMOnlineTraining() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('sap-mm-online-training');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   
   const courseModules = [
     "Overview of MM functions in a business setup",
@@ -174,8 +179,7 @@ export default async function SAPMMOnlineTraining() {
                 
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/sap-mm.jpg"
+                  <img src={mainImageUrl}
                     alt="SAP MM Online Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}

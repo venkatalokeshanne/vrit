@@ -94,6 +94,11 @@ async function getPageStructuredData() {
 export default async function SimpleFinanceTrainingInHyderabad() {
   const structuredDataJson = await getPageStructuredData();
 
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('simple-finance-training-in-hyderabad');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
+
   const topicsCovered = [
     "What is S/4 HANA and S/4 HANA System Landscape?",
     "Changes in Basic Settings Configuration in SAP Finance and Controlling?",
@@ -180,8 +185,7 @@ export default async function SimpleFinanceTrainingInHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/s4-hana-finance.jpg"
+                  <img src={mainImageUrl}
                     alt="S/4 HANA Finance Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-blue-400/30"
                     style={{ aspectRatio: '1200/630' }}

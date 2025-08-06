@@ -78,6 +78,11 @@ async function getPageStructuredData() {
 
 export default async function Services() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('services');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -168,8 +173,7 @@ export default async function Services() {
             {/* Online Training Image */}
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-2xl">
-                <img
-                  src="/logo.png"
+                <img src={mainImageUrl}
                   alt="Online Training institutes in Hyderabad"
                   className="w-full rounded-xl shadow-lg"
                 />

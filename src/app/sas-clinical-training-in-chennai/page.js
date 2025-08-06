@@ -147,8 +147,7 @@ export default function SASClinicalTraining() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/sas-clinical.jpg"
+                  <img src={mainImageUrl}
                     alt="SAS Clinical Training Course in Chennai - VR IT Solutions"
                     className="w-full object-cover border-2 border-blue-400/30"
                     style={{ aspectRatio: '1200/630' }}

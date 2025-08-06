@@ -41,6 +41,11 @@ async function getPageStructuredData() {
 
 export default async  function GoogleCloudTrainingInHyderabad() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('google-cloud-training');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   const courseModules = [
     "Getting Started with Google Cloud Platform (GCP)",
     "Manage GCP using various tools",
@@ -127,8 +132,7 @@ export default async  function GoogleCloudTrainingInHyderabad() {
                 
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/google-cloud-training.jpg"
+                  <img src={mainImageUrl}
                     alt="Google Cloud Platform Online Training in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}

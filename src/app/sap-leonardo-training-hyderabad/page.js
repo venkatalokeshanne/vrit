@@ -53,6 +53,11 @@ async function getPageStructuredData() {
 
 export default async function SAPLeonardoTrainingHyderabad() {
   const structuredDataJson = await getPageStructuredData();
+
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('sap-leonardo-training-hyderabad');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   
   const targetAudience = [
     "Executive managers",
@@ -154,8 +159,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src="/sap-leonardo.jpg"
+                  <img src={mainImageUrl}
                     alt="SAP Leonardo Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-purple-400/30"
                     style={{ aspectRatio: '1200/630' }}

@@ -4,8 +4,10 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob').sync;
 
-// Pattern to match all course page.js files
-const COURSE_PAGE_PATTERN = path.join(__dirname, '../vr-it-sol/src/app/**/page.js');
+
+console.log('Current working directory:', process.cwd());
+// Try a relative pattern from project root for better compatibility
+const COURSE_PAGE_PATTERN = 'src/app/**/page.js';
 
 // The code to insert for dynamic mainImage usage
 const MAIN_IMAGE_SNIPPET = `
@@ -22,27 +24,31 @@ function getSlugFromPath(filePath) {
 }
 
 
+
 const files = glob(COURSE_PAGE_PATTERN);
-for (const file of files) {
-  let content = fs.readFileSync(file, 'utf8');
-  const slug = getSlugFromPath(file);
+console.log('Matched files:', files);
 
-  // Only update if not already using mainImageUrl
-  if (!content.includes('mainImageUrl')) {
-    // Insert the snippet after the first await getPageStructuredData() or similar
-    content = content.replace(
-      /(const structuredDataJson = await getPageStructuredData\(\);)/,
-      `$1\n${MAIN_IMAGE_SNIPPET.replace('__SLUG__', slug)}`
-    );
+if (files.length === 0) {
+  console.log('No course page files found!');
+} else {
+  for (const file of files) {
+    let content = fs.readFileSync(file, 'utf8');
+    const slug = getSlugFromPath(file);
 
-    // Replace static image src in hero section
-    content = content.replace(
-      /<img\s+src="[^"]*"/,
-      '<img src={mainImageUrl}"'
-    );
-
-    fs.writeFileSync(file, content, 'utf8');
-    console.log(`Updated: ${file}`);
+    if (!content.includes('mainImageUrl')) {
+      content = content.replace(
+        /(const structuredDataJson = await getPageStructuredData\(\);)/,
+        `$1\n${MAIN_IMAGE_SNIPPET.replace('__SLUG__', slug)}`
+      );
+      content = content.replace(
+        /<img\s+src="[^"]*"/,
+        '<img src={mainImageUrl}'
+      );
+      fs.writeFileSync(file, content, 'utf8');
+      console.log(`Updated: ${file}`);
+    } else {
+      console.log(`Skipped (already updated): ${file}`);
+    }
   }
+  console.log('All course pages updated!');
 }
-console.log('All course pages updated!');
