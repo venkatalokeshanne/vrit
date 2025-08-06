@@ -90,8 +90,12 @@ const sasClinicalOnlineFaqs = [
   }
 ];
 
-export default function SASClinicalTraining() {
-  const structuredDataJson = getPageStructuredData();
+export default async function SASClinicalTraining() {
+  const structuredDataJson = await getPageStructuredData();
+  // Fetch metadata for dynamic hero image
+  const metadata = await getPageMetadata('sas-clinical-training-in-chennai');
+  const mainImageUrl = metadata?.mainImage || '/logo.png';
+
   const courseStructure = [
     "Introduction to SAS and Clinical Trials",
     "DATA step processing",
