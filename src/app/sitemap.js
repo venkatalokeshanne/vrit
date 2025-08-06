@@ -1,4 +1,4 @@
-import { getAllCoursesMetadata } from '../../../lib/sanity';
+import { getAllCoursesMetadata } from '../lib/sanity';
 
 export default async function sitemap() {
   const baseUrl = 'https://www.vritsol.com';
