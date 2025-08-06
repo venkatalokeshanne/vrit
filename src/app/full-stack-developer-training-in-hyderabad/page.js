@@ -183,7 +183,7 @@ export default async  function FullStackDeveloperTrainingInHyderabad() {
                 
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img src={mainImageUrl}"
+                  <img src={mainImageUrl}
                     alt="Full Stack Developer Training Course in Hyderabad - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}
