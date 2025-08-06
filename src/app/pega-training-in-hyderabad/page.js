@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -250,16 +251,13 @@ export default function PegaTraining() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <ArrowRight className="w-5 h-5" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-rose-400/60 hover:bg-rose-400/10 text-rose-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-rose-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <Download className="w-5 h-5" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="Pega Training in Hyderabad"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showCallNow={false}
+                  showJoinNow={false}
+                />
               </div>
             </section>
             

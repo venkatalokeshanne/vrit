@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -24,7 +25,15 @@ import {
   Phone,
   Globe,
   Mail,
-  Briefcase
+  Briefcase,
+  Database,
+  Shield,
+  Server,
+  Network,
+  Layers,
+  Package,
+  Truck,
+  Brain
 } from 'lucide-react';
 
 export const metadata = getPageMetadata('sap-sd-online-training-in-hyderabad');
@@ -272,16 +281,70 @@ export default function SAPSDOnlineTraining() {
                   Our trainers are highly qualified and experienced SAP SD consultants providing high quality online training in Banglore. The Certified Expert Group has created our content and curriculum of SAP SD based on current industry needs. This allows the students to be industry ready SAP professionals, where they can handle most realtime SAP SD scenarios.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg hover:scale-110 shadow-lg hover:shadow-xl">
-                    <ArrowRight className="w-5 h-5 animate-pulse" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-teal-400/60 hover:bg-teal-400/10 text-teal-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg shadow-lg hover:shadow-teal-400/20 hover:scale-105">
-                    <Download className="w-5 h-5 animate-bounce" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="SAP SD Online Training in Hyderabad"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showCallNow={false}
+                  showJoinNow={false}
+                />
+              </div>
+            </section>
+
+            {/* Other SAP Courses */}
+            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+                Other SAP Courses
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="/sap-basis-online-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Database className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP Basis</span>
+                  </div>
+                </a>
+                <a href="/sap-leonardo-training-hyderabad" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Brain className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP Leonardo</span>
+                  </div>
+                </a>
+                <a href="/sap-fico-online-training-in-hyderabad" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <TrendingUp className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP FICO</span>
+                  </div>
+                </a>
+                <a href="/sap-mm-online-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Package className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP MM</span>
+                  </div>
+                </a>
+                <a href="/sap-hana-admin-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Server className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP HANA</span>
+                  </div>
+                </a>
+                <a href="/sap-ewm-online-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Layers className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP EWM</span>
+                  </div>
+                </a>
+                <a href="/sap-security-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Shield className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP Security</span>
+                  </div>
+                </a>
+                <a href="/sap-s4Hana-simple-logistics-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Truck className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">S/4HANA Logistics</span>
+                  </div>
+                </a>
               </div>
             </section>
             

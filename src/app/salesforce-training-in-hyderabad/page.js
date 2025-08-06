@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -13,9 +14,7 @@ import {
   Rocket,
   Clock,
   Calendar,
-  Download,
   CheckCircle,
-  ArrowRight,
   FileText,
   Settings,
   Code,
@@ -193,16 +192,13 @@ export default function SalesforceTraining() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <ArrowRight className="w-5 h-5" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-teal-400/60 hover:bg-teal-400/10 text-teal-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <Download className="w-5 h-5" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="Salesforce Training in Hyderabad"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showCallNow={false}
+                  showJoinNow={false}
+                />
               </div>
             </section>
             

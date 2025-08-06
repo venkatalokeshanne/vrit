@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -313,16 +314,13 @@ export default function WorkdayTraining() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg hover:scale-110 shadow-lg hover:shadow-xl">
-                    <ArrowRight className="w-5 h-5 animate-pulse" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-teal-400/60 hover:bg-teal-400/10 text-teal-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg shadow-lg hover:shadow-teal-400/20 hover:scale-105">
-                    <Download className="w-5 h-5 animate-bounce" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="Workday Training in Hyderabad"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showCallNow={false}
+                  showJoinNow={false}
+                />
               </div>
             </section>
             
@@ -518,16 +516,16 @@ export default function WorkdayTraining() {
                     So, what are you waiting for? Join now to make Workday as your career and get a highly paid job!
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg shadow-xl hover:shadow-orange-500/30 hover:scale-105">
-                    <ArrowRight className="w-5 h-5 animate-pulse" />
-                    Join Now
-                  </button>
-                  <button className="border border-pink-400/60 hover:bg-pink-400/10 text-pink-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-pink-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg shadow-lg hover:shadow-pink-400/20">
-                    <Phone className="w-5 h-5 animate-bounce" />
-                    Call +91-9032734343
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="Workday Training in Hyderabad"
+                  phoneNumber="+91-9032734343"
+                  showEnquireNow={false}
+                  showDownload={false}
+                  showCallNow={true}
+                  showJoinNow={true}
+                  layout="horizontal"
+                  className="flex flex-col sm:flex-row gap-4 justify-center"
+                />
               </div>
             </section>
 

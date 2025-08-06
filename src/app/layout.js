@@ -2,7 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollingCourses from './components/ScrollingCourses';
 import RichSnippetsManager from '../utils/richSnippets';
+import { getPageMetadata } from '../utils/metadata';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,83 +16,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: {
-    default: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
-    template: '%s | VR IT Solutions'
-  },
-  description: 'Leading software training institute in Hyderabad offering 20+ technology courses with 100% placement assistance. Expert trainers, practical learning, online & classroom training.',
-  keywords: 'software training institute hyderabad, IT training, placement assistance, technology courses, VR IT Solutions',
-  authors: [{ name: 'VR IT Solutions' }],
-  creator: 'VR IT Solutions',
-  publisher: 'VR IT Solutions',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://www.vritsol.com'),
-  openGraph: {
-    title: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
-    description: 'Leading software training institute in Hyderabad offering 20+ technology courses with 100% placement assistance.',
-    url: 'https://www.vritsol.com',
-    siteName: 'VR IT Solutions',
-    type: 'website',
-    locale: 'en_US',
-    images: [
-      {
-        url: '/logo.png',
-        width: 800,
-        height: 600,
-        alt: 'VR IT Solutions - Best Software Training Institute in Hyderabad',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
-    description: 'Leading software training institute in Hyderabad offering 20+ technology courses with 100% placement assistance.',
-    site: '@vritsolutions',
-    creator: '@vritsolutions',
-    images: ['/logo.png'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
-  },
-  manifest: '/site.webmanifest',
-  category: 'Education',
-  classification: 'Software Training Institute',
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
-  },
-  alternates: {
-    canonical: 'https://www.vritsol.com',
-    languages: {
-      'en-US': 'https://www.vritsol.com',
-    },
-  },
-};
+// Generate metadata dynamically for the homepage
+export const metadata = getPageMetadata('index');
 
 export default function RootLayout({ children }) {
   return (
@@ -147,6 +74,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
+        <ScrollingCourses />
         <Footer />
       </body>
     </html>

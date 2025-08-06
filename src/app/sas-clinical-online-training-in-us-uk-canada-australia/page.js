@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -31,7 +33,6 @@ import {
   BarChart,
   Activity,
   Heart,
-  Link
 } from 'lucide-react';
 
 export const metadata = getPageMetadata('sas-clinical-online-training-in-us-uk-canada-australia');
@@ -122,8 +123,8 @@ export default function SASClinicalTraining() {
           __html: JSON.stringify({
             "@context": "http://schema.org",
             "@type": "Organization",
-            "name": "Best SAS Clinical Training in US | SAS Clinical Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/sas-clinical-training-in-us",
+            "name": "Best SAS Clinical Online Training in US, UK, Canada, Australia | VR IT Solutions",
+            "url": "https://vrit-ten.vercel.app/sas-clinical-online-training-in-us-uk-canada-australia",
             "logo": "https://vrit-ten.vercel.app/logo.png",
             "sameAs": [
               "https://www.facebook.com/vritsolutions/",
@@ -134,10 +135,10 @@ export default function SASClinicalTraining() {
               {
                 "type": "PostalAddress",
                 "addressCountry": "INDIA",
-                "addressLocality": "US",
+                "addressLocality": "Hyderabad",
                 "addressRegion": "Telangana",
                 "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, US Telangana."
+                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
               }
             ],
             "openingHours": [
@@ -163,15 +164,15 @@ export default function SASClinicalTraining() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Course",
-            "name": "SAS Clinical Training in US",
-            "description": "Comprehensive 120-day SAS Clinical training covering clinical trial data analysis, CDISC standards, and statistical programming with 100% placement assistance",
+            "name": "SAS Clinical Online Training in US, UK, Canada, Australia",
+            "description": "Comprehensive 120-day SAS Clinical online training covering clinical trial data analysis, CDISC standards, and statistical programming with 100% placement assistance for international students",
             "provider": {
               "@type": "Organization",
               "name": "VR IT Solutions",
               "sameAs": "https://vrit-ten.vercel.app"
             },
             "educationalCredentialAwarded": "SAS Clinical Certification",
-            "courseMode": ["Online", "Classroom"],
+            "courseMode": ["Online", "Virtual Classroom"],
             "duration": "P120D",
             "offers": {
               "@type": "Offer",
@@ -195,12 +196,12 @@ export default function SASClinicalTraining() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             
-            {/* Hero Section - SAS Clinical Training in US */}
+            {/* Hero Section - SAS Clinical Online Training In US */}
             <section className="bg-gradient-to-br from-blue-500/15 via-indigo-600/20 to-purple-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-400/30 shadow-2xl shadow-blue-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                    SAS Clinical Training in US
+                    SAS Clinical Online Training In US
                   </span>
                 </h1>
                 
@@ -208,7 +209,7 @@ export default function SASClinicalTraining() {
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
                   <img
                     src="/sas-clinical.jpg"
-                    alt="SAS Clinical Training Course in US - VR IT Solutions"
+                    alt="SAS Clinical Online Training in US, UK, Canada, Australia - VR IT Solutions"
                     className="w-full object-cover border-2 border-blue-400/30"
                     style={{ aspectRatio: '1200/630' }}
                   />
@@ -228,24 +229,24 @@ export default function SASClinicalTraining() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <ArrowRight className="w-5 h-5" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-indigo-400/60 hover:bg-indigo-400/10 text-indigo-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-indigo-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <Download className="w-5 h-5" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="SAS Clinical"
+                  phoneNumber="+91-9032734343"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showJoinNow={false}
+                  showCallNow={false}
+                  layout="horizontal"
+                  size="lg"
+                />
               </div>
             </section>
-            
+
             {/* Brief about Clinical SAS */}
             <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Brief about Clinical SAS
-              </h2>
+              </h4>
               <div className="space-y-6">
                 <div className="bg-cyan-500/10 rounded-xl p-6 border border-cyan-400/20">
                   <p className="text-cyan-100 leading-relaxed">
@@ -262,9 +263,9 @@ export default function SASClinicalTraining() {
 
             {/* Why to do this course? */}
             <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Why to do this course?
-              </h2>
+              </h4>
               <div className="space-y-6">
                 <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-400/20">
                   <p className="text-emerald-100 leading-relaxed">
@@ -281,9 +282,9 @@ export default function SASClinicalTraining() {
 
             {/* Who can do this course? */}
             <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Who can do this course?
-              </h2>
+              </h4>
               <div className="grid gap-4">
                 {whoCanDo.map((candidate, index) => (
                   <div key={index} className="flex items-start gap-3 p-4 bg-amber-500/10 rounded-xl border border-amber-400/20">
@@ -296,9 +297,9 @@ export default function SASClinicalTraining() {
 
             {/* What are the pre-requisites for this course? */}
             <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 What are the pre-requisites for this course?
-              </h2>
+              </h4>
               <div className="space-y-6">
                 <div className="bg-rose-500/10 rounded-xl p-6 border border-rose-400/20">
                   <p className="text-rose-100 leading-relaxed">
@@ -307,7 +308,7 @@ export default function SASClinicalTraining() {
                 </div>
                 <div className="bg-pink-500/10 rounded-xl p-6 border border-pink-400/20">
                   <p className="text-pink-100 leading-relaxed">
-                    VR IT Solutions is one of the best sas clinical training in us to offer the best and balanced training with expert instructors on practical implementation and real time case studies in Clinical SAS that is well suited to help you embark on the right path of success and Job readiness.
+                    VR IT Solutions is one of the best sas clinical training in US to offer the best and balanced training with expert instructors on practical implementation and real time case studies in Clinical SAS that is well suited to help you embark on the right path of success and Job readiness.
                   </p>
                 </div>
               </div>
@@ -315,9 +316,9 @@ export default function SASClinicalTraining() {
 
             {/* Course Structure */}
             <section className="bg-gradient-to-br from-purple-600/15 via-violet-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Course Structure:
-              </h2>
+              </h4>
               <div className="grid gap-4 mb-6">
                 {courseStructure.map((topic, index) => (
                   <div key={index} className="flex items-start gap-3 p-4 bg-purple-500/10 rounded-xl border border-purple-400/20">
@@ -335,9 +336,9 @@ export default function SASClinicalTraining() {
 
             {/* Industry relevant curriculum */}
             <section className="bg-gradient-to-br from-teal-600/15 via-cyan-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 shadow-xl shadow-teal-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Industry relevant curriculum
-              </h2>
+              </h4>
               <div className="bg-teal-500/10 rounded-xl p-6 border border-teal-400/20">
                 <p className="text-teal-100 leading-relaxed">
                   You learn the latest from us! Our curriculum is constantly updated once in 6 months to keep pace with the emerging technologies in this area, so you are always ahead of others.
@@ -347,9 +348,9 @@ export default function SASClinicalTraining() {
 
             {/* How will I execute the Practicals? */}
             <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 How will I execute the Practicals?
-              </h2>
+              </h4>
               <div className="bg-violet-500/10 rounded-xl p-6 border border-violet-400/20">
                 <p className="text-violet-100 leading-relaxed">
                   In every days class ample data and tasks will be given to sharpen your skills on SAS University edition.
@@ -359,9 +360,9 @@ export default function SASClinicalTraining() {
 
             {/* Annual Packages */}
             <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Annual Packages
-              </h2>
+              </h4>
               <div className="space-y-6">
                 <div className="bg-green-500/10 rounded-xl p-6 border border-green-400/20">
                   <p className="text-green-100 leading-relaxed">
@@ -380,9 +381,9 @@ export default function SASClinicalTraining() {
 
             {/* Companies Hiring */}
             <section className="bg-gradient-to-br from-indigo-600/15 via-blue-600/20 to-cyan-600/15 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Companies Hiring
-              </h2>
+              </h4>
               <div className="space-y-6">
                 <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl shadow-xl">
                   <img
@@ -402,9 +403,9 @@ export default function SASClinicalTraining() {
             {/* Training Features */}
             <div className="grid md:grid-cols-2 gap-8">
               <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
-                <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
+                <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Training Modes
-                </h2>
+                </h4>
                 <div className="space-y-3">
                   {trainingModes.map((mode, index) => (
                     <div key={index} className="flex items-start gap-3 p-3 bg-slate-500/10 rounded-xl border border-slate-400/20">
@@ -416,9 +417,9 @@ export default function SASClinicalTraining() {
               </section>
 
               <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
-                <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
+                <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Why to choose VR IT solutions?
-                </h2>
+                </h4>
                 <div className="space-y-3">
                   {whyChooseUs.map((feature, index) => (
                     <div key={index} className="flex items-start gap-3 p-3 bg-emerald-500/10 rounded-xl border border-emerald-400/20">
@@ -432,13 +433,6 @@ export default function SASClinicalTraining() {
 
           </div>
 
-          {/* FAQ Section */}
-          <div className="lg:col-span-2 mb-8">
-            <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
-              <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
-            </div>
-          </div>
-
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
@@ -447,50 +441,59 @@ export default function SASClinicalTraining() {
           </div>
 
         </div>
-      </div>
 
-      {/* Our Locations Section */}
-      <section className="bg-gradient-to-br from-indigo-900/30 via-purple-800/20 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-          Our SAS Clinical Training Locations
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <Link href="/sas-clinical-training-in-hyderabad" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Hyderabad</div>
-          </Link>
-          <Link href="/sas-clinical-training-in-bangalore" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Bangalore</div>
-          </Link>
-          <Link href="/sas-clinical-training-in-chennai" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Chennai</div>
-          </Link>
-          <Link href="/sas-clinical-training-in-pune" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Pune</div>
-          </Link>
-          <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 rounded-xl p-4 border-2 border-cyan-400/50 text-center">
-            <div className="text-cyan-200 font-bold text-sm">US/UK/Canada/Australia</div>
-            <div className="text-xs text-cyan-300 mt-1">Current Location</div>
+        {/* FAQ Section - Full Width */}
+        <div className="mt-12">
+          <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+            <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
           </div>
         </div>
-        <div className="text-center mt-6">
-          <p className="text-indigo-200">Choose your preferred location for SAS Clinical training</p>
+
+        {/* Our Locations Section - Full Width */}
+        <div className="mt-12">
+          <section className="bg-gradient-to-br from-indigo-900/30 via-purple-800/20 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+              Our SAS Clinical Training Locations
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              <Link href="/sas-clinical-online-training-in-hyderabad" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Hyderabad</div>
+              </Link>
+              <Link href="/sas-clinical-training-in-bangalore" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Bangalore</div>
+              </Link>
+              <Link href="/sas-clinical-training-in-chennai" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Chennai</div>
+              </Link>
+              <Link href="/sas-clinical-training-in-pune" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Pune</div>
+              </Link>
+              <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 rounded-xl p-4 border-2 border-cyan-400/50 text-center">
+                <div className="text-cyan-200 font-bold text-sm">US/UK/Canada/Australia</div>
+                <div className="text-xs text-cyan-300 mt-1">Current Location</div>
+              </div>
+            </div>
+            <div className="text-center mt-6">
+              <p className="text-indigo-200">Choose your preferred location for SAS Clinical training</p>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sas-clinical-online-training-in-us'))
+          __html: JSON.stringify(getStructuredData('sas-clinical-online-training-in-us-uk-canada-australia'))
         }}
       />
       
       {/* Review Structured Data */}
-      {getReviewStructuredData('sas-clinical-online-training-in-us') && (
+      {getReviewStructuredData('sas-clinical-online-training-in-us-uk-canada-australia') && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('sas-clinical-online-training-in-us'))
+            __html: JSON.stringify(getReviewStructuredData('sas-clinical-online-training-in-us-uk-canada-australia'))
           }}
         />
       )}

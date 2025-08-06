@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 
@@ -12,7 +12,7 @@ export default function Header() {
     { name: 'About Us', href: '/aboutus' },
     { name: 'Courses', href: '/courses' },
     { name: 'Services', href: '/services' },
-    { name: 'Blog', href: '#blog' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contactus' },
   ];
 

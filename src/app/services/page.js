@@ -19,6 +19,7 @@ import {
   Rocket
 } from 'lucide-react';
 import FAQ from '../components/FAQ';
+import { EnquireNowButton, CallNowButton } from '../components/CourseActionButtons';
 
 // FAQ Data for Services Page
 const servicesFaqs = [
@@ -136,15 +137,20 @@ export default function Services() {
                   </p>
                 </div>
                 
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105">
-                    <Play className="w-5 h-5" />
-                    Get Started Now
-                  </button>
-                  <button className="border border-blue-400/60 hover:bg-blue-400/10 text-blue-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-300 transition-all duration-300 flex items-center justify-center gap-2">
-                    <Phone className="w-5 h-5" />
-                    Call +91-9032734343
-                  </button>
+                <div className="mt-8">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <EnquireNowButton 
+                      className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                      courseName="online training"
+                    >
+                      Enquire Now
+                    </EnquireNowButton>
+                    <CallNowButton 
+                      className="border border-blue-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                    >
+                      Call Now
+                    </CallNowButton>
+                  </div>
                 </div>
               </div>
             </div>
@@ -238,15 +244,20 @@ export default function Services() {
                   </div>
                 </div>
                 
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105">
-                    <BookOpen className="w-5 h-5" />
-                    Join Classroom
-                  </button>
-                  <button className="border border-purple-400/60 hover:bg-purple-400/10 text-purple-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-purple-300 transition-all duration-300 flex items-center justify-center gap-2">
-                    <MapPin className="w-5 h-5" />
-                    Visit Center
-                  </button>
+                <div className="mt-8">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <EnquireNowButton 
+                      className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                      courseName="classroom training"
+                    >
+                      Enquire Now
+                    </EnquireNowButton>
+                    <CallNowButton 
+                      className="border border-purple-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-purple-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                    >
+                      Call Now
+                    </CallNowButton>
+                  </div>
                 </div>
               </div>
             </div>
@@ -301,15 +312,22 @@ export default function Services() {
                   </div>
                 </div>
                 
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <button className="bg-gradient-to-r from-teal-500 to-green-500 hover:from-teal-600 hover:to-green-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105">
-                    <Zap className="w-5 h-5" />
-                    Get Job Support
-                  </button>
-                  <button className="border border-teal-400/60 hover:bg-teal-400/10 text-teal-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-300 transition-all duration-300 flex items-center justify-center gap-2">
-                    <Star className="w-5 h-5" />
-                    Success Stories
-                  </button>
+                <div className="mt-8">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <EnquireNowButton 
+                      className="bg-gradient-to-r from-teal-600 to-green-600 hover:from-teal-700 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                      courseName="job support"
+                    >
+                      <ArrowRight className="w-5 h-5" />
+                      Enquire Now
+                    </EnquireNowButton>
+                    <CallNowButton 
+                      className="border border-teal-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                    >
+                      <Phone className="w-5 h-5" />
+                      Call Now
+                    </CallNowButton>
+                  </div>
                 </div>
               </div>
             </div>
@@ -359,21 +377,18 @@ export default function Services() {
               Join thousands of professionals who have advanced their careers with VR IT Solutions. Get started with our comprehensive training and job support services today!
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a
-                href="tel:+919032734343"
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <EnquireNowButton 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                courseName="VR IT Solutions services"
               >
-                <Phone className="w-5 h-5" />
-                Call +91-9032734343
-              </a>
-              <a
-                href="mailto:info@vritsol.com"
-                className="border border-blue-400/60 hover:bg-blue-400/10 text-blue-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-300 transition-all duration-300 flex items-center justify-center gap-2"
+                Get Started Today
+              </EnquireNowButton>
+              <CallNowButton 
+                className="border border-blue-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-blue-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg"
               >
-                <Mail className="w-5 h-5" />
-                Email Your Query
-              </a>
+                Call Now
+              </CallNowButton>
             </div>
           </div>
         </div>

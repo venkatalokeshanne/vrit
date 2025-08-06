@@ -131,28 +131,24 @@ export class RichSnippetsManager {
         name: "Data Science Training",
         description: "Complete Data Science course with Python, Machine Learning, and AI",
         url: "/data-science-training-in-hyderabad",
-        price: "₹25,000",
         duration: "3 months"
       },
       {
         name: "Salesforce Training", 
         description: "Salesforce Admin and Developer certification training",
         url: "/salesforce-training-in-hyderabad",
-        price: "₹20,000",
         duration: "2 months"
       },
       {
         name: "Python Training",
         description: "Python programming from basics to advanced level",
         url: "/python-online-training",
-        price: "₹15,000", 
         duration: "2 months"
       },
       {
         name: "ServiceNow Training",
         description: "ServiceNow platform training with hands-on projects",
         url: "/servicenow-training-in-hyderabad",
-        price: "₹30,000",
         duration: "3 months"
       }
     ];
@@ -172,21 +168,6 @@ export class RichSnippetsManager {
           "url": "https://vritsol.com/images/vritlogo.png"
         }
       },
-      "offers": [
-        {
-          "@type": "Offer",
-          "price": course.price,
-          "priceCurrency": "INR",
-          "availability": "https://schema.org/InStock",
-          "category": "Education",
-          "validFrom": new Date().toISOString().split('T')[0],
-          "priceValidUntil": new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-          "seller": {
-            "@type": "Organization",
-            "name": "VR IT Solutions"
-          }
-        }
-      ],
       "educationalLevel": "Beginner to Advanced",
       "timeRequired": course.duration,
       "inLanguage": ["en", "hi"],

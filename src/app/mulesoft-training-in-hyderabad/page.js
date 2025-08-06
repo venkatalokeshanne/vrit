@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -279,16 +280,13 @@ export default function MuleSoftTraining() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <ArrowRight className="w-5 h-5" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-red-400/60 hover:bg-red-400/10 text-red-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-red-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <Download className="w-5 h-5" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="MuleSoft Training in Hyderabad"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showCallNow={false}
+                  showJoinNow={false}
+                />
               </div>
             </section>
             

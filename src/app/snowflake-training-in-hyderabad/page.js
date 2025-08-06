@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -235,16 +236,13 @@ export default function SnowflakeTraining() {
                   <span className="text-orange-400 font-bold">VRIT Solutions</span> is recognized for providing Realtime Snowflake Training in Hyderabad / Datalake Online Training throughout world.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg hover:scale-110 shadow-lg hover:shadow-xl">
-                    <ArrowRight className="w-5 h-5 animate-pulse" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-teal-400/60 hover:bg-teal-400/10 text-teal-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg shadow-lg hover:shadow-teal-400/20 hover:scale-105">
-                    <Download className="w-5 h-5 animate-bounce" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="Snowflake Training in Hyderabad"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showCallNow={false}
+                  showJoinNow={false}
+                />
               </div>
             </section>
             
@@ -323,13 +321,11 @@ export default function SnowflakeTraining() {
               </div>
             </section>
 
-          </div>
-
-          {/* FAQ Section */}
-          <div className="lg:col-span-2 mb-8">
-            <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+            {/* FAQ Section */}
+            <section className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
               <FAQ faqs={snowflakeFaqs} theme="default" />
-            </div>
+            </section>
+
           </div>
 
           {/* Sidebar */}

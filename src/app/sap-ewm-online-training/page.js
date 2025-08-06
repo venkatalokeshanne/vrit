@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -33,7 +34,8 @@ import {
   Layers,
   Warehouse,
   Package,
-  Truck
+  Truck,
+  Brain
 } from 'lucide-react';
 
 export const metadata = getPageMetadata('sap-ewm-online-training');
@@ -271,16 +273,70 @@ export default function SAPEWMTraining() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <ArrowRight className="w-5 h-5" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-orange-400/60 hover:bg-orange-400/10 text-orange-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-orange-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <Download className="w-5 h-5" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="SAP EWM Online Training"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showCallNow={false}
+                  showJoinNow={false}
+                />
+              </div>
+            </section>
+
+            {/* Other SAP Courses */}
+            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+                Other SAP Courses
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="/sap-basis-online-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Database className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP Basis</span>
+                  </div>
+                </a>
+                <a href="/sap-leonardo-training-hyderabad" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Brain className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP Leonardo</span>
+                  </div>
+                </a>
+                <a href="/sap-fico-online-training-in-hyderabad" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <TrendingUp className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP FICO</span>
+                  </div>
+                </a>
+                <a href="/sap-sd-online-training-in-hyderabad" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Users className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP SD</span>
+                  </div>
+                </a>
+                <a href="/sap-mm-online-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Package className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP MM</span>
+                  </div>
+                </a>
+                <a href="/sap-hana-admin-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Server className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP HANA</span>
+                  </div>
+                </a>
+                <a href="/sap-security-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Shield className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">SAP Security</span>
+                  </div>
+                </a>
+                <a href="/sap-s4Hana-simple-logistics-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
+                    <Truck className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
+                    <span className="text-sm font-medium">S/4HANA Logistics</span>
+                  </div>
+                </a>
               </div>
             </section>
             
@@ -437,9 +493,6 @@ export default function SAPEWMTraining() {
               </section>
             </div>
 
-          </div>
-
-
             {/* FAQ Section */}
             <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
               <FAQ faqs={sapEWMFaqs} theme="sap" />
@@ -455,6 +508,8 @@ export default function SAPEWMTraining() {
           </div>
 
         </div>
+      </div>
+      
       </div>
 
       {/* JSON-LD Structured Data for SEO */}

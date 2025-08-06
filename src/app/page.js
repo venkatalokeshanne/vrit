@@ -1,3 +1,5 @@
+'use client';
+
 import { 
   Phone,
   Star, 
@@ -32,10 +34,6 @@ import FAQRichSnippets from './components/FAQRichSnippets';
 import BreadcrumbRichSnippets from './components/BreadcrumbRichSnippets';
 import FAQ from './components/FAQ';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../utils/metadata';
-
-export const metadata = getPageMetadata('index');
-
-
 
 export default function Home() {
   const courses = [
@@ -185,30 +183,41 @@ export default function Home() {
                   label: 'Online Training', 
                   icon: Globe, 
                   gradient: 'from-blue-500 to-blue-600',
-                  description: 'Learn from anywhere with live interactive sessions'
+                  description: 'Learn from anywhere with live interactive sessions',
+                  action: 'redirect'
                 },
                 { 
                   label: 'Classroom Training', 
                   icon: Users, 
                   gradient: 'from-teal-500 to-teal-600',
-                  description: 'Face-to-face learning with hands-on practice'
+                  description: 'Face-to-face learning with hands-on practice',
+                  action: 'redirect'
                 },
                 { 
                   label: 'Job Support', 
                   icon: Target, 
                   gradient: 'from-orange-500 to-orange-600',
-                  description: '24/7 support for your career success'
+                  description: '24/7 support for your career success',
+                  action: 'redirect'
                 },
                 { 
                   label: 'Call Now', 
                   icon: Phone, 
                   gradient: 'from-orange-600 to-red-500',
-                  description: 'Get instant consultation and course details'
+                  description: 'Get instant consultation and course details',
+                  action: 'call'
                 }
               ].map((btn, index) => (
                 <div key={btn.label} className="text-center flex flex-col items-center">
                   <button
-                    className={`group relative bg-gradient-to-r ${btn.gradient} text-white px-4 md:px-6 py-2 md:py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden text-sm`}
+                    onClick={() => {
+                      if (btn.action === 'redirect') {
+                        window.location.href = '/services';
+                      } else if (btn.action === 'call') {
+                        window.location.href = 'tel:+919032734343';
+                      }
+                    }}
+                    className={`group relative bg-gradient-to-r ${btn.gradient} text-white px-4 md:px-6 py-2 md:py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden text-sm cursor-pointer`}
                   >
                     <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                     <div className="relative flex items-center space-x-2">

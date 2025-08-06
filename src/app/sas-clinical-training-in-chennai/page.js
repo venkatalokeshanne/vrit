@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -31,7 +33,6 @@ import {
   BarChart,
   Activity,
   Heart,
-  Link
 } from 'lucide-react';
 
 export const metadata = getPageMetadata('sas-clinical-training-in-chennai');
@@ -135,9 +136,9 @@ export default function SASClinicalTraining() {
                 "type": "PostalAddress",
                 "addressCountry": "INDIA",
                 "addressLocality": "Chennai",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Chennai Telangana."
+                "addressRegion": "Tamil Nadu",
+                "postalCode": "600001",
+                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Chennai Tamil Nadu."
               }
             ],
             "openingHours": [
@@ -195,12 +196,12 @@ export default function SASClinicalTraining() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             
-            {/* Hero Section - SAS Clinical Training in Chennai */}
+            {/* Hero Section - SAS Clinical Training In Chennai */}
             <section className="bg-gradient-to-br from-blue-500/15 via-indigo-600/20 to-purple-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-400/30 shadow-2xl shadow-blue-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                    SAS Clinical Training in Chennai
+                    SAS Clinical Training In Chennai
                   </span>
                 </h1>
                 
@@ -228,172 +229,138 @@ export default function SASClinicalTraining() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <ArrowRight className="w-5 h-5" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-indigo-400/60 hover:bg-indigo-400/10 text-indigo-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-indigo-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <Download className="w-5 h-5" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="SAS Clinical"
+                  phoneNumber="+91-9032734343"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showJoinNow={false}
+                  showCallNow={false}
+                  layout="horizontal"
+                  size="lg"
+                />
               </div>
             </section>
-            
-            {/* Brief about Clinical SAS */}
+
+            {/* SAS Clinical Online Training In Chennai */}
             <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Brief about Clinical SAS
+                SAS Clinical Online Training In Chennai
               </h2>
               <div className="space-y-6">
                 <div className="bg-cyan-500/10 rounded-xl p-6 border border-cyan-400/20">
                   <p className="text-cyan-100 leading-relaxed">
-                    SAS is widely used in clinical trial data analysis in pharmaceutical, biotech and clinical research companies. SAS programmers play an important role in clinical trial data analysis. In addition to doctors and clinicians who collect clinical trial data, the group conducting data analysis includes statisticians, clinical data managers (COMs) and SAS programmers. Statisticians provide the ideas and methods of the data analysis, clinical data managers manage the collected data and control the data quality.
+                    This project is focused on educating programmers in Pharmaceutical or Contract Research Organizations. VR IT Solutions is of the best sas clinical training in chennai we are providing the scenario based training with practical examples.
                   </p>
                 </div>
                 <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-400/20">
                   <p className="text-blue-100 leading-relaxed">
-                    In between, SAS programmers implement the analysis methods on the collected data and provide the study summary tables, data listing and graphs to the statisticians and/or clinicians to write clinical study report. SAS programmers work closely with statisticians and data managers. They provide the link between raw data and the analysis.VR IT solutions offerd By SAS clinical online trainng in Chennai.
+                    Each session in this training will be followed by solving examples and summarizing contents covered and trainees will be given actual Pharmaceutical data and exercise to work on. These assignments will be evaluated and graded for their improvement and perfection of tasks
+                  </p>
+                </div>
+                <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
+                  <p className="text-indigo-100 leading-relaxed">
+                    At the end of project, professional resume will be created and mock interviews will be conducted
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Why to do this course? */}
+            {/* Sas Clinical Programmer Training in Chennai */}
             <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Why to do this course?
-              </h2>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
+                Sas Clinical Programmer Training in Chennai
+              </h3>
               <div className="space-y-6">
                 <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-400/20">
                   <p className="text-emerald-100 leading-relaxed">
-                    In the drug development industry, SAS plays an important and essential role in the research and development of drugs, diagnostics, and medical devices. Familiarity with SAS clinical Training programming skills can lead to a challenging and rewarding career that also positively impacts and transforms patients' lives.
+                    Our training, in real time scenarios, our courses the contents, which will start like this, it will we will go and discuss about the SAS basics then we will discuss say these are all real time scenario is working as a sas clinical research associate he will go and visit the trials visit the sites and he will verify how these trials are conducting in case any disturbances in case any problems if he sees then he will mention in there if he will report.those are really matters a lot. Why? Because we will develop one domain called protocol deviation. it's the kind of thing like it's at once.
                   </p>
                 </div>
                 <div className="bg-teal-500/10 rounded-xl p-6 border border-teal-400/20">
                   <p className="text-teal-100 leading-relaxed">
-                    VR IT Solutions is one of the software training institute in Chennai to offer sas clinical training well focused and career-oriented training program in Clinical SAS.
+                    I'm just discussing about that role what he is going to do the CRA, very familiar with his role. Why because you as a SAS programmer, sometimes he says Well, okay, I'm coming to the importing, exporting, how we are going to take the data and what are the things really important for us that is really sophisticated with the different statements procedures functions, we are going to explain you in details with an example.we are here whatever we included, once the basis has been completed, then we will move to the project.
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Who can do this course? */}
+            {/* SDTM Project Training In Chennai */}
             <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Who can do this course?
+                SDTM Project Training In Chennai
               </h2>
-              <div className="grid gap-4">
-                {whoCanDo.map((candidate, index) => (
-                  <div key={index} className="flex items-start gap-3 p-4 bg-amber-500/10 rounded-xl border border-amber-400/20">
-                    <Users className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
-                    <p className="text-amber-100">{candidate}</p>
-                  </div>
-                ))}
+              <div className="space-y-6">
+                <div className="bg-amber-500/10 rounded-xl p-6 border border-amber-400/20">
+                  <p className="text-amber-100 leading-relaxed">
+                    This project is going to give you an idea about the phases clinical research process, what are the phases we are following right now and the statistical analysis based on the statistical analysis plan, we will get to know how to do the programming part. And coming to the what are the standards we are using right now, to submit that's really matters a lot for us In the sas clinical different kinds of domains, what domains how our data is going to be fitted into the domain. So that we can access very easily we can standardize the things and what are the specifications? What are the requirement documents we are going to use sas clinical. And another standard is the atom standard.
+                  </p>
+                </div>
+                <div className="bg-yellow-500/10 rounded-xl p-6 border border-yellow-400/20">
+                  <p className="text-yellow-100 leading-relaxed">
+                    I'm going to explain you with the real time examples. we will do how to collect the data is also really matters a lot what type of data we are collecting based on the data after collecting the data, how we are going to collect the data here earlier we had used it the paper base now, everything got changed and we are collecting in the EDC system, EDC system is nothing but an electronic data capturing system using this system. Anybody has opened any Google account as of now. Anyone Yeah, we have an open Google account right. we are going to analyze the thing based on our data, if data is there, we can make different kinds of decisions.
+                  </p>
+                </div>
               </div>
             </section>
 
-            {/* What are the pre-requisites for this course? */}
+            {/* Clinical SAS Training in Chennai */}
             <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                What are the pre-requisites for this course?
-              </h2>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
+                Clinical SAS Training in Chennai
+              </h3>
               <div className="space-y-6">
                 <div className="bg-rose-500/10 rounded-xl p-6 border border-rose-400/20">
                   <p className="text-rose-100 leading-relaxed">
-                    VR IT solutions haven't prescribed any specific pre-requisites and this course can be taken up by anyone with little or no programming experience.
-                  </p>
-                </div>
-                <div className="bg-pink-500/10 rounded-xl p-6 border border-pink-400/20">
-                  <p className="text-pink-100 leading-relaxed">
-                    VR IT Solutions is one of the best sas clinical training in chennai to offer the best and balanced training with expert instructors on practical implementation and real time case studies in Clinical SAS that is well suited to help you embark on the right path of success and Job readiness.
+                    Clinical SAS is the application of SAS technology to clinical domain for clinical trial data analysis in pharmaceutical or biotech and clinical research companies. Familiarity with clinical trial aspects combined with knowledge of SAS can lead to a challenging and rewarding career that also positively impacts & transforms patients' lives.
                   </p>
                 </div>
               </div>
             </section>
 
-            {/* Course Structure */}
+            {/* Clinical SAS ADaM Training in Chennai */}
             <section className="bg-gradient-to-br from-purple-600/15 via-violet-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Course Structure:
-              </h2>
-              <div className="grid gap-4 mb-6">
-                {courseStructure.map((topic, index) => (
-                  <div key={index} className="flex items-start gap-3 p-4 bg-purple-500/10 rounded-xl border border-purple-400/20">
-                    <BarChart className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                    <p className="text-purple-100">{topic}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="bg-violet-500/10 rounded-xl p-6 border border-violet-400/20">
-                <p className="text-violet-100 leading-relaxed font-semibold">
-                  Note: The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.
-                </p>
-              </div>
-            </section>
-
-            {/* Industry relevant curriculum */}
-            <section className="bg-gradient-to-br from-teal-600/15 via-cyan-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 shadow-xl shadow-teal-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Industry relevant curriculum
-              </h2>
-              <div className="bg-teal-500/10 rounded-xl p-6 border border-teal-400/20">
-                <p className="text-teal-100 leading-relaxed">
-                  You learn the latest from us! Our curriculum is constantly updated once in 6 months to keep pace with the emerging technologies in this area, so you are always ahead of others.
-                </p>
-              </div>
-            </section>
-
-            {/* How will I execute the Practicals? */}
-            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                How will I execute the Practicals?
-              </h2>
-              <div className="bg-violet-500/10 rounded-xl p-6 border border-violet-400/20">
-                <p className="text-violet-100 leading-relaxed">
-                  In every days class ample data and tasks will be given to sharpen your skills on SAS University edition.
-                </p>
-              </div>
-            </section>
-
-            {/* Annual Packages */}
-            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Annual Packages
-              </h2>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
+                Clinical SAS ADaM Training in Chennai
+              </h3>
               <div className="space-y-6">
-                <div className="bg-green-500/10 rounded-xl p-6 border border-green-400/20">
-                  <p className="text-green-100 leading-relaxed">
-                    Average salaries for the 1 to 3.5 yrs exp. Clinical SAS Programmer is Rs 469,761 (source payscale.com).
+                <div className="bg-purple-500/10 rounded-xl p-6 border border-purple-400/20">
+                  <p className="text-purple-100 leading-relaxed">
+                    SDTM is the study data tabulation model. And Adam is the analysis data models. These are the standards earlier there is no standards at all, we faced very much very difficulty to submit the data to FDA. why we have to submit the data to FDA after conducting the clinical trials. Why because in order to get the approval on our truck, FDA the Food and Drug Administration who is responsible that America so what they will do, they will verify whatever you are submitting and K in case if you want to submit in case if you want to market a truck, they need to provide worldwide they need to provide the approval based on your data provided you are going to market your truck. So I'm going to explain you what are the phases are involved here. I hope you are able to see my screen these are the phases so one the research is there then they will conduct the preclinical trials play
                   </p>
                 </div>
-                <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl shadow-xl">
-                  <img
-                    src="/sas-clinical-salaries.jpg"
-                    alt="SAS Clinical Average Salaries"
-                    className="w-full object-cover border border-green-400/30"
-                  />
-                </div>
-              </div>
-            </section>
-
-            {/* Companies Hiring */}
-            <section className="bg-gradient-to-br from-indigo-600/15 via-blue-600/20 to-cyan-600/15 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                Companies Hiring
-              </h2>
-              <div className="space-y-6">
-                <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl shadow-xl">
-                  <img
-                    src="/sas-clinical-companies.jpg"
-                    alt="SAS Clinical Jobs in Companies"
-                    className="w-full object-cover border border-indigo-400/30"
-                  />
+                <div className="bg-violet-500/10 rounded-xl p-6 border border-violet-400/20">
+                  <p className="text-violet-100 leading-relaxed">
+                    clinical trials are nothing but in the test tube and on animals they are going to perform those trials once the molecule they figure it out, this molecule is going to be helpful for them. So, based on that molecule, they can go ahead and redo in test tube they will verify water compositions are really important for them, then that composition is with some mold they are going to give to the guinea pigs rats. So, those animals are going to be going to take this drug, they will test they will see what kind of changes are happening with that animals. Once after verifying, then they will go back and go to the clinical development research process in this clinical research process, phase one phase two phase three trials are involved Okay, anybody is having any any idea about this clinical procedure what we will do in order to get the drug into the market?
+                  </p>
                 </div>
                 <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
                   <p className="text-indigo-100 leading-relaxed">
-                    Hundreds of Contract Research Organizations (CROs)hiring Clinical SAS Programmers.
+                    we will examine the person and observation and we will be noticing the changes which are going through very good. See, here, our objectives will be there and points will be there here safeties are in the phase when safety is a really important metric for us. So, we will take the healthy volunteers and we will do the experiments. Okay. Once this phase has been through, then we will move to the phase two, there, we will take so many subjects as volunteer subjects will be there. Okay, they are going to enroll into the study, once the recruitment is going to be started. Once the subjects are there, we will start our trials here the object to the safety and efficacy. Coming to the phase three here our motto is efficacy. Okay, once all these trials has been conducted, then they will go for the approval process. This is called the post marketing trial.
+                  </p>
+                </div>
+                <div className="bg-purple-400/10 rounded-xl p-6 border border-purple-300/20">
+                  <p className="text-purple-100 leading-relaxed">
+                    Once the drug is going to be released into the market, we don't know who whomsoever is going to take the truck might be the children might take the people might take we don't know, right. So we might have some problems as well. Consequences as well, some good things as well and adverse events as well. We don't know what will happen. So here they're going to record each and every cases they will analyze and finally, whether they want to approve or not. If they want to terminate, they will do the termination. This is what's going to happen in this clinical development process. Yeah, any doubts here? Anybody is having any doubts? Hello. Now, so as I told you, as I requested you as well, in the Google Forms, how we are going to collect the data, this is called the EDC system, where the CRF case report form is going to give you the details about what type of data you're supposed to collect the data,
+                  </p>
+                </div>
+                <div className="bg-violet-400/10 rounded-xl p-6 border border-violet-300/20">
+                  <p className="text-violet-100 leading-relaxed">
+                    what type of data you are supposed to collect forever study. If you're going to see here it is a demographic CRF where we are collecting data of birth, gender, gender is going to have whether you are male or female, based on that you are supposed to check that box. As a SAS programmer ,supposed to do few things. And as per my expectation you should know SAS basics and advanced topics, as I told you. advanced topics Next. Next one. I'm hearing some mysteries from one side. Basics and advanced topics. Using this programming tool, see, we are going to see how to convert that raw data how to collect first, from the EDC system, then, we will go to the stt ablation model, then analysis data Don't worry about in case if you don't get the definitions of sdtm ciders, I'm going to explain you in detail, don't worry about all those things. Okay, just to see this is a high level view, raw data will be there, we are going to convert this is a process I'm telling you as TTM, adder and TLS.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Clinical SAS Programming 100% Job Orientated Training in Chennai */}
+            <section className="bg-gradient-to-br from-teal-600/15 via-cyan-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 shadow-xl shadow-teal-500/10">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
+                Clinical SAS Programming 100% Job Orientated Training in Chennai
+              </h3>
+              <div className="space-y-6">
+                <div className="bg-teal-500/10 rounded-xl p-6 border border-teal-400/20">
+                  <p className="text-teal-100 leading-relaxed">
+                    So you might have the doubt in your mind now. Okay. So, five, join as a SAS programmer, in a real time scenario, do I need to do this is called end to end. end to end end to end means you will get to know how the raw data is flowing. Okay, how you're mapping that raw data to standard and how you're preparing the data for analysis and how what type of reports we are generating out of that to make the decisions. So this is called end to end. Then in case if you know from the raw data to sdtm mapping you feel comfortable if you're confident enough on this. So many jobs are there. So many jobs are there. it's not like that you should know from end to end up to TLS. No, it is in our interest in our class, we are going to discuss about stms Adams TLS everything and interview preparation.First one is sdtm programmer Another one is Adam programmer Okay, this ADaM programmer is going to take the input from a programmer is going to take the input see this is a high level raw data to sdtm to Adam introduction of sass and where we use the sas in industries.we have collected data like ecrf CRF EDC electronic data capture.So, how we are going to get the data okay.
                   </p>
                 </div>
               </div>
@@ -432,13 +399,6 @@ export default function SASClinicalTraining() {
 
           </div>
 
-          {/* FAQ Section */}
-          <div className="lg:col-span-2 mb-8">
-            <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
-              <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
-            </div>
-          </div>
-
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
@@ -447,50 +407,59 @@ export default function SASClinicalTraining() {
           </div>
 
         </div>
-      </div>
 
-      {/* Our Locations Section */}
-      <section className="bg-gradient-to-br from-indigo-900/30 via-purple-800/20 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-          Our SAS Clinical Training Locations
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <Link href="/sas-clinical-training-in-hyderabad" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Hyderabad</div>
-          </Link>
-          <Link href="/sas-clinical-training-in-bangalore" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Bangalore</div>
-          </Link>
-          <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 rounded-xl p-4 border-2 border-cyan-400/50 text-center">
-            <div className="text-cyan-200 font-bold">Chennai</div>
-            <div className="text-xs text-cyan-300 mt-1">Current Location</div>
+        {/* FAQ Section - Full Width */}
+        <div className="mt-12">
+          <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+            <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
           </div>
-          <Link href="/sas-clinical-training-in-pune" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Pune</div>
-          </Link>
-          <Link href="/sas-clinical-online-training-in-us-uk-canada-australia" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold text-sm">US/UK/Canada/Australia</div>
-          </Link>
         </div>
-        <div className="text-center mt-6">
-          <p className="text-indigo-200">Choose your preferred location for SAS Clinical training</p>
+
+        {/* Our Locations Section - Full Width */}
+        <div className="mt-12">
+          <section className="bg-gradient-to-br from-indigo-900/30 via-purple-800/20 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+              Our SAS Clinical Training Locations
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              <Link href="/sas-clinical-online-training-in-hyderabad" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Hyderabad</div>
+              </Link>
+              <Link href="/sas-clinical-training-in-bangalore" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Bangalore</div>
+              </Link>
+              <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 rounded-xl p-4 border-2 border-cyan-400/50 text-center">
+                <div className="text-cyan-200 font-bold">Chennai</div>
+                <div className="text-xs text-cyan-300 mt-1">Current Location</div>
+              </div>
+              <Link href="/sas-clinical-training-in-pune" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Pune</div>
+              </Link>
+              <Link href="/sas-clinical-online-training-in-us-uk-canada-australia" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold text-sm">US/UK/Canada/Australia</div>
+              </Link>
+            </div>
+            <div className="text-center mt-6">
+              <p className="text-indigo-200">Choose your preferred location for SAS Clinical training</p>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sas-clinical-online-training-in-chennai'))
+          __html: JSON.stringify(getStructuredData('sas-clinical-training-in-chennai'))
         }}
       />
       
       {/* Review Structured Data */}
-      {getReviewStructuredData('sas-clinical-online-training-in-chennai') && (
+      {getReviewStructuredData('sas-clinical-training-in-chennai') && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('sas-clinical-online-training-in-chennai'))
+            __html: JSON.stringify(getReviewStructuredData('sas-clinical-training-in-chennai'))
           }}
         />
       )}

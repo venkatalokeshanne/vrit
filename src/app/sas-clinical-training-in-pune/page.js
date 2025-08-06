@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
+import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
 import { 
   Target, 
@@ -31,7 +33,6 @@ import {
   BarChart,
   Activity,
   Heart,
-  Link
 } from 'lucide-react';
 
 export const metadata = getPageMetadata('sas-clinical-training-in-pune');
@@ -228,16 +229,16 @@ export default function SASClinicalTraining() {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <ArrowRight className="w-5 h-5" />
-                    Enquire Now
-                  </button>
-                  <button className="border border-indigo-400/60 hover:bg-indigo-400/10 text-indigo-300 hover:text-white px-8 py-4 rounded-xl font-semibold hover:border-indigo-300 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                    <Download className="w-5 h-5" />
-                    Download Course Content
-                  </button>
-                </div>
+                <CourseActionButtons 
+                  courseName="SAS Clinical"
+                  phoneNumber="+91-9032734343"
+                  showEnquireNow={true}
+                  showDownload={true}
+                  showJoinNow={false}
+                  showCallNow={false}
+                  layout="horizontal"
+                  size="lg"
+                />
               </div>
             </section>
             
@@ -432,13 +433,6 @@ export default function SASClinicalTraining() {
 
           </div>
 
-          {/* FAQ Section */}
-          <div className="lg:col-span-2 mb-8">
-            <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
-              <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
-            </div>
-          </div>
-
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
@@ -447,50 +441,59 @@ export default function SASClinicalTraining() {
           </div>
 
         </div>
-      </div>
 
-      {/* Our Locations Section */}
-      <section className="bg-gradient-to-br from-indigo-900/30 via-purple-800/20 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
-          Our SAS Clinical Training Locations
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          <Link href="/sas-clinical-training-in-hyderabad" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Hyderabad</div>
-          </Link>
-          <Link href="/sas-clinical-training-in-bangalore" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Bangalore</div>
-          </Link>
-          <Link href="/sas-clinical-training-in-chennai" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Chennai</div>
-          </Link>
-          <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 rounded-xl p-4 border-2 border-cyan-400/50 text-center">
-            <div className="text-cyan-200 font-bold">Pune</div>
-            <div className="text-xs text-cyan-300 mt-1">Current Location</div>
+        {/* FAQ Section - Full Width */}
+        <div className="mt-12">
+          <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+            <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
           </div>
-          <Link href="/sas-clinical-online-training-in-us-uk-canada-australia" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
-            <div className="text-blue-300 group-hover:text-blue-200 font-semibold text-sm">US/UK/Canada/Australia</div>
-          </Link>
         </div>
-        <div className="text-center mt-6">
-          <p className="text-indigo-200">Choose your preferred location for SAS Clinical training</p>
+
+        {/* Our Locations Section - Full Width */}
+        <div className="mt-12">
+          <section className="bg-gradient-to-br from-indigo-900/30 via-purple-800/20 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
+              Our SAS Clinical Training Locations
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              <Link href="/sas-clinical-online-training-in-hyderabad" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Hyderabad</div>
+              </Link>
+              <Link href="/sas-clinical-training-in-bangalore" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Bangalore</div>
+              </Link>
+              <Link href="/sas-clinical-training-in-chennai" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold">Chennai</div>
+              </Link>
+              <div className="bg-gradient-to-br from-cyan-600/40 to-blue-600/40 rounded-xl p-4 border-2 border-cyan-400/50 text-center">
+                <div className="text-cyan-200 font-bold">Pune</div>
+                <div className="text-xs text-cyan-300 mt-1">Current Location</div>
+              </div>
+              <Link href="/sas-clinical-online-training-in-us-uk-canada-australia" className="bg-gradient-to-br from-blue-600/30 to-indigo-600/30 hover:from-blue-500/40 hover:to-indigo-500/40 rounded-xl p-4 border border-blue-400/30 hover:border-blue-300/50 transition-all duration-300 text-center group">
+                <div className="text-blue-300 group-hover:text-blue-200 font-semibold text-sm">US/UK/Canada/Australia</div>
+              </Link>
+            </div>
+            <div className="text-center mt-6">
+              <p className="text-indigo-200">Choose your preferred location for SAS Clinical training</p>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
       
       {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sas-clinical-online-training-in-pune'))
+          __html: JSON.stringify(getStructuredData('sas-clinical-training-in-pune'))
         }}
       />
       
       {/* Review Structured Data */}
-      {getReviewStructuredData('sas-clinical-online-training-in-pune') && (
+      {getReviewStructuredData('sas-clinical-training-in-pune') && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('sas-clinical-online-training-in-pune'))
+            __html: JSON.stringify(getReviewStructuredData('sas-clinical-training-in-pune'))
           }}
         />
       )}

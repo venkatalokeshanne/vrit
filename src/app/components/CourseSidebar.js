@@ -3,6 +3,7 @@
 import React from 'react';
 import { Phone, Mail, Download, Users, Monitor, Briefcase, CheckCircle, ArrowRight, Clock, Target, Award, TrendingUp, Code, Globe, Star, Rocket } from 'lucide-react';
 import Link from 'next/link';
+import { EnquireNowButton, DownloadCourseButton, CallNowButton } from './CourseActionButtons';
 
 export default function CourseSidebar({ courseName = "Course", phoneNumber = "+91-9032734343" }) {
   const trainingModes = [
@@ -85,14 +86,14 @@ export default function CourseSidebar({ courseName = "Course", phoneNumber = "+9
             Opt for Training
           </h3>
           <div className="space-y-3">
-            <button className="w-full bg-gradient-to-r from-purple-500 to-violet-500 hover:from-purple-600 hover:to-violet-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-purple-500/30 hover:scale-105">
-              <ArrowRight className="w-4 h-4" />
-              Enquire Now
-            </button>
-            <button className="w-full bg-violet-500/15 border border-violet-400/50 hover:bg-violet-400/20 text-violet-200 hover:text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105">
-              <Download className="w-4 h-4" />
-              Download Course Content
-            </button>
+            <CourseActionButtons 
+              courseName={courseName}
+              showEnquireNow={true}
+              showDownload={true}
+              showCallNow={false}
+              showJoinNow={false}
+              variant="sidebar"
+            />
           </div>
         </div>
       </div>
@@ -118,9 +119,9 @@ export default function CourseSidebar({ courseName = "Course", phoneNumber = "+9
               </div>
             ))}
           </div>
-          <button className="w-full mt-4 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:scale-105">
+          <Link href="/contactus" className="w-full mt-4 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-600 hover:to-emerald-600 text-white px-4 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:scale-105 block text-center">
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
 

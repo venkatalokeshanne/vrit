@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle, Users, Target, TrendingUp, Award, Clock, MapPin, Mail, Phone, Globe, BookOpen, Monitor, Code, Briefcase, Star, ArrowRight } from 'lucide-react';
 import FAQ from '../components/FAQ';
+import { EnquireNowButton, CallNowButton } from '../components/CourseActionButtons';
 import { getPageMetadata, getStructuredData } from '../../utils/metadata';
 
 // FAQ Data for About Us Page
@@ -294,14 +295,17 @@ export default function AboutUs() {
               Join thousands of successful professionals who have advanced their careers with VR IT Solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                <ArrowRight className="w-5 h-5" />
+              <EnquireNowButton 
+                className="bg-gradient-to-r from-orange-600 to-blue-600 hover:from-orange-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+                courseName="career transformation"
+              >
                 Get Started Today
-              </button>
-              <button className="border border-orange-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-orange-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg">
-                <Phone className="w-5 h-5" />
+              </EnquireNowButton>
+              <CallNowButton 
+                className="border border-orange-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-orange-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg"
+              >
                 Request Free Demo
-              </button>
+              </CallNowButton>
             </div>
           </div>
         </div>
