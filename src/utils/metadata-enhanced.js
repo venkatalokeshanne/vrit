@@ -4,7 +4,7 @@ import { unstable_cache } from 'next/cache';
 // Enhanced caching with ISR support
 const getCachedCourseData = unstable_cache(
   async (slug) => {
-    console.log(`Fetching course data for slug: ${slug}`);
+    console.log(`Fetching course data for slug saibaba: ${slug}`);
     const pageData = await getCourseBySlug(slug);
     return pageData;
   },
@@ -35,6 +35,7 @@ const getCachedAllCourses = unstable_cache(
 export async function getPageMetadata(slug) {
   try {
     // Get cached course data
+    console.log("@saibaba slug:", slug);
     const pageData = await getCachedCourseData(slug);
     
     if (!pageData) {

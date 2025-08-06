@@ -1,31 +1,4 @@
 import { getAllCoursesMetadata, getCourseBySlug } from '../lib/sanity';
-import { unstable_cache } from 'next/cache';
-
-// Enhanced caching with ISR support
-const getCachedCourseData = unstable_cache(
-  async (slug) => {
-    console.log(`Fetching course data for slug: ${slug}`);
-    const pageData = await getCourseBySlug(slug);
-    return pageData;
-  },
-  ['course-metadata'],
-  {
-    revalidate: 3600, // 1 hour
-    tags: ['course-metadata']
-  }
-);
-
-const getCachedAllCourses = unstable_cache(
-  async () => {
-    console.log('Fetching all courses data');
-    return await getAllCoursesMetadata();
-  },
-  ['all-courses'],
-  {
-    revalidate: 3600, // 1 hour
-    tags: ['course-metadata', 'all-courses']
-  }
-);
 
 /**
  * Get metadata for a specific page/course with enhanced SEO
@@ -34,8 +7,8 @@ const getCachedAllCourses = unstable_cache(
  */
 export async function getPageMetadata(slug) {
   try {
-    // Get cached course data
-    const pageData = await getCachedCourseData(slug);
+    // Get course data directly (no cache)
+    const pageData = await getCourseBySlug(slug);
     
     if (!pageData) {
       // Return enhanced default metadata if slug not found
@@ -87,7 +60,7 @@ export async function getPageMetadata(slug) {
         },
       };
     }
-
+    // console.log('Fetched metadata for slug:', slug, pageData);
     // Return comprehensive metadata with all SEO optimizations
     return {
       metadataBase: new URL('https://www.vritsol.com'),
@@ -176,7 +149,7 @@ export async function getPageMetadata(slug) {
  */
 export async function getStructuredData(slug) {
   try {
-    const pageData = await getCachedCourseData(slug);
+    const pageData = await getCourseBySlug(slug);
     
     if (!pageData || !pageData.structuredData) {
       // Return basic organization structured data
@@ -264,7 +237,7 @@ export async function getStructuredData(slug) {
  * Get all courses data with caching
  */
 export async function getAllCourses() {
-  return await getCachedAllCourses();
+  return await getAllCoursesMetadata();
 }
 
 /**

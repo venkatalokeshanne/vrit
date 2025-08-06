@@ -15,24 +15,25 @@ export const urlFor = (source) => builder.image(source)
 
 // Helper function to convert Sanity course data to the format your existing components expect
 export function transformSanityCourse(sanityCourse) {
-  if (!sanityCourse) return null
-
+  if (!sanityCourse) return null;
+  // console.log('Saibaba Transforming Sanity course:', sanityCourse)
   return {
     slug: sanityCourse.slug?.current || '',
     title: sanityCourse.title || '',
     description: sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
-    keywords: sanityCourse.seo?.keywords || [],
-    ogTitle: sanityCourse.seo?.ogTitle || sanityCourse.title || '',
-    ogDescription: sanityCourse.seo?.ogDescription || sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
-    twitterTitle: sanityCourse.seo?.twitterTitle || sanityCourse.seo?.ogTitle || sanityCourse.title || '',
-    twitterDescription: sanityCourse.seo?.twitterDescription || sanityCourse.seo?.ogDescription || sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
-    ogImage: sanityCourse.seo?.ogImage ? urlFor(sanityCourse.seo.ogImage).url() : sanityCourse.mainImage ? urlFor(sanityCourse.mainImage).url() : '',
-    twitterImage: sanityCourse.seo?.twitterImage ? urlFor(sanityCourse.seo.twitterImage).url() : sanityCourse.seo?.ogImage ? urlFor(sanityCourse.seo.ogImage).url() : sanityCourse.mainImage ? urlFor(sanityCourse.mainImage).url() : '',
+    keywords: sanityCourse.keywords || [],
+    ogTitle: sanityCourse.ogTitle || sanityCourse.title || '',
+    ogDescription: sanityCourse.ogDescription || sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
+    twitterTitle: sanityCourse.twitterTitle || sanityCourse.ogTitle || sanityCourse.title || '',
+    twitterDescription: sanityCourse.twitterDescription || sanityCourse.ogDescription || sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
+    // ogImage and twitterImage are string paths (not image objects)
+    ogImage: sanityCourse.ogImage || '',
+    twitterImage: sanityCourse.twitterImage || sanityCourse.ogImage || '',
     reviewCount: sanityCourse.reviewsCount?.toString() || '0',
     ratingValue: sanityCourse.rating?.toString() || '5',
-    organizationName: sanityCourse.title || '',
-    postalCode: sanityCourse.location?.postalCode || '500073',
-    streetAddress: sanityCourse.location?.address || 'Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana',
+    organizationName: sanityCourse.organizationName || sanityCourse.title || '',
+    postalCode: sanityCourse.postalCode || sanityCourse.location?.postalCode || '500073',
+    streetAddress: sanityCourse.streetAddress || sanityCourse.location?.address || 'Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana',
     structuredData: sanityCourse.structuredData || {
       "@context": "http://schema.org",
       "name": sanityCourse.title || '',
@@ -117,20 +118,18 @@ export const allCoursesQuery = `
       date,
       verified
     },
-    seo {
-      metaTitle,
-      metaDescription,
-      keywords,
-      canonicalUrl,
-      noIndex,
-      noFollow,
-      ogTitle,
-      ogDescription,
-      ogImage,
-      twitterTitle,
-      twitterDescription,
-      twitterImage
-    },
+    metaTitle,
+    metaDescription,
+    keywords,
+    canonicalUrl,
+    noIndex,
+    noFollow,
+    ogTitle,
+    ogDescription,
+    ogImage,
+    twitterTitle,
+    twitterDescription,
+    twitterImage,
     structuredData
   }
 `
@@ -205,20 +204,18 @@ export async function getCourseBySlug(slug) {
         date,
         verified
       },
-      seo {
-        metaTitle,
-        metaDescription,
-        keywords,
-        canonicalUrl,
-        noIndex,
-        noFollow,
-        ogTitle,
-        ogDescription,
-        ogImage,
-        twitterTitle,
-        twitterDescription,
-        twitterImage
-      },
+      metaTitle,
+      metaDescription,
+      keywords,
+      canonicalUrl,
+      noIndex,
+      noFollow,
+      ogTitle,
+      ogDescription,
+      ogImage,
+      twitterTitle,
+      twitterDescription,
+      twitterImage,
       structuredData
     }`
     

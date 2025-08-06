@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata-enhanced';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 

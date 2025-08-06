@@ -13,6 +13,7 @@ export async function POST(request) {
 
     console.log('Revalidation webhook triggered:', { type, slug });
 
+    
     // Revalidate based on document type
     if (type === 'courseMetadata') {
       // Revalidate specific course page
