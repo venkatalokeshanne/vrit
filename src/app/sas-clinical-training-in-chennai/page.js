@@ -37,6 +37,16 @@ import {
 
 export const metadata = getPageMetadata('sas-clinical-training-in-chennai');
 
+export async function generateMetadata() {
+  return await getPageMetadata('sas-clinical-training-in-chennai');
+}
+
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('sas-clinical-training-in-chennai');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
 // FAQ Data for SAS Clinical Online Training
 const sasClinicalOnlineFaqs = [
   {
@@ -82,6 +92,7 @@ const sasClinicalOnlineFaqs = [
 ];
 
 export default function SASClinicalTraining() {
+  const structuredDataJson = getPageStructuredData();
   const courseStructure = [
     "Introduction to SAS and Clinical Trials",
     "DATA step processing",
@@ -454,13 +465,10 @@ export default function SASClinicalTraining() {
         }}
       />
       
-      {/* Review Structured Data */}
-      {getReviewStructuredData('sas-clinical-training-in-chennai') && (
+      {structuredDataJson && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getReviewStructuredData('sas-clinical-training-in-chennai'))
-          }}
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
         />
       )}
       </div>
