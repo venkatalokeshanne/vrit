@@ -275,13 +275,12 @@ export default async function SalesforceTraining() {
       </div>
       </div>
       
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('salesforce-training-in-hyderabad'))
-        }}
-      />
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
       
 
     </>

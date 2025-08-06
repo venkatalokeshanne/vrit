@@ -45,7 +45,8 @@ async function getPageStructuredData() {
   return structuredData ? JSON.stringify(structuredData) : null;
 }
 
-export default async 
+export default async  function AzureDevOpsTrainingInChennai() {
+  const structuredDataJson = await getPageStructuredData();
   const azureDevOpsFaqs = [
     {
       question: "What is Azure DevOps and AWS, and why learn them together?",
@@ -140,23 +141,7 @@ export default async
 
   return (
     <>
-      {/* JSON-LD Structured Data for SEO */}
-      {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
 
-      {/* Course Schema */}
-      {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -419,13 +404,6 @@ export default async
       </div>
 
       {/* Structured Data */}
-      {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
       {/* Structured Data for SEO */}
       {structuredDataJson && (
         <script

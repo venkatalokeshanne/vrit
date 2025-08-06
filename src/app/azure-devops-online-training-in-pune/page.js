@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getPageMetadata, getStructuredData } from '../../utils/metadata';
 import { 
   Target, 
   BookOpen, 
@@ -36,7 +36,18 @@ import {
 
 export const metadata = getPageMetadata('azure-devops-online-training-in-pune');
 
+export async function generateMetadata() {
+  return await getPageMetadata('azure-devops-online-training-in-pune');
+}
+
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('azure-devops-online-training-in-pune');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
+
 export default function AzureDevOpsTraining() {
+  const structuredDataJson = getPageStructuredData();
   const azureDevOpsFaqs = [
     {
       question: "What is Azure DevOps and AWS, and why learn them together?",
@@ -132,77 +143,7 @@ export default function AzureDevOpsTraining() {
   return (
     <>
       {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best Azure DevOps Training in Pune | Azure DevOps Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/azure-devops-training-in-pune",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Pune",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Pune Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
 
-      {/* Course Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "Azure DevOps Training in Pune",
-            "description": "Comprehensive 75-day Azure DevOps and AWS Cloud training covering CI/CD, version control, agile planning, and collaboration with 100% placement assistance",
-            "provider": {
-              "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://vrit-ten.vercel.app"
-            },
-            "educationalCredentialAwarded": "Azure DevOps Certification",
-            "courseMode": ["Online", "Classroom"],
-            "duration": "P75D",
-            "offers": {
-              "@type": "Offer",
-              "availability": "https://schema.org/InStock",
-              "validFrom": "2024-01-01"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656",
-              "bestRating": "5"
-            }
-          })
-        }}
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -486,19 +427,14 @@ export default function AzureDevOpsTraining() {
         </div>
       </div>
 
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('azure-devops-training-in-pune'))
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getReviewStructuredData('azure-devops-training-in-pune'))
-        }}
-      />
+      {/* JSON-LD Structured Data for SEO */}
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
       </div>
     </>
   );

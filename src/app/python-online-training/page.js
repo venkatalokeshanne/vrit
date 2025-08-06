@@ -28,7 +28,6 @@ import {
   Briefcase
 } from 'lucide-react';
 
-export const metadata = getPageMetadata('python-online-training');
 
 export async function generateMetadata() {
   return await getPageMetadata('python-online-training');

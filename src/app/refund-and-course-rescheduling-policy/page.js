@@ -46,9 +46,18 @@ const refundPolicyFaqs = [
   }
 ];
 
-export const metadata = getPageMetadata('refund-and-course-rescheduling-policy');
+export async function generateMetadata() {
+  return await getPageMetadata('refund-and-course-rescheduling-policy');
+}
+
+// Generate structured data for SEO
+async function getPageStructuredData() {
+  const structuredData = await getStructuredData('refund-and-course-rescheduling-policy');
+  return structuredData ? JSON.stringify(structuredData) : null;
+}
 
 export default function RefundAndCourseReschedulingPolicy() {
+  const structuredDataJson = getPageStructuredData();
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -123,12 +132,12 @@ export default function RefundAndCourseReschedulingPolicy() {
       </div>
 
       {/* JSON-LD Structured Data for SEO */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('refund-and-course-rescheduling-policy'))
-        }}
-      />
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
     </div>
   );
 }
