@@ -36,7 +36,7 @@ import {
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'python-with-aws-training';export async function generateMetadata() {
-  const courseMetadata = getCourseBySlugStatic('python-online-training');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   return courseMetadata?.metadata || {};
 }
 

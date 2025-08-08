@@ -1,6 +1,6 @@
 import React from 'react';
 import FAQ from '../components/FAQ';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getStructuredDataStatic } from '../../utils/staticCourses';
 
 // FAQ Data for Terms and Conditions
 const termsAndConditionsFaqs = [
@@ -69,7 +69,6 @@ export const metadata = {
 
 export default function TermsAndConditions() {
   // Get structured data from static function
-  const { getStructuredDataStatic } = require('../../utils/staticCourses');
   const structuredDataJson = JSON.stringify(getStructuredDataStatic());
 
   return (

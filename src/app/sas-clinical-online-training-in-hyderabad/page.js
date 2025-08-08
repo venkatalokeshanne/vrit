@@ -88,10 +88,10 @@ const sasClinicalOnlineFaqs = [
 ];
 
 export default function SASClinicalOnlineTrainingInHyderabad() {
-  const structuredDataJson = getStructuredDataStatic('sas-clinical-online-training-in-hyderabad');
+  const structuredDataJson = getStructuredDataStatic(COURSE_SLUG);
 
   // Fetch metadata for dynamic hero image
-  const courseData = getCourseBySlugStatic('sas-clinical-online-training-in-hyderabad');
+  const courseData = getCourseBySlugStatic(COURSE_SLUG);
   const metadata = courseData?.metadata;
   const mainImageUrl = metadata?.mainImage || '/logo.png';
 

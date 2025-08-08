@@ -33,19 +33,21 @@ import {
   Layers,
   Package,
   Truck,
-  Brain
+  Brain,
+  MapPin,
+  Flag
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'sap-sd-online-training-in-hyderabad';// Generate metadata for this page using static data
+const COURSE_SLUG = 'sap-sd-training-in-us-uk-canada-australia';
+
+// Generate metadata for this page using static data
 export async function generateMetadata() {
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   return courseMetadata?.metadata || {};
 }
 
-
-
-export default async  function SAPSDOnlineTrainingInHyderabad() {
+export default async function SAPSDTrainingInUSUKCanadaAustralia() {
   const structuredDataJson = getStructuredDataStatic(COURSE_SLUG);
 
   // Fetch metadata for dynamic hero image
@@ -103,52 +105,94 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
     }
   ];
 
+  const internationalBenefits = [
+    "Flexible training schedules to accommodate multiple time zones",
+    "24/7 support and doubt clearing sessions for global students",
+    "International certification preparation and guidance",
+    "Global career opportunities with MNC companies",
+    "Cross-cultural business scenario training",
+    "Time zone friendly batch timings"
+  ];
+
+  const timeZones = [
+    {
+      region: "US & Canada",
+      zones: ["EST", "CST", "MST", "PST"],
+      timing: "Flexible evening and weekend batches available"
+    },
+    {
+      region: "UK & Europe", 
+      zones: ["GMT", "CET"],
+      timing: "Weekday evening and weekend sessions"
+    },
+    {
+      region: "Australia & New Zealand",
+      zones: ["AEST", "NZST"],
+      timing: "Early morning and weekend batch options"
+    }
+  ];
+
+  const careerOpportunities = [
+    "SAP SD Consultant - USA: $80,000 - $120,000 annually",
+    "Functional Analyst - UK: £45,000 - £75,000 annually", 
+    "SAP SD Lead - Canada: CAD $70,000 - $110,000 annually",
+    "Implementation Specialist - Australia: AUD $80,000 - $130,000 annually",
+    "Business Process Expert in multinational corporations",
+    "Remote SAP consulting opportunities with global clients"
+  ];
+
   const sapSdFaqs = [
     {
-      question: "What is SAP SD and why should I learn it?",
-      answer: "SAP SD (Sales and Distribution) is one of the core functional modules in SAP ERP that handles sales, shipping, billing, and customer management processes. Learning SAP SD opens doors to high-paying careers in SAP consulting, business analysis, and ERP implementation with average salaries ranging from ₹6-18 LPA."
+      question: "What is SAP SD and why should I learn it internationally?",
+      answer: "SAP SD (Sales and Distribution) is one of the core functional modules in SAP ERP that handles sales, shipping, billing, and customer management processes. Learning SAP SD opens doors to high-paying international careers in SAP consulting, business analysis, and ERP implementation with competitive salaries in US ($80K-120K), UK (£45K-75K), Canada (CAD $70K-110K), and Australia (AUD $80K-130K)."
     },
     {
-      question: "What are the prerequisites for SAP SD online training?",
-      answer: "Basic understanding of business processes, especially sales and distribution workflows, is helpful. Knowledge of ERP concepts is beneficial but not mandatory. Our online course covers all foundational concepts needed to master SAP SD from scratch."
+      question: "How are the training sessions conducted for international students?",
+      answer: "Our SAP SD training is conducted through live online sessions using advanced video conferencing platforms. International students get access to recorded sessions, live practice environments, and dedicated support to ensure effective learning across different time zones including US/Canada (EST/PST), UK (GMT), and Australia/New Zealand (AEST/NZST)."
     },
     {
-      question: "What is the duration and fee structure for SAP SD online training?",
-      answer: "Our SAP SD online training is a comprehensive 90-day program with flexible scheduling options. The course includes live online sessions, recorded content, and hands-on practice. Contact us at +91-9032734343 for current fee structure and available discounts."
+      question: "What are the available batch timings for US, UK, Canada, and Australia?",
+      answer: "We offer flexible batch timings to accommodate international time zones: US/Canada - Evening and weekend batches (EST/PST friendly), UK - Evening sessions (GMT friendly), Australia/New Zealand - Early morning and weekend options (AEST/NZST compatible). Custom timings can be arranged for groups."
     },
     {
-      question: "Do you provide SAP SD certification preparation?",
-      answer: "Yes, our training thoroughly prepares you for SAP Certified Application Associate - Sales and Distribution with SAP ERP certification. We provide practice tests, certification guidance, and additional study materials to help you pass the exam."
+      question: "Do you provide international SAP SD certification guidance?",
+      answer: "Yes, we provide comprehensive preparation for internationally recognized SAP Certified Application Associate - Sales and Distribution certification. Our training includes global best practices, international business scenarios, and exam strategies applicable worldwide."
     },
     {
-      question: "What career opportunities are available after SAP SD training?",
-      answer: "SAP SD professionals can work as SAP SD Consultant, Functional Analyst, Business Process Expert, SAP SD Support Specialist, Implementation Consultant, and Team Lead. Top companies like Accenture, IBM, Wipro, TCS, and Infosys actively hire SAP SD professionals."
+      question: "What career opportunities are available internationally after SAP SD training?",
+      answer: "SAP SD professionals have excellent global career prospects including SAP Consultant positions in US ($80K-$120K), UK (£45K-£75K), Canada (CAD $70K-$110K), and Australia (AUD $80K-$130K). Opportunities exist with major consulting firms like Accenture, IBM, Capgemini, and MNCs across various industries."
     },
     {
-      question: "How do online practical sessions work for SAP SD?",
-      answer: "Our online training includes access to live SAP systems through cloud-based environments. Students get hands-on experience with real SAP SD scenarios, configuration exercises, and end-to-end process implementation through screen sharing and virtual labs."
+      question: "How do you handle practical sessions for international students?",
+      answer: "International students get access to cloud-based SAP environments that work seamlessly across different countries and time zones. We provide hands-on practice through virtual labs, screen sharing sessions, and dedicated practice time slots suitable for your local time zone."
     },
     {
-      question: "What is covered in the SAP SD online curriculum?",
-      answer: "The curriculum covers organizational structure, master data management, sales order processing, delivery and shipping, billing, pricing procedures, credit management, returns processing, integration with other modules, and live project implementation."
+      question: "Do you provide job placement assistance for international locations?",
+      answer: "Yes, we have partnerships with global recruitment agencies and MNCs operating in US, UK, Canada, and Australia. We provide international resume formatting, interview preparation for different markets, and job referrals through our global network."
     },
     {
-      question: "Do you provide job placement assistance for online students?",
-      answer: "Yes, we provide 100% placement assistance for online students including resume preparation, interview coaching, job referrals, and continuous support. We have partnerships with 200+ companies looking for SAP SD professionals across India."
+      question: "What is the duration and fee structure for international students?",
+      answer: "The SAP SD training is a comprehensive 90-day program designed for working professionals globally. We offer competitive international pricing with flexible payment options. Contact us at +91-9032734343 for current international rates and available discounts."
     },
     {
-      question: "Can working professionals attend SAP SD online training?",
-      answer: "Absolutely! Our online training is specifically designed for working professionals with flexible batch timings including weekend batches and evening classes. All sessions are recorded for later reference and practice."
+      question: "How do you ensure quality training across different time zones?",
+      answer: "Our trainers are available across multiple time zones to provide live interaction. All sessions are recorded for later reference, we provide 24/7 doubt clearing support, and maintain consistent curriculum quality regardless of your location or batch timing."
     },
     {
-      question: "What support do you provide during and after the online course?",
-      answer: "We provide lifetime support including doubt clearing sessions, access to updated materials, job assistance, interview preparation, alumni network access, and continuous mentoring. Our trainers are available for guidance throughout your SAP SD career journey."
+      question: "What ongoing support do you provide for international students?",
+      answer: "International students receive lifetime support including global alumni network access, continued mentoring, international job market updates, resume updates for different countries, and ongoing career guidance throughout your SAP SD journey worldwide."
     }
   ];
 
   return (
     <>
-
+      {/* Structured Data for SEO */}
+      {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -157,31 +201,51 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             
-            {/* Hero Section - Vibrant Orange/Blue */}
-            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in">
-              {/* Floating Alert Badge */}
-              <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-bounce shadow-lg">
-                🔥 Limited Seats!
+            {/* Hero Section - International Theme */}
+            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in relative">
+              {/* Global Training Badge */}
+              <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-bounce shadow-lg flex items-center gap-2">
+                🌍 Global Training!
               </div>
               
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-slide-up">
                   <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
-                    SAP SD Online Training
+                    SAP SD Training
                   </span>
                   <br />
-                  <span className="text-white text-3xl md:text-4xl">in Banglore</span>
+                  <span className="text-white text-2xl md:text-3xl flex items-center justify-center gap-2 mt-2">
+                    <Flag className="w-8 h-8 text-orange-400" />
+                    US | UK | Canada | Australia
+                  </span>
                 </h1>
                 
-                {/* Course Image - Facebook Post Dimensions */}
+                {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
                   <img src={mainImageUrl}
-                    alt="SAP SD Online Training Course in Banglore - VR IT Solutions"
+                    alt="SAP SD Training in US, UK, Canada, Australia - VR IT Solutions"
                     className="w-full object-cover border-2 border-orange-400/30"
                     style={{ aspectRatio: '1200/630' }}
                   />
-                  {/* Overlay gradient for better text readability if needed */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
+                </div>
+
+                {/* International Time Zones Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                  {timeZones.map((zone, index) => (
+                    <div key={index} className="bg-gradient-to-r from-orange-500/25 to-blue-500/25 backdrop-blur-sm rounded-xl p-4 border border-orange-400/40">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Globe className="w-5 h-5 text-orange-400" />
+                        <span className="text-orange-300 font-semibold">{zone.region}</span>
+                      </div>
+                      <div className="text-sm text-gray-300 mb-2">
+                        {zone.zones.join(', ')}
+                      </div>
+                      <div className="text-xs text-orange-200">
+                        {zone.timing}
+                      </div>
+                    </div>
+                  ))}
                 </div>
                 
                 <div className="inline-block bg-gradient-to-r from-orange-500/25 to-teal-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-orange-400/40 animate-pulse">
@@ -193,26 +257,58 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
                     <span className="hidden sm:block text-gray-300">|</span>
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-teal-400 animate-spin" />
-                      <span className="text-teal-300 font-semibold text-center sm:text-left">Duration: 90 Days (Online & Classroom)</span>
+                      <span className="text-teal-300 font-semibold text-center sm:text-left">Duration: 90 Days (Online)</span>
                     </div>
                   </div>
                 </div>
 
                 <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                  <span className="text-orange-400 font-bold">VRIT Solutions</span> is a prominent name in Banglore&apos;s best SAP SD online training. We are one stop solution for people looking for top and best SAP SD Online Training.
+                  <span className="text-orange-400 font-bold">VR IT Solutions</span> brings world-class SAP SD training to international students across US, UK, Canada, and Australia. Join our global community of SAP professionals with flexible timing and comprehensive support.
                 </p>
 
                 <p className="text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                  Our trainers are highly qualified and experienced SAP SD consultants providing high quality online training in Banglore. The Certified Expert Group has created our content and curriculum of SAP SD based on current industry needs. This allows the students to be industry ready SAP professionals, where they can handle most realtime SAP SD scenarios.
+                  Our internationally experienced SAP SD consultants provide high-quality online training designed for global professionals. The curriculum is created by Certified Expert Group based on international industry standards, making students ready for global SAP careers.
                 </p>
 
                 <CourseActionButtons 
-                  courseName="SAP SD Online Training in Hyderabad"
+                  courseName="SAP SD Training in US, UK, Canada, Australia"
                   showEnquireNow={true}
                   showDownload={true}
                   showCallNow={false}
                   showJoinNow={false}
                 />
+              </div>
+            </section>
+
+            {/* International Benefits Section */}
+            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <Globe className="w-8 h-8 text-green-400" />
+                International Training Benefits
+              </h2>
+              <div className="grid gap-4">
+                {internationalBenefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start gap-3 p-4 bg-green-500/10 rounded-xl border border-green-400/20 hover:bg-green-500/15 transition-all duration-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-green-100 font-medium">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Global Career Opportunities */}
+            <section className="bg-gradient-to-br from-amber-600/15 via-orange-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                <Briefcase className="w-8 h-8 text-amber-400" />
+                Global Career Opportunities
+              </h2>
+              <div className="grid gap-4">
+                {careerOpportunities.map((opportunity, index) => (
+                  <div key={index} className="flex items-start gap-3 p-4 bg-amber-500/10 rounded-xl border border-amber-400/20">
+                    <TrendingUp className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                    <span className="text-amber-100 font-medium">{opportunity}</span>
+                  </div>
+                ))}
               </div>
             </section>
 
@@ -228,13 +324,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
                     <span className="text-sm font-medium">SAP Basis</span>
                   </div>
                 </a>
-                <a href="/sap-leonardo-training-hyderabad" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
-                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
-                    <Brain className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
-                    <span className="text-sm font-medium">SAP Leonardo</span>
-                  </div>
-                </a>
-                <a href="/sap-fico-online-training-in-hyderabad" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                <a href="/sap-fico-training-in-us-uk-canada-australia" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
                   <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
                     <TrendingUp className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
                     <span className="text-sm font-medium">SAP FICO</span>
@@ -246,28 +336,10 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
                     <span className="text-sm font-medium">SAP MM</span>
                   </div>
                 </a>
-                <a href="/sap-hana-admin-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
-                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
-                    <Server className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
-                    <span className="text-sm font-medium">SAP HANA</span>
-                  </div>
-                </a>
-                <a href="/sap-ewm-online-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
+                <a href="/sap-ewm-training-in-us-uk-canada-australia" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
                   <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
                     <Layers className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
                     <span className="text-sm font-medium">SAP EWM</span>
-                  </div>
-                </a>
-                <a href="/sap-security-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
-                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
-                    <Shield className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
-                    <span className="text-sm font-medium">SAP Security</span>
-                  </div>
-                </a>
-                <a href="/sap-s4Hana-simple-logistics-training" className="bg-gray-500/10 hover:bg-gray-400/20 rounded-xl p-4 border border-gray-400/20 hover:border-gray-300/40 transition-all duration-300 text-center group">
-                  <div className="text-gray-200 group-hover:text-white transition-colors duration-300">
-                    <Truck className="w-6 h-6 mx-auto mb-2 text-gray-400 group-hover:text-gray-200" />
-                    <span className="text-sm font-medium">S/4HANA Logistics</span>
                   </div>
                 </a>
               </div>
@@ -287,12 +359,12 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
                 </div>
                 <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
                   <p className="text-indigo-100 leading-relaxed">
-                    Learning SAP SD opens doors to lucrative career opportunities in SAP consulting, business analysis, and ERP implementation. With businesses increasingly adopting SAP solutions, skilled SAP SD professionals are in high demand across industries.
+                    For international professionals in US, UK, Canada, and Australia, SAP SD expertise opens doors to lucrative career opportunities with competitive salaries and global mobility in the enterprise software consulting domain.
                   </p>
                 </div>
                 <div className="bg-blue-500/10 rounded-xl p-6 border border-blue-400/20">
                   <p className="text-blue-100 leading-relaxed">
-                    <span className="text-purple-400 font-semibold">VR IT Solutions</span> is one of the best SAP SD online training institutes to offer well focused and career-oriented training program in SAP Sales and Distribution.
+                    <span className="text-purple-400 font-semibold">VR IT Solutions</span> provides globally recognized SAP SD training designed specifically for international students, with flexible timings and comprehensive support across multiple time zones.
                   </p>
                 </div>
               </div>
@@ -307,12 +379,12 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
               <div className="prose prose-lg prose-invert max-w-none space-y-6">
                 <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-400/20">
                   <p className="text-emerald-100 leading-relaxed">
-                    With SAP being the leading ERP solution globally, SAP SD professionals are in high demand across industries. Our online training offers excellent value for professionals looking to advance their careers in SAP consulting, with opportunities for high salaries and global career prospects in multinational companies.
+                    With SAP being the leading ERP solution globally, SAP SD professionals are in high demand across industries worldwide. Our international training offers excellent value for professionals looking to advance their careers in SAP consulting, with opportunities for high salaries and global career prospects in multinational companies across US, UK, Canada, and Australia.
                   </p>
                 </div>
                 <div className="bg-teal-500/10 rounded-xl p-6 border border-teal-400/20">
                   <p className="text-teal-100 leading-relaxed">
-                    Make <span className="text-emerald-400 font-semibold">VR IT solutions</span> as your first choice for SAP SD online training in Banglore due to our systematic training methodology, expert trainers, and comprehensive online learning environment! Join now for a lucrative SAP career.
+                    Make <span className="text-emerald-400 font-semibold">VR IT Solutions</span> as your first choice for SAP SD international training due to our systematic training methodology, expert trainers, and comprehensive global learning environment! Join now for a lucrative international SAP career.
                   </p>
                 </div>
               </div>
@@ -334,7 +406,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
               </div>
               <div className="mt-6 p-6 bg-gradient-to-r from-yellow-500/15 to-orange-500/15 border border-yellow-400/30 rounded-xl">
                 <p className="text-yellow-200 font-semibold">
-                  <strong className="text-yellow-300">Note:</strong> The syllabus listed above is indicative in nature and may include more topics for comprehensive learning.
+                  <strong className="text-yellow-300">Note:</strong> The curriculum includes international business scenarios and is designed to meet global SAP implementation standards.
                 </p>
               </div>
             </section>
@@ -388,7 +460,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="SAP SD Online" phoneNumber="+91-9032734343" />
+              <CourseSidebar courseName="SAP SD International" phoneNumber="+91-9032734343" />
             </div>
           </div>
 
@@ -396,7 +468,6 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
       </div>
       
       {/* Structured Data */}
-      {/* Structured Data for SEO */}
       {structuredDataJson && (
         <script
           type="application/ld+json"
@@ -404,9 +475,6 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
         />
       )}
       
-      {/* Review Structured Data */}
-
-  
       </div>
     </>
   );

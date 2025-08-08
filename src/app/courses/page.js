@@ -33,7 +33,8 @@ import {
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'courses';const courses = [
+const COURSE_SLUG = 'courses';
+const courses = [
   {
     id: 1,
     title: "ServiceNow",

@@ -94,10 +94,10 @@ const sapSecurityFaqs = [
 ];
 
 export default async  function SAPSecurityTrainingInHyderabad() {
-  const structuredDataJson = getStructuredDataStatic('sap-security-training');
+  const structuredDataJson = getStructuredDataStatic(COURSE_SLUG);
 
   // Fetch metadata for dynamic hero image
-  const courseData = getCourseBySlugStatic('sap-security-training');
+  const courseData = getCourseBySlugStatic(COURSE_SLUG);
   const metadata = courseData?.metadata;
   const mainImageUrl = metadata?.mainImage || '/logo.png';
 
@@ -118,23 +118,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
 
   return (
     <>
-      {/* JSON-LD Structured Data for SEO */}
-      {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
 
-      {/* Course Schema */}
-      {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       

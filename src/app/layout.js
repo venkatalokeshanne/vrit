@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollingCourses from './components/ScrollingCourses';
 import RichSnippetsManager from '../utils/richSnippets';
-import { getPageMetadata, getStructuredData } from '../utils/metadata';
+import { getPageMetadataStatic, getStructuredDataStatic } from '../utils/staticCourses';
 import Script from 'next/script';
 
 const geistSans = Geist({
@@ -19,12 +19,12 @@ const geistMono = Geist_Mono({
 
 // Generate metadata dynamically for the homepage
 export async function generateMetadata() {
-  return await getPageMetadata('index');
+  return getPageMetadataStatic('index');
 }
 
 export default async function RootLayout({ children }) {
   // Get structured data for the homepage
-  const structuredData = await getStructuredData('index');
+  const structuredData = getStructuredDataStatic('index');
 
   return (
     <html lang="en">

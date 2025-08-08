@@ -29,8 +29,9 @@ import {
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'python-online-training';export async function generateMetadata() {
-  const courseMetadata = getCourseBySlugStatic('python-online-training');
+const COURSE_SLUG = 'python-online-training';
+export async function generateMetadata() {
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   return courseMetadata?.metadata || {};
 }
 

@@ -166,63 +166,7 @@ export default function DevOpsTraining() {
 
   return (
     <>
-      {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "Organization",
-            "name": "Best AWS with DevOps Training in Hyderabad | DevOps Online Training | VR IT Solutions",
-            "url": "https://vrit-ten.vercel.app/devops-training-in-hyderabad",
-            "logo": "https://vrit-ten.vercel.app/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/vritsolutions/",
-              "https://twitter.com/vritsolutions",
-              "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-            ],
-            "address": [
-              {
-                "type": "PostalAddress",
-                "addressCountry": "INDIA",
-                "addressLocality": "Hyderabad",
-                "addressRegion": "Telangana",
-                "postalCode": "500016",
-                "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana."
-              }
-            ],
-            "openingHours": [
-              "Mo-Sa 8:00-21:30",
-              "Su 9:00-13:00"
-            ],
-            "contactPoint": [
-              {
-                "type": "ContactPoint",
-                "telephone": "9032734343",
-                "contactType": "Enquiry",
-                "email": "info@vritsol.com"
-              }
-            ]
-          })
-        }}
-      />
 
-      {/* Additional Review Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "http://schema.org",
-            "@type": "review",
-            "name": "AWS with DevOps Training in Hyderabad - VR IT Solutions",
-            "aggregateRating": {
-              "type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "9656"
-            }
-          })
-        }}
-      />
 
       {/* Course Schema */}
       <script

@@ -36,8 +36,9 @@ import {
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'sas-clinical-training-in-chennai';export async function generateMetadata() {
-  const courseMetadata = getCourseBySlugStatic('sas-clinical-training-in-chennai');
+const COURSE_SLUG = 'sas-clinical-training-in-chennai';
+export async function generateMetadata() {
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   return courseMetadata?.metadata || {};
 }
 
