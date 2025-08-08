@@ -184,7 +184,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - Vibrant Orange/Blue */}
-            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in">
+            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in">
               {/* Floating Alert Badge */}
               <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-bounce shadow-lg">
                 🔥 Limited Seats!
@@ -243,7 +243,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
             </section>
 
             {/* Other SAP Courses */}
-            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
+            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
                 Other SAP Courses
               </h2>
@@ -300,7 +300,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
             </section>
             
             {/* What is SAP SD - Purple Theme */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Cloud className="w-8 h-8 text-purple-400 animate-pulse" />
                 What is SAP SD?
@@ -325,7 +325,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
             </section>
 
             {/* Why Should You Join This Course - Green Theme */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Target className="w-8 h-8 text-emerald-400 animate-pulse" />
                 Why should you join this course?
@@ -345,7 +345,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
             </section>
 
             {/* What Do You Learn - Amber/Yellow Theme */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <BookOpen className="w-8 h-8 text-amber-400" />
                 What do you learn in this course?
@@ -366,7 +366,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
             </section>
 
             {/* Who Should Attend - Rose Theme */}
-            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Users className="w-8 h-8 text-rose-400" />
                 Who should attend?
@@ -382,7 +382,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
             </section>
 
             {/* Key Differentiators */}
-            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
+            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-3">
                 <Award className="w-8 h-8 text-cyan-400" />
                 Key Differentiators
@@ -404,7 +404,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
 
             {/* FAQ Section */}
             <div className="mb-8">
-              <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
                 <FAQ faqs={sapSdFaqs} theme="default" />
               </div>
             </div>

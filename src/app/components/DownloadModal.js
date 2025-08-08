@@ -348,7 +348,7 @@ const DownloadModal = ({
             </>
           ) : (
             /* Download Ready State */
-            <div className="p-8 text-center">
+            <div className="p-4 lg:p-8 text-center">
               <div className="mb-6">
                 <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Download Ready!</h3>

@@ -145,7 +145,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - SAP GRC & Security Online Training In Hyderabad */}
-            <section className="bg-gradient-to-br from-red-500/15 via-pink-600/20 to-rose-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-red-400/30 shadow-2xl shadow-red-500/10">
+            <section className="bg-gradient-to-br from-red-500/15 via-pink-600/20 to-rose-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-red-400/30 shadow-2xl shadow-red-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">
@@ -190,7 +190,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
             </section>
 
             {/* Other SAP Courses */}
-            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
+            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
                 Other SAP Courses
               </h2>
@@ -247,7 +247,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
             </section>
 
             {/* About this course */}
-            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 About this course
               </h4>
@@ -271,7 +271,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
             </section>
 
             {/* Why should you do this course? */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h5 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Why should you do this course?
               </h5>
@@ -291,7 +291,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
 
             {/* Training Features */}
             <div className="grid md:grid-cols-2 gap-8">
-              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
+              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
                 <h5 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Training Modes
                 </h5>
@@ -305,7 +305,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
                 </div>
               </section>
 
-              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
                 <h5 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Why to choose VR IT solutions?
                 </h5>
@@ -333,7 +333,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
 
         {/* FAQ Section - Full Width */}
         <div className="mt-12">
-          <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+          <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
             <FAQ faqs={sapSecurityFaqs} theme="sap" />
           </div>
         </div>

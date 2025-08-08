@@ -154,7 +154,7 @@ export default async function DataScienceTrainingInHyderabad() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - Vibrant Orange/Red */}
-            <section className="bg-gradient-to-br from-orange-500/15 via-red-600/20 to-orange-600/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in relative">
+            <section className="bg-gradient-to-br from-orange-500/15 via-red-600/20 to-orange-600/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in relative">
               {/* Floating Alert Badge */}
               <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-bounce shadow-lg">
                 🔥 Limited Seats!
@@ -206,7 +206,7 @@ export default async function DataScienceTrainingInHyderabad() {
             </section>
             
             {/* Overview Section - Purple Theme */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Brain className="w-8 h-8 text-purple-400 animate-pulse" />
                 Overview
@@ -226,7 +226,7 @@ export default async function DataScienceTrainingInHyderabad() {
             </section>
 
             {/* Significance of Data Science in AI - Green Theme */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Activity className="w-8 h-8 text-emerald-400 animate-pulse" />
                 Significance of Data Science in AI
@@ -252,7 +252,7 @@ export default async function DataScienceTrainingInHyderabad() {
             </section>
 
             {/* Curriculum Overview - Amber/Yellow Theme */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <BookOpen className="w-8 h-8 text-amber-400" />
                 Curriculum overview
@@ -273,7 +273,7 @@ export default async function DataScienceTrainingInHyderabad() {
             </section>
 
             {/* What's so unique about our Institute - Rose Theme */}
-            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Award className="w-8 h-8 text-rose-400 animate-pulse" />
                 What&apos;s so unique about our Institute?
@@ -286,7 +286,7 @@ export default async function DataScienceTrainingInHyderabad() {
             </section>
 
             {/* Key Differentiators - Violet Theme */}
-            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
+            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3">
                 <Award className="w-8 h-8 text-violet-400" />
                 Our Key Differentiators
@@ -305,7 +305,7 @@ export default async function DataScienceTrainingInHyderabad() {
             </section>
 
             {/* Who should do this course - Cyan Theme */}
-            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
+            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Users className="w-8 h-8 text-cyan-400" />
                 Who should do this course?
@@ -329,7 +329,7 @@ export default async function DataScienceTrainingInHyderabad() {
             </section>
 
             {/* Why learn Data Science - Green Theme */}
-            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <TrendingUp className="w-8 h-8 text-green-400 animate-pulse" />
                 Why learn Data Science?
@@ -347,7 +347,7 @@ export default async function DataScienceTrainingInHyderabad() {
             </section>
 
             {/* Call to Action - Final Orange/Red Theme */}
-            <section className="bg-gradient-to-br from-orange-600/20 via-red-600/25 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/40 text-center shadow-2xl shadow-orange-500/15 relative">
+            <section className="bg-gradient-to-br from-orange-600/20 via-red-600/25 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-orange-400/40 text-center shadow-2xl shadow-orange-500/15 relative">
               {/* Pulsing Alert Ring */}
               <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-30 animate-pulse"></div>
               

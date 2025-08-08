@@ -94,34 +94,34 @@ const FAQ = ({ faqs, title = "Frequently Asked Questions", theme = "default" }) 
   const themeClasses = getThemeClasses();
 
   return (
-    <section className={`bg-gradient-to-br ${themeClasses.container} backdrop-blur-sm rounded-2xl p-8 border ${themeClasses.border} shadow-xl ${themeClasses.shadow}`}>
+    <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 lg:p-4 lg:p-8 border border-white/10">
       <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3">
-        <HelpCircle className={`w-8 h-8 ${themeClasses.icon}`} />
+        <HelpCircle className="w-8 h-8 text-blue-400" />
         {title}
       </h2>
       
-      <div className="space-y-4">
+      <div className="space-y-2">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className={`${themeClasses.itemBg} rounded-xl border ${themeClasses.itemBorder} transition-all duration-300 overflow-hidden`}
+            className="bg-white/5 rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
           >
             <button
               onClick={() => toggleItem(index)}
-              className="w-full p-6 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-white/20 rounded-xl"
+              className="w-full p-3 text-left flex items-center justify-between focus:outline-none rounded-xl"
             >
-              <h3 className="text-lg font-semibold text-white pr-4 leading-relaxed">
+              <h3 className="text-lg font-semibold text-white pr-2 leading-snug">
                 {faq.question}
               </h3>
-              <div className={`flex-shrink-0 w-6 h-6 ${themeClasses.icon} transition-transform duration-300 ${expandedItems.has(index) ? 'rotate-180' : ''}`}>
+              <div className="flex-shrink-0 w-5 h-5 text-blue-400 transition-transform duration-300">
                 {expandedItems.has(index) ? <ChevronUp /> : <ChevronDown />}
               </div>
             </button>
             
             {expandedItems.has(index) && (
-              <div className={`px-6 pb-6 ${themeClasses.expandedBg} border-t border-white/10`}>
-                <div className="pt-4">
-                  <p className={`${themeClasses.text} leading-relaxed text-sm md:text-base`}>
+              <div className="px-3 pb-3 border-t border-white/5">
+                <div className="pt-2">
+                  <p className="text-white/80 leading-relaxed text-sm">
                     {faq.answer}
                   </p>
                 </div>
@@ -131,14 +131,14 @@ const FAQ = ({ faqs, title = "Frequently Asked Questions", theme = "default" }) 
         ))}
       </div>
       
-      <div className="mt-8 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-xl border border-white/20 text-center">
+      <div className="mt-8 p-4 bg-white/5 rounded-xl border border-white/10 text-center">
         <p className="text-white/80 text-sm">
           Have more questions? Contact us at{' '}
-          <a href="tel:+919032734343" className={`${themeClasses.icon} hover:text-white font-semibold transition-colors`}>
+          <a href="tel:+919032734343" className="text-blue-400 hover:text-white font-semibold transition-colors">
             +91-9032734343
           </a>
           {' '}or{' '}
-          <a href="mailto:info@vritsol.com" className={`${themeClasses.icon} hover:text-white font-semibold transition-colors`}>
+          <a href="mailto:info@vritsol.com" className="text-blue-400 hover:text-white font-semibold transition-colors">
             info@vritsol.com
           </a>
         </p>

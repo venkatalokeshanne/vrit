@@ -157,7 +157,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - SAS Clinical Online Training In US */}
-            <section className="bg-gradient-to-br from-blue-500/15 via-indigo-600/20 to-purple-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-400/30 shadow-2xl shadow-blue-500/10">
+            <section className="bg-gradient-to-br from-blue-500/15 via-indigo-600/20 to-purple-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-blue-400/30 shadow-2xl shadow-blue-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -202,7 +202,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
             </section>
 
             {/* Brief about Clinical SAS */}
-            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
+            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Brief about Clinical SAS
               </h4>
@@ -221,7 +221,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
             </section>
 
             {/* Why to do this course? */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Why to do this course?
               </h4>
@@ -240,7 +240,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
             </section>
 
             {/* Who can do this course? */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Who can do this course?
               </h4>
@@ -255,7 +255,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
             </section>
 
             {/* What are the pre-requisites for this course? */}
-            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 What are the pre-requisites for this course?
               </h4>
@@ -274,7 +274,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
             </section>
 
             {/* Course Structure */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-violet-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-violet-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Course Structure:
               </h4>
@@ -294,7 +294,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
             </section>
 
             {/* Industry relevant curriculum */}
-            <section className="bg-gradient-to-br from-teal-600/15 via-cyan-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 shadow-xl shadow-teal-500/10">
+            <section className="bg-gradient-to-br from-teal-600/15 via-cyan-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-teal-400/30 shadow-xl shadow-teal-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Industry relevant curriculum
               </h4>
@@ -306,7 +306,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
             </section>
 
             {/* How will I execute the Practicals? */}
-            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
+            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 How will I execute the Practicals?
               </h4>
@@ -318,7 +318,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
             </section>
 
             {/* Annual Packages */}
-            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Annual Packages
               </h4>
@@ -339,7 +339,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
             </section>
 
             {/* Companies Hiring */}
-            <section className="bg-gradient-to-br from-indigo-600/15 via-blue-600/20 to-cyan-600/15 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+            <section className="bg-gradient-to-br from-indigo-600/15 via-blue-600/20 to-cyan-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
               <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                 Companies Hiring
               </h4>
@@ -361,7 +361,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
 
             {/* Training Features */}
             <div className="grid md:grid-cols-2 gap-8">
-              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
+              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Training Modes
                 </h4>
@@ -375,7 +375,7 @@ export default async  function SASClinicalOnlineTrainingInUS() {
                 </div>
               </section>
 
-              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
                 <h4 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Why to choose VR IT solutions?
                 </h4>
@@ -403,14 +403,14 @@ export default async  function SASClinicalOnlineTrainingInUS() {
 
         {/* FAQ Section - Full Width */}
         <div className="mt-12">
-          <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+          <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
             <FAQ faqs={sasClinicalOnlineFaqs} theme="default" />
           </div>
         </div>
 
         {/* Our Locations Section - Full Width */}
         <div className="mt-12">
-          <section className="bg-gradient-to-br from-indigo-900/30 via-purple-800/20 to-blue-900/30 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+          <section className="bg-gradient-to-br from-indigo-900/30 via-purple-800/20 to-blue-900/30 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
               Our SAS Clinical Training Locations
             </h2>

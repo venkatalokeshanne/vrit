@@ -61,7 +61,7 @@ export default function RefundAndCourseReschedulingPolicy() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-br from-slate-800/50 via-gray-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-gray-700/30 shadow-2xl">
+        <div className="bg-gradient-to-br from-slate-800/50 via-gray-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-4 lg:p-8 md:p-12 border border-gray-700/30 shadow-2xl">
           
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
             <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
@@ -123,7 +123,7 @@ export default function RefundAndCourseReschedulingPolicy() {
 
           {/* FAQ Section */}
           <div className="mt-12">
-            <div className="bg-gradient-to-br from-indigo-500/10 via-purple-500/15 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/20 shadow-xl shadow-indigo-500/5">
+            <div className="bg-gradient-to-br from-indigo-500/10 via-purple-500/15 to-pink-500/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-indigo-400/20 shadow-xl shadow-indigo-500/5">
               <FAQ faqs={refundPolicyFaqs} theme="default" />
             </div>
           </div>

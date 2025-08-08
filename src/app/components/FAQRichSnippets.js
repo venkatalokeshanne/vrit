@@ -79,7 +79,7 @@ export default function FAQRichSnippets({ faqs, title = "Frequently Asked Questi
         
         {/* Additional CTA Section */}
         <div className="text-center mt-12">
-          <div className="bg-white rounded-lg shadow-md p-8">
+          <div className="bg-white rounded-lg shadow-md p-4 lg:p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               Still Have Questions?
             </h3>

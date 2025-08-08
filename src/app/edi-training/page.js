@@ -124,7 +124,7 @@ export default async function EDITrainingPage() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - Vibrant Orange/Blue */}
-            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in relative">
+            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in relative">
               {/* Floating Alert Badge */}
               <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-bounce shadow-lg">
                 🔥 Limited Seats!
@@ -176,7 +176,7 @@ export default async function EDITrainingPage() {
             </section>
             
             {/* EDI Training & Sterling B2B Integrator Overview - Purple Theme */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <RefreshCw className="w-8 h-8 text-purple-400 animate-pulse" />
                 EDI Training & Sterling B2B Integrator Overview
@@ -226,7 +226,7 @@ export default async function EDITrainingPage() {
             </section>
 
             {/* Q) What are the prerequisites for this course? - Green Theme */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Settings className="w-8 h-8 text-emerald-400 animate-pulse" />
                 Q) What are the prerequisites for this course?
@@ -241,7 +241,7 @@ export default async function EDITrainingPage() {
             </section>
 
             {/* Q) How can I practice? - Amber/Yellow Theme */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Monitor className="w-8 h-8 text-amber-400" />
                 Q) How can I practice?
@@ -256,7 +256,7 @@ export default async function EDITrainingPage() {
             </section>
 
             {/* Training Features - Green Theme */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3">
                 <Award className="w-8 h-8 text-emerald-400" />
                 Are You Looking For -
@@ -312,7 +312,7 @@ export default async function EDITrainingPage() {
             </section>
 
             {/* Call to Action - Final Orange/Red Theme */}
-            <section className="bg-gradient-to-br from-orange-600/20 via-red-600/25 to-pink-600/20 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/40 text-center shadow-2xl shadow-orange-500/15 relative">
+            <section className="bg-gradient-to-br from-orange-600/20 via-red-600/25 to-pink-600/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-orange-400/40 text-center shadow-2xl shadow-orange-500/15 relative">
               {/* Pulsing Alert Ring */}
               <div className="absolute -inset-1 bg-gradient-to-r from-orange-400 to-red-400 rounded-2xl blur opacity-30 animate-pulse"></div>
               
@@ -340,7 +340,7 @@ export default async function EDITrainingPage() {
             </section>
 
             {/* FAQ Section */}
-            <section className="bg-gradient-to-br from-indigo-600/15 via-purple-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+            <section className="bg-gradient-to-br from-indigo-600/15 via-purple-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
               <FAQ faqs={ediFaqs} theme="default" />
             </section>
 

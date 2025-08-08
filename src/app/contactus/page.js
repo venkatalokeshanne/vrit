@@ -39,7 +39,7 @@ export default async function ContactUs() {
         <div className="grid lg:grid-cols-2 gap-12">
           
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-slate-800/50 via-gray-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30 shadow-2xl">
+          <div className="bg-gradient-to-br from-slate-800/50 via-gray-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-gray-700/30 shadow-2xl">
             <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
               <Send className="w-6 h-6 text-blue-400" />
               Send A Message
@@ -136,7 +136,7 @@ export default async function ContactUs() {
             </form>
             
             {/* Quick Actions */}
-            <div className="mt-12 bg-gradient-to-br from-green-500/10 via-teal-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-400/20 shadow-xl">
+            <div className="mt-12 bg-gradient-to-br from-green-500/10 via-teal-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-green-400/20 shadow-xl">
               <h3 className="text-xl font-bold text-white mb-6">Quick Actions</h3>
               <div className="grid gap-4">
                 <a
@@ -161,7 +161,7 @@ export default async function ContactUs() {
           <div className="space-y-8">
             
             {/* VR IT Solutions Info */}
-            <div className="bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/20 shadow-xl">
+            <div className="bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/20 shadow-xl">
               <h2 className="text-2xl font-bold text-white mb-6">VR IT Solutions</h2>
               <div className="space-y-6">
                 
@@ -209,7 +209,7 @@ export default async function ContactUs() {
             </div>
 
             {/* Office Location Map */}
-            <div className="bg-gradient-to-br from-slate-800/50 via-gray-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30 shadow-xl">
+            <div className="bg-gradient-to-br from-slate-800/50 via-gray-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-gray-700/30 shadow-xl">
               <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-teal-400" />
                 Office Location

@@ -150,7 +150,7 @@ export default async  function PegaTrainingInHyderabad() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - Pega Training In Hyderabad */}
-            <section className="bg-gradient-to-br from-pink-500/15 via-rose-600/20 to-red-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-pink-400/30 shadow-2xl shadow-pink-500/10">
+            <section className="bg-gradient-to-br from-pink-500/15 via-rose-600/20 to-red-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-pink-400/30 shadow-2xl shadow-pink-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
@@ -205,7 +205,7 @@ export default async  function PegaTrainingInHyderabad() {
             </section>
             
             {/* About this course */}
-            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 About this course
               </h2>
@@ -224,7 +224,7 @@ export default async  function PegaTrainingInHyderabad() {
             </section>
 
             {/* Why should you join this course? */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Why should you join this course?
               </h2>
@@ -238,7 +238,7 @@ export default async  function PegaTrainingInHyderabad() {
             </section>
 
             {/* What do you learn in this course? */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 What do you learn in this course?
               </h2>
@@ -262,7 +262,7 @@ export default async  function PegaTrainingInHyderabad() {
 
             {/* Pre-requisites and Who can attend */}
             <div className="grid md:grid-cols-2 gap-8">
-              <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
+              <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Pre-requisites of the course
                 </h2>
@@ -273,7 +273,7 @@ export default async  function PegaTrainingInHyderabad() {
                 </div>
               </section>
 
-              <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
+              <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Who can attend this course
                 </h2>
@@ -289,7 +289,7 @@ export default async  function PegaTrainingInHyderabad() {
             </div>
 
             {/* Our Key Differentiators */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-pink-600/20 to-rose-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-pink-600/20 to-rose-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
                 Our Key Differentiators
               </h2>

@@ -175,7 +175,7 @@ export default async function SimpleFinanceTrainingInHyderabad() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - S/4 HANA Finance Training in Hyderabad */}
-            <section className="bg-gradient-to-br from-blue-500/15 via-cyan-600/20 to-blue-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-blue-400/30 shadow-2xl shadow-blue-500/10">
+            <section className="bg-gradient-to-br from-blue-500/15 via-cyan-600/20 to-blue-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-blue-400/30 shadow-2xl shadow-blue-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -217,7 +217,7 @@ export default async function SimpleFinanceTrainingInHyderabad() {
             </section>
             
             {/* S/4 HANA Finance (Simple Finance) */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 S/4 HANA Finance (Simple Finance)
               </h2>
@@ -241,7 +241,7 @@ export default async function SimpleFinanceTrainingInHyderabad() {
             </section>
 
             {/* Topics Covered Under S/4 HANA Finance Course */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-violet-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-violet-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Topics Covered Under S/4 HANA Finance Course:
               </h2>
@@ -256,7 +256,7 @@ export default async function SimpleFinanceTrainingInHyderabad() {
             </section>
 
             {/* Cost center Accounting */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Cost center Accounting:
               </h2>
@@ -271,7 +271,7 @@ export default async function SimpleFinanceTrainingInHyderabad() {
             </section>
 
             {/* S4 HANA finance migration */}
-            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 S4 HANA finance migration:
               </h2>
@@ -287,7 +287,7 @@ export default async function SimpleFinanceTrainingInHyderabad() {
 
             {/* Training Features */}
             <div className="grid md:grid-cols-2 gap-8">
-              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
+              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Training Modes
                 </h2>
@@ -301,7 +301,7 @@ export default async function SimpleFinanceTrainingInHyderabad() {
                 </div>
               </section>
 
-              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Why to choose VR IT solutions?
                 </h2>
@@ -318,7 +318,7 @@ export default async function SimpleFinanceTrainingInHyderabad() {
 
             {/* FAQ Section */}
             <div className="mb-8">
-              <div className="bg-gradient-to-br from-green-600/15 via-blue-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+              <div className="bg-gradient-to-br from-green-600/15 via-blue-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
                 <FAQ faqs={s4HanaFinanceFaqs} theme="sap" />
               </div>
             </div>

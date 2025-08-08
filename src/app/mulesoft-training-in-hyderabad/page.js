@@ -157,7 +157,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - MuleSoft Training in Hyderabad with 100% Placement Guarantee */}
-            <section className="bg-gradient-to-br from-orange-500/15 via-red-600/20 to-pink-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10">
+            <section className="bg-gradient-to-br from-orange-500/15 via-red-600/20 to-pink-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
@@ -234,7 +234,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
             </section>
             
             {/* Why should you do this course? */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Why should you do this course?
               </h2>
@@ -253,7 +253,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
             </section>
 
             {/* Course Structure */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-violet-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-violet-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Course Structure
               </h2>
@@ -278,7 +278,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
             </section>
 
             {/* Who can do this course? */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Who can do this course?
               </h2>
@@ -293,7 +293,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
             </section>
 
             {/* What are the pre-requisites for this course? */}
-            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 What are the pre-requisites for this course?
               </h2>
@@ -312,7 +312,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
             </section>
 
             {/* Why VR IT Solutions */}
-            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
+            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Why VR IT Solutions
               </h2>
@@ -327,7 +327,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
             </section>
 
             {/* How will I execute the Practicals? */}
-            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
+            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 How will I execute the Practicals?
               </h2>
@@ -347,7 +347,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
 
             {/* Training Features */}
             <div className="grid md:grid-cols-2 gap-8">
-              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
+              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Training Modes
                 </h2>
@@ -361,7 +361,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
                 </div>
               </section>
 
-              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Why choose VR IT Solutions?
                 </h2>
@@ -377,7 +377,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
             </div>
 
             {/* Placement Guarantee */}
-            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 100% Placement Support
               </h2>
@@ -396,7 +396,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
             </section>
 
             {/* FAQ Section */}
-            <section className="bg-gradient-to-br from-orange-600/15 via-red-600/20 to-pink-600/15 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/30 shadow-xl shadow-orange-500/10">
+            <section className="bg-gradient-to-br from-orange-600/15 via-red-600/20 to-pink-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-orange-400/30 shadow-xl shadow-orange-500/10">
               <FAQ faqs={muleSoftFaqs} theme="default" />
             </section>
 

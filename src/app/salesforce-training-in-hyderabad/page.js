@@ -103,7 +103,7 @@ export default async function SalesforceTraining() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - Salesforce Training in Hyderabad with 100% Placement Guarantee */}
-            <section className="bg-gradient-to-br from-green-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-green-400/30 shadow-2xl shadow-green-500/10">
+            <section className="bg-gradient-to-br from-green-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-green-400/30 shadow-2xl shadow-green-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
@@ -147,7 +147,7 @@ export default async function SalesforceTraining() {
             </section>
             
             {/* Salesforce Training */}
-            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Salesforce Training
               </h2>
@@ -176,7 +176,7 @@ export default async function SalesforceTraining() {
             </section>
 
             {/* The Best Highlights Of Salesforce : */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-pink-600/20 to-rose-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-pink-600/20 to-rose-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 The Best Highlights Of Salesforce :
               </h2>
@@ -204,7 +204,7 @@ export default async function SalesforceTraining() {
             </section>
 
             {/* Why should you do this course? */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Why should you do this course?
               </h2>
@@ -223,7 +223,7 @@ export default async function SalesforceTraining() {
             </section>
 
             {/* Salesforce prerequisites for taking up this online Salesforce course */}
-            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Salesforce prerequisites for taking up this online Salesforce course
               </h2>

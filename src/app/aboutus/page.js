@@ -97,7 +97,7 @@ export default async function AboutUs() {
       {/* Overview Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-r from-orange-500/20 to-blue-500/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+          <div className="bg-gradient-to-r from-orange-500/20 to-blue-500/20 backdrop-blur-sm rounded-3xl p-4 lg:p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">Overview</h2>
             <div className="prose prose-lg prose-invert max-w-none space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
@@ -139,7 +139,7 @@ export default async function AboutUs() {
       {/* Our Unique Approach */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-r from-teal-500/20 to-blue-500/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+          <div className="bg-gradient-to-r from-teal-500/20 to-blue-500/20 backdrop-blur-sm rounded-3xl p-4 lg:p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">Our Unique Approach</h2>
             <div className="prose prose-lg prose-invert max-w-none space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
@@ -183,7 +183,7 @@ export default async function AboutUs() {
       {/* Corporate Training */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-r from-orange-500/20 to-teal-500/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+          <div className="bg-gradient-to-r from-orange-500/20 to-teal-500/20 backdrop-blur-sm rounded-3xl p-4 lg:p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">Corporate Training</h2>
             <div className="prose prose-lg prose-invert max-w-none space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
@@ -215,7 +215,7 @@ export default async function AboutUs() {
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">About Our Team</h2>
           </div>
-          <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-white/10">
             <div className="prose prose-lg prose-invert max-w-none space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
                 Our team is dynamic, passionate and above all highly experienced, drawn from renowned institutes like IIT, NIT and from other reputed universities. With a commitment to offer the best possible training, we ensure that our training adheres to the best practices, aimed to assimilate the theoretical knowledge with hands-on exercises and practical training.
@@ -234,7 +234,7 @@ export default async function AboutUs() {
       {/* About VR IT Solutions */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-r from-blue-500/20 to-teal-500/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+          <div className="bg-gradient-to-r from-blue-500/20 to-teal-500/20 backdrop-blur-sm rounded-3xl p-4 lg:p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">About VR IT Solutions</h2>
             <div className="text-center space-y-6">
               <p className="text-gray-300 leading-relaxed text-lg">
@@ -294,7 +294,7 @@ export default async function AboutUs() {
       {/* FAQ Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-gradient-to-br from-orange-500/10 via-blue-500/15 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-orange-400/20 shadow-xl shadow-orange-500/5">
+          <div className="bg-gradient-to-br from-orange-500/10 via-blue-500/15 to-teal-500/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-orange-400/20 shadow-xl shadow-orange-500/5">
             <FAQ faqs={aboutUsFaqs} theme="default" />
           </div>
         </div>
@@ -303,7 +303,7 @@ export default async function AboutUs() {
       {/* Call to Action */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-orange-500/20 to-blue-500/20 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+          <div className="bg-gradient-to-r from-orange-500/20 to-blue-500/20 backdrop-blur-sm rounded-3xl p-4 lg:p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Career?
             </h2>

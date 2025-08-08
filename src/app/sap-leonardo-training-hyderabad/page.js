@@ -149,7 +149,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - SAP Leonardo Training In Hyderabad */}
-            <section className="bg-gradient-to-br from-purple-500/15 via-indigo-600/20 to-blue-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-purple-400/30 shadow-2xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-500/15 via-indigo-600/20 to-blue-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-purple-400/30 shadow-2xl shadow-purple-500/10">
               <div className="text-center mb-8">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -191,7 +191,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
             </section>
 
             {/* Other SAP Courses */}
-            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
+            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
                 Other SAP Courses
               </h2>
@@ -248,7 +248,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
             </section>
 
             {/* Introduction */}
-            <section className="bg-gradient-to-br from-indigo-600/15 via-purple-600/20 to-violet-600/15 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
+            <section className="bg-gradient-to-br from-indigo-600/15 via-purple-600/20 to-violet-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-indigo-400/30 shadow-xl shadow-indigo-500/10">
               <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
                 <p className="text-indigo-100 leading-relaxed">
                   VR IT Solutions announces sap leonardo training program, which is booming in today is ecommerce business. VR IT Solutions sap leonardo online training we provide expert training on the concepts like Leonardo workflows, Cockpits, Leonardo Service overview, Leonardo Sales overview, product image handling, Leonardo programming with API, order management, validation in Leonardo, Leonardo workflows and many more.
@@ -257,7 +257,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
             </section>
             
             {/* About SAP Leonardo */}
-            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+            <section className="bg-gradient-to-br from-blue-600/15 via-cyan-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 About SAP Leonardo
               </h2>
@@ -276,7 +276,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
             </section>
 
             {/* Why SAP Leonardo? */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Why SAP Leonardo?
               </h2>
@@ -301,7 +301,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
             </section>
 
             {/* Target Audience */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Target Audience
               </h2>
@@ -316,7 +316,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
             </section>
 
             {/* Course Topics */}
-            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
+            <section className="bg-gradient-to-br from-violet-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-violet-400/30 shadow-xl shadow-violet-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
                 Course Topics
               </h2>
@@ -332,7 +332,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
 
             {/* Training Features */}
             <div className="grid md:grid-cols-2 gap-8">
-              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
+              <section className="bg-gradient-to-br from-slate-600/15 via-gray-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-slate-400/30 shadow-xl shadow-slate-500/10">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Training Modes
                 </h2>
@@ -346,7 +346,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
                 </div>
               </section>
 
-              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+              <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-6">
                   Why to choose VR IT solutions?
                 </h2>
@@ -362,7 +362,7 @@ export default async function SAPLeonardoTrainingHyderabad() {
             </div>
 
             {/* FAQ Section */}
-            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
               <FAQ faqs={sapLeonardoFaqs} theme="sap" />
             </section>
 

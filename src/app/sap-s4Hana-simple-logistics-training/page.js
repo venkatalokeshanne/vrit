@@ -168,7 +168,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - Vibrant Orange/Blue */}
-            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in">
+            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in">
               {/* Floating Alert Badge */}
               <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-bounce shadow-lg">
                 🔥 Limited Seats!
@@ -231,7 +231,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
             </section>
 
             {/* Other SAP Courses */}
-            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
+            <section className="bg-gradient-to-br from-gray-600/15 via-slate-600/20 to-zinc-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-gray-400/30 shadow-xl shadow-gray-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 text-center">
                 Other SAP Courses
               </h2>
@@ -288,7 +288,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
             </section>
             
             {/* Why Should You Do This Course - Green Theme */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Target className="w-8 h-8 text-emerald-400 animate-pulse" />
                 Why should you do this course?
@@ -308,7 +308,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
             </section>
 
             {/* Prerequisites - Purple Theme */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <CheckCircle className="w-8 h-8 text-purple-400 animate-pulse" />
                 Prerequisites
@@ -326,7 +326,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
             </section>
 
             {/* Course Structure - Amber/Yellow Theme */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <BookOpen className="w-8 h-8 text-amber-400" />
                 Course Structure
@@ -347,7 +347,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
             </section>
 
             {/* Who Can Do This Course - Rose Theme */}
-            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
+            <section className="bg-gradient-to-br from-rose-600/15 via-pink-600/20 to-red-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-rose-400/30 shadow-xl shadow-rose-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Users className="w-8 h-8 text-rose-400" />
                 Who can do this course?
@@ -363,7 +363,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
             </section>
 
             {/* Why VR IT Solutions */}
-            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
+            <section className="bg-gradient-to-br from-cyan-600/15 via-blue-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-cyan-400/30 shadow-xl shadow-cyan-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-3">
                 <Award className="w-8 h-8 text-cyan-400" />
                 Why VR IT solutions?
@@ -384,7 +384,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
             </section>
 
             {/* How Will I Execute Practicals - Green Theme */}
-            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
+            <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Code className="w-8 h-8 text-green-400 animate-pulse" />
                 How will I execute the Practicals?
@@ -405,7 +405,7 @@ export default async function SAPS4HANASimpleLogisticsTraining() {
 
             {/* FAQ Section */}
             <div className="mb-8">
-              <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+              <div className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
                 <FAQ faqs={simpleLogisticsFaqs} theme="default" />
               </div>
             </div>

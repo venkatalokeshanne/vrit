@@ -100,19 +100,19 @@ export default async function Services() {
           
           {/* Service Categories */}
           <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-gradient-to-br from-blue-500/20 via-blue-600/20 to-blue-700/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl hover:scale-105 transition-all duration-300">
+            <div className="bg-gradient-to-br from-blue-500/20 via-blue-600/20 to-blue-700/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl hover:scale-105 transition-all duration-300">
               <Monitor className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Online Training</h3>
               <p className="text-blue-200">Learn anytime, anywhere with our comprehensive online training programs</p>
             </div>
             
-            <div className="bg-gradient-to-br from-purple-500/20 via-purple-600/20 to-purple-700/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl hover:scale-105 transition-all duration-300">
+            <div className="bg-gradient-to-br from-purple-500/20 via-purple-600/20 to-purple-700/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl hover:scale-105 transition-all duration-300">
               <Users className="w-16 h-16 text-purple-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">ClassRoom Training</h3>
               <p className="text-purple-200">Interactive classroom sessions with expert trainers and hands-on experience</p>
             </div>
             
-            <div className="bg-gradient-to-br from-teal-500/20 via-teal-600/20 to-teal-700/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 shadow-xl hover:scale-105 transition-all duration-300">
+            <div className="bg-gradient-to-br from-teal-500/20 via-teal-600/20 to-teal-700/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-teal-400/30 shadow-xl hover:scale-105 transition-all duration-300">
               <Headphones className="w-16 h-16 text-teal-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Job Support</h3>
               <p className="text-teal-200">Complete career support and job placement assistance for your success</p>
@@ -137,7 +137,7 @@ export default async function Services() {
                 </h2>
               </div>
               
-              <div className="bg-gradient-to-br from-blue-500/10 via-cyan-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/20 shadow-xl">
+              <div className="bg-gradient-to-br from-blue-500/10 via-cyan-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/20 shadow-xl">
                 <div className="prose prose-lg prose-invert max-w-none">
                   <p className="text-gray-300 leading-relaxed mb-6">
                     A busy professional like you may not have the required bandwidth to attend class room training and hence to facilitate easy and effective learning, VR IT solutions has specially designed online mode of training for all the courses. We adopt the best practices, excellent learning pedagogies and easy to follow examples to make your learning experience, quite pleasurable and enriching. This online training is supported by exemplary practical training to make you a complete professional and job ready. We offer training in basic and advanced courses to meet your specific career goals. So, get started now to learn anytime, anywhere.
@@ -172,7 +172,7 @@ export default async function Services() {
 
             {/* Online Training Image */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-2xl">
+              <div className="bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-2xl">
                 <img src={mainImageUrl}
                   alt="Online Training institutes in Hyderabad"
                   className="w-full rounded-xl shadow-lg"
@@ -201,7 +201,7 @@ export default async function Services() {
             
             {/* Classroom Training Image */}
             <div className="lg:order-1 relative">
-              <div className="bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-red-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-2xl">
+              <div className="bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-red-500/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-2xl">
                 <img
                   src="/logo.png"
                   alt="ClassRoom Training institutes in Hyderabad"
@@ -232,7 +232,7 @@ export default async function Services() {
                 </h2>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-red-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/20 shadow-xl">
+              <div className="bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-red-500/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/20 shadow-xl">
                 <div className="prose prose-lg prose-invert max-w-none">
                   <p className="text-gray-300 leading-relaxed mb-6">
                     Experience hands-on learning with our interactive classroom training sessions. Our expert trainers provide personalized attention and real-time guidance to ensure you master every concept thoroughly. The classroom environment fosters collaborative learning and immediate doubt resolution.
@@ -295,7 +295,7 @@ export default async function Services() {
                 </h2>
               </div>
               
-              <div className="bg-gradient-to-br from-teal-500/10 via-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/20 shadow-xl">
+              <div className="bg-gradient-to-br from-teal-500/10 via-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-teal-400/20 shadow-xl">
                 <div className="prose prose-lg prose-invert max-w-none">
                   <p className="text-gray-300 leading-relaxed mb-6">
                     Our comprehensive job support services ensure your successful career transition. From resume preparation to interview coaching and placement assistance, we provide end-to-end support to help you secure your dream job in top MNCs.
@@ -348,7 +348,7 @@ export default async function Services() {
 
             {/* Job Support Image */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-teal-500/20 via-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-8 border border-teal-400/30 shadow-2xl">
+              <div className="bg-gradient-to-br from-teal-500/20 via-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-teal-400/30 shadow-2xl">
                 <img
                   src="/logo.png"
                   alt="Job Support services in Hyderabad"
@@ -374,7 +374,7 @@ export default async function Services() {
       {/* FAQ Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-500/10 via-purple-500/15 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/20 shadow-xl shadow-blue-500/5">
+          <div className="bg-gradient-to-br from-blue-500/10 via-purple-500/15 to-teal-500/10 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/20 shadow-xl shadow-blue-500/5">
             <FAQ faqs={servicesFaqs} theme="default" />
           </div>
         </div>
