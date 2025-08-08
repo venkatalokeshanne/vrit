@@ -30,6 +30,8 @@ const allCoursesQuery = `
     mainImage{
       asset->
     },
+    importantText,
+    bannerUrl,
     ogTitle,
     ogDescription,
     twitterTitle,
@@ -88,6 +90,10 @@ function processCourseMetadata(courseData) {
   const mainImage = processImage(courseData.mainImage);
   const ogImage = processImage(courseData.ogImage);
   const twitterImage = processImage(courseData.twitterImage);
+  
+  // Process new properties
+  const importantText = courseData.importantText || '';
+  const bannerUrl = courseData.bannerUrl || '';
   
   // Build URLs
   const courseUrl = courseData.canonical || `${DEFAULTS.baseUrl}/${slug}`;
@@ -187,6 +193,8 @@ function processCourseMetadata(courseData) {
     // Basic course info
     slug,
     mainImage,
+    importantText,
+    bannerUrl,
     // Additional metadata not in Next.js metadata
     hreflang: courseData.hreflang,
     reviewCount: courseData.reviewCount || '0',

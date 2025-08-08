@@ -3,9 +3,11 @@ import "./globals.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollingCourses from './components/ScrollingCourses';
+import ScrollingBanner from './components/ScrollingBanner';
 import RichSnippetsManager from '../utils/richSnippets';
 import { getPageMetadataStatic, getStructuredDataStatic } from '../utils/staticCourses';
 import Script from 'next/script';
+import coursesData from '../data/courses-static.json';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,6 +27,10 @@ export async function generateMetadata() {
 export default async function RootLayout({ children }) {
   // Get structured data for the homepage
   const structuredData = getStructuredDataStatic('index');
+  
+  // Get the importantText from the index data
+  const indexData = coursesData.find(course => course.slug === 'index');
+  const importantText = indexData?.importantText || '';
 
   return (
     <html lang="en">
@@ -124,6 +130,7 @@ export default async function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <ScrollingBanner text={importantText} isVisible={!!importantText} />
         <Header />
         {children}
         <ScrollingCourses />

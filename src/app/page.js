@@ -35,8 +35,15 @@ import Link from 'next/link';
 import FAQRichSnippets from './components/FAQRichSnippets';
 import BreadcrumbRichSnippets from './components/BreadcrumbRichSnippets';
 import FAQ from './components/FAQ';
+import PopupBanner from './components/PopupBanner';
+import coursesData from '../data/courses-static.json';
 
 export default function Home() {
+  // Get the mainImage from the index slug data
+  const indexData = coursesData.find(course => course.slug === 'index');
+  const popupImage = indexData?.mainImage || '';
+  const bannerUrl = indexData?.bannerUrl || '';
+
   const courses = [
     { name: 'ServiceNow', duration: '40 Days', icon: Cloud, color: 'from-blue-500 to-cyan-500', image: '/logo.png', description: 'Master IT Service Management, workflow automation, and enterprise cloud solutions with hands-on ServiceNow platform experience.', link: '/servicenow-training-in-hyderabad' },
     { name: 'Salesforce', duration: '70 Days', icon: Zap, color: 'from-green-500 to-teal-500', image: '/logo.png', description: 'Learn CRM fundamentals, Lightning Platform development, and Salesforce administration for career advancement.', link: '/salesforce-training-in-hyderabad' },
@@ -131,6 +138,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
+      
+      {/* Popup Banner */}
+      <PopupBanner imageUrl={popupImage} bannerUrl={bannerUrl} delay={5000} />
       
       {/* Clean Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
