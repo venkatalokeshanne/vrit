@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -94,10 +94,11 @@ const sapSecurityFaqs = [
 ];
 
 export default async  function SAPSecurityTrainingInHyderabad() {
-  const structuredDataJson = await getPageStructuredData();
+  const structuredDataJson = getStructuredDataStatic('sap-security-training');
 
   // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('sap-security-training');
+  const courseData = getCourseBySlugStatic('sap-security-training');
+  const metadata = courseData?.metadata;
   const mainImageUrl = metadata?.mainImage || '/logo.png';
 
   const trainingModes = [

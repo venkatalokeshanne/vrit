@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -71,10 +71,11 @@ export async function generateMetadata() {
 
 
 export default async  function HadoopOnlineTraining() {
-  const structuredDataJson = await getPageStructuredData();
+  const structuredDataJson = getStructuredDataStatic('hadoop-online-training');
 
   // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('hadoop-online-training');
+  const courseData = getCourseBySlugStatic('hadoop-online-training');
+  const metadata = courseData?.metadata;
   const mainImageUrl = metadata?.mainImage || '/logo.png';
 
   const hadoopFaqs = [

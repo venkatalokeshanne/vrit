@@ -30,12 +30,11 @@ import {
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'app';import Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import FAQRichSnippets from './components/FAQRichSnippets';
 import BreadcrumbRichSnippets from './components/BreadcrumbRichSnippets';
 import FAQ from './components/FAQ';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../utils/metadata';
 
 export default function Home() {
   const courses = [
@@ -754,7 +753,52 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('index'))
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': ['LocalBusiness', 'EducationalOrganization'],
+            name: 'VR IT SOL',
+            description: 'Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses',
+            url: 'https://www.vritsol.com',
+            logo: 'https://www.vritsol.com/images/vritlogo.png',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: '506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana.',
+              addressLocality: 'Hyderabad',
+              addressRegion: 'Telangana',
+              postalCode: '500016',
+              addressCountry: 'IN'
+            },
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: '17.4374',
+              longitude: '78.4482'
+            },
+            contactPoint: {
+              '@type': 'ContactPoint',
+              telephone: '+91-9032734343',
+              email: 'info@vritsol.com',
+              contactType: 'customer service'
+            },
+            openingHours: ['Mo-Sa 08:00-21:30', 'Su 09:00-13:00'],
+            areaServed: { '@type': 'Place', name: 'Hyderabad, Telangana' },
+            sameAs: [
+              'https://www.facebook.com/vritsolutions/',
+              'https://twitter.com/vritsolutions',
+              'https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA'
+            ],
+            hasOfferCatalog: {
+              '@type': 'OfferCatalog',
+              name: 'IT Training Courses',
+              itemListElement: [
+                { '@type': 'Course', name: 'ServiceNow Training' },
+                { '@type': 'Course', name: 'Salesforce Training' },
+                { '@type': 'Course', name: 'SAP Training' },
+                { '@type': 'Course', name: 'Pega Training' },
+                { '@type': 'Course', name: 'Azure DevOps Training' },
+                { '@type': 'Course', name: 'AWS Cloud Training' }
+              ]
+            }
+          })
         }}
       />
     </div>

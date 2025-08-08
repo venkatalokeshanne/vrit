@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -35,17 +35,20 @@ import {
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'azure-devops-online-training-in-pune';export async function generateMetadata() {
-  return await getPageMetadata('azure-devops-online-training-in-pune');
+const COURSE_SLUG = 'azure-devops-online-training-in-pune';
+export async function generateMetadata() {
+  const courseMetadata = getCourseBySlugStatic('azure-devops-online-training-in-pune');
+  return courseMetadata?.metadata || {};
 }
 
 
 
 export default function AzureDevOpsTraining() {
-  const structuredDataJson = getPageStructuredData();
+  const structuredDataJson = getStructuredDataStatic('azure-devops-online-training-in-pune');
   // Fetch metadata for dynamic hero image
 
-  const metadata = getPageMetadata('azure-devops-online-training-in-pune');
+  const courseData = getCourseBySlugStatic('azure-devops-online-training-in-pune');
+  const metadata = courseData?.metadata;
   const mainImageUrl = metadata?.mainImage || '/azure-devops.jpg';
   const azureDevOpsFaqs = [
     {

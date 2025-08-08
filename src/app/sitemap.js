@@ -54,13 +54,15 @@ export default async function sitemap() {
     ];
 
     // Dynamic course pages from Sanity
-    const coursePages = courses.map((course) => ({
-      url: `${baseUrl}/${course.slug.current}`,
-      lastModified: new Date(course._updatedAt || course._createdAt),
-      changeFrequency: course.slug.current.includes('training') ? 'weekly' : 'monthly',
-      priority: course.slug.current === 'index' ? 1.0 : 
-                course.slug.current.includes('training') ? 0.8 : 0.6,
-    }));
+    const coursePages = courses
+      .filter(course => course && course.slug && course.slug.current) // Filter out null/invalid courses
+      .map((course) => ({
+        url: `${baseUrl}/${course.slug.current}`,
+        lastModified: new Date(course._updatedAt || course._createdAt),
+        changeFrequency: course.slug.current.includes('training') ? 'weekly' : 'monthly',
+        priority: course.slug.current === 'index' ? 1.0 : 
+                  course.slug.current.includes('training') ? 0.8 : 0.6,
+      }));
 
     // Combine all pages
     const allPages = [...staticPages, ...coursePages];

@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -41,10 +41,11 @@ export async function generateMetadata() {
 
 
 export default async  function PegaTrainingInHyderabad() {
-  const structuredDataJson = await getPageStructuredData();
+  const structuredDataJson = getStructuredDataStatic('pega-training-in-hyderabad');
 
   // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('pega-training-in-hyderabad');
+  const courseData = getCourseBySlugStatic('pega-training-in-hyderabad');
+  const metadata = courseData?.metadata;
   const mainImageUrl = metadata?.mainImage || '/logo.png';
 
   const pegaFaqs = [

@@ -46,27 +46,31 @@ const termsAndConditionsFaqs = [
   }
 ];
 
-// Generate metadata for this page using static data
-export async function generateMetadata() {
-  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  return courseMetadata?.metadata || {};
-}
-
-
+// Metadata for this page
+export const metadata = {
+  title: 'Terms and Conditions | VR IT Solutions',
+  description: 'Read the terms and conditions for VR IT Solutions. Learn about our policies, user guidelines, and service terms.',
+  keywords: ['terms and conditions', 'user agreement', 'VR IT Solutions policy'],
+  openGraph: {
+    title: 'Terms and Conditions | VR IT Solutions',
+    description: 'Read the terms and conditions for VR IT Solutions. Learn about our policies, user guidelines, and service terms.',
+    url: '/terms-and-conditions',
+    type: 'website',
+    images: []
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms and Conditions | VR IT Solutions',
+    description: 'Read the terms and conditions for VR IT Solutions. Learn about our policies, user guidelines, and service terms.',
+    images: []
+  },
+  canonical: 'https://www.vritsol.com/terms-and-conditions'
+};
 
 export default function TermsAndConditions() {
-  // Get the complete course metadata from static file
-  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  
-  // Get structured data directly from courseMetadata
-  const structuredDataJson = courseMetadata?.structuredData ? 
-    JSON.stringify(courseMetadata.structuredData) : null;
-
-  // Use only mainImage for mainImageUrl
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
-
-  // Log the courseMetadata to see what we have
-  console.log('📊 Course Metadata:', courseMetadata);
+  // Get structured data from static function
+  const { getStructuredDataStatic } = require('../../utils/staticCourses');
+  const structuredDataJson = JSON.stringify(getStructuredDataStatic());
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">

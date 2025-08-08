@@ -1,6 +1,6 @@
 import React from 'react';
 import FAQ from '../components/FAQ';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 
 // FAQ Data for Refund and Course Rescheduling Policy
 const refundPolicyFaqs = [
@@ -47,13 +47,14 @@ const refundPolicyFaqs = [
 ];
 
 export async function generateMetadata() {
-  return await getPageMetadata('refund-and-course-rescheduling-policy');
+  const courseMetadata = getCourseBySlugStatic('refund-and-course-rescheduling-policy');
+  return courseMetadata?.metadata || {};
 }
 
 
 
 export default function RefundAndCourseReschedulingPolicy() {
-  const structuredDataJson = getPageStructuredData();
+  const structuredDataJson = JSON.stringify(getStructuredDataStatic());
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

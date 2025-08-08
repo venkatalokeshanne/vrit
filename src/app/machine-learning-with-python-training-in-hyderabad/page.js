@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -44,11 +44,12 @@ export async function generateMetadata() {
 
 
 
-export default async  function MachineLearningWithPythonTrainingInHyderabad() {
-  const structuredDataJson = await getPageStructuredData();
+export default function MachineLearningWithPythonTrainingInHyderabad() {
+  const structuredDataJson = getStructuredDataStatic(COURSE_SLUG);
 
   // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('machine-learning-with-python-training-in-hyderabad');
+  const courseData = getCourseBySlugStatic(COURSE_SLUG);
+  const metadata = courseData?.metadata;
   const mainImageUrl = metadata?.mainImage || '/logo.png';
 
   const pythonLibraries = [

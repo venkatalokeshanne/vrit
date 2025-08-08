@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -30,7 +30,8 @@ import {
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'python-online-training';export async function generateMetadata() {
-  return await getPageMetadata('python-online-training');
+  const courseMetadata = getCourseBySlugStatic('python-online-training');
+  return courseMetadata?.metadata || {};
 }
 
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -89,10 +89,11 @@ const sasClinicalOnlineFaqs = [
 ];
 
 export default async  function SASClinicalOnlineTrainingInUS() {
-  const structuredDataJson = await getPageStructuredData();
+  const structuredDataJson = getStructuredDataStatic('sas-clinical-online-training-in-us-uk-canada-australia');
 
   // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('sas-clinical-online-training-in-us-uk-canada-australia');
+  const courseData = getCourseBySlugStatic('sas-clinical-online-training-in-us-uk-canada-australia');
+  const metadata = courseData?.metadata;
   const mainImageUrl = metadata?.mainImage || '/logo.png';
 
   const courseStructure = [

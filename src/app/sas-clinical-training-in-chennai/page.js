@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -37,7 +37,8 @@ import {
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'sas-clinical-training-in-chennai';export async function generateMetadata() {
-  return await getPageMetadata('sas-clinical-training-in-chennai');
+  const courseMetadata = getCourseBySlugStatic('sas-clinical-training-in-chennai');
+  return courseMetadata?.metadata || {};
 }
 
 
@@ -397,7 +398,7 @@ export default function SASClinicalTraining() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getStructuredData('sas-clinical-training-in-chennai'))
+          __html: JSON.stringify(getStructuredDataStatic('sas-clinical-training-in-chennai'))
         }}
       />
       

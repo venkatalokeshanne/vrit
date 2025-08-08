@@ -38,18 +38,10 @@ export async function generateMetadata() {
 }
 
 export default function GoogleCloudTrainingInHyderabad() {
-  // Get the complete course metadata from static file
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  
-  // Get structured data directly from courseMetadata
   const structuredDataJson = courseMetadata?.structuredData ? 
     JSON.stringify(courseMetadata.structuredData) : null;
-
-  // Get image directly from courseMetadata (multiple fallbacks)
-  const mainImageUrl = courseMetadata?.ogImage || 
-                       courseMetadata?.mainImage || 
-                       courseMetadata?.metadata?.openGraph?.images?.[0]?.url ||
-                       '/logo.png';
+  const mainImageUrl = courseMetadata?.mainImage
 
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);
