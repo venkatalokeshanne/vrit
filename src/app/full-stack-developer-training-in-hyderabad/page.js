@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -49,16 +49,14 @@ import {
   Palette
 } from 'lucide-react';
 
-// Generate metadata for this page
+// Define the course slug as a constant
+const COURSE_SLUG = 'full-stack-developer-training-in-hyderabad';// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('full-stack-developer-training-in-hyderabad');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('full-stack-developer-training-in-hyderabad');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
+
 
 export default async  function FullStackDeveloperTrainingInHyderabad() {
   const structuredDataJson = await getPageStructuredData();

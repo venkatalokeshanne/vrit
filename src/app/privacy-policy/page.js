@@ -1,6 +1,6 @@
 import React from 'react';
 import FAQ from '../components/FAQ';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 
 // FAQ Data for Privacy Policy
 const privacyPolicyFaqs = [
@@ -46,23 +46,27 @@ const privacyPolicyFaqs = [
   }
 ];
 
-// Generate metadata for this page
+// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('privacy-policy');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('privacy-policy');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
 
-export default async function PrivacyPolicy() {
-  const structuredDataJson = await getPageStructuredData();
 
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('privacy-policy');
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+export default function PrivacyPolicy() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
+
+  // Use only mainImage for mainImageUrl
+  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">

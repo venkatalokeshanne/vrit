@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -35,23 +35,28 @@ import {
   Brain,
 } from 'lucide-react';
 
-// Generate metadata for this page
+// Define the course slug as a constant
+const COURSE_SLUG = 'sap-s4Hana-simple-logistics-training';// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('sap-s4hana-simple-logistics-training');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('sap-s4hana-simple-logistics-training');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
 
-export default async function SAPS4HANASimpleLogisticsTraining() {
-  const structuredDataJson = await getPageStructuredData();
 
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('sap-s4Hana-simple-logistics-training');
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+export default function SAPS4HANASimpleLogisticsTraining() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
+
+  // Use only mainImage for mainImageUrl
+  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
 
   
   const courseModules = [

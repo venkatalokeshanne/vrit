@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -36,7 +36,8 @@ import {
   Calculator
 } from 'lucide-react';
 
-// FAQ Data for S/4 HANA Finance Training
+// Define the course slug as a constant
+const COURSE_SLUG = 'simple-finance-training-in-hyderabad';// FAQ Data for S/4 HANA Finance Training
 const s4HanaFinanceFaqs = [
   {
     question: "What are the key differences between traditional SAP FICO and S/4 HANA Finance?",
@@ -80,23 +81,27 @@ const s4HanaFinanceFaqs = [
   }
 ];
 
-// Generate metadata for this page
+// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('simple-finance-training-in-hyderabad');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('simple-finance-training-in-hyderabad');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
 
-export default async function SimpleFinanceTrainingInHyderabad() {
-  const structuredDataJson = await getPageStructuredData();
 
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('simple-finance-training-in-hyderabad');
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+export default function SimpleFinanceTrainingInHyderabad() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
+
+  // Use only mainImage for mainImageUrl
+  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
 
 
   const topicsCovered = [

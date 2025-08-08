@@ -7,7 +7,7 @@ import { getAllCoursesMetadata, getCourseBySlug } from '../lib/sanity';
  */
 export async function getPageMetadata(slug) {
   try {
-    // Get course data directly (no cache)
+    // Get course data directly
     const pageData = await getCourseBySlug(slug);
     
     if (!pageData) {
@@ -265,4 +265,93 @@ Allow: /courses
 Allow: /aboutus
 Allow: /contactus
 Allow: /blog`;
+}
+
+/**
+ * Get enhanced structured data with multiple schema types using Sanity data
+ * @param {string} slug - The page slug
+ * @param {Array} faqs - Optional FAQ data to include FAQ schema
+ * @returns {Array} - Array of structured data objects
+ */
+export async function getEnhancedStructuredData(slug, faqs = []) {
+  try {
+    const pageData = await getCourseBySlug(slug);
+    const schemas = [];
+    
+    // Add main course/business structured data
+    const mainStructuredData = await getStructuredData(slug);
+    if (mainStructuredData) {
+      schemas.push(mainStructuredData);
+    }
+    
+    // Add breadcrumb schema using Sanity data
+    if (pageData) {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.vritsol.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Courses",
+            "item": "https://www.vritsol.com/courses"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": pageData.title,
+            "item": `https://www.vritsol.com/${slug}`
+          }
+        ]
+      });
+    }
+    
+    // Add FAQ schema if faqs are provided
+    if (faqs && faqs.length > 0) {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      });
+    }
+    
+    // Add course review schema using Sanity data
+    if (pageData && pageData.ratingValue) {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": pageData.title,
+        "description": pageData.description,
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": pageData.ratingValue,
+          "reviewCount": pageData.reviewCount || "150",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "VR IT SOL"
+        }
+      });
+    }
+    
+    return schemas;
+  } catch (error) {
+    console.error('Error generating enhanced structured data:', error);
+    return [];
+  }
 }

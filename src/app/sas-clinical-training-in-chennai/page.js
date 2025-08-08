@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -35,16 +35,12 @@ import {
   Heart,
 } from 'lucide-react';
 
-
-export async function generateMetadata() {
+// Define the course slug as a constant
+const COURSE_SLUG = 'sas-clinical-training-in-chennai';export async function generateMetadata() {
   return await getPageMetadata('sas-clinical-training-in-chennai');
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('sas-clinical-training-in-chennai');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
+
 
 // FAQ Data for SAS Clinical Online Training
 const sasClinicalOnlineFaqs = [
@@ -90,11 +86,19 @@ const sasClinicalOnlineFaqs = [
   }
 ];
 
-export default async function SASClinicalTraining() {
-  const structuredDataJson = await getPageStructuredData();
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('sas-clinical-training-in-chennai');
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+export default function SASClinicalTraining() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
+
+  // Use only mainImage for mainImageUrl
+  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
 
   const courseStructure = [
     "Introduction to SAS and Clinical Trials",

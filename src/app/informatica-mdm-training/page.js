@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -47,16 +47,14 @@ import {
   Link
 } from 'lucide-react';
 
-// Generate metadata for this page
+// Define the course slug as a constant
+const COURSE_SLUG = 'informatica-mdm-training';// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('informatica-mdm-training');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('informatica-mdm-training');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
+
 
 export default async  function InformaticaMDMTraining() {
   const structuredDataJson = await getPageStructuredData();

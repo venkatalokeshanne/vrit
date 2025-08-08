@@ -1,6 +1,6 @@
 import React from 'react';
 import FAQ from '../components/FAQ';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 
 // FAQ Data for Refund and Course Rescheduling Policy
 const refundPolicyFaqs = [
@@ -50,11 +50,7 @@ export async function generateMetadata() {
   return await getPageMetadata('refund-and-course-rescheduling-policy');
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('refund-and-course-rescheduling-policy');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
+
 
 export default function RefundAndCourseReschedulingPolicy() {
   const structuredDataJson = getPageStructuredData();

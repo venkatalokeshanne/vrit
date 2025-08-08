@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run build:courses && next build",
+    "build:courses": "node scripts/build-courses-data.js",
+    "update:courses": "node scripts/update-all-course-pages.js",
     "start": "next start",
     "lint": "next lint"
   },

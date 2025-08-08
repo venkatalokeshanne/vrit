@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -34,22 +34,28 @@ import {
   Activity
 } from 'lucide-react';
 
-// Generate metadata for this page
+// Define the course slug as a constant
+const COURSE_SLUG = 'data-science-training-in-hyderabad';// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('data-science-training-in-hyderabad');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('data-science-training-in-hyderabad');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
 
-export default async function DataScienceTrainingInHyderabad() {
-  const structuredDataJson = await getPageStructuredData();
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('data-science-training-in-hyderabad');
-  const mainImageUrl = metadata?.mainImage || '/data-science.jpg';
+
+export default function DataScienceTrainingInHyderabad() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
+
+  // Use only mainImage for mainImageUrl
+  const mainImageUrl = courseMetadata?.mainImage || '/data-science.jpg';
+
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
 
   const dataScienceFaqs = [
     {

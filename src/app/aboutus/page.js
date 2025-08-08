@@ -1,19 +1,18 @@
 import React from 'react';
 import { CheckCircle, Users, Target, TrendingUp, Award, Clock, MapPin, Mail, Phone, Globe, BookOpen, Monitor, Code, Briefcase, Star, ArrowRight } from 'lucide-react';
-import FAQ from '../components/FAQ';
+
+// Define the course slug as a constant
+const COURSE_SLUG = 'aboutus';import FAQ from '../components/FAQ';
 import { EnquireNowButton, CallNowButton } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 
-// Generate metadata for this page
+// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('aboutus');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('aboutus');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
+
 
 // FAQ Data for About Us Page
 const aboutUsFaqs = [
@@ -59,12 +58,19 @@ const aboutUsFaqs = [
   }
 ];
 
-export default async function AboutUs() {
-  const structuredDataJson = await getPageStructuredData();
+export default function AboutUs() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
 
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('aboutus');
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+  // Use only mainImage for mainImageUrl
+  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
 
   
   const courses = [

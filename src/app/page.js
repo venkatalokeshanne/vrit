@@ -28,7 +28,9 @@ import {
   ArrowRight,
   Mail
 } from 'lucide-react';
-import Image from 'next/image';
+
+// Define the course slug as a constant
+const COURSE_SLUG = 'app';import Image from 'next/image';
 import Link from 'next/link';
 import FAQRichSnippets from './components/FAQRichSnippets';
 import BreadcrumbRichSnippets from './components/BreadcrumbRichSnippets';

@@ -1,24 +1,30 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
 
-// Generate metadata for this page
+// Define the course slug as a constant
+const COURSE_SLUG = 'contactus';import { getCourseBySlugStatic } from '../../utils/staticCourses';
+
+// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('contactus');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('contactus');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
 
-export default async function ContactUs() {
-  const structuredDataJson = await getPageStructuredData();
 
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('contactus');
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+export default function ContactUs() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
+
+  // Use only mainImage for mainImageUrl
+  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">

@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -34,16 +34,12 @@ import {
   Server
 } from 'lucide-react';
 
-
-export async function generateMetadata() {
+// Define the course slug as a constant
+const COURSE_SLUG = 'azure-devops-online-training-in-pune';export async function generateMetadata() {
   return await getPageMetadata('azure-devops-online-training-in-pune');
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('azure-devops-online-training-in-pune');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
+
 
 export default function AzureDevOpsTraining() {
   const structuredDataJson = getPageStructuredData();

@@ -1,5 +1,6 @@
 import { createClient } from '@sanity/client'
 import imageUrlBuilder from '@sanity/image-url'
+import coursesMetadata from '../data/coursesMetadata.json'
 
 export const client = createClient({
   projectId: '3hir6j0e',
@@ -13,73 +14,140 @@ export const client = createClient({
 const builder = imageUrlBuilder(client)
 export const urlFor = (source) => builder.image(source)
 
-// Helper function to convert Sanity course data to the format your existing components expect
-export function transformSanityCourse(sanityCourse) {
-  if (!sanityCourse) return null;
-//   console.log('Saibaba Transforming Sanity course:', sanityCourse)
-  // Helper to get ogImage asset URL from referenced courseImages document
+// Centralized function to create course object with all fields
+function createCourseObject(courseData, isFromSanity = false) {
+  if (!courseData) return null;
+
   let ogImageUrl = '';
-  if (sanityCourse.ogImage && sanityCourse.ogImage.ogImage && sanityCourse.ogImage.ogImage.asset) {
-    ogImageUrl = urlFor(sanityCourse.ogImage.ogImage).url();
-  } else if (typeof sanityCourse.ogImage === 'string') {
-    ogImageUrl = sanityCourse.ogImage;
-  }
   let twitterImageUrl = '';
-  if (sanityCourse.twitterImage && sanityCourse.twitterImage.twitterImage && sanityCourse.twitterImage.twitterImage.asset) {
-    twitterImageUrl = urlFor(sanityCourse.twitterImage.twitterImage).url();
-  } else if (typeof sanityCourse.twitterImage === 'string') {
-    twitterImageUrl = sanityCourse.twitterImage;
+  let mainImageUrl = '';
+
+  if (isFromSanity) {
+    // Handle Sanity image assets
+    if (courseData.ogImage && courseData.ogImage.asset) {
+      ogImageUrl = urlFor(courseData.ogImage).url();
+    } else if (typeof courseData.ogImage === 'string') {
+      ogImageUrl = courseData.ogImage;
+    }
+
+    if (courseData.twitterImage && courseData.twitterImage.asset) {
+      twitterImageUrl = urlFor(courseData.twitterImage).url();
+    } else if (typeof courseData.twitterImage === 'string') {
+      twitterImageUrl = courseData.twitterImage;
+    }
+
+    if (courseData.mainImage && courseData.mainImage.asset) {
+      mainImageUrl = urlFor(courseData.mainImage).url();
+    } else if (typeof courseData.mainImage === 'string') {
+      mainImageUrl = courseData.mainImage;
+    }
+  } else {
+    // Handle static metadata images
+    ogImageUrl = courseData.ogImage || '';
+    twitterImageUrl = courseData.twitterImage || '';
+    mainImageUrl = courseData.ogImage || ''; // Use ogImage as fallback for mainImage
   }
 
-    let mainImageUrl = '';
-  if (sanityCourse.mainImage && sanityCourse.mainImage.mainImage && sanityCourse.mainImage.mainImage.asset) {
-    mainImageUrl = urlFor(sanityCourse.mainImage.mainImage).url();
-  } else if (typeof sanityCourse.mainImage === 'string') {
-    mainImageUrl = sanityCourse.mainImage;
-  }
-// console.log('Saibaba ogImageUrl:', ogImageUrl)
+  const slug = isFromSanity ? (courseData.slug?.current || '') : courseData.slug;
+  const title = courseData.title || '';
+  const description = isFromSanity 
+    ? (courseData.courseDetails?.description || courseData.excerpt || '') 
+    : courseData.description;
+
   return {
-    slug: sanityCourse.slug?.current || '',
-    title: sanityCourse.title || '',
-    description: sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
-    keywords: sanityCourse.keywords || [],
-    ogTitle: sanityCourse.ogTitle || sanityCourse.title || '',
-    ogDescription: sanityCourse.ogDescription || sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
-    twitterTitle: sanityCourse.twitterTitle || sanityCourse.ogTitle || sanityCourse.title || '',
-    twitterDescription: sanityCourse.twitterDescription || sanityCourse.ogDescription || sanityCourse.courseDetails?.description || sanityCourse.excerpt || '',
+    slug,
+    title,
+    description,
+    keywords: isFromSanity 
+      ? (courseData.keywords || []) 
+      : (courseData.keywords ? courseData.keywords.split(',').map(k => k.trim()) : []),
+    ogTitle: courseData.ogTitle || title,
+    ogDescription: courseData.ogDescription || description,
+    twitterTitle: courseData.twitterTitle || courseData.ogTitle || title,
+    twitterDescription: courseData.twitterDescription || courseData.ogDescription || description,
     ogImage: ogImageUrl,
     mainImage: mainImageUrl,
     twitterImage: twitterImageUrl || ogImageUrl || '',
-    reviewCount: sanityCourse.reviewsCount?.toString() || '0',
-    ratingValue: sanityCourse.rating?.toString() || '5',
-    organizationName: sanityCourse.organizationName || sanityCourse.title || '',
-    postalCode: sanityCourse.postalCode || sanityCourse.location?.postalCode || '500073',
-    streetAddress: sanityCourse.streetAddress || sanityCourse.location?.address || 'Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana',
-    structuredData: sanityCourse.structuredData || {
-      "@context": "http://schema.org",
-      "name": sanityCourse.title || '',
-      "url": `/${sanityCourse.slug?.current || ''}`,
-      "logo": "/images/vritlogo.png",
+    canonical: `https://www.vritsol.com/${slug}`,
+    reviewCount: isFromSanity 
+      ? (courseData.reviewsCount?.toString() || '0') 
+      : '0',
+    ratingValue: isFromSanity 
+      ? (courseData.rating?.toString() || '5') 
+      : '5',
+    organizationName: isFromSanity 
+      ? (courseData.organizationName || title) 
+      : title,
+    postalCode: isFromSanity 
+      ? (courseData.postalCode || courseData.location?.postalCode || '500073') 
+      : '500073',
+    streetAddress: isFromSanity 
+      ? (courseData.streetAddress || courseData.location?.address || 'Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana') 
+      : 'Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana',
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "EducationalOrganization"],
+      "name": "VR IT SOL",
+      "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
+      "url": "https://www.vritsol.com",
+      "logo": "https://www.vritsol.com/images/vritlogo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500073",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "17.4374",
+        "longitude": "78.4482"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9032734343",
+        "email": "info@vritsol.com",
+        "contactType": "customer service"
+      },
+      "openingHours": [
+        "Mo-Sa 08:00-21:30",
+        "Su 09:00-13:00"
+      ],
+      "areaServed": {
+        "@type": "Place",
+        "name": "Ameerpet, Hyderabad"
+      },
       "sameAs": [
         "https://www.facebook.com/vritsolutions/",
         "https://twitter.com/vritsolutions",
         "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
       ],
-      "openingHours": [
-        "Mo-Sa 8:00-21:30",
-        "Su 9:00-13:00"
-      ],
-      "contactPoint": [
-        {
-          "telephone": "9032734343",
-          "contactType": "Enquiry",
-          "email": "info@vritsol.com",
-          "@type": "ContactPoint"
-        }
-      ],
-      "@type": "LocalBusiness"
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Training Courses",
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "name": title,
+            "description": description,
+            "url": `https://www.vritsol.com/${slug}`,
+            "courseMode": ["online", "onsite"],
+            "educationalLevel": "professional",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "VR IT SOL"
+            }
+          }
+        ]
+      }
     }
-  }
+  };
+}
+
+// Helper function to convert Sanity course data to the format your existing components expect
+export function transformSanityCourse(sanityCourse) {
+  return createCourseObject(sanityCourse, true);
 }
 
 // GROQ query to fetch all course metadata in the format your site expects
@@ -99,10 +167,8 @@ export const allCoursesQuery = `
     rating,
     reviewsCount,
     instructor,
-    mainImage->{
-      mainImage{
-        asset->
-      }
+    mainImage{
+      asset->
     },
     courseDetails {
       description,
@@ -151,19 +217,14 @@ export const allCoursesQuery = `
     noFollow,
     ogTitle,
     ogDescription,
-    ogImage->{
-      ogImage{
-        asset->
-      }
+    ogImage{
+      asset->
     },
     twitterTitle,
     twitterDescription,
-    twitterImage->{
-      twitterImage{
-        asset->
-      }
-    },
-    structuredData
+    twitterImage{
+      asset->
+    }
   }
 `
 
@@ -174,7 +235,6 @@ export async function getAllCoursesMetadata() {
     return courses.map(transformSanityCourse)
   } catch (error) {
     console.error('Error fetching courses from Sanity:', error)
-    // Return empty array as fallback
     return []
   }
 }
@@ -197,10 +257,8 @@ export async function getCourseBySlug(slug) {
       rating,
       reviewsCount,
       instructor,
-      mainImage->{
-        mainImage{
-          asset->
-        }
+      mainImage{
+        asset->
       },
       courseDetails {
         description,
@@ -249,25 +307,39 @@ export async function getCourseBySlug(slug) {
       noFollow,
       ogTitle,
       ogDescription,
-      ogImage->{
-        ogImage{
-          asset->
-        }
+      ogImage{
+        asset->
       },
       twitterTitle,
       twitterDescription,
-      twitterImage->{
-        twitterImage{
-          asset->
-        }
-      },
-      structuredData
+      twitterImage{
+        asset->
+      }
     }`
     
     const course = await client.fetch(query, { slug })
-    return transformSanityCourse(course)
+    
+    // If course found in Sanity, return it
+    if (course) {
+      return transformSanityCourse(course)
+    }
+    
+    // Fallback to static metadata
+    const staticCourse = coursesMetadata.find(course => course.slug === slug)
+    if (staticCourse) {
+      return createCourseObject(staticCourse, false);
+    }
+    
+    return null
   } catch (error) {
     console.error('Error fetching course by slug from Sanity:', error)
+    
+    // Fallback to static metadata on error
+    const staticCourse = coursesMetadata.find(course => course.slug === slug)
+    if (staticCourse) {
+      return createCourseObject(staticCourse, false);
+    }
+    
     return null
   }
 }

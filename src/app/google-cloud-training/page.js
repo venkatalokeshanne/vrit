@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic, getPageMetadataStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -28,23 +28,31 @@ import {
   Briefcase
 } from 'lucide-react';
 
-// Generate metadata for this page
+// Define the course slug as a constant
+const COURSE_SLUG = 'google-cloud-training';
+
+// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('google-cloud-training');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('google-cloud-training');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
+export default function GoogleCloudTrainingInHyderabad() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
 
-export default async  function GoogleCloudTrainingInHyderabad() {
-  const structuredDataJson = await getPageStructuredData();
+  // Get image directly from courseMetadata (multiple fallbacks)
+  const mainImageUrl = courseMetadata?.ogImage || 
+                       courseMetadata?.mainImage || 
+                       courseMetadata?.metadata?.openGraph?.images?.[0]?.url ||
+                       '/logo.png';
 
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('google-cloud-training');
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
 
   const courseModules = [
     "Getting Started with Google Cloud Platform (GCP)",
@@ -115,7 +123,7 @@ export default async  function GoogleCloudTrainingInHyderabad() {
           <div className="lg:col-span-2 space-y-8">
             
             {/* Hero Section - Vibrant Orange/Blue */}
-            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-4 lg:p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in">
+            <section className="bg-gradient-to-br from-orange-500/15 via-blue-600/20 to-teal-500/15 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-orange-400/30 shadow-2xl shadow-orange-500/10 animate-fade-in">
               {/* Floating Alert Badge */}
               <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold animate-bounce shadow-lg">
                 🔥 Limited Seats!
@@ -166,7 +174,7 @@ export default async  function GoogleCloudTrainingInHyderabad() {
             </section>
             
             {/* Introduction to Google Cloud Platform - Purple Theme */}
-            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
+            <section className="bg-gradient-to-br from-purple-600/15 via-indigo-600/20 to-blue-600/15 backdrop-blur-sm rounded-2xl p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Cloud className="w-8 h-8 text-purple-400 animate-pulse" />
                 Introduction to Google Cloud Platform
@@ -186,7 +194,7 @@ export default async  function GoogleCloudTrainingInHyderabad() {
             </section>
 
             {/* Why learn Google Cloud Platform - Green Theme */}
-            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
+            <section className="bg-gradient-to-br from-emerald-600/15 via-teal-600/20 to-green-600/15 backdrop-blur-sm rounded-2xl p-8 border border-emerald-400/30 shadow-xl shadow-emerald-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Target className="w-8 h-8 text-emerald-400 animate-pulse" />
                 Why learn Google Cloud Platform?
@@ -221,7 +229,7 @@ export default async  function GoogleCloudTrainingInHyderabad() {
             </section>
 
             {/* What Do You Learn - Amber/Yellow Theme */}
-            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
+            <section className="bg-gradient-to-br from-amber-600/15 via-yellow-600/20 to-orange-600/15 backdrop-blur-sm rounded-2xl p-8 border border-amber-400/30 shadow-xl shadow-amber-500/10">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <BookOpen className="w-8 h-8 text-amber-400" />
                 What do you learn in this course?
@@ -245,7 +253,7 @@ export default async  function GoogleCloudTrainingInHyderabad() {
             </section>
 
             {/* FAQ Section */}
-            <section className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
+            <section className="bg-gradient-to-br from-blue-600/15 via-purple-600/20 to-indigo-600/15 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/30 shadow-xl shadow-blue-500/10">
               <FAQ faqs={googleCloudFaqs} theme="default" />
             </section>
 

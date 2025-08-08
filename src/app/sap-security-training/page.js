@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -40,16 +40,14 @@ import {
   Brain,
 } from 'lucide-react';
 
-// Generate metadata for this page
+// Define the course slug as a constant
+const COURSE_SLUG = 'sap-security-training';// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('sap-security-training');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('sap-security-training');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
+
 
 // FAQ Data for SAP Security & GRC Training
 const sapSecurityFaqs = [

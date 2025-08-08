@@ -3,7 +3,7 @@ import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData, getReviewStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -35,16 +35,14 @@ import {
   Heart,
 } from 'lucide-react';
 
-// Generate metadata for this page
+// Define the course slug as a constant
+const COURSE_SLUG = 'sas-clinical-training-in-bangalore';// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('sas-clinical-training-in-bangalore');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('sas-clinical-training-in-bangalore');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
+
 
 // FAQ Data for SAS Clinical Online Training
 const sasClinicalOnlineFaqs = [
@@ -90,12 +88,19 @@ const sasClinicalOnlineFaqs = [
   }
 ];
 
-export default async function SASClinicalTrainingInBangalore() {
-  const structuredDataJson = await getPageStructuredData();
+export default function SASClinicalTrainingInBangalore() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
 
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('sas-clinical-training-in-bangalore');
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+  // Use only mainImage for mainImageUrl
+  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
 
   const courseStructure = [
     "Introduction to SAS and Clinical Trials",

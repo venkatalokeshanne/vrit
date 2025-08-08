@@ -2,7 +2,7 @@ import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getPageMetadata, getStructuredData } from '../../utils/metadata';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
   BookOpen, 
@@ -34,23 +34,28 @@ import {
   Server
 } from 'lucide-react';
 
-// Generate metadata for this page
+// Define the course slug as a constant
+const COURSE_SLUG = 'azure-devops-training-in-hyderabad';// Generate metadata for this page using static data
 export async function generateMetadata() {
-  return await getPageMetadata('azure-devops-training-in-hyderabad');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  return courseMetadata?.metadata || {};
 }
 
-// Generate structured data for SEO
-async function getPageStructuredData() {
-  const structuredData = await getStructuredData('azure-devops-training-in-hyderabad');
-  return structuredData ? JSON.stringify(structuredData) : null;
-}
 
-export default async function AzureDevOpsTrainingInHyderabad() {
-  const structuredDataJson = await getPageStructuredData();
+
+export default function AzureDevOpsTrainingInHyderabad() {
+  // Get the complete course metadata from static file
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   
-  // Fetch metadata for dynamic hero image
-  const metadata = await getPageMetadata('azure-devops-training-in-hyderabad');
-  const mainImageUrl = metadata?.mainImage || '/azure-devops.jpg';
+  // Get structured data directly from courseMetadata
+  const structuredDataJson = courseMetadata?.structuredData ? 
+    JSON.stringify(courseMetadata.structuredData) : null;
+
+  // Use only mainImage for mainImageUrl
+  const mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';
+
+  // Log the courseMetadata to see what we have
+  console.log('📊 Course Metadata:', courseMetadata);
   const azureDevOpsFaqs = [
     {
       question: "What is Azure DevOps and AWS, and why learn them together?",
