@@ -143,7 +143,7 @@ export default async function BlogPage({ searchParams }) {
           </div>
 
           {/* Sidebar */}
-          <div className="w-80 space-y-6">
+          <div className="hidden lg:block w-80 space-y-6">
             <BlogSidebar posts={posts} currentCategory={categoryFilter} />
           </div>
         </div>
