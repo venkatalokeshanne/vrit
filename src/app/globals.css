@@ -173,3 +173,24 @@ html {
   border-color: #3b82f6;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
+
+/* Hide Tawk.to bubble message "We are here" text */
+div[id*="tawk"] .tawk-bubble-message,
+div[id*="tawk"] .tawk-attention-grabber,
+div[id*="tawk"] .tawk-bubble-text,
+div[id*="tawk"] .tawk-message-preview {
+  display: none !important;
+}
+
+/* Alternative selectors for different Tawk.to bubble elements */
+.tawk-min-container .tawk-bubble,
+.tawk-min-container .tawk-bubble-message,
+.tawk-min-container .tawk-attention-grabber {
+  display: none !important;
+}
+
+/* Hide any text overlay on the Tawk.to widget */
+iframe[src*="tawk.to"] + div,
+iframe[src*="tawk.to"] ~ div[style*="position"] {
+  display: none !important;
+}

@@ -1,140 +1,52 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useRef } from 'react';
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 import { MessageCircle, X, Phone, Mail } from 'lucide-react';
+import { useState } from 'react';
 
 export default function ChatWidget() {
+  const tawkMessengerRef = useRef();
   const [isVisible, setIsVisible] = useState(false);
-  const [isTawkLoaded, setIsTawkLoaded] = useState(false);
 
-  useEffect(() => {
-    let checkInterval;
-    let isComponentMounted = true;
+  // Tawk.to callback functions
+  const onLoad = () => {
+    console.log('Tawk.to widget loaded successfully!');
+  };
 
-    // Function to check if Tawk.to is fully loaded
-    const checkTawkLoaded = () => {
-      if (typeof window !== 'undefined' && 
-          window.Tawk_API && 
-          typeof window.Tawk_API.showWidget === 'function' &&
-          typeof window.Tawk_API.maximize === 'function') {
-        
-        if (isComponentMounted) {
-          setIsTawkLoaded(true);
-          console.log('Tawk.to widget loaded and verified successfully');
-        }
-        
-        // Set up Tawk.to event handlers only once
-        if (!window.Tawk_API._handlersSet) {
-          window.Tawk_API.onLoad = function() {
-            console.log('Tawk.to widget onLoad event triggered');
-            // Hide the default widget initially
-            if (typeof window.Tawk_API.hideWidget === 'function') {
-              window.Tawk_API.hideWidget();
-            }
-          };
+  const onChatStarted = () => {
+    console.log('Chat started!');
+    setIsVisible(false); // Hide our contact widget when chat starts
+  };
 
-          window.Tawk_API.onChatStarted = function() {
-            console.log('Tawk.to chat started');
-            if (isComponentMounted) {
-              setIsVisible(false);
-            }
-          };
+  const onChatEnded = () => {
+    console.log('Chat ended!');
+  };
 
-          window.Tawk_API.onChatEnded = function() {
-            console.log('Tawk.to chat ended');
-          };
-
-          window.Tawk_API.onError = function(error) {
-            console.error('Tawk.to error:', error);
-          };
-
-          // Mark handlers as set
-          window.Tawk_API._handlersSet = true;
-        }
-
-        return true;
-      }
-      return false;
-    };
-
-    // Try to check immediately
-    if (checkTawkLoaded()) {
-      return;
-    }
-
-    // Listen for the custom tawkLoaded event from layout.js
-    const handleTawkLoaded = () => {
-      console.log('Received tawkLoaded event');
-      setTimeout(() => {
-        if (isComponentMounted) {
-          checkTawkLoaded();
-        }
-      }, 100);
-    };
-
-    // Set up event listener for when Tawk.to loads
-    if (typeof window !== 'undefined') {
-      window.addEventListener('tawkLoaded', handleTawkLoaded);
-    }
-
-    // If not loaded, set up interval to check periodically (fallback)
-    checkInterval = setInterval(() => {
-      if (checkTawkLoaded()) {
-        clearInterval(checkInterval);
-      }
-    }, 500);
-
-    // Cleanup
-    return () => {
-      isComponentMounted = false;
-      if (checkInterval) {
-        clearInterval(checkInterval);
-      }
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('tawkLoaded', handleTawkLoaded);
-      }
-    };
-  }, []);
-
-  const openChat = () => {
-    console.log('Chat button clicked, isTawkLoaded:', isTawkLoaded);
+  // Function to maximize the chat widget using the React component ref
+  const handleMaximizeChat = () => {
+    console.log('=== DEBUG: handleMaximizeChat called ===');
+    console.log('tawkMessengerRef.current:', tawkMessengerRef.current);
     
-    if (isTawkLoaded && window.Tawk_API) {
-      try {
-        // Check if functions exist before calling them
-        if (typeof window.Tawk_API.showWidget === 'function') {
-          window.Tawk_API.showWidget();
-          console.log('Tawk.to widget shown');
-        } else {
-          throw new Error('showWidget function not available');
-        }
-        
-        // Small delay before maximizing to ensure widget is shown
-        setTimeout(() => {
-          try {
-            if (typeof window.Tawk_API.maximize === 'function') {
-              window.Tawk_API.maximize();
-              console.log('Tawk.to chat maximized');
-            } else if (typeof window.Tawk_API.toggle === 'function') {
-              window.Tawk_API.toggle();
-              console.log('Tawk.to chat toggled');
-            }
-          } catch (error) {
-            console.error('Error maximizing Tawk.to chat:', error);
-          }
-        }, 200);
-        
-        console.log('Tawk.to chat opened successfully');
-      } catch (error) {
-        console.error('Error opening Tawk.to chat:', error);
-        // Fallback to contact options
+    try {
+      if (tawkMessengerRef.current) {
+        console.log('DEBUG: About to call tawkMessengerRef.current.maximize()');
+        tawkMessengerRef.current.maximize();
+        console.log('DEBUG: Chat maximized using React ref successfully');
+      } else {
+        console.log('DEBUG: Tawk messenger ref not available, showing contact options');
         setIsVisible(true);
       }
-    } else {
-      console.log('Tawk.to not loaded, showing fallback contact options');
-      // Fallback: show contact options
+    } catch (error) {
+      console.error('DEBUG: Error maximizing chat:', error);
+      console.error('DEBUG: Error stack:', error.stack);
       setIsVisible(true);
     }
+  };
+
+  // Function to show contact options
+  const openContactOptions = () => {
+    setIsVisible(true);
   };
 
   const closeWidget = () => {
@@ -143,30 +55,62 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Custom Chat Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <button
-          onClick={openChat}
-          className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-110 group"
-          aria-label="Open chat support"
-        >
-          <MessageCircle className="w-6 h-6 group-hover:animate-pulse" />
-          
-          {/* Notification dot */}
-          <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full animate-ping"></span>
-          <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full"></span>
-        </button>
+      {/* Official Tawk.to React Component */}
+      <TawkMessengerReact
+        propertyId="689718b1c2a1861924262ae2"
+        widgetId="1j273guc9"
+        ref={tawkMessengerRef}
+        onLoad={onLoad}
+        onChatStarted={onChatStarted}
+        onChatEnded={onChatEnded}
+      />
 
-        {/* Tooltip */}
-        <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
-          {isTawkLoaded ? 'Chat with us for instant support!' : 'Contact us for support!'}
-          <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-800"></div>
+      {/* Contact Buttons Stack */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center space-y-2">
+        {/* Phone Button (Top) */}
+        <div className="relative group">
+          <a
+            href="tel:+919032734343"
+            className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white p-4 rounded-full shadow-lg hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
+            aria-label="Call us directly"
+            style={{width: '60px', height: '60px'}}
+          >
+            <Phone className="w-6 h-6" />
+          </a>
+
+          {/* Tooltip for phone button */}
+          <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+            Click to call: +91-9032734343
+            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-800"></div>
+          </div>
+        </div>
+
+        {/* Chat Button (Bottom) */}
+        <div className="relative group">
+          <button
+            onClick={handleMaximizeChat}
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-110"
+            aria-label="Open chat support"
+            style={{width: '55px', height: '55px'}}
+          >
+            <MessageCircle className="w-6 h-6 group-hover:animate-pulse" />
+            
+            {/* Notification dot */}
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full animate-ping"></span>
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full"></span>
+          </button>
+
+          {/* Tooltip for chat button */}
+          <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
+            Chat with us for instant support!
+            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-800"></div>
+          </div>
         </div>
       </div>
 
       {/* Fallback Contact Widget */}
       {isVisible && (
-        <div className="fixed bottom-6 right-6 z-50 bg-white rounded-2xl shadow-2xl border border-slate-200 p-6 w-80 max-w-[calc(100vw-2rem)]">
+        <div className="fixed bottom-6 right-6 z-50 bg-white rounded-2xl shadow-2xl border border-slate-200 p-6" style={{width: '280px', height: '330px'}}>
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-bold text-slate-800">Contact Us</h3>
             <button
@@ -178,9 +122,7 @@ export default function ChatWidget() {
           </div>
           
           <p className="text-slate-600 mb-4 text-sm">
-            {!isTawkLoaded ? 
-              "Chat is loading... Contact us directly:" : 
-              "Get in touch with us:"}
+            Ready to advance your IT career? Contact our training experts:
           </p>
           
           <div className="space-y-3">

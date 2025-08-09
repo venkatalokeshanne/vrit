@@ -48,13 +48,15 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
-              "style-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: https://cdn.sanity.io",
-              "font-src 'self' data:",
-              "connect-src 'self' https://*.sanity.io https://*.api.sanity.io",
-              "frame-src 'self'",
-              "media-src 'self'"
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to",
+              "style-src 'self' 'unsafe-inline' https://*.tawk.to",
+              "img-src 'self' data: https://cdn.sanity.io https://*.tawk.to",
+              "font-src 'self' data: https://*.tawk.to",
+              "connect-src 'self' https://*.sanity.io https://*.api.sanity.io https://*.tawk.to wss://*.tawk.to",
+              "frame-src 'self' https://*.tawk.to",
+              "media-src 'self'",
+              "worker-src 'self' blob:",
+              "object-src 'none'"
             ].join('; ')
           },
         ],

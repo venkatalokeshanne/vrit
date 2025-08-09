@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import ScrollingCourses from './components/ScrollingCourses';
 import ScrollingBanner from './components/ScrollingBanner';
 import ChatWidget from './components/ChatWidget';
+import CourseNotificationsWrapper from './components/CourseNotificationsWrapper';
 import RichSnippetsManager from '../utils/richSnippets';
 import { getPageMetadataStatic, getStructuredDataStatic } from '../utils/staticCourses';
 import Script from 'next/script';
@@ -137,85 +138,7 @@ export default async function RootLayout({ children }) {
         <ScrollingCourses />
         <Footer />
         <ChatWidget />
-        
-        {/* Tawk.to Live Chat Widget */}
-        <Script
-          id="tawk-to-chat"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-              (function(){
-                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-                s1.async=true;
-                s1.src='https://embed.tawk.to/689718b1c2a1861924262ae2/1j273guc9';
-                s1.charset='UTF-8';
-                s1.setAttribute('crossorigin','*');
-                s0.parentNode.insertBefore(s1,s0);
-              })();
-              
-              // Enhanced Tawk.to configuration
-              Tawk_API.onLoad = function(){
-                console.log('Tawk.to loaded successfully');
-                
-                // Dispatch custom event to notify our components
-                if (typeof window !== 'undefined') {
-                  window.dispatchEvent(new Event('tawkLoaded'));
-                }
-                
-                // Set custom attributes
-                try {
-                  Tawk_API.setAttributes({
-                    'name': 'VR IT Solutions Visitor',
-                    'email': '',
-                    'hash': ''
-                  });
-                } catch (e) {
-                  console.log('Error setting Tawk.to attributes:', e);
-                }
-                
-                // Hide the default widget initially (we'll show our custom button)
-                try {
-                  if (typeof Tawk_API.hideWidget === 'function') {
-                    Tawk_API.hideWidget();
-                  }
-                } catch (e) {
-                  console.log('Error hiding Tawk.to widget:', e);
-                }
-              };
-              
-              // Handle chat events
-              Tawk_API.onChatStarted = function(){
-                console.log('Chat started');
-              };
-              
-              Tawk_API.onChatEnded = function(){
-                console.log('Chat ended');
-              };
-              
-              // Error handling
-              Tawk_API.onError = function(error){
-                console.error('Tawk.to error:', error);
-              };
-              
-              // Custom styling
-              Tawk_API.customStyle = {
-                visibility: {
-                  desktop: {
-                    position: 'br',
-                    xOffset: 20,
-                    yOffset: 20
-                  },
-                  mobile: {
-                    position: 'br',
-                    xOffset: 10,
-                    yOffset: 10
-                  }
-                }
-              };
-            `
-          }}
-        />
+        <CourseNotificationsWrapper />
       </body>
     </html>
   );
