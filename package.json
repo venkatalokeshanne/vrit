@@ -35,5 +35,11 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
     "tailwindcss": "^4"
+  },
+  "overrides": {
+    "@tawk.to/tawk-messenger-react": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }
