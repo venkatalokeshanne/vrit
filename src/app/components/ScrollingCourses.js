@@ -75,13 +75,13 @@ const ScrollingCourses = () => {
         </div>
         
         {/* Scrolling Container */}
-        <div className="relative">
+        <div className="relative overflow-hidden">
           {/* Scrolling Animation */}
-          <div className="flex animate-scroll-infinite hover:animate-scroll-paused">
+          <div className="flex animate-scroll-infinite hover:animate-scroll-paused whitespace-nowrap">
             {duplicatedCourses.map((course, index) => (
               <div
                 key={`${course.slug}-${index}`}
-                className="flex-shrink-0 mx-1 w-64"
+                className="flex-shrink-0 mx-2 w-64 inline-block"
               >
                 <Link href={`/${course.slug}`}>
                   <div className="group relative bg-gradient-to-br from-white/80 via-white/90 to-white/80 backdrop-blur-xl rounded-xl border border-gray-200 hover:border-blue-300 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 overflow-hidden cursor-pointer h-full">
@@ -156,7 +156,7 @@ const ScrollingCourses = () => {
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(calc(-250px * ${courses.length}));
           }
         }
         
@@ -172,7 +172,8 @@ const ScrollingCourses = () => {
         }
         
         .animate-scroll-infinite {
-          animation: scroll-infinite 15s linear infinite;
+          animation: scroll-infinite 60s linear infinite;
+          width: calc(250px * ${duplicatedCourses.length});
         }
         
         .animate-scroll-paused:hover {
@@ -191,7 +192,7 @@ const ScrollingCourses = () => {
         /* Smooth scrolling on mobile */
         @media (max-width: 768px) {
           .animate-scroll-infinite {
-            animation: scroll-infinite 10s linear infinite;
+            animation: scroll-infinite 40s linear infinite;
           }
         }
         
@@ -200,6 +201,7 @@ const ScrollingCourses = () => {
           will-change: transform;
           backface-visibility: hidden;
           perspective: 1000px;
+          transform: translateZ(0);
         }
       `}</style>
     </section>

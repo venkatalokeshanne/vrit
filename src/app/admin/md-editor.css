@@ -1,0 +1,74 @@
+/* Dark theme for markdown editor */
+[data-color-mode="dark"] .w-md-editor {
+  background-color: #334155 !important;
+  border: 1px solid #475569 !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-text-pre,
+[data-color-mode="dark"] .w-md-editor-text-input,
+[data-color-mode="dark"] .w-md-editor-text-textarea {
+  background-color: #334155 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-text {
+  background-color: #334155 !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+}
+
+[data-color-mode="dark"] .w-md-editor .w-md-editor-toolbar {
+  background-color: #475569 !important;
+  border-bottom: 1px solid #64748b !important;
+}
+
+[data-color-mode="dark"] .w-md-editor .w-md-editor-toolbar ul > li button {
+  color: #ffffff !important;
+}
+
+[data-color-mode="dark"] .w-md-editor .w-md-editor-toolbar ul > li button:hover {
+  background-color: #64748b !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview h1,
+[data-color-mode="dark"] .w-md-editor-preview h2,
+[data-color-mode="dark"] .w-md-editor-preview h3,
+[data-color-mode="dark"] .w-md-editor-preview h4,
+[data-color-mode="dark"] .w-md-editor-preview h5,
+[data-color-mode="dark"] .w-md-editor-preview h6 {
+  color: #f97316 !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview p {
+  color: #e2e8f0 !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview code {
+  background-color: #475569 !important;
+  color: #fbbf24 !important;
+  padding: 2px 4px !important;
+  border-radius: 4px !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview pre {
+  background-color: #1e293b !important;
+  border: 1px solid #475569 !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview blockquote {
+  border-left: 4px solid #f97316 !important;
+  background-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview a {
+  color: #f97316 !important;
+}
+
+[data-color-mode="dark"] .w-md-editor-preview a:hover {
+  color: #ea580c !important;
+}
