@@ -63,12 +63,12 @@ export default function AdminPage() {
         body: JSON.stringify({
           action: 'fetch-data',
           query: `{
-            "posts": *[_type == "post"] | order(publishedAt desc) {
+            "posts": *[_type == "post"] | order(_updatedAt desc, _createdAt desc, publishedAt desc) {
               _id, title, "slug": slug.current, excerpt, body, publishedAt, published, featured,
               mainImage { asset->{ _id, url } },
               author->{ _id, name }, 
               categories[]->{ _id, title },
-              tags, readingTime, seo
+              tags, readingTime, seo, _createdAt, _updatedAt
             },
             "authors": *[_type == "author"] { _id, name, bio, role },
             "categories": *[_type == "category"] { _id, title, "slug": slug.current, description, color }

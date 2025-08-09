@@ -23,7 +23,7 @@ export function isCoursePageClient(slug) {
   if (!slug || slug === 'index' || slug === '' || 
       slug === 'aboutus' || slug === 'contact' || 
       slug === 'privacy-policy' || slug === 'terms-and-conditions' ||
-      slug === 'admin') {
+      slug === 'admin' || slug === 'blog' || slug === 'refund-and-course-rescheduling-policy') {
     return false;
   }
   

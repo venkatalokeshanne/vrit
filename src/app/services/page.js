@@ -338,13 +338,11 @@ export default function Services() {
                       className="bg-gradient-to-r from-teal-600 to-green-600 hover:from-teal-700 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-lg"
                       courseName="job support"
                     >
-                      <ArrowRight className="w-5 h-5" />
                       Enquire Now
                     </EnquireNowButton>
                     <CallNowButton 
                       className="border border-teal-500/50 text-white px-8 py-4 rounded-xl font-semibold hover:border-teal-400 transition-all duration-300 flex items-center justify-center gap-2 text-lg"
                     >
-                      <Phone className="w-5 h-5" />
                       Call Now
                     </CallNowButton>
                   </div>
