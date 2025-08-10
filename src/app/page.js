@@ -39,10 +39,8 @@ import PopupBanner from './components/PopupBanner';
 import coursesData from '../data/courses-static.json';
 import { getAllCourses } from '../lib/courses';
 
-export default async function Home() {
+export default function Home() {
   // Get dynamic courses from Sanity
-  const dynamicCourses = await getAllCourses();
-  
   // Get the mainImage from the index slug data
   const indexData = coursesData.find(course => course.slug === 'index');
   const popupImage = indexData?.mainImage || '';
@@ -80,19 +78,9 @@ export default async function Home() {
   ];
 
   // Transform dynamic courses to match static course structure
-  const transformedDynamicCourses = dynamicCourses.slice(0, 6).map((course, index) => ({
-    name: course.title,
-    duration: 'Varies',
-    icon: BookOpen,
-    color: 'from-emerald-500 to-teal-500',
-    image: '/logo.png',
-    description: course.description || 'Learn with our expert instructors in this comprehensive course',
-    link: `/${course.slug.current}`,
-    isDynamic: true
-  }));
 
   // Combine static and dynamic courses, with dynamic courses first
-  const courses = [...transformedDynamicCourses, ...staticCourses];
+  const courses = staticCourses;
 
   const features = [
     { icon: Users, title: 'Flexible Modes of Training', desc: 'Select any mode of training. You can have online training, classroom training and we deliver trainings for your corporate needs too. Here you get Classroom Training and Online Training also.' },

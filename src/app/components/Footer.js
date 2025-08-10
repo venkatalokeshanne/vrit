@@ -156,18 +156,28 @@ export default function Footer() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="rounded-lg"
                 title="VR IT Solutions Office Location"
+                onLoad={(e) => {
+                  // Map loaded successfully
+                  const fallback = e.target.nextElementSibling;
+                  if (fallback && fallback.classList.contains('map-fallback')) {
+                    fallback.style.display = 'none';
+                  }
+                }}
                 onError={(e) => {
                   // Fallback: Show static map placeholder
+                  console.log('Google Maps failed to load, showing fallback');
                   e.target.style.display = 'none';
                   const fallback = e.target.nextElementSibling;
-                  if (fallback) fallback.style.display = 'block';
+                  if (fallback && fallback.classList.contains('map-fallback')) {
+                    fallback.style.display = 'block';
+                  }
                 }}
               ></iframe>
               
               {/* Fallback: Static Map Placeholder */}
               <div 
-                className="hidden w-full h-40 bg-gradient-to-br from-blue-900/50 to-slate-800/50 rounded-lg flex items-center justify-center flex-col space-y-2 border border-slate-600/30"
-                id="map-fallback"
+                className="map-fallback w-full h-40 bg-gradient-to-br from-blue-900/50 to-slate-800/50 rounded-lg flex items-center justify-center flex-col space-y-2 border border-slate-600/30"
+                style={{ display: 'none' }}
               >
                 <MapPin className="w-8 h-8 text-blue-400" />
                 <div className="text-center">

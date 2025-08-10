@@ -307,6 +307,15 @@ export class RichSnippetsManager {
    * Generate Breadcrumb Schema
    */
   static generateBreadcrumbSchema(breadcrumbs) {
+    // Handle undefined or empty breadcrumbs
+    if (!breadcrumbs || !Array.isArray(breadcrumbs) || breadcrumbs.length === 0) {
+      return {
+        "@context": "https://schema.org", 
+        "@type": "BreadcrumbList",
+        "itemListElement": []
+      };
+    }
+
     return {
       "@context": "https://schema.org", 
       "@type": "BreadcrumbList",
