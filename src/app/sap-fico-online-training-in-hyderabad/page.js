@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
@@ -120,8 +121,10 @@ export default function SapFicoTraining() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img src={mainImageUrl}
+                  <Image src={mainImageUrl}
                     alt="SAP FICO Training Course in Hyderabad - VR IT Solutions"
+                    width={1200}
+                    height={630}
                     className="w-full object-cover border-2 border-purple-400/30"
                     style={{ aspectRatio: '1200/630' }}
                   />

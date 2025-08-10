@@ -45,7 +45,7 @@ export default function ChatWidget() {
   };
 
   // Function to show contact options
-  const openContactOptions = () => {
+  const _openContactOptions = () => {
     setIsVisible(true);
   };
 

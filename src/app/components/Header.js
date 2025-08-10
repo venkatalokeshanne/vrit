@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +24,11 @@ export default function Header() {
           
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img 
+            <Image 
               src="/logo.png" 
               alt="VR IT Solutions" 
+              width={40}
+              height={40}
               className="h-10 w-auto object-contain"
             />
           </Link>

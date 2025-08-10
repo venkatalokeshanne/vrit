@@ -1,4 +1,5 @@
 ﻿import Link from 'next/link';
+import Image from 'next/image';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
@@ -143,8 +144,10 @@ export default function SASClinicalOnlineTrainingInHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img src={mainImageUrl}
+                  <Image src={mainImageUrl}
                     alt="SAS Clinical Training Course in Hyderabad - VR IT Solutions"
+                    width={1200}
+                    height={630}
                     className="w-full object-cover border-2 border-blue-400/30"
                     style={{ aspectRatio: '1200/630' }}
                   />
@@ -325,11 +328,7 @@ export default function SASClinicalOnlineTrainingInHyderabad() {
                   </p>
                 </div>
                 <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl shadow-xl">
-                  <img
-                    src="/sas-clinical-salaries.jpg"
-                    alt="SAS Clinical Average Salaries"
-                    className="w-full object-cover border border-green-400/30"
-                  />
+                  <Image src="/sas-clinical-salaries.jpg" alt="SAS Clinical Average Salaries" className="w-full object-cover border border-green-400/30" width={1200} height={630} />
                 </div>
               </div>
             </section>
@@ -341,11 +340,7 @@ export default function SASClinicalOnlineTrainingInHyderabad() {
               </h2>
               <div className="space-y-6">
                 <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl shadow-xl">
-                  <img
-                    src="/sas-clinical-companies.jpg"
-                    alt="SAS Clinical Jobs in Companies"
-                    className="w-full object-cover border border-indigo-400/30"
-                  />
+                  <Image src="/sas-clinical-companies.jpg" alt="SAS Clinical Jobs in Companies" className="w-full object-cover border border-indigo-400/30" width={1200} height={630} />
                 </div>
                 <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
                   <p className="text-indigo-100 leading-relaxed">

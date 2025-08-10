@@ -66,7 +66,7 @@ export default async function BlogPage({ searchParams }) {
   const categoryFilter = searchParams?.category || null
   const posts = await getBlogPosts(categoryFilter)
   const featuredPosts = posts.filter(post => post.featured)
-  const regularPosts = posts.filter(post => !post.featured)
+  const _regularPosts = posts.filter(post => !post.featured)
 
   return (
     <div className="min-h-screen bg-slate-900">

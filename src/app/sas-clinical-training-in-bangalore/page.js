@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
@@ -77,7 +78,7 @@ export default function SASClinicalTrainingInBangalore() {
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);
 
-  const courseStructure = [
+  const _courseStructure = [
     "Introduction to SAS and Clinical Trials",
     "DATA step processing",
     "Presenting and summarising data(Procedures used in Clinical SAS)",
@@ -87,7 +88,7 @@ export default function SASClinicalTrainingInBangalore() {
     "Protocol, Statistical Analysis Plan (SAP) and TLFs"
   ];
 
-  const whoCanDo = [
+  const _whoCanDo = [
     "Any Graduates/post graduates with science background(any MSC and BSC)",
     "B.Pharmacy, M.Pharmacy, B.Tech (Biotechnology)",
     "MCA, BCA, B.Tech in Computers",
@@ -131,8 +132,10 @@ export default function SASClinicalTrainingInBangalore() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img src={mainImageUrl}
+                  <Image src={mainImageUrl}
                     alt="SAS Clinical Training Course in Bangalore - VR IT Solutions"
+                    width={1200}
+                    height={630}
                     className="w-full object-cover border-2 border-blue-400/30"
                     style={{ aspectRatio: '1200/630' }}
                   />

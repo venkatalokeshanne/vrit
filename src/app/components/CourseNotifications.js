@@ -1,38 +1,38 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { X, MapPin, GraduationCap } from 'lucide-react';
+
+// Sample names and locations for fake notifications (outside component to avoid re-renders)
+const sampleNames = [
+  'Rahul S.', 'Priya M.', 'Arjun K.', 'Sneha P.', 'Vikram R.',
+  'Anita D.', 'Kiran T.', 'Meera L.', 'Rajesh B.', 'Divya G.',
+  'Suresh Y.', 'Kavya N.', 'Arun C.', 'Pooja V.', 'Manoj H.',
+  'Ritu S.', 'Deepak A.', 'Lakshmi K.', 'Rohit M.', 'Nisha R.',
+  'Amit P.', 'Swathi B.', 'Naveen K.', 'Aparna S.', 'Sanjay M.',
+  'Priyanka J.', 'Vinay T.', 'Haritha L.', 'Chetan R.', 'Vani G.',
+  'Mohan D.', 'Shweta A.', 'Karthik P.', 'Revathi S.', 'Nikhil B.',
+  'Madhuri K.', 'Akash M.', 'Smitha J.', 'Ravi N.', 'Gayatri L.',
+  'Sai K.', 'Bhavani R.', 'Ramesh T.', 'Sindhu G.', 'Prasad V.',
+  'Keerthi M.', 'Vivek S.', 'Archana B.', 'Naresh C.', 'Yamini P.',
+  'Satish R.', 'Padma K.', 'Kishore M.', 'Shilpa D.', 'Raj A.',
+  'Sowmya T.', 'Ganesh L.', 'Jyothi S.', 'Varun R.', 'Swetha N.'
+];
+
+const sampleLocations = [
+  'Hyderabad', 'Bangalore', 'Chennai', 'Mumbai', 'Delhi',
+  'Pune', 'Kolkata', 'Ahmedabad', 'Noida', 'Gurgaon',
+  'Vijayawada', 'Visakhapatnam', 'Coimbatore', 'Kochi', 'Indore',
+  'Nagpur', 'Surat', 'Jaipur', 'Lucknow', 'Bhopal'
+];
 
 const CourseNotifications = ({ courseName }) => {
   const [notifications, setNotifications] = useState([]);
   const [notificationId, setNotificationId] = useState(0);
   const [usedNames, setUsedNames] = useState(new Set());
 
-  // Sample names and locations for fake notifications
-  const sampleNames = [
-    'Rahul S.', 'Priya M.', 'Arjun K.', 'Sneha P.', 'Vikram R.',
-    'Anita D.', 'Kiran T.', 'Meera L.', 'Rajesh B.', 'Divya G.',
-    'Suresh Y.', 'Kavya N.', 'Arun C.', 'Pooja V.', 'Manoj H.',
-    'Ritu S.', 'Deepak A.', 'Lakshmi K.', 'Rohit M.', 'Nisha R.',
-    'Amit P.', 'Swathi B.', 'Naveen K.', 'Aparna S.', 'Sanjay M.',
-    'Priyanka J.', 'Vinay T.', 'Haritha L.', 'Chetan R.', 'Vani G.',
-    'Mohan D.', 'Shweta A.', 'Karthik P.', 'Revathi S.', 'Nikhil B.',
-    'Madhuri K.', 'Akash M.', 'Smitha J.', 'Ravi N.', 'Gayatri L.',
-    'Sai K.', 'Bhavani R.', 'Ramesh T.', 'Sindhu G.', 'Prasad V.',
-    'Keerthi M.', 'Vivek S.', 'Archana B.', 'Naresh C.', 'Yamini P.',
-    'Satish R.', 'Padma K.', 'Kishore M.', 'Shilpa D.', 'Raj A.',
-    'Sowmya T.', 'Ganesh L.', 'Jyothi S.', 'Varun R.', 'Swetha N.'
-  ];
-
-  const sampleLocations = [
-    'Hyderabad', 'Bangalore', 'Chennai', 'Mumbai', 'Delhi',
-    'Pune', 'Kolkata', 'Ahmedabad', 'Noida', 'Gurgaon',
-    'Vijayawada', 'Visakhapatnam', 'Coimbatore', 'Kochi', 'Indore',
-    'Nagpur', 'Surat', 'Jaipur', 'Lucknow', 'Bhopal'
-  ];
-
   // Function to generate a random notification
-  const generateNotification = () => {
+  const generateNotification = useCallback(() => {
     // Get available names (not recently used)
     const availableNames = sampleNames.filter(name => !usedNames.has(name));
     
@@ -56,14 +56,14 @@ const CourseNotifications = ({ courseName }) => {
       timeAgo: timeAgo,
       courseName: courseName
     };
-  };
+  }, [courseName, notificationId, usedNames]);
 
   // Function to add a new notification
-  const addNotification = () => {
+  const addNotification = useCallback(() => {
     const newNotification = generateNotification();
     setNotifications(prev => [newNotification, ...prev.slice(0, 3)]); // Keep max 4 notifications
     setNotificationId(prev => prev + 1);
-  };
+  }, [generateNotification]);
 
   // Function to remove a notification
   const removeNotification = (id) => {
@@ -99,9 +99,7 @@ const CourseNotifications = ({ courseName }) => {
       clearTimeout(initialTimer);
       clearInterval(intervalTimer);
     };
-  }, [courseName]);
-
-  if (notifications.length === 0) return null;
+    }, [courseName, addNotification]);  if (notifications.length === 0) return null;
 
   return (
     <div className="fixed bottom-4 left-4 z-50 space-y-3">

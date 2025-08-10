@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
 
 // Custom Social Media Icons
@@ -36,9 +37,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <div className="flex items-center space-x-3 mb-6">
-              <img 
+              <Image 
                 src="/logo.png" 
                 alt="VR IT Solutions" 
+                width={48}
+                height={48}
                 className="h-12 w-auto object-contain"
               />
             </div>

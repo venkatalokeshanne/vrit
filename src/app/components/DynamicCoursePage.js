@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
@@ -53,9 +54,11 @@ export default function DynamicCoursePage({ course }) {
                   
                   {/* Course Image */}
                   <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                    <img 
+                    <Image 
                       src={mainImageUrl}
                       alt={course.title}
+                      width={1200}
+                      height={630}
                       className="w-full object-cover border-2 border-blue-400/30"
                       style={{ aspectRatio: '1200/630' }}
                       onError={(e) => {

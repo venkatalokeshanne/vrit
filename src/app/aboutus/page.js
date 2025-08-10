@@ -68,7 +68,7 @@ export default function AboutUs() {
     JSON.stringify(courseMetadata.structuredData) : null;
 
   // Use only mainImage for mainImageUrl
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+  const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);

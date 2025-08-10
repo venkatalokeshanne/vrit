@@ -58,7 +58,7 @@ export default async function CoursePage({ params }) {
     try {
       const StaticPageComponent = await import(`../${slug}/page.js`).then(module => module.default);
       return <StaticPageComponent />;
-    } catch (importError) {
+    } catch {
       // If neither dynamic nor static page exists, return 404
       console.log(`No course found for slug: ${slug}`);
       notFound();

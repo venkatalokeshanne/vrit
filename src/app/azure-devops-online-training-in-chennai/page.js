@@ -2,6 +2,7 @@
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
+import Image from 'next/image'
 import {
   Clock,
   CheckCircle,
@@ -23,7 +24,7 @@ export default async  function AzureDevOpsTrainingInChennai() {
   const structuredDataJson = getStructuredDataStatic(COURSE_SLUG);
   // Fetch metadata for dynamic hero image
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  const mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';
+  const _mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';
   const azureDevOpsFaqs = [
     {
       question: "What is Azure DevOps and AWS, and why learn them together?",
@@ -138,12 +139,7 @@ export default async  function AzureDevOpsTrainingInChennai() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src={mainImageUrl}
-                    alt="Azure DevOps Training Course in Chennai - VR IT Solutions"
-                    className="w-full object-cover border-2 border-indigo-400/30"
-                    style={{ aspectRatio: '1200/630' }}
-                  />
+                  <Image src={mainImageUrl} alt="Azure DevOps Training Course in Chennai - VR IT Solutions" className="w-full object-cover border-2 border-indigo-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
                 </div>
                 
                 <div className="inline-block bg-gradient-to-r from-indigo-500/25 to-blue-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-indigo-400/40">

@@ -7,7 +7,7 @@ import RichSnippetsManager from '../../utils/richSnippets';
  */
 export default function RichSnippetsTester() {
   const [selectedSchema, setSelectedSchema] = useState('organization');
-  const [validationResults, setValidationResults] = useState(null);
+  const [_validationResults, _setValidationResults] = useState(null);
   const [showRawSchema, setShowRawSchema] = useState(false);
 
   // Available schema types for testing

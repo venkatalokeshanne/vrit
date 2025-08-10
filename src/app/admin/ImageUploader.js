@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function ImageUploader({ value, onChange, label = "", className = "" }) {
   const [uploading, setUploading] = useState(false)
@@ -138,9 +139,11 @@ export default function ImageUploader({ value, onChange, label = "", className =
       {/* Preview */}
       {(preview || value) && (
         <div className="relative">
-          <img
+          <Image
             src={getPreviewUrl()}
             alt="Preview"
+            width={384}
+            height={128}
             className="w-full max-w-sm h-32 object-cover rounded-lg border border-slate-600"
             onError={() => {
               setPreview('')

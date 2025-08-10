@@ -250,10 +250,12 @@ export const CourseActionButtons = ({
 };
 
 // Export all components as default for easy importing
-export default {
+const CourseActionButtonsWithModals = {
   EnquireNowButton,
   DownloadCourseButton,
   JoinNowButton,
   CallNowButton,
   CourseActionButtons
 };
+
+export default CourseActionButtonsWithModals;

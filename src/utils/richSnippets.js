@@ -10,7 +10,7 @@ export class RichSnippetsManager {
    * Generate Organization schema with sitelinks
    */
   static generateOrganizationSchema() {
-    const { mainSitelinks } = sitelinksData;
+    const { mainSitelinks: _mainSitelinks } = sitelinksData;
     
     return {
       "@context": "https://schema.org",

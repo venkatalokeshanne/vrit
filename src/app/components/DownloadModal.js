@@ -159,7 +159,7 @@ const DownloadModal = ({
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-      } catch (error) {
+      } catch {
         // If download fails, open in new tab
         window.open(downloadUrl, '_blank', 'noopener,noreferrer');
       }

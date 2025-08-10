@@ -91,7 +91,7 @@ const FAQ = ({ faqs, title = "Frequently Asked Questions", theme = "default" }) 
     return themes[theme] || themes.default;
   };
 
-  const themeClasses = getThemeClasses();
+  const _themeClasses = getThemeClasses();
 
   return (
     <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 lg:p-4 lg:p-8 border border-white/10">

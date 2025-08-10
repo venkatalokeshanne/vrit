@@ -34,7 +34,7 @@ export const viewport = {
 };
 
 // Generate metadata dynamically for all pages
-export async function generateMetadata({ params, searchParams }) {
+export async function generateMetadata({ params: _params, searchParams: _searchParams }) {
   // Get the current page slug from params or default to 'index' for homepage
   const slug = 'index';
   

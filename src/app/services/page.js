@@ -1,4 +1,5 @@
-﻿import { getCourseBySlugStatic } from '../../utils/staticCourses';
+﻿import Image from 'next/image';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Monitor, 
   Users, 
@@ -170,8 +171,10 @@ export default function Services() {
             {/* Online Training Image */}
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-2xl">
-                <img src={mainImageUrl}
+                <Image src={mainImageUrl}
                   alt="Online Training institutes in Hyderabad"
+                  width={600}
+                  height={400}
                   className="w-full rounded-xl shadow-lg"
                 />
                 <div className="absolute -top-4 -right-4 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-bounce shadow-lg">
@@ -199,11 +202,7 @@ export default function Services() {
             {/* Classroom Training Image */}
             <div className="lg:order-1 relative">
               <div className="bg-gradient-to-br from-purple-500/20 via-pink-500/20 to-red-500/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-2xl">
-                <img
-                  src="/logo.png"
-                  alt="ClassRoom Training institutes in Hyderabad"
-                  className="w-full rounded-xl shadow-lg"
-                />
+                <Image src="/logo.png" alt="ClassRoom Training institutes in Hyderabad" className="w-full rounded-xl shadow-lg" width={1200} height={630} />
                 <div className="absolute -top-4 -left-4 bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-bounce shadow-lg">
                   👥 Interactive Learning!
                 </div>
@@ -344,11 +343,7 @@ export default function Services() {
             {/* Job Support Image */}
             <div className="relative">
               <div className="bg-gradient-to-br from-teal-500/20 via-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-teal-400/30 shadow-2xl">
-                <img
-                  src="/logo.png"
-                  alt="Job Support services in Hyderabad"
-                  className="w-full rounded-xl shadow-lg"
-                />
+                <Image src="/logo.png" alt="Job Support services in Hyderabad" className="w-full rounded-xl shadow-lg" width={1200} height={630} />
                 <div className="absolute -top-4 -right-4 bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-bounce shadow-lg">
                   💼 Career Success!
                 </div>

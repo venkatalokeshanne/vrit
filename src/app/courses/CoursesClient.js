@@ -3,7 +3,7 @@
 
 
 
-const courses = [
+const _courses = [
   // ... (I'll move all the courses data here)
 ];
 

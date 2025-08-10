@@ -1,6 +1,7 @@
 ﻿'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import './animations.css';
 
 export default function SEOTesterPage() {
@@ -36,7 +37,7 @@ export default function SEOTesterPage() {
 
       const data = await response.json();
       setSeoData(data);
-    } catch (err) {
+    } catch {
       // Fallback for local analysis
       if (url.includes(window.location.hostname) || url.startsWith('/')) {
         analyzeSiteURL(url);
@@ -72,8 +73,8 @@ export default function SEOTesterPage() {
       
       // Count images with and without alt text
       const allImages = Array.from(doc.querySelectorAll('img'));
-      const imagesWithAlt = allImages.filter(img => img.alt && img.alt.trim().length > 0);
-      const imagesWithoutAlt = allImages.filter(img => !img.alt || img.alt.trim().length === 0);
+      const _imagesWithAlt = allImages.filter(img => img.alt && img.alt.trim().length > 0);
+      const _imagesWithoutAlt = allImages.filter(img => !img.alt || img.alt.trim().length === 0);
       
       const seoAnalysis = {
         title: doc.querySelector('title')?.textContent || 'No title found',
@@ -321,7 +322,7 @@ export default function SEOTesterPage() {
       };
 
       setSeoData(seoAnalysis);
-    } catch (err) {
+    } catch {
       setError('Unable to analyze the page. Please check the URL.');
     }
   };
@@ -772,7 +773,7 @@ export default function SEOTesterPage() {
                       {seoData.images.slice(0, 10).map((img, index) => (
                         <div key={index} className="bg-white/80 rounded-2xl p-4 shadow-lg border border-white/50">
                           <div className="flex items-start gap-4">
-                            <img src={img.src} alt={img.alt} className="w-20 h-20 object-cover rounded-xl shadow-md" />
+                            <Image src={img.src} alt={img.alt} width={80} height={80} className="w-20 h-20 object-cover rounded-xl shadow-md" />
                             <div className="flex-1 min-w-0">
                               <div className="mb-2">
                                 <span className="text-xs font-semibold text-gray-500">ALT TEXT:</span>
@@ -882,7 +883,7 @@ export default function SEOTesterPage() {
                     <div className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden shadow-lg max-w-lg">
                       {seoData.ogImage && seoData.ogImage !== 'No OG image found' && (
                         <div className="relative">
-                          <img src={seoData.ogImage} alt="OG Preview" className="w-full h-64 object-cover" />
+                          <Image src={seoData.ogImage} alt="OG Preview" width={512} height={256} className="w-full h-64 object-cover" />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                         </div>
                       )}
@@ -911,7 +912,7 @@ export default function SEOTesterPage() {
                     <div className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden shadow-lg max-w-lg">
                       {seoData.twitterImage && seoData.twitterImage !== 'No Twitter image found' && (
                         <div className="relative">
-                          <img src={seoData.twitterImage} alt="Twitter Preview" className="w-full h-64 object-cover" />
+                          <Image src={seoData.twitterImage} alt="Twitter Preview" width={512} height={256} className="w-full h-64 object-cover" />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                         </div>
                       )}
@@ -940,7 +941,7 @@ export default function SEOTesterPage() {
                     <div className="bg-white border-2 border-gray-200 rounded-2xl overflow-hidden shadow-lg max-w-lg">
                       {seoData.ogImage && seoData.ogImage !== 'No OG image found' && (
                         <div className="relative">
-                          <img src={seoData.ogImage} alt="LinkedIn Preview" className="w-full h-48 object-cover" />
+                          <Image src={seoData.ogImage} alt="LinkedIn Preview" width={512} height={192} className="w-full h-48 object-cover" />
                         </div>
                       )}
                       <div className="p-6">
