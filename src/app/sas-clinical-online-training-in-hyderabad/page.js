@@ -72,7 +72,7 @@ export default function SASClinicalOnlineTrainingInHyderabad() {
 
   // Fetch metadata for dynamic hero image
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+  const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   const courseStructure = [
     "Introduction to SAS and Clinical Trials",
@@ -144,7 +144,7 @@ export default function SASClinicalOnlineTrainingInHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <Image src={mainImageUrl}
+                  <Image src={_mainImageUrl}
                     alt="SAS Clinical Training Course in Hyderabad - VR IT Solutions"
                     width={1200}
                     height={630}

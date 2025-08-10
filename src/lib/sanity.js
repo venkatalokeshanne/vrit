@@ -20,7 +20,7 @@ function createCourseObject(courseData, isFromSanity = false) {
 
   let ogImageUrl = '';
   let twitterImageUrl = '';
-  let mainImageUrl = '';
+  let _mainImageUrl = '';
 
   if (isFromSanity) {
     // Handle Sanity image assets
@@ -37,15 +37,15 @@ function createCourseObject(courseData, isFromSanity = false) {
     }
 
     if (courseData.mainImage && courseData.mainImage.asset) {
-      mainImageUrl = urlFor(courseData.mainImage).url();
+      _mainImageUrl = urlFor(courseData.mainImage).url();
     } else if (typeof courseData.mainImage === 'string') {
-      mainImageUrl = courseData.mainImage;
+      _mainImageUrl = courseData.mainImage;
     }
   } else {
     // Handle static metadata images
     ogImageUrl = courseData.ogImage || '';
     twitterImageUrl = courseData.twitterImage || '';
-    mainImageUrl = courseData.ogImage || ''; // Use ogImage as fallback for mainImage
+    _mainImageUrl = courseData.ogImage || ''; // Use ogImage as fallback for mainImage
   }
 
   const slug = isFromSanity ? (courseData.slug?.current || '') : courseData.slug;
@@ -66,7 +66,7 @@ function createCourseObject(courseData, isFromSanity = false) {
     twitterTitle: courseData.twitterTitle || courseData.ogTitle || title,
     twitterDescription: courseData.twitterDescription || courseData.ogDescription || description,
     ogImage: ogImageUrl,
-    mainImage: mainImageUrl,
+    mainImage: _mainImageUrl,
     twitterImage: twitterImageUrl || ogImageUrl || '',
     canonical: `https://www.vritsol.com/${slug}`,
     reviewCount: isFromSanity 

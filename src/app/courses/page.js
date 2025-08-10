@@ -587,7 +587,7 @@ export default async function CoursesPage() {
   const structuredDataJson = courseMetadata?.structuredData ? 
     JSON.stringify(courseMetadata.structuredData) : null;
 
-  // Use only mainImage for mainImageUrl
+  // Use only mainImage for _mainImageUrl
   const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   // Log the courseMetadata to see what we have

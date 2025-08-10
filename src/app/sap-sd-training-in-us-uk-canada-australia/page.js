@@ -37,7 +37,7 @@ export default async function SAPSDTrainingInUSUKCanadaAustralia() {
 
   // Fetch metadata for dynamic hero image
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+  const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   const courseModules = [
     "Introduction to SAP and SAP SD Module",
@@ -206,7 +206,7 @@ export default async function SAPSDTrainingInUSUKCanadaAustralia() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <Image src={mainImageUrl} alt="SAP SD Training in US, UK, Canada, Australia - VR IT Solutions" className="w-full object-cover border-2 border-orange-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
+                  <Image src={_mainImageUrl} alt="SAP SD Training in US, UK, Canada, Australia - VR IT Solutions" className="w-full object-cover border-2 border-orange-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
                 </div>
 

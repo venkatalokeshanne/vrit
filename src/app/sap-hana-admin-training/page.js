@@ -36,8 +36,8 @@ export default function SAPHANAAdminTraining() {
   const structuredDataJson = courseMetadata?.structuredData ? 
     JSON.stringify(courseMetadata.structuredData) : null;
 
-  // Use only mainImage for mainImageUrl
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+  // Use only mainImage for _mainImageUrl
+  const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);
@@ -139,7 +139,7 @@ export default function SAPHANAAdminTraining() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <Image src={mainImageUrl} alt="SAP HANA Admin Training Course in Hyderabad - VR IT Solutions" className="w-full object-cover border-2 border-purple-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
+                  <Image src={_mainImageUrl} alt="SAP HANA Admin Training Course in Hyderabad - VR IT Solutions" className="w-full object-cover border-2 border-purple-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
                 </div>
                 
                 <div className="inline-block bg-gradient-to-r from-purple-500/25 to-pink-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-purple-400/40">

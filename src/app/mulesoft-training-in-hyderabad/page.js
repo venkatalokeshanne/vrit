@@ -26,7 +26,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
 
   // Fetch metadata for dynamic hero image
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+  const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   const courseStructure = [
     "Overview of Mule – Getting started",
@@ -145,7 +145,7 @@ export default async  function MuleSoftTrainingInHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <Image src={mainImageUrl}
+                  <Image src={_mainImageUrl}
                     alt="MuleSoft Training Course in Hyderabad - VR IT Solutions"
                     width={1200}
                     height={630}

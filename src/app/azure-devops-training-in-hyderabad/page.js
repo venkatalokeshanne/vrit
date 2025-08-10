@@ -30,8 +30,8 @@ export default function AzureDevOpsTrainingInHyderabad() {
   const structuredDataJson = courseMetadata?.structuredData ? 
     JSON.stringify(courseMetadata.structuredData) : null;
 
-  // Use only mainImage for mainImageUrl
-  const mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';
+  // Use only mainImage for _mainImageUrl
+  const _mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';
 
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);
@@ -147,7 +147,7 @@ export default function AzureDevOpsTrainingInHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <Image src={mainImageUrl} alt="Azure DevOps Training Course in Hyderabad - VR IT Solutions" className="w-full object-cover border-2 border-indigo-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
+                  <Image src={_mainImageUrl} alt="Azure DevOps Training Course in Hyderabad - VR IT Solutions" className="w-full object-cover border-2 border-indigo-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
                 </div>
                 
                 <div className="inline-block bg-gradient-to-r from-indigo-500/25 to-blue-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-indigo-400/40">

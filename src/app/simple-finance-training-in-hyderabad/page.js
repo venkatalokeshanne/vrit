@@ -74,8 +74,8 @@ export default function SimpleFinanceTrainingInHyderabad() {
   const structuredDataJson = courseMetadata?.structuredData ? 
     JSON.stringify(courseMetadata.structuredData) : null;
 
-  // Use only mainImage for mainImageUrl
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+  // Use only mainImage for _mainImageUrl
+  const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);
@@ -151,7 +151,7 @@ export default function SimpleFinanceTrainingInHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <Image src={mainImageUrl}
+                  <Image src={_mainImageUrl}
                     alt="S/4 HANA Finance Training Course in Hyderabad - VR IT Solutions"
                     width={1200}
                     height={630}

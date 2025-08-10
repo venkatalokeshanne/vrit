@@ -25,7 +25,7 @@ export default function GoogleCloudTrainingInHyderabad() {
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   const structuredDataJson = courseMetadata?.structuredData ? 
     JSON.stringify(courseMetadata.structuredData) : null;
-  const mainImageUrl = courseMetadata?.mainImage
+  const _mainImageUrl = courseMetadata?.mainImage
 
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);
@@ -116,7 +116,7 @@ export default function GoogleCloudTrainingInHyderabad() {
                 
                 {/* Course Image - Facebook Post Dimensions */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <Image src={mainImageUrl} alt="Google Cloud Platform Online Training in Hyderabad - VR IT Solutions" className="w-full object-cover border-2 border-orange-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
+                  <Image src={_mainImageUrl} alt="Google Cloud Platform Online Training in Hyderabad - VR IT Solutions" className="w-full object-cover border-2 border-orange-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
                   {/* Overlay gradient for better text readability if needed */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
                 </div>

@@ -77,7 +77,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
 
   // Fetch metadata for dynamic hero image
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+  const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   const trainingModes = [
     "Online Training",
@@ -116,7 +116,7 @@ export default async  function SAPSecurityTrainingInHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <Image src={mainImageUrl} alt="SAP Security & GRC Training Course in Hyderabad - VR IT Solutions" className="w-full object-cover border-2 border-red-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
+                  <Image src={_mainImageUrl} alt="SAP Security & GRC Training Course in Hyderabad - VR IT Solutions" className="w-full object-cover border-2 border-red-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630} />
                 </div>
                 
                 <div className="inline-block bg-gradient-to-r from-red-500/25 to-pink-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-red-400/40">

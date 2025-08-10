@@ -21,7 +21,7 @@ import {
 export default function DynamicCoursePage({ course }) {
   // Get SEO data from existing courseMetadata by matching slug
   const courseMetadata = getCourseBySlugStatic(course.slug.current);
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+  const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
   
   // Use existing structured data from courseMetadata if available
   const structuredDataJson = courseMetadata?.structuredData ? 
@@ -55,7 +55,7 @@ export default function DynamicCoursePage({ course }) {
                   {/* Course Image */}
                   <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
                     <Image 
-                      src={mainImageUrl}
+                      src={_mainImageUrl}
                       alt={course.title}
                       width={1200}
                       height={630}

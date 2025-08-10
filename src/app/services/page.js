@@ -75,8 +75,8 @@ export default function Services() {
   const structuredDataJson = courseMetadata?.structuredData ? 
     JSON.stringify(courseMetadata.structuredData) : null;
 
-  // Use only mainImage for mainImageUrl
-  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
+  // Use only mainImage for _mainImageUrl
+  const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);
@@ -171,7 +171,7 @@ export default function Services() {
             {/* Online Training Image */}
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-500/20 via-cyan-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-blue-400/30 shadow-2xl">
-                <Image src={mainImageUrl}
+                <Image src={_mainImageUrl}
                   alt="Online Training institutes in Hyderabad"
                   width={600}
                   height={400}
