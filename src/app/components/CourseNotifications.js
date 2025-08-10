@@ -30,6 +30,7 @@ const CourseNotifications = ({ courseName }) => {
   const [notifications, setNotifications] = useState([]);
   const [notificationId, setNotificationId] = useState(0);
   const [usedNames, setUsedNames] = useState(new Set());
+  const [timers, setTimers] = useState(new Map()); // Track timers for each notification
 
   // Function to generate a random notification
   const generateNotification = useCallback(() => {
@@ -63,25 +64,41 @@ const CourseNotifications = ({ courseName }) => {
     const newNotification = generateNotification();
     setNotifications(prev => [newNotification, ...prev.slice(0, 3)]); // Keep max 4 notifications
     setNotificationId(prev => prev + 1);
+    
+    // Set auto-removal timer for this specific notification
+    const timer = setTimeout(() => {
+      setNotifications(prev => prev.filter(n => n.id !== newNotification.id));
+      setTimers(prev => {
+        const newTimers = new Map(prev);
+        newTimers.delete(newNotification.id);
+        return newTimers;
+      });
+    }, 6000);
+    
+    setTimers(prev => new Map(prev).set(newNotification.id, timer));
   }, [generateNotification]);
 
   // Function to remove a notification
   const removeNotification = (id) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
+    // Clear the timer for this notification
+    setTimers(prev => {
+      const newTimers = new Map(prev);
+      const timer = newTimers.get(id);
+      if (timer) {
+        clearTimeout(timer);
+        newTimers.delete(id);
+      }
+      return newTimers;
+    });
   };
 
-  // Auto-remove notifications after 6 seconds
+  // Clean up timers on unmount
   useEffect(() => {
-    const timers = notifications.map(notification => 
-      setTimeout(() => {
-        removeNotification(notification.id);
-      }, 6000)
-    );
-
     return () => {
       timers.forEach(timer => clearTimeout(timer));
     };
-  }, [notifications]);
+  }, [timers]);
 
   // Generate notifications every 20 seconds
   useEffect(() => {
