@@ -130,28 +130,6 @@ export default function DynamicCoursePage({ course }) {
                 </div>
               </section>
 
-              {/* Course Content PDF Download */}
-              {courseMetadata?.courseContentPdf && (
-                <section className="bg-gradient-to-br from-green-600/15 via-emerald-600/20 to-teal-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-green-400/30 shadow-xl shadow-green-500/10">
-                  <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                    <FileText className="w-8 h-8 text-green-400" />
-                    Course Content & Syllabus
-                  </h2>
-                  <div className="bg-green-500/10 rounded-xl p-6 border border-green-400/20">
-                    <p className="text-green-100 leading-relaxed mb-4">
-                      Download our comprehensive course content and syllabus to get detailed information about the {course.title} training curriculum, modules, and learning objectives.
-                    </p>
-                    <button 
-                      onClick={() => window.open(courseMetadata.courseContentPdf, '_blank', 'noopener,noreferrer')}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/30 hover:scale-105"
-                    >
-                      <Download className="w-5 h-5" />
-                      View/Download Course PDF
-                    </button>
-                  </div>
-                </section>
-              )}
-
               {/* Course Modules */}
               {course.courseModules && course.courseModules.length > 0 && (
                 <section className="bg-gradient-to-br from-purple-600/15 via-pink-600/20 to-rose-600/15 backdrop-blur-sm rounded-2xl p-4 lg:p-8 border border-purple-400/30 shadow-xl shadow-purple-500/10">

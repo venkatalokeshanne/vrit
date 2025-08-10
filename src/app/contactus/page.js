@@ -1,4 +1,5 @@
-import React from 'react';
+﻿import React from 'react';
+import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
 
 // Define the course slug as a constant

@@ -1,4 +1,5 @@
-import React from 'react';
+﻿import React from 'react';
+import Link from 'next/link';
 import FAQ from '../components/FAQ';
 import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 
@@ -73,7 +74,7 @@ export default function RefundAndCourseReschedulingPolicy() {
                 Thank you for buying our courses. We want to make sure that our users have a rewarding experience while they are discovering information, assessing, and purchasing our training courses, whether it may be for online or classroom training courses.
               </p>
               <p className="text-gray-300 leading-relaxed mb-4">
-                As with any online purchase experience, the below are the terms and conditions that govern the Refund Policy. When you buy a training course on the vr it solutions website you agree to our <a href="/privacy-policy" className="text-green-400 hover:text-green-300 underline">Privacy Policy</a> and <a href="/terms-and-conditions" className="text-green-400 hover:text-green-300 underline">Terms of use policy</a> and the points below.
+                As with any online purchase experience, the below are the terms and conditions that govern the Refund Policy. When you buy a training course on the vr it solutions website you agree to our <Link href="/privacy-policy" className="text-green-400 hover:text-green-300 underline">Privacy Policy</Link> and <Link href="/terms-and-conditions" className="text-green-400 hover:text-green-300 underline">Terms of use policy</Link> and the points below.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 VRIT solutions reserves the right to postpone/cancel an event because of instructor illness or force-majeure events (like floods, earthquakes, political instability, pandemic situation like COVID19, etc.)
@@ -111,7 +112,7 @@ export default function RefundAndCourseReschedulingPolicy() {
               <h2 className="text-2xl font-bold text-white mb-4">Important Notice</h2>
               <div className="bg-orange-600/20 rounded-lg p-4 border border-orange-400/30">
                 <p className="text-orange-200 leading-relaxed">
-                  Please read all terms and conditions carefully before purchasing any course. For any queries regarding refunds or course rescheduling, please contact our support team at <a href="mailto:info@vritsol.com" className="text-orange-300 hover:text-orange-200 underline">info@vritsol.com</a> or call <a href="tel:+919032734343" className="text-orange-300 hover:text-orange-200 underline">+91-9032734343</a>.
+                  Please read all terms and conditions carefully before purchasing any course. For any queries regarding refunds or course rescheduling, please contact our support team at <Link href="mailto:info@vritsol.com" className="text-orange-300 hover:text-orange-200 underline">info@vritsol.com</Link> or call <Link href="tel:+919032734343" className="text-orange-300 hover:text-orange-200 underline">+91-9032734343</Link>.
                 </p>
               </div>
             </section>

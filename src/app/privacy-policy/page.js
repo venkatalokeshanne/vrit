@@ -1,4 +1,5 @@
-import React from 'react';
+﻿import React from 'react';
+import Link from 'next/link';
 import FAQ from '../components/FAQ';
 import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 

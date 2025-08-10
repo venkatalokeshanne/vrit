@@ -46,7 +46,7 @@ export default function Footer() {
               VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room trainings from Hyderabad.
             </p>
             <div className="flex space-x-4">
-              <a
+              <Link
                 href="https://www.facebook.com/vritsolutions/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -54,8 +54,8 @@ export default function Footer() {
                 aria-label="Follow us on Facebook"
               >
                 <FacebookIcon className="w-5 h-5 text-white group-hover:text-white" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://twitter.com/vritsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -63,8 +63,8 @@ export default function Footer() {
                 aria-label="Follow us on Twitter"
               >
                 <TwitterIcon className="w-5 h-5 text-white group-hover:text-white" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.youtube.com/channel/UCNbaPhgRjVUDcJSh70X-ZtA"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,8 +72,8 @@ export default function Footer() {
                 aria-label="Subscribe to our YouTube channel"
               >
                 <YouTubeIcon className="w-5 h-5 text-white group-hover:text-white" />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.instagram.com/vritsolutions/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -81,7 +81,7 @@ export default function Footer() {
                 aria-label="Follow us on Instagram"
               >
                 <InstagramIcon className="w-5 h-5 text-white group-hover:text-white" />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -89,28 +89,28 @@ export default function Footer() {
             <h4 className="text-xl font-bold text-white mb-6">Policies & Terms</h4>
             <ul className="space-y-3">
               <li>
-                <a href="/privacy-policy" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/privacy-policy" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Privacy Policy</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/terms-and-conditions" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/terms-and-conditions" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Terms & Conditions</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/refund-and-course-rescheduling-policy" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/refund-and-course-rescheduling-policy" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Refund and Course Rescheduling Policy</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contactus" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/contactus" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Contact Us</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -129,15 +129,15 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <a href="tel:+919032734343" className="text-white/70 hover:text-white transition-colors">
+                <Link href="tel:+919032734343" className="text-white/70 hover:text-white transition-colors">
                   +91-9032734343
-                </a>
+                </Link>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-teal-400" />
-                <a href="mailto:info@vritsol.com" className="text-white/70 hover:text-white transition-colors">
+                <Link href="mailto:info@vritsol.com" className="text-white/70 hover:text-white transition-colors">
                   info@vritsol.com
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -177,7 +177,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex items-center justify-center space-x-4 mb-4">
-              <a
+              <Link
                 href="https://maps.google.com/?q=506/A,+Aditya+Enclave,+Nilagiri+Block,+Ameerpet,+Hyderabad,+Telangana+500016"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -185,7 +185,7 @@ export default function Footer() {
               >
                 <MapPin className="w-4 h-4" />
                 <span>Open in Google Maps</span>
-              </a>
+              </Link>
             </div>
             <p className="text-sm text-white/60 text-center">
               📍 Office Hours: Mon-Sat 9AM-7PM

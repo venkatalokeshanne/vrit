@@ -1,4 +1,5 @@
-import React from 'react';
+﻿import React from 'react';
+import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
@@ -192,18 +193,18 @@ export default function SASClinicalOnlineTrainingInHyderabad() {
                     Our Locations
                   </h3>
                   <div className="flex flex-wrap gap-3">
-                    <a href="/sas-clinical-training-in-bangalore" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
+                    <Link href="/sas-clinical-training-in-bangalore" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
                       Bangalore
-                    </a>
-                    <a href="/sas-clinical-training-in-chennai" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
+                    </Link>
+                    <Link href="/sas-clinical-training-in-chennai" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
                       Chennai
-                    </a>
-                    <a href="/sas-clinical-training-in-pune" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
+                    </Link>
+                    <Link href="/sas-clinical-training-in-pune" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
                       Pune
-                    </a>
-                    <a href="/sas-clinical-online-training-in-us-uk-canada-australia" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
+                    </Link>
+                    <Link href="/sas-clinical-online-training-in-us-uk-canada-australia" className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-200 hover:text-white px-4 py-2 rounded-lg border border-blue-400/40 hover:border-blue-300/60 transition-all duration-300 text-sm font-medium">
                       US/UK/Canada/Australia
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

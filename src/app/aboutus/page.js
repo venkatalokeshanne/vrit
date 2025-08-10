@@ -1,10 +1,13 @@
-import React from 'react';
+﻿import React from 'react';
+import Link from 'next/link';
 import { CheckCircle, Users, Target, TrendingUp, Award, Clock, MapPin, Mail, Phone, Globe, BookOpen, Monitor, Code, Briefcase, Star, ArrowRight } from 'lucide-react';
-
-// Define the course slug as a constant
-const COURSE_SLUG = 'aboutus';import FAQ from '../components/FAQ';
+import FAQ from '../components/FAQ';
 import { EnquireNowButton, CallNowButton } from '../components/CourseActionButtons';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
+
+// Define the course slug as a constant
+const COURSE_SLUG = 'aboutus';
+
 
 // Generate metadata for this page using static data
 export async function generateMetadata() {

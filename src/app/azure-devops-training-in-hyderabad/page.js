@@ -1,4 +1,5 @@
-import React from 'react';
+﻿import React from 'react';
+import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
@@ -197,18 +198,18 @@ export default function AzureDevOpsTrainingInHyderabad() {
                     Our Locations
                   </h3>
                   <div className="flex flex-wrap gap-3">
-                    <a href="/azure-devops-online-training-in-bangalore" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
+                    <Link href="/azure-devops-online-training-in-bangalore" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
                       Bangalore
-                    </a>
-                    <a href="/azure-devops-online-training-in-chennai" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
+                    </Link>
+                    <Link href="/azure-devops-online-training-in-chennai" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
                       Chennai
-                    </a>
-                    <a href="/azure-devops-online-training-in-pune" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
+                    </Link>
+                    <Link href="/azure-devops-online-training-in-pune" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
                       Pune
-                    </a>
-                    <a href="/azure-devops-online-training-in-noida" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
+                    </Link>
+                    <Link href="/azure-devops-online-training-in-noida" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
                       Noida
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
