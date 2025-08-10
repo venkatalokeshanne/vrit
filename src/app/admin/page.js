@@ -1,5 +1,5 @@
-﻿import Link from 'next/link';
-'use client'
+﻿'use client'
+import Link from 'next/link';
 
 import { useState, useEffect } from 'react'
 import { Plus, Edit2, Trash2, User, Tag, FileText, Save } from 'lucide-react'
