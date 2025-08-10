@@ -21,9 +21,94 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Generate metadata dynamically for the homepage
-export async function generateMetadata() {
-  return getPageMetadataStatic('index');
+// Viewport configuration
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#1e40af' },
+    { media: '(prefers-color-scheme: dark)', color: '#1e40af' }
+  ],
+};
+
+// Generate metadata dynamically for all pages
+export async function generateMetadata({ params, searchParams }) {
+  // Get the current page slug from params or default to 'index' for homepage
+  const slug = 'index';
+  
+  // Get page metadata from your courses-static.json
+  const pageMetadata = getPageMetadataStatic(slug);
+  
+  // Base URL for your site
+  const baseUrl = 'https://vrit-nine.vercel.app/';
+  
+  // Merge your existing metadata with missing SEO properties
+  return {
+    metadataBase: new URL(baseUrl),
+    title: pageMetadata.title || 'VR IT Solutions - Leading IT Training Institute in Hyderabad',
+    description: pageMetadata.description || 'Leading IT training institute in Hyderabad offering comprehensive courses in SAP, ServiceNow, Salesforce, Cloud Technologies, and more with 95% placement guarantee.',
+    keywords: pageMetadata.keywords || ['IT training', 'SAP training', 'ServiceNow training', 'Salesforce training', 'Hyderabad', 'placement guarantee'],
+    
+    // Add missing SEO properties
+    authors: [{ name: 'VR IT Solutions' }],
+    creator: 'VR IT Solutions',
+    publisher: 'VR IT Solutions',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    
+    // Geo-location meta tags
+    other: {
+      'geo.region': 'IN-TG',
+      'geo.placename': 'Hyderabad',
+      'geo.position': '17.4399;78.4983',
+      'ICBM': '17.4399, 78.4983',
+    },
+    
+    // OpenGraph - use your existing data structure
+    openGraph: {
+      ...pageMetadata.openGraph,
+      siteName: 'VR IT Solutions',
+      locale: 'en_US',
+      type: pageMetadata.openGraph?.type || 'website',
+      url: pageMetadata.openGraph?.url ? `${baseUrl}${pageMetadata.openGraph.url}` : baseUrl,
+    },
+    
+    // Twitter - use your existing data structure  
+    twitter: {
+      ...pageMetadata.twitter,
+      site: '@vritsolutions',
+      creator: '@vritsolutions',
+    },
+    
+    // Robots configuration
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    
+    // Canonical URL
+    alternates: {
+      canonical: pageMetadata.canonical ? `${baseUrl}${pageMetadata.canonical}` : baseUrl,
+      ...pageMetadata.alternates,
+    },
+    
+    // Verification codes
+    verification: {
+      google: 'your-google-verification-code', // Replace with your actual code
+    },
+  };
 }
 
 export default async function RootLayout({ children }) {
@@ -36,21 +121,10 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
-        <link rel="canonical" href="https://www.vritsol.com/" />
-        <meta name="geo.region" content="IN-TG" />
-        <meta name="geo.placename" content="Hyderabad" />
-        <meta name="geo.position" content="17.4399;78.4983" />
-        <meta name="ICBM" content="17.4399, 78.4983" />
-        <meta name="theme-color" content="#1e40af" />
-        <meta name="color-scheme" content="dark light" />
-        <meta name="format-detection" content="telephone=no" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://cdn.sanity.io" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        
-        {/* Structured Data */}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {/* Structured Data Scripts */}
         {structuredData && (
           <script
             type="application/ld+json"
@@ -86,38 +160,7 @@ export default async function RootLayout({ children }) {
             })
           }}
         />
-        <meta name="geo.position" content="17.3850;78.4867" />
-        <meta name="ICBM" content="17.3850, 78.4867" />
-        <meta name="DC.title" content="Best Software Training Institute In Hyderabad | VR IT Solutions" />
-        <meta name="DC.subject" content="Software Training, IT Training, Programming Courses" />
-        <meta name="DC.description" content="Best Software Training Institute in Hyderabad offering Python, Data Science, SAP, Salesforce, ServiceNow training with 100% placement assistance" />
-        <meta name="DC.language" content="en" />
-        <meta name="DC.creator" content="VR IT Solutions" />
-        <meta name="DC.publisher" content="VR IT Solutions" />
-        <meta name="DC.rights" content="© 2024 VR IT Solutions. All rights reserved." />
-        
-        {/* Enhanced SEO Meta Tags */}
-        <meta name="theme-color" content="#3B82F6" />
-        <meta name="msapplication-TileColor" content="#3B82F6" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        
-        {/* Preconnect to external domains for performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        
-        {/* Additional security and performance headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        
-        {/* Link to humans.txt and security.txt */}
-        <link rel="author" href="/humans.txt" />
-        <link rel="help" href="/.well-known/security.txt" />
-        <meta name="DC.coverage" content="Hyderabad, India" />
-        
+
         {/* Enhanced Rich Snippets and Schema Markup */}
         {RichSnippetsManager.generateCompleteSchema('home').map((schema, index) => (
           <script
@@ -128,10 +171,29 @@ export default async function RootLayout({ children }) {
             }}
           />
         ))}
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+
+        {/* Preconnect Links for Performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://cdn.sanity.io" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="author" href="/humans.txt" />
+        <link rel="help" href="/.well-known/security.txt" />
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GA_MEASUREMENT_ID');
+          `}
+        </Script>
+
         <ScrollingBanner text={importantText} isVisible={!!importantText} />
         <Header />
         {children}
