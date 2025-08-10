@@ -4,8 +4,10 @@ import React from 'react';
 import { Phone, Mail, Download, Users, Monitor, Briefcase, CheckCircle, ArrowRight, Clock, Target, Award, TrendingUp, Code, Globe, Star, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import CourseActionButtons, { EnquireNowButton, DownloadCourseButton, CallNowButton } from './CourseActionButtons';
+import { getCourseBySlugStatic } from '@/utils/staticCourses';
 
-export default function CourseSidebar({ courseName = "Course", phoneNumber = "+91-9032734343" }) {
+export default function CourseSidebar({ slug, courseName = "Course", phoneNumber = "+91-9032734343" }) {
+  const courseMetadata = getCourseBySlugStatic(slug);
   const trainingModes = [
     { icon: <Globe className="w-5 h-5" />, name: "Online Training" },
     { icon: <Users className="w-5 h-5" />, name: "ClassRoom Training" },
@@ -89,7 +91,8 @@ export default function CourseSidebar({ courseName = "Course", phoneNumber = "+9
             <CourseActionButtons 
               courseName={courseName}
               showEnquireNow={true}
-              showDownload={true}
+              showDownload={!!courseMetadata?.courseContentPdf}
+              downloadUrl={courseMetadata?.courseContentPdf}
               showCallNow={false}
               showJoinNow={false}
               variant="sidebar"

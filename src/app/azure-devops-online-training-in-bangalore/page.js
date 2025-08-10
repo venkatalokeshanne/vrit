@@ -46,13 +46,13 @@ export async function generateMetadata() {
 export default function AzureDevOpsTraining() {
   // Get the complete course metadata from static file
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  
+  const mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';
   // Get structured data directly from courseMetadata
   const structuredDataJson = courseMetadata?.structuredData ? 
     JSON.stringify(courseMetadata.structuredData) : null;
 
   // Use only mainImage for mainImageUrl
-  const mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';
+  
 
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);
@@ -230,9 +230,10 @@ export default function AzureDevOpsTraining() {
                 <CourseActionButtons 
                   courseName="Azure DevOps Online Training in Bangalore"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                 />
               </div>
             </section>
@@ -427,7 +428,7 @@ export default function AzureDevOpsTraining() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="Azure DevOps" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="Azure DevOps" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

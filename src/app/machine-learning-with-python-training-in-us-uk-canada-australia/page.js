@@ -187,7 +187,8 @@ export default function MachineLearningWithPythonTrainingInUSUKCanadaAustralia()
                   courseName="Machine Learning with Python"
                   phoneNumber="+91-9032734343"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showJoinNow={false}
                   showCallNow={false}
                   layout="horizontal"
@@ -452,7 +453,7 @@ export default function MachineLearningWithPythonTrainingInUSUKCanadaAustralia()
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="Machine Learning with Python" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="Machine Learning with Python" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

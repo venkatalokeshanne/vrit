@@ -203,7 +203,8 @@ export default function EdiTrainingInUSUKCanadaAustralia() {
                   courseName="EDI"
                   phoneNumber="+91-9032734343"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showJoinNow={false}
                   showCallNow={false}
                   layout="horizontal"
@@ -412,7 +413,7 @@ export default function EdiTrainingInUSUKCanadaAustralia() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="EDI" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="EDI" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

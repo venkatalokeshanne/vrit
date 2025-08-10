@@ -144,7 +144,8 @@ export default function SalesforceTraining() {
                 <CourseActionButtons 
                   courseName="Salesforce Training in Hyderabad"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -276,7 +277,7 @@ export default function SalesforceTraining() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="Salesforce" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="Salesforce" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

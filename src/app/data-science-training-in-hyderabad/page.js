@@ -204,7 +204,8 @@ export default function DataScienceTrainingInHyderabad() {
                 <CourseActionButtons 
                   courseName="Data Science Training in Hyderabad"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -385,7 +386,7 @@ export default function DataScienceTrainingInHyderabad() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="Data Science" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="Data Science" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

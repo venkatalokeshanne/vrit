@@ -182,7 +182,8 @@ export default function SAPHANAAdminTraining() {
                   courseName="SAP HANA Admin Training"
                   phoneNumber="+91-9032734343"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   layout="horizontal"
                   size="lg"
                 />
@@ -357,7 +358,7 @@ export default function SAPHANAAdminTraining() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="SAP HANA Admin" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="SAP HANA Admin" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

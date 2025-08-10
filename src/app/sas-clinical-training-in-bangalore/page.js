@@ -181,7 +181,8 @@ export default function SASClinicalTrainingInBangalore() {
                   courseName="SAS Clinical"
                   phoneNumber="+91-9032734343"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showJoinNow={false}
                   showCallNow={false}
                   layout="horizontal"
@@ -348,7 +349,7 @@ export default function SASClinicalTrainingInBangalore() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="SAS Clinical" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="SAS Clinical" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

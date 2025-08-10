@@ -37,19 +37,18 @@ import {
 // Define the course slug as a constant
 const COURSE_SLUG = 'azure-devops-online-training-in-pune';
 export async function generateMetadata() {
-  const courseMetadata = getCourseBySlugStatic('azure-devops-online-training-in-pune');
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   return courseMetadata?.metadata || {};
 }
 
 
 
 export default function AzureDevOpsTraining() {
-  const structuredDataJson = getStructuredDataStatic('azure-devops-online-training-in-pune');
+  const structuredDataJson = getStructuredDataStatic(COURSE_SLUG);
   // Fetch metadata for dynamic hero image
 
-  const courseData = getCourseBySlugStatic('azure-devops-online-training-in-pune');
-  const metadata = courseData?.metadata;
-  const mainImageUrl = metadata?.mainImage || '/azure-devops.jpg';
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  const mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';
   const azureDevOpsFaqs = [
     {
       question: "What is Azure DevOps and AWS, and why learn them together?",
@@ -225,7 +224,8 @@ export default function AzureDevOpsTraining() {
                 <CourseActionButtons 
                   courseName="Azure DevOps Online Training in Pune"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -422,7 +422,7 @@ export default function AzureDevOpsTraining() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="Azure DevOps" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="Azure DevOps" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

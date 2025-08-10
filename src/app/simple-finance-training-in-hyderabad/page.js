@@ -198,7 +198,8 @@ export default function SimpleFinanceTrainingInHyderabad() {
                 <CourseActionButtons 
                   courseName="SAP S/4 HANA Simple Finance Training in Hyderabad"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -317,7 +318,7 @@ export default function SimpleFinanceTrainingInHyderabad() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="S/4 HANA Finance" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="S/4 HANA Finance" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

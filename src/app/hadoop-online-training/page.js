@@ -74,9 +74,8 @@ export default async  function HadoopOnlineTraining() {
   const structuredDataJson = getStructuredDataStatic(COURSE_SLUG);
 
   // Fetch metadata for dynamic hero image
-  const courseData = getCourseBySlugStatic(COURSE_SLUG);
-  const metadata = courseData?.metadata;
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   const hadoopFaqs = [
     {
@@ -176,7 +175,8 @@ export default async  function HadoopOnlineTraining() {
                 <CourseActionButtons 
                   courseName="Hadoop Online Training"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -517,7 +517,7 @@ export default async  function HadoopOnlineTraining() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="Hadoop Training" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="Hadoop Training" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

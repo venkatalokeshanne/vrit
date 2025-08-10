@@ -188,7 +188,8 @@ export default function SAPLeonardoTrainingHyderabad() {
                 <CourseActionButtons 
                   courseName="SAP Leonardo Training Hyderabad"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -376,7 +377,7 @@ export default function SAPLeonardoTrainingHyderabad() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="SAP Leonardo" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="SAP Leonardo" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

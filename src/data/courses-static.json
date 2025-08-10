@@ -1,9 +1,231 @@
 [
   {
+    "slug": "azure-devops-online-training-in-bangalore",
+    "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "https://cdn.sanity.io/files/3hir6j0e/production/ca62ea5d7515307788ada950210708b44f80e4b2.pdf",
+    "hreflang": null,
+    "reviewCount": "15256",
+    "ratingValue": "5",
+    "organizationName": "Azure Devops Online Training in Bangalore - VR IT Solutions",
+    "postalCode": "500016",
+    "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad, Telangana.",
+    "_id": "azure-devops-online-training-in-bangalore",
+    "_updatedAt": "2025-08-10T14:33:30Z",
+    "metadata": {
+      "title": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
+      "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
+      "keywords": [
+        "azure devops training in Bangalore",
+        "azure devops online training in bangalore",
+        "azure devops training"
+      ],
+      "openGraph": {
+        "title": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
+        "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
+        "url": "/azure-devops-online-training-in-bangalore",
+        "type": "website",
+        "images": []
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
+        "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
+        "images": []
+      },
+      "canonical": "https://www.vritsol.com/azure-devops-online-training-in-bangalore"
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "EducationalOrganization"
+      ],
+      "name": "VR IT SOL",
+      "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
+      "url": "https://www.vritsol.com",
+      "logo": "https://www.vritsol.com/images/vritlogo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad, Telangana.",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500016",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "17.4374",
+        "longitude": "78.4482"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9032734343",
+        "email": "info@vritsol.com",
+        "contactType": "customer service"
+      },
+      "openingHours": [
+        "Mo-Sa 08:00-21:30",
+        "Su 09:00-13:00"
+      ],
+      "areaServed": {
+        "@type": "Place",
+        "name": "Hyderabad, Telangana"
+      },
+      "sameAs": [
+        "https://www.facebook.com/vritsolutions/",
+        "https://twitter.com/vritsolutions",
+        "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Training Courses",
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "name": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
+            "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
+            "url": "https://www.vritsol.com/azure-devops-online-training-in-bangalore",
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
+            "educationalLevel": "professional",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "VR IT SOL"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "reviewCount": "15256"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
+    "slug": "react-js-training-hyderabad",
+    "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
+    "hreflang": "en-IN",
+    "reviewCount": "95",
+    "ratingValue": "4.8",
+    "organizationName": "React.js Training in Hyderabad | VR IT Solutions",
+    "postalCode": "500073",
+    "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet",
+    "_id": "rIDZrX5GYleXl1qFy7g0a8",
+    "_updatedAt": "2025-08-10T13:49:27Z",
+    "metadata": {
+      "title": "React.js Training in Hyderabad | VR IT Solutions",
+      "description": "Join the best React.js training in Hyderabad. Learn component-based development, hooks, state management with expert instructors. 100% placement assistance.",
+      "keywords": [
+        "react js training",
+        "react course hyderabad",
+        "javascript training",
+        "frontend development",
+        "react certification"
+      ],
+      "openGraph": {
+        "title": "Best React.js Training in Hyderabad - VR IT Solutions",
+        "description": "Master React.js with hands-on projects. Expert instructors, placement assistance, and industry-relevant curriculum.",
+        "url": "https://www.vritsol.com/react-js-training-hyderabad",
+        "type": "website",
+        "images": []
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "React.js Training in Hyderabad | VR IT Solutions",
+        "description": "Learn React.js from industry experts. Comprehensive training with real projects and placement support.",
+        "images": []
+      },
+      "canonical": "https://www.vritsol.com/react-js-training-hyderabad",
+      "alternates": {
+        "languages": {
+          "en-IN": "https://www.vritsol.com/react-js-training-hyderabad"
+        }
+      }
+    },
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "EducationalOrganization"
+      ],
+      "name": "VR IT SOL",
+      "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
+      "url": "https://www.vritsol.com",
+      "logo": "https://www.vritsol.com/images/vritlogo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500073",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "17.4374",
+        "longitude": "78.4482"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9032734343",
+        "email": "info@vritsol.com",
+        "contactType": "customer service"
+      },
+      "openingHours": [
+        "Mo-Sa 08:00-21:30",
+        "Su 09:00-13:00"
+      ],
+      "areaServed": {
+        "@type": "Place",
+        "name": "Hyderabad, Telangana"
+      },
+      "sameAs": [
+        "https://www.facebook.com/vritsolutions/",
+        "https://twitter.com/vritsolutions",
+        "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Training Courses",
+        "itemListElement": [
+          {
+            "@type": "Course",
+            "name": "React.js Training in Hyderabad | VR IT Solutions",
+            "description": "Join the best React.js training in Hyderabad. Learn component-based development, hooks, state management with expert instructors. 100% placement assistance.",
+            "url": "https://www.vritsol.com/react-js-training-hyderabad",
+            "courseMode": [
+              "online",
+              "onsite"
+            ],
+            "educationalLevel": "professional",
+            "provider": {
+              "@type": "EducationalOrganization",
+              "name": "VR IT SOL"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "95"
+            }
+          }
+        ]
+      }
+    }
+  },
+  {
     "slug": "index",
     "mainImage": "https://cdn.sanity.io/images/3hir6j0e/production/bac0253bb98e5a1cf240dece53a45de31e79b0d4-1000x515.jpg",
-    "importantText": "🎯 Limited Time Offer: Get 30% OFF on All Courses! Enroll Now and Transform Your Career with Industry-Leading Training! 🚀",
-    "bannerUrl": "https://www.vritsol.com/courses",
+    "importantText": "Limited-time offer! Get a 30% discount on select courses if you enroll before. Don’t miss out on this opportunity to learn and save!",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": "/",
     "reviewCount": "0",
     "ratingValue": "5",
@@ -11,7 +233,7 @@
     "postalCode": "500016",
     "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana.",
     "_id": "index",
-    "_updatedAt": "2025-08-08T16:16:26Z",
+    "_updatedAt": "2025-08-09T23:19:39Z",
     "metadata": {
       "title": "Azure DevOps Training In Hyderabad | AWS DevOps Training in Hyderabad | GCP DevOps | VR IT Solutions",
       "description": "VR IT Solutions is one of the best Software training institute in Hyderabad, India. We Offer Online, Classroom & Corporate training for All IT Software Courses.",
@@ -32,16 +254,22 @@
       ],
       "openGraph": {
         "title": "SAS Clinical Online Training In Hyderabad | SAP Fico Training in Hyderabad | VR IT Solutions",
-        "description": "VR IT Solutions is one of the best Software training institute in Hyderabad, India. We Offer Online, Classroom & Corporate training for All IT Software Courses.",
+        "description": "VR IT Solutions is one of the best Software training institute in Hyderabad, India. We Offer Online, Classroom & Corporate training for All IT Software Courses. ",
         "url": "/",
         "type": "website",
-        "images": []
+        "images": [
+          {
+            "url": "https://cdn.sanity.io/images/3hir6j0e/production/1423935cc8c7c820d67c92bd300f76dce36e4e2c-1200x900.png"
+          }
+        ]
       },
       "twitter": {
         "card": "summary_large_image",
         "title": "SAS Clinical Online Training In Hyderabad | SAP Fico Training in Hyderabad | VR IT Solutions",
         "description": "VR IT Solutions is one of the best Software training institute in Hyderabad, India. We Offer Online, Classroom & Corporate training for All IT Software Courses.",
-        "images": []
+        "images": [
+          "https://cdn.sanity.io/images/3hir6j0e/production/1423935cc8c7c820d67c92bd300f76dce36e4e2c-1200x900.png"
+        ]
       },
       "canonical": "/",
       "alternates": {
@@ -123,6 +351,9 @@
   {
     "slug": "courses",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "0",
     "ratingValue": "5",
@@ -231,6 +462,9 @@
   {
     "slug": "aboutus",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "0",
     "ratingValue": "5",
@@ -336,6 +570,9 @@
   {
     "slug": "privacy-policy",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "0",
     "ratingValue": "5",
@@ -438,6 +675,9 @@
   {
     "slug": "terms-and-conditions",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "0",
     "ratingValue": "5",
@@ -540,6 +780,9 @@
   {
     "slug": "refund-and-course-rescheduling-policy",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "0",
     "ratingValue": "5",
@@ -642,6 +885,9 @@
   {
     "slug": "contactus",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "0",
     "ratingValue": "5",
@@ -746,6 +992,9 @@
   {
     "slug": "blog",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "0",
     "ratingValue": "5",
@@ -851,6 +1100,9 @@
   {
     "slug": "edi-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1216",
     "ratingValue": "5",
@@ -955,6 +1207,9 @@
   {
     "slug": "azure-devops-online-training-in-chennai",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "15256",
     "ratingValue": "5",
@@ -1059,6 +1314,9 @@
   {
     "slug": "azure-devops-online-training-in-pune",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "15256",
     "ratingValue": "5",
@@ -1163,6 +1421,9 @@
   {
     "slug": "azure-devops-online-training-in-noida",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "15256",
     "ratingValue": "5",
@@ -1265,112 +1526,11 @@
     }
   },
   {
-    "slug": "azure-devops-online-training-in-bangalore",
-    "mainImage": "",
-    "hreflang": null,
-    "reviewCount": "15256",
-    "ratingValue": "5",
-    "organizationName": "Azure Devops Online Training in Bangalore - VR IT Solutions",
-    "postalCode": "500016",
-    "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad, Telangana.",
-    "_id": "azure-devops-online-training-in-bangalore",
-    "_updatedAt": "2025-08-08T14:56:26Z",
-    "metadata": {
-      "title": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
-      "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
-      "keywords": [
-        "azure devops training in Bangalore",
-        "azure devops online training in bangalore",
-        "azure devops training"
-      ],
-      "openGraph": {
-        "title": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
-        "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
-        "url": "/azure-devops-online-training-in-bangalore",
-        "type": "website",
-        "images": []
-      },
-      "twitter": {
-        "card": "summary_large_image",
-        "title": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
-        "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
-        "images": []
-      },
-      "canonical": "https://www.vritsol.com/azure-devops-online-training-in-bangalore"
-    },
-    "structuredData": {
-      "@context": "https://schema.org",
-      "@type": [
-        "LocalBusiness",
-        "EducationalOrganization"
-      ],
-      "name": "VR IT SOL",
-      "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-      "url": "https://www.vritsol.com",
-      "logo": "https://www.vritsol.com/images/vritlogo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad, Telangana.",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "postalCode": "500016",
-        "addressCountry": "IN"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "17.4374",
-        "longitude": "78.4482"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9032734343",
-        "email": "info@vritsol.com",
-        "contactType": "customer service"
-      },
-      "openingHours": [
-        "Mo-Sa 08:00-21:30",
-        "Su 09:00-13:00"
-      ],
-      "areaServed": {
-        "@type": "Place",
-        "name": "Hyderabad, Telangana"
-      },
-      "sameAs": [
-        "https://www.facebook.com/vritsolutions/",
-        "https://twitter.com/vritsolutions",
-        "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "IT Training Courses",
-        "itemListElement": [
-          {
-            "@type": "Course",
-            "name": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
-            "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
-            "url": "https://www.vritsol.com/azure-devops-online-training-in-bangalore",
-            "courseMode": [
-              "online",
-              "onsite"
-            ],
-            "educationalLevel": "professional",
-            "provider": {
-              "@type": "EducationalOrganization",
-              "name": "VR IT SOL"
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5",
-              "reviewCount": "15256"
-            }
-          }
-        ]
-      }
-    }
-  },
-  {
     "slug": "azure-devops-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "11256",
     "ratingValue": "5",
@@ -1475,6 +1635,9 @@
   {
     "slug": "google-cloud-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "0",
     "ratingValue": "5",
@@ -1579,6 +1742,9 @@
   {
     "slug": "devops-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1915",
     "ratingValue": "5",
@@ -1681,6 +1847,9 @@
   {
     "slug": "informatica-mdm-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1525",
     "ratingValue": "5",
@@ -1784,6 +1953,9 @@
   {
     "slug": "snowflake-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "5656",
     "ratingValue": "5",
@@ -1893,6 +2065,9 @@
   {
     "slug": "servicenow-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9656",
     "ratingValue": "5",
@@ -1996,6 +2171,9 @@
   {
     "slug": "salesforce-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "11356",
     "ratingValue": "5",
@@ -2103,6 +2281,9 @@
   {
     "slug": "data-science-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "21657",
     "ratingValue": "5",
@@ -2254,6 +2435,9 @@
   {
     "slug": "hadoop-online-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "2186",
     "ratingValue": "5",
@@ -2358,6 +2542,9 @@
   {
     "slug": "mulesoft-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9523",
     "ratingValue": "5",
@@ -2463,6 +2650,9 @@
   {
     "slug": "python-with-aws-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1612",
     "ratingValue": "4.8",
@@ -2567,6 +2757,9 @@
   {
     "slug": "python-online-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "912",
     "ratingValue": "5",
@@ -2671,6 +2864,9 @@
   {
     "slug": "pega-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "8685",
     "ratingValue": "5",
@@ -2779,6 +2975,9 @@
   {
     "slug": "sap-basis-online-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1342",
     "ratingValue": "4.8",
@@ -2883,6 +3082,9 @@
   {
     "slug": "sap-hana-admin-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1115",
     "ratingValue": "5",
@@ -2986,6 +3188,9 @@
   {
     "slug": "sap-s4hana-simple-logistics-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "2115",
     "ratingValue": "5",
@@ -3089,6 +3294,9 @@
   {
     "slug": "sap-leonardo-training-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1265",
     "ratingValue": "5",
@@ -3192,6 +3400,9 @@
   {
     "slug": "sap-security-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1256",
     "ratingValue": "5",
@@ -3295,6 +3506,9 @@
   {
     "slug": "sap-fico-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "5651",
     "ratingValue": "5",
@@ -3399,6 +3613,9 @@
   {
     "slug": "sap-fico-online-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "5651",
     "ratingValue": "5",
@@ -3503,6 +3720,9 @@
   {
     "slug": "sap-mm-online-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "4351",
     "ratingValue": "5",
@@ -3607,6 +3827,9 @@
   {
     "slug": "sap-sd-online-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "3551",
     "ratingValue": "5",
@@ -3711,6 +3934,9 @@
   {
     "slug": "sap-ewm-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -3819,6 +4045,9 @@
   {
     "slug": "sap-fico-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -3927,6 +4156,9 @@
   {
     "slug": "sap-sd-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -4035,6 +4267,9 @@
   {
     "slug": "workday-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -4143,6 +4378,9 @@
   {
     "slug": "edi-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -4251,6 +4489,9 @@
   {
     "slug": "google-cloud-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -4359,6 +4600,9 @@
   {
     "slug": "machine-learning-with-python-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -4467,6 +4711,9 @@
   {
     "slug": "pega-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -4575,6 +4822,9 @@
   {
     "slug": "data-science-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -4683,6 +4933,9 @@
   {
     "slug": "azure-devops-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -4791,6 +5044,9 @@
   {
     "slug": "salesforce-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -4899,6 +5155,9 @@
   {
     "slug": "sas-clinical-online-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -5004,6 +5263,9 @@
   {
     "slug": "sas-clinical-training-in-pune",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -5109,6 +5371,9 @@
   {
     "slug": "sas-clinical-training-in-chennai",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -5214,6 +5479,9 @@
   {
     "slug": "sas-clinical-training-in-bangalore",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "9551",
     "ratingValue": "5",
@@ -5319,6 +5587,9 @@
   {
     "slug": "sas-clinical-online-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "4551",
     "ratingValue": "5",
@@ -5423,6 +5694,9 @@
   {
     "slug": "sap-central-finance-online-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "4551",
     "ratingValue": "5",
@@ -5528,6 +5802,9 @@
   {
     "slug": "sap-central-finance-online-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "4551",
     "ratingValue": "5",
@@ -5633,6 +5910,9 @@
   {
     "slug": "full-stack-developer-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1216",
     "ratingValue": "5",
@@ -5735,6 +6015,9 @@
   {
     "slug": "sap-ewm-online-training",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "1216",
     "ratingValue": "5",
@@ -5841,6 +6124,9 @@
   {
     "slug": "machine-learning-with-python-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "5156",
     "ratingValue": "5",
@@ -5949,6 +6235,9 @@
   {
     "slug": "machine-learning-with-python-online-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "7551",
     "ratingValue": "5",
@@ -6057,6 +6346,9 @@
   {
     "slug": "workday-training-in-hyderabad",
     "mainImage": "",
+    "importantText": "",
+    "bannerUrl": "",
+    "courseContentPdf": "",
     "hreflang": null,
     "reviewCount": "7186",
     "ratingValue": "5",

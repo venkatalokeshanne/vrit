@@ -228,7 +228,8 @@ export default function AzureDevOpsTrainingInHyderabad() {
                 <CourseActionButtons 
                   courseName="Azure DevOps Training in Hyderabad"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -425,7 +426,7 @@ export default function AzureDevOpsTrainingInHyderabad() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="Azure DevOps" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="Azure DevOps" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

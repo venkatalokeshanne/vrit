@@ -228,7 +228,8 @@ export default function SAPS4HANASimpleLogisticsTraining() {
                 <CourseActionButtons 
                   courseName="SAP S/4 HANA Simple Logistics Training"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -420,7 +421,7 @@ export default function SAPS4HANASimpleLogisticsTraining() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="SAP S/4 HANA Simple Logistics" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="SAP S/4 HANA Simple Logistics" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

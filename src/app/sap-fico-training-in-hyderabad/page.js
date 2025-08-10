@@ -161,7 +161,8 @@ export default function SapFicoTraining() {
                 <CourseActionButtons 
                   courseName="SAP FICO Online Training in Hyderabad"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -381,7 +382,7 @@ export default function SapFicoTraining() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="SAP FICO" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="SAP FICO" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

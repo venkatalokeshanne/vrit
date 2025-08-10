@@ -226,7 +226,8 @@ export default function SAPEWMTraining() {
                 <CourseActionButtons 
                   courseName="SAP EWM Online Training"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -453,7 +454,7 @@ export default function SAPEWMTraining() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="SAP EWM" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="SAP EWM" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

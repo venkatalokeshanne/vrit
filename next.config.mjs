@@ -8,6 +8,12 @@ const nextConfig = {
         port: '',
         pathname: '/images/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+        pathname: '/files/**',
+      },
     ],
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
@@ -48,15 +54,15 @@ const nextConfig = {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to",
-              "style-src 'self' 'unsafe-inline' https://*.tawk.to",
-              "img-src 'self' data: https://cdn.sanity.io https://*.tawk.to",
-              "font-src 'self' data: https://*.tawk.to",
-              "connect-src 'self' https://*.sanity.io https://*.api.sanity.io https://*.tawk.to wss://*.tawk.to",
-              "frame-src 'self' https://*.tawk.to",
-              "media-src 'self'",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://maps.googleapis.com https://www.google.com",
+              "style-src 'self' 'unsafe-inline' https://*.tawk.to https://fonts.googleapis.com",
+              "img-src 'self' data: https://cdn.sanity.io https://*.tawk.to https://maps.googleapis.com https://maps.gstatic.com https://*.googleapis.com https://*.gstatic.com",
+              "font-src 'self' data: https://*.tawk.to https://fonts.gstatic.com",
+              "connect-src 'self' https://*.sanity.io https://*.api.sanity.io https://*.tawk.to wss://*.tawk.to https://maps.googleapis.com",
+              "frame-src 'self' https://*.tawk.to https://www.google.com https://maps.google.com",
+              "media-src 'self' https://cdn.sanity.io",
               "worker-src 'self' blob:",
-              "object-src 'none'"
+              "object-src 'self' https://cdn.sanity.io"
             ].join('; ')
           },
         ],

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getAllCourses } from '../../lib/courses';
 import { 
   Search,
   Star,
@@ -34,7 +35,27 @@ import {
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'courses';
-const courses = [
+
+// Utility function to trim description
+const trimDescription = (description, maxLength = 120) => {
+  if (!description) return "Learn with our expert instructors";
+  
+  // If description is an array (for dynamic courses), take the first element
+  if (Array.isArray(description)) {
+    description = description[0] || "Learn with our expert instructors";
+  }
+  
+  if (description.length <= maxLength) return description;
+  
+  // Find the last space before the max length to avoid cutting words
+  const trimmed = description.substring(0, maxLength);
+  const lastSpace = trimmed.lastIndexOf(' ');
+  
+  return lastSpace > 0 ? trimmed.substring(0, lastSpace) + '...' : trimmed + '...';
+};
+
+// Static courses data
+const staticCourses = [
   {
     id: 1,
     title: "ServiceNow",
@@ -487,7 +508,82 @@ export async function generateMetadata() {
 
 
 
-export default function CoursesPage() {
+export default async function CoursesPage() {
+  // Get dynamic courses from Sanity
+  const dynamicCourses = await getAllCourses();
+  
+  // Transform dynamic courses to match static course structure
+  const transformedDynamicCourses = dynamicCourses.map((course, index) => {
+    // Define color schemes for dynamic courses
+    const dynamicColorSchemes = [
+      {
+        color: "from-emerald-500 to-teal-500",
+        bgColor: "from-emerald-500/10 to-teal-500/10"
+      },
+      {
+        color: "from-blue-500 to-indigo-500",
+        bgColor: "from-blue-500/10 to-indigo-500/10"
+      },
+      {
+        color: "from-purple-500 to-pink-500",
+        bgColor: "from-purple-500/10 to-pink-500/10"
+      },
+      {
+        color: "from-orange-500 to-red-500",
+        bgColor: "from-orange-500/10 to-red-500/10"
+      },
+      {
+        color: "from-cyan-500 to-blue-500",
+        bgColor: "from-cyan-500/10 to-blue-500/10"
+      },
+      {
+        color: "from-violet-500 to-purple-500",
+        bgColor: "from-violet-500/10 to-purple-500/10"
+      },
+      {
+        color: "from-rose-500 to-pink-500",
+        bgColor: "from-rose-500/10 to-pink-500/10"
+      },
+      {
+        color: "from-amber-500 to-yellow-500",
+        bgColor: "from-amber-500/10 to-yellow-500/10"
+      },
+      {
+        color: "from-lime-500 to-green-500",
+        bgColor: "from-lime-500/10 to-green-500/10"
+      },
+      {
+        color: "from-fuchsia-500 to-purple-500",
+        bgColor: "from-fuchsia-500/10 to-purple-500/10"
+      }
+    ];
+    
+    // Cycle through color schemes
+    const colorScheme = dynamicColorSchemes[index % dynamicColorSchemes.length];
+    
+    return {
+      id: `dynamic-${course._id}`,
+      title: course.title,
+      slug: course.slug.current,
+      category: "Dynamic Course",
+      duration: course.duration || "Varies",
+      level: "All Levels",
+      rating: 4.8,
+      students: 1000,
+      description: trimDescription(course.description),
+      features: ["Live Projects", "Expert Training", "Industry Relevant", "Placement Support"],
+      icon: <BookOpen className="w-8 h-8" />,
+      color: colorScheme.color,
+      bgColor: colorScheme.bgColor,
+      trending: true,
+      new: true,
+      isDynamic: true
+    };
+  });
+
+  // Combine static and dynamic courses
+  const allCourses = [...transformedDynamicCourses, ...staticCourses];
+  
   // Get the complete course metadata from static file
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   
@@ -500,10 +596,15 @@ export default function CoursesPage() {
 
   // Log the courseMetadata to see what we have
   console.log('📊 Course Metadata:', courseMetadata);
+  console.log('🚀 Dynamic Courses Found:', dynamicCourses.length);
 
   
-  // Sort courses by trending first, then by rating for static display
-  const sortedCourses = courses.sort((a, b) => b.trending - a.trending || b.rating - a.rating);
+  // Sort courses by dynamic first, then trending, then by rating
+  const sortedCourses = allCourses.sort((a, b) => 
+    (b.isDynamic ? 1 : 0) - (a.isDynamic ? 1 : 0) ||
+    b.trending - a.trending || 
+    b.rating - a.rating
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
@@ -602,6 +703,11 @@ export default function CoursesPage() {
                 <div className={`relative p-6 bg-gradient-to-br ${course.bgColor} border-b border-white/10`}>
                   {/* Badges */}
                   <div className="flex items-center gap-2 mb-4">
+                    {course.isDynamic && (
+                      <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold rounded-full">
+                        💎 DYNAMIC
+                      </span>
+                    )}
                     {course.trending && (
                       <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold rounded-full">
                         🔥 TRENDING

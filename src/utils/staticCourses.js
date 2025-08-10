@@ -1,42 +1,53 @@
-import fs from 'fs';
-import path from 'path';
-
-// Path to the static courses data
-const COURSES_DATA_PATH = path.join(process.cwd(), 'src', 'data', 'courses-static.json');
+// Direct import of static courses data
+import coursesData from '../data/courses-static.json';
 
 /**
  * Get all courses from the static JSON file
- * This replaces the getAllCourses function in metadata.js
  */
 export function getAllCoursesStatic() {
-  try {
-    if (!fs.existsSync(COURSES_DATA_PATH)) {
-      console.warn('Static courses data file not found. Run build-courses-data script first.');
-      return [];
-    }
-    
-    const fileContent = fs.readFileSync(COURSES_DATA_PATH, 'utf8');
-    const courses = JSON.parse(fileContent);
-    return courses;
-  } catch (error) {
-    console.error('Error reading static courses data:', error);
-    return [];
-  }
+  return coursesData;
 }
 
 /**
  * Get a specific course by slug from static data
  */
 export function getCourseBySlugStatic(slug) {
-  const courses = getAllCoursesStatic();
-  return courses.find(course => course.slug === slug) || null;
+  return coursesData.find(course => course.slug === slug) || null;
 }
 
 /**
  * Get page metadata for a specific course slug
- * This replaces getPageMetadata in metadata.js
  */
 export function getPageMetadataStatic(slug) {
+  // Special handling for SEO tester page
+  if (slug === 'seo-tester') {
+    return {
+      title: 'SEO Testing & Analysis Tool - VR IT Solutions',
+      description: 'Comprehensive SEO analysis tool to test your pages, preview social media cards, validate rich snippets, and optimize your site\'s search engine performance.',
+      keywords: 'SEO tool, SEO analyzer, meta tags, rich snippets, social media preview, search engine optimization',
+      robots: 'index, follow',
+      openGraph: {
+        title: 'SEO Testing & Analysis Tool - VR IT Solutions',
+        description: 'Comprehensive SEO analysis tool to test your pages, preview social media cards, validate rich snippets, and optimize your site\'s search engine performance.',
+        url: 'https://vritsol.com/seo-tester',
+        siteName: 'VR IT Solutions',
+        type: 'website',
+        images: [{
+          url: 'https://vritsol.com/og-seo-tester.svg',
+          width: 1200,
+          height: 630,
+          alt: 'SEO Testing Tool'
+        }]
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'SEO Testing & Analysis Tool - VR IT Solutions',
+        description: 'Comprehensive SEO analysis tool to test your pages, preview social media cards, validate rich snippets, and optimize your site\'s search engine performance.',
+        images: ['https://vritsol.com/twitter-seo-tester.svg']
+      }
+    };
+  }
+
   const course = getCourseBySlugStatic(slug);
   
   if (!course?.metadata) {
@@ -52,7 +63,6 @@ export function getPageMetadataStatic(slug) {
 
 /**
  * Get structured data for a specific course slug
- * This replaces getStructuredData in metadata.js
  */
 export function getStructuredDataStatic(slug) {
   const course = getCourseBySlugStatic(slug);
@@ -60,26 +70,8 @@ export function getStructuredDataStatic(slug) {
 }
 
 /**
- * Get build timestamp to check when data was last updated
- */
-export function getBuildTimestamp() {
-  try {
-    if (!fs.existsSync(COURSES_DATA_PATH)) {
-      return null;
-    }
-    
-    const stats = fs.statSync(COURSES_DATA_PATH);
-    return stats.mtime.toISOString();
-  } catch (error) {
-    console.error('Error getting build timestamp:', error);
-    return null;
-  }
-}
-
-/**
  * Get course count from static data
  */
 export function getCourseCount() {
-  const courses = getAllCoursesStatic();
-  return courses.length;
+  return coursesData.length;
 }

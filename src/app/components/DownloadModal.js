@@ -147,15 +147,22 @@ const DownloadModal = ({
   };
 
   const handleDownload = () => {
-    // Trigger download
+    // Trigger download or open in new tab
     if (downloadUrl) {
-      // Create a temporary link to trigger download
-      const link = document.createElement('a');
-      link.href = downloadUrl;
-      link.download = `${courseName.replace(/\s+/g, '_')}_Course_Content.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      try {
+        // Try to force download first
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.download = `${courseName.replace(/\s+/g, '_')}_Course_Content.pdf`;
+        link.target = '_blank'; // Fallback to open in new tab
+        link.rel = 'noopener noreferrer';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } catch (error) {
+        // If download fails, open in new tab
+        window.open(downloadUrl, '_blank', 'noopener,noreferrer');
+      }
     }
     
     // Close modal after download

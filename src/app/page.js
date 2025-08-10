@@ -37,14 +37,18 @@ import BreadcrumbRichSnippets from './components/BreadcrumbRichSnippets';
 import FAQ from './components/FAQ';
 import PopupBanner from './components/PopupBanner';
 import coursesData from '../data/courses-static.json';
+import { getAllCourses } from '../lib/courses';
 
-export default function Home() {
+export default async function Home() {
+  // Get dynamic courses from Sanity
+  const dynamicCourses = await getAllCourses();
+  
   // Get the mainImage from the index slug data
   const indexData = coursesData.find(course => course.slug === 'index');
   const popupImage = indexData?.mainImage || '';
   const bannerUrl = indexData?.bannerUrl || '';
 
-  const courses = [
+  const staticCourses = [
     { name: 'ServiceNow', duration: '40 Days', icon: Cloud, color: 'from-blue-500 to-cyan-500', image: '/logo.png', description: 'Master IT Service Management, workflow automation, and enterprise cloud solutions with hands-on ServiceNow platform experience.', link: '/servicenow-training-in-hyderabad' },
     { name: 'Salesforce', duration: '70 Days', icon: Zap, color: 'from-green-500 to-teal-500', image: '/logo.png', description: 'Learn CRM fundamentals, Lightning Platform development, and Salesforce administration for career advancement.', link: '/salesforce-training-in-hyderabad' },
     { name: 'SAP FICO', duration: '120 Days', icon: Database, color: 'from-purple-500 to-pink-500', image: '/logo.png', description: 'Comprehensive SAP Financial Accounting and Controlling modules with real-world business scenarios and implementations.', link: '/sap-fico-online-training-in-hyderabad' },
@@ -74,6 +78,21 @@ export default function Home() {
     { name: 'Snowflake', duration: '45 Days', icon: Cloud, color: 'from-cyan-500 to-blue-500', image: '/logo.png', description: 'Cloud-based data warehousing platform with seamless collaboration, performance, flexibility and near-infinite scalability for complete database ecosystem.', link: '/snowflake-training-in-hyderabad' },
     { name: 'Google Cloud', duration: '65 Days', icon: Cloud, color: 'from-blue-500 to-green-500', image: '/logo.png', description: 'Google Cloud Platform suite of cloud computing services with infrastructure, platform, and serverless computing environments for comprehensive cloud solutions.', link: '/google-cloud-training' }
   ];
+
+  // Transform dynamic courses to match static course structure
+  const transformedDynamicCourses = dynamicCourses.slice(0, 6).map((course, index) => ({
+    name: course.title,
+    duration: 'Varies',
+    icon: BookOpen,
+    color: 'from-emerald-500 to-teal-500',
+    image: '/logo.png',
+    description: course.description || 'Learn with our expert instructors in this comprehensive course',
+    link: `/${course.slug.current}`,
+    isDynamic: true
+  }));
+
+  // Combine static and dynamic courses, with dynamic courses first
+  const courses = [...transformedDynamicCourses, ...staticCourses];
 
   const features = [
     { icon: Users, title: 'Flexible Modes of Training', desc: 'Select any mode of training. You can have online training, classroom training and we deliver trainings for your corporate needs too. Here you get Classroom Training and Online Training also.' },
@@ -652,6 +671,13 @@ export default function Home() {
                     <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md border border-white/20 rounded-full px-3 py-1">
                       <span className="text-xs font-medium text-white">{course.duration}</span>
                     </div>
+                    
+                    {/* Dynamic course indicator */}
+                    {course.isDynamic && (
+                      <div className="absolute top-4 left-4 bg-emerald-500/90 backdrop-blur-md border border-emerald-300/30 rounded-full px-3 py-1">
+                        <span className="text-xs font-bold text-white">💎 DYNAMIC</span>
+                      </div>
+                    )}
                     
                     {/* Floating icon overlay */}
                     <div className="absolute bottom-4 left-4">

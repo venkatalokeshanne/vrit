@@ -50,7 +50,10 @@ const allCoursesQuery = `
     ratingValue,
     organizationName,
     postalCode,
-    streetAddress
+    streetAddress,
+    courseContentPdf{
+      asset->
+    }
   }
 `;
 
@@ -78,6 +81,30 @@ function processImage(imageField) {
   return '';
 }
 
+// Process Sanity file assets (PDFs)
+function processFile(fileField) {
+  if (!fileField) return '';
+  
+  if (fileField.asset) {
+    // Check if _ref exists
+    if (fileField.asset._ref) {
+      // Return the direct URL to the file asset
+      return `https://cdn.sanity.io/files/${client.config().projectId}/${client.config().dataset}/${fileField.asset._ref.replace('file-', '').replace('-pdf', '.pdf')}`;
+    }
+    // Check if url exists directly
+    if (fileField.asset.url) {
+      return fileField.asset.url;
+    }
+    // Check if _id exists (alternative approach)
+    if (fileField.asset._id) {
+      return `https://cdn.sanity.io/files/${client.config().projectId}/${client.config().dataset}/${fileField.asset._id.replace('file-', '').replace('-pdf', '.pdf')}`;
+    }
+  }
+  
+  if (typeof fileField === 'string') return fileField;
+  return '';
+}
+
 // Process course metadata
 function processCourseMetadata(courseData) {
   if (!courseData) return null;
@@ -90,6 +117,9 @@ function processCourseMetadata(courseData) {
   const mainImage = processImage(courseData.mainImage);
   const ogImage = processImage(courseData.ogImage);
   const twitterImage = processImage(courseData.twitterImage);
+  
+  // Process PDF file
+  const courseContentPdf = processFile(courseData.courseContentPdf);
   
   // Process new properties
   const importantText = courseData.importantText || '';
@@ -115,13 +145,13 @@ function processCourseMetadata(courseData) {
       description: courseData.ogDescription || description,
       url: ogUrl,
       type: 'website',
-      images: ogImage ? [{ url: ogImage }] : []
+      images: (ogImage || mainImage) ? [{ url: ogImage || mainImage }] : []
     },
     twitter: {
       card: 'summary_large_image',
       title: courseData.twitterTitle || courseData.ogTitle || title,
       description: courseData.twitterDescription || courseData.ogDescription || description,
-      images: twitterImage || ogImage ? [twitterImage || ogImage] : []
+      images: (twitterImage || ogImage || mainImage) ? [twitterImage || ogImage || mainImage] : []
     },
     canonical: courseUrl,
     alternates: courseData.hreflang ? {
@@ -195,6 +225,7 @@ function processCourseMetadata(courseData) {
     mainImage,
     importantText,
     bannerUrl,
+    courseContentPdf,
     // Additional metadata not in Next.js metadata
     hreflang: courseData.hreflang,
     reviewCount: courseData.reviewCount || '0',

@@ -71,7 +71,8 @@ import { CourseActionButtons } from '../components/CourseActionButtons';
   courseName="SAS Clinical"
   phoneNumber="+91-9032734343"
   showEnquireNow={true}        // Show/hide individual buttons
-  showDownload={true}
+  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
   showJoinNow={false}
   showCallNow={false}
   layout="horizontal"          // "horizontal" or "vertical"
@@ -100,7 +101,8 @@ export default function CoursePage() {
         courseName="Your Course Name"
         phoneNumber="+91-9032734343"
         showEnquireNow={true}
-        showDownload={true}
+        showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
       />
     </div>
   );
@@ -137,7 +139,8 @@ export default function CoursePage() {
         onEnquireNow={handleEnquiry}
         onDownload={handleDownload}
         showEnquireNow={true}
-        showDownload={true}
+        showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
         showCallNow={true}
       />
     </div>

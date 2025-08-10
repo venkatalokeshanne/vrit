@@ -174,7 +174,8 @@ export default function EDITrainingPage() {
                 <CourseActionButtons 
                   courseName="EDI Training"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -355,7 +356,7 @@ export default function EDITrainingPage() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="EDI Training" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="EDI Training" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

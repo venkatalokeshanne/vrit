@@ -35,7 +35,8 @@ import {
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'python-with-aws-training';export async function generateMetadata() {
+const COURSE_SLUG = 'python-with-aws-training';
+export async function generateMetadata() {
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   return courseMetadata?.metadata || {};
 }
@@ -154,7 +155,8 @@ export default function PythonWithAWSTraining() {
                 <CourseActionButtons 
                   courseName="Python with AWS Training"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -275,7 +277,7 @@ export default function PythonWithAWSTraining() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="Python With AWS" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="Python With AWS" phoneNumber="+91-9032734343" />
             </div>
           </div>
 

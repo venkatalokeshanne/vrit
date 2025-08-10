@@ -48,9 +48,8 @@ export default function MachineLearningWithPythonTrainingInHyderabad() {
   const structuredDataJson = getStructuredDataStatic(COURSE_SLUG);
 
   // Fetch metadata for dynamic hero image
-  const courseData = getCourseBySlugStatic(COURSE_SLUG);
-  const metadata = courseData?.metadata;
-  const mainImageUrl = metadata?.mainImage || '/logo.png';
+  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
+  const mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   const pythonLibraries = [
     "Numpy",
@@ -169,7 +168,8 @@ export default function MachineLearningWithPythonTrainingInHyderabad() {
                 <CourseActionButtons 
                   courseName="Machine Learning with Python Training in Hyderabad"
                   showEnquireNow={true}
-                  showDownload={true}
+                  showDownload={!!courseMetadata?.courseContentPdf}
+                  downloadUrl={courseMetadata?.courseContentPdf}
                   showCallNow={false}
                   showJoinNow={false}
                 />
@@ -400,7 +400,7 @@ export default function MachineLearningWithPythonTrainingInHyderabad() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-8">
-              <CourseSidebar courseName="Machine Learning With Python" phoneNumber="+91-9032734343" />
+              <CourseSidebar slug={COURSE_SLUG} courseName="Machine Learning With Python" phoneNumber="+91-9032734343" />
             </div>
           </div>
 
