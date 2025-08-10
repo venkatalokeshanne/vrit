@@ -1,5 +1,5 @@
 import RichSnippetsManager from '../../utils/richSnippets';
-
+import Link from 'next/link';
 /**
  * FAQ Component with Rich Snippets Support
  * Displays FAQs with proper schema markup for rich snippets
@@ -87,18 +87,18 @@ export default function FAQRichSnippets({ faqs, title = "Frequently Asked Questi
               Our expert counselors are here to help you choose the right course for your career goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <Link 
                 href="/contactus" 
                 className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
               >
                 Contact Us
-              </a>
-              <a 
+              </Link>
+              <Link 
                 href="tel:+919032734343" 
                 className="inline-flex items-center justify-center px-6 py-3 border border-blue-600 text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
               >
                 📞 Call Now
-              </a>
+              </Link>
             </div>
           </div>
         </div>
