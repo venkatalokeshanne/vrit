@@ -45,7 +45,6 @@ import {
   Workflow,
   Binary,
   Boxes,
-  Link
 } from 'lucide-react';
 
 // Define the course slug as a constant

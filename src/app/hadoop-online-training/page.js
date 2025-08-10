@@ -45,7 +45,6 @@ import {
   Workflow,
   Binary,
   Boxes,
-  Link,
   Layout,
   Palette,
   Exchange,

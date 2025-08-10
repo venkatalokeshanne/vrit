@@ -1,5 +1,5 @@
 'use client';
-
+import Link from 'next/link';
 import { Phone, Mail, MapPin, ChevronRight } from 'lucide-react';
 
 // Custom Social Media Icons
