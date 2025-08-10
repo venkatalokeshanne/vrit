@@ -178,22 +178,35 @@ export default function SEOTesterPage() {
               alt.toLowerCase() !== 'picture' &&
               !alt.match(/^(img|image)_?\d*$/i);
             
+            const isDecorative = img.getAttribute('role') === 'presentation' || 
+                               img.getAttribute('aria-hidden') === 'true' ||
+                               alt === ''; // Empty alt indicates decorative
+            
             return {
               hasAlt: hasValidAlt,
-              isDecorative: img.getAttribute('role') === 'presentation' || img.getAttribute('aria-hidden') === 'true'
+              isDecorative: isDecorative,
+              alt: alt
             };
           });
           
+          // Count only non-decorative images for percentage calculation
+          const contentImages = processedImages.filter(img => !img.isDecorative);
           const imagesWithValidAlt = processedImages.filter(img => img.hasAlt);
           const imagesWithoutValidAlt = processedImages.filter(img => !img.hasAlt && !img.isDecorative);
+          
+          // Calculate percentage based on content images only (excluding decorative)
+          const contentImagesCount = contentImages.length;
+          const altPercentage = contentImagesCount > 0 ? 
+            Math.round((imagesWithValidAlt.length / contentImagesCount) * 100) : 
+            (processedImages.length === 0 ? 100 : 0); // 100% if no images, 0% if only decorative
           
           return {
             total: processedImages.length,
             withAlt: imagesWithValidAlt.length,
             withoutAlt: imagesWithoutValidAlt.length,
             decorative: processedImages.filter(img => img.isDecorative).length,
-            altPercentage: processedImages.length > 0 ? 
-              Math.round((imagesWithValidAlt.length / processedImages.length) * 100) : 0
+            contentImages: contentImagesCount,
+            altPercentage: altPercentage
           };
         })(),
         links: [...doc.querySelectorAll('a[href]')].map(link => ({
@@ -211,6 +224,100 @@ export default function SEOTesterPage() {
           hasRobots: !!doc.querySelector('meta[name="robots"]'),
           hasLangAttribute: !!doc.documentElement.getAttribute('lang'),
           favicon: !!doc.querySelector('link[rel="icon"], link[rel="shortcut icon"]'),
+        },
+        
+        // Comprehensive Accessibility Analysis
+        accessibility: {
+          // Image accessibility
+          images: {
+            totalImages: [...doc.querySelectorAll('img')].length,
+            withAlt: [...doc.querySelectorAll('img[alt]')].filter(img => img.alt.trim().length > 0).length,
+            withoutAlt: [...doc.querySelectorAll('img')].filter(img => !img.alt || img.alt.trim().length === 0).length,
+            decorativeImages: [...doc.querySelectorAll('img[role="presentation"], img[aria-hidden="true"]')].length
+          },
+          
+          // Link accessibility
+          links: {
+            totalLinks: [...doc.querySelectorAll('a')].length,
+            withText: [...doc.querySelectorAll('a')].filter(link => link.textContent.trim().length > 0).length,
+            withAriaLabel: [...doc.querySelectorAll('a[aria-label]')].length,
+            withTitle: [...doc.querySelectorAll('a[title]')].length,
+            emptyLinks: [...doc.querySelectorAll('a')].filter(link => 
+              !link.textContent.trim() && !link.getAttribute('aria-label') && !link.getAttribute('title')
+            ).length
+          },
+          
+          // Heading structure
+          headings: {
+            h1Count: doc.querySelectorAll('h1').length,
+            hasProperH1: doc.querySelectorAll('h1').length === 1,
+            headingSequence: (() => {
+              const headings = [...doc.querySelectorAll('h1, h2, h3, h4, h5, h6')];
+              const levels = headings.map(h => parseInt(h.tagName.charAt(1)));
+              let isProperSequence = true;
+              let maxLevel = 0;
+              
+              for (let level of levels) {
+                if (level > maxLevel + 1) {
+                  isProperSequence = false;
+                  break;
+                }
+                maxLevel = Math.max(maxLevel, level);
+              }
+              
+              return {
+                isProper: isProperSequence,
+                sequence: levels,
+                totalHeadings: headings.length
+              };
+            })()
+          },
+          
+          // Form accessibility
+          forms: {
+            totalInputs: [...doc.querySelectorAll('input, textarea, select')].length,
+            withLabels: [...doc.querySelectorAll('input, textarea, select')].filter(input => {
+              const id = input.id;
+              const hasLabel = id && doc.querySelector(`label[for="${id}"]`);
+              const hasAriaLabel = input.getAttribute('aria-label');
+              const hasAriaLabelledBy = input.getAttribute('aria-labelledby');
+              return hasLabel || hasAriaLabel || hasAriaLabelledBy;
+            }).length,
+            withoutLabels: [...doc.querySelectorAll('input, textarea, select')].filter(input => {
+              const id = input.id;
+              const hasLabel = id && doc.querySelector(`label[for="${id}"]`);
+              const hasAriaLabel = input.getAttribute('aria-label');
+              const hasAriaLabelledBy = input.getAttribute('aria-labelledby');
+              return !hasLabel && !hasAriaLabel && !hasAriaLabelledBy;
+            }).length
+          },
+          
+          // ARIA and semantic elements
+          aria: {
+            hasSkipLinks: !!doc.querySelector('a[href^="#"], a[href*="skip"]'),
+            hasLandmarks: [...doc.querySelectorAll('[role="main"], [role="navigation"], [role="banner"], [role="contentinfo"], main, nav, header, footer')].length,
+            hasAriaLabels: [...doc.querySelectorAll('[aria-label]')].length,
+            hasAriaDescriptions: [...doc.querySelectorAll('[aria-describedby], [aria-description]')].length,
+            hasTabIndex: [...doc.querySelectorAll('[tabindex]')].length,
+            negativeTabIndex: [...doc.querySelectorAll('[tabindex="-1"]')].length
+          },
+          
+          // Color and contrast (basic checks)
+          colorContrast: {
+            hasColorOnlyContent: [...doc.querySelectorAll('*')].some(el => {
+              const style = window.getComputedStyle(el);
+              return style.color && !el.textContent.trim();
+            }),
+            usesColorForInfo: [...doc.querySelectorAll('.text-red, .text-green, .text-yellow, .error, .success, .warning')].length > 0
+          },
+          
+          // Media accessibility
+          media: {
+            videos: [...doc.querySelectorAll('video')].length,
+            videosWithCaptions: [...doc.querySelectorAll('video track[kind="captions"], video track[kind="subtitles"]')].length,
+            audios: [...doc.querySelectorAll('audio')].length,
+            audiosWithTranscripts: [...doc.querySelectorAll('audio + .transcript, .transcript')].length
+          }
         }
       };
 
@@ -232,6 +339,7 @@ export default function SEOTesterPage() {
     { id: 'url-analyzer', label: 'URL Analyzer', icon: '🔍' },
     { id: 'meta-preview', label: 'Social Media Preview', icon: '📱' },
     { id: 'rich-snippets', label: 'Rich Snippets', icon: '✨' },
+    { id: 'accessibility', label: 'Accessibility', icon: '♿' },
     { id: 'performance', label: 'SEO Checklist', icon: '📊' }
   ];
 
@@ -1063,6 +1171,295 @@ export default function SEOTesterPage() {
           </div>
         )}
 
+        {/* Accessibility Analysis Tab */}
+        {activeTab === 'accessibility' && (
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 mb-8 overflow-hidden">
+            {/* Header Section */}
+            <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 p-8 text-white">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
+                  <span className="text-2xl">♿</span>
+                </div>
+                <div>
+                  <h2 className="text-3xl font-bold">Accessibility Analysis</h2>
+                  <p className="text-purple-100 mt-1">Web Content Accessibility Guidelines (WCAG) compliance check</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-8">
+              {seoData && seoData.accessibility ? (
+                <div className="space-y-8">
+                  
+                  {/* Overall Accessibility Score */}
+                  <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4">🎯 Accessibility Overview</h3>
+                    
+                    {/* Image Accessibility */}
+                    <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div className="bg-white rounded-xl p-4 shadow-sm">
+                        <h4 className="font-semibold text-gray-800 mb-3">📸 Image Accessibility</h4>
+                        <div className="space-y-2">
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">Total Images:</span>
+                            <span className="font-medium">{seoData.accessibility.images.totalImages}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">With Alt Text:</span>
+                            <span className="font-medium text-green-600">{seoData.accessibility.images.withAlt}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">Missing Alt Text:</span>
+                            <span className="font-medium text-red-600">{seoData.accessibility.images.withoutAlt}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">Decorative Images:</span>
+                            <span className="font-medium text-blue-600">{seoData.accessibility.images.decorativeImages}</span>
+                          </div>
+                          
+                          {/* Alt Text Coverage Progress */}
+                          <div className="mt-4">
+                            <div className="flex justify-between items-center mb-2">
+                              <span className="text-sm font-medium text-gray-700">Alt Text Coverage</span>
+                              <span className="text-sm font-bold text-gray-800">{seoData.imageStats?.altPercentage || 0}%</span>
+                            </div>
+                            <div className="w-full bg-gray-200 rounded-full h-3">
+                              <div 
+                                className={`h-3 rounded-full transition-all duration-500 ${
+                                  (seoData.imageStats?.altPercentage || 0) >= 90 ? 'bg-green-500' :
+                                  (seoData.imageStats?.altPercentage || 0) >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                                }`}
+                                style={{ width: `${seoData.imageStats?.altPercentage || 0}%` }}
+                              ></div>
+                            </div>
+                            <p className="text-xs text-gray-600 mt-1">
+                              {(seoData.imageStats?.altPercentage || 0) >= 90 
+                                ? '✅ Excellent accessibility!' 
+                                : (seoData.imageStats?.altPercentage || 0) >= 70 
+                                  ? '⚠️ Good, but could improve' 
+                                  : '❌ Needs improvement'}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Link Accessibility */}
+                      <div className="bg-white rounded-xl p-4 shadow-sm">
+                        <h4 className="font-semibold text-gray-800 mb-3">🔗 Link Accessibility</h4>
+                        <div className="space-y-2">
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">Total Links:</span>
+                            <span className="font-medium">{seoData.accessibility.links.totalLinks}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">With Text:</span>
+                            <span className="font-medium text-green-600">{seoData.accessibility.links.withText}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">With ARIA Labels:</span>
+                            <span className="font-medium text-blue-600">{seoData.accessibility.links.withAriaLabel}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">Empty Links:</span>
+                            <span className={`font-medium ${seoData.accessibility.links.emptyLinks === 0 ? 'text-green-600' : 'text-red-600'}`}>
+                              {seoData.accessibility.links.emptyLinks}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Heading Structure */}
+                    <div className="bg-white rounded-xl p-4 shadow-sm mb-6">
+                      <h4 className="font-semibold text-gray-800 mb-3">📝 Heading Structure</h4>
+                      <div className="grid md:grid-cols-3 gap-4">
+                        <div className="text-center">
+                          <div className={`text-2xl font-bold ${seoData.accessibility.headings.h1Count === 1 ? 'text-green-600' : 'text-red-600'}`}>
+                            {seoData.accessibility.headings.h1Count}
+                          </div>
+                          <div className="text-sm text-gray-600">H1 Tags</div>
+                          <div className="text-xs text-gray-500">
+                            {seoData.accessibility.headings.h1Count === 1 ? '✅ Perfect' : '❌ Should be 1'}
+                          </div>
+                        </div>
+                        <div className="text-center">
+                          <div className={`text-2xl font-bold ${seoData.accessibility.headings.headingSequence.isProper ? 'text-green-600' : 'text-yellow-600'}`}>
+                            {seoData.accessibility.headings.headingSequence.isProper ? '✅' : '⚠️'}
+                          </div>
+                          <div className="text-sm text-gray-600">Heading Order</div>
+                          <div className="text-xs text-gray-500">
+                            {seoData.accessibility.headings.headingSequence.isProper ? 'Logical sequence' : 'Check sequence'}
+                          </div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-2xl font-bold text-blue-600">
+                            {seoData.accessibility.headings.headingSequence.totalHeadings}
+                          </div>
+                          <div className="text-sm text-gray-600">Total Headings</div>
+                          <div className="text-xs text-gray-500">All levels</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Forms & ARIA */}
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="bg-white rounded-xl p-4 shadow-sm">
+                        <h4 className="font-semibold text-gray-800 mb-3">📋 Form Accessibility</h4>
+                        <div className="space-y-2">
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">Form Inputs:</span>
+                            <span className="font-medium">{seoData.accessibility.forms.totalInputs}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">With Labels:</span>
+                            <span className="font-medium text-green-600">{seoData.accessibility.forms.withLabels}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">Without Labels:</span>
+                            <span className={`font-medium ${seoData.accessibility.forms.withoutLabels === 0 ? 'text-green-600' : 'text-red-600'}`}>
+                              {seoData.accessibility.forms.withoutLabels}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-white rounded-xl p-4 shadow-sm">
+                        <h4 className="font-semibold text-gray-800 mb-3">🏷️ ARIA & Semantics</h4>
+                        <div className="space-y-2">
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">Landmarks:</span>
+                            <span className="font-medium text-blue-600">{seoData.accessibility.aria.hasLandmarks}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">ARIA Labels:</span>
+                            <span className="font-medium text-blue-600">{seoData.accessibility.aria.hasAriaLabels}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-sm text-gray-600">Skip Links:</span>
+                            <span className={`font-medium ${seoData.accessibility.aria.hasSkipLinks ? 'text-green-600' : 'text-yellow-600'}`}>
+                              {seoData.accessibility.aria.hasSkipLinks ? 'Yes' : 'No'}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Detailed Recommendations */}
+                  <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4">🚀 Accessibility Recommendations</h3>
+                    <div className="space-y-3">
+                      {seoData.accessibility.images.withoutAlt > 0 && (
+                        <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded">
+                          <div className="flex">
+                            <div className="flex-shrink-0">
+                              <span className="text-red-400">❌</span>
+                            </div>
+                            <div className="ml-3">
+                              <h4 className="text-sm font-medium text-red-800">Missing Alt Text</h4>
+                              <p className="text-sm text-red-700">
+                                {seoData.accessibility.images.withoutAlt} images need descriptive alt text for screen readers.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {seoData.accessibility.headings.h1Count !== 1 && (
+                        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
+                          <div className="flex">
+                            <div className="flex-shrink-0">
+                              <span className="text-yellow-400">⚠️</span>
+                            </div>
+                            <div className="ml-3">
+                              <h4 className="text-sm font-medium text-yellow-800">H1 Structure Issue</h4>
+                              <p className="text-sm text-yellow-700">
+                                Pages should have exactly one H1 tag. Found: {seoData.accessibility.headings.h1Count}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {seoData.accessibility.links.emptyLinks > 0 && (
+                        <div className="bg-red-50 border-l-4 border-red-400 p-4 rounded">
+                          <div className="flex">
+                            <div className="flex-shrink-0">
+                              <span className="text-red-400">❌</span>
+                            </div>
+                            <div className="ml-3">
+                              <h4 className="text-sm font-medium text-red-800">Empty Links</h4>
+                              <p className="text-sm text-red-700">
+                                {seoData.accessibility.links.emptyLinks} links have no text or ARIA labels.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {seoData.accessibility.forms.withoutLabels > 0 && (
+                        <div className="bg-orange-50 border-l-4 border-orange-400 p-4 rounded">
+                          <div className="flex">
+                            <div className="flex-shrink-0">
+                              <span className="text-orange-400">⚠️</span>
+                            </div>
+                            <div className="ml-3">
+                              <h4 className="text-sm font-medium text-orange-800">Unlabeled Form Inputs</h4>
+                              <p className="text-sm text-orange-700">
+                                {seoData.accessibility.forms.withoutLabels} form inputs need proper labels or ARIA attributes.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {!seoData.accessibility.aria.hasSkipLinks && (
+                        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+                          <div className="flex">
+                            <div className="flex-shrink-0">
+                              <span className="text-blue-400">💡</span>
+                            </div>
+                            <div className="ml-3">
+                              <h4 className="text-sm font-medium text-blue-800">Add Skip Links</h4>
+                              <p className="text-sm text-blue-700">
+                                Consider adding skip navigation links for keyboard users.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {/* Success messages */}
+                      {seoData.accessibility.images.withoutAlt === 0 && seoData.accessibility.images.totalImages > 0 && (
+                        <div className="bg-green-50 border-l-4 border-green-400 p-4 rounded">
+                          <div className="flex">
+                            <div className="flex-shrink-0">
+                              <span className="text-green-400">✅</span>
+                            </div>
+                            <div className="ml-3">
+                              <h4 className="text-sm font-medium text-green-800">Excellent Image Accessibility</h4>
+                              <p className="text-sm text-green-700">
+                                All images have proper alt text or are marked as decorative.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <div className="text-6xl mb-4">🔍</div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">No Data Available</h3>
+                  <p className="text-gray-600">Analyze a URL first to see accessibility insights.</p>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* SEO Checklist Tab */}
         {activeTab === 'performance' && (
           <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 mb-8 overflow-hidden">
@@ -1188,23 +1585,62 @@ export default function SEOTesterPage() {
                         category: 'rich-snippets' 
                       },
                       
-                      // Images and Accessibility (10 points)
+                      // Images and Accessibility (25 points total)
                       { 
-                        condition: seoData.imageStats && seoData.imageStats.altPercentage >= 90, 
-                        points: 5, 
-                        label: 'Excellent image alt text coverage (90%+)', 
+                        condition: seoData.imageStats && seoData.imageStats.altPercentage >= 95, 
+                        points: 10, 
+                        label: 'Excellent image alt text coverage (95%+)', 
                         category: 'accessibility' 
                       },
                       { 
-                        condition: seoData.imageStats && seoData.imageStats.altPercentage >= 70, 
+                        condition: seoData.imageStats && seoData.imageStats.altPercentage >= 80, 
+                        points: 7, 
+                        label: 'Good image alt text coverage (80%+)', 
+                        category: 'accessibility' 
+                      },
+                      { 
+                        condition: seoData.imageStats && seoData.imageStats.altPercentage >= 60, 
+                        points: 4, 
+                        label: 'Fair image alt text coverage (60%+)', 
+                        category: 'accessibility' 
+                      },
+                      
+                      // Heading Structure Accessibility
+                      { 
+                        condition: seoData.accessibility?.headings?.hasProperH1, 
                         points: 3, 
-                        label: 'Good image alt text coverage (70%+)', 
+                        label: 'Proper H1 structure', 
                         category: 'accessibility' 
                       },
                       { 
-                        condition: seoData.images && seoData.images.length > 0, 
+                        condition: seoData.accessibility?.headings?.headingSequence?.isProper, 
+                        points: 3, 
+                        label: 'Logical heading hierarchy', 
+                        category: 'accessibility' 
+                      },
+                      
+                      // Link Accessibility
+                      { 
+                        condition: seoData.accessibility?.links?.emptyLinks === 0, 
                         points: 2, 
-                        label: 'Has images for visual content', 
+                        label: 'No empty links', 
+                        category: 'accessibility' 
+                      },
+                      
+                      // Form Accessibility
+                      { 
+                        condition: seoData.accessibility?.forms?.totalInputs === 0 || 
+                                  (seoData.accessibility?.forms?.withLabels / seoData.accessibility?.forms?.totalInputs) >= 0.9, 
+                        points: 3, 
+                        label: 'Form inputs properly labeled', 
+                        category: 'accessibility' 
+                      },
+                      
+                      // ARIA and Semantic Structure
+                      { 
+                        condition: seoData.accessibility?.aria?.hasLandmarks > 0, 
+                        points: 2, 
+                        label: 'Uses semantic landmarks', 
                         category: 'accessibility' 
                       }
                     ];
