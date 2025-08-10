@@ -42,7 +42,7 @@ export default function Footer() {
                 className="h-12 w-auto object-contain"
               />
             </div>
-            <p className="text-white/70 mb-6 leading-relaxed">
+            <p className="text-white/90 mb-6 leading-relaxed">
               VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room trainings from Hyderabad.
             </p>
             <div className="flex space-x-4">
@@ -89,25 +89,25 @@ export default function Footer() {
             <h4 className="text-xl font-bold text-white mb-6">Policies & Terms</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/privacy-policy" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/privacy-policy" className="text-white/90 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Privacy Policy</span>
                 </Link>
               </li>
               <li>
-                <Link href="/terms-and-conditions" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/terms-and-conditions" className="text-white/90 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Terms & Conditions</span>
                 </Link>
               </li>
               <li>
-                <Link href="/refund-and-course-rescheduling-policy" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/refund-and-course-rescheduling-policy" className="text-white/90 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Refund and Course Rescheduling Policy</span>
                 </Link>
               </li>
               <li>
-                <Link href="/contactus" className="text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/contactus" className="text-white/90 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Contact Us</span>
                 </Link>
@@ -120,7 +120,7 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
-                <div className="text-white/70">
+                <div className="text-white/90">
                   <p>506/A, Aditya Enclave,</p>
                   <p>Nilagiri Block, 5th Floor,</p>
                   <p>Ameerpet, Hyderabad</p>
@@ -129,13 +129,13 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <Link href="tel:+919032734343" className="text-white/70 hover:text-white transition-colors">
+                <Link href="tel:+919032734343" className="text-white/90 hover:text-white transition-colors">
                   +91-9032734343
                 </Link>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-teal-400" />
-                <Link href="mailto:info@vritsol.com" className="text-white/70 hover:text-white transition-colors">
+                <Link href="mailto:info@vritsol.com" className="text-white/90 hover:text-white transition-colors">
                   info@vritsol.com
                 </Link>
               </div>
@@ -191,20 +191,20 @@ export default function Footer() {
                 href="https://maps.google.com/?q=506/A,+Aditya+Enclave,+Nilagiri+Block,+Ameerpet,+Hyderabad,+Telangana+500016"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-blue-600/20 hover:bg-blue-600/30 px-4 py-2 rounded-lg transition-colors text-white/80 hover:text-white text-sm"
+                className="flex items-center space-x-2 bg-blue-700/40 hover:bg-blue-600/50 px-4 py-2 rounded-lg transition-colors text-white hover:text-blue-100 text-sm border border-blue-500/30"
               >
                 <MapPin className="w-4 h-4" />
                 <span>Open in Google Maps</span>
               </Link>
             </div>
-            <p className="text-sm text-white/60 text-center">
+            <p className="text-sm text-white/80 text-center">
               📍 Office Hours: Mon-Sat 9AM-7PM
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/10 mt-16 pt-8 text-center">
-          <p className="text-white/60">
+          <p className="text-white/80">
             © 2025, all rights reserved. VR IT Solutions
           </p>
         </div>

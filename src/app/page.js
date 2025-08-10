@@ -535,10 +535,10 @@ export default function Home() {
               </p>
 
               <div className="bg-gradient-to-r from-orange-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
-                <h4 className="text-lg font-bold text-white mb-2 flex items-center">
+                <h3 className="text-lg font-bold text-white mb-2 flex items-center">
                   <Sparkles className="w-4 h-4 text-orange-400 mr-2" />
                   Special Note
-                </h4>
+                </h3>
                 <p className="text-white/80 text-sm">
                   Any aspirants who is looking for help on the real time scenarios, on job support, help on the certifications, we have team of experienced and talented working consultants who can assist you on the key points to concentrate and get succeed in their tasks.
                 </p>
