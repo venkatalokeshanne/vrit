@@ -145,18 +145,42 @@ function processCourseMetadata(courseData) {
       description: courseData.ogDescription || description,
       url: ogUrl,
       type: 'website',
+      locale: 'en_US',
+      siteName: DEFAULTS.organizationName,
       images: (ogImage || mainImage) ? [{ url: ogImage || mainImage }] : []
     },
     twitter: {
       card: 'summary_large_image',
       title: courseData.twitterTitle || courseData.ogTitle || title,
       description: courseData.twitterDescription || courseData.ogDescription || description,
+      site: '@vritsolutions',
+      creator: '@vritsolutions',
       images: (twitterImage || ogImage || mainImage) ? [twitterImage || ogImage || mainImage] : []
     },
     canonical: courseUrl,
-    alternates: courseData.hreflang ? {
-      languages: { [courseData.hreflang]: courseUrl }
-    } : undefined
+    alternates: {
+      canonical: courseUrl,
+      languages: {
+        'en-US': courseUrl,
+        'en': courseUrl,
+        'x-default': courseUrl,
+        ...(courseData.hreflang ? { [courseData.hreflang]: courseUrl } : {})
+      }
+    },
+    other: {
+      'content-language': 'en-US'
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    }
   };
 
   // Create structured data

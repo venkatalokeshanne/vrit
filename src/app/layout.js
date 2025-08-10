@@ -67,6 +67,7 @@ export async function generateMetadata({ params: _params, searchParams: _searchP
       'geo.placename': 'Hyderabad',
       'geo.position': '17.4399;78.4983',
       'ICBM': '17.4399, 78.4983',
+      'content-language': 'en-US',
     },
     
     // OpenGraph - use your existing data structure
@@ -98,9 +99,14 @@ export async function generateMetadata({ params: _params, searchParams: _searchP
       },
     },
     
-    // Canonical URL
+    // Canonical URL and hreflang
     alternates: {
       canonical: pageMetadata.canonical ? `${baseUrl}${pageMetadata.canonical}` : baseUrl,
+      languages: {
+        'en-US': baseUrl,
+        'en': baseUrl,
+        'x-default': baseUrl
+      },
       ...pageMetadata.alternates,
     },
     
@@ -120,7 +126,7 @@ export default async function RootLayout({ children }) {
   const importantText = indexData?.importantText || '';
 
   return (
-    <html lang="en">
+    <html lang="en-US">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
