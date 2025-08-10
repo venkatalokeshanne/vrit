@@ -2,7 +2,6 @@ import { client } from '../../lib/sanity'
 import Link from 'next/link'
 import Image from 'next/image'
 import { urlFor } from '../../lib/sanity'
-import { Suspense } from 'react'
 
 // Function to fetch all published blog posts
 async function getBlogPosts(categoryFilter = null) {

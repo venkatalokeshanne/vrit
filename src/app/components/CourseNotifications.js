@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { UserPlus, X, MapPin, GraduationCap } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { X, MapPin, GraduationCap } from 'lucide-react';
 
 const CourseNotifications = ({ courseName }) => {
   const [notifications, setNotifications] = useState([]);

@@ -11,7 +11,6 @@ import {
   Globe,
   ChevronRight,
   Play,
-  CheckCircle,
   TrendingUp,
   Code,
   Database,
@@ -24,7 +23,6 @@ import {
   GraduationCap,
   Building,
   Shield,
-  Lightbulb,
   ArrowRight,
   Mail
 } from 'lucide-react';
@@ -33,11 +31,9 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import FAQRichSnippets from './components/FAQRichSnippets';
-import BreadcrumbRichSnippets from './components/BreadcrumbRichSnippets';
 import FAQ from './components/FAQ';
 import PopupBanner from './components/PopupBanner';
 import coursesData from '../data/courses-static.json';
-import { getAllCourses } from '../lib/courses';
 
 export default function Home() {
   // Get dynamic courses from Sanity
@@ -205,7 +201,7 @@ export default function Home() {
                   description: 'Get instant consultation and course details',
                   action: 'call'
                 }
-              ].map((btn, index) => (
+              ].map((btn, _index) => (
                 <div key={btn.label} className="text-center flex flex-col items-center">
                   <button
                     onClick={() => {
@@ -237,7 +233,7 @@ export default function Home() {
                 { number: '20+', label: 'Technology Courses', icon: Code },
                 { number: '100%', label: 'Placement Rate', icon: TrendingUp },
                 { number: '15+', label: 'Years Experience', icon: Award }
-              ].map((stat, index) => (
+              ].map((stat, _index) => (
                 <div
                   key={stat.label}
                   className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-3 border border-white/10 hover:scale-105 hover:-translate-y-1 transition-all duration-300"
@@ -278,7 +274,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {features.map((feature, index) => (
+            {features.map((feature, _index) => (
               <div
                 key={feature.title}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:border-orange-500/50 hover:-translate-y-1 hover:scale-102 transition-all duration-300"
@@ -372,7 +368,7 @@ export default function Home() {
                 desc: "And much more….",
                 gradient: "from-yellow-500 to-orange-500"
               }
-            ].map((feature, index) => (
+            ].map((feature, _index) => (
               <div
                 key={feature.title}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden"
@@ -466,7 +462,7 @@ export default function Home() {
                 desc: "Instructors at VR IT will help the students in providing the right information about the certification programs and providing the extra practice material.",
                 gradient: "from-yellow-500 to-orange-500"
               }
-            ].map((proficiency, index) => (
+            ].map((proficiency, _index) => (
               <div
                 key={proficiency.title}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden"
@@ -564,7 +560,7 @@ export default function Home() {
                     { icon: Users, title: 'Expert Faculty', desc: 'Industry professionals' },
                     { icon: Shield, title: 'Certified Courses', desc: 'Industry recognized' },
                     { icon: Globe, title: 'Global Reach', desc: 'Worldwide accessibility' }
-                  ].map((item, index) => (
+                  ].map((item, _index) => (
                     <div
                       key={item.title}
                       className="text-center p-3 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10"
@@ -596,7 +592,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {companies.map((company, index) => (
+            {companies.map((company, _index) => (
               <div
                 key={company.name}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 flex items-center justify-center"
@@ -635,7 +631,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {courses.map((course, index) => (
+            {courses.map((course, _index) => (
               <div
                 key={course.name}
                 className="group relative overflow-hidden bg-gradient-to-br from-white/[0.08] via-white/[0.05] to-transparent backdrop-blur-xl rounded-3xl border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2"

@@ -1,6 +1,4 @@
-﻿import React from 'react';
-import Link from 'next/link';
-import { CheckCircle, Users, Target, TrendingUp, Award, Clock, MapPin, Mail, Phone, Globe, BookOpen, Monitor, Code, Briefcase, Star, ArrowRight } from 'lucide-react';
+﻿import { CheckCircle, MapPin, Mail, Phone, Code } from 'lucide-react';
 import FAQ from '../components/FAQ';
 import { EnquireNowButton, CallNowButton } from '../components/CourseActionButtons';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';

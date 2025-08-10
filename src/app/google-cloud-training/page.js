@@ -1,32 +1,14 @@
-﻿import React from 'react';
-import Link from 'next/link';
-import CourseSidebar from '../components/CourseSidebar';
+﻿import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic, getPageMetadataStatic, getStructuredDataStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Target, 
-  BookOpen, 
-  Award, 
-  Users, 
-  TrendingUp,
+  BookOpen,
   Cloud,
-  Monitor,
-  Rocket,
   Clock,
-  Calendar,
-  Download,
   CheckCircle,
-  ArrowRight,
-  FileText,
-  Settings,
-  Code,
-  Star,
-  Play,
-  Phone,
-  Globe,
-  Mail,
-  Briefcase
+  Phone
 } from 'lucide-react';
 
 // Define the course slug as a constant

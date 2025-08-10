@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
@@ -11,31 +10,15 @@ import {
   Users, 
   TrendingUp,
   Cloud,
-  Monitor,
-  Rocket,
   Clock,
-  Calendar,
-  Download,
   CheckCircle,
-  ArrowRight,
-  FileText,
-  Settings,
-  Code,
   Star,
-  Play,
   Phone,
   Globe,
-  Mail,
   Briefcase,
   Database,
-  Shield,
-  Server,
-  Network,
   Layers,
   Package,
-  Truck,
-  Brain,
-  MapPin,
   Flag
 } from 'lucide-react';
 

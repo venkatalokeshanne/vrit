@@ -1,6 +1,4 @@
-﻿import React from 'react';
-import Link from 'next/link';
-import FAQ from '../components/FAQ';
+﻿import FAQ from '../components/FAQ';
 import { getStructuredDataStatic } from '../../utils/staticCourses';
 
 // FAQ Data for Terms and Conditions

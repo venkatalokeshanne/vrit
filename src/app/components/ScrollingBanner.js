@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 
 const ScrollingBanner = ({ text, isVisible = true }) => {
   if (!isVisible || !text) {

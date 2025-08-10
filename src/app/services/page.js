@@ -1,22 +1,12 @@
-﻿import React from 'react';
-import Link from 'next/link';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+﻿import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Monitor, 
   Users, 
   Headphones, 
   Clock, 
   Award, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Play,
-  BookOpen,
+  CheckCircle,
   Target,
-  Zap,
-  Star,
   Rocket
 } from 'lucide-react';
 

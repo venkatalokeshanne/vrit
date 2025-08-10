@@ -1,7 +1,6 @@
 import { getCourseBySlug, getCourseSlugs } from '../../lib/courses';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import DynamicCoursePage from '../components/DynamicCoursePage';
-import { urlFor } from '../../lib/courses';
 import { notFound } from 'next/navigation';
 
 // Generate static params for dynamic courses only

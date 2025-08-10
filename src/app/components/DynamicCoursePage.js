@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
@@ -9,25 +8,13 @@ import {
   Target, 
   BookOpen, 
   Award, 
-  Users, 
   TrendingUp,
-  Cloud,
-  Monitor,
-  Rocket,
   Clock,
-  Calendar,
-  Download,
   CheckCircle,
-  ArrowRight,
   FileText,
   Settings,
-  Code,
   Star,
-  Play,
-  Phone,
-  Globe,
-  Mail,
-  Briefcase
+  Phone
 } from 'lucide-react';
 
 export default function DynamicCoursePage({ course }) {

@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const FAQ = ({ faqs, title = "Frequently Asked Questions", theme = "default" }) => {

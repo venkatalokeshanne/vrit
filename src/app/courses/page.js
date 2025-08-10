@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { getAllCourses } from '../../lib/courses';
@@ -8,13 +7,11 @@ import {
   Clock,
   Users,
   Award,
-  TrendingUp,
   ArrowRight,
   BookOpen,
   Code,
   Database,
   Cloud,
-  Settings,
   Zap,
   Target,
   Network,
@@ -29,7 +26,6 @@ import {
   Trophy,
   Rocket,
   GraduationCap,
-  Building2,
   Cpu
 } from 'lucide-react';
 

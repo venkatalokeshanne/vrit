@@ -1,7 +1,5 @@
-﻿import React from 'react';
-import Link from 'next/link';
-import FAQ from '../components/FAQ';
-import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
+﻿import FAQ from '../components/FAQ';
+import { getStructuredDataStatic } from '../../utils/staticCourses';
 
 // FAQ Data for Privacy Policy
 const privacyPolicyFaqs = [

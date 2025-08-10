@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ArrowRight, Download, Play, Phone } from 'lucide-react';
 import EnquiryModal from './EnquiryModal';
 import DownloadModal from './DownloadModal';

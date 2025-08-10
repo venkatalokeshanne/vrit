@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { X, Download, Phone, Mail, User, MapPin, FileText, CheckCircle } from 'lucide-react';
 import Portal from './Portal';
 

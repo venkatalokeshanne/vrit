@@ -1,6 +1,4 @@
-﻿import React from 'react';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
+﻿import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'contactus';import { getCourseBySlugStatic } from '../../utils/staticCourses';

@@ -1,32 +1,16 @@
-﻿import React from 'react';
-import Link from 'next/link';
-import CourseSidebar from '../components/CourseSidebar';
+﻿import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
-  Target, 
-  BookOpen, 
   Award, 
-  Users, 
   TrendingUp,
-  Cloud,
-  Monitor,
   Rocket,
   Clock,
-  Calendar,
-  Download,
   CheckCircle,
-  ArrowRight,
-  FileText,
-  Settings,
   Code,
   Star,
-  Play,
   Phone,
-  Globe,
-  Mail,
-  Briefcase,
   Database,
   BarChart,
   Brain,
