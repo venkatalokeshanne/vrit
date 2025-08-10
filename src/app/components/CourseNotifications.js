@@ -30,7 +30,6 @@ const CourseNotifications = ({ courseName }) => {
   const [notifications, setNotifications] = useState([]);
   const [notificationId, setNotificationId] = useState(0);
   const [usedNames, setUsedNames] = useState(new Set());
-  const [timers, setTimers] = useState(new Map()); // Track timers for each notification
 
   // Function to generate a random notification
   const generateNotification = useCallback(() => {
@@ -55,62 +54,51 @@ const CourseNotifications = ({ courseName }) => {
       name: randomName,
       location: randomLocation,
       timeAgo: timeAgo,
-      courseName: courseName
+      courseName: courseName,
+      createdAt: Date.now() // Add timestamp for auto-removal
     };
   }, [courseName, notificationId, usedNames]);
 
   // Function to add a new notification
   const addNotification = useCallback(() => {
-    const newNotification = generateNotification();
-    setNotifications(prev => [newNotification, ...prev.slice(0, 3)]); // Keep max 4 notifications
+    // Only add a new notification if there are no current notifications
+    setNotifications(prev => {
+      if (prev.length > 0) return prev; // Don't add if notifications already exist
+      
+      const newNotification = generateNotification();
+      return [newNotification];
+    });
     setNotificationId(prev => prev + 1);
-    
-    // Set auto-removal timer for this specific notification
-    const timer = setTimeout(() => {
-      setNotifications(prev => prev.filter(n => n.id !== newNotification.id));
-      setTimers(prev => {
-        const newTimers = new Map(prev);
-        newTimers.delete(newNotification.id);
-        return newTimers;
-      });
-    }, 6000);
-    
-    setTimers(prev => new Map(prev).set(newNotification.id, timer));
   }, [generateNotification]);
 
   // Function to remove a notification
   const removeNotification = (id) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
-    // Clear the timer for this notification
-    setTimers(prev => {
-      const newTimers = new Map(prev);
-      const timer = newTimers.get(id);
-      if (timer) {
-        clearTimeout(timer);
-        newTimers.delete(id);
-      }
-      return newTimers;
-    });
   };
 
-  // Clean up timers on unmount
+  // Auto-remove expired notifications every second
   useEffect(() => {
-    return () => {
-      timers.forEach(timer => clearTimeout(timer));
-    };
-  }, [timers]);
+    const interval = setInterval(() => {
+      const now = Date.now();
+      setNotifications(prev => 
+        prev.filter(notification => now - notification.createdAt < 8000) // Remove after 8 seconds
+      );
+    }, 1000); // Check every second
 
-  // Generate notifications every 20 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  // Generate notifications every 18 seconds (8s display + 10s gap)
   useEffect(() => {
-    // Generate first notification after 5 seconds
+    // Generate first notification after 10 seconds
     const initialTimer = setTimeout(() => {
       addNotification();
-    }, 5000);
+    }, 10000); // First notification after 10 seconds
 
-    // Then generate notifications every 20 seconds
+    // Then generate notifications every 18 seconds
     const intervalTimer = setInterval(() => {
       addNotification();
-    }, 20000); // 20 seconds
+    }, 18000); // 18 seconds (8s display + 10s gap)
 
     return () => {
       clearTimeout(initialTimer);
@@ -163,7 +151,7 @@ const CourseNotifications = ({ courseName }) => {
             <div 
               className="h-full bg-white/60 rounded-full animate-shrink"
               style={{
-                animation: 'shrink 6s linear forwards'
+                animation: 'shrink 8s linear forwards'
               }}
             />
           </div>
@@ -177,7 +165,7 @@ const CourseNotifications = ({ courseName }) => {
         }
         
         .animate-shrink {
-          animation: shrink 6s linear forwards;
+          animation: shrink 8s linear forwards;
         }
         
         .line-clamp-2 {
