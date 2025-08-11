@@ -30,7 +30,6 @@ import {
 // Define the course slug as a constant
 import Image from 'next/image';
 import Link from 'next/link';
-import FAQRichSnippets from './components/FAQRichSnippets';
 import FAQ from './components/FAQ';
 import PopupBanner from './components/PopupBanner';
 import coursesData from '../data/courses-static.json';
