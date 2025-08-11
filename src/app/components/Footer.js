@@ -32,7 +32,7 @@ const InstagramIcon = ({ className }) => (
 
 export default function Footer() {
   return (
-    <footer className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+    <footer className="relative py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
@@ -45,7 +45,7 @@ export default function Footer() {
                 className="h-12 w-auto object-contain"
               />
             </div>
-            <p className="text-white/90 mb-6 leading-relaxed">
+            <p className="text-gray-100 mb-6 leading-relaxed">
               VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room trainings from Hyderabad.
             </p>
             <div className="flex space-x-4">
@@ -53,7 +53,7 @@ export default function Footer() {
                 href="https://www.facebook.com/vritsolutions/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-300 group"
+                className="w-12 h-12 bg-slate-700 hover:bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group"
                 aria-label="Follow us on Facebook"
               >
                 <FacebookIcon className="w-5 h-5 text-white group-hover:text-white" />
@@ -62,7 +62,7 @@ export default function Footer() {
                 href="https://twitter.com/vritsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-sky-500 hover:scale-110 transition-all duration-300 group"
+                className="w-12 h-12 bg-slate-700 hover:bg-sky-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group"
                 aria-label="Follow us on Twitter"
               >
                 <TwitterIcon className="w-5 h-5 text-white group-hover:text-white" />
@@ -71,7 +71,7 @@ export default function Footer() {
                 href="https://www.youtube.com/channel/UCNbaPhgRjVUDcJSh70X-ZtA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-red-600 hover:scale-110 transition-all duration-300 group"
+                className="w-12 h-12 bg-slate-700 hover:bg-red-600 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group"
                 aria-label="Subscribe to our YouTube channel"
               >
                 <YouTubeIcon className="w-5 h-5 text-white group-hover:text-white" />
@@ -80,7 +80,7 @@ export default function Footer() {
                 href="https://www.instagram.com/vritsolutions/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:scale-110 transition-all duration-300 group"
+                className="w-12 h-12 bg-slate-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 rounded-full flex items-center justify-center hover:scale-110 transition-all duration-300 group"
                 aria-label="Follow us on Instagram"
               >
                 <InstagramIcon className="w-5 h-5 text-white group-hover:text-white" />
@@ -92,25 +92,25 @@ export default function Footer() {
             <h4 className="text-xl font-bold text-white mb-6">Policies & Terms</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/privacy-policy" className="text-white/90 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/privacy-policy" className="text-gray-100 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Privacy Policy</span>
                 </Link>
               </li>
               <li>
-                <Link href="/terms-and-conditions" className="text-white/90 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/terms-and-conditions" className="text-gray-100 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Terms & Conditions</span>
                 </Link>
               </li>
               <li>
-                <Link href="/refund-and-course-rescheduling-policy" className="text-white/90 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/refund-and-course-rescheduling-policy" className="text-gray-100 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Refund and Course Rescheduling Policy</span>
                 </Link>
               </li>
               <li>
-                <Link href="/contactus" className="text-white/90 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
+                <Link href="/contactus" className="text-gray-100 hover:text-white hover:translate-x-2 transition-all duration-300 inline-flex items-center space-x-2">
                   <ChevronRight className="w-4 h-4" />
                   <span>Contact Us</span>
                 </Link>
@@ -123,7 +123,7 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
-                <div className="text-white/90">
+                <div className="text-gray-100">
                   <p>506/A, Aditya Enclave,</p>
                   <p>Nilagiri Block, 5th Floor,</p>
                   <p>Ameerpet, Hyderabad</p>
@@ -132,13 +132,13 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-blue-400" />
-                <Link href="tel:+919032734343" className="text-white/90 hover:text-white transition-colors">
+                <Link href="tel:+919032734343" className="text-gray-100 hover:text-white transition-colors">
                   +91-9032734343
                 </Link>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-teal-400" />
-                <Link href="mailto:info@vritsol.com" className="text-white/90 hover:text-white transition-colors">
+                <Link href="mailto:info@vritsol.com" className="text-gray-100 hover:text-white transition-colors">
                   info@vritsol.com
                 </Link>
               </div>
@@ -147,7 +147,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-xl font-bold text-white mb-6">Office Location</h4>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-2 border border-white/10 mb-4 relative overflow-hidden">
+            <div className="bg-slate-800 rounded-xl p-2 border border-slate-600 mb-4 relative overflow-hidden">
               {/* Try Google Maps Embed first */}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.564879768166!2d78.44271051489569!3d17.439999787995647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c0c6db3e95%3A0x5b1b4f5c5c5c5c5c!2s506%2FA%2C%20Aditya%20Enclave%2C%20Nilagiri%20Block%2C%20Ameerpet%2C%20Hyderabad%2C%20Telangana%20500016%2C%20India!5e0!3m2!1sen!2sin!4v1704067200000!5m2!1sen!2sin"
@@ -179,7 +179,7 @@ export default function Footer() {
               
               {/* Fallback: Static Map Placeholder */}
               <div 
-                className="map-fallback w-full h-40 bg-gradient-to-br from-blue-900/50 to-slate-800/50 rounded-lg flex items-center justify-center flex-col space-y-2 border border-slate-600/30"
+                className="map-fallback w-full h-40 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center flex-col space-y-2 border border-slate-600"
                 style={{ display: 'none' }}
               >
                 <MapPin className="w-8 h-8 text-blue-400" />
@@ -194,20 +194,20 @@ export default function Footer() {
                 href="https://maps.google.com/?q=506/A,+Aditya+Enclave,+Nilagiri+Block,+Ameerpet,+Hyderabad,+Telangana+500016"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-blue-700/40 hover:bg-blue-600/50 px-4 py-2 rounded-lg transition-colors text-white hover:text-blue-100 text-sm border border-blue-500/30"
+                className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors text-white hover:text-white text-sm border border-blue-500"
               >
                 <MapPin className="w-4 h-4" />
                 <span>Open in Google Maps</span>
               </Link>
             </div>
-            <p className="text-sm text-white/80 text-center">
+            <p className="text-sm text-gray-200 text-center">
               📍 Office Hours: Mon-Sat 9AM-7PM
             </p>
           </div>
         </div>
 
         <div className="border-t border-white/10 mt-16 pt-8 text-center">
-          <p className="text-white/80">
+          <p className="text-gray-200">
             © 2025, all rights reserved. VR IT Solutions
           </p>
         </div>

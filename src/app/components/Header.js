@@ -69,6 +69,9 @@ export default function Header() {
           <button
             className="lg:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? (
               <X className="w-6 h-6 text-white" />
@@ -81,7 +84,7 @@ export default function Header() {
 
       {/* Simple Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-slate-900/95 backdrop-blur-sm border-t border-white/10">
+        <div id="mobile-menu" className="lg:hidden bg-slate-900/95 backdrop-blur-sm border-t border-white/10">
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <Link

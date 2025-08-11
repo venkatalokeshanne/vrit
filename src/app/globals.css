@@ -18,6 +18,11 @@ body {
   font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
   /* Ensure minimum contrast ratio */
   min-height: 100vh;
+  /* Performance optimizations */
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Ensure proper contrast for body text */
@@ -50,6 +55,46 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Critical CSS for LCP optimization */
+.hero-lcp-text {
+  font-size: 1rem;
+  line-height: 1.625;
+  color: rgb(229 231 235);
+  margin-bottom: 1rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-rendering: optimizeSpeed;
+  contain: layout style;
+}
+
+@media (min-width: 768px) {
+  .hero-lcp-text {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-lcp-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* Performance optimizations for large text elements */
+.hero-text {
+  contain: layout style;
+  will-change: transform;
+  backface-visibility: hidden;
+  text-rendering: optimizeSpeed;
+}
+
+/* Optimize gradient text performance */
+.gradient-text {
+  contain: layout;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .animate-fade-in-up {

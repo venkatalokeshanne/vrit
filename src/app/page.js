@@ -159,7 +159,7 @@ export default function Home() {
               <span className="text-xs font-medium">🏆 Best Software Training Institute in Hyderabad</span>
             </div>
             
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight" style={{ fontDisplay: 'swap' }}>
               <span className="bg-gradient-to-r from-orange-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
                 Transform Your
               </span>
@@ -167,11 +167,11 @@ export default function Home() {
               <span className="text-white">Career Journey</span>
             </h1>
             
-            <p className="text-base md:text-lg lg:text-xl text-white/80 mb-4 max-w-3xl mx-auto leading-relaxed">
+            <p className="hero-lcp-text">
               Get knowledge in practical way, Everyone satisfied with our innovation way of knowledge transfer. Best Software Training Institute in Hyderabad for best brains!
             </p>
             
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-6">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-6 mt-6">
               {[
                 { 
                   label: 'Online Training', 
@@ -219,7 +219,7 @@ export default function Home() {
                       <span>{btn.label}</span>
                     </div>
                   </button>
-                  <p className="text-xs text-white/60 mt-2 max-w-[140px] leading-tight text-center">
+                  <p className="text-xs text-gray-300 mt-2 max-w-[140px] leading-tight text-center">
                     {btn.description}
                   </p>
                 </div>
@@ -244,7 +244,7 @@ export default function Home() {
                   <div className="text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-white/60 font-medium text-xs md:text-sm">{stat.label}</div>
+                  <div className="text-gray-200 font-medium text-xs md:text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -268,7 +268,7 @@ export default function Home() {
               <br />
               <span className="text-white">VR IT Solutions?</span>
             </h2>
-            <p className="text-base text-white/70 max-w-3xl mx-auto">
+            <p className="text-base text-gray-200 max-w-3xl mx-auto">
               We leverage cutting-edge technology and industry expertise to deliver world-class training
             </p>
           </div>
@@ -287,7 +287,7 @@ export default function Home() {
                   <h3 className="text-base font-bold text-white mb-2 group-hover:text-orange-300 transition-colors leading-tight">
                     {feature.title}
                   </h3>
-                  <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors">
+                  <p className="text-gray-200 text-sm leading-relaxed group-hover:text-white transition-colors">
                     {feature.desc}
                   </p>
                 </div>
@@ -313,7 +313,7 @@ export default function Home() {
               <br />
               <span className="text-white">VR IT Training Center?</span>
             </h2>
-            <p className="text-base text-white/70 max-w-3xl mx-auto">
+            <p className="text-base text-gray-200 max-w-3xl mx-auto">
               Discover the distinctive features that set us apart from other training institutes
             </p>
           </div>
@@ -381,7 +381,7 @@ export default function Home() {
                   <h3 className="text-base font-bold text-white mb-2 group-hover:text-purple-300 transition-colors leading-tight">
                     {feature.title}
                   </h3>
-                  <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors">
+                  <p className="text-gray-200 text-sm leading-relaxed group-hover:text-white transition-colors">
                     {feature.desc}
                   </p>
                 </div>
@@ -407,7 +407,7 @@ export default function Home() {
               <br />
               <span className="text-white">Proficiencies</span>
             </h2>
-            <p className="text-base text-white/70 max-w-3xl mx-auto">
+            <p className="text-base text-gray-200 max-w-3xl mx-auto">
               Discover our comprehensive approach to software training and professional development
             </p>
           </div>
@@ -475,7 +475,7 @@ export default function Home() {
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-purple-300 transition-colors leading-tight">
                     {proficiency.title}
                   </h3>
-                  <p className="text-white/70 text-sm leading-relaxed group-hover:text-white/90 transition-colors">
+                  <p className="text-gray-200 text-sm leading-relaxed group-hover:text-white transition-colors">
                     {proficiency.desc}
                   </p>
                 </div>
@@ -548,9 +548,9 @@ export default function Home() {
                 <div className="w-full h-48 bg-gradient-to-br from-orange-500/30 to-blue-500/30 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-blue-600/20"></div>
                   <div className="text-center z-10">
-                    <Building className="w-12 h-12 text-white/50 mx-auto mb-3" />
-                    <p className="text-white/60 font-semibold">VR IT Solutions Office</p>
-                    <p className="text-sm text-white/40">[Image Placeholder]</p>
+                    <Building className="w-12 h-12 text-gray-300 mx-auto mb-3" />
+                    <p className="text-gray-200 font-semibold">VR IT Solutions Office</p>
+                    <p className="text-sm text-gray-400">[Image Placeholder]</p>
                   </div>
                 </div>
                 
@@ -569,7 +569,7 @@ export default function Home() {
                         <item.icon className="w-5 h-5 text-white" />
                       </div>
                       <h4 className="font-bold text-white mb-1 text-sm">{item.title}</h4>
-                      <p className="text-xs text-white/60">{item.desc}</p>
+                      <p className="text-xs text-gray-300">{item.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -586,7 +586,7 @@ export default function Home() {
             <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
               Our Students Work At
             </h3>
-            <p className="text-sm text-white/70">
+            <p className="text-sm text-gray-200">
               VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room tainings from Hyderabad. VR IT solutions is trained & placed thousands of people in majour MNC&apos;s like Infosys, Wipro, Accenture, Delloite, Cognizent, Cap Gemini and other companies as well.
             </p>
           </div>
@@ -599,9 +599,9 @@ export default function Home() {
               >
                 <div className="text-center">
                   <div className="w-16 h-8 bg-gradient-to-r from-white/20 to-white/10 rounded mb-2 flex items-center justify-center">
-                    <span className="text-xs font-bold text-white/60">{company.name.substring(0, 3)}</span>
+                    <span className="text-xs font-bold text-gray-200">{company.name.substring(0, 3)}</span>
                   </div>
-                  <p className="text-xs text-white/60">{company.name}</p>
+                  <p className="text-xs text-gray-300">{company.name}</p>
                 </div>
               </div>
             ))}
@@ -625,7 +625,7 @@ export default function Home() {
               <br />
               <span className="text-white">Training Courses</span>
             </h2>
-            <p className="text-base text-white/70 max-w-3xl mx-auto">
+            <p className="text-base text-gray-200 max-w-3xl mx-auto">
               Are you looking to start a new learning journey? Take Best Software Training Courses in Hyderabad at VR IT Solutions to get the best job support & placement in reputed companies.
             </p>
           </div>
@@ -679,7 +679,7 @@ export default function Home() {
                     </h3>
                     
                     {/* Course Description */}
-                    <p className="text-white/70 text-sm mb-6 leading-relaxed group-hover:text-white/90 transition-colors">
+                    <p className="text-gray-200 text-sm mb-6 leading-relaxed group-hover:text-white transition-colors">
                       {course.description}
                     </p>
                     
