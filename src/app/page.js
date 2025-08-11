@@ -145,28 +145,51 @@ export default function Home() {
       <PopupBanner imageUrl={popupImage} bannerUrl={bannerUrl} delay={5000} />
       
       {/* Clean Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      <div className="fixed inset-0 overflow-hidden pointer-events-none" style={{ contain: 'layout style' }}>
         {/* No colored circles - clean background */}
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-12 pb-6 px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-12 pb-6 px-4 sm:px-6 lg:px-8" style={{ contentVisibility: 'visible' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+          <div className="text-center" style={{ contain: 'layout' }}>
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4 border border-white/20">
               <Star className="w-4 h-4 text-yellow-400" />
               <span className="text-xs font-medium">🏆 Best Software Training Institute in Hyderabad</span>
             </div>
             
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight" style={{ fontDisplay: 'swap' }}>
-              <span className="bg-gradient-to-r from-orange-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight" style={{ contain: 'layout', willChange: 'auto' }}>
+              <span 
+                className="bg-gradient-to-r from-orange-400 via-teal-400 to-blue-400 bg-clip-text text-transparent"
+                style={{ 
+                  contain: 'layout',
+                  transform: 'translateZ(0)',
+                  backfaceVisibility: 'hidden'
+                }}
+              >
                 Transform Your
               </span>
               <br />
               <span className="text-white">Career Journey</span>
             </h1>
             
-            <p className="hero-lcp-text">
+            <p 
+              className="hero-lcp-text"
+              style={{
+                fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
+                lineHeight: '1.625',
+                color: 'rgb(229 231 235)',
+                marginBottom: '1rem',
+                maxWidth: '48rem',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                textRendering: 'optimizeSpeed',
+                contain: 'layout style',
+                willChange: 'auto',
+                transform: 'translateZ(0)',
+                backfaceVisibility: 'hidden'
+              }}
+            >
               Get knowledge in practical way, Everyone satisfied with our innovation way of knowledge transfer. Best Software Training Institute in Hyderabad for best brains!
             </p>
             
