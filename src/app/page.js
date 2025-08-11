@@ -766,9 +766,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ Rich Snippets Section */}
-      <FAQRichSnippets />
-
       {/* Structured Data */}
       <script
         type="application/ld+json"
