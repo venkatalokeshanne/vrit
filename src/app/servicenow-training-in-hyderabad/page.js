@@ -190,7 +190,10 @@ export default function ServiceNowTrainingInHyderabad() {
                   </div>
                 </div>
 
-                <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                <p 
+                  className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+                  style={{ textRendering: 'optimizeSpeed', contain: 'layout style' }}
+                >
                   <span className="text-orange-400 font-bold">VRIT Solutions</span> is a prominent name in the Hyderabad&apos;s best ServiceNow training. We are one stop solution for people looking for top and best ServiceNow Training.
                 </p>
 
