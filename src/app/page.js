@@ -1,6 +1,7 @@
 'use client';
 
-import React, { 
+import React from 'react';
+import { 
   Phone,
   Star, 
   Users, 
@@ -48,8 +49,6 @@ export default function Home() {
     if (!popupImage) {
       const timer = setTimeout(() => setShowEnquiry(true), 5000);
       return () => clearTimeout(timer);
-    } else {
-      setShowEnquiry(false);
     }
   }, [popupImage]);
 
