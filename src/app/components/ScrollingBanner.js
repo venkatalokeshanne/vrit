@@ -8,7 +8,7 @@ const ScrollingBanner = ({ text, isVisible = true }) => {
 
   return (
     <>
-      <div className="w-full bg-red-600 text-white py-3 shadow-lg relative z-50 hover-pause-scroll">
+  <div className="w-full bg-blue-600 text-white py-3 shadow-lg relative z-50 hover-pause-scroll">
         <div className="overflow-hidden whitespace-nowrap">
           <div className="scrolling-text inline-block">
             <span className="text-sm font-bold px-8">

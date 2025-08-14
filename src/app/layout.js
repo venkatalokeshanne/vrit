@@ -6,6 +6,7 @@ import ScrollingCourses from './components/ScrollingCourses';
 import ScrollingBanner from './components/ScrollingBanner';
 import ChatWidget from './components/ChatWidget';
 import CourseNotificationsWrapper from './components/CourseNotificationsWrapper';
+import CourseFormPopupWrapper from './components/CourseFormPopupWrapper';
 import RichSnippetsManager from '../utils/richSnippets';
 import { getPageMetadataStatic, getStructuredDataStatic } from '../utils/staticCourses';
 import Script from 'next/script';
@@ -216,6 +217,7 @@ export default async function RootLayout({ children }) {
         <Footer />
         <ChatWidget />
         <CourseNotificationsWrapper />
+        <CourseFormPopupWrapper />
       </body>
     </html>
   );

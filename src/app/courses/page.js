@@ -691,9 +691,12 @@ export default async function CoursesPage() {
           {/* Courses Grid */}
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {sortedCourses.map((course) => (
-              <div
+              <Link
                 key={course.id}
-                className="group relative bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl overflow-hidden"
+                href={`/${course.slug}`}
+                className="group relative bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl overflow-hidden focus:outline-none focus:ring-4 focus:ring-blue-400"
+                tabIndex={0}
+                aria-label={`View details for ${course.title}`}
               >
                 {/* Course Card Header */}
                 <div className={`relative p-6 bg-gradient-to-br ${course.bgColor} border-b border-white/10`}>
@@ -774,18 +777,15 @@ export default async function CoursesPage() {
                     </div>
                   </div>
 
-                  {/* CTA */}
-                  <div className="flex items-center justify-center">
-                    <Link 
-                      href={`/${course.slug}`}
-                      className={`w-full group/btn px-6 py-3 bg-gradient-to-r ${course.color} text-white rounded-xl font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center gap-2`}
-                    >
+                  {/* CTA (visible, for clarity) */}
+                  <div className="flex items-center justify-center mt-4">
+                    <span className={`w-full group/btn px-6 py-3 bg-gradient-to-r ${course.color} text-white rounded-xl font-semibold flex items-center justify-center gap-2 pointer-events-none select-none`}>
                       View Course Details
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
+                    </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

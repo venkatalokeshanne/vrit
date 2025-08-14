@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { X, MapPin, GraduationCap } from 'lucide-react';
+import { X, MapPin, GraduationCap, Trophy } from 'lucide-react';
 
 // Sample names and locations for fake notifications (outside component to avoid re-renders)
 const sampleNames = [
@@ -35,27 +35,26 @@ const CourseNotifications = ({ courseName }) => {
   const generateNotification = useCallback(() => {
     // Get available names (not recently used)
     const availableNames = sampleNames.filter(name => !usedNames.has(name));
-    
     // If all names are used, reset the used names set
     if (availableNames.length === 0) {
       setUsedNames(new Set());
       availableNames.push(...sampleNames);
     }
-    
     const randomName = availableNames[Math.floor(Math.random() * availableNames.length)];
     const randomLocation = sampleLocations[Math.floor(Math.random() * sampleLocations.length)];
     const timeAgo = Math.floor(Math.random() * 15) + 1; // 1-15 minutes ago
-    
     // Add name to used names
     setUsedNames(prev => new Set([...prev, randomName]));
-    
+    // Randomly decide notification type: 'joined' or 'placed'
+    const type = Math.random() < 0.5 ? 'joined' : 'placed';
     return {
       id: notificationId,
       name: randomName,
       location: randomLocation,
       timeAgo: timeAgo,
       courseName: courseName,
-      createdAt: Date.now() // Add timestamp for auto-removal
+      createdAt: Date.now(), // Add timestamp for auto-removal
+      type: type
     };
   }, [courseName, notificationId, usedNames]);
 
@@ -88,59 +87,84 @@ const CourseNotifications = ({ courseName }) => {
     return () => clearInterval(interval);
   }, []);
 
-  // Generate notifications every 18 seconds (8s display + 10s gap)
+
+  // Show the first notification after 2s, then always wait 10s after the previous notification is dismissed
   useEffect(() => {
-    // Generate first notification after 10 seconds
-    const initialTimer = setTimeout(() => {
-      addNotification();
-    }, 10000); // First notification after 10 seconds
+    let timeoutId;
+    // If there are no notifications, schedule the next one
+    if (notifications.length === 0) {
+      timeoutId = setTimeout(() => {
+        addNotification();
+      }, 10000); // 10s gap after previous notification disappears
+    }
+    return () => clearTimeout(timeoutId);
+  }, [notifications.length, addNotification]);
 
-    // Then generate notifications every 18 seconds
-    const intervalTimer = setInterval(() => {
-      addNotification();
-    }, 18000); // 18 seconds (8s display + 10s gap)
+  // Show the very first notification after 2s on mount
+  useEffect(() => {
+    if (notificationId === 0) {
+      const firstTimeout = setTimeout(() => {
+        addNotification();
+      }, 2000);
+      return () => clearTimeout(firstTimeout);
+    }
+  }, [notificationId, addNotification]);
 
-    return () => {
-      clearTimeout(initialTimer);
-      clearInterval(intervalTimer);
-    };
-    }, [courseName, addNotification]);  if (notifications.length === 0) return null;
+  if (notifications.length === 0) return null;
 
   return (
     <div className="fixed bottom-4 left-4 z-50 space-y-3">
       {notifications.map((notification, index) => (
         <div
           key={notification.id}
-          className="bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white p-4 rounded-xl shadow-2xl border border-green-400/40 backdrop-blur-sm animate-in slide-in-from-left duration-700 max-w-sm transform hover:scale-105 transition-all"
+          className={
+            notification.type === 'placed'
+              ? 'bg-gradient-to-r from-yellow-200 via-yellow-300 to-orange-200 text-black p-4 rounded-xl shadow-2xl border border-yellow-300/60 backdrop-blur-sm animate-in slide-in-from-left duration-700 max-w-sm transform hover:scale-105 transition-all'
+              : 'bg-gradient-to-r from-emerald-600 via-green-600 to-teal-600 text-white p-4 rounded-xl shadow-2xl border border-green-400/40 backdrop-blur-sm animate-in slide-in-from-left duration-700 max-w-sm transform hover:scale-105 transition-all'
+          }
           style={{
             animationDelay: `${index * 100}ms`,
-            boxShadow: '0 10px 25px rgba(16, 185, 129, 0.3)'
+            boxShadow: notification.type === 'placed'
+              ? '0 10px 25px rgba(251, 191, 36, 0.3)'
+              : '0 10px 25px rgba(16, 185, 129, 0.3)'
           }}
         >
           <div className="flex items-start justify-between">
             <div className="flex items-start space-x-3 flex-1">
-              <div className="bg-white/25 rounded-full p-2.5 flex-shrink-0 animate-pulse">
-                <GraduationCap className="w-5 h-5" />
+              <div className={notification.type === 'placed' ? 'bg-yellow-100 rounded-full p-2.5 flex-shrink-0 animate-pulse' : 'bg-white/25 rounded-full p-2.5 flex-shrink-0 animate-pulse'}>
+                {notification.type === 'placed' ? (
+                  <Trophy className="w-5 h-5 text-black" />
+                ) : (
+                  <GraduationCap className="w-5 h-5" />
+                )}
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center space-x-1 mb-1">
-                  <span className="font-bold text-sm text-white">{notification.name}</span>
-                  <span className="text-green-100 text-xs font-medium">just enrolled!</span>
+                  <span className={notification.type === 'placed' ? 'font-bold text-sm text-black' : 'font-bold text-sm text-white'}>{notification.name}</span>
+                  {notification.type === 'placed' ? (
+                    <span className="text-black text-xs font-medium"> placed!</span>
+                  ) : (
+                    <span className="text-green-100 text-xs font-medium"> enrolled!</span>
+                  )}
                 </div>
-                <div className="font-semibold text-sm text-green-50 mb-2 line-clamp-2 leading-tight">
-                  {notification.courseName}
-                </div>
-                <div className="flex items-center space-x-1 text-xs text-green-200">
-                  <MapPin className="w-3 h-3" />
+                {notification.type === 'placed' ? (
+                  <div className="font-semibold text-sm text-black mb-2 leading-tight">
+                    Congratulations on your new job offer!
+                  </div>
+                ) : (
+                  <div className="font-semibold text-sm text-green-50 mb-2 line-clamp-2 leading-tight">
+                    {notification.courseName}
+                  </div>
+                )}
+                <div className={notification.type === 'placed' ? 'flex items-center space-x-1 text-xs text-black' : 'flex items-center space-x-1 text-xs text-green-200'}>
+                  <MapPin className={notification.type === 'placed' ? 'w-3 h-3 text-black' : 'w-3 h-3'} />
                   <span className="font-medium">{notification.location}</span>
-                  <span>•</span>
-                  <span>{notification.timeAgo}m ago</span>
                 </div>
               </div>
             </div>
             <button
               onClick={() => removeNotification(notification.id)}
-              className="text-green-200 hover:text-white transition-colors flex-shrink-0 ml-2 opacity-70 hover:opacity-100"
+              className={notification.type === 'placed' ? 'text-black hover:text-orange-600 transition-colors flex-shrink-0 ml-2 opacity-70 hover:opacity-100' : 'text-green-200 hover:text-white transition-colors flex-shrink-0 ml-2 opacity-70 hover:opacity-100'}
             >
               <X className="w-4 h-4" />
             </button>

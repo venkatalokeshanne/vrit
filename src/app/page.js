@@ -1,6 +1,6 @@
 'use client';
 
-import { 
+import React, { 
   Phone,
   Star, 
   Users, 
@@ -32,6 +32,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import FAQ from './components/FAQ';
 import PopupBanner from './components/PopupBanner';
+import EnquiryModal from './components/EnquiryModal';
 import coursesData from '../data/courses-static.json';
 
 export default function Home() {
@@ -40,6 +41,17 @@ export default function Home() {
   const indexData = coursesData.find(course => course.slug === 'index');
   const popupImage = indexData?.mainImage || '';
   const bannerUrl = indexData?.bannerUrl || '';
+
+  // State for EnquiryModal
+  const [showEnquiry, setShowEnquiry] = React.useState(false);
+  React.useEffect(() => {
+    if (!popupImage) {
+      const timer = setTimeout(() => setShowEnquiry(true), 5000);
+      return () => clearTimeout(timer);
+    } else {
+      setShowEnquiry(false);
+    }
+  }, [popupImage]);
 
   const staticCourses = [
     { name: 'ServiceNow', duration: '40 Days', icon: Cloud, color: 'from-blue-500 to-cyan-500', image: '/logo.png', description: 'Master IT Service Management, workflow automation, and enterprise cloud solutions with hands-on ServiceNow platform experience.', link: '/servicenow-training-in-hyderabad' },
@@ -92,7 +104,7 @@ export default function Home() {
     { name: 'Accenture' },
     { name: 'Delloite' },
     { name: 'Cognizent' },
-    { name: 'Cap Gemini' }
+    { name: 'Capgemini' }
   ];
 
   const homepageFaqs = [
@@ -141,8 +153,12 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">
       
-      {/* Popup Banner */}
-      <PopupBanner imageUrl={popupImage} bannerUrl={bannerUrl} delay={5000} />
+      {/* Popup Banner or Enquiry Modal */}
+      {popupImage ? (
+        <PopupBanner imageUrl={popupImage} bannerUrl={bannerUrl} delay={5000} />
+      ) : (
+        <EnquiryModal isOpen={showEnquiry} onClose={() => setShowEnquiry(false)} />
+      )}
       
       {/* Clean Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none" style={{ contain: 'layout style' }}>
@@ -609,7 +625,7 @@ export default function Home() {
               Our Students Work At
             </h3>
             <p className="text-sm text-gray-200">
-              VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room tainings from Hyderabad. VR IT solutions is trained & placed thousands of people in majour MNC&apos;s like Infosys, Wipro, Accenture, Delloite, Cognizent, Cap Gemini and other companies as well.
+              VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room tainings from Hyderabad. VR IT solutions is trained & placed thousands of people in majour MNC&apos;s like Infosys, Wipro, Accenture, Delloite, Cognizent, Capgemini and other companies as well.
             </p>
           </div>
           

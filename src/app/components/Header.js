@@ -18,7 +18,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
+  <header className="bg-yellow-300 backdrop-blur-sm border-b border-yellow-400 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           
@@ -39,7 +39,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-white/80 hover:text-white transition-colors duration-200 font-medium"
+                className="text-black hover:text-yellow-800 transition-colors duration-200 font-semibold"
               >
                 {item.name}
               </Link>
@@ -50,33 +50,33 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+919032734343"
-              className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity flex items-center space-x-2"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors flex items-center space-x-2 border border-orange-600"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-4 h-4 text-white" />
               <span>Call Now</span>
             </a>
             
             <a
               href="mailto:info@vritsol.com"
-              className="bg-white/10 text-white px-4 py-2 rounded-lg font-medium border border-white/20 hover:bg-white/20 transition-colors flex items-center space-x-2"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold border border-orange-600 transition-colors flex items-center space-x-2"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4 text-white" />
               <span>Email Us</span>
             </a>
           </div>
 
           {/* Simple Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+            className="lg:hidden p-2 rounded-lg bg-yellow-200 hover:bg-yellow-300 transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-white" />
+              <X className="w-6 h-6 text-black" />
             ) : (
-              <Menu className="w-6 h-6 text-white" />
+              <Menu className="w-6 h-6 text-black" />
             )}
           </button>
         </div>
@@ -84,32 +84,32 @@ export default function Header() {
 
       {/* Simple Mobile Menu */}
       {isMenuOpen && (
-        <div id="mobile-menu" className="lg:hidden bg-slate-900/95 backdrop-blur-sm border-t border-white/10">
+        <div id="mobile-menu" className="lg:hidden bg-yellow-300 border-t border-yellow-400">
           <div className="px-4 py-4 space-y-2">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block px-4 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                className="block px-4 py-2 text-black hover:text-yellow-800 hover:bg-yellow-200 rounded-lg transition-colors font-semibold"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
             
-            <div className="pt-4 border-t border-white/10 space-y-2">
+            <div className="pt-4 border-t border-orange-600 space-y-2">
               <a
                 href="tel:+919032734343"
-                className="flex items-center justify-center space-x-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-lg font-medium"
+                className="flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold border border-orange-600"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 text-white" />
                 <span>Call Now</span>
               </a>
               <a
                 href="mailto:info@vritsol.com"
-                className="flex items-center justify-center space-x-2 bg-white/10 text-white px-4 py-2 rounded-lg font-medium border border-white/20"
+                className="flex items-center justify-center space-x-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold border border-orange-600"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 text-white" />
                 <span>Email Us</span>
               </a>
             </div>
