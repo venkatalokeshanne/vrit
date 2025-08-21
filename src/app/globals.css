@@ -256,3 +256,142 @@ iframe[src*="tawk.to"] + div,
 iframe[src*="tawk.to"] ~ div[style*="position"] {
   display: none !important;
 }
+
+/* Clean Course Card Animations - Minimal and Smooth */
+@keyframes subtle-shine {
+  0% { 
+    transform: translateX(-100%); 
+    opacity: 0;
+  }
+  50% { 
+    opacity: 0.6;
+  }
+  100% { 
+    transform: translateX(200%); 
+    opacity: 0;
+  }
+}
+
+@keyframes gentle-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+  }
+}
+
+/* Clean hover effects for course cards */
+.course-card-clean {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.course-card-clean:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(6, 182, 212, 0.1);
+}
+
+/* Improved backdrop blur support */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-clean {
+    backdrop-filter: blur(12px) saturate(1.2);
+    -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  }
+}
+
+/* Clean gradient animation - subtle */
+@keyframes clean-gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.gradient-clean {
+  background-size: 200% 200%;
+  animation: clean-gradient 6s ease infinite;
+}
+
+/* Performance optimized transforms */
+.transform-clean {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Clean glassmorphism effect */
+.glass-clean {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Clean text effects */
+.text-clean-shadow {
+  text-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Improved text shadow for better readability */
+.text-shadow-enhanced {
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Advanced hover transitions */
+.hover-lift {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Smooth color transitions */
+.color-transition {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}

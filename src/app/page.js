@@ -98,12 +98,12 @@ export default function Home() {
   ];
 
   const companies = [
-    { name: 'Infosys' },
-    { name: 'Wipro' },
-    { name: 'Accenture' },
-    { name: 'Delloite' },
-    { name: 'Cognizent' },
-    { name: 'Capgemini' }
+    { name: 'Infosys', image: '/image1.png' },
+    { name: 'Wipro', image: '/image2.png' },
+    { name: 'Accenture', image: '/image3.jpg' },
+    { name: 'Delloite', image: '/image4.png' },
+    { name: 'Cognizent', image: '/image5.webp' },
+    { name: 'Capgemini', image: '/image6.webp' }
   ];
 
   const homepageFaqs = [
@@ -628,17 +628,20 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {companies.map((company, _index) => (
               <div
                 key={company.name}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 flex items-center justify-center"
+                className="group flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <div className="text-center">
-                  <div className="w-16 h-8 bg-gradient-to-r from-white/20 to-white/10 rounded mb-2 flex items-center justify-center">
-                    <span className="text-xs font-bold text-gray-200">{company.name.substring(0, 3)}</span>
-                  </div>
-                  <p className="text-xs text-gray-300">{company.name}</p>
+                <div className="relative w-32 h-20">
+                  <Image
+                    src={company.image}
+                    alt={`${company.name} logo`}
+                    fill
+                    className="object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-300"
+                    sizes="(max-width: 768px) 128px, 128px"
+                  />
                 </div>
               </div>
             ))}
@@ -667,85 +670,309 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Innovative Course Cards Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {courses.map((course, _index) => (
               <div
                 key={course.name}
-                className="group relative overflow-hidden bg-gradient-to-br from-white/[0.08] via-white/[0.05] to-transparent backdrop-blur-xl rounded-3xl border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2"
+                className="group relative overflow-hidden bg-gradient-to-br from-white/[0.12] via-white/[0.08] to-transparent backdrop-blur-xl rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 cursor-pointer"
               >
-                {/* Glowing border effect */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-500/20 via-cyan-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                {/* Subtle glow effect on hover */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500/10 via-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
                 
-                {/* Card content */}
-                <div className="relative z-10">
-                  {/* Course Image Header */}
-                  <div className="relative h-48 overflow-hidden rounded-t-3xl">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${course.color} opacity-90`}></div>
-                    <Image
-                      src={course.image}
-                      alt={`${course.name} Training Course`}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    
-                    {/* Duration pill overlay */}
-                    <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-md border border-white/20 rounded-full px-3 py-1">
-                      <span className="text-xs font-medium text-white">{course.duration}</span>
-                    </div>
-                    
-                    {/* Dynamic course indicator */}
-                    {course.isDynamic && (
-                      <div className="absolute top-4 left-4 bg-emerald-500/90 backdrop-blur-md border border-emerald-300/30 rounded-full px-3 py-1">
-                        <span className="text-xs font-bold text-white">💎 DYNAMIC</span>
+                {/* Innovative Visual Header - Clean Design */}
+                <div className="relative h-48 overflow-hidden rounded-t-2xl">
+                  {/* Clean gradient background */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${course.color}`}></div>
+                  
+                  {/* Technology-specific visual patterns - Subtle and Clean */}
+                  <div className="absolute inset-0 opacity-10">
+                    <svg className="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      {/* SAP - Clean Grid Pattern */}
+                      {course.name.includes('SAP') && (
+                        <g>
+                          {[...Array(4)].map((_, i) => (
+                            <g key={i}>
+                              <rect x={40 + i * 30} y={40 + i * 25} width="25" height="25" fill="none" stroke="white" strokeWidth="1" rx="3" opacity={0.6}/>
+                              <circle cx={52.5 + i * 30} cy={52.5 + i * 25} r="2" fill="white" opacity={0.8}/>
+                            </g>
+                          ))}
+                        </g>
+                      )}
+                      
+                      {/* Pega - Clean Workflow Pattern */}
+                      {course.name.includes('Pega') && (
+                        <g>
+                          {[...Array(4)].map((_, i) => (
+                            <g key={i}>
+                              <circle cx={50 + i * 35} cy={70} r="8" fill="none" stroke="white" strokeWidth="1" opacity={0.5}/>
+                              {i < 3 && <line x1={58 + i * 35} y1={70} x2={77 + i * 35} y2={70} stroke="white" strokeWidth="1" opacity={0.4}/>}
+                              <circle cx={50 + i * 35} cy={70} r="3" fill="white" opacity={0.6}/>
+                            </g>
+                          ))}
+                        </g>
+                      )}
+                      
+                      {/* Mulesoft - API Connection Pattern */}
+                      {course.name.includes('Mulesoft') && (
+                        <g>
+                          {[...Array(3)].map((_, i) => (
+                            <g key={i}>
+                              <rect x={50 + i * 40} y={60} width="20" height="8" fill="white" opacity={0.4} rx="4"/>
+                              <circle cx={60 + i * 40} cy={64} r="2" fill="white" opacity={0.7}/>
+                              {i < 2 && <line x1={70 + i * 40} y1={64} x2={90 + i * 40} y2={64} stroke="white" strokeWidth="2" opacity={0.5}/>}
+                            </g>
+                          ))}
+                        </g>
+                      )}
+                      
+                      {/* EDI - Data Exchange Pattern */}
+                      {course.name.includes('EDI') && (
+                        <g>
+                          <rect x="40" y="60" width="30" height="15" fill="none" stroke="white" strokeWidth="1" opacity={0.5} rx="2"/>
+                          <line x1="70" y1="67" x2="90" y2="67" stroke="white" strokeWidth="2" opacity={0.6}/>
+                          <polygon points="88,64 94,67 88,70" fill="white" opacity={0.5}/>
+                          <rect x="100" y="60" width="30" height="15" fill="none" stroke="white" strokeWidth="1" opacity={0.5} rx="2"/>
+                          <text x="55" y="72" fill="white" fontSize="6" opacity={0.4}>EDI</text>
+                        </g>
+                      )}
+                      
+                      {/* Workday - HR/Finance Pattern */}
+                      {course.name.includes('Workday') && (
+                        <g>
+                          {[...Array(6)].map((_, i) => (
+                            <g key={i}>
+                              <rect x={45 + (i % 3) * 30} y={50 + Math.floor(i / 3) * 25} width="20" height="3" fill="white" opacity={0.4} rx="1"/>
+                            </g>
+                          ))}
+                          <circle cx="80" cy="80" r="15" fill="none" stroke="white" strokeWidth="1" opacity={0.3}/>
+                        </g>
+                      )}
+                      
+                      {/* Informatica - Data Integration Pattern */}
+                      {course.name.includes('Informatica') && (
+                        <g>
+                          <circle cx="60" cy="70" r="8" fill="none" stroke="white" strokeWidth="1" opacity={0.5}/>
+                          <circle cx="120" cy="70" r="8" fill="none" stroke="white" strokeWidth="1" opacity={0.5}/>
+                          <line x1="68" y1="70" x2="112" y2="70" stroke="white" strokeWidth="2" opacity={0.6}/>
+                          <circle cx="90" cy="70" r="4" fill="white" opacity={0.7}/>
+                          {[...Array(3)].map((_, i) => (
+                            <line key={i} x1="87" y1={65 + i * 3} x2="93" y2={65 + i * 3} stroke="white" strokeWidth="1" opacity={0.4}/>
+                          ))}
+                        </g>
+                      )}
+                      
+                      {/* Snowflake - Data Warehouse Pattern */}
+                      {course.name.includes('Snowflake') && (
+                        <g>
+                          <polygon points="90,50 100,65 90,80 80,65" fill="none" stroke="white" strokeWidth="1" opacity={0.5}/>
+                          {[...Array(6)].map((_, i) => (
+                            <line key={i} 
+                              x1="90" y1="65" 
+                              x2={90 + 15 * Math.cos(i * Math.PI / 3)} 
+                              y2={65 + 15 * Math.sin(i * Math.PI / 3)} 
+                              stroke="white" strokeWidth="1" opacity={0.4}/>
+                          ))}
+                          <circle cx="90" cy="65" r="3" fill="white" opacity={0.6}/>
+                        </g>
+                      )}
+                      
+                      {/* AWS/Cloud - Clean Cloud Shapes */}
+                      {(course.name.includes('AWS') || course.name.includes('Cloud')) && (
+                        <g>
+                          {[...Array(3)].map((_, i) => (
+                            <ellipse key={i} cx={60 + i * 40} cy={80 + i * 20} rx="20" ry="12" fill="white" opacity={0.3}/>
+                          ))}
+                        </g>
+                      )}
+                      
+                      {/* Python/Development - Clean Code Blocks */}
+                      {(course.name.includes('Python') || course.name.includes('Full Stack')) && (
+                        <g>
+                          {[...Array(6)].map((_, i) => (
+                            <rect key={i} x={30 + (i % 3) * 40} y={50 + Math.floor(i / 3) * 30} width="25" height="4" fill="white" opacity={0.4} rx="2"/>
+                          ))}
+                        </g>
+                      )}
+                      
+                      {/* Data Science - Clean Data Points */}
+                      {course.name.includes('Data') && (
+                        <g>
+                          {[...Array(8)].map((_, i) => (
+                            <circle key={i} cx={50 + (i % 4) * 25} cy={60 + Math.floor(i / 4) * 25} r="3" fill="white" opacity={0.5}/>
+                          ))}
+                        </g>
+                      )}
+                      
+                      {/* Default - Clean Geometric Pattern */}
+                      {!course.name.includes('SAP') && !course.name.includes('AWS') && !course.name.includes('Cloud') && 
+                       !course.name.includes('Python') && !course.name.includes('Full Stack') && !course.name.includes('Data') && (
+                        <g>
+                          {[...Array(4)].map((_, i) => (
+                            <polygon key={i} points={`${80 + i * 15},${60} ${95 + i * 15},${75} ${80 + i * 15},${90} ${65 + i * 15},${75}`} fill="white" opacity={0.3}/>
+                          ))}
+                        </g>
+                      )}
+                    </svg>
+                  </div>
+                  
+                  {/* Clean Course Acronym Display */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className={`font-black bg-gradient-to-b from-white via-white/90 to-white/70 bg-clip-text text-transparent mb-2 select-none drop-shadow-lg ${
+                        course.name.includes('PYTHON') || course.name.includes('HADOOP') || course.name.includes('DEVOPS') || 
+                        course.name.includes('BASIS') || course.name.includes('PY+AWS') ? 'text-4xl' : 
+                        course.name.includes('FICO') || course.name.includes('HANA') || course.name.includes('PEGA') || 
+                        course.name.includes('MULE') || course.name.includes('SNOW') || course.name.includes('FULL') || course.name.includes('INFA') ? 'text-5xl' : 'text-6xl'
+                      }`}>
+                        {course.name.includes('ServiceNow') ? 'SN' :
+                         course.name.includes('Salesforce') ? 'SF' :
+                         course.name.includes('SAP FICO') ? 'FICO' :
+                         course.name.includes('SAP SD') ? 'SD' :
+                         course.name.includes('SAP MM') ? 'MM' :
+                         course.name.includes('SAP Basis') ? 'BASIS' :
+                         course.name.includes('SAP EWM') ? 'EWM' :
+                         course.name.includes('SAP HANA') ? 'HANA' :
+                         course.name.includes('S/4 HANA') ? 'S/4H' :
+                         course.name.includes('SAP Leonardo') ? 'LEO' :
+                         course.name.includes('SAP Security') ? 'SEC' :
+                         course.name.includes('SAP Logistics') ? 'LOG' :
+                         course.name.includes('SAP') ? 'SAP' :
+                         course.name.includes('Pega') ? 'PEGA' :
+                         course.name.includes('Azure DevOps') || course.name.includes('AWS Cloud') ? 'CLOUD' :
+                         course.name.includes('AWS') ? 'AWS' :
+                         course.name.includes('Mulesoft') ? 'MULE' :
+                         course.name.includes('SAS Clinical') ? 'SAS' :
+                         course.name.includes('Data Science') ? 'DS' :
+                         course.name.includes('Python With AWS') ? 'PY+AWS' :
+                         course.name.includes('Python') ? 'PYTHON' :
+                         course.name.includes('Workday') ? 'WD' :
+                         course.name.includes('Machine Learning') ? 'ML' :
+                         course.name.includes('AWS With DevOps') ? 'DEVOPS' :
+                         course.name.includes('DevOps') ? 'DEVOPS' :
+                         course.name.includes('Informatica MDM') ? 'INFA' :
+                         course.name.includes('Full Stack') ? 'FULL' :
+                         course.name.includes('EDI Training') ? 'EDI' :
+                         course.name.includes('Hadoop') ? 'HADOOP' :
+                         course.name.includes('Snowflake') ? 'SNOW' :
+                         course.name.includes('Google Cloud') ? 'GCP' :
+                         course.name.split(' ').map(word => word[0]).join('').substring(0, 3)}
                       </div>
-                    )}
-                    
-                    {/* Floating icon overlay */}
-                    <div className="absolute bottom-4 left-4">
-                      <div className={`w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/30 group-hover:scale-110 transition-transform duration-300`}>
-                        <course.icon className="w-6 h-6 text-white" />
+                      <div className="text-xs text-white/80 font-medium tracking-wide uppercase bg-black/20 backdrop-blur-sm rounded-full px-3 py-1">
+                        {course.name.length > 18 ? course.name.substring(0, 18) + '...' : course.name}
                       </div>
                     </div>
                   </div>
                   
-                  {/* Card Body */}
-                  <div className="p-6">
-                    {/* Course title with gradient on hover */}
-                    <h3 className="text-lg font-bold text-white mb-3 group-hover:bg-gradient-to-r group-hover:from-orange-400 group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                      {course.name}
-                    </h3>
-                    
-                    {/* Course Description */}
-                    <p className="text-gray-200 text-sm mb-6 leading-relaxed group-hover:text-white transition-colors">
-                      {course.description}
-                    </p>
-                    
-                    {/* CTA Button with colorful gradient effect */}
-                    {course.link ? (
-                      <Link
-                        href={course.link}
-                        className={`group/btn relative w-full bg-gradient-to-r ${course.color} text-white py-3 px-4 rounded-2xl font-medium transition-all duration-300 flex items-center justify-center space-x-2 overflow-hidden shadow-lg hover:shadow-xl hover:scale-105`}
-                      >
-                        <div className="absolute inset-0 bg-white/10 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
-                        <span className="relative text-sm font-semibold">Explore Course</span>
-                        <ArrowRight className="relative w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                      </Link>
-                    ) : (
-                      <button className={`group/btn relative w-full bg-gradient-to-r ${course.color} text-white py-3 px-4 rounded-2xl font-medium transition-all duration-300 flex items-center justify-center space-x-2 overflow-hidden shadow-lg hover:shadow-xl hover:scale-105`}>
-                        <div className="absolute inset-0 bg-white/10 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300"></div>
-                        <span className="relative text-sm font-semibold">Explore Course</span>
-                        <ArrowRight className="relative w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                      </button>
-                    )}
+                  {/* Clean floating icon */}
+                  <div className="absolute bottom-4 left-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/30 shadow-lg">
+                      <course.icon className="w-7 h-7 text-white drop-shadow-sm" />
+                    </div>
                   </div>
+                  
+                  {/* Clean duration badge */}
+                  <div className="absolute top-4 right-4">
+                    <div className="bg-black/40 backdrop-blur-md border border-white/20 rounded-lg px-3 py-1.5">
+                      <div className="flex items-center space-x-1.5">
+                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                        <span className="text-xs font-semibold text-white">{course.duration}</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Clean category badge */}
+                  <div className="absolute top-4 left-4">
+                    <div className="bg-white/15 backdrop-blur-md border border-white/25 rounded-lg px-3 py-1.5">
+                      <span className="text-xs font-semibold text-white">
+                        {course.name.includes('SAP') ? '🔷 SAP' :
+                         course.name.includes('AWS') || course.name.includes('Cloud') ? '☁️ CLOUD' :
+                         course.name.includes('Python') || course.name.includes('Full Stack') ? '💻 DEV' :
+                         course.name.includes('Data') || course.name.includes('Machine Learning') ? '🧠 DATA' :
+                         course.name.includes('ServiceNow') || course.name.includes('Salesforce') ? '⚡ PLATFORM' :
+                         course.name.includes('DevOps') ? '🔄 DEVOPS' :
+                         '🎯 TECH'}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  {/* Subtle overlay for better text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                 </div>
                 
-                {/* Decorative gradient overlay */}
-                <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${course.color} opacity-60 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                {/* Enhanced Card Body */}
+                <div className="relative p-5 z-10">
+                  {/* Skill level and trending indicator */}
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-xs text-gray-400 font-medium">Level:</span>
+                      <div className="flex items-center space-x-1">
+                        {[...Array(3)].map((_, i) => (
+                          <div key={i} className={`w-1.5 h-1.5 rounded-full ${
+                            course.name.includes('Advanced') || course.name.includes('SAP') || course.name.includes('Machine Learning') 
+                              ? 'bg-red-400' : 
+                            course.name.includes('Python') || course.name.includes('Data Science') 
+                              ? (i < 2 ? 'bg-yellow-400' : 'bg-gray-500') :
+                              (i < 1 ? 'bg-green-400' : 'bg-gray-500')
+                          } transition-colors duration-300`}></div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    {/* Trending badge for popular courses */}
+                    {(['ServiceNow', 'Salesforce', 'Data Science', 'Python', 'AWS'].some(tech => course.name.includes(tech))) && (
+                      <div className="flex items-center space-x-1 bg-orange-500/20 border border-orange-500/30 rounded-md px-2 py-0.5">
+                        <TrendingUp className="w-3 h-3 text-orange-400" />
+                        <span className="text-xs text-orange-300 font-semibold">HOT</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Course title - Clean and readable */}
+                  <h3 className="text-lg font-bold text-white mb-2 leading-tight group-hover:text-cyan-300 transition-colors duration-300">
+                    {course.name}
+                  </h3>
+                  
+                  {/* Course description - Better typography */}
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-3 group-hover:text-gray-200 transition-colors duration-300">
+                    {course.description}
+                  </p>
+                  
+                  {/* Course highlights - Clean icons */}
+                  <div className="flex items-center justify-between mb-4 text-xs text-gray-400">
+                    <div className="flex items-center space-x-1">
+                      <GraduationCap className="w-3 h-3" />
+                      <span>Certificate</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Users className="w-3 h-3" />
+                      <span>Job Support</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Play className="w-3 h-3" />
+                      <span>Live Projects</span>
+                    </div>
+                  </div>
+                  
+                  {/* Clean CTA Button */}
+                  {course.link ? (
+                    <Link
+                      href={course.link}
+                      className={`w-full bg-gradient-to-r ${course.color} text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg hover:scale-[1.02] group/btn`}
+                    >
+                      <span className="text-sm">Explore Course</span>
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </Link>
+                  ) : (
+                    <button className={`w-full bg-gradient-to-r ${course.color} text-white py-3 px-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-md hover:shadow-lg hover:scale-[1.02] group/btn`}>
+                      <span className="text-sm">Explore Course</span>
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </button>
+                  )}
+                </div>
                 
-                {/* Floating orbs for extra visual flair */}
-                <div className="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"></div>
-                <div className="absolute bottom-4 right-4 w-1 h-1 bg-white/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"></div>
+                {/* Clean top accent line */}
+                <div className={`absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r ${course.color} opacity-60 group-hover:opacity-100 transition-opacity duration-300`}></div>
               </div>
             ))}
           </div>

@@ -27,9 +27,12 @@ export default function Header() {
             <Image 
               src="/logo.png" 
               alt="VR IT Solutions" 
-              width={40}
+              width={120}
               height={40}
               className="h-10 w-auto object-contain"
+              priority={true}
+              quality={100}
+              sizes="120px"
             />
           </Link>
 
