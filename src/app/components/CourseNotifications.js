@@ -129,8 +129,6 @@ const CourseNotifications = ({ courseName }) => {
                         <a 
                           href={`/${courseSlug}`}
                           className="underline hover:text-white transition-colors cursor-pointer text-yellow-200 font-bold"
-                          target="_blank"
-                          rel="noopener noreferrer"
                         >
                           {cleanTitle} →
                         </a>
