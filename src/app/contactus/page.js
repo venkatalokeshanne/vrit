@@ -102,17 +102,33 @@ export default function ContactUs() {
                   </label>
                   <div className="relative">
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <select className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent">
-                      <option value="">Select a course</option>
-                      <option value="python">Python Training</option>
-                      <option value="data-science">Data Science</option>
-                      <option value="aws">AWS Training</option>
-                      <option value="devops">DevOps Training</option>
-                      <option value="salesforce">Salesforce Training</option>
-                      <option value="servicenow">ServiceNow Training</option>
-                      <option value="sap">SAP Training</option>
-                      <option value="other">Other</option>
+                    <select className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent appearance-none cursor-pointer">
+                      <option value="" className="bg-gray-800 text-white">Select a course</option>
+                      <option value="python" className="bg-gray-800 text-white">Python Training</option>
+                      <option value="data-science" className="bg-gray-800 text-white">Data Science Training</option>
+                      <option value="machine-learning" className="bg-gray-800 text-white">Machine Learning Training</option>
+                      <option value="aws" className="bg-gray-800 text-white">AWS Training</option>
+                      <option value="azure" className="bg-gray-800 text-white">Azure DevOps Training</option>
+                      <option value="devops" className="bg-gray-800 text-white">DevOps Training</option>
+                      <option value="salesforce" className="bg-gray-800 text-white">Salesforce Training</option>
+                      <option value="servicenow" className="bg-gray-800 text-white">ServiceNow Training</option>
+                      <option value="sap-basis" className="bg-gray-800 text-white">SAP BASIS Training</option>
+                      <option value="sap-central-finance" className="bg-gray-800 text-white">SAP Central Finance</option>
+                      <option value="sap-ewm" className="bg-gray-800 text-white">SAP EWM Training</option>
+                      <option value="informatica-mdm" className="bg-gray-800 text-white">Informatica MDM Training</option>
+                      <option value="edi-training" className="bg-gray-800 text-white">EDI Training</option>
+                      <option value="pega-training" className="bg-gray-800 text-white">Pega Training</option>
+                      <option value="mulesoft" className="bg-gray-800 text-white">MuleSoft Training</option>
+                      <option value="google-cloud" className="bg-gray-800 text-white">Google Cloud Training</option>
+                      <option value="hadoop" className="bg-gray-800 text-white">Hadoop Training</option>
+                      <option value="full-stack" className="bg-gray-800 text-white">Full Stack Development</option>
+                      <option value="other" className="bg-gray-800 text-white">Other</option>
                     </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -178,6 +194,15 @@ export default function ContactUs() {
                     <p>Nilagiri Block, 5th Floor,</p>
                     <p>Ameerpet, Hyderabad</p>
                     <p>Telangana - 500016</p>
+                    <a 
+                      href="https://www.google.com/maps/place/VR+IT+SOLUTIONS-Clinical+Sas+Training+%7C+Salesforce+training+%7C+Servicenow+Training+%7C+EDI+Training/@17.4392062,78.4343207,15z/data=!4m10!1m2!2m1!1s5th+floor+506,+Nilgiri+block,+ADITYA+ENCLAVE,+a%2Fa,+Satyam+Theatre+Rd,+Kumar+Basti,+Ameerpet,+Hyderabad,+Telangana+500073!3m6!1s0x3bcb916f8ec8811f:0x29a2152dbc636b6f!8m2!3d17.4362741!4d78.444687!15sCng1dGggZmxvb3IgNTA2LCBOaWxnaXJpIGJsb2NrLCBBRElUWUEgRU5DTEFWRSwgYS9hLCBTYXR5YW0gVGhlYXRyZSBSZCwgS3VtYXIgQmFzdGksIEFtZWVycGV0LCBIeWRlcmFiYWQsIFRlbGFuZ2FuYSA1MDAwNzNaciJwNXRoIGZsb29yIDUwNiBuaWxnaXJpIGJsb2NrIGFkaXR5YSBlbmNsYXZlIGEgYSBzYXR5YW0gdGhlYXRyZSByZCBrdW1hciBiYXN0aSBhbWVlcnBldCBoeWRlcmFiYWQgdGVsYW5nYW5hIDUwMDA3M5IBG3NvZnR3YXJlX3RyYWluaW5nX2luc3RpdHV0ZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VRMmR6bEhjakJSUlJBQqoBzQEQASoyIi41dGggZmxvb3IgNTA2IG5pbGdpcmkgYmxvY2sgYWRpdHlhIGVuY2xhdmUgYSBhKAAyHxABIhvc3XWc8TnGNGOHbQavKfUn-IwhPDWzJxZJ0m0ydBACInA1dGggZmxvb3IgNTA2IG5pbGdpcmkgYmxvY2sgYWRpdHlhIGVuY2xhdmUgYSBhIHNhdHlhbSB0aGVhdHJlIHJkIGt1bWFyIGJhc3RpIGFtZWVycGV0IGh5ZGVyYWJhZCB0ZWxhbmdhbmEgNTAwMDcz4AEA-gEECAAQMw!16s%2Fg%2F11j00lfb5d?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center mt-2 text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                    >
+                      <MapPin className="w-4 h-4 mr-1" />
+                      View on Google Maps
+                    </a>
                   </div>
                 </div>
                 
@@ -221,7 +246,7 @@ export default function ContactUs() {
               </h3>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-2 border border-white/10">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6947637434844!2d78.44446931489563!3d17.437399988019833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90a1c7d3c5c5%3A0x6f8f9c5d5c5d5c5d!2sAmeerpet%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1643723400000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.591425324094!2d78.44186871489563!3d17.436274188018833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb916f8ec8811f%3A0x29a2152dbc636b6f!2sVR%20IT%20SOLUTIONS-Clinical%20Sas%20Training%20%7C%20Salesforce%20training%20%7C%20Servicenow%20Training%20%7C%20EDI%20Training!5e0!3m2!1sen!2sin!4v1643723400000!5m2!1sen!2sin"
                   width="100%"
                   height="250"
                   style={{ border: 0 }}

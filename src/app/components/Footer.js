@@ -191,7 +191,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center justify-center space-x-4 mb-4">
               <Link
-                href="https://maps.google.com/?q=506/A,+Aditya+Enclave,+Nilagiri+Block,+Ameerpet,+Hyderabad,+Telangana+500016"
+                href="https://maps.app.goo.gl/fARm19iVifZOTVzxo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors text-white hover:text-white text-sm border border-blue-500"

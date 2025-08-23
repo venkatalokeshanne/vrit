@@ -18,6 +18,7 @@ const CourseFormPopupWrapper = () => {
       '/refund-and-course-rescheduling-policy',
       '/terms-and-conditions',
       '/privacy-policy',
+      '/add-testimonial'
     ];
     // Exclude /blog/*
     const isBlog = pathname.startsWith('/blog/');

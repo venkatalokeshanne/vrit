@@ -10,17 +10,19 @@ const CourseNotificationsWrapper = () => {
   // Extract course slug from pathname
   const courseSlug = pathname.replace('/', '');
   
-  // Check if this is a course page
-  if (!isCoursePageClient(courseSlug)) {
-    return null;
+  // Show on homepage and course pages
+  const isHomePage = pathname === '/';
+  const isCourse = isCoursePageClient(courseSlug);
+  
+  if (!isHomePage && !isCourse) {
+    return null; // Don't show on other pages like /about, /contact, etc.
   }
   
-  // Get course data and extract clean course name
-  const courseData = getCourseBySlugClient(courseSlug);
-  const courseName = getCleanCourseNameClient(courseData);
-  
-  if (!courseName) {
-    return null;
+  // Get course name if on course page, otherwise use default
+  let courseName = "VR IT Solutions";
+  if (isCourse) {
+    const courseData = getCourseBySlugClient(courseSlug);
+    courseName = getCleanCourseNameClient(courseData) || courseName;
   }
 
   return <CourseNotifications courseName={courseName} />;

@@ -230,79 +230,146 @@ export default function Home() {
                   <animate attributeName="opacity" values="0;1;0;0;0;0;0;1;0;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.1;0.2;0.4;0.5;0.6;0.6;0.7;0.8;0.9;1;1" />
                 </g>
 
-                {/* Stage 2 Message */}
+                {/* Stage 2 Message - moved to top-right position */}
                 <g id="stage2Message" opacity="0">
-                  <rect x="390" y="85" width="140" height="30" rx="8" fill="#8B5CF6" fillOpacity="0.9" stroke="#A78BFA" strokeWidth="1"/>
-                  <text x="460" y="98" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🧠 Learning Phase</text>
-                  <text x="460" y="108" fontSize="8" fill="#DDD6FE" textAnchor="middle">Master fundamentals & theory</text>
+                  <rect x="1030" y="105" width="140" height="30" rx="8" fill="#8B5CF6" fillOpacity="0.9" stroke="#A78BFA" strokeWidth="1"/>
+                  <text x="1100" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🧠 Learning Phase</text>
+                  <text x="1100" y="128" fontSize="8" fill="#DDD6FE" textAnchor="middle">Master fundamentals & theory</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.083;0.083;0.3;0.4;0.5;0.583;0.583;0.8;0.9;1;1" />
                 </g>
 
-                {/* Stage 3 Message */}
+                {/* Stage 3 Message - moved to left side of right-center position */}
                 <g id="stage3Message" opacity="0">
-                  <rect x="1030" y="105" width="140" height="30" rx="8" fill="#10B981" fillOpacity="0.9" stroke="#34D399" strokeWidth="1"/>
-                  <text x="1100" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">⚡ Practice Time!</text>
-                  <text x="1100" y="128" fontSize="8" fill="#D1FAE5" textAnchor="middle">Hands-on labs & exercises</text>
+                  <rect x="950" y="260" width="140" height="30" rx="8" fill="#10B981" fillOpacity="0.9" stroke="#34D399" strokeWidth="1"/>
+                  <text x="1020" y="273" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">⚡ Practice Time!</text>
+                  <text x="1020" y="283" fontSize="8" fill="#D1FAE5" textAnchor="middle">Hands-on labs & exercises</text>
                   <animate attributeName="opacity" values="0;0;0;1;0;0;0;0;0;1;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.15;0.167;0.167;0.4;0.5;0.65;0.667;0.667;0.9;1;1" />
                 </g>
 
-                {/* Stage 4 Message */}
+                {/* Stage 4 Message - moved to bottom-right position */}
                 <g id="stage4Message" opacity="0">
-                  <rect x="950" y="250" width="130" height="30" rx="8" fill="#F59E0B" fillOpacity="0.9" stroke="#FBBF24" strokeWidth="1"/>
-                  <text x="1015" y="263" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🛠️ Build Projects</text>
-                  <text x="1015" y="273" fontSize="8" fill="#FEF3C7" textAnchor="middle">Real-world applications</text>
+                  <rect x="920" y="505" width="130" height="30" rx="8" fill="#F59E0B" fillOpacity="0.9" stroke="#FBBF24" strokeWidth="1"/>
+                  <text x="985" y="518" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🛠️ Build Projects</text>
+                  <text x="985" y="528" fontSize="8" fill="#FEF3C7" textAnchor="middle">Real-world applications</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.217;0.217;0.3;0.5;0.717;0.717;0.8;0.8;0.9;1;1" />
                 </g>
 
-                {/* Stage 5 Message */}
+                {/* Stage 5 Message - moved to bottom-left position */}
                 <g id="stage5Message" opacity="0">
-                  <rect x="920" y="505" width="140" height="30" rx="8" fill="#EF4444" fillOpacity="0.9" stroke="#F87171" strokeWidth="1"/>
-                  <text x="990" y="518" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🏆 Get Certified!</text>
-                  <text x="990" y="528" fontSize="8" fill="#FEE2E2" textAnchor="middle">Earn industry recognition</text>
-                  <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.267;0.267;0.35;0.5;0.767;0.767;0.85;0.9;1;1;1" />
+                  <rect x="70" y="485" width="140" height="30" rx="8" fill="#EF4444" fillOpacity="0.9" stroke="#F87171" strokeWidth="1"/>
+                  <text x="140" y="498" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🏆 Get Certified!</text>
+                  <text x="140" y="508" fontSize="8" fill="#FEE2E2" textAnchor="middle">Earn industry recognition</text>
+                  <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.333;0.333;0.417;0.5;0.833;0.833;0.917;0.92;1;1;1" />
                 </g>
 
-                {/* Stage 6 Message */}
+                {/* Stage 6 Message - New Networking Stage */}
                 <g id="stage6Message" opacity="0">
-                  <rect x="70" y="485" width="130" height="30" rx="8" fill="#6366F1" fillOpacity="0.9" stroke="#818CF8" strokeWidth="1"/>
-                  <text x="135" y="498" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🚀 Career Launch</text>
-                  <text x="135" y="508" fontSize="8" fill="#E0E7FF" textAnchor="middle">Land your dream job!</text>
+                  <rect x="50" y="250" width="130" height="30" rx="8" fill="#06B6D4" fillOpacity="0.9" stroke="#67E8F9" strokeWidth="1"/>
+                  <text x="115" y="263" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🌐 Network</text>
+                  <text x="115" y="273" fontSize="8" fill="#E0F7FA" textAnchor="middle">Build connections</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.45;0.45;0.48;0.5;0.95;0.95;0.98;1;1;1;1" />
                 </g>
               </g>
 
-              {/* Human figure with stop-and-go animation */}
+              {/* Human figure with stop-and-go animation - More Realistic */}
               <g id="walkingStudent">
-                {/* Body */}
-                <circle cx="0" cy="-8" r="3" fill="#3B82F6" opacity="0.9">
+                {/* Body - Torso */}
+                <ellipse cx="0" cy="-8" rx="2.5" ry="4" fill="#3B82F6" opacity="0.9">
                   <animate attributeName="fill" values="#3B82F6;#3B82F6;#8B5CF6;#8B5CF6;#10B981;#10B981;#F59E0B;#F59E0B;#EF4444;#EF4444;#6366F1;#6366F1" dur="60s" repeatCount="indefinite" keyTimes="0;0.167;0.25;0.417;0.5;0.667;0.75;0.833;0.917;1;1;1" />
-                </circle>
+                </ellipse>
                 
-                {/* Head */}
-                <circle cx="0" cy="-15" r="2.5" fill="#FDE68A" opacity="0.9" />
+                {/* Head - More detailed */}
+                <circle cx="0" cy="-15" r="3" fill="#FDE68A" opacity="0.9" stroke="#F59E0B" strokeWidth="0.3"/>
                 
-                {/* Walking legs animation - stops during pauses */}
+                {/* Face features */}
+                <g id="face">
+                  {/* Eyes */}
+                  <circle cx="-1" cy="-15.5" r="0.4" fill="#1F2937"/>
+                  <circle cx="1" cy="-15.5" r="0.4" fill="#1F2937"/>
+                  <circle cx="-0.8" cy="-15.7" r="0.2" fill="white"/>
+                  <circle cx="1.2" cy="-15.7" r="0.2" fill="white"/>
+                  
+                  {/* Nose */}
+                  <ellipse cx="0" cy="-14.8" rx="0.3" ry="0.5" fill="#F59E0B" opacity="0.6"/>
+                  
+                  {/* Mouth - animated expression during stops */}
+                  <path d="M -0.8,-14 Q 0,-13.5 0.8,-14" stroke="#1F2937" strokeWidth="0.3" fill="none">
+                    <animate attributeName="d" values="M -0.8,-14 Q 0,-13.5 0.8,-14;M -0.8,-14 Q 0,-13.2 0.8,-14;M -0.8,-14 Q 0,-13.5 0.8,-14" dur="3s" repeatCount="indefinite" />
+                  </path>
+                </g>
+                
+                {/* Hair */}
+                <ellipse cx="0" cy="-17" rx="3.2" ry="1.5" fill="#8B4513" opacity="0.8"/>
+                
+                {/* Walking legs animation - more realistic */}
                 <g id="legs">
-                  <line x1="0" y1="-5" x2="-2" y2="0" stroke="#3B82F6" strokeWidth="1.5" opacity="0.8">
+                  {/* Left leg - thigh */}
+                  <line x1="0" y1="-4" x2="-1.5" y2="1" stroke="#2563EB" strokeWidth="2" opacity="0.9">
+                    <animate attributeName="x2" values="-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                    <animate attributeName="y2" values="1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </line>
+                  
+                  {/* Left leg - shin */}
+                  <line x1="-1.5" y1="1" x2="-2" y2="4" stroke="#2563EB" strokeWidth="1.8" opacity="0.9">
+                    <animate attributeName="x1" values="-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5;-1.5;1.5;-1.5;-1.5" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                    <animate attributeName="y1" values="1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
                     <animate attributeName="x2" values="-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
                   </line>
-                  <line x1="0" y1="-5" x2="2" y2="0" stroke="#3B82F6" strokeWidth="1.5" opacity="0.8">
+                  
+                  {/* Right leg - thigh */}
+                  <line x1="0" y1="-4" x2="1.5" y2="1" stroke="#2563EB" strokeWidth="2" opacity="0.9">
+                    <animate attributeName="x2" values="1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                    <animate attributeName="y2" values="1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </line>
+                  
+                  {/* Right leg - shin */}
+                  <line x1="1.5" y1="1" x2="2" y2="4" stroke="#2563EB" strokeWidth="1.8" opacity="0.9">
+                    <animate attributeName="x1" values="1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5;1.5;-1.5;1.5;1.5" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                    <animate attributeName="y1" values="1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1;1;1.5;1;1" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
                     <animate attributeName="x2" values="2;-2;2;2;2;-2;2;2;2;-2;2;2;2;-2;2;2;2;-2;2;2;2;-2;2;2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
                   </line>
+                  
+                  {/* Feet */}
+                  <ellipse cx="-2" cy="4.5" rx="1" ry="0.5" fill="#1F2937">
+                    <animate attributeName="cx" values="-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </ellipse>
+                  <ellipse cx="2" cy="4.5" rx="1" ry="0.5" fill="#1F2937">
+                    <animate attributeName="cx" values="2;-2;2;2;2;-2;2;2;2;-2;2;2;2;-2;2;2;2;-2;2;2;2;-2;2;2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </ellipse>
                 </g>
                 
-                {/* Arms swinging - stops during pauses */}
+                {/* Arms swinging - more realistic with shoulders */}
                 <g id="arms">
-                  <line x1="0" y1="-10" x2="-2" y2="-6" stroke="#3B82F6" strokeWidth="1" opacity="0.8">
-                    <animate attributeName="x2" values="-2;1;-2;-2;-2;1;-2;-2;-2;1;-2;-2;-2;1;-2;-2;-2;1;-2;-2;-2;1;-2;-2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  {/* Left arm */}
+                  <line x1="-2" y1="-10" x2="-2.5" y2="-6" stroke="#3B82F6" strokeWidth="1.5" opacity="0.9">
+                    <animate attributeName="x2" values="-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                    <animate attributeName="y2" values="-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
                   </line>
-                  <line x1="0" y1="-10" x2="2" y2="-6" stroke="#3B82F6" strokeWidth="1" opacity="0.8">
-                    <animate attributeName="x2" values="2;-1;2;2;2;-1;2;2;2;-1;2;2;2;-1;2;2;2;-1;2;2;2;-1;2;2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  
+                  {/* Right arm */}
+                  <line x1="2" y1="-10" x2="2.5" y2="-6" stroke="#3B82F6" strokeWidth="1.5" opacity="0.9">
+                    <animate attributeName="x2" values="2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                    <animate attributeName="y2" values="-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
                   </line>
+                  
+                  {/* Hands */}
+                  <circle cx="-2.5" cy="-6" r="0.8" fill="#FDE68A">
+                    <animate attributeName="cx" values="-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5;-2.5;1.5;-2.5;-2.5" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                    <animate attributeName="cy" values="-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </circle>
+                  <circle cx="2.5" cy="-6" r="0.8" fill="#FDE68A">
+                    <animate attributeName="cx" values="2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5;2.5;-1.5;2.5;2.5" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                    <animate attributeName="cy" values="-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6;-6;-5.5;-6;-6" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </circle>
                 </g>
                 
-                {/* Backpack */}
-                <rect x="-1" y="-12" width="2" height="3" rx="0.5" fill="#10B981" opacity="0.7" />
+                {/* Modern backpack with details */}
+                <g id="backpack">
+                  <rect x="-1.2" y="-12.5" width="2.4" height="4" rx="0.8" fill="#10B981" opacity="0.8"/>
+                  <rect x="-0.8" y="-12.2" width="1.6" height="1" rx="0.3" fill="#059669" opacity="0.9"/>
+                  <circle cx="0" cy="-10.5" r="0.3" fill="#047857"/>
+                  <rect x="-0.3" y="-9" width="0.6" height="0.8" rx="0.2" fill="#065F46" opacity="0.7"/>
+                </g>
                 
                 {/* Thinking bubble during stops */}
                 <g id="thinkingBubble" opacity="0">
@@ -368,9 +435,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Step 2 - Learning Hub */}
-          <div className="absolute left-1/2 top-12 transform -translate-x-1/2 pointer-events-auto">
-            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
+          {/* Step 2 - Learning Hub (original Stage 2 content, now at Stage 3 position) */}
+          <div className="absolute right-16 top-16 pointer-events-auto">
+            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500 flex items-center space-x-3">
               <div className="relative">
                 {/* Pulsing aura */}
                 <div className="absolute inset-0 w-20 h-20 bg-purple-500/20 rounded-full animate-ping"></div>
@@ -384,15 +451,15 @@ export default function Home() {
                   <div className="absolute left-0 top-1/2 w-1 h-1 bg-white rounded-full animate-bounce" style={{animationDelay: '0.6s'}}></div>
                 </div>
               </div>
-              <div className="mt-3 text-center">
+              <div className="text-center">
                 <div className="text-sm text-purple-300 font-bold group-hover:text-purple-200 transition-colors">🧠 Learn</div>
                 <div className="text-xs text-purple-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Gain Knowledge</div>
               </div>
             </div>
           </div>
 
-          {/* Step 3 - Practice Lab */}
-          <div className="absolute right-16 top-16 pointer-events-auto">
+          {/* Step 3 - Practice Lab (moved to Stage 4 position) */}
+          <div className="absolute right-8 top-1/2 transform -translate-y-1/2 pointer-events-auto">
             <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
               <div className="relative">
                 {/* Electric field */}
@@ -417,39 +484,18 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Step 4 - Project Workshop */}
-          <div className="absolute right-8 top-1/2 transform -translate-y-1/2 pointer-events-auto">
-            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
-              <div className="relative">
-                {/* Building blocks animation */}
-                <div className="absolute -top-2 -left-2 w-4 h-4 bg-orange-400/40 rounded transform rotate-45 animate-pulse"></div>
-                <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-orange-300/40 rounded transform rotate-12 animate-pulse" style={{animationDelay: '0.5s'}}></div>
-                
-                <div className="relative w-14 h-14 bg-gradient-to-br from-orange-500 via-orange-600 to-red-500 rounded-xl shadow-xl group-hover:shadow-orange-500/50 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">4</span>
-                  {/* Tool icons */}
-                  <div className="absolute -top-1 -left-1 text-xs">🛠️</div>
-                </div>
-              </div>
-              <div className="mt-3 text-center">
-                <div className="text-sm text-orange-300 font-bold group-hover:text-orange-200 transition-colors">🔨 Build</div>
-                <div className="text-xs text-orange-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Real Projects</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Step 5 - Certification Badge */}
+          {/* Step 4 - Project Workshop (moved to Stage 5 position) */}
           <div className="absolute right-16 bottom-16 pointer-events-auto">
             <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
               <div className="relative">
                 {/* Achievement glow */}
                 <div className="absolute inset-0 w-20 h-20 bg-red-500/20 rounded-full animate-pulse"></div>
-                <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-red-400/10 to-pink-400/10 rounded-full animate-spin" style={{animationDuration: '15s'}}></div>
+                <div className="absolute inset-1 w-18 h-18 bg-red-400/10 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
                 
-                <div className="relative w-14 h-14 bg-gradient-to-br from-red-500 via-pink-600 to-rose-500 rounded-full shadow-xl group-hover:shadow-red-500/50 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">5</span>
-                  {/* Crown effect */}
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-yellow-400 text-xs">👑</div>
+                <div className="relative w-14 h-14 bg-gradient-to-br from-red-500 via-pink-600 to-rose-500 rounded-full shadow-xl group-hover:shadow-red-500/50 flex items-center justify-center border-2 border-yellow-400/50">
+                  <span className="text-white font-bold text-lg">4</span>
+                  {/* Achievement crown */}
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-yellow-400 text-xs">�</div>
                 </div>
               </div>
               <div className="mt-3 text-center">
@@ -459,7 +505,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Step 6 - Career Launch */}
+          {/* Step 5 - Career Launch (moved to Stage 6 position) */}
           <div className="absolute left-16 bottom-16 pointer-events-auto">
             <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
               <div className="relative">
@@ -468,7 +514,7 @@ export default function Home() {
                 <div className="absolute -top-1 left-1/2 w-2 h-2 bg-indigo-400 rounded-full animate-bounce transform -translate-x-1/2"></div>
                 
                 <div className="relative w-14 h-14 bg-gradient-to-br from-indigo-500 via-purple-600 to-blue-600 rounded-2xl shadow-xl group-hover:shadow-indigo-500/50 flex items-center justify-center transform group-hover:-rotate-12 transition-all duration-500">
-                  <span className="text-white font-bold text-lg">6</span>
+                  <span className="text-white font-bold text-lg">5</span>
                   {/* Success sparkles */}
                   <div className="absolute -top-1 -right-1 text-yellow-300 text-xs animate-pulse">✨</div>
                   <div className="absolute -bottom-1 -left-1 text-yellow-300 text-xs animate-pulse" style={{animationDelay: '0.5s'}}>⭐</div>
@@ -481,21 +527,31 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Dynamic Success Metrics */}
-          <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-green-400/30 shadow-lg">
-            <div className="flex items-center space-x-3">
-              <div className="flex space-x-1">
-                <div className="w-1 h-4 bg-green-400 rounded-full animate-pulse"></div>
-                <div className="w-1 h-3 bg-green-300 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                <div className="w-1 h-5 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+          {/* Step 6 - Professional Network (moved to left-center position) */}
+          <div className="absolute left-8 top-1/2 transform -translate-y-1/2 pointer-events-auto">
+            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
+              <div className="relative">
+                {/* Networking connections */}
+                <div className="absolute inset-0 w-20 h-20">
+                  <div className="absolute top-1 left-3 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
+                  <div className="absolute bottom-3 right-1 w-1 h-1 bg-cyan-300 rounded-full animate-ping" style={{animationDelay: '0.3s'}}></div>
+                  <div className="absolute top-1/2 right-0 w-1 h-1 bg-cyan-500 rounded-full animate-ping" style={{animationDelay: '0.6s'}}></div>
+                </div>
+                
+                <div className="relative w-14 h-14 bg-gradient-to-br from-cyan-500 via-teal-600 to-blue-500 rounded-full shadow-xl group-hover:shadow-cyan-500/50 flex items-center justify-center transform group-hover:rotate-45 transition-all duration-500">
+                  <span className="text-white font-bold text-lg">6</span>
+                  {/* Network icon */}
+                  <div className="absolute -top-1 -right-1 text-white text-xs">🌐</div>
+                </div>
               </div>
-              <div>
-                <div className="text-green-300 text-sm font-bold">Live: 1,247</div>
-                <div className="text-green-400/80 text-xs">Enrolled Today</div>
+              <div className="mt-3 text-center">
+                <div className="text-sm text-cyan-300 font-bold group-hover:text-cyan-200 transition-colors">🌐 Network</div>
+                <div className="text-xs text-cyan-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Build Connections</div>
               </div>
             </div>
           </div>
 
+          {/* Dynamic Success Metrics */}
           <div className="absolute bottom-4 left-4 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-blue-400/30 shadow-lg">
             <div className="flex items-center space-x-3">
               <div className="relative w-8 h-8">
