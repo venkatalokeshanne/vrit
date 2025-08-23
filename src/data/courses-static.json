@@ -1,10 +1,309 @@
 [
   {
-    "slug": "azure-devops-online-training-in-bangalore",
+    "slug": "azure-devops-training-in-us-uk-canada-australia",
     "mainImage": "",
+    "importantText": "test",
+    "bannerUrl": "",
+    "courseContentPdf": "https://cdn.sanity.io/files/3hir6j0e/production/69c2c905a77e57865da8113970c28896d62eb571.pdf",
+    "hreflang": null,
+    "reviewCount": "9551",
+    "ratingValue": "5",
+    "organizationName": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
+    "postalCode": "500073",
+    "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana",
+    "_id": "azure-devops-training-in-us-uk-canada-australia",
+    "_updatedAt": "2025-08-18T12:31:33Z",
+    "metadata": {
+      "title": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
+      "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
+      "keywords": [
+        "Azure devOps training",
+        "Azure devOps training in US",
+        "UK",
+        "Canada",
+        "Dubai and Australia",
+        "Best Azure devOps training",
+        "Online Azure devOps Training"
+      ],
+      "openGraph": {
+        "title": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
+        "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
+        "url": "/azure-devops-training-in-us-uk-canada-australia",
+        "type": "website",
+        "locale": "en_US",
+        "siteName": "VR IT SOL",
+        "images": []
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
+        "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
+        "site": "@vritsolutions",
+        "creator": "@vritsolutions",
+        "images": []
+      },
+      "canonical": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
+      "alternates": {
+        "canonical": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
+        "languages": {
+          "en-US": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia"
+        }
+      },
+      "other": {
+        "content-language": "en-US"
+      },
+      "robots": {
+        "index": true,
+        "follow": true,
+        "googleBot": {
+          "index": true,
+          "follow": true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1
+        }
+      }
+    },
+    "structuredData": [
+      {
+        "@context": "https://schema.org",
+        "@type": [
+          "LocalBusiness",
+          "EducationalOrganization"
+        ],
+        "name": "VR IT SOL",
+        "alternateName": "VR IT Solutions",
+        "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
+        "priceRange": "$$",
+        "currenciesAccepted": "INR",
+        "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "postalCode": "500073",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "17.4374",
+          "longitude": "78.4482"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-9032734343",
+            "email": "info@vritsol.com",
+            "contactType": "customer service",
+            "areaServed": "IN",
+            "availableLanguage": [
+              "English",
+              "Hindi",
+              "Telugu"
+            ]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-9032734343",
+            "contactType": "sales",
+            "areaServed": "IN"
+          }
+        ],
+        "openingHours": [
+          "Mo-Sa 08:00-21:30",
+          "Su 09:00-13:00"
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "21:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "09:00",
+            "closes": "13:00"
+          }
+        ],
+        "areaServed": [
+          {
+            "@type": "Place",
+            "name": "Hyderabad, Telangana"
+          },
+          {
+            "@type": "Place",
+            "name": "India"
+          }
+        ],
+        "serviceArea": {
+          "@type": "Place",
+          "name": "Hyderabad, Telangana, India"
+        },
+        "knowsAbout": [
+          "IT Training",
+          "SAP",
+          "ServiceNow",
+          "Salesforce",
+          "Azure",
+          "AWS",
+          "DevOps",
+          "Cloud Computing"
+        ],
+        "employee": {
+          "@type": "Person",
+          "name": "Expert IT Trainers",
+          "jobTitle": "Senior IT Trainers"
+        },
+        "foundingDate": "2010",
+        "slogan": "Leading IT Training Institute with 95% Placement Guarantee",
+        "sameAs": [
+          "https://www.facebook.com/vritsolutions/",
+          "https://twitter.com/vritsolutions",
+          "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "reviewCount": "9551"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "IT Training Courses",
+          "itemListElement": [
+            {
+              "@type": "Course",
+              "name": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
+              "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
+              "url": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
+              "courseMode": [
+                "online",
+                "onsite"
+              ],
+              "educationalLevel": "professional",
+              "provider": {
+                "@type": "EducationalOrganization",
+                "name": "VR IT SOL"
+              },
+              "offers": {
+                "@type": "Offer",
+                "category": "EducationEvent",
+                "availability": "InStock"
+              },
+              "hasCourseInstance": {
+                "@type": "CourseInstance",
+                "courseMode": [
+                  "online",
+                  "onsite"
+                ],
+                "instructor": {
+                  "@type": "Person",
+                  "name": "Expert Instructors"
+                }
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "bestRating": "5",
+                "worstRating": "1",
+                "reviewCount": "9551"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
+        "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
+        "url": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
+        "courseMode": [
+          "online",
+          "onsite"
+        ],
+        "educationalLevel": "professional",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "VR IT SOL",
+          "url": "https://www.vritsol.com"
+        },
+        "offers": {
+          "@type": "Offer",
+          "category": "EducationEvent",
+          "availability": "InStock",
+          "validFrom": "2025-08-23",
+          "seller": {
+            "@type": "Organization",
+            "name": "VR IT SOL"
+          }
+        },
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": [
+            "online",
+            "onsite"
+          ],
+          "instructor": {
+            "@type": "Person",
+            "name": "Expert Instructors",
+            "description": "Industry experienced professionals"
+          },
+          "courseSchedule": {
+            "@type": "Schedule",
+            "duration": "P75D",
+            "repeatFrequency": "Daily",
+            "startTime": "09:00",
+            "endTime": "18:00"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "reviewCount": "9551"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "IT Training Students"
+            },
+            "reviewBody": "Excellent Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions training with hands-on experience and expert guidance."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "azure-devops-online-training-in-bangalore",
+    "mainImage": "https://cdn.sanity.io/images/3hir6j0e/production/3e959a83e889e9f99d9d7df0daba31d26cbe5eed-1279x720.jpg",
     "importantText": "",
     "bannerUrl": "",
-    "courseContentPdf": "https://cdn.sanity.io/files/3hir6j0e/production/ca62ea5d7515307788ada950210708b44f80e4b2.pdf",
+    "courseContentPdf": "https://cdn.sanity.io/files/3hir6j0e/production/13b267ede8f95ab6666b72bd5d0ec6a02c461f55.pdf",
     "hreflang": null,
     "reviewCount": "15256",
     "ratingValue": "5",
@@ -12,7 +311,7 @@
     "postalCode": "500016",
     "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad, Telangana.",
     "_id": "azure-devops-online-training-in-bangalore",
-    "_updatedAt": "2025-08-10T14:33:30Z",
+    "_updatedAt": "2025-08-18T09:16:56Z",
     "metadata": {
       "title": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
       "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
@@ -28,7 +327,11 @@
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
-        "images": []
+        "images": [
+          {
+            "url": "https://cdn.sanity.io/images/3hir6j0e/production/3e959a83e889e9f99d9d7df0daba31d26cbe5eed-1279x720.jpg"
+          }
+        ]
       },
       "twitter": {
         "card": "summary_large_image",
@@ -36,7 +339,9 @@
         "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
         "site": "@vritsolutions",
         "creator": "@vritsolutions",
-        "images": []
+        "images": [
+          "https://cdn.sanity.io/images/3hir6j0e/production/3e959a83e889e9f99d9d7df0daba31d26cbe5eed-1279x720.jpg"
+        ]
       },
       "canonical": "https://www.vritsol.com/azure-devops-online-training-in-bangalore",
       "alternates": {
@@ -244,7 +549,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -289,304 +594,6 @@
               "name": "IT Training Students"
             },
             "reviewBody": "Excellent Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions training with hands-on experience and expert guidance."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "react-js-training-hyderabad",
-    "mainImage": "",
-    "importantText": "",
-    "bannerUrl": "",
-    "courseContentPdf": "",
-    "hreflang": "en-IN",
-    "reviewCount": "95",
-    "ratingValue": "4.8",
-    "organizationName": "React.js Training in Hyderabad | VR IT Solutions",
-    "postalCode": "500073",
-    "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet",
-    "_id": "rIDZrX5GYleXl1qFy7g0a8",
-    "_updatedAt": "2025-08-10T13:49:27Z",
-    "metadata": {
-      "title": "React.js Training in Hyderabad | VR IT Solutions",
-      "description": "Join the best React.js training in Hyderabad. Learn component-based development, hooks, state management with expert instructors. 100% placement assistance.",
-      "keywords": [
-        "react js training",
-        "react course hyderabad",
-        "javascript training",
-        "frontend development",
-        "react certification"
-      ],
-      "openGraph": {
-        "title": "Best React.js Training in Hyderabad - VR IT Solutions",
-        "description": "Master React.js with hands-on projects. Expert instructors, placement assistance, and industry-relevant curriculum.",
-        "url": "https://www.vritsol.com/react-js-training-hyderabad",
-        "type": "website",
-        "locale": "en_US",
-        "siteName": "VR IT SOL",
-        "images": []
-      },
-      "twitter": {
-        "card": "summary_large_image",
-        "title": "React.js Training in Hyderabad | VR IT Solutions",
-        "description": "Learn React.js from industry experts. Comprehensive training with real projects and placement support.",
-        "site": "@vritsolutions",
-        "creator": "@vritsolutions",
-        "images": []
-      },
-      "canonical": "https://www.vritsol.com/react-js-training-hyderabad",
-      "alternates": {
-        "canonical": "https://www.vritsol.com/react-js-training-hyderabad",
-        "languages": {
-          "en-US": "https://www.vritsol.com/react-js-training-hyderabad",
-          "en": "https://www.vritsol.com/react-js-training-hyderabad",
-          "x-default": "https://www.vritsol.com/react-js-training-hyderabad",
-          "en-IN": "https://www.vritsol.com/react-js-training-hyderabad"
-        }
-      },
-      "other": {
-        "content-language": "en-US"
-      },
-      "robots": {
-        "index": true,
-        "follow": true,
-        "googleBot": {
-          "index": true,
-          "follow": true,
-          "max-video-preview": -1,
-          "max-image-preview": "large",
-          "max-snippet": -1
-        }
-      }
-    },
-    "structuredData": [
-      {
-        "@context": "https://schema.org",
-        "@type": [
-          "LocalBusiness",
-          "EducationalOrganization"
-        ],
-        "name": "VR IT SOL",
-        "alternateName": "VR IT Solutions",
-        "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://www.vritsol.com",
-        "logo": "https://www.vritsol.com/images/vritlogo.png",
-        "image": "https://www.vritsol.com/images/vritlogo.png",
-        "priceRange": "$$",
-        "currenciesAccepted": "INR",
-        "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet",
-          "addressLocality": "Hyderabad",
-          "addressRegion": "Telangana",
-          "postalCode": "500073",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "17.4374",
-          "longitude": "78.4482"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+91-9032734343",
-            "email": "info@vritsol.com",
-            "contactType": "customer service",
-            "areaServed": "IN",
-            "availableLanguage": [
-              "English",
-              "Hindi",
-              "Telugu"
-            ]
-          },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+91-9032734343",
-            "contactType": "sales",
-            "areaServed": "IN"
-          }
-        ],
-        "openingHours": [
-          "Mo-Sa 08:00-21:30",
-          "Su 09:00-13:00"
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday"
-            ],
-            "opens": "08:00",
-            "closes": "21:30"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Sunday",
-            "opens": "09:00",
-            "closes": "13:00"
-          }
-        ],
-        "areaServed": [
-          {
-            "@type": "Place",
-            "name": "Hyderabad, Telangana"
-          },
-          {
-            "@type": "Place",
-            "name": "India"
-          }
-        ],
-        "serviceArea": {
-          "@type": "Place",
-          "name": "Hyderabad, Telangana, India"
-        },
-        "knowsAbout": [
-          "IT Training",
-          "SAP",
-          "ServiceNow",
-          "Salesforce",
-          "Azure",
-          "AWS",
-          "DevOps",
-          "Cloud Computing"
-        ],
-        "employee": {
-          "@type": "Person",
-          "name": "Expert IT Trainers",
-          "jobTitle": "Senior IT Trainers"
-        },
-        "foundingDate": "2010",
-        "slogan": "Leading IT Training Institute with 95% Placement Guarantee",
-        "sameAs": [
-          "https://www.facebook.com/vritsolutions/",
-          "https://twitter.com/vritsolutions",
-          "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "bestRating": "5",
-          "worstRating": "1",
-          "reviewCount": "95"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "IT Training Courses",
-          "itemListElement": [
-            {
-              "@type": "Course",
-              "name": "React.js Training in Hyderabad | VR IT Solutions",
-              "description": "Join the best React.js training in Hyderabad. Learn component-based development, hooks, state management with expert instructors. 100% placement assistance.",
-              "url": "https://www.vritsol.com/react-js-training-hyderabad",
-              "courseMode": [
-                "online",
-                "onsite"
-              ],
-              "educationalLevel": "professional",
-              "provider": {
-                "@type": "EducationalOrganization",
-                "name": "VR IT SOL"
-              },
-              "offers": {
-                "@type": "Offer",
-                "category": "EducationEvent",
-                "availability": "InStock"
-              },
-              "hasCourseInstance": {
-                "@type": "CourseInstance",
-                "courseMode": [
-                  "online",
-                  "onsite"
-                ],
-                "instructor": {
-                  "@type": "Person",
-                  "name": "Expert Instructors"
-                }
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "bestRating": "5",
-                "worstRating": "1",
-                "reviewCount": "95"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Course",
-        "name": "React.js Training in Hyderabad | VR IT Solutions",
-        "description": "Join the best React.js training in Hyderabad. Learn component-based development, hooks, state management with expert instructors. 100% placement assistance.",
-        "url": "https://www.vritsol.com/react-js-training-hyderabad",
-        "courseMode": [
-          "online",
-          "onsite"
-        ],
-        "educationalLevel": "professional",
-        "provider": {
-          "@type": "EducationalOrganization",
-          "name": "VR IT SOL",
-          "url": "https://www.vritsol.com"
-        },
-        "offers": {
-          "@type": "Offer",
-          "category": "EducationEvent",
-          "availability": "InStock",
-          "validFrom": "2025-08-10",
-          "seller": {
-            "@type": "Organization",
-            "name": "VR IT SOL"
-          }
-        },
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": [
-            "online",
-            "onsite"
-          ],
-          "instructor": {
-            "@type": "Person",
-            "name": "Expert Instructors",
-            "description": "Industry experienced professionals"
-          },
-          "courseSchedule": {
-            "@type": "Schedule",
-            "duration": "P75D",
-            "repeatFrequency": "Daily",
-            "startTime": "09:00",
-            "endTime": "18:00"
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "bestRating": "5",
-          "worstRating": "1",
-          "reviewCount": "95"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.8",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "IT Training Students"
-            },
-            "reviewBody": "Excellent React.js Training in Hyderabad | VR IT Solutions training with hands-on experience and expert guidance."
           }
         ]
       }
@@ -854,7 +861,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -1153,7 +1160,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -1449,7 +1456,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -1742,7 +1749,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -2035,7 +2042,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -2328,7 +2335,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -2623,7 +2630,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -2919,7 +2926,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -3214,7 +3221,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -3509,7 +3516,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -3804,7 +3811,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -4099,7 +4106,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -4394,7 +4401,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -4689,7 +4696,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -4982,7 +4989,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -5276,7 +5283,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -5576,7 +5583,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -5870,7 +5877,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -6168,7 +6175,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -6510,7 +6517,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -6805,7 +6812,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -7101,7 +7108,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -7396,7 +7403,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -7691,7 +7698,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -7990,7 +7997,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -8285,7 +8292,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -8579,7 +8586,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -8873,7 +8880,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -9167,7 +9174,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -9461,7 +9468,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -9756,7 +9763,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -10051,7 +10058,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -10346,7 +10353,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -10641,7 +10648,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -10940,7 +10947,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -11239,7 +11246,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -11538,7 +11545,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -11837,7 +11844,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -12136,7 +12143,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -12435,7 +12442,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -12734,7 +12741,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -13033,7 +13040,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -13332,7 +13339,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -13377,305 +13384,6 @@
               "name": "IT Training Students"
             },
             "reviewBody": "Excellent Data Science Training in US, UK, Canada, Dubai and Australia | Data Science Online Training | VR IT Solutions training with hands-on experience and expert guidance."
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "slug": "azure-devops-training-in-us-uk-canada-australia",
-    "mainImage": "",
-    "importantText": "",
-    "bannerUrl": "",
-    "courseContentPdf": "",
-    "hreflang": null,
-    "reviewCount": "9551",
-    "ratingValue": "5",
-    "organizationName": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
-    "postalCode": "500073",
-    "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana",
-    "_id": "azure-devops-training-in-us-uk-canada-australia",
-    "_updatedAt": "2025-08-08T14:55:53Z",
-    "metadata": {
-      "title": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
-      "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-      "keywords": [
-        "Azure devOps training",
-        "Azure devOps training in US",
-        "UK",
-        "Canada",
-        "Dubai and Australia",
-        "Best Azure devOps training",
-        "Online Azure devOps Training"
-      ],
-      "openGraph": {
-        "title": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
-        "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "/azure-devops-training-in-us-uk-canada-australia",
-        "type": "website",
-        "locale": "en_US",
-        "siteName": "VR IT SOL",
-        "images": []
-      },
-      "twitter": {
-        "card": "summary_large_image",
-        "title": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
-        "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "site": "@vritsolutions",
-        "creator": "@vritsolutions",
-        "images": []
-      },
-      "canonical": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
-      "alternates": {
-        "canonical": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
-        "languages": {
-          "en-US": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
-          "en": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
-          "x-default": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia"
-        }
-      },
-      "other": {
-        "content-language": "en-US"
-      },
-      "robots": {
-        "index": true,
-        "follow": true,
-        "googleBot": {
-          "index": true,
-          "follow": true,
-          "max-video-preview": -1,
-          "max-image-preview": "large",
-          "max-snippet": -1
-        }
-      }
-    },
-    "structuredData": [
-      {
-        "@context": "https://schema.org",
-        "@type": [
-          "LocalBusiness",
-          "EducationalOrganization"
-        ],
-        "name": "VR IT SOL",
-        "alternateName": "VR IT Solutions",
-        "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://www.vritsol.com",
-        "logo": "https://www.vritsol.com/images/vritlogo.png",
-        "image": "https://www.vritsol.com/images/vritlogo.png",
-        "priceRange": "$$",
-        "currenciesAccepted": "INR",
-        "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet, Hyderabad, Telangana",
-          "addressLocality": "Hyderabad",
-          "addressRegion": "Telangana",
-          "postalCode": "500073",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "17.4374",
-          "longitude": "78.4482"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+91-9032734343",
-            "email": "info@vritsol.com",
-            "contactType": "customer service",
-            "areaServed": "IN",
-            "availableLanguage": [
-              "English",
-              "Hindi",
-              "Telugu"
-            ]
-          },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+91-9032734343",
-            "contactType": "sales",
-            "areaServed": "IN"
-          }
-        ],
-        "openingHours": [
-          "Mo-Sa 08:00-21:30",
-          "Su 09:00-13:00"
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday"
-            ],
-            "opens": "08:00",
-            "closes": "21:30"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Sunday",
-            "opens": "09:00",
-            "closes": "13:00"
-          }
-        ],
-        "areaServed": [
-          {
-            "@type": "Place",
-            "name": "Hyderabad, Telangana"
-          },
-          {
-            "@type": "Place",
-            "name": "India"
-          }
-        ],
-        "serviceArea": {
-          "@type": "Place",
-          "name": "Hyderabad, Telangana, India"
-        },
-        "knowsAbout": [
-          "IT Training",
-          "SAP",
-          "ServiceNow",
-          "Salesforce",
-          "Azure",
-          "AWS",
-          "DevOps",
-          "Cloud Computing"
-        ],
-        "employee": {
-          "@type": "Person",
-          "name": "Expert IT Trainers",
-          "jobTitle": "Senior IT Trainers"
-        },
-        "foundingDate": "2010",
-        "slogan": "Leading IT Training Institute with 95% Placement Guarantee",
-        "sameAs": [
-          "https://www.facebook.com/vritsolutions/",
-          "https://twitter.com/vritsolutions",
-          "https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA"
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "reviewCount": "9551"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "IT Training Courses",
-          "itemListElement": [
-            {
-              "@type": "Course",
-              "name": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
-              "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
-              "courseMode": [
-                "online",
-                "onsite"
-              ],
-              "educationalLevel": "professional",
-              "provider": {
-                "@type": "EducationalOrganization",
-                "name": "VR IT SOL"
-              },
-              "offers": {
-                "@type": "Offer",
-                "category": "EducationEvent",
-                "availability": "InStock"
-              },
-              "hasCourseInstance": {
-                "@type": "CourseInstance",
-                "courseMode": [
-                  "online",
-                  "onsite"
-                ],
-                "instructor": {
-                  "@type": "Person",
-                  "name": "Expert Instructors"
-                }
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5",
-                "bestRating": "5",
-                "worstRating": "1",
-                "reviewCount": "9551"
-              }
-            }
-          ]
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Course",
-        "name": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
-        "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
-        "courseMode": [
-          "online",
-          "onsite"
-        ],
-        "educationalLevel": "professional",
-        "provider": {
-          "@type": "EducationalOrganization",
-          "name": "VR IT SOL",
-          "url": "https://www.vritsol.com"
-        },
-        "offers": {
-          "@type": "Offer",
-          "category": "EducationEvent",
-          "availability": "InStock",
-          "validFrom": "2025-08-10",
-          "seller": {
-            "@type": "Organization",
-            "name": "VR IT SOL"
-          }
-        },
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": [
-            "online",
-            "onsite"
-          ],
-          "instructor": {
-            "@type": "Person",
-            "name": "Expert Instructors",
-            "description": "Industry experienced professionals"
-          },
-          "courseSchedule": {
-            "@type": "Schedule",
-            "duration": "P75D",
-            "repeatFrequency": "Daily",
-            "startTime": "09:00",
-            "endTime": "18:00"
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "worstRating": "1",
-          "reviewCount": "9551"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "IT Training Students"
-            },
-            "reviewBody": "Excellent Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions training with hands-on experience and expert guidance."
           }
         ]
       }
@@ -13930,7 +13638,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -14226,7 +13934,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -14522,7 +14230,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -14818,7 +14526,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -15114,7 +14822,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -15409,7 +15117,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -15705,7 +15413,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -16001,7 +15709,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -16294,7 +16002,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -16591,7 +16299,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -16890,7 +16598,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -17189,7 +16897,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"
@@ -17485,7 +17193,7 @@
           "@type": "Offer",
           "category": "EducationEvent",
           "availability": "InStock",
-          "validFrom": "2025-08-10",
+          "validFrom": "2025-08-23",
           "seller": {
             "@type": "Organization",
             "name": "VR IT SOL"

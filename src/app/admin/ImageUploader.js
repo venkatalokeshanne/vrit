@@ -3,18 +3,22 @@
 import { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 
-export default function ImageUploader({ value, onChange, label = "", className = "" }) {
+export default function ImageUploader({ value, onChange, onImageSelect, label = "", className = "", currentImage }) {
   const [uploading, setUploading] = useState(false)
   const [preview, setPreview] = useState('')
   const fileInputRef = useRef(null)
 
+  // Use onChange or onImageSelect, whichever is provided
+  const handleChange = onChange || onImageSelect || (() => {})
+
   // Initialize preview from value prop (for editing existing posts)
   useEffect(() => {
-    if (value && typeof value === 'string') {
+    const imageValue = value || currentImage
+    if (imageValue && typeof imageValue === 'string') {
       // For Sanity assets, we might need to fetch the preview URL
       // For now, we'll rely on the preview being set during upload
     }
-  }, [value])
+  }, [value, currentImage])
 
   const handleFileSelect = async (e) => {
     const file = e.target.files[0]
@@ -72,7 +76,7 @@ export default function ImageUploader({ value, onChange, label = "", className =
         const imageUrl = result.data.url
         
         setPreview(imageUrl)
-        onChange(imageRef) // Pass the Sanity asset reference
+        handleChange(imageRef) // Pass the Sanity asset reference
       } else {
         throw new Error(result.error || 'Upload failed')
       }
@@ -95,7 +99,7 @@ export default function ImageUploader({ value, onChange, label = "", className =
 
   const handleClear = () => {
     setPreview('')
-    onChange(null)
+    handleChange(null)
     if (fileInputRef.current) {
       fileInputRef.current.value = ''
     }
