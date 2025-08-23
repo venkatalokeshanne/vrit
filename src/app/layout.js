@@ -45,7 +45,7 @@ export async function generateMetadata({ params: _params, searchParams: _searchP
   const pageMetadata = getPageMetadataStatic(slug);
   
   // Base URL for your site
-  const baseUrl = 'https://vrit-nine.vercel.app/';
+  const baseUrl = 'https://vrit-rho.vercel.app/';
   
   // Merge your existing metadata with missing SEO properties
   return {
@@ -158,8 +158,8 @@ export default async function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "VR IT Solutions",
-              "url": "https://www.vritsol.com",
-              "logo": "https://www.vritsol.com/images/vritlogo.png",
+              "url": "https://vrit-rho.vercel.app",
+              "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+919032734343",

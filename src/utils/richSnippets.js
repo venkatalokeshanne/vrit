@@ -18,14 +18,14 @@ export class RichSnippetsManager {
       "name": "VR IT Solutions",
       "alternateName": ["VRIT Solutions", "VR IT Training Institute"],
       "description": "Leading Software Training Institute in Hyderabad offering comprehensive IT courses with 100% placement assistance",
-      "url": "https://vritsol.com",
+      "url": "https://vrit-rho.vercel.app",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://vritsol.com/images/vritlogo.png",
+        "url": "https://vrit-rho.vercel.app/images/vritlogo.png",
         "width": 300,
         "height": 100
       },
-      "image": "https://vritsol.com/images/vritlogo.png",
+      "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor",
@@ -114,7 +114,7 @@ export class RichSnippetsManager {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://vritsol.com/courses?search={search_term_string}"
+            "urlTemplate": "https://vrit-rho.vercel.app/courses?search={search_term_string}"
           },
           "query-input": "required name=search_term_string"
         }
@@ -158,14 +158,14 @@ export class RichSnippetsManager {
       "position": index + 1,
       "name": course.name,
       "description": course.description,
-      "url": `https://vritsol.com${course.url}`,
+      "url": `https://vrit-rho.vercel.app${course.url}`,
       "provider": {
         "@type": "Organization",
         "name": "VR IT Solutions",
-        "url": "https://vritsol.com",
+        "url": "https://vrit-rho.vercel.app",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://vritsol.com/images/vritlogo.png"
+          "url": "https://vrit-rho.vercel.app/images/vritlogo.png"
         }
       },
       "educationalLevel": "Beginner to Advanced",
@@ -191,7 +191,7 @@ export class RichSnippetsManager {
           ],
           "location": {
             "@type": "VirtualLocation",
-            "url": "https://vritsol.com/online-training"
+            "url": "https://vrit-rho.vercel.app/online-training"
           }
         },
         {
@@ -250,12 +250,12 @@ export class RichSnippetsManager {
       "@context": "https://schema.org",
       "@type": "Website", 
       "name": "VR IT Solutions",
-      "url": "https://vritsol.com",
+      "url": "https://vrit-rho.vercel.app",
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://vritsol.com/courses?search={search_term_string}"
+          "urlTemplate": "https://vrit-rho.vercel.app/courses?search={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       },
@@ -267,10 +267,10 @@ export class RichSnippetsManager {
           "position": index + 1,
           "name": link.name,
           "description": link.description,
-          "url": `https://vritsol.com${link.url}`,
+          "url": `https://vrit-rho.vercel.app${link.url}`,
           "potentialAction": {
             "@type": "ReadAction",
-            "target": `https://vritsol.com${link.url}`
+            "target": `https://vrit-rho.vercel.app${link.url}`
           }
         }))
       }
@@ -325,7 +325,7 @@ export class RichSnippetsManager {
         "name": crumb.name,
         "item": {
           "@type": "WebPage",
-          "url": `https://vritsol.com${crumb.url}`,
+          "url": `https://vrit-rho.vercel.app${crumb.url}`,
           "name": crumb.name
         }
       }))
@@ -340,7 +340,7 @@ export class RichSnippetsManager {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "VR IT Solutions",
-      "image": "https://vritsol.com/images/vritlogo.png",
+      "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor",
@@ -356,7 +356,7 @@ export class RichSnippetsManager {
       },
       "telephone": "+91-9032734343",
       "email": "info@vritsol.com",
-      "url": "https://vritsol.com",
+      "url": "https://vrit-rho.vercel.app",
       "openingHours": [
         "Mo-Sa 09:00-18:00"
       ],
@@ -392,7 +392,7 @@ export class RichSnippetsManager {
       "@type": "Article",
       "headline": courseData.title,
       "description": courseData.description,
-      "image": `https://vritsol.com${courseData.ogImage}`,
+      "image": `https://vrit-rho.vercel.app${courseData.ogImage}`,
       "author": {
         "@type": "Organization",
         "name": "VR IT Solutions"
@@ -402,14 +402,14 @@ export class RichSnippetsManager {
         "name": "VR IT Solutions",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://vritsol.com/images/vritlogo.png"
+          "url": "https://vrit-rho.vercel.app/images/vritlogo.png"
         }
       },
       "datePublished": "2024-01-01",
       "dateModified": new Date().toISOString().split('T')[0],
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "url": `https://vritsol.com/${courseData.slug}`
+        "url": `https://vrit-rho.vercel.app/${courseData.slug}`
       },
       "articleSection": "Education",
       "keywords": courseData.keywords

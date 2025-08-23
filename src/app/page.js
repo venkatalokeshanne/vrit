@@ -1495,8 +1495,8 @@ export default function Home() {
             '@type': ['LocalBusiness', 'EducationalOrganization'],
             name: 'VR IT SOL',
             description: 'Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses',
-            url: 'https://www.vritsol.com',
-            logo: 'https://www.vritsol.com/images/vritlogo.png',
+            url: 'https://vrit-rho.vercel.app',
+            logo: 'https://vrit-rho.vercel.app/images/vritlogo.png',
             address: {
               '@type': 'PostalAddress',
               streetAddress: '506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana.',

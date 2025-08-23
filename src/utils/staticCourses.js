@@ -29,11 +29,11 @@ export function getPageMetadataStatic(slug) {
       openGraph: {
         title: 'SEO Testing & Analysis Tool - VR IT Solutions',
         description: 'Comprehensive SEO analysis tool to test your pages, preview social media cards, validate rich snippets, and optimize your site\'s search engine performance.',
-        url: 'https://vritsol.com/seo-tester',
+        url: 'https://vrit-rho.vercel.app/seo-tester',
         siteName: 'VR IT Solutions',
         type: 'website',
         images: [{
-          url: 'https://vritsol.com/og-seo-tester.svg',
+          url: 'https://vrit-rho.vercel.app/og-seo-tester.svg',
           width: 1200,
           height: 630,
           alt: 'SEO Testing Tool'
@@ -43,7 +43,7 @@ export function getPageMetadataStatic(slug) {
         card: 'summary_large_image',
         title: 'SEO Testing & Analysis Tool - VR IT Solutions',
         description: 'Comprehensive SEO analysis tool to test your pages, preview social media cards, validate rich snippets, and optimize your site\'s search engine performance.',
-        images: ['https://vritsol.com/twitter-seo-tester.svg']
+        images: ['https://vrit-rho.vercel.app/twitter-seo-tester.svg']
       }
     };
   }

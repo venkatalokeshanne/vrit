@@ -77,7 +77,7 @@ function createCourseObject(courseData, isFromSanity = false) {
     ogImage: ogImageUrl,
     mainImage: _mainImageUrl,
     twitterImage: twitterImageUrl || ogImageUrl || '',
-    canonical: `https://www.vritsol.com/${slug}`,
+    canonical: `https://vrit-rho.vercel.app/${slug}`,
     reviewCount: isFromSanity 
       ? (courseData.reviewsCount?.toString() || '0') 
       : '0',
@@ -98,8 +98,8 @@ function createCourseObject(courseData, isFromSanity = false) {
       "@type": ["LocalBusiness", "EducationalOrganization"],
       "name": "VR IT SOL",
       "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-      "url": "https://www.vritsol.com",
-      "logo": "https://www.vritsol.com/images/vritlogo.png",
+      "url": "https://vrit-rho.vercel.app",
+      "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet",
@@ -140,7 +140,7 @@ function createCourseObject(courseData, isFromSanity = false) {
             "@type": "Course",
             "name": title,
             "description": description,
-            "url": `https://www.vritsol.com/${slug}`,
+            "url": `https://vrit-rho.vercel.app/${slug}`,
             "courseMode": ["online", "onsite"],
             "educationalLevel": "professional",
             "provider": {

@@ -13,7 +13,7 @@ export async function getPageMetadata(slug) {
     if (!pageData) {
       // Return enhanced default metadata if slug not found
       return {
-        metadataBase: new URL('https://www.vritsol.com'),
+        metadataBase: new URL('https://vrit-rho.vercel.app'),
         title: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
         description: 'Leading software training institute in Hyderabad offering comprehensive IT courses with 100% placement assistance. Expert trainers, hands-on projects, and career support.',
         keywords: ['software training institute hyderabad', 'IT training', 'placement assistance', 'online training', 'classroom training'],
@@ -32,18 +32,18 @@ export async function getPageMetadata(slug) {
           },
         },
         alternates: {
-          canonical: `https://www.vritsol.com/${slug}`,
+          canonical: `https://vrit-rho.vercel.app/${slug}`,
         },
         openGraph: {
           title: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
           description: 'Leading software training institute in Hyderabad offering comprehensive IT courses with 100% placement assistance.',
-          url: `https://www.vritsol.com/${slug}`,
+          url: `https://vrit-rho.vercel.app/${slug}`,
           siteName: 'VR IT Solutions',
           type: 'website',
           locale: 'en_US',
           images: [
             {
-              url: 'https://www.vritsol.com/images/og-default.jpg',
+              url: 'https://vrit-rho.vercel.app/images/og-default.jpg',
               width: 1200,
               height: 630,
               alt: 'VR IT Solutions - Best Software Training Institute',
@@ -54,7 +54,7 @@ export async function getPageMetadata(slug) {
           card: 'summary_large_image',
           title: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
           description: 'Leading software training institute in Hyderabad offering comprehensive IT courses with 100% placement assistance.',
-          images: ['https://www.vritsol.com/images/twitter-default.jpg'],
+          images: ['https://vrit-rho.vercel.app/images/twitter-default.jpg'],
           creator: '@vritsolutions',
           site: '@vritsolutions',
         },
@@ -63,7 +63,7 @@ export async function getPageMetadata(slug) {
     // console.log('Saibaba Fetched metadata for slug:', slug, pageData);
     // Return comprehensive metadata with all SEO optimizations
     return {
-      metadataBase: new URL('https://www.vritsol.com'),
+      metadataBase: new URL('https://vrit-rho.vercel.app'),
       title: pageData.title,
       description: pageData.description,
       mainImage: pageData.mainImage,
@@ -83,25 +83,25 @@ export async function getPageMetadata(slug) {
         },
       },
       alternates: {
-        canonical: pageData.canonical || `https://www.vritsol.com/${pageData.slug?.current || slug}`,
+        canonical: pageData.canonical || `https://vrit-rho.vercel.app/${pageData.slug?.current || slug}`,
       },
       openGraph: {
         title: pageData.ogTitle || pageData.title,
         description: pageData.ogDescription || pageData.description,
-        url: pageData.ogUrl || `https://www.vritsol.com/${pageData.slug?.current || slug}`,
+        url: pageData.ogUrl || `https://vrit-rho.vercel.app/${pageData.slug?.current || slug}`,
         siteName: 'VR IT Solutions',
         type: 'website',
         locale: 'en_US',
         images: pageData.ogImage ? [
           {
-            url: pageData.ogImage.startsWith('http') ? pageData.ogImage : `https://www.vritsol.com${pageData.ogImage}`,
+            url: pageData.ogImage.startsWith('http') ? pageData.ogImage : `https://vrit-rho.vercel.app${pageData.ogImage}`,
             width: 1200,
             height: 630,
             alt: pageData.ogTitle || pageData.title,
           }
         ] : [
           {
-            url: 'https://www.vritsol.com/images/og-default.jpg',
+            url: 'https://vrit-rho.vercel.app/images/og-default.jpg',
             width: 1200,
             height: 630,
             alt: 'VR IT Solutions - Best Software Training Institute',
@@ -113,8 +113,8 @@ export async function getPageMetadata(slug) {
         title: pageData.twitterTitle || pageData.ogTitle || pageData.title,
         description: pageData.twitterDescription || pageData.ogDescription || pageData.description,
         images: pageData.twitterImage ? 
-          [pageData.twitterImage.startsWith('http') ? pageData.twitterImage : `https://www.vritsol.com${pageData.twitterImage}`] : 
-          ['https://www.vritsol.com/images/twitter-default.jpg'],
+          [pageData.twitterImage.startsWith('http') ? pageData.twitterImage : `https://vrit-rho.vercel.app${pageData.twitterImage}`] : 
+          ['https://vrit-rho.vercel.app/images/twitter-default.jpg'],
         creator: '@vritsolutions',
         site: '@vritsolutions',
       },
@@ -133,11 +133,11 @@ export async function getPageMetadata(slug) {
     console.error('Error fetching metadata for slug:', slug, error);
     // Fallback metadata
     return {
-      metadataBase: new URL('https://www.vritsol.com'),
+      metadataBase: new URL('https://vrit-rho.vercel.app'),
       title: 'VR IT Solutions | Best Software Training Institute in Hyderabad',
       description: 'Leading software training institute in Hyderabad offering comprehensive IT courses with 100% placement assistance.',
       alternates: {
-        canonical: `https://www.vritsol.com/${slug}`,
+        canonical: `https://vrit-rho.vercel.app/${slug}`,
       },
     };
   }
@@ -158,8 +158,8 @@ export async function getStructuredData(slug) {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         name: 'VR IT Solutions',
-        url: `https://www.vritsol.com/${slug}`,
-        logo: 'https://www.vritsol.com/images/vritlogo.png',
+        url: `https://vrit-rho.vercel.app/${slug}`,
+        logo: 'https://vrit-rho.vercel.app/images/vritlogo.png',
         description: 'Best software training institute in Hyderabad offering comprehensive IT courses with placement assistance.',
         telephone: '+919032734343',
         email: 'info@vritsol.com',
@@ -184,10 +184,10 @@ export async function getStructuredData(slug) {
       '@context': pageData.structuredData.context || 'https://schema.org',
       '@type': pageData.structuredData.type || 'LocalBusiness',
       name: pageData.structuredData.name || pageData.organizationName || pageData.title,
-      url: pageData.structuredData.url || `https://www.vritsol.com/${pageData.slug?.current || slug}`,
+      url: pageData.structuredData.url || `https://vrit-rho.vercel.app/${pageData.slug?.current || slug}`,
       logo: pageData.structuredData.logo ? 
-        (pageData.structuredData.logo.startsWith('http') ? pageData.structuredData.logo : `https://www.vritsol.com${pageData.structuredData.logo}`) :
-        'https://www.vritsol.com/images/vritlogo.png',
+        (pageData.structuredData.logo.startsWith('http') ? pageData.structuredData.logo : `https://vrit-rho.vercel.app${pageData.structuredData.logo}`) :
+        'https://vrit-rho.vercel.app/images/vritlogo.png',
       description: pageData.description,
       telephone: pageData.structuredData.contactPoint?.[0]?.telephone || '+919032734343',
       email: pageData.structuredData.contactPoint?.[0]?.email || 'info@vritsol.com',
@@ -249,7 +249,7 @@ export function generateRobotsTxt() {
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.vritsol.com/sitemap.xml
+Sitemap: https://vrit-rho.vercel.app/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
@@ -294,19 +294,19 @@ export async function getEnhancedStructuredData(slug, faqs = []) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://www.vritsol.com"
+            "item": "https://vrit-rho.vercel.app"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Courses",
-            "item": "https://www.vritsol.com/courses"
+            "item": "https://vrit-rho.vercel.app/courses"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": pageData.title,
-            "item": `https://www.vritsol.com/${slug}`
+            "item": `https://vrit-rho.vercel.app/${slug}`
           }
         ]
       });

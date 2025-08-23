@@ -91,7 +91,7 @@ export async function generateMetadata({ params }) {
       title: seo.ogTitle || seo.title || post.title,
       description: seo.ogDescription || seo.description || post.excerpt,
       type: 'article',
-      url: `https://www.vritsol.com/blog/${post.slug.current}`,
+      url: `https://vrit-rho.vercel.app/blog/${post.slug.current}`,
       images: seo.ogImage ? [urlFor(seo.ogImage).width(1200).height(630).url()] : imageUrl ? [imageUrl] : [],
       publishedTime: post.publishedAt,
       authors: [post.author?.name || 'VRIT Solutions'],

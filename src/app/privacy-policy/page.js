@@ -63,7 +63,7 @@ export const metadata = {
     description: 'Read the privacy policy for VR IT Solutions. Learn about our data collection, usage, and protection practices.',
     images: []
   },
-  canonical: 'https://www.vritsol.com/privacy-policy'
+  canonical: 'https://vrit-rho.vercel.app/privacy-policy'
 };
 
 export default function PrivacyPolicy() {
