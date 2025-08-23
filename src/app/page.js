@@ -165,15 +165,361 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-12 pb-6 px-4 sm:px-6 lg:px-8" style={{ contentVisibility: 'visible' }}>
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ contentVisibility: 'visible' }}>
+        {/* Innovative Learning Journey with Particle Effects */}
+        <div className="absolute inset-0 pointer-events-none hidden lg:block">
+          {/* Animated Background Particles */}
+          <div className="absolute inset-0">
+            {/* Floating code symbols */}
+            <div className="absolute top-20 left-20 text-blue-400/20 text-2xl animate-bounce" style={{animationDelay: '0s', animationDuration: '4s'}}>{'</>'}</div>
+            <div className="absolute top-32 right-24 text-purple-400/20 text-xl animate-bounce" style={{animationDelay: '1s', animationDuration: '3s'}}>🚀</div>
+            <div className="absolute bottom-20 left-32 text-green-400/20 text-lg animate-bounce" style={{animationDelay: '2s', animationDuration: '5s'}}>⚡</div>
+            <div className="absolute bottom-32 right-20 text-orange-400/20 text-xl animate-bounce" style={{animationDelay: '3s', animationDuration: '4s'}}>🎯</div>
+            
+            {/* Floating tech icons */}
+            <div className="absolute top-1/3 left-12 w-8 h-8 bg-blue-500/10 rounded-lg rotate-45 animate-spin" style={{animationDuration: '8s'}}></div>
+            <div className="absolute top-2/3 right-12 w-6 h-6 bg-purple-500/10 rounded-full animate-ping" style={{animationDelay: '2s'}}></div>
+            <div className="absolute bottom-1/3 left-8 w-10 h-10 bg-green-500/10 rounded-xl rotate-12 animate-pulse" style={{animationDelay: '1s'}}></div>
+          </div>
+
+          {/* Dynamic Curved Path with Flowing Animation */}
+          <svg className="absolute inset-0 w-full h-full" viewBox="0 0 1200 600" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="flowingPath" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#3B82F6" stopOpacity="0.6">
+                  <animate attributeName="stop-color" values="#3B82F6;#8B5CF6;#10B981;#F59E0B;#EF4444;#6366F1;#3B82F6" dur="8s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="50%" stopColor="#8B5CF6" stopOpacity="0.8">
+                  <animate attributeName="stop-color" values="#8B5CF6;#10B981;#F59E0B;#EF4444;#6366F1;#3B82F6;#8B5CF6" dur="8s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="100%" stopColor="#10B981" stopOpacity="0.6">
+                  <animate attributeName="stop-color" values="#10B981;#F59E0B;#EF4444;#6366F1;#3B82F6;#8B5CF6;#10B981" dur="8s" repeatCount="indefinite" />
+                </stop>
+              </linearGradient>
+              
+              {/* Moving dot pattern */}
+              <pattern id="movingDots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle cx="20" cy="20" r="2" fill="#FFFFFF" opacity="0.3">
+                  <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite" />
+                </circle>
+              </pattern>
+            </defs>
+            
+            {/* Main flowing path */}
+            <path
+              id="learningJourneyPath"
+              d="M 80 120 Q 200 60 400 100 Q 600 140 800 80 Q 1000 40 1120 120 Q 1140 200 1100 300 Q 1060 400 1120 480 Q 1100 560 1000 520 Q 800 480 600 520 Q 400 560 200 500 Q 80 440 60 300 Q 40 200 80 120"
+              stroke="url(#flowingPath)"
+              strokeWidth="4"
+              fill="none"
+              strokeDasharray="30,15"
+              className="animate-pulse"
+            >
+              <animate attributeName="stroke-dashoffset" values="0;45;0" dur="3s" repeatCount="indefinite" />
+            </path>
+
+            {/* Animated Human Figure Walking Along Path */}
+            <g>
+              {/* Stage Messages that appear when student stops */}
+              <g id="stageMessages">
+                {/* Stage 1 Message */}
+                <g id="stage1Message" opacity="0">
+                  <rect x="70" y="105" width="120" height="30" rx="8" fill="#3B82F6" fillOpacity="0.9" stroke="#60A5FA" strokeWidth="1"/>
+                  <text x="130" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🎯 Welcome!</text>
+                  <text x="130" y="128" fontSize="8" fill="#DBEAFE" textAnchor="middle">Choose your course & begin</text>
+                  <animate attributeName="opacity" values="0;1;0;0;0;0;0;1;0;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.1;0.2;0.4;0.5;0.6;0.6;0.7;0.8;0.9;1;1" />
+                </g>
+
+                {/* Stage 2 Message */}
+                <g id="stage2Message" opacity="0">
+                  <rect x="390" y="85" width="140" height="30" rx="8" fill="#8B5CF6" fillOpacity="0.9" stroke="#A78BFA" strokeWidth="1"/>
+                  <text x="460" y="98" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🧠 Learning Phase</text>
+                  <text x="460" y="108" fontSize="8" fill="#DDD6FE" textAnchor="middle">Master fundamentals & theory</text>
+                  <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.083;0.083;0.3;0.4;0.5;0.583;0.583;0.8;0.9;1;1" />
+                </g>
+
+                {/* Stage 3 Message */}
+                <g id="stage3Message" opacity="0">
+                  <rect x="1030" y="105" width="140" height="30" rx="8" fill="#10B981" fillOpacity="0.9" stroke="#34D399" strokeWidth="1"/>
+                  <text x="1100" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">⚡ Practice Time!</text>
+                  <text x="1100" y="128" fontSize="8" fill="#D1FAE5" textAnchor="middle">Hands-on labs & exercises</text>
+                  <animate attributeName="opacity" values="0;0;0;1;0;0;0;0;0;1;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.15;0.167;0.167;0.4;0.5;0.65;0.667;0.667;0.9;1;1" />
+                </g>
+
+                {/* Stage 4 Message */}
+                <g id="stage4Message" opacity="0">
+                  <rect x="950" y="250" width="130" height="30" rx="8" fill="#F59E0B" fillOpacity="0.9" stroke="#FBBF24" strokeWidth="1"/>
+                  <text x="1015" y="263" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🛠️ Build Projects</text>
+                  <text x="1015" y="273" fontSize="8" fill="#FEF3C7" textAnchor="middle">Real-world applications</text>
+                  <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.217;0.217;0.3;0.5;0.717;0.717;0.8;0.8;0.9;1;1" />
+                </g>
+
+                {/* Stage 5 Message */}
+                <g id="stage5Message" opacity="0">
+                  <rect x="920" y="505" width="140" height="30" rx="8" fill="#EF4444" fillOpacity="0.9" stroke="#F87171" strokeWidth="1"/>
+                  <text x="990" y="518" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🏆 Get Certified!</text>
+                  <text x="990" y="528" fontSize="8" fill="#FEE2E2" textAnchor="middle">Earn industry recognition</text>
+                  <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.267;0.267;0.35;0.5;0.767;0.767;0.85;0.9;1;1;1" />
+                </g>
+
+                {/* Stage 6 Message */}
+                <g id="stage6Message" opacity="0">
+                  <rect x="70" y="485" width="130" height="30" rx="8" fill="#6366F1" fillOpacity="0.9" stroke="#818CF8" strokeWidth="1"/>
+                  <text x="135" y="498" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🚀 Career Launch</text>
+                  <text x="135" y="508" fontSize="8" fill="#E0E7FF" textAnchor="middle">Land your dream job!</text>
+                  <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.45;0.45;0.48;0.5;0.95;0.95;0.98;1;1;1;1" />
+                </g>
+              </g>
+
+              {/* Human figure with stop-and-go animation */}
+              <g id="walkingStudent">
+                {/* Body */}
+                <circle cx="0" cy="-8" r="3" fill="#3B82F6" opacity="0.9">
+                  <animate attributeName="fill" values="#3B82F6;#3B82F6;#8B5CF6;#8B5CF6;#10B981;#10B981;#F59E0B;#F59E0B;#EF4444;#EF4444;#6366F1;#6366F1" dur="60s" repeatCount="indefinite" keyTimes="0;0.167;0.25;0.417;0.5;0.667;0.75;0.833;0.917;1;1;1" />
+                </circle>
+                
+                {/* Head */}
+                <circle cx="0" cy="-15" r="2.5" fill="#FDE68A" opacity="0.9" />
+                
+                {/* Walking legs animation - stops during pauses */}
+                <g id="legs">
+                  <line x1="0" y1="-5" x2="-2" y2="0" stroke="#3B82F6" strokeWidth="1.5" opacity="0.8">
+                    <animate attributeName="x2" values="-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2;-2;2;-2;-2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </line>
+                  <line x1="0" y1="-5" x2="2" y2="0" stroke="#3B82F6" strokeWidth="1.5" opacity="0.8">
+                    <animate attributeName="x2" values="2;-2;2;2;2;-2;2;2;2;-2;2;2;2;-2;2;2;2;-2;2;2;2;-2;2;2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </line>
+                </g>
+                
+                {/* Arms swinging - stops during pauses */}
+                <g id="arms">
+                  <line x1="0" y1="-10" x2="-2" y2="-6" stroke="#3B82F6" strokeWidth="1" opacity="0.8">
+                    <animate attributeName="x2" values="-2;1;-2;-2;-2;1;-2;-2;-2;1;-2;-2;-2;1;-2;-2;-2;1;-2;-2;-2;1;-2;-2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </line>
+                  <line x1="0" y1="-10" x2="2" y2="-6" stroke="#3B82F6" strokeWidth="1" opacity="0.8">
+                    <animate attributeName="x2" values="2;-1;2;2;2;-1;2;2;2;-1;2;2;2;-1;2;2;2;-1;2;2;2;-1;2;2" dur="60s" repeatCount="indefinite" keyTimes="0;0.04;0.083;0.167;0.21;0.25;0.333;0.377;0.417;0.5;0.544;0.583;0.667;0.71;0.75;0.833;0.877;0.917;0.96;1;1;1;1;1" />
+                  </line>
+                </g>
+                
+                {/* Backpack */}
+                <rect x="-1" y="-12" width="2" height="3" rx="0.5" fill="#10B981" opacity="0.7" />
+                
+                {/* Thinking bubble during stops */}
+                <g id="thinkingBubble" opacity="0">
+                  <circle cx="5" cy="-20" r="4" fill="white" fillOpacity="0.9" stroke="#94A3B8"/>
+                  <text x="5" y="-17" fontSize="6" textAnchor="middle">💭</text>
+                  <animate attributeName="opacity" values="0;1;0;1;0;1;0;1;0;1;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.9;1" />
+                </g>
+
+                {/* Stop-and-go motion animation */}
+                <animateMotion dur="60s" repeatCount="indefinite" rotate="auto" keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.9;1" keyPoints="0;0.2;0.4;0.6;0.8;1;0;0.2;0.4;0.6;0.8" calcMode="linear">
+                  <mpath href="#learningJourneyPath" />
+                </animateMotion>
+              </g>
+
+              {/* Achievement particles that appear during stops */}
+              <g id="achievementParticles">
+                <circle cx="0" cy="0" r="1" fill="#F59E0B" opacity="0">
+                  <animate attributeName="cy" values="0;-8;0" dur="2s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0;0;0;0.6;0;0;0;0.6;0;0;0;0.6;0;0;0;0.6;0;0;0;0.6;0;0;0;0.6;0" dur="65s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="3" cy="0" r="0.8" fill="#10B981" opacity="0">
+                  <animate attributeName="cy" values="0;-6;0" dur="1.8s" repeatCount="indefinite" />
+                  <animate attributeName="opacity" values="0;0;0;0.5;0;0;0;0.5;0;0;0;0.5;0;0;0;0.5;0;0;0;0.5;0;0;0;0.5;0" dur="65s" repeatCount="indefinite" />
+                </circle>
+
+                <animateMotion dur="65s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#learningJourneyPath" />
+                </animateMotion>
+              </g>
+
+              {/* Progress celebration during stops */}
+              <g id="progressCelebration">
+                <text x="0" y="-25" fontSize="12" textAnchor="middle" opacity="0">🎉</text>
+                <animate attributeName="opacity" values="0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;1;0" dur="65s" repeatCount="indefinite" />
+                
+                <animateMotion dur="65s" repeatCount="indefinite" rotate="auto">
+                  <mpath href="#learningJourneyPath" />
+                </animateMotion>
+              </g>
+            </g>
+          </svg>
+          
+          {/* Interactive Learning Milestones with Innovation */}
+          {/* Step 1 - Enrollment Portal */}
+          <div className="absolute left-16 top-16 pointer-events-auto">
+            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
+              <div className="relative">
+                {/* Orbital rings */}
+                <div className="absolute inset-0 w-20 h-20 border border-blue-400/30 rounded-full animate-spin" style={{animationDuration: '10s'}}></div>
+                <div className="absolute inset-2 w-16 h-16 border border-blue-300/20 rounded-full animate-spin" style={{animationDuration: '8s', animationDirection: 'reverse'}}></div>
+                
+                {/* Main milestone */}
+                <div className="relative w-14 h-14 bg-gradient-to-br from-blue-500 via-blue-600 to-cyan-500 rounded-2xl shadow-xl group-hover:shadow-blue-500/50 flex items-center justify-center transform rotate-45 group-hover:rotate-0 transition-all duration-500">
+                  <span className="text-white font-bold text-lg transform -rotate-45 group-hover:rotate-0 transition-all duration-500">1</span>
+                  {/* Success particles */}
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-ping"></div>
+                </div>
+              </div>
+              <div className="mt-3 text-center">
+                <div className="text-sm text-blue-300 font-bold group-hover:text-blue-200 transition-colors">📚 Enroll</div>
+                <div className="text-xs text-blue-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Start Your Journey</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 2 - Learning Hub */}
+          <div className="absolute left-1/2 top-12 transform -translate-x-1/2 pointer-events-auto">
+            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
+              <div className="relative">
+                {/* Pulsing aura */}
+                <div className="absolute inset-0 w-20 h-20 bg-purple-500/20 rounded-full animate-ping"></div>
+                <div className="absolute inset-0 w-20 h-20 bg-purple-400/10 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                
+                <div className="relative w-14 h-14 bg-gradient-to-br from-purple-500 via-purple-600 to-pink-500 rounded-full shadow-xl group-hover:shadow-purple-500/50 flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">2</span>
+                  {/* Knowledge sparks */}
+                  <div className="absolute top-0 left-1/2 w-1 h-1 bg-white rounded-full animate-bounce" style={{animationDelay: '0s'}}></div>
+                  <div className="absolute bottom-0 right-0 w-1 h-1 bg-white rounded-full animate-bounce" style={{animationDelay: '0.3s'}}></div>
+                  <div className="absolute left-0 top-1/2 w-1 h-1 bg-white rounded-full animate-bounce" style={{animationDelay: '0.6s'}}></div>
+                </div>
+              </div>
+              <div className="mt-3 text-center">
+                <div className="text-sm text-purple-300 font-bold group-hover:text-purple-200 transition-colors">🧠 Learn</div>
+                <div className="text-xs text-purple-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Gain Knowledge</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 3 - Practice Lab */}
+          <div className="absolute right-16 top-16 pointer-events-auto">
+            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
+              <div className="relative">
+                {/* Electric field */}
+                <div className="absolute inset-0 w-20 h-20">
+                  <div className="absolute top-2 left-2 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                  <div className="absolute bottom-2 right-2 w-1 h-1 bg-green-300 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
+                  <div className="absolute top-1/2 left-0 w-1 h-1 bg-green-500 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
+                </div>
+                
+                <div className="relative w-14 h-14 bg-gradient-to-br from-green-500 via-emerald-600 to-teal-500 rounded-lg shadow-xl group-hover:shadow-green-500/50 flex items-center justify-center transform group-hover:rotate-12 transition-all duration-500">
+                  <span className="text-white font-bold text-lg">3</span>
+                  {/* Progress indicator */}
+                  <div className="absolute -bottom-1 left-0 right-0 h-1 bg-green-300/30 rounded-full">
+                    <div className="h-full bg-green-400 rounded-full animate-pulse" style={{width: '75%'}}></div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-3 text-center">
+                <div className="text-sm text-green-300 font-bold group-hover:text-green-200 transition-colors">⚡ Practice</div>
+                <div className="text-xs text-green-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Hands-on Labs</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 4 - Project Workshop */}
+          <div className="absolute right-8 top-1/2 transform -translate-y-1/2 pointer-events-auto">
+            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
+              <div className="relative">
+                {/* Building blocks animation */}
+                <div className="absolute -top-2 -left-2 w-4 h-4 bg-orange-400/40 rounded transform rotate-45 animate-pulse"></div>
+                <div className="absolute -bottom-2 -right-2 w-3 h-3 bg-orange-300/40 rounded transform rotate-12 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                
+                <div className="relative w-14 h-14 bg-gradient-to-br from-orange-500 via-orange-600 to-red-500 rounded-xl shadow-xl group-hover:shadow-orange-500/50 flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">4</span>
+                  {/* Tool icons */}
+                  <div className="absolute -top-1 -left-1 text-xs">🛠️</div>
+                </div>
+              </div>
+              <div className="mt-3 text-center">
+                <div className="text-sm text-orange-300 font-bold group-hover:text-orange-200 transition-colors">🔨 Build</div>
+                <div className="text-xs text-orange-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Real Projects</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 5 - Certification Badge */}
+          <div className="absolute right-16 bottom-16 pointer-events-auto">
+            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
+              <div className="relative">
+                {/* Achievement glow */}
+                <div className="absolute inset-0 w-20 h-20 bg-red-500/20 rounded-full animate-pulse"></div>
+                <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-red-400/10 to-pink-400/10 rounded-full animate-spin" style={{animationDuration: '15s'}}></div>
+                
+                <div className="relative w-14 h-14 bg-gradient-to-br from-red-500 via-pink-600 to-rose-500 rounded-full shadow-xl group-hover:shadow-red-500/50 flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">5</span>
+                  {/* Crown effect */}
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-yellow-400 text-xs">👑</div>
+                </div>
+              </div>
+              <div className="mt-3 text-center">
+                <div className="text-sm text-red-300 font-bold group-hover:text-red-200 transition-colors">🏆 Certify</div>
+                <div className="text-xs text-red-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Get Certified</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 6 - Career Launch */}
+          <div className="absolute left-16 bottom-16 pointer-events-auto">
+            <div className="group cursor-pointer transform hover:scale-110 transition-all duration-500">
+              <div className="relative">
+                {/* Rocket trail */}
+                <div className="absolute top-0 left-1/2 w-0.5 h-8 bg-gradient-to-t from-indigo-500/50 to-transparent animate-pulse"></div>
+                <div className="absolute -top-1 left-1/2 w-2 h-2 bg-indigo-400 rounded-full animate-bounce transform -translate-x-1/2"></div>
+                
+                <div className="relative w-14 h-14 bg-gradient-to-br from-indigo-500 via-purple-600 to-blue-600 rounded-2xl shadow-xl group-hover:shadow-indigo-500/50 flex items-center justify-center transform group-hover:-rotate-12 transition-all duration-500">
+                  <span className="text-white font-bold text-lg">6</span>
+                  {/* Success sparkles */}
+                  <div className="absolute -top-1 -right-1 text-yellow-300 text-xs animate-pulse">✨</div>
+                  <div className="absolute -bottom-1 -left-1 text-yellow-300 text-xs animate-pulse" style={{animationDelay: '0.5s'}}>⭐</div>
+                </div>
+              </div>
+              <div className="mt-3 text-center">
+                <div className="text-sm text-indigo-300 font-bold group-hover:text-indigo-200 transition-colors">🚀 Career</div>
+                <div className="text-xs text-indigo-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Launch Success</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Dynamic Success Metrics */}
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-green-400/30 shadow-lg">
+            <div className="flex items-center space-x-3">
+              <div className="flex space-x-1">
+                <div className="w-1 h-4 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-1 h-3 bg-green-300 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                <div className="w-1 h-5 bg-green-500 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+              </div>
+              <div>
+                <div className="text-green-300 text-sm font-bold">Live: 1,247</div>
+                <div className="text-green-400/80 text-xs">Enrolled Today</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="absolute bottom-4 left-4 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-blue-400/30 shadow-lg">
+            <div className="flex items-center space-x-3">
+              <div className="relative w-8 h-8">
+                <div className="absolute inset-0 bg-blue-400/30 rounded-full animate-ping"></div>
+                <div className="relative w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">98%</span>
+                </div>
+              </div>
+              <div>
+                <div className="text-blue-300 text-sm font-bold">Success Rate</div>
+                <div className="text-blue-400/80 text-xs">Students Placed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center" style={{ contain: 'layout' }}>
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4 border border-white/20">
+            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20">
               <Star className="w-4 h-4 text-yellow-400" />
               <span className="text-xs font-medium">🏆 Best Software Training Institute in Hyderabad</span>
             </div>
             
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 leading-tight" style={{ contain: 'layout', willChange: 'auto' }}>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ contain: 'layout', willChange: 'auto' }}>
               <span 
                 className="bg-gradient-to-r from-orange-400 via-teal-400 to-blue-400 bg-clip-text text-transparent"
                 style={{ 
@@ -194,7 +540,7 @@ export default function Home() {
                 fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
                 lineHeight: '1.625',
                 color: 'rgb(229 231 235)',
-                marginBottom: '1rem',
+                marginBottom: '2rem',
                 maxWidth: '48rem',
                 marginLeft: 'auto',
                 marginRight: 'auto',
@@ -208,7 +554,7 @@ export default function Home() {
               Get knowledge in practical way, Everyone satisfied with our innovation way of knowledge transfer. Best Software Training Institute in Hyderabad for best brains!
             </p>
             
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-6 mt-6">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 mt-8">
               {[
                 { 
                   label: 'Online Training', 
@@ -264,26 +610,80 @@ export default function Home() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-4xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto mt-12">
               {[
-                { number: '5000+', label: 'Students Trained', icon: GraduationCap },
-                { number: '20+', label: 'Technology Courses', icon: Code },
-                { number: '100%', label: 'Placement Rate', icon: TrendingUp },
-                { number: '15+', label: 'Years Experience', icon: Award }
-              ].map((stat, _index) => (
+                { number: '5000+', label: 'Students Trained', icon: GraduationCap, color: 'from-blue-500 to-cyan-500', message: '🎉 Join our success story' },
+                { number: '20+', label: 'Technology Courses', icon: Code, color: 'from-purple-500 to-pink-500', message: '📚 Master trending tech' },
+                { number: '100%', label: 'Placement Rate', icon: TrendingUp, color: 'from-green-500 to-teal-500', message: '💼 Guaranteed career growth' },
+                { number: '15+', label: 'Years Experience', icon: Award, color: 'from-orange-500 to-red-500', message: '🏆 Learn from experts' }
+              ].map((stat, index) => (
                 <div
                   key={stat.label}
-                  className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-3 border border-white/10 hover:scale-105 hover:-translate-y-1 transition-all duration-300"
+                  className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-4 md:p-5 border border-white/10 hover:bg-orange-500/10 hover:scale-105 hover:-translate-y-2 hover:border-orange-400 hover:shadow-xl transition-all duration-500 cursor-pointer"
+                  style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-2">
-                    <stat.icon className="w-4 h-4" />
+                  {/* Icon with rotation effect */}
+                  <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500`}>
+                    <stat.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-lg md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent mb-1">
+                  
+                  {/* Number */}
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-all duration-300">
                     {stat.number}
                   </div>
-                  <div className="text-gray-200 font-medium text-xs md:text-sm">{stat.label}</div>
+                  
+                  {/* Label */}
+                  <div className="text-gray-200 font-medium text-sm md:text-base group-hover:text-white transition-colors duration-300 mb-2">
+                    {stat.label}
+                  </div>
+                  
+                  {/* Success message - always present but hidden/shown with opacity */}
+                  <div className="text-xs font-bold text-orange-300 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-500 h-6 flex items-center justify-center">
+                    {stat.message}
+                  </div>
                 </div>
               ))}
+            </div>
+            
+            {/* Scroll Teaser Section */}
+            <div className="mt-16 text-center">
+              <div className="inline-flex flex-col items-center space-y-3">
+                <div className="flex items-center space-x-2 text-gray-300">
+                  <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
+                  <span className="text-sm">Discover amazing courses below</span>
+                  <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
+                </div>
+                
+                {/* Interactive scroll button */}
+                <button
+                  onClick={() => {
+                    document.querySelector('#courses')?.scrollIntoView({ 
+                      behavior: 'smooth',
+                      block: 'start'
+                    });
+                  }}
+                  className="group relative bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-bounce hover:animate-none"
+                >
+                  <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                  <div className="relative flex items-center space-x-2">
+                    <span>Explore Our Courses</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  </div>
+                </button>
+                
+                {/* Floating testimonial teaser */}
+                <div className="mt-4 bg-white/5 backdrop-blur-sm rounded-lg p-3 border border-white/10 max-w-md">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3 h-3 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <span className="text-xs text-gray-300">"Best decision of my career!"</span>
+                  </div>
+                  <p className="text-xs text-gray-400">- Rahul S, ServiceNow Developer @ Infosys</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
