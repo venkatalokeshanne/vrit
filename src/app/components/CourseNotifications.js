@@ -12,8 +12,6 @@ const CourseNotifications = ({ courseName }) => {
   useEffect(() => {
     fetchCourseNotifications()
       .then((data) => {
-        console.log('Fetched notifications from Sanity:', data);
-        console.log('Number of notifications:', data?.length || 0);
         setNotifications(data || []);
       })
       .catch((error) => {
@@ -24,13 +22,11 @@ const CourseNotifications = ({ courseName }) => {
 
   useEffect(() => {
     if (!notifications.length) return;
-    console.log('Notifications cycle - total:', notifications.length, 'current index:', visibleIndex, 'show:', show);
     let showTimeout, hideTimeout;
 
     // Always show the notification after 2 seconds if not already showing
     if (!show) {
       showTimeout = setTimeout(() => {
-        console.log('Setting show to true for notification:', visibleIndex);
         setShow(true);
       }, 2000);
     }
@@ -38,7 +34,6 @@ const CourseNotifications = ({ courseName }) => {
     // Hide after 8 seconds if currently showing
     if (show) {
       hideTimeout = setTimeout(() => {
-        console.log('Hiding notification and moving to next');
         setShow(false);
         setTimeout(() => {
           setVisibleIndex((prev) => (prev + 1) % notifications.length);

@@ -23,7 +23,6 @@ export async function fetchCourseNotifications() {
   }`;
   try {
     const result = await sanityClient.fetch(query);
-    console.log('Sanity query result:', result);
     return result;
   } catch (error) {
     console.error('Sanity fetch error:', error);
