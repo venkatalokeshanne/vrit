@@ -64,10 +64,6 @@ const CourseNotifications = ({ courseName }) => {
 
   return (
     <div className="fixed bottom-4 left-4 z-50 space-y-3">
-      {/* Debug info - always visible */}
-      <div className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-mono">
-        Total: {notifications.length} | Current: {visibleIndex + 1} | Show: {show ? 'YES' : 'NO'}
-      </div>
       
       {show && (
         <div
