@@ -54,12 +54,6 @@ const CourseNotifications = ({ courseName }) => {
     }, 500);
   };
 
-  if (!notifications.length) return (
-    <div className="fixed bottom-4 left-4 z-50 bg-red-100 text-red-800 p-2 rounded">
-      No notifications loaded
-    </div>
-  );
-
   const notification = notifications[visibleIndex];
 
   return (
