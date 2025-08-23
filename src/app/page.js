@@ -1272,50 +1272,14 @@ export default function Home() {
                     </svg>
                   </div>
                   
-                  {/* Clean Course Acronym Display */}
+                  {/* Clean Course Name Display */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className={`font-black bg-gradient-to-b from-white via-white/90 to-white/70 bg-clip-text text-transparent mb-2 select-none drop-shadow-lg ${
-                        course.name.includes('PYTHON') || course.name.includes('HADOOP') || course.name.includes('DEVOPS') || 
-                        course.name.includes('BASIS') || course.name.includes('PY+AWS') ? 'text-4xl' : 
-                        course.name.includes('FICO') || course.name.includes('HANA') || course.name.includes('PEGA') || 
-                        course.name.includes('MULE') || course.name.includes('SNOW') || course.name.includes('FULL') || course.name.includes('INFA') ? 'text-5xl' : 'text-6xl'
-                      }`}>
-                        {course.name.includes('ServiceNow') ? 'SN' :
-                         course.name.includes('Salesforce') ? 'SF' :
-                         course.name.includes('SAP FICO') ? 'FICO' :
-                         course.name.includes('SAP SD') ? 'SD' :
-                         course.name.includes('SAP MM') ? 'MM' :
-                         course.name.includes('SAP Basis') ? 'BASIS' :
-                         course.name.includes('SAP EWM') ? 'EWM' :
-                         course.name.includes('SAP HANA') ? 'HANA' :
-                         course.name.includes('S/4 HANA') ? 'S/4H' :
-                         course.name.includes('SAP Leonardo') ? 'LEO' :
-                         course.name.includes('SAP Security') ? 'SEC' :
-                         course.name.includes('SAP Logistics') ? 'LOG' :
-                         course.name.includes('SAP') ? 'SAP' :
-                         course.name.includes('Pega') ? 'PEGA' :
-                         course.name.includes('Azure DevOps') || course.name.includes('AWS Cloud') ? 'CLOUD' :
-                         course.name.includes('AWS') ? 'AWS' :
-                         course.name.includes('Mulesoft') ? 'MULE' :
-                         course.name.includes('SAS Clinical') ? 'SAS' :
-                         course.name.includes('Data Science') ? 'DS' :
-                         course.name.includes('Python With AWS') ? 'PY+AWS' :
-                         course.name.includes('Python') ? 'PYTHON' :
-                         course.name.includes('Workday') ? 'WD' :
-                         course.name.includes('Machine Learning') ? 'ML' :
-                         course.name.includes('AWS With DevOps') ? 'DEVOPS' :
-                         course.name.includes('DevOps') ? 'DEVOPS' :
-                         course.name.includes('Informatica MDM') ? 'INFA' :
-                         course.name.includes('Full Stack') ? 'FULL' :
-                         course.name.includes('EDI Training') ? 'EDI' :
-                         course.name.includes('Hadoop') ? 'HADOOP' :
-                         course.name.includes('Snowflake') ? 'SNOW' :
-                         course.name.includes('Google Cloud') ? 'GCP' :
-                         course.name.split(' ').map(word => word[0]).join('').substring(0, 3)}
-                      </div>
-                      <div className="text-xs text-white/80 font-medium tracking-wide uppercase bg-black/20 backdrop-blur-sm rounded-full px-3 py-1">
-                        {course.name.length > 18 ? course.name.substring(0, 18) + '...' : course.name}
+                    <div className="text-center px-4">
+                      <div className="relative">
+                        {/* Simple elegant course name */}
+                        <h3 className="font-bold text-2xl text-white leading-tight tracking-tight group-hover:text-cyan-300 transition-colors duration-300 drop-shadow-lg">
+                          {course.name}
+                        </h3>
                       </div>
                     </div>
                   </div>
