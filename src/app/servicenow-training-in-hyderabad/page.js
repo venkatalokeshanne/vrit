@@ -140,8 +140,6 @@ export default function ServiceNowTrainingInHyderabad() {
     <>
       {/* Dynamic SEO Headers from Sanity CMS */}
       <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
-      {/* Dynamic SEO Headers from Sanity CMS */}
-      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       
       {/* SEO-friendly structured content */}
       <header>

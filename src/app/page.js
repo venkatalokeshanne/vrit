@@ -1,7 +1,6 @@
 ﻿'use client';
 
 import React from 'react';
-import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { 
   Phone,
   Star, 
