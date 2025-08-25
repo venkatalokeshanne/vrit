@@ -14,6 +14,14 @@ export default function ChatWidget() {
     console.log('Tawk.to widget loaded successfully!');
   };
 
+  const onBeforeLoad = () => {
+    console.log('Tawk.to widget preparing to load...');
+  };
+
+  const onStatusChange = (status) => {
+    console.log('Tawk.to status changed:', status);
+  };
+
   const onChatStarted = () => {
     console.log('Chat started!');
     setIsVisible(false); // Hide our contact widget when chat starts
@@ -21,6 +29,26 @@ export default function ChatWidget() {
 
   const onChatEnded = () => {
     console.log('Chat ended!');
+  };
+
+  const onChatMessageSystem = (message) => {
+    console.log('System message received:', message);
+  };
+
+  const onChatMessageVisitor = (message) => {
+    console.log('Visitor message received:', message);
+  };
+
+  const onUnreadCountChanged = (count) => {
+    console.log('Unread count changed:', count);
+  };
+
+  const onChatMaximized = () => {
+    console.log('Chat maximized!');
+  };
+
+  const onChatMinimized = () => {
+    console.log('Chat minimized!');
   };
 
   // Function to maximize the chat widget using the React component ref
@@ -55,15 +83,21 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Dynamic SEO Headers from Sanity CMS */}
       {/* Official Tawk.to React Component */}
       <TawkMessengerReact
         propertyId="689718b1c2a1861924262ae2"
         widgetId="1j273guc9"
         ref={tawkMessengerRef}
         onLoad={onLoad}
+        onBeforeLoad={onBeforeLoad}
+        onStatusChange={onStatusChange}
         onChatStarted={onChatStarted}
         onChatEnded={onChatEnded}
+        onChatMaximized={onChatMaximized}
+        onChatMinimized={onChatMinimized}
+        onChatMessageSystem={onChatMessageSystem}
+        onChatMessageVisitor={onChatMessageVisitor}
+        onUnreadCountChanged={onUnreadCountChanged}
       />
 
       {/* Contact Buttons Stack */}

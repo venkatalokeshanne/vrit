@@ -577,8 +577,21 @@ export default async function CoursesPage() {
     };
   });
 
-  // Combine static and dynamic courses
+  // Combine static and dynamic courses and remove duplicates based on slug
   const allCourses = [...transformedDynamicCourses, ...staticCourses];
+  
+  // Remove duplicates by slug - priority to dynamic courses
+  const uniqueCourses = allCourses.reduce((acc, current) => {
+    const existingCourse = acc.find(course => course.slug === current.slug);
+    if (!existingCourse) {
+      acc.push(current);
+    } else if (current.isDynamic && !existingCourse.isDynamic) {
+      // Replace static course with dynamic course if duplicate found
+      const index = acc.findIndex(course => course.slug === current.slug);
+      acc[index] = current;
+    }
+    return acc;
+  }, []);
   
   // Get the complete course metadata from static file
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
@@ -591,12 +604,22 @@ export default async function CoursesPage() {
   const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   // Log the courseMetadata to see what we have
-  console.log('ðŸ“Š Course Metadata:', courseMetadata);
-  console.log('ðŸš€ Dynamic Courses Found:', dynamicCourses.length);
+  console.log('Course Metadata:', courseMetadata);
+  console.log('🔍 Dynamic Courses Found:', dynamicCourses.length);
+  console.log('� Static Courses Defined:', staticCourses.length);
+  console.log('�📚 Total Unique Courses:', uniqueCourses.length);
+  
+  // Debug: Log any duplicates found
+  const dynamicSlugs = transformedDynamicCourses.map(c => c.slug);
+  const staticSlugs = staticCourses.map(c => c.slug);
+  const duplicates = dynamicSlugs.filter(slug => staticSlugs.includes(slug));
+  if (duplicates.length > 0) {
+    console.log('⚠️ Duplicate slugs found (dynamic will override static):', duplicates);
+  }
 
   
   // Sort courses by dynamic first, then trending, then by rating
-  const sortedCourses = allCourses.sort((a, b) => 
+  const sortedCourses = uniqueCourses.sort((a, b) => 
     (b.isDynamic ? 1 : 0) - (a.isDynamic ? 1 : 0) ||
     b.trending - a.trending || 
     b.rating - a.rating
@@ -702,19 +725,14 @@ export default async function CoursesPage() {
                 <div className={`relative p-6 bg-gradient-to-br ${course.bgColor} border-b border-white/10`}>
                   {/* Badges */}
                   <div className="flex items-center gap-2 mb-4">
-                    {course.isDynamic && (
-                      <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold rounded-full">
-                        ðŸ’Ž DYNAMIC
-                      </span>
-                    )}
                     {course.trending && (
                       <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold rounded-full">
-                        ðŸ”¥ TRENDING
+                        🔥 TRENDING
                       </span>
                     )}
                     {course.new && (
                       <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-500 text-white text-xs font-bold rounded-full">
-                        âœ¨ NEW
+                        ✨ NEW
                       </span>
                     )}
                   </div>
