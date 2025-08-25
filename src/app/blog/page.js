@@ -1,4 +1,5 @@
-import { client } from '../../lib/sanity'
+﻿import { client } from '../../lib/sanity'
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import Link from 'next/link'
 import Image from 'next/image'
 import { urlFor } from '../../lib/sanity'
@@ -80,7 +81,7 @@ export default async function BlogPage({ searchParams }) {
                 <p className="text-sm text-slate-300">Latest insights and updates</p>
                 {categoryFilter && (
                   <div className="flex items-center gap-2">
-                    <span className="text-slate-400">•</span>
+                    <span className="text-slate-400">â€¢</span>
                     <span className="text-blue-400 text-sm">Filtered by: {categoryFilter}</span>
                     <Link 
                       href="/blog" 
@@ -132,7 +133,7 @@ export default async function BlogPage({ searchParams }) {
                 ) : (
                   <div className="text-center py-12">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white text-xl">📝</span>
+                      <span className="text-white text-xl">ðŸ“</span>
                     </div>
                     <p className="text-slate-400">No articles published yet.</p>
                   </div>
@@ -174,7 +175,7 @@ function FeaturedPostCard({ post }) {
           )}
           <div className="absolute top-2 left-2">
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 text-xs font-semibold rounded-full shadow-lg">
-              ⭐ Featured
+              â­ Featured
             </span>
           </div>
         </div>
@@ -204,7 +205,7 @@ function FeaturedPostCard({ post }) {
             </time>
             {post.readingTime && (
               <>
-                <span>·</span>
+                <span>Â·</span>
                 <span>{post.readingTime}m</span>
               </>
             )}
@@ -280,7 +281,7 @@ function CompactPostItem({ post }) {
               {post.featured && (
                 <div className="flex-shrink-0">
                   <span className="bg-yellow-900 text-yellow-300 text-xs px-2 py-1 rounded-full font-medium shadow-sm">
-                    ⭐
+                    â­
                   </span>
                 </div>
               )}
@@ -415,7 +416,7 @@ function BlogSidebar({ posts, currentCategory }) {
 
       {/* Newsletter Widget */}
       <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl shadow-lg p-6 text-white">
-        <h3 className="text-lg font-semibold mb-2">📧 Stay Updated</h3>
+        <h3 className="text-lg font-semibold mb-2">ðŸ“§ Stay Updated</h3>
         <p className="text-green-100 text-sm mb-4">Get the latest posts delivered to your inbox</p>
         <div className="space-y-3">
           <input 
@@ -456,7 +457,7 @@ function SidebarPostItem({ post, index }) {
             </time>
             {post.readingTime && (
               <>
-                <span>·</span>
+                <span>Â·</span>
                 <span>{post.readingTime}m</span>
               </>
             )}

@@ -1,4 +1,5 @@
 ﻿import CourseSidebar from '../components/CourseSidebar';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
@@ -118,6 +119,8 @@ export default function GoogleCloudTrainingInUSUKCanadaAustralia() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
       {/* Structured Data for SEO */}
       {structuredDataJson && (

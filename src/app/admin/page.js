@@ -1,6 +1,7 @@
 ﻿'use client'
 
 import { useState, useEffect } from 'react'
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { Plus, Edit2, Trash2, User, Tag, FileText, Save } from 'lucide-react'
 import RichTextEditor from './RichTextEditor'
 import ImageUploader from './ImageUploader'

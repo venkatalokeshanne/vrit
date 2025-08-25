@@ -1,6 +1,7 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect } from 'react'
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { createClient } from '@sanity/client'
 
 const client = createClient({
@@ -140,7 +141,7 @@ export default function AddTestimonial() {
           {submitStatus === 'success' && (
             <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-md">
               <p className="text-green-800 text-sm font-medium">
-                🎉 Thank you! Your testimonial has been submitted successfully.
+                ðŸŽ‰ Thank you! Your testimonial has been submitted successfully.
               </p>
             </div>
           )}
@@ -148,7 +149,7 @@ export default function AddTestimonial() {
           {submitStatus === 'error' && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-md">
               <p className="text-red-800 text-sm font-medium">
-                ❌ There was an error submitting your testimonial. Please try again.
+                âŒ There was an error submitting your testimonial. Please try again.
               </p>
             </div>
           )}
@@ -265,7 +266,7 @@ export default function AddTestimonial() {
 
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-500">
-              Your testimonial will help inspire other learners on their journey! 🚀
+              Your testimonial will help inspire other learners on their journey! ðŸš€
             </p>
           </div>
         </div>

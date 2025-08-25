@@ -40,6 +40,7 @@ export const EnquireNowButton = ({
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
       <button 
         onClick={handleClick}
         className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
@@ -92,6 +93,7 @@ export const DownloadCourseButton = ({
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
       <button 
         onClick={handleClick}
         className={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}

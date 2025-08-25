@@ -1,4 +1,5 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { getAllCourses } from '../../lib/courses';
 import { 
@@ -591,8 +592,8 @@ export default async function CoursesPage() {
   const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   // Log the courseMetadata to see what we have
-  console.log('📊 Course Metadata:', courseMetadata);
-  console.log('🚀 Dynamic Courses Found:', dynamicCourses.length);
+  console.log('ðŸ“Š Course Metadata:', courseMetadata);
+  console.log('ðŸš€ Dynamic Courses Found:', dynamicCourses.length);
 
   
   // Sort courses by dynamic first, then trending, then by rating
@@ -704,17 +705,17 @@ export default async function CoursesPage() {
                   <div className="flex items-center gap-2 mb-4">
                     {course.isDynamic && (
                       <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold rounded-full">
-                        💎 DYNAMIC
+                        ðŸ’Ž DYNAMIC
                       </span>
                     )}
                     {course.trending && (
                       <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold rounded-full">
-                        🔥 TRENDING
+                        ðŸ”¥ TRENDING
                       </span>
                     )}
                     {course.new && (
                       <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-500 text-white text-xs font-bold rounded-full">
-                        ✨ NEW
+                        âœ¨ NEW
                       </span>
                     )}
                   </div>

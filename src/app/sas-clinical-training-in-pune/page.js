@@ -1,4 +1,5 @@
 ﻿import Link from 'next/link';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import Image from 'next/image';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
@@ -115,6 +116,8 @@ export default function SASClinicalTrainingInPune() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
 
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">

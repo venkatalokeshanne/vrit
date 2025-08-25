@@ -1,4 +1,5 @@
 ﻿import Link from 'next/link';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import Image from 'next/image';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
@@ -108,6 +109,8 @@ export default function SASClinicalOnlineTrainingInHyderabad() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       {/* JSON-LD Structured Data for SEO */}
       {/* Structured Data for SEO */}
       {structuredDataJson && (

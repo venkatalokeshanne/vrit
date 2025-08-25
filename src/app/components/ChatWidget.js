@@ -55,6 +55,8 @@ export default function ChatWidget() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       {/* Official Tawk.to React Component */}
       <TawkMessengerReact
         propertyId="689718b1c2a1861924262ae2"

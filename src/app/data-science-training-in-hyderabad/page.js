@@ -16,6 +16,7 @@ import {
   Brain,
   Activity
 } from 'lucide-react';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'data-science-training-in-hyderabad';// Generate metadata for this page using static data
@@ -135,6 +136,8 @@ export default function DataScienceTrainingInHyderabad() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

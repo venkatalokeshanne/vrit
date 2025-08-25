@@ -1,4 +1,5 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import Image from 'next/image';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
@@ -41,13 +42,13 @@ export default function SapFicoTraining() {
   const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   // Log the courseMetadata to see what we have
-  console.log('📊 Course Metadata:', courseMetadata);
+  console.log('ðŸ“Š Course Metadata:', courseMetadata);
 
   
   const sapFicoFaqs = [
     {
       question: "What is SAP FICO and why is it important for careers?",
-      answer: "SAP FICO (Financial Accounting and Controlling) is one of the most important modules in SAP ERP, handling financial transactions, reporting, and controlling activities. SAP FICO professionals are in high demand with excellent career prospects and salaries ranging from ₹8-25 LPA."
+      answer: "SAP FICO (Financial Accounting and Controlling) is one of the most important modules in SAP ERP, handling financial transactions, reporting, and controlling activities. SAP FICO professionals are in high demand with excellent career prospects and salaries ranging from â‚¹8-25 LPA."
     },
     {
       question: "What are the prerequisites for SAP FICO training?",
@@ -100,6 +101,8 @@ export default function SapFicoTraining() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       
@@ -239,16 +242,16 @@ export default function SapFicoTraining() {
                 </div>
                 <div className="grid md:grid-cols-1 gap-4">
                   <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-4 border border-purple-400/20">
-                    <p className="text-purple-100">• We offer you an excellent platform for career growth.</p>
+                    <p className="text-purple-100">â€¢ We offer you an excellent platform for career growth.</p>
                   </div>
                   <div className="bg-gradient-to-br from-pink-500/10 to-rose-500/10 rounded-xl p-4 border border-pink-400/20">
-                    <p className="text-pink-100">• The complete SAP FICO training is customized with real-time online sessions and project work.</p>
+                    <p className="text-pink-100">â€¢ The complete SAP FICO training is customized with real-time online sessions and project work.</p>
                   </div>
                   <div className="bg-gradient-to-br from-rose-500/10 to-purple-500/10 rounded-xl p-4 border border-rose-400/20">
-                    <p className="text-rose-100">• Added to these highlights, We provide a 100% guarantee of your success.</p>
+                    <p className="text-rose-100">â€¢ Added to these highlights, We provide a 100% guarantee of your success.</p>
                   </div>
                   <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-4 border border-purple-400/20">
-                    <p className="text-purple-100">• We have a record of working closely with trainers who are industry experts.</p>
+                    <p className="text-purple-100">â€¢ We have a record of working closely with trainers who are industry experts.</p>
                   </div>
                 </div>
               </div>

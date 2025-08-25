@@ -1,4 +1,5 @@
 ﻿import FAQ from '../components/FAQ';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { getStructuredDataStatic } from '../../utils/staticCourses';
 
 // FAQ Data for Terms and Conditions
@@ -74,6 +75,7 @@ export default function TermsAndConditions() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-br from-slate-800/50 via-gray-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-4 lg:p-8 md:p-12 border border-gray-700/30 shadow-2xl">
+                <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
           
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
             <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">

@@ -1,4 +1,5 @@
 ﻿import CourseSidebar from '../components/CourseSidebar';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
@@ -136,6 +137,8 @@ export default function PythonOnlineTraining() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
   
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">

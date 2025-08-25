@@ -1,6 +1,7 @@
-'use client';
+﻿'use client';
 
 import React from 'react';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { 
   Phone,
   Star, 
@@ -172,9 +173,9 @@ export default function Home() {
           <div className="absolute inset-0">
             {/* Floating code symbols */}
             <div className="absolute top-20 left-20 text-blue-400/20 text-2xl animate-bounce" style={{animationDelay: '0s', animationDuration: '4s'}}>{'</>'}</div>
-            <div className="absolute top-32 right-24 text-purple-400/20 text-xl animate-bounce" style={{animationDelay: '1s', animationDuration: '3s'}}>🚀</div>
-            <div className="absolute bottom-20 left-32 text-green-400/20 text-lg animate-bounce" style={{animationDelay: '2s', animationDuration: '5s'}}>⚡</div>
-            <div className="absolute bottom-32 right-20 text-orange-400/20 text-xl animate-bounce" style={{animationDelay: '3s', animationDuration: '4s'}}>🎯</div>
+            <div className="absolute top-32 right-24 text-purple-400/20 text-xl animate-bounce" style={{animationDelay: '1s', animationDuration: '3s'}}>ðŸš€</div>
+            <div className="absolute bottom-20 left-32 text-green-400/20 text-lg animate-bounce" style={{animationDelay: '2s', animationDuration: '5s'}}>âš¡</div>
+            <div className="absolute bottom-32 right-20 text-orange-400/20 text-xl animate-bounce" style={{animationDelay: '3s', animationDuration: '4s'}}>ðŸŽ¯</div>
             
             {/* Floating tech icons */}
             <div className="absolute top-1/3 left-12 w-8 h-8 bg-blue-500/10 rounded-lg rotate-45 animate-spin" style={{animationDuration: '8s'}}></div>
@@ -225,7 +226,7 @@ export default function Home() {
                 {/* Stage 1 Message */}
                 <g id="stage1Message" opacity="0">
                   <rect x="70" y="105" width="120" height="30" rx="8" fill="#3B82F6" fillOpacity="0.9" stroke="#60A5FA" strokeWidth="1"/>
-                  <text x="130" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🎯 Welcome!</text>
+                  <text x="130" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸŽ¯ Welcome!</text>
                   <text x="130" y="128" fontSize="8" fill="#DBEAFE" textAnchor="middle">Choose your course & begin</text>
                   <animate attributeName="opacity" values="0;1;0;0;0;0;0;1;0;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.1;0.2;0.4;0.5;0.6;0.6;0.7;0.8;0.9;1;1" />
                 </g>
@@ -233,7 +234,7 @@ export default function Home() {
                 {/* Stage 2 Message - moved to top-right position */}
                 <g id="stage2Message" opacity="0">
                   <rect x="1030" y="105" width="140" height="30" rx="8" fill="#8B5CF6" fillOpacity="0.9" stroke="#A78BFA" strokeWidth="1"/>
-                  <text x="1100" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🧠 Learning Phase</text>
+                  <text x="1100" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸ§  Learning Phase</text>
                   <text x="1100" y="128" fontSize="8" fill="#DDD6FE" textAnchor="middle">Master fundamentals & theory</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.083;0.083;0.3;0.4;0.5;0.583;0.583;0.8;0.9;1;1" />
                 </g>
@@ -241,7 +242,7 @@ export default function Home() {
                 {/* Stage 3 Message - moved to left side of right-center position */}
                 <g id="stage3Message" opacity="0">
                   <rect x="950" y="260" width="140" height="30" rx="8" fill="#10B981" fillOpacity="0.9" stroke="#34D399" strokeWidth="1"/>
-                  <text x="1020" y="273" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">⚡ Practice Time!</text>
+                  <text x="1020" y="273" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">âš¡ Practice Time!</text>
                   <text x="1020" y="283" fontSize="8" fill="#D1FAE5" textAnchor="middle">Hands-on labs & exercises</text>
                   <animate attributeName="opacity" values="0;0;0;1;0;0;0;0;0;1;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.15;0.167;0.167;0.4;0.5;0.65;0.667;0.667;0.9;1;1" />
                 </g>
@@ -249,7 +250,7 @@ export default function Home() {
                 {/* Stage 4 Message - moved to bottom-right position */}
                 <g id="stage4Message" opacity="0">
                   <rect x="920" y="505" width="130" height="30" rx="8" fill="#F59E0B" fillOpacity="0.9" stroke="#FBBF24" strokeWidth="1"/>
-                  <text x="985" y="518" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🛠️ Build Projects</text>
+                  <text x="985" y="518" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸ› ï¸ Build Projects</text>
                   <text x="985" y="528" fontSize="8" fill="#FEF3C7" textAnchor="middle">Real-world applications</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.217;0.217;0.3;0.5;0.717;0.717;0.8;0.8;0.9;1;1" />
                 </g>
@@ -257,7 +258,7 @@ export default function Home() {
                 {/* Stage 5 Message - moved to bottom-left position */}
                 <g id="stage5Message" opacity="0">
                   <rect x="70" y="485" width="140" height="30" rx="8" fill="#EF4444" fillOpacity="0.9" stroke="#F87171" strokeWidth="1"/>
-                  <text x="140" y="498" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🏆 Get Certified!</text>
+                  <text x="140" y="498" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸ† Get Certified!</text>
                   <text x="140" y="508" fontSize="8" fill="#FEE2E2" textAnchor="middle">Earn industry recognition</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.333;0.333;0.417;0.5;0.833;0.833;0.917;0.92;1;1;1" />
                 </g>
@@ -265,7 +266,7 @@ export default function Home() {
                 {/* Stage 6 Message - New Networking Stage */}
                 <g id="stage6Message" opacity="0">
                   <rect x="50" y="250" width="130" height="30" rx="8" fill="#06B6D4" fillOpacity="0.9" stroke="#67E8F9" strokeWidth="1"/>
-                  <text x="115" y="263" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🌐 Network</text>
+                  <text x="115" y="263" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸŒ Network</text>
                   <text x="115" y="273" fontSize="8" fill="#E0F7FA" textAnchor="middle">Build connections</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.45;0.45;0.48;0.5;0.95;0.95;0.98;1;1;1;1" />
                 </g>
@@ -374,7 +375,7 @@ export default function Home() {
                 {/* Thinking bubble during stops */}
                 <g id="thinkingBubble" opacity="0">
                   <circle cx="5" cy="-20" r="4" fill="white" fillOpacity="0.9" stroke="#94A3B8"/>
-                  <text x="5" y="-17" fontSize="6" textAnchor="middle">💭</text>
+                  <text x="5" y="-17" fontSize="6" textAnchor="middle">ðŸ’­</text>
                   <animate attributeName="opacity" values="0;1;0;1;0;1;0;1;0;1;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.1;0.2;0.3;0.4;0.5;0.6;0.7;0.8;0.9;1" />
                 </g>
 
@@ -402,7 +403,7 @@ export default function Home() {
 
               {/* Progress celebration during stops */}
               <g id="progressCelebration">
-                <text x="0" y="-25" fontSize="12" textAnchor="middle" opacity="0">🎉</text>
+                <text x="0" y="-25" fontSize="12" textAnchor="middle" opacity="0">ðŸŽ‰</text>
                 <animate attributeName="opacity" values="0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;1;0;0;0;1;0" dur="65s" repeatCount="indefinite" />
                 
                 <animateMotion dur="65s" repeatCount="indefinite" rotate="auto">
@@ -429,7 +430,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-blue-300 font-bold group-hover:text-blue-200 transition-colors">📚 Enroll</div>
+                <div className="text-sm text-blue-300 font-bold group-hover:text-blue-200 transition-colors">ðŸ“š Enroll</div>
                 <div className="text-xs text-blue-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Start Your Journey</div>
               </div>
             </div>
@@ -452,7 +453,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-sm text-purple-300 font-bold group-hover:text-purple-200 transition-colors">🧠 Learn</div>
+                <div className="text-sm text-purple-300 font-bold group-hover:text-purple-200 transition-colors">ðŸ§  Learn</div>
                 <div className="text-xs text-purple-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Gain Knowledge</div>
               </div>
             </div>
@@ -478,7 +479,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-green-300 font-bold group-hover:text-green-200 transition-colors">⚡ Practice</div>
+                <div className="text-sm text-green-300 font-bold group-hover:text-green-200 transition-colors">âš¡ Practice</div>
                 <div className="text-xs text-green-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Hands-on Labs</div>
               </div>
             </div>
@@ -495,11 +496,11 @@ export default function Home() {
                 <div className="relative w-14 h-14 bg-gradient-to-br from-red-500 via-pink-600 to-rose-500 rounded-full shadow-xl group-hover:shadow-red-500/50 flex items-center justify-center border-2 border-yellow-400/50">
                   <span className="text-white font-bold text-lg">4</span>
                   {/* Achievement crown */}
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-yellow-400 text-xs">�</div>
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-yellow-400 text-xs">ï¿½</div>
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-red-300 font-bold group-hover:text-red-200 transition-colors">🏆 Certify</div>
+                <div className="text-sm text-red-300 font-bold group-hover:text-red-200 transition-colors">ðŸ† Certify</div>
                 <div className="text-xs text-red-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Get Certified</div>
               </div>
             </div>
@@ -516,12 +517,12 @@ export default function Home() {
                 <div className="relative w-14 h-14 bg-gradient-to-br from-indigo-500 via-purple-600 to-blue-600 rounded-2xl shadow-xl group-hover:shadow-indigo-500/50 flex items-center justify-center transform group-hover:-rotate-12 transition-all duration-500">
                   <span className="text-white font-bold text-lg">5</span>
                   {/* Success sparkles */}
-                  <div className="absolute -top-1 -right-1 text-yellow-300 text-xs animate-pulse">✨</div>
-                  <div className="absolute -bottom-1 -left-1 text-yellow-300 text-xs animate-pulse" style={{animationDelay: '0.5s'}}>⭐</div>
+                  <div className="absolute -top-1 -right-1 text-yellow-300 text-xs animate-pulse">âœ¨</div>
+                  <div className="absolute -bottom-1 -left-1 text-yellow-300 text-xs animate-pulse" style={{animationDelay: '0.5s'}}>â­</div>
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-indigo-300 font-bold group-hover:text-indigo-200 transition-colors">🚀 Career</div>
+                <div className="text-sm text-indigo-300 font-bold group-hover:text-indigo-200 transition-colors">ðŸš€ Career</div>
                 <div className="text-xs text-indigo-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Launch Success</div>
               </div>
             </div>
@@ -541,11 +542,11 @@ export default function Home() {
                 <div className="relative w-14 h-14 bg-gradient-to-br from-cyan-500 via-teal-600 to-blue-500 rounded-full shadow-xl group-hover:shadow-cyan-500/50 flex items-center justify-center transform group-hover:rotate-45 transition-all duration-500">
                   <span className="text-white font-bold text-lg">6</span>
                   {/* Network icon */}
-                  <div className="absolute -top-1 -right-1 text-white text-xs">🌐</div>
+                  <div className="absolute -top-1 -right-1 text-white text-xs">ðŸŒ</div>
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-cyan-300 font-bold group-hover:text-cyan-200 transition-colors">🌐 Network</div>
+                <div className="text-sm text-cyan-300 font-bold group-hover:text-cyan-200 transition-colors">ðŸŒ Network</div>
                 <div className="text-xs text-cyan-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Build Connections</div>
               </div>
             </div>
@@ -572,7 +573,7 @@ export default function Home() {
           <div className="text-center" style={{ contain: 'layout' }}>
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20">
               <Star className="w-4 h-4 text-yellow-400" />
-              <span className="text-xs font-medium">🏆 Best Software Training Institute in Hyderabad</span>
+              <span className="text-xs font-medium">ðŸ† Best Software Training Institute in Hyderabad</span>
             </div>
             
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" style={{ contain: 'layout', willChange: 'auto' }}>
@@ -668,10 +669,10 @@ export default function Home() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto mt-12">
               {[
-                { number: '5000+', label: 'Students Trained', icon: GraduationCap, color: 'from-blue-500 to-cyan-500', message: '🎉 Join our success story' },
-                { number: '20+', label: 'Technology Courses', icon: Code, color: 'from-purple-500 to-pink-500', message: '📚 Master trending tech' },
-                { number: '100%', label: 'Placement Rate', icon: TrendingUp, color: 'from-green-500 to-teal-500', message: '💼 Guaranteed career growth' },
-                { number: '15+', label: 'Years Experience', icon: Award, color: 'from-orange-500 to-red-500', message: '🏆 Learn from experts' }
+                { number: '5000+', label: 'Students Trained', icon: GraduationCap, color: 'from-blue-500 to-cyan-500', message: 'ðŸŽ‰ Join our success story' },
+                { number: '20+', label: 'Technology Courses', icon: Code, color: 'from-purple-500 to-pink-500', message: 'ðŸ“š Master trending tech' },
+                { number: '100%', label: 'Placement Rate', icon: TrendingUp, color: 'from-green-500 to-teal-500', message: 'ðŸ’¼ Guaranteed career growth' },
+                { number: '15+', label: 'Years Experience', icon: Award, color: 'from-orange-500 to-red-500', message: 'ðŸ† Learn from experts' }
               ].map((stat, index) => (
                 <div
                   key={stat.label}
@@ -828,19 +829,19 @@ export default function Home() {
               {
                 icon: Globe,
                 title: "Flexible Training Modes",
-                desc: "Choose either of the modes: classroom or online training – as per your convenience",
+                desc: "Choose either of the modes: classroom or online training â€“ as per your convenience",
                 gradient: "from-purple-500 to-pink-500"
               },
               {
                 icon: Zap,
                 title: "Unlimited Learning",
-                desc: "No defined frontiers – learn from anywhere, anytime.",
+                desc: "No defined frontiers â€“ learn from anywhere, anytime.",
                 gradient: "from-orange-500 to-red-500"
               },
               {
                 icon: Award,
                 title: "Affordable Excellence",
-                desc: "Affordable fees – worth it considering the huge value you would derive once you put your theory into practice",
+                desc: "Affordable fees â€“ worth it considering the huge value you would derive once you put your theory into practice",
                 gradient: "from-indigo-500 to-purple-500"
               },
               {
@@ -858,7 +859,7 @@ export default function Home() {
               {
                 icon: Rocket,
                 title: "And Much More",
-                desc: "And much more….",
+                desc: "And much moreâ€¦.",
                 gradient: "from-yellow-500 to-orange-500"
               }
             ].map((feature, _index) => (
@@ -1020,7 +1021,7 @@ export default function Home() {
               </h2>
               
               <p className="text-base md:text-lg text-white/80 mb-6 leading-relaxed">
-                That&apos;s what we would precisely define ourselves. In this competitive world, nothing succeeds like knowledge and knowledge is true wealth, which manifests and grows in leaps and bounds. We earnestly believe that every student or a professional, who acquires software training with us should be equipped with the necessary weapons to face the fierce competitive world and emerge victorious. For this, we leverage the best platforms and impart the latest courses in software – be it Hadoop Training, Python Training, Data Science Training, Informatica Training, Servicenow Training, SAP HANA Training, SAP MDM Training, Google Cloud Training, Azure Training or Pega Training etc., to transform you into a full fledged professional, where your success is only measured by your knowledge. So, it&apos;s time to tighten your belts to jump start your career to dizzying heights – get the best out of your investment.
+                That&apos;s what we would precisely define ourselves. In this competitive world, nothing succeeds like knowledge and knowledge is true wealth, which manifests and grows in leaps and bounds. We earnestly believe that every student or a professional, who acquires software training with us should be equipped with the necessary weapons to face the fierce competitive world and emerge victorious. For this, we leverage the best platforms and impart the latest courses in software â€“ be it Hadoop Training, Python Training, Data Science Training, Informatica Training, Servicenow Training, SAP HANA Training, SAP MDM Training, Google Cloud Training, Azure Training or Pega Training etc., to transform you into a full fledged professional, where your success is only measured by your knowledge. So, it&apos;s time to tighten your belts to jump start your career to dizzying heights â€“ get the best out of your investment.
               </p>
 
               <div className="bg-gradient-to-r from-orange-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-4 border border-white/10">
@@ -1305,13 +1306,13 @@ export default function Home() {
                   <div className="absolute top-4 left-4">
                     <div className="bg-white/15 backdrop-blur-md border border-white/25 rounded-lg px-3 py-1.5">
                       <span className="text-xs font-semibold text-white">
-                        {course.name.includes('SAP') ? '🔷 SAP' :
-                         course.name.includes('AWS') || course.name.includes('Cloud') ? '☁️ CLOUD' :
-                         course.name.includes('Python') || course.name.includes('Full Stack') ? '💻 DEV' :
-                         course.name.includes('Data') || course.name.includes('Machine Learning') ? '🧠 DATA' :
-                         course.name.includes('ServiceNow') || course.name.includes('Salesforce') ? '⚡ PLATFORM' :
-                         course.name.includes('DevOps') ? '🔄 DEVOPS' :
-                         '🎯 TECH'}
+                        {course.name.includes('SAP') ? 'ðŸ”· SAP' :
+                         course.name.includes('AWS') || course.name.includes('Cloud') ? 'â˜ï¸ CLOUD' :
+                         course.name.includes('Python') || course.name.includes('Full Stack') ? 'ðŸ’» DEV' :
+                         course.name.includes('Data') || course.name.includes('Machine Learning') ? 'ðŸ§  DATA' :
+                         course.name.includes('ServiceNow') || course.name.includes('Salesforce') ? 'âš¡ PLATFORM' :
+                         course.name.includes('DevOps') ? 'ðŸ”„ DEVOPS' :
+                         'ðŸŽ¯ TECH'}
                       </span>
                     </div>
                   </div>

@@ -1,4 +1,5 @@
 ﻿import { CheckCircle, MapPin, Mail, Phone, Code } from 'lucide-react';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import FAQ from '../components/FAQ';
 import { EnquireNowButton, CallNowButton } from '../components/CourseActionButtons';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';

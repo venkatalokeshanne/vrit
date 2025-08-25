@@ -1,4 +1,5 @@
 ﻿import Link from 'next/link';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
@@ -170,6 +171,8 @@ export default async function SAPSDTrainingInUSUKCanadaAustralia() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       {/* Structured Data for SEO */}
       {structuredDataJson && (
         <script

@@ -1,4 +1,5 @@
 ﻿import Image from 'next/image';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { 
   Monitor, 
@@ -83,6 +84,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
+            <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

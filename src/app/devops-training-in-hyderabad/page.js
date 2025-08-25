@@ -1,4 +1,5 @@
 ﻿import CourseSidebar from '../components/CourseSidebar';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
@@ -140,6 +141,8 @@ export default function DevOpsTraining() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
 
 
       {/* Course Schema */}

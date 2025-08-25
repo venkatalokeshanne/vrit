@@ -29,6 +29,8 @@ export default function DynamicCoursePage({ course }) {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       {/* Structured Data */}
       {structuredDataJson && (
         <script

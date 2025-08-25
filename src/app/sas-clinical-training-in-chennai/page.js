@@ -1,4 +1,5 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import Image from 'next/image';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
@@ -76,7 +77,7 @@ export default function SASClinicalTraining() {
   const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
 
   // Log the courseMetadata to see what we have
-  console.log('📊 Course Metadata:', courseMetadata);
+  console.log('ðŸ“Š Course Metadata:', courseMetadata);
 
   const _courseStructure = [
     "Introduction to SAS and Clinical Trials",
@@ -112,6 +113,8 @@ export default function SASClinicalTraining() {
 
   return (
     <>
+      {/* Dynamic SEO Headers from Sanity CMS */}
+      <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       {/* JSON-LD Structured Data for SEO */}
   
 
