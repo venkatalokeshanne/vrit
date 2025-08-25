@@ -1,5 +1,4 @@
 ﻿import { client } from '../../lib/sanity'
-import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import Link from 'next/link'
 import Image from 'next/image'
 import { urlFor } from '../../lib/sanity'

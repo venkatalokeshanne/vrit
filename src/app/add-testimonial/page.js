@@ -1,7 +1,6 @@
 ﻿'use client'
 
 import { useState, useEffect } from 'react'
-import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { createClient } from '@sanity/client'
 
 const client = createClient({
@@ -93,7 +92,7 @@ export default function AddTestimonial() {
     setSubmitStatus(null)
 
     try {
-      const selectedCourse = courses.find(course => course._id === formData.course)
+      const _selectedCourse = courses.find(course => course._id === formData.course)
       
       const notification = {
         _type: 'notification',

@@ -1,5 +1,4 @@
 ﻿import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
-import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'contactus';import { getCourseBySlugStatic } from '../../utils/staticCourses';

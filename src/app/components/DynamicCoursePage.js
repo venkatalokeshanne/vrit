@@ -5,6 +5,7 @@ import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { 
   Target, 
   BookOpen, 
@@ -31,6 +32,7 @@ export default function DynamicCoursePage({ course }) {
     <>
       {/* Dynamic SEO Headers from Sanity CMS */}
       <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
+      
       {/* Structured Data */}
       {structuredDataJson && (
         <script

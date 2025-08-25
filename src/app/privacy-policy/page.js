@@ -1,5 +1,4 @@
 ﻿import FAQ from '../components/FAQ';
-import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { getStructuredDataStatic } from '../../utils/staticCourses';
 
 // FAQ Data for Privacy Policy

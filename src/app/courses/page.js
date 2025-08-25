@@ -1,5 +1,4 @@
 ﻿import Link from 'next/link';
-import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { getAllCourses } from '../../lib/courses';
 import { 
