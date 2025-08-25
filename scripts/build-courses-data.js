@@ -53,6 +53,10 @@ const allCoursesQuery = `
     streetAddress,
     courseContentPdf{
       asset->
+    },
+    seoHeaders[]{
+      level,
+      text
     }
   }
 `;
@@ -124,6 +128,9 @@ function processCourseMetadata(courseData) {
   
   // Process PDF file
   const courseContentPdf = processFile(courseData.courseContentPdf);
+  
+  // Process SEO Headers
+  const seoHeaders = courseData.seoHeaders || [];
   
   // Process new properties
   const importantText = courseData.importantText || '';
@@ -381,6 +388,7 @@ function processCourseMetadata(courseData) {
     importantText,
     bannerUrl,
     courseContentPdf,
+    seoHeaders,
     // Additional metadata not in Next.js metadata
     hreflang: courseData.hreflang,
     reviewCount: reviewCount.toString(),
