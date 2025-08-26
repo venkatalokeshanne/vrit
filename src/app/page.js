@@ -225,7 +225,7 @@ export default function Home() {
                 {/* Stage 1 Message */}
                 <g id="stage1Message" opacity="0">
                   <rect x="70" y="105" width="120" height="30" rx="8" fill="#3B82F6" fillOpacity="0.9" stroke="#60A5FA" strokeWidth="1"/>
-                  <text x="130" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸŽ¯ Welcome!</text>
+                  <text x="130" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🔍 Welcome!</text>
                   <text x="130" y="128" fontSize="8" fill="#DBEAFE" textAnchor="middle">Choose your course & begin</text>
                   <animate attributeName="opacity" values="0;1;0;0;0;0;0;1;0;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.1;0.2;0.4;0.5;0.6;0.6;0.7;0.8;0.9;1;1" />
                 </g>
@@ -233,7 +233,7 @@ export default function Home() {
                 {/* Stage 2 Message - moved to top-right position */}
                 <g id="stage2Message" opacity="0">
                   <rect x="1030" y="105" width="140" height="30" rx="8" fill="#8B5CF6" fillOpacity="0.9" stroke="#A78BFA" strokeWidth="1"/>
-                  <text x="1100" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸ§  Learning Phase</text>
+                  <text x="1100" y="118" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🔍 Learning Phase</text>
                   <text x="1100" y="128" fontSize="8" fill="#DDD6FE" textAnchor="middle">Master fundamentals & theory</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.083;0.083;0.3;0.4;0.5;0.583;0.583;0.8;0.9;1;1" />
                 </g>
@@ -241,7 +241,7 @@ export default function Home() {
                 {/* Stage 3 Message - moved to left side of right-center position */}
                 <g id="stage3Message" opacity="0">
                   <rect x="950" y="260" width="140" height="30" rx="8" fill="#10B981" fillOpacity="0.9" stroke="#34D399" strokeWidth="1"/>
-                  <text x="1020" y="273" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">âš¡ Practice Time!</text>
+                  <text x="1020" y="273" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🔍 Practice Time!</text>
                   <text x="1020" y="283" fontSize="8" fill="#D1FAE5" textAnchor="middle">Hands-on labs & exercises</text>
                   <animate attributeName="opacity" values="0;0;0;1;0;0;0;0;0;1;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.15;0.167;0.167;0.4;0.5;0.65;0.667;0.667;0.9;1;1" />
                 </g>
@@ -249,7 +249,7 @@ export default function Home() {
                 {/* Stage 4 Message - moved to bottom-right position */}
                 <g id="stage4Message" opacity="0">
                   <rect x="920" y="505" width="130" height="30" rx="8" fill="#F59E0B" fillOpacity="0.9" stroke="#FBBF24" strokeWidth="1"/>
-                  <text x="985" y="518" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸ› ï¸ Build Projects</text>
+                  <text x="985" y="518" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🔍 Build Projects</text>
                   <text x="985" y="528" fontSize="8" fill="#FEF3C7" textAnchor="middle">Real-world applications</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.217;0.217;0.3;0.5;0.717;0.717;0.8;0.8;0.9;1;1" />
                 </g>
@@ -257,7 +257,7 @@ export default function Home() {
                 {/* Stage 5 Message - moved to bottom-left position */}
                 <g id="stage5Message" opacity="0">
                   <rect x="70" y="485" width="140" height="30" rx="8" fill="#EF4444" fillOpacity="0.9" stroke="#F87171" strokeWidth="1"/>
-                  <text x="140" y="498" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸ† Get Certified!</text>
+                  <text x="140" y="498" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🏆 Get Certified!</text>
                   <text x="140" y="508" fontSize="8" fill="#FEE2E2" textAnchor="middle">Earn industry recognition</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.333;0.333;0.417;0.5;0.833;0.833;0.917;0.92;1;1;1" />
                 </g>
@@ -265,7 +265,7 @@ export default function Home() {
                 {/* Stage 6 Message - New Networking Stage */}
                 <g id="stage6Message" opacity="0">
                   <rect x="50" y="250" width="130" height="30" rx="8" fill="#06B6D4" fillOpacity="0.9" stroke="#67E8F9" strokeWidth="1"/>
-                  <text x="115" y="263" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">ðŸŒ Network</text>
+                  <text x="115" y="263" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">🔗 Network</text>
                   <text x="115" y="273" fontSize="8" fill="#E0F7FA" textAnchor="middle">Build connections</text>
                   <animate attributeName="opacity" values="0;0;1;0;0;0;0;0;1;0;0;0" dur="60s" repeatCount="indefinite" keyTimes="0;0.45;0.45;0.48;0.5;0.95;0.95;0.98;1;1;1;1" />
                 </g>
