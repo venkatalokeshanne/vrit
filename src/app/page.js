@@ -429,7 +429,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-blue-300 font-bold group-hover:text-blue-200 transition-colors">ðŸ“š Enroll</div>
+                <div className="text-sm text-blue-300 font-bold group-hover:text-blue-200 transition-colors">📚 Enroll</div>
                 <div className="text-xs text-blue-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Start Your Journey</div>
               </div>
             </div>
@@ -452,7 +452,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-sm text-purple-300 font-bold group-hover:text-purple-200 transition-colors">ðŸ§  Learn</div>
+                <div className="text-sm text-purple-300 font-bold group-hover:text-purple-200 transition-colors">🔍 Learn</div>
                 <div className="text-xs text-purple-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Gain Knowledge</div>
               </div>
             </div>
@@ -478,7 +478,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-green-300 font-bold group-hover:text-green-200 transition-colors">âš¡ Practice</div>
+                <div className="text-sm text-green-300 font-bold group-hover:text-green-200 transition-colors">🔍 Practice</div>
                 <div className="text-xs text-green-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Hands-on Labs</div>
               </div>
             </div>
@@ -495,11 +495,11 @@ export default function Home() {
                 <div className="relative w-14 h-14 bg-gradient-to-br from-red-500 via-pink-600 to-rose-500 rounded-full shadow-xl group-hover:shadow-red-500/50 flex items-center justify-center border-2 border-yellow-400/50">
                   <span className="text-white font-bold text-lg">4</span>
                   {/* Achievement crown */}
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-yellow-400 text-xs">ï¿½</div>
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 text-yellow-400 text-xs">👑</div>
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-red-300 font-bold group-hover:text-red-200 transition-colors">ðŸ† Certify</div>
+                <div className="text-sm text-red-300 font-bold group-hover:text-red-200 transition-colors">🏆 Certify</div>
                 <div className="text-xs text-red-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Get Certified</div>
               </div>
             </div>
@@ -516,12 +516,12 @@ export default function Home() {
                 <div className="relative w-14 h-14 bg-gradient-to-br from-indigo-500 via-purple-600 to-blue-600 rounded-2xl shadow-xl group-hover:shadow-indigo-500/50 flex items-center justify-center transform group-hover:-rotate-12 transition-all duration-500">
                   <span className="text-white font-bold text-lg">5</span>
                   {/* Success sparkles */}
-                  <div className="absolute -top-1 -right-1 text-yellow-300 text-xs animate-pulse">âœ¨</div>
-                  <div className="absolute -bottom-1 -left-1 text-yellow-300 text-xs animate-pulse" style={{animationDelay: '0.5s'}}>â­</div>
+                  <div className="absolute -top-1 -right-1 text-yellow-300 text-xs animate-pulse">✨</div>
+                  <div className="absolute -bottom-1 -left-1 text-yellow-300 text-xs animate-pulse" style={{animationDelay: '0.5s'}}>🎉</div>
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-indigo-300 font-bold group-hover:text-indigo-200 transition-colors">ðŸš€ Career</div>
+                <div className="text-sm text-indigo-300 font-bold group-hover:text-indigo-200 transition-colors">🚀 Career</div>
                 <div className="text-xs text-indigo-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Launch Success</div>
               </div>
             </div>
@@ -541,11 +541,11 @@ export default function Home() {
                 <div className="relative w-14 h-14 bg-gradient-to-br from-cyan-500 via-teal-600 to-blue-500 rounded-full shadow-xl group-hover:shadow-cyan-500/50 flex items-center justify-center transform group-hover:rotate-45 transition-all duration-500">
                   <span className="text-white font-bold text-lg">6</span>
                   {/* Network icon */}
-                  <div className="absolute -top-1 -right-1 text-white text-xs">ðŸŒ</div>
+                  <div className="absolute -top-1 -right-1 text-white text-xs">🔗</div>
                 </div>
               </div>
               <div className="mt-3 text-center">
-                <div className="text-sm text-cyan-300 font-bold group-hover:text-cyan-200 transition-colors">ðŸŒ Network</div>
+                <div className="text-sm text-cyan-300 font-bold group-hover:text-cyan-200 transition-colors">🔗 Network</div>
                 <div className="text-xs text-cyan-400/80 opacity-0 group-hover:opacity-100 transition-opacity">Build Connections</div>
               </div>
             </div>
@@ -668,10 +668,10 @@ export default function Home() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto mt-12">
               {[
-                { number: '5000+', label: 'Students Trained', icon: GraduationCap, color: 'from-blue-500 to-cyan-500', message: 'ðŸŽ‰ Join our success story' },
-                { number: '20+', label: 'Technology Courses', icon: Code, color: 'from-purple-500 to-pink-500', message: 'ðŸ“š Master trending tech' },
-                { number: '100%', label: 'Placement Rate', icon: TrendingUp, color: 'from-green-500 to-teal-500', message: 'ðŸ’¼ Guaranteed career growth' },
-                { number: '15+', label: 'Years Experience', icon: Award, color: 'from-orange-500 to-red-500', message: 'ðŸ† Learn from experts' }
+                { number: '5000+', label: 'Students Trained', icon: GraduationCap, color: 'from-blue-500 to-cyan-500', message: '🚀 Join our success story' },
+                { number: '20+', label: 'Technology Courses', icon: Code, color: 'from-purple-500 to-pink-500', message: '📚 Master trending tech' },
+                { number: '100%', label: 'Placement Rate', icon: TrendingUp, color: 'from-green-500 to-teal-500', message: '📈 Guaranteed career growth' },
+                { number: '15+', label: 'Years Experience', icon: Award, color: 'from-orange-500 to-red-500', message: '🏆 Learn from experts' }
               ].map((stat, index) => (
                 <div
                   key={stat.label}
