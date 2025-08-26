@@ -1305,13 +1305,13 @@ export default function Home() {
                   <div className="absolute top-4 left-4">
                     <div className="bg-white/15 backdrop-blur-md border border-white/25 rounded-lg px-3 py-1.5">
                       <span className="text-xs font-semibold text-white">
-                        {course.name.includes('SAP') ? 'ðŸ”· SAP' :
-                         course.name.includes('AWS') || course.name.includes('Cloud') ? 'â˜ï¸ CLOUD' :
-                         course.name.includes('Python') || course.name.includes('Full Stack') ? 'ðŸ’» DEV' :
-                         course.name.includes('Data') || course.name.includes('Machine Learning') ? 'ðŸ§  DATA' :
-                         course.name.includes('ServiceNow') || course.name.includes('Salesforce') ? 'âš¡ PLATFORM' :
-                         course.name.includes('DevOps') ? 'ðŸ”„ DEVOPS' :
-                         'ðŸŽ¯ TECH'}
+                        {course.name.includes('SAP') ? '☁️ SAP' :
+                         course.name.includes('AWS') || course.name.includes('Cloud') ? '☁️ CLOUD' :
+                         course.name.includes('Python') || course.name.includes('Full Stack') ? '🛠️ DEV' :
+                         course.name.includes('Data') || course.name.includes('Machine Learning') ? '📊 DATA' :
+                         course.name.includes('ServiceNow') || course.name.includes('Salesforce') ? '🛡️ PLATFORM' :
+                         course.name.includes('DevOps') ? '🚀 DEVOPS' :
+                         '🧑‍💻 TECH'}
                       </span>
                     </div>
                   </div>
