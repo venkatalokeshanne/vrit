@@ -1,7 +1,7 @@
 ﻿'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { getAllCourses } from '../../lib/courses';
@@ -506,7 +506,8 @@ const staticCourses = [
   }
 ];
 
-export default function CoursesPage() {
+// Component that uses useSearchParams - needs to be wrapped in Suspense
+function CoursesContent() {
   const searchParams = useSearchParams();
   const urlSearchTerm = searchParams.get('search') || '';
   
@@ -993,5 +994,48 @@ export default function CoursesPage() {
         />
       )}
     </div>
+  );
+}
+
+// Loading component for Suspense fallback
+function CoursesLoading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto text-center">
+          <div className="animate-pulse">
+            <div className="h-8 bg-white/10 rounded-lg w-64 mx-auto mb-4"></div>
+            <div className="h-16 bg-white/10 rounded-lg w-96 mx-auto mb-6"></div>
+            <div className="h-6 bg-white/10 rounded-lg w-80 mx-auto mb-8"></div>
+          </div>
+        </div>
+      </section>
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {[...Array(6)].map((_, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 animate-pulse">
+                <div className="h-4 bg-white/10 rounded mb-4"></div>
+                <div className="h-6 bg-white/10 rounded mb-2"></div>
+                <div className="h-4 bg-white/10 rounded w-3/4 mb-4"></div>
+                <div className="space-y-2">
+                  <div className="h-3 bg-white/10 rounded"></div>
+                  <div className="h-3 bg-white/10 rounded w-5/6"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// Main page component with Suspense boundary
+export default function CoursesPage() {
+  return (
+    <Suspense fallback={<CoursesLoading />}>
+      <CoursesContent />
+    </Suspense>
   );
 }
