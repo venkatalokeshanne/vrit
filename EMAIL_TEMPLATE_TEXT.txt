@@ -1,0 +1,55 @@
+{{#if course}}🎓 NEW COURSE ENQUIRY - {{course}}{{else}}📧 NEW CONTACT FORM SUBMISSION{{/if}}
+═══════════════════════════════════════════════════════════════
+
+🔥 PRIORITY: New Lead from Website
+
+👤 CUSTOMER INFORMATION:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Name: {{from_name}}
+✓ Email: {{from_email}}
+✓ Phone: {{phone}}
+
+{{#if course}}
+{{#unless (eq course "General Inquiry")}}
+📚 COURSE DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ Interested Course: {{course}}
+{{#if training_mode}}
+{{#unless (eq training_mode "Not Specified")}}
+✓ Preferred Training Mode: {{training_mode}}
+{{/unless}}
+{{/if}}
+
+{{/unless}}
+{{/if}}
+💬 CUSTOMER MESSAGE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"{{message}}"
+
+📋 NEXT STEPS & ACTION ITEMS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚡ URGENT: Respond within 2 hours for best conversion rate
+📞 Call customer immediately: {{phone}}
+📧 Send follow-up email: {{from_email}}
+{{#if course}}
+{{#unless (eq course "General Inquiry")}}
+📖 Prepare detailed information about: {{course}}
+💰 Share course fees and schedule
+🎯 Discuss {{training_mode}} training options
+{{/unless}}
+{{/if}}
+
+📊 SUBMISSION DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📅 Received: {{timestamp}}
+🌐 Source: {{source}}
+📮 Reply To: {{reply_to}}
+
+═══════════════════════════════════════════════════════════════
+
+🏢 VR IT Solutions - Excellence in IT Training & Education
+📧 info@vritsol.com | 🌍 www.vritsol.com
+
+⚠️ This is an automated notification. Please respond promptly to maximize conversion opportunities.
+
+═══════════════════════════════════════════════════════════════

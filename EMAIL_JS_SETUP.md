@@ -24,29 +24,57 @@ This guide explains how to set up EmailJS for the contact/enquiry forms in your 
 ### 3. Create Email Template
 1. Go to **Email Templates**
 2. Click **Create New Template**
-3. Use this universal template structure for both enquiry and contact forms:
+3. **Template Name**: `VR IT Solutions - Universal Contact Template`
+4. **Template Settings**:
 
+#### Option 1: Beautiful HTML Template (Recommended)
+Copy the complete HTML template from `EMAIL_TEMPLATE.html` in your project root. This creates a professional, modern email with:
+- 🎨 **Modern Design**: Gradient headers, responsive layout, beautiful typography
+- 📱 **Mobile Responsive**: Looks perfect on all devices
+- 🔥 **Priority Indicators**: Clear visual hierarchy and urgency markers
+- 📋 **Action Items**: Built-in next steps for your sales team
+- 🎯 **Conditional Content**: Shows course info only when relevant
+- 📊 **Professional Branding**: VR IT Solutions branded footer
+
+#### Option 2: Simple Text Template
+If you prefer a simpler approach, copy the text template from `EMAIL_TEMPLATE_TEXT.txt`:
+- ✅ **Clean Format**: Professional text-only layout
+- 📞 **Action-Oriented**: Clear next steps and contact info
+- 🚀 **Fast Loading**: Works in all email clients
+- 📋 **Structured Data**: Easy to read and process
+
+#### Quick Setup Template (Basic)
+For immediate testing, use this minimal template:
+
+**Subject Line:**
 ```
-Subject: {{#if course}}New Course Enquiry - {{course}}{{else}}Contact Form Submission{{/if}}
+{{#if course}}🎓 New Course Enquiry - {{course}}{{else}}📧 Contact Form Submission{{/if}}
+```
 
-From: {{from_name}} ({{from_email}})
-Phone: {{phone}}
-{{#if course}}Course: {{course}}{{/if}}
-{{#if training_mode}}Training Mode: {{training_mode}}{{/if}}
+**Email Body:**
+```
+🔥 NEW LEAD ALERT!
 
-Message:
+👤 Customer: {{from_name}}
+📧 Email: {{from_email}}  
+📞 Phone: {{phone}}
+{{#if course}}
+{{#unless (eq course "General Inquiry")}}
+📚 Course: {{course}}
+🎯 Training Mode: {{training_mode}}
+{{/unless}}
+{{/if}}
+
+💬 Message:
 {{message}}
 
----
-Details:
-- Timestamp: {{timestamp}}
-- Source: {{source}}
-- Reply to: {{reply_to}}
+📅 Received: {{timestamp}}
+🌐 Source: {{source}}
+
+⚡ Action Required: Contact customer within 2 hours!
 ```
 
-4. Save the template and note the **Template ID** (e.g., `template_universal123`)
-
-**Note**: This template works for both enquiry modal and contact form by using conditional fields.
+5. Save the template and note the **Template ID** (e.g., `template_vrit_universal`)
 
 ### 4. Get Public Key
 1. Go to **Account** → **General**
@@ -64,6 +92,32 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key_here
 ```
 
 Replace the placeholder values with your actual EmailJS credentials.
+
+## 📧 Template Preview
+
+### How the HTML Template Looks:
+
+**For Course Enquiry:**
+- 🎓 Beautiful gradient header with "New Course Enquiry" 
+- 👤 Customer info in styled cards
+- 📚 Highlighted course information with training mode
+- 💬 Professional message display
+- 📋 Action items for sales team
+- 🏢 Branded footer with company info
+
+**For Contact Form:**
+- 📧 "Contact Form Submission" header
+- 👤 Customer details in organized layout  
+- 💬 Message content in formatted box
+- ⚡ Quick action reminders
+- 📊 Timestamp and source tracking
+
+### Key Features:
+- ✅ **Responsive Design**: Perfect on desktop, tablet, mobile
+- ✅ **Professional Branding**: VR IT Solutions theme throughout
+- ✅ **Action-Oriented**: Clear next steps for your team
+- ✅ **Visual Hierarchy**: Important info stands out
+- ✅ **Click-to-Action**: Email and phone links ready to use
 
 ## Template Variables
 
