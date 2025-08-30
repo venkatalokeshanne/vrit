@@ -107,7 +107,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/:path*.css',
+        source: '/globals.css',
         headers: [
           {
             key: 'Content-Type',
