@@ -157,7 +157,7 @@ export default function DevOpsTraining() {
             "provider": {
               "@type": "Organization",
               "name": "VR IT Solutions",
-              "sameAs": "https://https://vrit-rho.vercel.app/"
+              "sameAs": "https://https://www.vritsol.com/"
             },
             "educationalCredentialAwarded": "AWS with DevOps Certification",
             "courseMode": ["Online", "Classroom"],

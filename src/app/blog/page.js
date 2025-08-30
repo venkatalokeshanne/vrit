@@ -52,7 +52,7 @@ export async function generateMetadata() {
       title: 'Blog - VRIT Solutions',
       description: 'Stay updated with the latest insights, tutorials, and industry trends in technology.',
       type: 'website',
-      url: 'https://vrit-rho.vercel.app/blog',
+      url: 'https://www.vritsol.com/blog',
     },
     twitter: {
       card: 'summary_large_image',

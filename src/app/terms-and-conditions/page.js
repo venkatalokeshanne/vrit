@@ -63,7 +63,7 @@ export const metadata = {
     description: 'Read the terms and conditions for VR IT Solutions. Learn about our policies, user guidelines, and service terms.',
     images: []
   },
-  canonical: 'https://vrit-rho.vercel.app/terms-and-conditions'
+  canonical: 'https://www.vritsol.com/terms-and-conditions'
 };
 
 export default function TermsAndConditions() {

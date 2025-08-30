@@ -63,7 +63,7 @@ const allCoursesQuery = `
 
 // Constants to avoid repetition
 const DEFAULTS = {
-  baseUrl: 'https://vrit-rho.vercel.app',
+  baseUrl: 'https://www.vritsol.com',
   organizationName: 'VR IT Solutions',
   email: 'info@vritsol.com',
   phone: '+91-9032734343',

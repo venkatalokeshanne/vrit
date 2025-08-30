@@ -47,7 +47,7 @@ export async function generateMetadata({ params: _params, searchParams: _searchP
   const pageMetadata = getPageMetadataStatic(slug);
   
   // Base URL for your site
-  const baseUrl = 'https://vrit-rho.vercel.app/';
+  const baseUrl = 'https://www.vritsol.com/';
   
   // Merge your existing metadata with missing SEO properties
   return {
@@ -184,8 +184,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "VR IT Solutions",
-              "url": "https://vrit-rho.vercel.app",
-              "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
+              "url": "https://www.vritsol.com",
+              "logo": "https://www.vritsol.com/images/vritlogo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+919032734343",
@@ -223,10 +223,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="help" href="/.well-known/security.txt" />
 
         {/* Hreflang and Canonical Links */}
-        <link rel="canonical" href="https://vrit-rho.vercel.app/" />
-        <link rel="alternate" hrefLang="en-US" href="https://vrit-rho.vercel.app/" />
-        <link rel="alternate" hrefLang="en" href="https://vrit-rho.vercel.app/" />
-        <link rel="alternate" hrefLang="x-default" href="https://vrit-rho.vercel.app/" />
+        <link rel="canonical" href="https://www.vritsol.com/" />
+        <link rel="alternate" hrefLang="en-US" href="https://www.vritsol.com/" />
+        <link rel="alternate" hrefLang="en" href="https://www.vritsol.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.vritsol.com/" />
 
         {/* Tawk.to Chat Script */}
         <Script id="tawk-to-script" strategy="afterInteractive">

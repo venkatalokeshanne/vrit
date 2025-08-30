@@ -42,13 +42,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/azure-devops-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/azure-devops-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/azure-devops-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/azure-devops-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/azure-devops-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -76,9 +76,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -191,7 +191,7 @@
               "@type": "Course",
               "name": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/azure-devops-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -233,7 +233,7 @@
         "@type": "Course",
         "name": "Azure devOps Training in US, UK, Canada, Dubai and Australia | Azure devOps Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers Azure devOps training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/azure-devops-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/azure-devops-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -242,7 +242,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -343,13 +343,13 @@
           "https://cdn.sanity.io/images/3hir6j0e/production/3e959a83e889e9f99d9d7df0daba31d26cbe5eed-1279x720.jpg"
         ]
       },
-      "canonical": "https://vrit-rho.vercel.app/azure-devops-online-training-in-bangalore",
+      "canonical": "https://www.vritsol.com/azure-devops-online-training-in-bangalore",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/azure-devops-online-training-in-bangalore",
+        "canonical": "https://www.vritsol.com/azure-devops-online-training-in-bangalore",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/azure-devops-online-training-in-bangalore",
-          "en": "https://vrit-rho.vercel.app/azure-devops-online-training-in-bangalore",
-          "x-default": "https://vrit-rho.vercel.app/azure-devops-online-training-in-bangalore"
+          "en-US": "https://www.vritsol.com/azure-devops-online-training-in-bangalore",
+          "en": "https://www.vritsol.com/azure-devops-online-training-in-bangalore",
+          "x-default": "https://www.vritsol.com/azure-devops-online-training-in-bangalore"
         }
       },
       "other": {
@@ -377,9 +377,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -492,7 +492,7 @@
               "@type": "Course",
               "name": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
               "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
-              "url": "https://vrit-rho.vercel.app/azure-devops-online-training-in-bangalore",
+              "url": "https://www.vritsol.com/azure-devops-online-training-in-bangalore",
               "courseMode": [
                 "online",
                 "onsite"
@@ -534,7 +534,7 @@
         "@type": "Course",
         "name": "Azure Devops Online Training in Bangalore | 100% Placement - VR IT Solutions",
         "description": "VR IT Solutions provides microsoft azure devops online training in Bangalore also provides azure devops classroom training in Bangalore. We also offer azure devops certification course training also provide 100% Placements.",
-        "url": "https://vrit-rho.vercel.app/azure-devops-online-training-in-bangalore",
+        "url": "https://www.vritsol.com/azure-devops-online-training-in-bangalore",
         "courseMode": [
           "online",
           "onsite"
@@ -543,7 +543,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -689,9 +689,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -855,7 +855,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -954,13 +954,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/courses",
+      "canonical": "https://www.vritsol.com/courses",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/courses",
+        "canonical": "https://www.vritsol.com/courses",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/courses",
-          "en": "https://vrit-rho.vercel.app/courses",
-          "x-default": "https://vrit-rho.vercel.app/courses"
+          "en-US": "https://www.vritsol.com/courses",
+          "en": "https://www.vritsol.com/courses",
+          "x-default": "https://www.vritsol.com/courses"
         }
       },
       "other": {
@@ -988,9 +988,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -1103,7 +1103,7 @@
               "@type": "Course",
               "name": "Courses | Software training courses | VR IT Solutions",
               "description": "Explore comprehensive software training courses at VR IT Solutions. Choose from a wide range of IT courses including SAP, AWS, DevOps, Data Science, and more.",
-              "url": "https://vrit-rho.vercel.app/courses",
+              "url": "https://www.vritsol.com/courses",
               "courseMode": [
                 "online",
                 "onsite"
@@ -1145,7 +1145,7 @@
         "@type": "Course",
         "name": "Courses | Software training courses | VR IT Solutions",
         "description": "Explore comprehensive software training courses at VR IT Solutions. Choose from a wide range of IT courses including SAP, AWS, DevOps, Data Science, and more.",
-        "url": "https://vrit-rho.vercel.app/courses",
+        "url": "https://www.vritsol.com/courses",
         "courseMode": [
           "online",
           "onsite"
@@ -1154,7 +1154,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -1250,13 +1250,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/aboutus",
+      "canonical": "https://www.vritsol.com/aboutus",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/aboutus",
+        "canonical": "https://www.vritsol.com/aboutus",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/aboutus",
-          "en": "https://vrit-rho.vercel.app/aboutus",
-          "x-default": "https://vrit-rho.vercel.app/aboutus"
+          "en-US": "https://www.vritsol.com/aboutus",
+          "en": "https://www.vritsol.com/aboutus",
+          "x-default": "https://www.vritsol.com/aboutus"
         }
       },
       "other": {
@@ -1284,9 +1284,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -1399,7 +1399,7 @@
               "@type": "Course",
               "name": "About VR IT Solutions | Online training institutes in hyderabad",
               "description": "Learn about VR IT Solutions, one of the leading online training institutes in Hyderabad offering comprehensive IT courses and professional development programs.",
-              "url": "https://vrit-rho.vercel.app/aboutus",
+              "url": "https://www.vritsol.com/aboutus",
               "courseMode": [
                 "online",
                 "onsite"
@@ -1441,7 +1441,7 @@
         "@type": "Course",
         "name": "About VR IT Solutions | Online training institutes in hyderabad",
         "description": "Learn about VR IT Solutions, one of the leading online training institutes in Hyderabad offering comprehensive IT courses and professional development programs.",
-        "url": "https://vrit-rho.vercel.app/aboutus",
+        "url": "https://www.vritsol.com/aboutus",
         "courseMode": [
           "online",
           "onsite"
@@ -1450,7 +1450,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -1543,13 +1543,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/privacy-policy",
+      "canonical": "https://www.vritsol.com/privacy-policy",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/privacy-policy",
+        "canonical": "https://www.vritsol.com/privacy-policy",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/privacy-policy",
-          "en": "https://vrit-rho.vercel.app/privacy-policy",
-          "x-default": "https://vrit-rho.vercel.app/privacy-policy"
+          "en-US": "https://www.vritsol.com/privacy-policy",
+          "en": "https://www.vritsol.com/privacy-policy",
+          "x-default": "https://www.vritsol.com/privacy-policy"
         }
       },
       "other": {
@@ -1577,9 +1577,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -1692,7 +1692,7 @@
               "@type": "Course",
               "name": "Privacy Policy | VRIT Solutions",
               "description": "Privacy Policy VRIT Solutions",
-              "url": "https://vrit-rho.vercel.app/privacy-policy",
+              "url": "https://www.vritsol.com/privacy-policy",
               "courseMode": [
                 "online",
                 "onsite"
@@ -1734,7 +1734,7 @@
         "@type": "Course",
         "name": "Privacy Policy | VRIT Solutions",
         "description": "Privacy Policy VRIT Solutions",
-        "url": "https://vrit-rho.vercel.app/privacy-policy",
+        "url": "https://www.vritsol.com/privacy-policy",
         "courseMode": [
           "online",
           "onsite"
@@ -1743,7 +1743,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -1836,13 +1836,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/terms-and-conditions",
+      "canonical": "https://www.vritsol.com/terms-and-conditions",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/terms-and-conditions",
+        "canonical": "https://www.vritsol.com/terms-and-conditions",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/terms-and-conditions",
-          "en": "https://vrit-rho.vercel.app/terms-and-conditions",
-          "x-default": "https://vrit-rho.vercel.app/terms-and-conditions"
+          "en-US": "https://www.vritsol.com/terms-and-conditions",
+          "en": "https://www.vritsol.com/terms-and-conditions",
+          "x-default": "https://www.vritsol.com/terms-and-conditions"
         }
       },
       "other": {
@@ -1870,9 +1870,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -1985,7 +1985,7 @@
               "@type": "Course",
               "name": "Terms and Conditions | VR IT Solutions",
               "description": "Terms and Conditions",
-              "url": "https://vrit-rho.vercel.app/terms-and-conditions",
+              "url": "https://www.vritsol.com/terms-and-conditions",
               "courseMode": [
                 "online",
                 "onsite"
@@ -2027,7 +2027,7 @@
         "@type": "Course",
         "name": "Terms and Conditions | VR IT Solutions",
         "description": "Terms and Conditions",
-        "url": "https://vrit-rho.vercel.app/terms-and-conditions",
+        "url": "https://www.vritsol.com/terms-and-conditions",
         "courseMode": [
           "online",
           "onsite"
@@ -2036,7 +2036,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -2129,13 +2129,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/refund-and-course-rescheduling-policy",
+      "canonical": "https://www.vritsol.com/refund-and-course-rescheduling-policy",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/refund-and-course-rescheduling-policy",
+        "canonical": "https://www.vritsol.com/refund-and-course-rescheduling-policy",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/refund-and-course-rescheduling-policy",
-          "en": "https://vrit-rho.vercel.app/refund-and-course-rescheduling-policy",
-          "x-default": "https://vrit-rho.vercel.app/refund-and-course-rescheduling-policy"
+          "en-US": "https://www.vritsol.com/refund-and-course-rescheduling-policy",
+          "en": "https://www.vritsol.com/refund-and-course-rescheduling-policy",
+          "x-default": "https://www.vritsol.com/refund-and-course-rescheduling-policy"
         }
       },
       "other": {
@@ -2163,9 +2163,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -2278,7 +2278,7 @@
               "@type": "Course",
               "name": "Refund and Course Rescheduling Policy | VR IT Solutions",
               "description": "Refund and Course Rescheduling Policy",
-              "url": "https://vrit-rho.vercel.app/refund-and-course-rescheduling-policy",
+              "url": "https://www.vritsol.com/refund-and-course-rescheduling-policy",
               "courseMode": [
                 "online",
                 "onsite"
@@ -2320,7 +2320,7 @@
         "@type": "Course",
         "name": "Refund and Course Rescheduling Policy | VR IT Solutions",
         "description": "Refund and Course Rescheduling Policy",
-        "url": "https://vrit-rho.vercel.app/refund-and-course-rescheduling-policy",
+        "url": "https://www.vritsol.com/refund-and-course-rescheduling-policy",
         "courseMode": [
           "online",
           "onsite"
@@ -2329,7 +2329,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -2424,13 +2424,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/contactus",
+      "canonical": "https://www.vritsol.com/contactus",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/contactus",
+        "canonical": "https://www.vritsol.com/contactus",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/contactus",
-          "en": "https://vrit-rho.vercel.app/contactus",
-          "x-default": "https://vrit-rho.vercel.app/contactus"
+          "en-US": "https://www.vritsol.com/contactus",
+          "en": "https://www.vritsol.com/contactus",
+          "x-default": "https://www.vritsol.com/contactus"
         }
       },
       "other": {
@@ -2458,9 +2458,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -2573,7 +2573,7 @@
               "@type": "Course",
               "name": "Contact Us Address - VR IT Solutions | Hyderabad",
               "description": "Contact VR IT Solutions for the best Software training in Hyderabad, India. Get in touch for Online, Classroom & Corporate training for All IT Software Courses.",
-              "url": "https://vrit-rho.vercel.app/contactus",
+              "url": "https://www.vritsol.com/contactus",
               "courseMode": [
                 "online",
                 "onsite"
@@ -2615,7 +2615,7 @@
         "@type": "Course",
         "name": "Contact Us Address - VR IT Solutions | Hyderabad",
         "description": "Contact VR IT Solutions for the best Software training in Hyderabad, India. Get in touch for Online, Classroom & Corporate training for All IT Software Courses.",
-        "url": "https://vrit-rho.vercel.app/contactus",
+        "url": "https://www.vritsol.com/contactus",
         "courseMode": [
           "online",
           "onsite"
@@ -2624,7 +2624,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -2720,13 +2720,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/blog",
+      "canonical": "https://www.vritsol.com/blog",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/blog",
+        "canonical": "https://www.vritsol.com/blog",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/blog",
-          "en": "https://vrit-rho.vercel.app/blog",
-          "x-default": "https://vrit-rho.vercel.app/blog"
+          "en-US": "https://www.vritsol.com/blog",
+          "en": "https://www.vritsol.com/blog",
+          "x-default": "https://www.vritsol.com/blog"
         }
       },
       "other": {
@@ -2754,9 +2754,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -2869,7 +2869,7 @@
               "@type": "Course",
               "name": "Blog - VR IT Solutions | Hyderabad",
               "description": "VR IT Solutions is one of the best Software training institute in Hyderabad, India. We Offer Online, Classroom & Corporate training for All IT Software Courses. Our main Courses are DevOps, Python with AWS, ServiceNow, workday, pega, dataScience, Hadoop, SAP HANA, SAP Hybris, SAP MM, SAP all courses",
-              "url": "https://vrit-rho.vercel.app/blog",
+              "url": "https://www.vritsol.com/blog",
               "courseMode": [
                 "online",
                 "onsite"
@@ -2911,7 +2911,7 @@
         "@type": "Course",
         "name": "Blog - VR IT Solutions | Hyderabad",
         "description": "VR IT Solutions is one of the best Software training institute in Hyderabad, India. We Offer Online, Classroom & Corporate training for All IT Software Courses. Our main Courses are DevOps, Python with AWS, ServiceNow, workday, pega, dataScience, Hadoop, SAP HANA, SAP Hybris, SAP MM, SAP all courses",
-        "url": "https://vrit-rho.vercel.app/blog",
+        "url": "https://www.vritsol.com/blog",
         "courseMode": [
           "online",
           "onsite"
@@ -2920,7 +2920,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -3015,13 +3015,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/edi-training",
+      "canonical": "https://www.vritsol.com/edi-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/edi-training",
+        "canonical": "https://www.vritsol.com/edi-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/edi-training",
-          "en": "https://vrit-rho.vercel.app/edi-training",
-          "x-default": "https://vrit-rho.vercel.app/edi-training"
+          "en-US": "https://www.vritsol.com/edi-training",
+          "en": "https://www.vritsol.com/edi-training",
+          "x-default": "https://www.vritsol.com/edi-training"
         }
       },
       "other": {
@@ -3049,9 +3049,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -3164,7 +3164,7 @@
               "@type": "Course",
               "name": "EDI Training in Hyderabad | EDI Online Training | VR IT Solutions",
               "description": "VR IT Solutions is one of the best edi training institute in hyderabad. We announces EDI online training program. Hands-On Learning in SAP EDI. Call@ +91-9032 734 343",
-              "url": "https://vrit-rho.vercel.app/edi-training",
+              "url": "https://www.vritsol.com/edi-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -3206,7 +3206,7 @@
         "@type": "Course",
         "name": "EDI Training in Hyderabad | EDI Online Training | VR IT Solutions",
         "description": "VR IT Solutions is one of the best edi training institute in hyderabad. We announces EDI online training program. Hands-On Learning in SAP EDI. Call@ +91-9032 734 343",
-        "url": "https://vrit-rho.vercel.app/edi-training",
+        "url": "https://www.vritsol.com/edi-training",
         "courseMode": [
           "online",
           "onsite"
@@ -3215,7 +3215,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -3310,13 +3310,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/azure-devops-online-training-in-chennai",
+      "canonical": "https://www.vritsol.com/azure-devops-online-training-in-chennai",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/azure-devops-online-training-in-chennai",
+        "canonical": "https://www.vritsol.com/azure-devops-online-training-in-chennai",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/azure-devops-online-training-in-chennai",
-          "en": "https://vrit-rho.vercel.app/azure-devops-online-training-in-chennai",
-          "x-default": "https://vrit-rho.vercel.app/azure-devops-online-training-in-chennai"
+          "en-US": "https://www.vritsol.com/azure-devops-online-training-in-chennai",
+          "en": "https://www.vritsol.com/azure-devops-online-training-in-chennai",
+          "x-default": "https://www.vritsol.com/azure-devops-online-training-in-chennai"
         }
       },
       "other": {
@@ -3344,9 +3344,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -3459,7 +3459,7 @@
               "@type": "Course",
               "name": "Azure Devops Online Training in Chennai | 100% Placement - VR IT Solutions",
               "description": "VR IT Solutions provides microsoft azure devops online training in Chennai also provides azure devops classroom training in Chennai. We also offer azure devops certification course training also provide 100% Placements.",
-              "url": "https://vrit-rho.vercel.app/azure-devops-online-training-in-chennai",
+              "url": "https://www.vritsol.com/azure-devops-online-training-in-chennai",
               "courseMode": [
                 "online",
                 "onsite"
@@ -3501,7 +3501,7 @@
         "@type": "Course",
         "name": "Azure Devops Online Training in Chennai | 100% Placement - VR IT Solutions",
         "description": "VR IT Solutions provides microsoft azure devops online training in Chennai also provides azure devops classroom training in Chennai. We also offer azure devops certification course training also provide 100% Placements.",
-        "url": "https://vrit-rho.vercel.app/azure-devops-online-training-in-chennai",
+        "url": "https://www.vritsol.com/azure-devops-online-training-in-chennai",
         "courseMode": [
           "online",
           "onsite"
@@ -3510,7 +3510,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -3605,13 +3605,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/azure-devops-online-training-in-pune",
+      "canonical": "https://www.vritsol.com/azure-devops-online-training-in-pune",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/azure-devops-online-training-in-pune",
+        "canonical": "https://www.vritsol.com/azure-devops-online-training-in-pune",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/azure-devops-online-training-in-pune",
-          "en": "https://vrit-rho.vercel.app/azure-devops-online-training-in-pune",
-          "x-default": "https://vrit-rho.vercel.app/azure-devops-online-training-in-pune"
+          "en-US": "https://www.vritsol.com/azure-devops-online-training-in-pune",
+          "en": "https://www.vritsol.com/azure-devops-online-training-in-pune",
+          "x-default": "https://www.vritsol.com/azure-devops-online-training-in-pune"
         }
       },
       "other": {
@@ -3639,9 +3639,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -3754,7 +3754,7 @@
               "@type": "Course",
               "name": "Azure Devops Online Training in Pune | 100% Placement - VR IT Solutions",
               "description": "VR IT Solutions provides microsoft azure devops online training in Pune also provides azure devops classroom training in Pune. We also offer azure devops certification course training also provide 100% Placements.",
-              "url": "https://vrit-rho.vercel.app/azure-devops-online-training-in-pune",
+              "url": "https://www.vritsol.com/azure-devops-online-training-in-pune",
               "courseMode": [
                 "online",
                 "onsite"
@@ -3796,7 +3796,7 @@
         "@type": "Course",
         "name": "Azure Devops Online Training in Pune | 100% Placement - VR IT Solutions",
         "description": "VR IT Solutions provides microsoft azure devops online training in Pune also provides azure devops classroom training in Pune. We also offer azure devops certification course training also provide 100% Placements.",
-        "url": "https://vrit-rho.vercel.app/azure-devops-online-training-in-pune",
+        "url": "https://www.vritsol.com/azure-devops-online-training-in-pune",
         "courseMode": [
           "online",
           "onsite"
@@ -3805,7 +3805,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -3900,13 +3900,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/azure-devops-online-training-in-noida",
+      "canonical": "https://www.vritsol.com/azure-devops-online-training-in-noida",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/azure-devops-online-training-in-noida",
+        "canonical": "https://www.vritsol.com/azure-devops-online-training-in-noida",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/azure-devops-online-training-in-noida",
-          "en": "https://vrit-rho.vercel.app/azure-devops-online-training-in-noida",
-          "x-default": "https://vrit-rho.vercel.app/azure-devops-online-training-in-noida"
+          "en-US": "https://www.vritsol.com/azure-devops-online-training-in-noida",
+          "en": "https://www.vritsol.com/azure-devops-online-training-in-noida",
+          "x-default": "https://www.vritsol.com/azure-devops-online-training-in-noida"
         }
       },
       "other": {
@@ -3934,9 +3934,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -4049,7 +4049,7 @@
               "@type": "Course",
               "name": "Azure Devops Online Training in Noida | 100% Placement - VR IT Solutions",
               "description": "VR IT Solutions provides microsoft azure devops online training in Noida also provides azure devops classroom training in Noida. We also offer azure devops certification course training also provide 100% Placements.",
-              "url": "https://vrit-rho.vercel.app/azure-devops-online-training-in-noida",
+              "url": "https://www.vritsol.com/azure-devops-online-training-in-noida",
               "courseMode": [
                 "online",
                 "onsite"
@@ -4091,7 +4091,7 @@
         "@type": "Course",
         "name": "Azure Devops Online Training in Noida | 100% Placement - VR IT Solutions",
         "description": "VR IT Solutions provides microsoft azure devops online training in Noida also provides azure devops classroom training in Noida. We also offer azure devops certification course training also provide 100% Placements.",
-        "url": "https://vrit-rho.vercel.app/azure-devops-online-training-in-noida",
+        "url": "https://www.vritsol.com/azure-devops-online-training-in-noida",
         "courseMode": [
           "online",
           "onsite"
@@ -4100,7 +4100,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -4195,13 +4195,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/azure-devops-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/azure-devops-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/azure-devops-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/azure-devops-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/azure-devops-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/azure-devops-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/azure-devops-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/azure-devops-training-in-hyderabad",
+          "en": "https://www.vritsol.com/azure-devops-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/azure-devops-training-in-hyderabad"
         }
       },
       "other": {
@@ -4229,9 +4229,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -4344,7 +4344,7 @@
               "@type": "Course",
               "name": "Azure Devops Training in Hyderabad | Azure Devops online Training - VR IT Solutions",
               "description": "VR IT Solutions provides azure devops in hyderabad also provides azure devops classroom training in hyderabad. Azure DevOps (previously known as Visual Studio Team Services (VSTS) or Visual Studio Online) is the cloud based DevOps dashboard and provided by Microsoft.",
-              "url": "https://vrit-rho.vercel.app/azure-devops-training-in-hyderabad",
+              "url": "https://www.vritsol.com/azure-devops-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -4386,7 +4386,7 @@
         "@type": "Course",
         "name": "Azure Devops Training in Hyderabad | Azure Devops online Training - VR IT Solutions",
         "description": "VR IT Solutions provides azure devops in hyderabad also provides azure devops classroom training in hyderabad. Azure DevOps (previously known as Visual Studio Team Services (VSTS) or Visual Studio Online) is the cloud based DevOps dashboard and provided by Microsoft.",
-        "url": "https://vrit-rho.vercel.app/azure-devops-training-in-hyderabad",
+        "url": "https://www.vritsol.com/azure-devops-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -4395,7 +4395,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -4452,7 +4452,7 @@
     ]
   },
   {
-    "slug": "google-cloud-training",
+    "slug": "google-cloud-training-in-hyderabad",
     "mainImage": "",
     "importantText": "",
     "bannerUrl": "",
@@ -4463,7 +4463,7 @@
     "organizationName": "VR IT Solutions - Best Google Cloud online training center in ameerpet, hyderabad",
     "postalCode": "500016",
     "streetAddress": "506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana.",
-    "_id": "google-cloud-training",
+    "_id": "google-cloud-training-in-hyderabad",
     "_updatedAt": "2025-08-08T14:56:24Z",
     "metadata": {
       "title": "Google Cloud training in Hyderabad | Google Cloud Platform Online training in Hyderabad",
@@ -4476,7 +4476,7 @@
       "openGraph": {
         "title": "Google Cloud training in Hyderabad | Google Cloud Platform Online training in Hyderabad",
         "description": "We Provide GCP Google cloud platform training in Hyderabad, by Industry Expert. Google Cloud Training in Hyderabad has a tailor made course curriculum by experts which complements the present industry requirements.",
-        "url": "/google-cloud-training",
+        "url": "/google-cloud-training-in-hyderabad",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -4490,13 +4490,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/google-cloud-training",
+      "canonical": "https://www.vritsol.com/google-cloud-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/google-cloud-training",
+        "canonical": "https://www.vritsol.com/google-cloud-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/google-cloud-training",
-          "en": "https://vrit-rho.vercel.app/google-cloud-training",
-          "x-default": "https://vrit-rho.vercel.app/google-cloud-training"
+          "en-US": "https://www.vritsol.com/google-cloud-training-in-hyderabad",
+          "en": "https://www.vritsol.com/google-cloud-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/google-cloud-training-in-hyderabad"
         }
       },
       "other": {
@@ -4524,9 +4524,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -4639,7 +4639,7 @@
               "@type": "Course",
               "name": "Google Cloud training in Hyderabad | Google Cloud Platform Online training in Hyderabad",
               "description": "We Provide GCP Google cloud platform training in Hyderabad, by Industry Expert. Google Cloud Training in Hyderabad has a tailor made course curriculum by experts which complements the present industry requirements.",
-              "url": "https://vrit-rho.vercel.app/google-cloud-training",
+              "url": "https://www.vritsol.com/google-cloud-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -4681,7 +4681,7 @@
         "@type": "Course",
         "name": "Google Cloud training in Hyderabad | Google Cloud Platform Online training in Hyderabad",
         "description": "We Provide GCP Google cloud platform training in Hyderabad, by Industry Expert. Google Cloud Training in Hyderabad has a tailor made course curriculum by experts which complements the present industry requirements.",
-        "url": "https://vrit-rho.vercel.app/google-cloud-training",
+        "url": "https://www.vritsol.com/google-cloud-training",
         "courseMode": [
           "online",
           "onsite"
@@ -4690,7 +4690,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -4783,13 +4783,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/devops-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/devops-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/devops-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/devops-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/devops-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/devops-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/devops-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/devops-training-in-hyderabad",
+          "en": "https://www.vritsol.com/devops-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/devops-training-in-hyderabad"
         }
       },
       "other": {
@@ -4817,9 +4817,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -4932,7 +4932,7 @@
               "@type": "Course",
               "name": "Devops Online training | Docker training | Devops Interview Questions",
               "description": "VRIT Solutions is one of the best Devops Online training. We offer online &classroom trainings with real time faculties with real time scenarios and POCs DevOps Computerizes the process of infrastructure and software delivery changes. Iam providing DEVOPS with AZURE also.",
-              "url": "https://vrit-rho.vercel.app/devops-training-in-hyderabad",
+              "url": "https://www.vritsol.com/devops-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -4974,7 +4974,7 @@
         "@type": "Course",
         "name": "Devops Online training | Docker training | Devops Interview Questions",
         "description": "VRIT Solutions is one of the best Devops Online training. We offer online &classroom trainings with real time faculties with real time scenarios and POCs DevOps Computerizes the process of infrastructure and software delivery changes. Iam providing DEVOPS with AZURE also.",
-        "url": "https://vrit-rho.vercel.app/devops-training-in-hyderabad",
+        "url": "https://www.vritsol.com/devops-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -4983,7 +4983,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -5077,13 +5077,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/informatica-mdm-training",
+      "canonical": "https://www.vritsol.com/informatica-mdm-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/informatica-mdm-training",
+        "canonical": "https://www.vritsol.com/informatica-mdm-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/informatica-mdm-training",
-          "en": "https://vrit-rho.vercel.app/informatica-mdm-training",
-          "x-default": "https://vrit-rho.vercel.app/informatica-mdm-training"
+          "en-US": "https://www.vritsol.com/informatica-mdm-training",
+          "en": "https://www.vritsol.com/informatica-mdm-training",
+          "x-default": "https://www.vritsol.com/informatica-mdm-training"
         }
       },
       "other": {
@@ -5111,9 +5111,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -5226,7 +5226,7 @@
               "@type": "Course",
               "name": "Informatica mdm training | informatica bdm training | VR IT Solutions",
               "description": "VR IT Solutions is one of the best informatica mdm training in hyderabad & informatica bdm training. Informatica (BDM) product is GUI based integrated development environment that organizations use to build their Data Integration, Data Quality and Data Governance processes for their big data platforms",
-              "url": "https://vrit-rho.vercel.app/informatica-mdm-training",
+              "url": "https://www.vritsol.com/informatica-mdm-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -5268,7 +5268,7 @@
         "@type": "Course",
         "name": "Informatica mdm training | informatica bdm training | VR IT Solutions",
         "description": "VR IT Solutions is one of the best informatica mdm training in hyderabad & informatica bdm training. Informatica (BDM) product is GUI based integrated development environment that organizations use to build their Data Integration, Data Quality and Data Governance processes for their big data platforms",
-        "url": "https://vrit-rho.vercel.app/informatica-mdm-training",
+        "url": "https://www.vritsol.com/informatica-mdm-training",
         "courseMode": [
           "online",
           "onsite"
@@ -5277,7 +5277,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -5377,13 +5377,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/snowflake-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/snowflake-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/snowflake-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/snowflake-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/snowflake-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/snowflake-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/snowflake-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/snowflake-training-in-hyderabad",
+          "en": "https://www.vritsol.com/snowflake-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/snowflake-training-in-hyderabad"
         }
       },
       "other": {
@@ -5411,9 +5411,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -5526,7 +5526,7 @@
               "@type": "Course",
               "name": "Snowflake Training in Hyderabad | Snowflake Online Training in Hyderabad | VR IT Solutions",
               "description": "We offer best Snowflake Online Training in Hyderabad, Ameerpet. Call@ 9032734343. Datalake Live projects, Coaching Center, job Placements, training institute in Hyderabad.",
-              "url": "https://vrit-rho.vercel.app/snowflake-training-in-hyderabad",
+              "url": "https://www.vritsol.com/snowflake-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -5568,7 +5568,7 @@
         "@type": "Course",
         "name": "Snowflake Training in Hyderabad | Snowflake Online Training in Hyderabad | VR IT Solutions",
         "description": "We offer best Snowflake Online Training in Hyderabad, Ameerpet. Call@ 9032734343. Datalake Live projects, Coaching Center, job Placements, training institute in Hyderabad.",
-        "url": "https://vrit-rho.vercel.app/snowflake-training-in-hyderabad",
+        "url": "https://www.vritsol.com/snowflake-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -5577,7 +5577,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -5671,13 +5671,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/servicenow-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/servicenow-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/servicenow-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/servicenow-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/servicenow-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/servicenow-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/servicenow-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/servicenow-training-in-hyderabad",
+          "en": "https://www.vritsol.com/servicenow-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/servicenow-training-in-hyderabad"
         }
       },
       "other": {
@@ -5705,9 +5705,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -5820,7 +5820,7 @@
               "@type": "Course",
               "name": "Servicenow Training in Hyderabad | Servicenow Online Training | VRIT Solutions",
               "description": "We Offers best Servicenow Training in Hyderabad, Ameerpet. Call@ 9032734343. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Servicenow online training in hyderabad with affordable fee and advanced curriculum.",
-              "url": "https://vrit-rho.vercel.app/servicenow-training-in-hyderabad",
+              "url": "https://www.vritsol.com/servicenow-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -5862,7 +5862,7 @@
         "@type": "Course",
         "name": "Servicenow Training in Hyderabad | Servicenow Online Training | VRIT Solutions",
         "description": "We Offers best Servicenow Training in Hyderabad, Ameerpet. Call@ 9032734343. Live projects, Coaching Center, job Placements, training institute in Hyderabad. Get our Best Servicenow online training in hyderabad with affordable fee and advanced curriculum.",
-        "url": "https://vrit-rho.vercel.app/servicenow-training-in-hyderabad",
+        "url": "https://www.vritsol.com/servicenow-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -5871,7 +5871,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -5969,13 +5969,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/salesforce-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/salesforce-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/salesforce-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/salesforce-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/salesforce-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/salesforce-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/salesforce-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/salesforce-training-in-hyderabad",
+          "en": "https://www.vritsol.com/salesforce-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/salesforce-training-in-hyderabad"
         }
       },
       "other": {
@@ -6003,9 +6003,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -6118,7 +6118,7 @@
               "@type": "Course",
               "name": "Salesforce Training in Hyderabad | Salesforce Training With 100% Placement Guarantee | VRIT Solutions",
               "description": "We Offers best Salesforce Training in Hyderabad. Get our Best Training With in hyderabad with affordable fee and advanced curriculum.",
-              "url": "https://vrit-rho.vercel.app/salesforce-training-in-hyderabad",
+              "url": "https://www.vritsol.com/salesforce-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -6160,7 +6160,7 @@
         "@type": "Course",
         "name": "Salesforce Training in Hyderabad | Salesforce Training With 100% Placement Guarantee | VRIT Solutions",
         "description": "We Offers best Salesforce Training in Hyderabad. Get our Best Training With in hyderabad with affordable fee and advanced curriculum.",
-        "url": "https://vrit-rho.vercel.app/salesforce-training-in-hyderabad",
+        "url": "https://www.vritsol.com/salesforce-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -6169,7 +6169,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -6311,13 +6311,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/data-science-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/data-science-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/data-science-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/data-science-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/data-science-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/data-science-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/data-science-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/data-science-training-in-hyderabad",
+          "en": "https://www.vritsol.com/data-science-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/data-science-training-in-hyderabad"
         }
       },
       "other": {
@@ -6345,9 +6345,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -6460,7 +6460,7 @@
               "@type": "Course",
               "name": "NO.1 Data Science Online Training in Hyderabad, Ameerpet, KPHB Call@9032734343 | VRIT Solutions",
               "description": "Best Data Science & Gen AI Course in Hyderabad With 100% Real Time Live Projects Training, internship,Classroom,Online Advacned Data Science Course Training Institute in Hyderabad,Ameerpet,US,Uk,Canada,Dubai,Germany, Australia,Japan. Call@9032734343",
-              "url": "https://vrit-rho.vercel.app/data-science-training-in-hyderabad",
+              "url": "https://www.vritsol.com/data-science-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -6502,7 +6502,7 @@
         "@type": "Course",
         "name": "NO.1 Data Science Online Training in Hyderabad, Ameerpet, KPHB Call@9032734343 | VRIT Solutions",
         "description": "Best Data Science & Gen AI Course in Hyderabad With 100% Real Time Live Projects Training, internship,Classroom,Online Advacned Data Science Course Training Institute in Hyderabad,Ameerpet,US,Uk,Canada,Dubai,Germany, Australia,Japan. Call@9032734343",
-        "url": "https://vrit-rho.vercel.app/data-science-training-in-hyderabad",
+        "url": "https://www.vritsol.com/data-science-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -6511,7 +6511,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -6606,13 +6606,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/hadoop-online-training",
+      "canonical": "https://www.vritsol.com/hadoop-online-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/hadoop-online-training",
+        "canonical": "https://www.vritsol.com/hadoop-online-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/hadoop-online-training",
-          "en": "https://vrit-rho.vercel.app/hadoop-online-training",
-          "x-default": "https://vrit-rho.vercel.app/hadoop-online-training"
+          "en-US": "https://www.vritsol.com/hadoop-online-training",
+          "en": "https://www.vritsol.com/hadoop-online-training",
+          "x-default": "https://www.vritsol.com/hadoop-online-training"
         }
       },
       "other": {
@@ -6640,9 +6640,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -6755,7 +6755,7 @@
               "@type": "Course",
               "name": "Hadoop Training in Hyderabad |Hadoop online training| VR IT Solutions",
               "description": "VR IT Solutions is one of the best Hadoop training in Hyderabad. We offer online & classroom trainings with real time faculties with real time scenarios and POCs. With Hadoop, you can run applications with thousands of commodity hardware nodes and to manage thousands of terabytes of data.",
-              "url": "https://vrit-rho.vercel.app/hadoop-online-training",
+              "url": "https://www.vritsol.com/hadoop-online-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -6797,7 +6797,7 @@
         "@type": "Course",
         "name": "Hadoop Training in Hyderabad |Hadoop online training| VR IT Solutions",
         "description": "VR IT Solutions is one of the best Hadoop training in Hyderabad. We offer online & classroom trainings with real time faculties with real time scenarios and POCs. With Hadoop, you can run applications with thousands of commodity hardware nodes and to manage thousands of terabytes of data.",
-        "url": "https://vrit-rho.vercel.app/hadoop-online-training",
+        "url": "https://www.vritsol.com/hadoop-online-training",
         "courseMode": [
           "online",
           "onsite"
@@ -6806,7 +6806,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -6902,13 +6902,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/mulesoft-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/mulesoft-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/mulesoft-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/mulesoft-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/mulesoft-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/mulesoft-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/mulesoft-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/mulesoft-training-in-hyderabad",
+          "en": "https://www.vritsol.com/mulesoft-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/mulesoft-training-in-hyderabad"
         }
       },
       "other": {
@@ -6936,9 +6936,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -7051,7 +7051,7 @@
               "@type": "Course",
               "name": "Mulesoft Training in Hyderabad | Mule ESB Online Training in Hyderabad | VR IT Solutions",
               "description": "Enroll Now for Advanced Mulesoft training in Hyderabad and get trained by experts from top MNC's. We provide Best Mule ESB Online Training and Classroom Training from basics to pro level at and Very affordable Fee. Call us now for FREE DEMO..!",
-              "url": "https://vrit-rho.vercel.app/mulesoft-training-in-hyderabad",
+              "url": "https://www.vritsol.com/mulesoft-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -7093,7 +7093,7 @@
         "@type": "Course",
         "name": "Mulesoft Training in Hyderabad | Mule ESB Online Training in Hyderabad | VR IT Solutions",
         "description": "Enroll Now for Advanced Mulesoft training in Hyderabad and get trained by experts from top MNC's. We provide Best Mule ESB Online Training and Classroom Training from basics to pro level at and Very affordable Fee. Call us now for FREE DEMO..!",
-        "url": "https://vrit-rho.vercel.app/mulesoft-training-in-hyderabad",
+        "url": "https://www.vritsol.com/mulesoft-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -7102,7 +7102,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -7197,13 +7197,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/python-with-aws-training",
+      "canonical": "https://www.vritsol.com/python-with-aws-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/python-with-aws-training",
+        "canonical": "https://www.vritsol.com/python-with-aws-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/python-with-aws-training",
-          "en": "https://vrit-rho.vercel.app/python-with-aws-training",
-          "x-default": "https://vrit-rho.vercel.app/python-with-aws-training"
+          "en-US": "https://www.vritsol.com/python-with-aws-training",
+          "en": "https://www.vritsol.com/python-with-aws-training",
+          "x-default": "https://www.vritsol.com/python-with-aws-training"
         }
       },
       "other": {
@@ -7231,9 +7231,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -7346,7 +7346,7 @@
               "@type": "Course",
               "name": "python with aws Training in Hyderabad | VR IT Solutions",
               "description": "Aws is a cloud platform with many resources available for almost all use cases related to IT industry. Sadly we don't scale up those resources with the click of buttons. We need to use something like Terraform/ CloudFormation/ Serverless / other third party SDKs in real time.",
-              "url": "https://vrit-rho.vercel.app/python-with-aws-training",
+              "url": "https://www.vritsol.com/python-with-aws-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -7388,7 +7388,7 @@
         "@type": "Course",
         "name": "python with aws Training in Hyderabad | VR IT Solutions",
         "description": "Aws is a cloud platform with many resources available for almost all use cases related to IT industry. Sadly we don't scale up those resources with the click of buttons. We need to use something like Terraform/ CloudFormation/ Serverless / other third party SDKs in real time.",
-        "url": "https://vrit-rho.vercel.app/python-with-aws-training",
+        "url": "https://www.vritsol.com/python-with-aws-training",
         "courseMode": [
           "online",
           "onsite"
@@ -7397,7 +7397,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -7492,13 +7492,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/python-online-training",
+      "canonical": "https://www.vritsol.com/python-online-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/python-online-training",
+        "canonical": "https://www.vritsol.com/python-online-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/python-online-training",
-          "en": "https://vrit-rho.vercel.app/python-online-training",
-          "x-default": "https://vrit-rho.vercel.app/python-online-training"
+          "en-US": "https://www.vritsol.com/python-online-training",
+          "en": "https://www.vritsol.com/python-online-training",
+          "x-default": "https://www.vritsol.com/python-online-training"
         }
       },
       "other": {
@@ -7526,9 +7526,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -7641,7 +7641,7 @@
               "@type": "Course",
               "name": "Python Training in Hyderabad | Python Online Training | VR IT Solutions",
               "description": "Python is a high-level programming language, which has a lot of demand in the industry and is favored by several top brands in the industry. Get started quickly using PYTHON with AWS online training in Hyderabad very huge opportunities in all MNCs. Django also is the best.",
-              "url": "https://vrit-rho.vercel.app/python-online-training",
+              "url": "https://www.vritsol.com/python-online-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -7683,7 +7683,7 @@
         "@type": "Course",
         "name": "Python Training in Hyderabad | Python Online Training | VR IT Solutions",
         "description": "Python is a high-level programming language, which has a lot of demand in the industry and is favored by several top brands in the industry. Get started quickly using PYTHON with AWS online training in Hyderabad very huge opportunities in all MNCs. Django also is the best.",
-        "url": "https://vrit-rho.vercel.app/python-online-training",
+        "url": "https://www.vritsol.com/python-online-training",
         "courseMode": [
           "online",
           "onsite"
@@ -7692,7 +7692,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -7791,13 +7791,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/pega-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/pega-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/pega-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/pega-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/pega-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/pega-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/pega-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/pega-training-in-hyderabad",
+          "en": "https://www.vritsol.com/pega-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/pega-training-in-hyderabad"
         }
       },
       "other": {
@@ -7825,9 +7825,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -7940,7 +7940,7 @@
               "@type": "Course",
               "name": "PEGA Training in Hyderabad | Best Online Pega Training Institute Hyderabad | VRIT SOLUTIONS",
               "description": "Best Pega Training Institute: VRIT Solutions is the best Pega Training Institute in Hyderabad providing Online Pega Training classes by realtime faculty with course material and 24x7 Lab Facility.",
-              "url": "https://vrit-rho.vercel.app/pega-training-in-hyderabad",
+              "url": "https://www.vritsol.com/pega-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -7982,7 +7982,7 @@
         "@type": "Course",
         "name": "PEGA Training in Hyderabad | Best Online Pega Training Institute Hyderabad | VRIT SOLUTIONS",
         "description": "Best Pega Training Institute: VRIT Solutions is the best Pega Training Institute in Hyderabad providing Online Pega Training classes by realtime faculty with course material and 24x7 Lab Facility.",
-        "url": "https://vrit-rho.vercel.app/pega-training-in-hyderabad",
+        "url": "https://www.vritsol.com/pega-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -7991,7 +7991,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -8086,13 +8086,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-basis-online-training",
+      "canonical": "https://www.vritsol.com/sap-basis-online-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-basis-online-training",
+        "canonical": "https://www.vritsol.com/sap-basis-online-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-basis-online-training",
-          "en": "https://vrit-rho.vercel.app/sap-basis-online-training",
-          "x-default": "https://vrit-rho.vercel.app/sap-basis-online-training"
+          "en-US": "https://www.vritsol.com/sap-basis-online-training",
+          "en": "https://www.vritsol.com/sap-basis-online-training",
+          "x-default": "https://www.vritsol.com/sap-basis-online-training"
         }
       },
       "other": {
@@ -8120,9 +8120,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -8235,7 +8235,7 @@
               "@type": "Course",
               "name": "Sap Basis Training in hyderabad | sap security training in hyderabad in hyderabad | sap GRC training",
               "description": "VR IT Solutions providing the best Sap basis online training in hyderabad, this course helps professionals to get lucrative jobs in SAP basis administration, SAP security and GRC. So, what are you waiting for? to get started.",
-              "url": "https://vrit-rho.vercel.app/sap-basis-online-training",
+              "url": "https://www.vritsol.com/sap-basis-online-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -8277,7 +8277,7 @@
         "@type": "Course",
         "name": "Sap Basis Training in hyderabad | sap security training in hyderabad in hyderabad | sap GRC training",
         "description": "VR IT Solutions providing the best Sap basis online training in hyderabad, this course helps professionals to get lucrative jobs in SAP basis administration, SAP security and GRC. So, what are you waiting for? to get started.",
-        "url": "https://vrit-rho.vercel.app/sap-basis-online-training",
+        "url": "https://www.vritsol.com/sap-basis-online-training",
         "courseMode": [
           "online",
           "onsite"
@@ -8286,7 +8286,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -8380,13 +8380,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-hana-admin-training",
+      "canonical": "https://www.vritsol.com/sap-hana-admin-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-hana-admin-training",
+        "canonical": "https://www.vritsol.com/sap-hana-admin-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-hana-admin-training",
-          "en": "https://vrit-rho.vercel.app/sap-hana-admin-training",
-          "x-default": "https://vrit-rho.vercel.app/sap-hana-admin-training"
+          "en-US": "https://www.vritsol.com/sap-hana-admin-training",
+          "en": "https://www.vritsol.com/sap-hana-admin-training",
+          "x-default": "https://www.vritsol.com/sap-hana-admin-training"
         }
       },
       "other": {
@@ -8414,9 +8414,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -8529,7 +8529,7 @@
               "@type": "Course",
               "name": "SAP HANA Admin training in hyderabad | sap hana admin online training in hyderabad",
               "description": "VR IT offers one of the best SAP HANA Admin training institute in Hyderabad. Our instructor has knowledge on multiple S4 HANA implementations and migrations experience. activities using HANA Studio. Our instructors with vast experience will transform the students with real time experience",
-              "url": "https://vrit-rho.vercel.app/sap-hana-admin-training",
+              "url": "https://www.vritsol.com/sap-hana-admin-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -8571,7 +8571,7 @@
         "@type": "Course",
         "name": "SAP HANA Admin training in hyderabad | sap hana admin online training in hyderabad",
         "description": "VR IT offers one of the best SAP HANA Admin training institute in Hyderabad. Our instructor has knowledge on multiple S4 HANA implementations and migrations experience. activities using HANA Studio. Our instructors with vast experience will transform the students with real time experience",
-        "url": "https://vrit-rho.vercel.app/sap-hana-admin-training",
+        "url": "https://www.vritsol.com/sap-hana-admin-training",
         "courseMode": [
           "online",
           "onsite"
@@ -8580,7 +8580,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -8674,13 +8674,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-s4hana-simple-logistics-training",
+      "canonical": "https://www.vritsol.com/sap-s4hana-simple-logistics-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-s4hana-simple-logistics-training",
+        "canonical": "https://www.vritsol.com/sap-s4hana-simple-logistics-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-s4hana-simple-logistics-training",
-          "en": "https://vrit-rho.vercel.app/sap-s4hana-simple-logistics-training",
-          "x-default": "https://vrit-rho.vercel.app/sap-s4hana-simple-logistics-training"
+          "en-US": "https://www.vritsol.com/sap-s4hana-simple-logistics-training",
+          "en": "https://www.vritsol.com/sap-s4hana-simple-logistics-training",
+          "x-default": "https://www.vritsol.com/sap-s4hana-simple-logistics-training"
         }
       },
       "other": {
@@ -8708,9 +8708,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -8823,7 +8823,7 @@
               "@type": "Course",
               "name": "Sap s4 Hana simple logistics online training in Hyderabad | VR IT Solutions",
               "description": "VR IT Solutions offers Sap s4 Hana simple logistics online training in hyderabad. The list of modules include Material Management, Supply Chain, Demand Planning, Sourcing and Procurement, Contract Management, and Manufacturing.",
-              "url": "https://vrit-rho.vercel.app/sap-s4hana-simple-logistics-training",
+              "url": "https://www.vritsol.com/sap-s4hana-simple-logistics-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -8865,7 +8865,7 @@
         "@type": "Course",
         "name": "Sap s4 Hana simple logistics online training in Hyderabad | VR IT Solutions",
         "description": "VR IT Solutions offers Sap s4 Hana simple logistics online training in hyderabad. The list of modules include Material Management, Supply Chain, Demand Planning, Sourcing and Procurement, Contract Management, and Manufacturing.",
-        "url": "https://vrit-rho.vercel.app/sap-s4hana-simple-logistics-training",
+        "url": "https://www.vritsol.com/sap-s4hana-simple-logistics-training",
         "courseMode": [
           "online",
           "onsite"
@@ -8874,7 +8874,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -8968,13 +8968,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-leonardo-training-hyderabad",
+      "canonical": "https://www.vritsol.com/sap-leonardo-training-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-leonardo-training-hyderabad",
+        "canonical": "https://www.vritsol.com/sap-leonardo-training-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-leonardo-training-hyderabad",
-          "en": "https://vrit-rho.vercel.app/sap-leonardo-training-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/sap-leonardo-training-hyderabad"
+          "en-US": "https://www.vritsol.com/sap-leonardo-training-hyderabad",
+          "en": "https://www.vritsol.com/sap-leonardo-training-hyderabad",
+          "x-default": "https://www.vritsol.com/sap-leonardo-training-hyderabad"
         }
       },
       "other": {
@@ -9002,9 +9002,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -9117,7 +9117,7 @@
               "@type": "Course",
               "name": "sap leonardo training in hyderabad | sap leonardo training hyderabad in hyderabad| VR IT Solutions",
               "description": "VR IT Solutions is one of the best sap leonardo training institute in hyderabad. Leonardo is a new digital innovation system from SAP. It delivers software and microservices that enable customers to leverage future-facing technologies like the Internet of Things, machine learning, blockchain,analytics and Big Data.",
-              "url": "https://vrit-rho.vercel.app/sap-leonardo-training-hyderabad",
+              "url": "https://www.vritsol.com/sap-leonardo-training-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -9159,7 +9159,7 @@
         "@type": "Course",
         "name": "sap leonardo training in hyderabad | sap leonardo training hyderabad in hyderabad| VR IT Solutions",
         "description": "VR IT Solutions is one of the best sap leonardo training institute in hyderabad. Leonardo is a new digital innovation system from SAP. It delivers software and microservices that enable customers to leverage future-facing technologies like the Internet of Things, machine learning, blockchain,analytics and Big Data.",
-        "url": "https://vrit-rho.vercel.app/sap-leonardo-training-hyderabad",
+        "url": "https://www.vritsol.com/sap-leonardo-training-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -9168,7 +9168,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -9262,13 +9262,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-security-training",
+      "canonical": "https://www.vritsol.com/sap-security-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-security-training",
+        "canonical": "https://www.vritsol.com/sap-security-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-security-training",
-          "en": "https://vrit-rho.vercel.app/sap-security-training",
-          "x-default": "https://vrit-rho.vercel.app/sap-security-training"
+          "en-US": "https://www.vritsol.com/sap-security-training",
+          "en": "https://www.vritsol.com/sap-security-training",
+          "x-default": "https://www.vritsol.com/sap-security-training"
         }
       },
       "other": {
@@ -9296,9 +9296,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -9411,7 +9411,7 @@
               "@type": "Course",
               "name": "SAP Security training and SAP GRC training in hyderabad | VR IT Solutions",
               "description": "VR IT Solutions offer SAP Security training in hyderabad and SAP GRC Access Controls training in hyderabad. SAP Security is one of the important technical modules in SAP. SAP Security administrators are responsible for development and administration of user access rights in different SAP systems.",
-              "url": "https://vrit-rho.vercel.app/sap-security-training",
+              "url": "https://www.vritsol.com/sap-security-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -9453,7 +9453,7 @@
         "@type": "Course",
         "name": "SAP Security training and SAP GRC training in hyderabad | VR IT Solutions",
         "description": "VR IT Solutions offer SAP Security training in hyderabad and SAP GRC Access Controls training in hyderabad. SAP Security is one of the important technical modules in SAP. SAP Security administrators are responsible for development and administration of user access rights in different SAP systems.",
-        "url": "https://vrit-rho.vercel.app/sap-security-training",
+        "url": "https://www.vritsol.com/sap-security-training",
         "courseMode": [
           "online",
           "onsite"
@@ -9462,7 +9462,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -9557,13 +9557,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-fico-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/sap-fico-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-fico-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/sap-fico-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-fico-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/sap-fico-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/sap-fico-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/sap-fico-training-in-hyderabad",
+          "en": "https://www.vritsol.com/sap-fico-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/sap-fico-training-in-hyderabad"
         }
       },
       "other": {
@@ -9591,9 +9591,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -9706,7 +9706,7 @@
               "@type": "Course",
               "name": "SAP Fico Training in Hyderabad | SAP Fico Online Training in Hyderabad | VR IT Solutions",
               "description": "VRIT Solutions distinguished itself as the leading SAP FICO Training institute in Hyderabad and SAP FICO Online Trainings. Our Trainers are highly qualified and have high experience in providing quality classroom and online training on SAP FICO",
-              "url": "https://vrit-rho.vercel.app/sap-fico-training-in-hyderabad",
+              "url": "https://www.vritsol.com/sap-fico-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -9748,7 +9748,7 @@
         "@type": "Course",
         "name": "SAP Fico Training in Hyderabad | SAP Fico Online Training in Hyderabad | VR IT Solutions",
         "description": "VRIT Solutions distinguished itself as the leading SAP FICO Training institute in Hyderabad and SAP FICO Online Trainings. Our Trainers are highly qualified and have high experience in providing quality classroom and online training on SAP FICO",
-        "url": "https://vrit-rho.vercel.app/sap-fico-training-in-hyderabad",
+        "url": "https://www.vritsol.com/sap-fico-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -9757,7 +9757,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -9852,13 +9852,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-fico-online-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/sap-fico-online-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-fico-online-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/sap-fico-online-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-fico-online-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/sap-fico-online-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/sap-fico-online-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/sap-fico-online-training-in-hyderabad",
+          "en": "https://www.vritsol.com/sap-fico-online-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/sap-fico-online-training-in-hyderabad"
         }
       },
       "other": {
@@ -9886,9 +9886,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -10001,7 +10001,7 @@
               "@type": "Course",
               "name": "SAP Fico Online Training in Hyderabad | SAP Fico Training in Hyderabad | VR IT Solutions",
               "description": "VRIT Solutions is one of the best Sap fico online training in hyderabad. This course offers the competence and power of meeting all the organization's accounting & financial requirements. That helps professionals to manage and process an array of transactions in finance domain in an automated SAP environment.",
-              "url": "https://vrit-rho.vercel.app/sap-fico-online-training-in-hyderabad",
+              "url": "https://www.vritsol.com/sap-fico-online-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -10043,7 +10043,7 @@
         "@type": "Course",
         "name": "SAP Fico Online Training in Hyderabad | SAP Fico Training in Hyderabad | VR IT Solutions",
         "description": "VRIT Solutions is one of the best Sap fico online training in hyderabad. This course offers the competence and power of meeting all the organization's accounting & financial requirements. That helps professionals to manage and process an array of transactions in finance domain in an automated SAP environment.",
-        "url": "https://vrit-rho.vercel.app/sap-fico-online-training-in-hyderabad",
+        "url": "https://www.vritsol.com/sap-fico-online-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -10052,7 +10052,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -10147,13 +10147,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-mm-online-training",
+      "canonical": "https://www.vritsol.com/sap-mm-online-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-mm-online-training",
+        "canonical": "https://www.vritsol.com/sap-mm-online-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-mm-online-training",
-          "en": "https://vrit-rho.vercel.app/sap-mm-online-training",
-          "x-default": "https://vrit-rho.vercel.app/sap-mm-online-training"
+          "en-US": "https://www.vritsol.com/sap-mm-online-training",
+          "en": "https://www.vritsol.com/sap-mm-online-training",
+          "x-default": "https://www.vritsol.com/sap-mm-online-training"
         }
       },
       "other": {
@@ -10181,9 +10181,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -10296,7 +10296,7 @@
               "@type": "Course",
               "name": "Sap MM Online Training in Hyderabad | Sap MM Training in Hyderabad | VRIT solutions",
               "description": "VRIT Solutions is one of the Sap MM online training in Hyderabad. This is one of the fundamental modules of SAP ERP system that is implemented in core installations of SAP to offer career-oriented training program in SAP MM.",
-              "url": "https://vrit-rho.vercel.app/sap-mm-online-training",
+              "url": "https://www.vritsol.com/sap-mm-online-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -10338,7 +10338,7 @@
         "@type": "Course",
         "name": "Sap MM Online Training in Hyderabad | Sap MM Training in Hyderabad | VRIT solutions",
         "description": "VRIT Solutions is one of the Sap MM online training in Hyderabad. This is one of the fundamental modules of SAP ERP system that is implemented in core installations of SAP to offer career-oriented training program in SAP MM.",
-        "url": "https://vrit-rho.vercel.app/sap-mm-online-training",
+        "url": "https://www.vritsol.com/sap-mm-online-training",
         "courseMode": [
           "online",
           "onsite"
@@ -10347,7 +10347,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -10442,13 +10442,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-sd-online-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/sap-sd-online-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-sd-online-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/sap-sd-online-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-sd-online-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/sap-sd-online-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/sap-sd-online-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/sap-sd-online-training-in-hyderabad",
+          "en": "https://www.vritsol.com/sap-sd-online-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/sap-sd-online-training-in-hyderabad"
         }
       },
       "other": {
@@ -10476,9 +10476,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -10591,7 +10591,7 @@
               "@type": "Course",
               "name": "SAP SD Training in Hyderabad | SAP SD Online Training in Hyderabad | VRIT Solutions",
               "description": "VR IT Solutions is one of the best sap sd training in hyderabad. SAP SD (Sales & Distribution) is one of the core modules of SAP ERP. It is used to store the customer and product data of an organization managing the shipping, billing, selling and transportation of products and services of a company.",
-              "url": "https://vrit-rho.vercel.app/sap-sd-online-training-in-hyderabad",
+              "url": "https://www.vritsol.com/sap-sd-online-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -10633,7 +10633,7 @@
         "@type": "Course",
         "name": "SAP SD Training in Hyderabad | SAP SD Online Training in Hyderabad | VRIT Solutions",
         "description": "VR IT Solutions is one of the best sap sd training in hyderabad. SAP SD (Sales & Distribution) is one of the core modules of SAP ERP. It is used to store the customer and product data of an organization managing the shipping, billing, selling and transportation of products and services of a company.",
-        "url": "https://vrit-rho.vercel.app/sap-sd-online-training-in-hyderabad",
+        "url": "https://www.vritsol.com/sap-sd-online-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -10642,7 +10642,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -10741,13 +10741,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-ewm-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/sap-ewm-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-ewm-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/sap-ewm-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-ewm-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/sap-ewm-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/sap-ewm-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/sap-ewm-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/sap-ewm-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/sap-ewm-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -10775,9 +10775,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -10890,7 +10890,7 @@
               "@type": "Course",
               "name": "SAP EWM Training in US, UK, Canada, Dubai and Australia | SAP EWM Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers SAP EWM training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/sap-ewm-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/sap-ewm-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -10932,7 +10932,7 @@
         "@type": "Course",
         "name": "SAP EWM Training in US, UK, Canada, Dubai and Australia | SAP EWM Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers SAP EWM training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/sap-ewm-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/sap-ewm-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -10941,7 +10941,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -11040,13 +11040,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-fico-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/sap-fico-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-fico-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/sap-fico-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-fico-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/sap-fico-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/sap-fico-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/sap-fico-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/sap-fico-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/sap-fico-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -11074,9 +11074,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -11189,7 +11189,7 @@
               "@type": "Course",
               "name": "SAP Fico Training in US, UK, Canada, Dubai and Australia | SAP Fico Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers SAP Fico training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/sap-fico-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/sap-fico-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -11231,7 +11231,7 @@
         "@type": "Course",
         "name": "SAP Fico Training in US, UK, Canada, Dubai and Australia | SAP Fico Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers SAP Fico training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/sap-fico-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/sap-fico-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -11240,7 +11240,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -11339,13 +11339,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-sd-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/sap-sd-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-sd-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/sap-sd-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-sd-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/sap-sd-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/sap-sd-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/sap-sd-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/sap-sd-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/sap-sd-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -11373,9 +11373,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -11488,7 +11488,7 @@
               "@type": "Course",
               "name": "SAP SD Training in US, UK, Canada, Dubai and Australia | SAP SD Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers SAP SD training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/sap-sd-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/sap-sd-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -11530,7 +11530,7 @@
         "@type": "Course",
         "name": "SAP SD Training in US, UK, Canada, Dubai and Australia | SAP SD Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers SAP SD training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/sap-sd-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/sap-sd-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -11539,7 +11539,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -11638,13 +11638,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/workday-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/workday-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/workday-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/workday-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/workday-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/workday-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/workday-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/workday-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/workday-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/workday-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -11672,9 +11672,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -11787,7 +11787,7 @@
               "@type": "Course",
               "name": "Workday Training in US, UK, Canada, Dubai and Australia | Workday Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers Workday training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/workday-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/workday-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -11829,7 +11829,7 @@
         "@type": "Course",
         "name": "Workday Training in US, UK, Canada, Dubai and Australia | Workday Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers Workday training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/workday-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/workday-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -11838,7 +11838,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -11937,13 +11937,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/edi-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/edi-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/edi-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/edi-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/edi-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/edi-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/edi-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/edi-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/edi-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/edi-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -11971,9 +11971,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -12086,7 +12086,7 @@
               "@type": "Course",
               "name": "EDI Training in US, UK, Canada, Dubai and Australia | EDI Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers EDI training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/edi-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/edi-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -12128,7 +12128,7 @@
         "@type": "Course",
         "name": "EDI Training in US, UK, Canada, Dubai and Australia | EDI Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers EDI training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/edi-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/edi-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -12137,7 +12137,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -12236,13 +12236,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/google-cloud-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/google-cloud-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/google-cloud-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/google-cloud-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/google-cloud-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/google-cloud-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/google-cloud-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/google-cloud-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/google-cloud-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/google-cloud-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -12270,9 +12270,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -12385,7 +12385,7 @@
               "@type": "Course",
               "name": "Google Cloud Training in US, UK, Canada, Dubai and Australia | GCP Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers Google Cloud training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/google-cloud-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/google-cloud-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -12427,7 +12427,7 @@
         "@type": "Course",
         "name": "Google Cloud Training in US, UK, Canada, Dubai and Australia | GCP Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers Google Cloud training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/google-cloud-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/google-cloud-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -12436,7 +12436,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -12535,13 +12535,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/machine-learning-with-python-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/machine-learning-with-python-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/machine-learning-with-python-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/machine-learning-with-python-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/machine-learning-with-python-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -12569,9 +12569,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -12684,7 +12684,7 @@
               "@type": "Course",
               "name": "Machine Learning Training in US, UK, Canada, Dubai and Australia | Machine Learning Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers Machine Learning training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/machine-learning-with-python-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -12726,7 +12726,7 @@
         "@type": "Course",
         "name": "Machine Learning Training in US, UK, Canada, Dubai and Australia | Machine Learning Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers Machine Learning training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/machine-learning-with-python-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -12735,7 +12735,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -12834,13 +12834,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/pega-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/pega-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/pega-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/pega-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/pega-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/pega-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/pega-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/pega-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/pega-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/pega-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -12868,9 +12868,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -12983,7 +12983,7 @@
               "@type": "Course",
               "name": "Pega Training in US, UK, Canada, Dubai and Australia | Pega Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers Pega training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/pega-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/pega-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -13025,7 +13025,7 @@
         "@type": "Course",
         "name": "Pega Training in US, UK, Canada, Dubai and Australia | Pega Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers Pega training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/pega-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/pega-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -13034,7 +13034,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -13133,13 +13133,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/data-science-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/data-science-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/data-science-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/data-science-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/data-science-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/data-science-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/data-science-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/data-science-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/data-science-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/data-science-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -13167,9 +13167,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -13282,7 +13282,7 @@
               "@type": "Course",
               "name": "Data Science Training in US, UK, Canada, Dubai and Australia | Data Science Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers Data Science training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/data-science-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/data-science-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -13324,7 +13324,7 @@
         "@type": "Course",
         "name": "Data Science Training in US, UK, Canada, Dubai and Australia | Data Science Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers Data Science training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/data-science-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/data-science-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -13333,7 +13333,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -13432,13 +13432,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/salesforce-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/salesforce-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/salesforce-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/salesforce-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/salesforce-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/salesforce-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/salesforce-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/salesforce-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/salesforce-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/salesforce-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -13466,9 +13466,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -13581,7 +13581,7 @@
               "@type": "Course",
               "name": "Salesforce Training in US, UK, Canada, Dubai and Australia | Salesforce Online Training | VR IT Solutions",
               "description": "VR IT Solutions offers Salesforce training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/salesforce-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/salesforce-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -13623,7 +13623,7 @@
         "@type": "Course",
         "name": "Salesforce Training in US, UK, Canada, Dubai and Australia | Salesforce Online Training | VR IT Solutions",
         "description": "VR IT Solutions offers Salesforce training in US, UK, Canada, Dubai and Australia. Call Us @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/salesforce-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/salesforce-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -13632,7 +13632,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -13728,13 +13728,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-us-uk-canada-australia",
+      "canonical": "https://www.vritsol.com/sas-clinical-online-training-in-us-uk-canada-australia",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-us-uk-canada-australia",
+        "canonical": "https://www.vritsol.com/sas-clinical-online-training-in-us-uk-canada-australia",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-us-uk-canada-australia",
-          "en": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-us-uk-canada-australia",
-          "x-default": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-us-uk-canada-australia"
+          "en-US": "https://www.vritsol.com/sas-clinical-online-training-in-us-uk-canada-australia",
+          "en": "https://www.vritsol.com/sas-clinical-online-training-in-us-uk-canada-australia",
+          "x-default": "https://www.vritsol.com/sas-clinical-online-training-in-us-uk-canada-australia"
         }
       },
       "other": {
@@ -13762,9 +13762,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -13877,7 +13877,7 @@
               "@type": "Course",
               "name": "SAS Clinical Training in US | SAS Clinical Online Training in US | UK | Australia",
               "description": "VR IT Solutions offers SAS clinical online training in US, UK and Australia. SAS programmers implement the analysis methods on the collected data and provide the study summary tables, data listing and graphs to the statisticians and/or clinicians to write clinical study report.",
-              "url": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-us-uk-canada-australia",
+              "url": "https://www.vritsol.com/sas-clinical-online-training-in-us-uk-canada-australia",
               "courseMode": [
                 "online",
                 "onsite"
@@ -13919,7 +13919,7 @@
         "@type": "Course",
         "name": "SAS Clinical Training in US | SAS Clinical Online Training in US | UK | Australia",
         "description": "VR IT Solutions offers SAS clinical online training in US, UK and Australia. SAS programmers implement the analysis methods on the collected data and provide the study summary tables, data listing and graphs to the statisticians and/or clinicians to write clinical study report.",
-        "url": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-us-uk-canada-australia",
+        "url": "https://www.vritsol.com/sas-clinical-online-training-in-us-uk-canada-australia",
         "courseMode": [
           "online",
           "onsite"
@@ -13928,7 +13928,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -14024,13 +14024,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sas-clinical-training-in-pune",
+      "canonical": "https://www.vritsol.com/sas-clinical-training-in-pune",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sas-clinical-training-in-pune",
+        "canonical": "https://www.vritsol.com/sas-clinical-training-in-pune",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sas-clinical-training-in-pune",
-          "en": "https://vrit-rho.vercel.app/sas-clinical-training-in-pune",
-          "x-default": "https://vrit-rho.vercel.app/sas-clinical-training-in-pune"
+          "en-US": "https://www.vritsol.com/sas-clinical-training-in-pune",
+          "en": "https://www.vritsol.com/sas-clinical-training-in-pune",
+          "x-default": "https://www.vritsol.com/sas-clinical-training-in-pune"
         }
       },
       "other": {
@@ -14058,9 +14058,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -14173,7 +14173,7 @@
               "@type": "Course",
               "name": "SAS Clinical Training in Pune | SAS Clinical Online Training in Pune | Best Clinical SAS Programming Training",
               "description": "SAS Clinical Training in Pune. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/sas-clinical-training-in-pune",
+              "url": "https://www.vritsol.com/sas-clinical-training-in-pune",
               "courseMode": [
                 "online",
                 "onsite"
@@ -14215,7 +14215,7 @@
         "@type": "Course",
         "name": "SAS Clinical Training in Pune | SAS Clinical Online Training in Pune | Best Clinical SAS Programming Training",
         "description": "SAS Clinical Training in Pune. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/sas-clinical-training-in-pune",
+        "url": "https://www.vritsol.com/sas-clinical-training-in-pune",
         "courseMode": [
           "online",
           "onsite"
@@ -14224,7 +14224,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -14306,7 +14306,7 @@
       "openGraph": {
         "title": "SAS Clinical Training in Chennai | SAS Clinical Online Training in Chennai | Best Clinical SAS Programming Training",
         "description": "SAS Clinical Training in Chennai. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/sas-clinical-training-in-chennai",
+        "url": "https://www.vritsol.com/sas-clinical-training-in-chennai",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -14320,13 +14320,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sas-clinical-training-in-chennai",
+      "canonical": "https://www.vritsol.com/sas-clinical-training-in-chennai",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sas-clinical-training-in-chennai",
+        "canonical": "https://www.vritsol.com/sas-clinical-training-in-chennai",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sas-clinical-training-in-chennai",
-          "en": "https://vrit-rho.vercel.app/sas-clinical-training-in-chennai",
-          "x-default": "https://vrit-rho.vercel.app/sas-clinical-training-in-chennai"
+          "en-US": "https://www.vritsol.com/sas-clinical-training-in-chennai",
+          "en": "https://www.vritsol.com/sas-clinical-training-in-chennai",
+          "x-default": "https://www.vritsol.com/sas-clinical-training-in-chennai"
         }
       },
       "other": {
@@ -14354,9 +14354,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -14469,7 +14469,7 @@
               "@type": "Course",
               "name": "SAS Clinical Training in Chennai | SAS Clinical Online Training in Chennai | Best Clinical SAS Programming Training",
               "description": "SAS Clinical Training in Chennai. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/sas-clinical-training-in-chennai",
+              "url": "https://www.vritsol.com/sas-clinical-training-in-chennai",
               "courseMode": [
                 "online",
                 "onsite"
@@ -14511,7 +14511,7 @@
         "@type": "Course",
         "name": "SAS Clinical Training in Chennai | SAS Clinical Online Training in Chennai | Best Clinical SAS Programming Training",
         "description": "SAS Clinical Training in Chennai. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/sas-clinical-training-in-chennai",
+        "url": "https://www.vritsol.com/sas-clinical-training-in-chennai",
         "courseMode": [
           "online",
           "onsite"
@@ -14520,7 +14520,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -14602,7 +14602,7 @@
       "openGraph": {
         "title": "SAS Clinical Training in Bangalore | SAS Clinical Online Training in Bangalore | Best Clinical SAS Programming Training",
         "description": "SAS Clinical Training in Bangalore. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/sas-clinical-training-in-bangalore",
+        "url": "https://www.vritsol.com/sas-clinical-training-in-bangalore",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -14616,13 +14616,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sas-clinical-training-in-bangalore",
+      "canonical": "https://www.vritsol.com/sas-clinical-training-in-bangalore",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sas-clinical-training-in-bangalore",
+        "canonical": "https://www.vritsol.com/sas-clinical-training-in-bangalore",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sas-clinical-training-in-bangalore",
-          "en": "https://vrit-rho.vercel.app/sas-clinical-training-in-bangalore",
-          "x-default": "https://vrit-rho.vercel.app/sas-clinical-training-in-bangalore"
+          "en-US": "https://www.vritsol.com/sas-clinical-training-in-bangalore",
+          "en": "https://www.vritsol.com/sas-clinical-training-in-bangalore",
+          "x-default": "https://www.vritsol.com/sas-clinical-training-in-bangalore"
         }
       },
       "other": {
@@ -14650,9 +14650,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -14765,7 +14765,7 @@
               "@type": "Course",
               "name": "SAS Clinical Training in Bangalore | SAS Clinical Online Training in Bangalore | Best Clinical SAS Programming Training",
               "description": "SAS Clinical Training in Bangalore. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
-              "url": "https://vrit-rho.vercel.app/sas-clinical-training-in-bangalore",
+              "url": "https://www.vritsol.com/sas-clinical-training-in-bangalore",
               "courseMode": [
                 "online",
                 "onsite"
@@ -14807,7 +14807,7 @@
         "@type": "Course",
         "name": "SAS Clinical Training in Bangalore | SAS Clinical Online Training in Bangalore | Best Clinical SAS Programming Training",
         "description": "SAS Clinical Training in Bangalore. Clinical Programming. The VRIT Solutions. Best in Clinical Training & Placement. Jump start your career with clinical programming. Call @ +91 9032734343.",
-        "url": "https://vrit-rho.vercel.app/sas-clinical-training-in-bangalore",
+        "url": "https://www.vritsol.com/sas-clinical-training-in-bangalore",
         "courseMode": [
           "online",
           "onsite"
@@ -14816,7 +14816,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -14897,7 +14897,7 @@
       "openGraph": {
         "title": "SAS Clinical Training in Hyderabad | SAS Clinical Online Training in Hyderabad",
         "description": "VR IT Solutions offers SAS clinical online training in Hyderabad. SAS programmers implement the analysis methods on the collected data and provide the study summary tables, data listing and graphs to the statisticians and/or clinicians to write clinical study report.",
-        "url": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-hyderabad",
+        "url": "https://www.vritsol.com/sas-clinical-online-training-in-hyderabad",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -14911,13 +14911,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/sas-clinical-online-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/sas-clinical-online-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/sas-clinical-online-training-in-hyderabad",
+          "en": "https://www.vritsol.com/sas-clinical-online-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/sas-clinical-online-training-in-hyderabad"
         }
       },
       "other": {
@@ -14945,9 +14945,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -15060,7 +15060,7 @@
               "@type": "Course",
               "name": "SAS Clinical Training in Hyderabad | SAS Clinical Online Training in Hyderabad",
               "description": "VR IT Solutions offers SAS clinical online training in Hyderabad. SAS programmers implement the analysis methods on the collected data and provide the study summary tables, data listing and graphs to the statisticians and/or clinicians to write clinical study report.",
-              "url": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-hyderabad",
+              "url": "https://www.vritsol.com/sas-clinical-online-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -15102,7 +15102,7 @@
         "@type": "Course",
         "name": "SAS Clinical Training in Hyderabad | SAS Clinical Online Training in Hyderabad",
         "description": "VR IT Solutions offers SAS clinical online training in Hyderabad. SAS programmers implement the analysis methods on the collected data and provide the study summary tables, data listing and graphs to the statisticians and/or clinicians to write clinical study report.",
-        "url": "https://vrit-rho.vercel.app/sas-clinical-online-training-in-hyderabad",
+        "url": "https://www.vritsol.com/sas-clinical-online-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -15111,7 +15111,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -15193,7 +15193,7 @@
       "openGraph": {
         "title": "SAP Central Finance Training in Hyderabad | SAP Central Finance Online Training in Hyderabad",
         "description": "Online SAP Central Finance training in Hyderabad at VR IT Solutions enables you to work on a Central Finance project by doing end-to-end configuration.",
-        "url": "https://vrit-rho.vercel.app/sap-central-finance-online-training",
+        "url": "https://www.vritsol.com/sap-central-finance-online-training",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -15207,13 +15207,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-central-finance-online-training",
+      "canonical": "https://www.vritsol.com/sap-central-finance-online-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-central-finance-online-training",
+        "canonical": "https://www.vritsol.com/sap-central-finance-online-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-central-finance-online-training",
-          "en": "https://vrit-rho.vercel.app/sap-central-finance-online-training",
-          "x-default": "https://vrit-rho.vercel.app/sap-central-finance-online-training"
+          "en-US": "https://www.vritsol.com/sap-central-finance-online-training",
+          "en": "https://www.vritsol.com/sap-central-finance-online-training",
+          "x-default": "https://www.vritsol.com/sap-central-finance-online-training"
         }
       },
       "other": {
@@ -15241,9 +15241,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -15356,7 +15356,7 @@
               "@type": "Course",
               "name": "SAP Central Finance Training in Hyderabad | SAP Central Finance Online Training in Hyderabad",
               "description": "Online SAP Central Finance training in Hyderabad at VR IT Solutions enables you to work on a Central Finance project by doing end-to-end configuration.",
-              "url": "https://vrit-rho.vercel.app/sap-central-finance-online-training",
+              "url": "https://www.vritsol.com/sap-central-finance-online-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -15398,7 +15398,7 @@
         "@type": "Course",
         "name": "SAP Central Finance Training in Hyderabad | SAP Central Finance Online Training in Hyderabad",
         "description": "Online SAP Central Finance training in Hyderabad at VR IT Solutions enables you to work on a Central Finance project by doing end-to-end configuration.",
-        "url": "https://vrit-rho.vercel.app/sap-central-finance-online-training",
+        "url": "https://www.vritsol.com/sap-central-finance-online-training",
         "courseMode": [
           "online",
           "onsite"
@@ -15407,7 +15407,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -15489,7 +15489,7 @@
       "openGraph": {
         "title": "SAP Central Finance Training in Hyderabad | SAP Central Finance Online Training in Hyderabad",
         "description": "Online SAP Central Finance training in Hyderabad at VR IT Solutions enables you to work on a Central Finance project by doing end-to-end configuration.",
-        "url": "https://vrit-rho.vercel.app/sap-central-finance-online-training-in-hyderabad",
+        "url": "https://www.vritsol.com/sap-central-finance-online-training-in-hyderabad",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -15503,13 +15503,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-central-finance-online-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/sap-central-finance-online-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-central-finance-online-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/sap-central-finance-online-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-central-finance-online-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/sap-central-finance-online-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/sap-central-finance-online-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/sap-central-finance-online-training-in-hyderabad",
+          "en": "https://www.vritsol.com/sap-central-finance-online-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/sap-central-finance-online-training-in-hyderabad"
         }
       },
       "other": {
@@ -15537,9 +15537,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -15652,7 +15652,7 @@
               "@type": "Course",
               "name": "SAP Central Finance Training in Hyderabad | SAP Central Finance Online Training in Hyderabad",
               "description": "Online SAP Central Finance training in Hyderabad at VR IT Solutions enables you to work on a Central Finance project by doing end-to-end configuration.",
-              "url": "https://vrit-rho.vercel.app/sap-central-finance-online-training-in-hyderabad",
+              "url": "https://www.vritsol.com/sap-central-finance-online-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -15694,7 +15694,7 @@
         "@type": "Course",
         "name": "SAP Central Finance Training in Hyderabad | SAP Central Finance Online Training in Hyderabad",
         "description": "Online SAP Central Finance training in Hyderabad at VR IT Solutions enables you to work on a Central Finance project by doing end-to-end configuration.",
-        "url": "https://vrit-rho.vercel.app/sap-central-finance-online-training-in-hyderabad",
+        "url": "https://www.vritsol.com/sap-central-finance-online-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -15703,7 +15703,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -15782,7 +15782,7 @@
       "openGraph": {
         "title": "Full Stack Developer Training in Hyderabad | Full Stack Training | VR IT Solutions",
         "description": "VR IT Solutions providing Full Stack Training in Hyderabad.",
-        "url": "https://vrit-rho.vercel.app/full-stack-developer-training-in-hyderabad",
+        "url": "https://www.vritsol.com/full-stack-developer-training-in-hyderabad",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -15796,13 +15796,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/full-stack-developer-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/full-stack-developer-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/full-stack-developer-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/full-stack-developer-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/full-stack-developer-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/full-stack-developer-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/full-stack-developer-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/full-stack-developer-training-in-hyderabad",
+          "en": "https://www.vritsol.com/full-stack-developer-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/full-stack-developer-training-in-hyderabad"
         }
       },
       "other": {
@@ -15830,9 +15830,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -15945,7 +15945,7 @@
               "@type": "Course",
               "name": "Full Stack Developer Training in Hyderabad | Full Stack Training | VR IT Solutions",
               "description": "VR IT Solutions providing Full Stack Training in Hyderabad.",
-              "url": "https://vrit-rho.vercel.app/full-stack-developer-training-in-hyderabad",
+              "url": "https://www.vritsol.com/full-stack-developer-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -15987,7 +15987,7 @@
         "@type": "Course",
         "name": "Full Stack Developer Training in Hyderabad | Full Stack Training | VR IT Solutions",
         "description": "VR IT Solutions providing Full Stack Training in Hyderabad.",
-        "url": "https://vrit-rho.vercel.app/full-stack-developer-training-in-hyderabad",
+        "url": "https://www.vritsol.com/full-stack-developer-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -15996,7 +15996,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -16079,7 +16079,7 @@
       "openGraph": {
         "title": "Sap EWM Training in Hyderabad | sap ewm online training in Hyderabad | VR IT Solutions",
         "description": "VR IT Solutions providing Sap EWM Online Training in Hyderabad, this course helps professionals to manage and process a variety of operations in supply chain management (SCM) domain in an automated SAP environment.",
-        "url": "https://vrit-rho.vercel.app/sap-ewm-online-training",
+        "url": "https://www.vritsol.com/sap-ewm-online-training",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -16093,13 +16093,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/sap-ewm-online-training",
+      "canonical": "https://www.vritsol.com/sap-ewm-online-training",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/sap-ewm-online-training",
+        "canonical": "https://www.vritsol.com/sap-ewm-online-training",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/sap-ewm-online-training",
-          "en": "https://vrit-rho.vercel.app/sap-ewm-online-training",
-          "x-default": "https://vrit-rho.vercel.app/sap-ewm-online-training"
+          "en-US": "https://www.vritsol.com/sap-ewm-online-training",
+          "en": "https://www.vritsol.com/sap-ewm-online-training",
+          "x-default": "https://www.vritsol.com/sap-ewm-online-training"
         }
       },
       "other": {
@@ -16127,9 +16127,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -16242,7 +16242,7 @@
               "@type": "Course",
               "name": "Sap EWM Training in Hyderabad | sap ewm online training in Hyderabad | VR IT Solutions",
               "description": "VR IT Solutions providing Sap EWM Online Training in Hyderabad, this course helps professionals to manage and process a variety of operations in supply chain management (SCM) domain in an automated SAP environment.",
-              "url": "https://vrit-rho.vercel.app/sap-ewm-online-training",
+              "url": "https://www.vritsol.com/sap-ewm-online-training",
               "courseMode": [
                 "online",
                 "onsite"
@@ -16284,7 +16284,7 @@
         "@type": "Course",
         "name": "Sap EWM Training in Hyderabad | sap ewm online training in Hyderabad | VR IT Solutions",
         "description": "VR IT Solutions providing Sap EWM Online Training in Hyderabad, this course helps professionals to manage and process a variety of operations in supply chain management (SCM) domain in an automated SAP environment.",
-        "url": "https://vrit-rho.vercel.app/sap-ewm-online-training",
+        "url": "https://www.vritsol.com/sap-ewm-online-training",
         "courseMode": [
           "online",
           "onsite"
@@ -16293,7 +16293,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -16378,7 +16378,7 @@
       "openGraph": {
         "title": "Machine Learning Training | Machine Learning with Python Training in Hyderabad | Machine Learning with Python Certification",
         "description": "VR IT Solutions offer classroom & online machine learning with python training in hyderabad from industry experts. 100% training & placement on machine learning with python course & certification.",
-        "url": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-hyderabad",
+        "url": "https://www.vritsol.com/machine-learning-with-python-training-in-hyderabad",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -16392,13 +16392,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/machine-learning-with-python-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/machine-learning-with-python-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/machine-learning-with-python-training-in-hyderabad",
+          "en": "https://www.vritsol.com/machine-learning-with-python-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/machine-learning-with-python-training-in-hyderabad"
         }
       },
       "other": {
@@ -16426,9 +16426,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -16541,7 +16541,7 @@
               "@type": "Course",
               "name": "Machine Learning Training | Machine Learning with Python Training in Hyderabad | Machine Learning with Python Certification",
               "description": "VR IT Solutions offer classroom & online machine learning with python training in hyderabad from industry experts. 100% training & placement on machine learning with python course & certification.",
-              "url": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-hyderabad",
+              "url": "https://www.vritsol.com/machine-learning-with-python-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -16583,7 +16583,7 @@
         "@type": "Course",
         "name": "Machine Learning Training | Machine Learning with Python Training in Hyderabad | Machine Learning with Python Certification",
         "description": "VR IT Solutions offer classroom & online machine learning with python training in hyderabad from industry experts. 100% training & placement on machine learning with python course & certification.",
-        "url": "https://vrit-rho.vercel.app/machine-learning-with-python-training-in-hyderabad",
+        "url": "https://www.vritsol.com/machine-learning-with-python-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -16592,7 +16592,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -16677,7 +16677,7 @@
       "openGraph": {
         "title": "Machine Learning Online Training | Machine Learning with Python Online Training in Hyderabad",
         "description": "VR IT Solutions offer machine learning with python online training in hyderabad from industry experts. 100% training & placement on machine learning online training course & certification.",
-        "url": "https://vrit-rho.vercel.app/machine-learning-with-python-online-training-in-hyderabad",
+        "url": "https://www.vritsol.com/machine-learning-with-python-online-training-in-hyderabad",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -16691,13 +16691,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/machine-learning-with-python-online-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/machine-learning-with-python-online-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/machine-learning-with-python-online-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/machine-learning-with-python-online-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/machine-learning-with-python-online-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/machine-learning-with-python-online-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/machine-learning-with-python-online-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/machine-learning-with-python-online-training-in-hyderabad",
+          "en": "https://www.vritsol.com/machine-learning-with-python-online-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/machine-learning-with-python-online-training-in-hyderabad"
         }
       },
       "other": {
@@ -16725,9 +16725,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -16840,7 +16840,7 @@
               "@type": "Course",
               "name": "Machine Learning Online Training | Machine Learning with Python Online Training in Hyderabad",
               "description": "VR IT Solutions offer machine learning with python online training in hyderabad from industry experts. 100% training & placement on machine learning online training course & certification.",
-              "url": "https://vrit-rho.vercel.app/machine-learning-with-python-online-training-in-hyderabad",
+              "url": "https://www.vritsol.com/machine-learning-with-python-online-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -16882,7 +16882,7 @@
         "@type": "Course",
         "name": "Machine Learning Online Training | Machine Learning with Python Online Training in Hyderabad",
         "description": "VR IT Solutions offer machine learning with python online training in hyderabad from industry experts. 100% training & placement on machine learning online training course & certification.",
-        "url": "https://vrit-rho.vercel.app/machine-learning-with-python-online-training-in-hyderabad",
+        "url": "https://www.vritsol.com/machine-learning-with-python-online-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -16891,7 +16891,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
@@ -16973,7 +16973,7 @@
       "openGraph": {
         "title": "Workday Training in Hyderabad | Workday Online Training with Placement",
         "description": "Workday Training in Hyderabad by a real-time trainer with live project and 100% placement assistance. VR IT Solutions offer Workday online and Classroom Training course.",
-        "url": "https://vrit-rho.vercel.app/workday-training-in-hyderabad",
+        "url": "https://www.vritsol.com/workday-training-in-hyderabad",
         "type": "website",
         "locale": "en_US",
         "siteName": "VR IT SOL",
@@ -16987,13 +16987,13 @@
         "creator": "@vritsolutions",
         "images": []
       },
-      "canonical": "https://vrit-rho.vercel.app/workday-training-in-hyderabad",
+      "canonical": "https://www.vritsol.com/workday-training-in-hyderabad",
       "alternates": {
-        "canonical": "https://vrit-rho.vercel.app/workday-training-in-hyderabad",
+        "canonical": "https://www.vritsol.com/workday-training-in-hyderabad",
         "languages": {
-          "en-US": "https://vrit-rho.vercel.app/workday-training-in-hyderabad",
-          "en": "https://vrit-rho.vercel.app/workday-training-in-hyderabad",
-          "x-default": "https://vrit-rho.vercel.app/workday-training-in-hyderabad"
+          "en-US": "https://www.vritsol.com/workday-training-in-hyderabad",
+          "en": "https://www.vritsol.com/workday-training-in-hyderabad",
+          "x-default": "https://www.vritsol.com/workday-training-in-hyderabad"
         }
       },
       "other": {
@@ -17021,9 +17021,9 @@
         "name": "VR IT SOL",
         "alternateName": "VR IT Solutions",
         "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
-        "url": "https://vrit-rho.vercel.app",
-        "logo": "https://vrit-rho.vercel.app/images/vritlogo.png",
-        "image": "https://vrit-rho.vercel.app/images/vritlogo.png",
+        "url": "https://www.vritsol.com",
+        "logo": "https://www.vritsol.com/images/vritlogo.png",
+        "image": "https://www.vritsol.com/images/vritlogo.png",
         "priceRange": "$$",
         "currenciesAccepted": "INR",
         "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",
@@ -17136,7 +17136,7 @@
               "@type": "Course",
               "name": "Workday Training in Hyderabad | Workday Online Training with Placement",
               "description": "Workday Training in Hyderabad by a real-time trainer with live project and 100% placement assistance. VR IT Solutions offer Workday online and Classroom Training course.",
-              "url": "https://vrit-rho.vercel.app/workday-training-in-hyderabad",
+              "url": "https://www.vritsol.com/workday-training-in-hyderabad",
               "courseMode": [
                 "online",
                 "onsite"
@@ -17178,7 +17178,7 @@
         "@type": "Course",
         "name": "Workday Training in Hyderabad | Workday Online Training with Placement",
         "description": "Workday Training in Hyderabad by a real-time trainer with live project and 100% placement assistance. VR IT Solutions offer Workday online and Classroom Training course.",
-        "url": "https://vrit-rho.vercel.app/workday-training-in-hyderabad",
+        "url": "https://www.vritsol.com/workday-training-in-hyderabad",
         "courseMode": [
           "online",
           "onsite"
@@ -17187,7 +17187,7 @@
         "provider": {
           "@type": "EducationalOrganization",
           "name": "VR IT SOL",
-          "url": "https://vrit-rho.vercel.app"
+          "url": "https://www.vritsol.com"
         },
         "offers": {
           "@type": "Offer",
