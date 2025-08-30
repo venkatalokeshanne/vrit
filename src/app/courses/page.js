@@ -598,35 +598,31 @@ function CoursesContent() {
           };
         });
 
-        // Combine static and dynamic courses and remove duplicates based on slug
-        const combinedCourses = [...transformedDynamicCourses, ...staticCourses];
+        // Combine courses - STATIC COURSES FIRST to preserve business priority order
+        const combinedCourses = [...staticCourses, ...transformedDynamicCourses];
         
-        // Remove duplicates by slug - priority to dynamic courses
+        // Remove duplicates by slug - priority to static courses (business priority)
         const uniqueCourses = combinedCourses.reduce((acc, current) => {
           const existingCourse = acc.find(course => course.slug === current.slug);
           if (!existingCourse) {
             acc.push(current);
-          } else if (current.isDynamic && !existingCourse.isDynamic) {
-            // Replace static course with dynamic course if duplicate found
-            const index = acc.findIndex(course => course.slug === current.slug);
-            acc[index] = current;
           }
+          // Note: We keep the FIRST occurrence (static course) if there's a duplicate
+          // This preserves your business priority ordering from staticCourses array
           return acc;
         }, []);
         
-        // Sort courses by dynamic first, then trending, then by rating
-        const sortedCourses = uniqueCourses.sort((a, b) => 
-          (b.isDynamic ? 1 : 0) - (a.isDynamic ? 1 : 0) ||
-          b.trending - a.trending || 
-          b.rating - a.rating
-        );
+        // Use the exact order from staticCourses array - NO SORTING to preserve business priority
+        // Dynamic courses will be added at the beginning, but static courses maintain their priority order
+        const finalCourses = uniqueCourses;
 
-        setAllCourses(sortedCourses);
-        setFilteredCourses(sortedCourses);
+        setAllCourses(finalCourses);
+        setFilteredCourses(finalCourses);
         
         console.log('🔍 Dynamic Courses Found:', dynamicCourses.length);
         console.log('📚 Static Courses Defined:', staticCourses.length);
-        console.log('🎯 Total Unique Courses:', sortedCourses.length);
+        console.log('🎯 Total Unique Courses:', finalCourses.length);
+        console.log('✅ Courses Order: Preserved business priority from staticCourses array');
         
         // Debug: Log any duplicates found
         const dynamicSlugs = transformedDynamicCourses.map(c => c.slug);
