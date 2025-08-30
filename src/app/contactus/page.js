@@ -433,10 +433,7 @@ export default function ContactUs() {
                   <MapPin className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <div className="text-gray-300">
                     <p className="text-white font-semibold mb-1">Office Address</p>
-                    <p>506/A, Aditya Enclave,</p>
-                    <p>Nilagiri Block, 5th Floor,</p>
-                    <p>Ameerpet, Hyderabad</p>
-                    <p>Telangana - 500016</p>
+                    <p>5th floor 506, Nilgiri block, ADITYA ENCLAVE, a/a, Satyam Theatre Rd, Kumar Basti, Ameerpet, Hyderabad, Telangana 500073, India</p>
                     <a 
                       href="https://www.google.com/maps/place/VR+IT+SOLUTIONS-Clinical+Sas+Training+%7C+Salesforce+training+%7C+Servicenow+Training+%7C+EDI+Training/@17.4392062,78.4343207,15z/data=!4m10!1m2!2m1!1s5th+floor+506,+Nilgiri+block,+ADITYA+ENCLAVE,+a%2Fa,+Satyam+Theatre+Rd,+Kumar+Basti,+Ameerpet,+Hyderabad,+Telangana+500073!3m6!1s0x3bcb916f8ec8811f:0x29a2152dbc636b6f!8m2!3d17.4362741!4d78.444687!15sCng1dGggZmxvb3IgNTA2LCBOaWxnaXJpIGJsb2NrLCBBRElUWUEgRU5DTEFWRSwgYS9hLCBTYXR5YW0gVGhlYXRyZSBSZCwgS3VtYXIgQmFzdGksIEFtZWVycGV0LCBIeWRlcmFiYWQsIFRlbGFuZ2FuYSA1MDAwNzNaciJwNXRoIGZsb29yIDUwNiBuaWxnaXJpIGJsb2NrIGFkaXR5YSBlbmNsYXZlIGEgYSBzYXR5YW0gdGhlYXRyZSByZCBrdW1hciBiYXN0aSBhbWVlcnBldCBoeWRlcmFiYWQgdGVsYW5nYW5hIDUwMDA3M5IBG3NvZnR3YXJlX3RyYWluaW5nX2luc3RpdHV0ZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VRMmR6bEhjakJSUlJBQqoBzQEQASoyIi41dGggZmxvb3IgNTA2IG5pbGdpcmkgYmxvY2sgYWRpdHlhIGVuY2xhdmUgYSBhKAAyHxABIhvc3XWc8TnGNGOHbQavKfUn-IwhPDWzJxZJ0m0ydBACInA1dGggZmxvb3IgNTA2IG5pbGdpcmkgYmxvY2sgYWRpdHlhIGVuY2xhdmUgYSBhIHNhdHlhbSB0aGVhdHJlIHJkIGt1bWFyIGJhc3RpIGFtZWVycGV0IGh5ZGVyYWJhZCB0ZWxhbmdhbmEgNTAwMDcz4AEA-gEECAAQMw!16s%2Fg%2F11j00lfb5d?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"

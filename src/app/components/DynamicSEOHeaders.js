@@ -10,7 +10,7 @@ export default function DynamicSEOHeaders({ seoHeaders }) {
   }
 
   return (
-    <div className="sr-only" aria-hidden="true">
+    <div className="sr-only">
       {seoHeaders.map((header, index) => {
         const { level, text } = header;
         
@@ -31,3 +31,16 @@ export default function DynamicSEOHeaders({ seoHeaders }) {
     </div>
   );
 }
+
+/**
+ * Usage example in your page component:
+ * 
+ * const seoHeaders = [
+ *   { level: 1, text: "Azure DevOps Training in Chennai" },
+ *   { level: 2, text: "Professional Certification Courses" },
+ *   { level: 2, text: "Training Locations" },
+ *   { level: 3, text: "Classroom Training Programs" }
+ * ];
+ * 
+ * <DynamicSEOHeaders seoHeaders={seoHeaders} />
+ */

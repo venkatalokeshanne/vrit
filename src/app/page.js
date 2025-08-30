@@ -35,6 +35,9 @@ import FAQ from './components/FAQ';
 import PopupBanner from './components/PopupBanner';
 import EnquiryModal from './components/EnquiryModal';
 import coursesData from '../data/courses-static.json';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Home() {
   // Get dynamic courses from Sanity
@@ -101,12 +104,33 @@ export default function Home() {
   const companies = [];
   for (let i = 1; i <= 50; i++) {
     if (i === 37) {
-      // file37.png seems to be named fle37.png
       companies.push({ name: `Company ${i}`, image: `/fle37.png` });
     } else {
       companies.push({ name: `Company ${i}`, image: `/file${i}.png` });
     }
   }
+  // Split companies into two rows
+  const mid = Math.ceil(companies.length / 2);
+  const companiesRow1 = companies.slice(0, mid);
+  const companiesRow2 = companies.slice(mid);
+  const companySliderSettings = {
+    dots: false,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 8,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    cssEase: 'linear',
+    arrows: false,
+    pauseOnHover: false,
+    responsive: [
+      { breakpoint: 1280, settings: { slidesToShow: 6 } },
+      { breakpoint: 1024, settings: { slidesToShow: 5 } },
+      { breakpoint: 768, settings: { slidesToShow: 3 } },
+      { breakpoint: 480, settings: { slidesToShow: 2 } },
+    ],
+  };
 
   const homepageFaqs = [
     {
@@ -658,37 +682,50 @@ export default function Home() {
       </section>
 
       {/* Company Partners Section */}
-      <section className="py-6 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-6">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
-              Our Students Work At
-            </h3>
-            <p className="text-sm text-gray-200">
-              VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room tainings from Hyderabad. VR IT solutions is trained & placed thousands of people in majour MNC&apos;s like Infosys, Wipro, Accenture, Delloite, Cognizent, Capgemini and other companies as well.
-            </p>
+<section className="py-6 px-4 sm:px-6 lg:px-8 relative">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-6">
+      <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+        Our Students Work At
+      </h3>
+      <p className="text-sm text-gray-200">
+        VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online &amp; classroom trainings from Hyderabad. VR IT Solutions has trained &amp; placed thousands of people in major MNC's like Infosys, Wipro, Accenture, Deloitte, Cognizant, Capgemini and other companies as well.
+      </p>
+    </div>
+    <div className="space-y-4">
+      <Slider {...companySliderSettings} className="w-full">
+        {companiesRow1.map((company, index) => (
+          <div key={`company-row1-${index}`} className="flex items-center justify-center px-2">
+            <div className="relative w-32 h-20 bg-white/5 rounded-lg p-1 backdrop-blur-sm border border-white/10 overflow-hidden">
+              <Image
+                src={company.image}
+                alt={`${company.name} logo`}
+                fill
+                className="object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
+                sizes="128px"
+              />
+            </div>
           </div>
-          
-          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-2">
-            {companies.map((company, index) => (
-              <div
-                key={`company-${index}`}
-                className="group flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <div className="relative w-32 h-20 bg-white/5 rounded-lg p-1 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden">
-                  <Image
-                    src={company.image}
-                    alt={`${company.name} logo`}
-                    fill
-                    className="object-cover filter brightness-90 group-hover:brightness-100 transition-all duration-300"
-                    sizes="(max-width: 768px) 128px, 128px"
-                  />
-                </div>
-              </div>
-            ))}
+        ))}
+      </Slider>
+      <Slider {...companySliderSettings} rtl className="w-full">
+        {companiesRow2.map((company, index) => (
+          <div key={`company-row2-${index}`} className="flex items-center justify-center px-2">
+            <div className="relative w-32 h-20 bg-white/5 rounded-lg p-1 backdrop-blur-sm border border-white/10 overflow-hidden">
+              <Image
+                src={company.image}
+                alt={`${company.name} logo`}
+                fill
+                className="object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
+                sizes="128px"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </Slider>
+    </div>
+  </div>
+</section>
 
       {/* Courses Section */}
       <section id="courses" className="py-14 px-4 sm:px-6 lg:px-8 relative">
@@ -959,7 +996,7 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* Clean CTA Button */}
+                  {/* Course CTA - Enhanced button with icon */}
                   {course.link ? (
                     <Link
                       href={course.link}

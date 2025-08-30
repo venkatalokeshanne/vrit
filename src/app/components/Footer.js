@@ -128,10 +128,8 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                 <div className="text-gray-100">
-                  <p>506/A, Aditya Enclave,</p>
-                  <p>Nilagiri Block, 5th Floor,</p>
-                  <p>Ameerpet, Hyderabad</p>
-                  <p>Telangana - 500016</p>
+                  <p>5th floor 506, Nilgiri block, ADITYA ENCLAVE, a/a, Satyam Theatre Rd, Kumar Basti,</p>
+                  <p>Ameerpet, Hyderabad, Telangana 500073, India</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
@@ -154,7 +152,7 @@ export default function Footer() {
             <div className="bg-slate-800 rounded-xl p-2 border border-slate-600 mb-4 relative overflow-hidden">
               {/* Try Google Maps Embed first */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.564879768166!2d78.44271051489569!3d17.439999787995647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c0c6db3e95%3A0x5b1b4f5c5c5c5c5c!2s506%2FA%2C%20Aditya%20Enclave%2C%20Nilagiri%20Block%2C%20Ameerpet%2C%20Hyderabad%2C%20Telangana%20500016%2C%20India!5e0!3m2!1sen!2sin!4v1704067200000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.511964964019!2d78.447995!3d17.437462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c0c6db3e95%3A0x5b1b4f5c5c5c5c5c!2s5th%20floor%20506%2C%20Nilgiri%20block%2C%20ADITYA%20ENCLAVE%2C%20a%2Fa%2C%20Satyam%20Theatre%20Rd%2C%20Kumar%20Basti%2C%20Ameerpet%2C%20Hyderabad%2C%20Telangana%20500073%2C%20India!5e0!3m2!1sen!2sin!4v1704067200000!5m2!1sen!2sin"
                 width="100%"
                 height="160"
                 style={{ border: 0 }}
@@ -189,19 +187,19 @@ export default function Footer() {
                 <MapPin className="w-8 h-8 text-blue-400" />
                 <div className="text-center">
                   <p className="text-white font-medium">VR IT Solutions</p>
-                  <p className="text-slate-300 text-sm">Ameerpet, Hyderabad</p>
+                  <p className="text-slate-300 text-sm">5th floor 506, Nilgiri block, ADITYA ENCLAVE, a/a, Satyam Theatre Rd, Kumar Basti, Ameerpet, Hyderabad, Telangana 500073, India</p>
                 </div>
               </div>
             </div>
             <div className="flex items-center justify-center space-x-4 mb-4">
               <Link
-                href="https://maps.app.goo.gl/fARm19iVifZOTVzxo"
+                href="https://www.google.com/maps/place/VR+IT+SOLUTIONS-Clinical+Sas+Training+%7C+Salesforce+training+%7C+Servicenow+Training+%7C+EDI+Training/@17.4362792,78.4421121,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb916f8ec8811f:0x29a2152dbc636b6f!8m2!3d17.4362741!4d78.444687!16s%2Fg%2F11j00lfb5d?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors text-white hover:text-white text-sm border border-blue-500"
+                className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
               >
-                <MapPin className="w-4 h-4" />
-                <span>Open in Google Maps</span>
+                <MapPin className="w-5 h-5 mr-2" />
+                Get Directions
               </Link>
             </div>
             <p className="text-sm text-gray-200 text-center">
