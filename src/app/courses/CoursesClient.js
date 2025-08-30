@@ -7,7 +7,6 @@ import {
   Star,
   Clock,
   Users,
-  Award,
   ArrowRight,
   BookOpen,
   Code,
@@ -18,15 +17,6 @@ import {
   Network,
   Shield,
   Brain,
-  Sparkles,
-  Calendar,
-  MapPin,
-  Phone,
-  Mail,
-  CheckCircle,
-  Trophy,
-  Rocket,
-  GraduationCap,
   Cpu
 } from 'lucide-react';
 
