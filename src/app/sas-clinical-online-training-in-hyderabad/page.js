@@ -331,7 +331,7 @@ export default function SASClinicalOnlineTrainingInHyderabad() {
                   </p>
                 </div>
                 <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl shadow-xl">
-                  <Image src="/sas-clinical-salaries.jpg" alt="SAS Clinical Average Salaries" className="w-full object-cover border border-green-400/30" width={1200} height={630} />
+                  <Image src="/sas-clinical-salaries.jpg" alt="SAS Clinical Average Salaries" className="w-full object-cover border border-green-400/30" width={1200} height={630}  priority fetchPriority="high" />
                 </div>
               </div>
             </section>
@@ -343,7 +343,7 @@ export default function SASClinicalOnlineTrainingInHyderabad() {
               </h2>
               <div className="space-y-6">
                 <div className="relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl shadow-xl">
-                  <Image src="/sas-clinical-companies.jpg" alt="SAS Clinical Jobs in Companies" className="w-full object-cover border border-indigo-400/30" width={1200} height={630} />
+                  <Image src="/sas-clinical-companies.jpg" alt="SAS Clinical Jobs in Companies" className="w-full object-cover border border-indigo-400/30" width={1200} height={630}  priority fetchPriority="high" />
                 </div>
                 <div className="bg-indigo-500/10 rounded-xl p-6 border border-indigo-400/20">
                   <p className="text-indigo-100 leading-relaxed">

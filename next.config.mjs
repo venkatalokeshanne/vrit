@@ -6,12 +6,12 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   // Modern JavaScript target to reduce polyfills
-  // swcMinify: true,
+  swcMinify: true,
   // Enable experimental features for better performance
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    // modernBrowsers: true,
+    modernBrowsers: true,
   },
   // Image optimization
   images: {
@@ -40,7 +40,33 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   // Webpack optimizations
-
+  webpack: (config, { dev, isServer }) => {
+    // Enable tree shaking
+    config.optimization.usedExports = true;
+    config.optimization.sideEffects = false;
+    
+    // Reduce bundle size
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          default: {
+            minChunks: 1,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            priority: -10,
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    
+    return config;
+  },
   // Headers for better SEO and security
   async headers() {
     return [
@@ -77,6 +103,55 @@ const nextConfig = {
               "worker-src 'self' blob:",
               "object-src 'self' https://cdn.sanity.io"
             ].join('; ')
+          },
+        ],
+      },
+      {
+        source: '/globals.css',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/css; charset=utf-8',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/sitemap.xml',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, s-maxage=86400',
+          },
+        ],
+      },
+      {
+        source: '/robots.txt',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, s-maxage=86400',
           },
         ],
       },
