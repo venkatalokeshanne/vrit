@@ -217,19 +217,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="author" href="/humans.txt" />
         <link rel="help" href="/.well-known/security.txt" />
 
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID');
-          `}
-        </Script>
+        {/* Hreflang and Canonical Links */}
+        <link rel="canonical" href="https://vrit-rho.vercel.app/" />
+        <link rel="alternate" hrefLang="en-US" href="https://vrit-rho.vercel.app/" />
+        <link rel="alternate" hrefLang="en" href="https://vrit-rho.vercel.app/" />
+        <link rel="alternate" hrefLang="x-default" href="https://vrit-rho.vercel.app/" />
 
         {/* Tawk.to Chat Script */}
         <Script id="tawk-to-script" strategy="afterInteractive">

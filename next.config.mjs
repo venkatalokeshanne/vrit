@@ -51,19 +51,44 @@ const nextConfig = {
             value: 'origin-when-cross-origin',
           },
           {
+            key: 'Access-Control-Allow-Origin',
+            value: '*',
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET, POST, PUT, DELETE, OPTIONS',
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value: 'Content-Type, Authorization',
+          },
+          {
             key: 'Content-Security-Policy',
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://maps.googleapis.com https://www.google.com",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://embed.tawk.to https://*.tawk.to https://maps.googleapis.com https://www.google.com https://www.googletagmanager.com https://*.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com",
               "style-src 'self' 'unsafe-inline' https://*.tawk.to https://fonts.googleapis.com",
-              "img-src 'self' data: https://cdn.sanity.io https://*.tawk.to https://maps.googleapis.com https://maps.gstatic.com https://*.googleapis.com https://*.gstatic.com",
+              "img-src 'self' data: https://cdn.sanity.io https://*.tawk.to https://maps.googleapis.com https://maps.gstatic.com https://*.googleapis.com https://*.gstatic.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://*.googletagmanager.com",
               "font-src 'self' data: https://*.tawk.to https://fonts.gstatic.com",
-              "connect-src 'self' https://*.sanity.io https://*.api.sanity.io https://*.tawk.to wss://*.tawk.to https://maps.googleapis.com https://api.emailjs.com",
+              "connect-src 'self' https://*.sanity.io https://*.api.sanity.io https://*.tawk.to wss://*.tawk.to https://maps.googleapis.com https://api.emailjs.com https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://*.googletagmanager.com https://analytics.google.com https://*.analytics.google.com",
               "frame-src 'self' https://*.tawk.to https://www.google.com https://maps.google.com",
               "media-src 'self' https://cdn.sanity.io",
               "worker-src 'self' blob:",
               "object-src 'self' https://cdn.sanity.io"
             ].join('; ')
+          },
+        ],
+      },
+      {
+        source: '/globals.css',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/css',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, s-maxage=86400',
           },
         ],
       },
