@@ -63,8 +63,8 @@ const allCoursesQuery = `
 
 // Constants to avoid repetition
 const DEFAULTS = {
-  baseUrl: 'https://www.vritsol.com',
-  organizationName: 'VR IT SOL',
+  baseUrl: 'https://vrit-rho.vercel.app',
+  organizationName: 'VR IT Solutions',
   email: 'info@vritsol.com',
   phone: '+91-9032734343',
   address: 'Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet',
@@ -172,9 +172,10 @@ function processCourseMetadata(courseData) {
       canonical: courseUrl,
       languages: {
         'en-US': courseUrl,
-        'en': courseUrl,
+        'en': courseUrl, 
         'x-default': courseUrl,
-        ...(courseData.hreflang ? { [courseData.hreflang]: courseUrl } : {})
+        // Default hreflang attributes for all courses - no dependency on Sanity data
+        'en-IN': courseUrl // For Indian English speakers
       }
     },
     other: {
@@ -390,7 +391,6 @@ function processCourseMetadata(courseData) {
     courseContentPdf,
     seoHeaders,
     // Additional metadata not in Next.js metadata
-    hreflang: courseData.hreflang,
     reviewCount: reviewCount.toString(),
     ratingValue: ratingValue.toString(),
     organizationName,
