@@ -32,7 +32,6 @@ export default function CourseSidebar({ slug, courseName = "Course", phoneNumber
     { name: "DataScience Training", href: "/data-science-training-in-hyderabad" },
     { name: "Python Online Training", href: "/python-online-training" },
     { name: "Python with AWS Training", href: "/python-with-aws-training" },
-    { name: "Python With Docker", href: "/python-with-docker" },
     { name: "Mulesoft online Training", href: "/mulesoft-training-in-hyderabad" },
     { name: "Informatica MDM Training", href: "/informatica-mdm-training" },
     { name: "ServiceNow Training", href: "/servicenow-training-in-hyderabad" },
@@ -40,7 +39,7 @@ export default function CourseSidebar({ slug, courseName = "Course", phoneNumber
     { name: "Azure DevOps Training", href: "/azure-devops-training-in-hyderabad" },
     { name: "Full Stack Training", href: "/full-stack-developer-training-in-hyderabad" },
     { name: "EDI Training", href: "/edi-training" },
-    { name: "Google Cloud Training", href: "/google-cloud-training" }
+    { name: "Google Cloud Training", href: "/google-cloud-training-in-hyderabad" }
   ];
 
   return (

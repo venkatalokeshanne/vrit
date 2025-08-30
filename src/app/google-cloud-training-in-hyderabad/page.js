@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'google-cloud-training';
+const COURSE_SLUG = 'google-cloud-training-in-hyderabad';
 
 // Generate metadata for this page using static data
 export async function generateMetadata() {

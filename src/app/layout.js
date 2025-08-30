@@ -131,6 +131,15 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en-US">
       <head>
+        {/* Google Tag Manager */}
+        <Script id="google-tag-manager" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MMT58B7M');`}
+        </Script>
+        
         {/* Performance optimizations for LCP */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -140,6 +149,16 @@ export default async function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe 
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MMT58B7M"
+            height="0" 
+            width="0" 
+            style={{display: 'none', visibility: 'hidden'}}
+          ></iframe>
+        </noscript>
+        
         {/* Structured Data Scripts */}
         {structuredData && (
           <script
@@ -210,11 +229,28 @@ export default async function RootLayout({ children }) {
           `}
         </Script>
 
+        {/* Tawk.to Chat Script */}
+        <Script id="tawk-to-script" strategy="afterInteractive">
+          {`
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5cef5effb534676f32ac84a7/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+          `}
+        </Script>
+
         <ScrollingBanner text={importantText} isVisible={!!importantText} />
-        <Header />
-        {children}
-        <ScrollingCourses />
-        <Footer />
+        <div className="pt-[48px]">
+          <Header />
+          {children}
+          <ScrollingCourses />
+          <Footer />
+        </div>
         <ChatWidget />
         <CourseNotificationsWrapper />
         <CourseFormPopupWrapper />

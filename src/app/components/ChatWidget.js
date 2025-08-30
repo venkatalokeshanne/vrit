@@ -85,8 +85,8 @@ export default function ChatWidget() {
     <>
       {/* Official Tawk.to React Component */}
       <TawkMessengerReact
-        propertyId="689718b1c2a1861924262ae2"
-        widgetId="1j273guc9"
+        propertyId="5cef5effb534676f32ac84a7"
+        widgetId="default"
         ref={tawkMessengerRef}
         onLoad={onLoad}
         onBeforeLoad={onBeforeLoad}

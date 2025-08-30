@@ -29,7 +29,7 @@ const ScrollingCourses = () => {
     { title: "EDI Training", slug: "edi-training", color: "from-emerald-500 to-teal-500", rating: 4.5, students: 987, duration: "40 days", badge: "New" },
     { title: "Hadoop Training", slug: "hadoop-online-training", color: "from-orange-600 to-yellow-600", rating: 4.7, students: 2143, duration: "80 days", badge: "Popular" },
     { title: "Snowflake Training", slug: "snowflake-training-in-hyderabad", color: "from-cyan-500 to-blue-500", rating: 4.7, students: 1876, duration: "55 days", badge: "Trending" },
-    { title: "Google Cloud", slug: "google-cloud-training", color: "from-blue-500 to-green-500", rating: 4.6, students: 1432, duration: "70 days", badge: "Hot" }
+    { title: "Google Cloud", slug: "google-cloud-training-in-hyderabad", color: "from-blue-500 to-green-500", rating: 4.6, students: 1432, duration: "70 days", badge: "Hot" }
   ];
 
   // Duplicate the courses array for seamless scrolling
