@@ -1,17 +1,170 @@
-﻿import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
+﻿'use client';
+
+import { useState, useEffect } from 'react';
+import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { getCourseBySlugStatic } from '../../utils/staticCourses';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'contactus';import { getCourseBySlugStatic } from '../../utils/staticCourses';
-
-// Generate metadata for this page using static data
-export async function generateMetadata() {
-  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  return courseMetadata?.metadata || {};
-}
-
-
+const COURSE_SLUG = 'contactus';
 
 export default function ContactUs() {
+  // Form state
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    courseInterest: '',
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+
+  // Initialize EmailJS
+  useEffect(() => {
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
+  }, []);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = 'Full name is required';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email';
+    }
+    
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!/^[\d\+\-\s\(\)]{10,}$/.test(formData.phone.replace(/\s/g, ''))) {
+      newErrors.phone = 'Please enter a valid phone number';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    try {
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.fullName,
+        from_email: formData.email,
+        phone: formData.phone,
+        course: formData.courseInterest || 'General Inquiry',
+        training_mode: 'Not Specified',
+        message: formData.message,
+        to_email: 'info@vritsol.com',
+        reply_to: formData.email,
+        // Additional context
+        timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        source: 'Contact Us Page',
+        subject: `Contact Inquiry from ${formData.fullName}`
+      };
+
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        console.warn('EmailJS configuration missing. Environment variables required:');
+        console.warn('- NEXT_PUBLIC_EMAILJS_SERVICE_ID');
+        console.warn('- NEXT_PUBLIC_EMAILJS_TEMPLATE_ID');
+        console.warn('- NEXT_PUBLIC_EMAILJS_PUBLIC_KEY');
+        
+        // Fallback behavior - log the contact
+        console.log('Contact form submitted (EmailJS not configured):', formData);
+        setSubmitStatus('success');
+        
+        // Reset form after success
+        setTimeout(() => {
+          setFormData({
+            fullName: '',
+            email: '',
+            phone: '',
+            courseInterest: '',
+            message: ''
+          });
+          setSubmitStatus(null);
+        }, 3000);
+        return;
+      }
+
+      // Send email via EmailJS
+      console.log('Sending contact email via EmailJS...');
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      console.log('Contact email sent successfully:', response);
+      setSubmitStatus('success');
+      
+      // Reset form after success
+      setTimeout(() => {
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          courseInterest: '',
+          message: ''
+        });
+        setSubmitStatus(null);
+      }, 3000);
+      
+    } catch (error) {
+      console.error('Error sending contact email:', error);
+      setSubmitStatus('error');
+      
+      // Log detailed error information
+      if (error.status) {
+        console.error('EmailJS Error Status:', error.status);
+        console.error('EmailJS Error Text:', error.text);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   // Get the complete course metadata from static file
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   
@@ -50,50 +203,74 @@ export default function ContactUs() {
               Send A Message
             </h2>
             
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Full Name
+                    Full Name *
                   </label>
                   <div className="relative">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
                       type="text"
-                      className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
+                      name="fullName"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                      className={`w-full pl-10 pr-4 py-3 bg-white/5 border ${
+                        errors.fullName ? 'border-red-400' : 'border-gray-600/50'
+                      } rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent`}
                       placeholder="Enter your full name"
                     />
                   </div>
+                  {errors.fullName && (
+                    <p className="text-red-400 text-sm mt-1">{errors.fullName}</p>
+                  )}
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
+                    Email Address *
                   </label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
                       type="email"
-                      className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className={`w-full pl-10 pr-4 py-3 bg-white/5 border ${
+                        errors.email ? 'border-red-400' : 'border-gray-600/50'
+                      } rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent`}
                       placeholder="Enter your email"
                     />
                   </div>
+                  {errors.email && (
+                    <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                  )}
                 </div>
               </div>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number
+                    Phone Number *
                   </label>
                   <div className="relative">
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
                       type="tel"
-                      className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className={`w-full pl-10 pr-4 py-3 bg-white/5 border ${
+                        errors.phone ? 'border-red-400' : 'border-gray-600/50'
+                      } rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent`}
                       placeholder="Enter your phone number"
                     />
                   </div>
+                  {errors.phone && (
+                    <p className="text-red-400 text-sm mt-1">{errors.phone}</p>
+                  )}
                 </div>
                 
                 <div>
@@ -102,7 +279,12 @@ export default function ContactUs() {
                   </label>
                   <div className="relative">
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <select className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent appearance-none cursor-pointer">
+                    <select 
+                      name="courseInterest"
+                      value={formData.courseInterest}
+                      onChange={handleChange}
+                      className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent appearance-none cursor-pointer"
+                    >
                       <option value="" className="bg-gray-800 text-white">Select a course</option>
                       <option value="python" className="bg-gray-800 text-white">Python Training</option>
                       <option value="data-science" className="bg-gray-800 text-white">Data Science Training</option>
@@ -135,24 +317,85 @@ export default function ContactUs() {
               
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Message
+                  Message *
                 </label>
                 <div className="relative">
                   <MessageSquare className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
                   <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows="5"
-                    className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent resize-none"
+                    className={`w-full pl-10 pr-4 py-3 bg-white/5 border ${
+                      errors.message ? 'border-red-400' : 'border-gray-600/50'
+                    } rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent resize-none`}
                     placeholder="Tell us about your training requirements..."
                   ></textarea>
                 </div>
+                {errors.message && (
+                  <p className="text-red-400 text-sm mt-1">{errors.message}</p>
+                )}
               </div>
+
+              {/* Status Messages */}
+              {submitStatus && (
+                <div className={`p-4 rounded-lg ${
+                  submitStatus === 'success' 
+                    ? 'bg-green-500/20 border border-green-400/30 text-green-300' 
+                    : 'bg-red-500/20 border border-red-400/30 text-red-300'
+                }`}>
+                  {submitStatus === 'success' ? (
+                    <div className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-green-400 flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="font-medium">Thank you! Your message has been sent successfully. We'll get back to you soon.</span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-red-400 flex items-center justify-center">
+                        <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </div>
+                      <div>
+                        <div className="font-medium">Failed to send message.</div>
+                        <div className="text-sm opacity-90">Please try again or call us at +91-9032734343</div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105"
+                disabled={isSubmitting || submitStatus === 'success'}
+                className={`w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-gray-500 disabled:to-gray-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105 ${
+                  isSubmitting || submitStatus === 'success' ? 'cursor-not-allowed opacity-70' : ''
+                }`}
               >
-                <Send className="w-5 h-5" />
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    Sending Message...
+                  </>
+                ) : submitStatus === 'success' ? (
+                  <>
+                    <div className="w-5 h-5 rounded-full bg-green-400 flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    Message Sent!
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
             

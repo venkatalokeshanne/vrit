@@ -97,14 +97,16 @@ export default function Home() {
     { icon: Rocket, title: 'True Partnership', desc: 'Our goal is to build an honest relationship with our valuable students, corporate team and provide them best training and business solutions with lifetime support and placements.' }
   ];
 
-  const companies = [
-    { name: 'Infosys', image: '/image1.png' },
-    { name: 'Wipro', image: '/image2.png' },
-    { name: 'Accenture', image: '/image3.jpg' },
-    { name: 'Delloite', image: '/image4.png' },
-    { name: 'Cognizent', image: '/image5.webp' },
-    { name: 'Capgemini', image: '/image6.webp' }
-  ];
+  // Generate companies array from file1.png to file50.png (excluding file37.png which appears to be named fle37.png)
+  const companies = [];
+  for (let i = 1; i <= 50; i++) {
+    if (i === 37) {
+      // file37.png seems to be named fle37.png
+      companies.push({ name: `Company ${i}`, image: `/fle37.png` });
+    } else {
+      companies.push({ name: `Company ${i}`, image: `/file${i}.png` });
+    }
+  }
 
   const homepageFaqs = [
     {
@@ -1084,16 +1086,16 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            {companies.map((company, _index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
+            {companies.map((company, index) => (
               <div
-                key={company.name}
+                key={`company-${index}`}
                 className="group flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
                 <div className="relative w-32 h-20">
                   <Image
                     src={company.image}
-                    alt={`${company.name} logo`}
+                    alt={`Company logo ${index + 1}`}
                     fill
                     className="object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-300"
                     sizes="(max-width: 768px) 128px, 128px"

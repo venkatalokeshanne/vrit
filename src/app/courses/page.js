@@ -1,4 +1,8 @@
-﻿import Link from 'next/link';
+﻿'use client';
+
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import { getAllCourses } from '../../lib/courses';
 import { 
@@ -26,7 +30,8 @@ import {
   Trophy,
   Rocket,
   GraduationCap,
-  Cpu
+  Cpu,
+  X
 } from 'lucide-react';
 
 // Define the course slug as a constant
@@ -496,103 +501,167 @@ const staticCourses = [
   }
 ];
 
-// Generate metadata for this page using static data
-export async function generateMetadata() {
-  const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  return courseMetadata?.metadata || {};
-}
-
-
-
-export default async function CoursesPage() {
-  // Get dynamic courses from Sanity
-  const dynamicCourses = await getAllCourses();
+export default function CoursesPage() {
+  const searchParams = useSearchParams();
+  const urlSearchTerm = searchParams.get('search') || '';
   
-  // Transform dynamic courses to match static course structure
-  const transformedDynamicCourses = dynamicCourses.map((course, index) => {
-    // Define color schemes for dynamic courses
-    const dynamicColorSchemes = [
-      {
-        color: "from-emerald-500 to-teal-500",
-        bgColor: "from-emerald-500/10 to-teal-500/10"
-      },
-      {
-        color: "from-blue-500 to-indigo-500",
-        bgColor: "from-blue-500/10 to-indigo-500/10"
-      },
-      {
-        color: "from-purple-500 to-pink-500",
-        bgColor: "from-purple-500/10 to-pink-500/10"
-      },
-      {
-        color: "from-orange-500 to-red-500",
-        bgColor: "from-orange-500/10 to-red-500/10"
-      },
-      {
-        color: "from-cyan-500 to-blue-500",
-        bgColor: "from-cyan-500/10 to-blue-500/10"
-      },
-      {
-        color: "from-violet-500 to-purple-500",
-        bgColor: "from-violet-500/10 to-purple-500/10"
-      },
-      {
-        color: "from-rose-500 to-pink-500",
-        bgColor: "from-rose-500/10 to-pink-500/10"
-      },
-      {
-        color: "from-amber-500 to-yellow-500",
-        bgColor: "from-amber-500/10 to-yellow-500/10"
-      },
-      {
-        color: "from-lime-500 to-green-500",
-        bgColor: "from-lime-500/10 to-green-500/10"
-      },
-      {
-        color: "from-fuchsia-500 to-purple-500",
-        bgColor: "from-fuchsia-500/10 to-purple-500/10"
+  const [searchTerm, setSearchTerm] = useState(urlSearchTerm);
+  const [filteredCourses, setFilteredCourses] = useState([]);
+  const [allCourses, setAllCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Update search term when URL changes
+  useEffect(() => {
+    setSearchTerm(urlSearchTerm);
+  }, [urlSearchTerm]);
+
+  useEffect(() => {
+    const loadCourses = async () => {
+      try {
+        setLoading(true);
+        
+        // Get dynamic courses from Sanity
+        const dynamicCourses = await getAllCourses();
+        
+        // Transform dynamic courses to match static course structure
+        const transformedDynamicCourses = dynamicCourses.map((course, index) => {
+          // Define color schemes for dynamic courses
+          const dynamicColorSchemes = [
+            {
+              color: "from-emerald-500 to-teal-500",
+              bgColor: "from-emerald-500/10 to-teal-500/10"
+            },
+            {
+              color: "from-blue-500 to-indigo-500",
+              bgColor: "from-blue-500/10 to-indigo-500/10"
+            },
+            {
+              color: "from-purple-500 to-pink-500",
+              bgColor: "from-purple-500/10 to-pink-500/10"
+            },
+            {
+              color: "from-orange-500 to-red-500",
+              bgColor: "from-orange-500/10 to-red-500/10"
+            },
+            {
+              color: "from-cyan-500 to-blue-500",
+              bgColor: "from-cyan-500/10 to-blue-500/10"
+            },
+            {
+              color: "from-violet-500 to-purple-500",
+              bgColor: "from-violet-500/10 to-purple-500/10"
+            },
+            {
+              color: "from-rose-500 to-pink-500",
+              bgColor: "from-rose-500/10 to-pink-500/10"
+            },
+            {
+              color: "from-amber-500 to-yellow-500",
+              bgColor: "from-amber-500/10 to-yellow-500/10"
+            },
+            {
+              color: "from-lime-500 to-green-500",
+              bgColor: "from-lime-500/10 to-green-500/10"
+            },
+            {
+              color: "from-fuchsia-500 to-purple-500",
+              bgColor: "from-fuchsia-500/10 to-purple-500/10"
+            }
+          ];
+          
+          // Cycle through color schemes
+          const colorScheme = dynamicColorSchemes[index % dynamicColorSchemes.length];
+          
+          return {
+            id: `dynamic-${course._id}`,
+            title: course.title,
+            slug: course.slug.current,
+            category: "Dynamic Course",
+            duration: course.duration || "Varies",
+            level: "All Levels",
+            rating: 4.8,
+            students: 1000,
+            description: trimDescription(course.description),
+            features: ["Live Projects", "Expert Training", "Industry Relevant", "Placement Support"],
+            icon: <BookOpen className="w-8 h-8" />,
+            color: colorScheme.color,
+            bgColor: colorScheme.bgColor,
+            trending: true,
+            new: true,
+            isDynamic: true
+          };
+        });
+
+        // Combine static and dynamic courses and remove duplicates based on slug
+        const combinedCourses = [...transformedDynamicCourses, ...staticCourses];
+        
+        // Remove duplicates by slug - priority to dynamic courses
+        const uniqueCourses = combinedCourses.reduce((acc, current) => {
+          const existingCourse = acc.find(course => course.slug === current.slug);
+          if (!existingCourse) {
+            acc.push(current);
+          } else if (current.isDynamic && !existingCourse.isDynamic) {
+            // Replace static course with dynamic course if duplicate found
+            const index = acc.findIndex(course => course.slug === current.slug);
+            acc[index] = current;
+          }
+          return acc;
+        }, []);
+        
+        // Sort courses by dynamic first, then trending, then by rating
+        const sortedCourses = uniqueCourses.sort((a, b) => 
+          (b.isDynamic ? 1 : 0) - (a.isDynamic ? 1 : 0) ||
+          b.trending - a.trending || 
+          b.rating - a.rating
+        );
+
+        setAllCourses(sortedCourses);
+        setFilteredCourses(sortedCourses);
+        
+        console.log('🔍 Dynamic Courses Found:', dynamicCourses.length);
+        console.log('📚 Static Courses Defined:', staticCourses.length);
+        console.log('🎯 Total Unique Courses:', sortedCourses.length);
+        
+        // Debug: Log any duplicates found
+        const dynamicSlugs = transformedDynamicCourses.map(c => c.slug);
+        const staticSlugs = staticCourses.map(c => c.slug);
+        const duplicates = dynamicSlugs.filter(slug => staticSlugs.includes(slug));
+        if (duplicates.length > 0) {
+          console.log('⚠️ Duplicate slugs found (dynamic will override static):', duplicates);
+        }
+
+      } catch (error) {
+        console.error('Error loading courses:', error);
+        setAllCourses(staticCourses);
+        setFilteredCourses(staticCourses);
+      } finally {
+        setLoading(false);
       }
-    ];
-    
-    // Cycle through color schemes
-    const colorScheme = dynamicColorSchemes[index % dynamicColorSchemes.length];
-    
-    return {
-      id: `dynamic-${course._id}`,
-      title: course.title,
-      slug: course.slug.current,
-      category: "Dynamic Course",
-      duration: course.duration || "Varies",
-      level: "All Levels",
-      rating: 4.8,
-      students: 1000,
-      description: trimDescription(course.description),
-      features: ["Live Projects", "Expert Training", "Industry Relevant", "Placement Support"],
-      icon: <BookOpen className="w-8 h-8" />,
-      color: colorScheme.color,
-      bgColor: colorScheme.bgColor,
-      trending: true,
-      new: true,
-      isDynamic: true
     };
-  });
 
-  // Combine static and dynamic courses and remove duplicates based on slug
-  const allCourses = [...transformedDynamicCourses, ...staticCourses];
-  
-  // Remove duplicates by slug - priority to dynamic courses
-  const uniqueCourses = allCourses.reduce((acc, current) => {
-    const existingCourse = acc.find(course => course.slug === current.slug);
-    if (!existingCourse) {
-      acc.push(current);
-    } else if (current.isDynamic && !existingCourse.isDynamic) {
-      // Replace static course with dynamic course if duplicate found
-      const index = acc.findIndex(course => course.slug === current.slug);
-      acc[index] = current;
-    }
-    return acc;
+    loadCourses();
   }, []);
-  
+
+  // Filter courses based on search term
+  useEffect(() => {
+    if (!searchTerm.trim()) {
+      setFilteredCourses(allCourses);
+      return;
+    }
+
+    const filtered = allCourses.filter(course => {
+      const searchLower = searchTerm.toLowerCase();
+      return (
+        course.title.toLowerCase().includes(searchLower) ||
+        course.category.toLowerCase().includes(searchLower) ||
+        course.description.toLowerCase().includes(searchLower) ||
+        course.features.some(feature => feature.toLowerCase().includes(searchLower))
+      );
+    });
+
+    setFilteredCourses(filtered);
+  }, [searchTerm, allCourses]);
+
   // Get the complete course metadata from static file
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   
@@ -602,28 +671,6 @@ export default async function CoursesPage() {
 
   // Use only mainImage for _mainImageUrl
   const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
-
-  // Log the courseMetadata to see what we have
-  console.log('Course Metadata:', courseMetadata);
-  console.log('🔍 Dynamic Courses Found:', dynamicCourses.length);
-  console.log('� Static Courses Defined:', staticCourses.length);
-  console.log('�📚 Total Unique Courses:', uniqueCourses.length);
-  
-  // Debug: Log any duplicates found
-  const dynamicSlugs = transformedDynamicCourses.map(c => c.slug);
-  const staticSlugs = staticCourses.map(c => c.slug);
-  const duplicates = dynamicSlugs.filter(slug => staticSlugs.includes(slug));
-  if (duplicates.length > 0) {
-    console.log('⚠️ Duplicate slugs found (dynamic will override static):', duplicates);
-  }
-
-  
-  // Sort courses by dynamic first, then trending, then by rating
-  const sortedCourses = uniqueCourses.sort((a, b) => 
-    (b.isDynamic ? 1 : 0) - (a.isDynamic ? 1 : 0) ||
-    b.trending - a.trending || 
-    b.rating - a.rating
-  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
@@ -664,10 +711,25 @@ export default async function CoursesPage() {
               <input
                 type="text"
                 placeholder="Search courses, technologies, or skills..."
-                readOnly
-                className="w-full pl-12 pr-4 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none transition-all cursor-default"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-12 py-4 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
               />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm('')}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                  aria-label="Clear search"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              )}
             </div>
+            {searchTerm && (
+              <div className="mt-4 text-sm text-gray-400">
+                {filteredCourses.length} course{filteredCourses.length !== 1 ? 's' : ''} found for "{searchTerm}"
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -703,111 +765,147 @@ export default async function CoursesPage() {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-3xl font-bold text-white mb-2">
-                All Courses
+                {searchTerm ? 'Search Results' : 'All Courses'}
               </h2>
               <p className="text-gray-400">
-                {sortedCourses.length} course{sortedCourses.length !== 1 ? 's' : ''} found
+                {loading ? 'Loading courses...' : (
+                  `${filteredCourses.length} course${filteredCourses.length !== 1 ? 's' : ''} ${searchTerm ? `found for "${searchTerm}"` : 'available'}`
+                )}
               </p>
             </div>
           </div>
 
-          {/* Courses Grid */}
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-            {sortedCourses.map((course) => (
-              <Link
-                key={course.id}
-                href={`/${course.slug}`}
-                className="group relative bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl overflow-hidden focus:outline-none focus:ring-4 focus:ring-blue-400"
-                tabIndex={0}
-                aria-label={`View details for ${course.title}`}
-              >
-                {/* Course Card Header */}
-                <div className={`relative p-6 bg-gradient-to-br ${course.bgColor} border-b border-white/10`}>
-                  {/* Badges */}
-                  <div className="flex items-center gap-2 mb-4">
-                    {course.trending && (
-                      <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold rounded-full">
-                        🔥 TRENDING
-                      </span>
-                    )}
-                    {course.new && (
-                      <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-500 text-white text-xs font-bold rounded-full">
-                        ✨ NEW
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Course Icon & Title */}
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-r ${course.color} text-white flex-shrink-0`}>
-                      {course.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                        {course.title}
-                      </h3>
-                      <span className="text-sm text-gray-400 bg-white/10 px-3 py-1 rounded-full">
-                        {course.category}
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Rating & Students */}
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-white font-semibold">{course.rating}</span>
-                    </div>
-                    <div className="flex items-center gap-1 text-gray-400">
-                      <Users className="w-4 h-4" />
-                      <span className="text-sm">{course.students.toLocaleString()} students</span>
-                    </div>
+          {/* Loading State */}
+          {loading && (
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+              {[...Array(6)].map((_, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 animate-pulse">
+                  <div className="h-4 bg-white/10 rounded mb-4"></div>
+                  <div className="h-6 bg-white/10 rounded mb-2"></div>
+                  <div className="h-4 bg-white/10 rounded w-3/4 mb-4"></div>
+                  <div className="space-y-2">
+                    <div className="h-3 bg-white/10 rounded"></div>
+                    <div className="h-3 bg-white/10 rounded w-5/6"></div>
                   </div>
                 </div>
-
-                {/* Course Card Body */}
-                <div className="p-6">
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {course.description}
-                  </p>
-
-                  {/* Course Details */}
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-3 text-gray-300">
-                      <Clock className="w-4 h-4 text-blue-400" />
-                      <span className="text-sm">Duration: {course.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-gray-300">
-                      <Target className="w-4 h-4 text-green-400" />
-                      <span className="text-sm">Level: {course.level}</span>
-                    </div>
-                  </div>
-
-                  {/* Features */}
-                  <div className="mb-6">
-                    <div className="grid grid-cols-2 gap-2">
-                      {course.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* CTA (visible, for clarity) */}
-                  <div className="flex items-center justify-center mt-4">
-                    <span className={`w-full group/btn px-6 py-3 bg-gradient-to-r ${course.color} text-white rounded-xl font-semibold flex items-center justify-center gap-2 pointer-events-none select-none`}>
-                      View Course Details
-                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
 
           {/* No Results */}
+          {!loading && searchTerm && filteredCourses.length === 0 && (
+            <div className="text-center py-16">
+              <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">No courses found</h3>
+              <p className="text-gray-400 mb-6">
+                No courses match your search for "{searchTerm}". Try different keywords or browse all courses.
+              </p>
+              <button
+                onClick={() => setSearchTerm('')}
+                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-xl font-semibold hover:scale-105 transition-transform"
+              >
+                Show All Courses
+              </button>
+            </div>
+          )}
+
+          {/* Courses Grid */}
+          {!loading && filteredCourses.length > 0 && (
+            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+              {filteredCourses.map((course) => (
+                <Link
+                  key={course.id}
+                  href={`/${course.slug}`}
+                  className="group relative bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl overflow-hidden focus:outline-none focus:ring-4 focus:ring-blue-400"
+                  tabIndex={0}
+                  aria-label={`View details for ${course.title}`}
+                >
+                  {/* Course Card Header */}
+                  <div className={`relative p-6 bg-gradient-to-br ${course.bgColor} border-b border-white/10`}>
+                    {/* Badges */}
+                    <div className="flex items-center gap-2 mb-4">
+                      {course.trending && (
+                        <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold rounded-full">
+                          🔥 TRENDING
+                        </span>
+                      )}
+                      {course.new && (
+                        <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-500 text-white text-xs font-bold rounded-full">
+                          ✨ NEW
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Course Icon & Title */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className={`p-3 rounded-xl bg-gradient-to-r ${course.color} text-white flex-shrink-0`}>
+                        {course.icon}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
+                          {course.title}
+                        </h3>
+                        <span className="text-sm text-gray-400 bg-white/10 px-3 py-1 rounded-full">
+                          {course.category}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Rating & Students */}
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-white font-semibold">{course.rating}</span>
+                      </div>
+                      <div className="flex items-center gap-1 text-gray-400">
+                        <Users className="w-4 h-4" />
+                        <span className="text-sm">{course.students.toLocaleString()} students</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Course Card Body */}
+                  <div className="p-6">
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {course.description}
+                    </p>
+
+                    {/* Course Details */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <Clock className="w-4 h-4 text-blue-400" />
+                        <span className="text-sm">Duration: {course.duration}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-gray-300">
+                        <Target className="w-4 h-4 text-green-400" />
+                        <span className="text-sm">Level: {course.level}</span>
+                      </div>
+                    </div>
+
+                    {/* Features */}
+                    <div className="mb-6">
+                      <div className="grid grid-cols-2 gap-2">
+                        {course.features.map((feature, idx) => (
+                          <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                            <CheckCircle className="w-3 h-3 text-green-400" />
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* CTA (visible, for clarity) */}
+                    <div className="flex items-center justify-center mt-4">
+                      <span className={`w-full group/btn px-6 py-3 bg-gradient-to-r ${course.color} text-white rounded-xl font-semibold flex items-center justify-center gap-2 pointer-events-none select-none`}>
+                        View Course Details
+                        <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

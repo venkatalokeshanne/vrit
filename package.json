@@ -7,10 +7,12 @@
     "build": "npm run build:courses && next build",
     "build:courses": "node scripts/build-courses-data.js",
     "update:courses": "node scripts/update-all-course-pages.js",
+    "add:simple-finance": "node scripts/add-simple-finance-metadata.js",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@heroicons/react": "^2.2.0",
     "@mdxeditor/editor": "^3.40.1",
     "@portabletext/react": "^3.2.1",

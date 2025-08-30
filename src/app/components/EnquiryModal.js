@@ -1,7 +1,29 @@
+/**
+ * EnquiryModal Component with EmailJS Integration
+ * 
+ * This modal form sends course enquiries via EmailJS.
+ * 
+ * Required Environment Variables:
+ * - NEXT_PUBLIC_EMAILJS_SERVICE_ID
+ * - NEXT_PUBLIC_EMAILJS_TEMPLATE_ID  
+ * - NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+ * 
+ * Features:
+ * - Real-time form validation
+ * - EmailJS email sending
+ * - Success/error status feedback
+ * - Auto-close on success
+ * - Fallback handling when EmailJS not configured
+ * - Mobile responsive design
+ * 
+ * See EMAIL_JS_SETUP.md for complete setup instructions.
+ */
+
 'use client';
 
 import { useState, useEffect } from 'react';
 import { X, Phone, Mail, User, MessageSquare, Clock, Calendar } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import Portal from './Portal';
 
 const EnquiryModal = ({ 
@@ -22,6 +44,15 @@ const EnquiryModal = ({
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
+
+  // Initialize EmailJS
+  useEffect(() => {
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
+  }, []);
 
   // Reset form when modal closes
   useEffect(() => {
@@ -36,6 +67,7 @@ const EnquiryModal = ({
       });
       setErrors({});
       setIsSubmitting(false);
+      setSubmitStatus(null);
     }
   }, [isOpen, courseName]);
 
@@ -122,24 +154,76 @@ const EnquiryModal = ({
     }
     
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
     try {
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        course: formData.course,
+        training_mode: formData.trainingMode,
+        message: formData.message,
+        to_email: 'info@vritsol.com', // Your email address
+        reply_to: formData.email,
+        // Additional context
+        timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+        source: 'Website Enquiry Form'
+      };
+
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        console.warn('EmailJS configuration missing. Environment variables required:');
+        console.warn('- NEXT_PUBLIC_EMAILJS_SERVICE_ID');
+        console.warn('- NEXT_PUBLIC_EMAILJS_TEMPLATE_ID');
+        console.warn('- NEXT_PUBLIC_EMAILJS_PUBLIC_KEY');
+        
+        // Fallback behavior - log the enquiry
+        console.log('Enquiry form submitted (EmailJS not configured):', formData);
+        setSubmitStatus('success');
+        
+        // Auto-close after showing success message
+        setTimeout(() => {
+          onClose();
+        }, 2000);
+        return;
+      }
+
+      // Send email via EmailJS
+      console.log('Sending email via EmailJS...');
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      console.log('Email sent successfully:', response);
+      setSubmitStatus('success');
+      
+      // Call custom onSubmit if provided
       if (onSubmit) {
         await onSubmit(formData);
-      } else {
-        // Default behavior - you can customize this
-        console.log('Enquiry form submitted:', formData);
-        
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        alert('Thank you for your enquiry! We will contact you soon.');
       }
       
-      onClose();
+      // Auto-close after showing success message
+      setTimeout(() => {
+        onClose();
+      }, 2000);
+      
     } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your enquiry. Please try again.');
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+      
+      // Log detailed error information
+      if (error.status) {
+        console.error('EmailJS Error Status:', error.status);
+        console.error('EmailJS Error Text:', error.text);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -301,19 +385,60 @@ const EnquiryModal = ({
               />
             </div>
 
+            {/* Status Messages */}
+            {submitStatus && (
+              <div className={`p-4 rounded-xl ${
+                submitStatus === 'success' 
+                  ? 'bg-green-500/20 border border-green-400/30 text-green-300' 
+                  : 'bg-red-500/20 border border-red-400/30 text-red-300'
+              }`}>
+                {submitStatus === 'success' ? (
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-green-400 flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <span className="font-medium">Thank you! Your enquiry has been sent successfully.</span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-red-400 flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="font-medium">Failed to send enquiry.</div>
+                      <div className="text-sm opacity-90">Please try again or call us at +91-9032734343</div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* Submit Button */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || submitStatus === 'success'}
                 className={`flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-gray-500 disabled:to-gray-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
-                  isSubmitting ? 'cursor-not-allowed opacity-70' : ''
+                  isSubmitting || submitStatus === 'success' ? 'cursor-not-allowed opacity-70' : ''
                 }`}
               >
                 {isSubmitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    Submitting...
+                    Sending Email...
+                  </>
+                ) : submitStatus === 'success' ? (
+                  <>
+                    <div className="w-5 h-5 rounded-full bg-green-400 flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    Email Sent!
                   </>
                 ) : (
                   <>
