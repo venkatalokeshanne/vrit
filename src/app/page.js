@@ -191,23 +191,7 @@ export default function Home() {
               <span className="text-white">Career Journey</span>
             </h1>
             
-            <p 
-              className="hero-lcp-text"
-              style={{
-                fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
-                lineHeight: '1.625',
-                color: 'rgb(229 231 235)',
-                marginBottom: '2rem',
-                maxWidth: '48rem',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                textRendering: 'optimizeSpeed',
-                contain: 'layout style',
-                willChange: 'auto',
-                transform: 'translateZ(0)',
-                backfaceVisibility: 'hidden'
-              }}
-            >
+            <p className="hero-lcp-text">
               Get knowledge in practical way, Everyone satisfied with our innovation way of knowledge transfer. Best Software Training Institute in Hyderabad for best brains!
             </p>
             

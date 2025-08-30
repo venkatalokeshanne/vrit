@@ -147,6 +147,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
         <link rel="preload" as="style" href="/globals.css" />
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
+        <link rel="modulepreload" href="/_next/static/chunks/main.js" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
