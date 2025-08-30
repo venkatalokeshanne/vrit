@@ -7,11 +7,8 @@ import { getCourseBySlugStatic } from '../../utils/staticCourses';
 import {
   Clock,
   CheckCircle,
-  ArrowRight,
   Star,
   Phone,
-  DollarSign,
-  Calculator,
   BookOpen,
   Database,
   BarChart3,
