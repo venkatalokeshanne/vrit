@@ -11,6 +11,8 @@ import RichSnippetsManager from '../utils/richSnippets';
 import { getPageMetadataStatic, getStructuredDataStatic } from '../utils/staticCourses';
 import Script from 'next/script';
 import coursesData from '../data/courses-static.json';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -246,6 +248,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         <ScrollingBanner text={importantText} isVisible={!!importantText} />
         <div className="pt-[48px]">
+          <SpeedInsights/>
+          <Analytics/>
           <Header />
           {children}
           <ScrollingCourses />
