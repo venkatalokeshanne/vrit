@@ -58,7 +58,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://*.tawk.to https://fonts.googleapis.com",
               "img-src 'self' data: https://cdn.sanity.io https://*.tawk.to https://maps.googleapis.com https://maps.gstatic.com https://*.googleapis.com https://*.gstatic.com",
               "font-src 'self' data: https://*.tawk.to https://fonts.gstatic.com",
-              "connect-src 'self' https://*.sanity.io https://*.api.sanity.io https://*.tawk.to wss://*.tawk.to https://maps.googleapis.com",
+              "connect-src 'self' https://*.sanity.io https://*.api.sanity.io https://*.tawk.to wss://*.tawk.to https://maps.googleapis.com https://api.emailjs.com",
               "frame-src 'self' https://*.tawk.to https://www.google.com https://maps.google.com",
               "media-src 'self' https://cdn.sanity.io",
               "worker-src 'self' blob:",

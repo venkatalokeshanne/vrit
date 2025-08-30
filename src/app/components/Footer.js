@@ -210,6 +210,17 @@ export default function Footer() {
           <p className="text-gray-200">
             © 2025, all rights reserved. VR IT Solutions
           </p>
+          <p className="text-xs text-gray-400 mt-2">
+            designed & developed by{' '}
+            <a 
+              href="https://www.linkedin.com/in/venkatalokesh" 
+              className="text-gray-300 hover:text-orange-400 transition-colors duration-200 underline decoration-dotted underline-offset-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Devotree
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -167,7 +167,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-18 pb-14 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ contentVisibility: 'visible' }}>
+      <section className="relative pt-16 pb-10 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ contentVisibility: 'visible' }}>
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center" style={{ contain: 'layout' }}>
@@ -347,9 +347,9 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-3 border border-white/20">
               <Star className="w-4 h-4 text-yellow-400" />
               <span className="text-sm font-medium">Why Choose Us</span>
@@ -392,9 +392,9 @@ export default function Home() {
       </section>
 
       {/* What's unique about VR IT Training Center Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-3 border border-white/20">
               <Sparkles className="w-4 h-4 text-cyan-400" />
               <span className="text-sm font-medium">What Makes Us Special</span>
@@ -486,9 +486,9 @@ export default function Home() {
       </section>
 
       {/* VR IT Training Institute Proficiencies Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-3 border border-white/20">
               <Brain className="w-4 h-4 text-purple-400" />
               <span className="text-sm font-medium">Our Expertise</span>
@@ -580,9 +580,9 @@ export default function Home() {
       </section>
 
       {/* 100% Placement Assistance Section */}
-      <section className="py-14 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-3xl p-6 lg:p-10 border border-white/10">
+          <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/10">
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4 border border-white/20">
               <Award className="w-4 h-4 text-green-400" />
               <span className="text-sm font-medium">Placement Guarantee</span>
@@ -674,9 +674,9 @@ export default function Home() {
       </section>
 
       {/* Company Partners Section */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-6 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-8">
+          <div className="text-center mb-6">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
               Our Students Work At
             </h3>
@@ -1011,17 +1011,17 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-6 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-4xl mx-auto">
           <FAQ faqs={homepageFaqs} theme="default" />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-14 px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-10 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-4xl mx-auto text-center">
           <div
-            className="bg-gradient-to-r from-orange-500/20 to-blue-500/20 backdrop-blur-sm rounded-3xl p-6 lg:p-10 border border-white/10"
+            className="bg-gradient-to-r from-orange-500/20 to-blue-500/20 backdrop-blur-sm rounded-3xl p-6 lg:p-8 border border-white/10"
           >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
               <span className="text-white">Ready to </span>
