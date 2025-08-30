@@ -45,9 +45,13 @@ export default function Footer() {
                 className="h-12 w-auto object-contain"
               />
             </div>
-            <p className="text-gray-100 mb-6 leading-relaxed">
-              VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online & Class room trainings from Hyderabad.
-            </p>
+            <div className="mb-6">
+  <p className="text-gray-300 leading-relaxed">
+   VR IT Solutions - A leading software training institute in Hyderabad, offering high-quality <span className="font-medium text-white">online</span> and <span className="font-medium text-white">classroom</span> training programs for IT professionals and students.
+    <br />
+    We specialize in equipping learners with the latest technologies, practical skills, and industry knowledge to build successful careers in IT.
+  </p>
+</div>
             <div className="flex space-x-4">
               <Link
                 href="https://www.facebook.com/vritsolutions/"
