@@ -95,7 +95,7 @@ const staticCourses = [
   {
     id: 3,
     title: "Google Cloud",
-    slug: "google-cloud-training",
+    slug: "google-cloud-training-in-hyderabad",
     category: "Cloud Computing",
     duration: "65 Days",
     level: "Beginner to Advanced",
