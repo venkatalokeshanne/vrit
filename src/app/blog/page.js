@@ -174,7 +174,7 @@ function FeaturedPostCard({ post }) {
           )}
           <div className="absolute top-2 left-2">
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 text-xs font-semibold rounded-full shadow-lg">
-              â­ Featured
+              ⭐ Featured
             </span>
           </div>
         </div>
@@ -280,7 +280,7 @@ function CompactPostItem({ post }) {
               {post.featured && (
                 <div className="flex-shrink-0">
                   <span className="bg-yellow-900 text-yellow-300 text-xs px-2 py-1 rounded-full font-medium shadow-sm">
-                    â­
+                    ⭐
                   </span>
                 </div>
               )}

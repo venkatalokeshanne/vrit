@@ -685,18 +685,18 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3">
+          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-2">
             {companies.map((company, index) => (
               <div
                 key={`company-${index}`}
                 className="group flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <div className="relative w-32 h-20">
+                <div className="relative w-32 h-20 bg-white/5 rounded-lg p-1 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden">
                   <Image
                     src={company.image}
-                    alt={`Company logo ${index + 1}`}
+                    alt={`${company.name} logo`}
                     fill
-                    className="object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-300"
+                    className="object-cover filter brightness-90 group-hover:brightness-100 transition-all duration-300"
                     sizes="(max-width: 768px) 128px, 128px"
                   />
                 </div>

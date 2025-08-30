@@ -242,16 +242,16 @@ export default function SapFicoTraining() {
                 </div>
                 <div className="grid md:grid-cols-1 gap-4">
                   <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-4 border border-purple-400/20">
-                    <p className="text-purple-100">â€¢ We offer you an excellent platform for career growth.</p>
+                    <p className="text-purple-100">• We offer you an excellent platform for career growth.</p>
                   </div>
                   <div className="bg-gradient-to-br from-pink-500/10 to-rose-500/10 rounded-xl p-4 border border-pink-400/20">
-                    <p className="text-pink-100">â€¢ The complete SAP FICO training is customized with real-time online sessions and project work.</p>
+                    <p className="text-pink-100">• The complete SAP FICO training is customized with real-time online sessions and project work.</p>
                   </div>
                   <div className="bg-gradient-to-br from-rose-500/10 to-purple-500/10 rounded-xl p-4 border border-rose-400/20">
-                    <p className="text-rose-100">â€¢ Added to these highlights, We provide a 100% guarantee of your success.</p>
+                    <p className="text-rose-100">• Added to these highlights, We provide a 100% guarantee of your success.</p>
                   </div>
                   <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-xl p-4 border border-purple-400/20">
-                    <p className="text-purple-100">â€¢ We have a record of working closely with trainers who are industry experts.</p>
+                    <p className="text-purple-100">• We have a record of working closely with trainers who are industry experts.</p>
                   </div>
                 </div>
               </div>
