@@ -267,8 +267,9 @@ const EnquiryModal = ({
               <button
                 onClick={onClose}
                 className="p-2 hover:bg-gray-600/20 rounded-xl transition-colors duration-200"
+                aria-label="Close modal"
               >
-                <X className="w-6 h-6 text-gray-300" />
+                <X className="w-6 h-6 text-gray-300" aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -425,15 +426,16 @@ const EnquiryModal = ({
                 className={`flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:from-gray-500 disabled:to-gray-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
                   isSubmitting || submitStatus === 'success' ? 'cursor-not-allowed opacity-70' : ''
                 }`}
+                aria-label="Send enquiry"
               >
                 {isSubmitting ? (
                   <>
-                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" aria-hidden="true" />
                     Sending Email...
                   </>
                 ) : submitStatus === 'success' ? (
                   <>
-                    <div className="w-5 h-5 rounded-full bg-green-400 flex items-center justify-center">
+                    <div className="w-5 h-5 rounded-full bg-green-400 flex items-center justify-center" aria-hidden="true">
                       <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
@@ -442,7 +444,7 @@ const EnquiryModal = ({
                   </>
                 ) : (
                   <>
-                    <Mail className="w-5 h-5" />
+                    <Mail className="w-5 h-5" aria-hidden="true" />
                     Send Enquiry
                   </>
                 )}
@@ -452,6 +454,7 @@ const EnquiryModal = ({
                 type="button"
                 onClick={onClose}
                 className="flex-1 sm:flex-none border border-gray-500 hover:bg-gray-600/20 text-gray-300 hover:text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300"
+                aria-label="Cancel and close modal"
               >
                 Cancel
               </button>
