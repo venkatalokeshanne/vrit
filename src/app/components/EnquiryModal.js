@@ -352,11 +352,12 @@ const EnquiryModal = ({
                 )}
               </div>
               <div>
-                <label className="block text-gray-300 font-medium mb-2">
+                <label htmlFor="trainingMode" className="block text-gray-300 font-medium mb-2">
                   <Clock className="w-4 h-4 inline mr-1" />
                   Training Mode
                 </label>
                 <select
+                  id="trainingMode"
                   name="trainingMode"
                   value={formData.trainingMode}
                   onChange={handleChange}
