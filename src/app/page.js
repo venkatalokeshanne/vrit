@@ -682,7 +682,7 @@ export default function Home() {
       </section>
 
       {/* Company Partners Section */}
-<section className="py-6 px-4 sm:px-6 lg:px-8 relative">
+<section className="py-6 px-2 sm:px-6 lg:px-8 relative">
   <div className="max-w-7xl mx-auto">
     <div className="text-center mb-6">
       <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
@@ -692,37 +692,43 @@ export default function Home() {
         VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online &amp; classroom trainings from Hyderabad. VR IT Solutions has trained &amp; placed thousands of people in major MNC's like Infosys, Wipro, Accenture, Deloitte, Cognizant, Capgemini and other companies as well.
       </p>
     </div>
-    <div className="space-y-4">
-      <Slider {...companySliderSettings} className="w-full">
-        {companiesRow1.map((company, index) => (
-          <div key={`company-row1-${index}`} className="flex items-center justify-center px-2">
-            <div className="relative w-32 h-20 bg-white/5 rounded-lg p-1 backdrop-blur-sm border border-white/10 overflow-hidden">
-              <Image
-                src={company.image}
-                alt={`${company.name} logo`}
-                fill
-                className="object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
-                sizes="128px"
-              />
+    <div className="space-y-2">
+      {/* Row 1 - horizontal scroll on mobile */}
+      <div className="scrollbar-hide -mx-2 sm:mx-0">
+        <Slider {...companySliderSettings} className="w-full min-w-[400px] sm:min-w-0">
+          {companiesRow1.map((company, index) => (
+            <div key={`company-row1-${index}`} className="flex items-center justify-center ">
+              <div className="relative w-24 h-14 sm:w-32 sm:h-20 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10 overflow-hidden">
+                <Image
+                  src={company.image}
+                  alt={`${company.name} logo`}
+                  fill
+                  className="object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
+                  sizes="96px, (min-width: 640px) 128px"
+                />
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-      <Slider {...companySliderSettings} rtl className="w-full">
-        {companiesRow2.map((company, index) => (
-          <div key={`company-row2-${index}`} className="flex items-center justify-center px-2">
-            <div className="relative w-32 h-20 bg-white/5 rounded-lg p-1 backdrop-blur-sm border border-white/10 overflow-hidden">
-              <Image
-                src={company.image}
-                alt={`${company.name} logo`}
-                fill
-                className="object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
-                sizes="128px"
-              />
+          ))}
+        </Slider>
+      </div>
+      {/* Row 2 - horizontal scroll on mobile, reverse direction */}
+      <div className="scrollbar-hide -mx-2 sm:mx-0">
+        <Slider {...companySliderSettings} rtl className="w-full min-w-[400px] sm:min-w-0">
+          {companiesRow2.map((company, index) => (
+            <div key={`company-row2-${index}`} className="flex items-center justify-center px-2">
+              <div className="relative w-24 h-14 sm:w-32 sm:h-20 bg-white/5 rounded-lg p-1 backdrop-blur-sm border border-white/10 overflow-hidden">
+                <Image
+                  src={company.image}
+                  alt={`${company.name} logo`}
+                  fill
+                  className="object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
+                  sizes="96px, (min-width: 640px) 128px"
+                />
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      </div>
     </div>
   </div>
 </section>
