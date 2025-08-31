@@ -1,80 +1,32 @@
 'use client';
 
-import { useRef } from 'react';
-import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
+import { useEffect, useState } from 'react';
 import { MessageCircle, X, Phone, Mail } from 'lucide-react';
-import { useState } from 'react';
 
 export default function ChatWidget() {
-  const tawkMessengerRef = useRef();
   const [isVisible, setIsVisible] = useState(false);
 
-  // Tawk.to callback functions
-  const onLoad = () => {
-    console.log('Tawk.to widget loaded successfully!');
-  };
+  // Inject Tawk.to script with referrerPolicy
+  useEffect(() => {
+    console.log("saibaba")
+    if (typeof window !== 'undefined' && !window.Tawk_API) {
+      const script = document.createElement('script');
+      script.src = 'https://embed.tawk.to/5cef5effb534676f32ac84a7/default';
+      script.async = true;
+      script.referrerPolicy = 'no-referrer-when-downgrade';
+      script.charset = 'UTF-8';
+      script.setAttribute('crossorigin', '*');
+      document.body.appendChild(script);
+    }
+  }, []);
 
-  const onBeforeLoad = () => {
-    console.log('Tawk.to widget preparing to load...');
-  };
-
-  const onStatusChange = (status) => {
-    console.log('Tawk.to status changed:', status);
-  };
-
-  const onChatStarted = () => {
-    console.log('Chat started!');
-    setIsVisible(false); // Hide our contact widget when chat starts
-  };
-
-  const onChatEnded = () => {
-    console.log('Chat ended!');
-  };
-
-  const onChatMessageSystem = (message) => {
-    console.log('System message received:', message);
-  };
-
-  const onChatMessageVisitor = (message) => {
-    console.log('Visitor message received:', message);
-  };
-
-  const onUnreadCountChanged = (count) => {
-    console.log('Unread count changed:', count);
-  };
-
-  const onChatMaximized = () => {
-    console.log('Chat maximized!');
-  };
-
-  const onChatMinimized = () => {
-    console.log('Chat minimized!');
-  };
-
-  // Function to maximize the chat widget using the React component ref
+  // Open Tawk.to chat widget
   const handleMaximizeChat = () => {
-    console.log('=== DEBUG: handleMaximizeChat called ===');
-    console.log('tawkMessengerRef.current:', tawkMessengerRef.current);
-    
-    try {
-      if (tawkMessengerRef.current) {
-        console.log('DEBUG: About to call tawkMessengerRef.current.maximize()');
-        tawkMessengerRef.current.maximize();
-        console.log('DEBUG: Chat maximized using React ref successfully');
-      } else {
-        console.log('DEBUG: Tawk messenger ref not available, showing contact options');
-        setIsVisible(true);
-      }
-    } catch (error) {
-      console.error('DEBUG: Error maximizing chat:', error);
-      console.error('DEBUG: Error stack:', error.stack);
+    if (window.Tawk_API && window.Tawk_API.maximize) {
+      window.Tawk_API.maximize();
+    } else {
       setIsVisible(true);
     }
-  };
-
-  // Function to show contact options
-  const _openContactOptions = () => {
-    setIsVisible(true);
   };
 
   const closeWidget = () => {
@@ -83,23 +35,6 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Official Tawk.to React Component */}
-      <TawkMessengerReact
-        propertyId="5cef5effb534676f32ac84a7"
-        widgetId="default"
-        ref={tawkMessengerRef}
-        onLoad={onLoad}
-        onBeforeLoad={onBeforeLoad}
-        onStatusChange={onStatusChange}
-        onChatStarted={onChatStarted}
-        onChatEnded={onChatEnded}
-        onChatMaximized={onChatMaximized}
-        onChatMinimized={onChatMinimized}
-        onChatMessageSystem={onChatMessageSystem}
-        onChatMessageVisitor={onChatMessageVisitor}
-        onUnreadCountChanged={onUnreadCountChanged}
-      />
-
       {/* Contact Buttons Stack */}
       <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center space-y-2">
         {/* Phone Button (Top) */}
@@ -108,33 +43,29 @@ export default function ChatWidget() {
             href="tel:+919032734343"
             className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white p-4 rounded-full shadow-lg hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center"
             aria-label="Call us directly"
-            style={{width: '60px', height: '60px'}}
+            style={{ width: '60px', height: '60px' }}
           >
             <Phone className="w-6 h-6" />
           </a>
-
           {/* Tooltip for phone button */}
           <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
             Click to call: +91-9032734343
             <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-800"></div>
           </div>
         </div>
-
         {/* Chat Button (Bottom) */}
         <div className="relative group">
           <button
             onClick={handleMaximizeChat}
             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-4 rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-110"
             aria-label="Open chat support"
-            style={{width: '55px', height: '55px'}}
+            style={{ width: '55px', height: '55px' }}
           >
             <MessageCircle className="w-6 h-6 group-hover:animate-pulse" />
-            
             {/* Notification dot */}
             <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full animate-ping"></span>
             <span className="absolute -top-1 -right-1 w-3 h-3 bg-orange-500 rounded-full"></span>
           </button>
-
           {/* Tooltip for chat button */}
           <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none">
             Chat with us for instant support!
@@ -142,24 +73,22 @@ export default function ChatWidget() {
           </div>
         </div>
       </div>
-
       {/* Fallback Contact Widget */}
       {isVisible && (
-        <div className="fixed bottom-6 right-6 z-50 bg-white rounded-2xl shadow-2xl border border-slate-200 p-6" style={{width: '280px', height: '330px'}}>
+        <div className="fixed bottom-6 right-6 z-50 bg-white rounded-2xl shadow-2xl border border-slate-200 p-6" style={{ width: '280px', height: '330px' }}>
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-bold text-slate-800">Contact Us</h3>
             <button
               onClick={closeWidget}
               className="text-slate-400 hover:text-slate-600 transition-colors"
+              aria-label="Close contact widget"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
-          
           <p className="text-slate-600 mb-4 text-sm">
             Ready to advance your IT career? Contact our training experts:
           </p>
-          
           <div className="space-y-3">
             <a
               href="tel:+919032734343"
@@ -171,7 +100,6 @@ export default function ChatWidget() {
                 <p className="text-sm text-slate-600">+91-9032734343</p>
               </div>
             </a>
-            
             <a
               href="mailto:info@vritsol.com"
               className="flex items-center space-x-3 p-3 bg-teal-50 hover:bg-teal-100 rounded-xl transition-colors"
@@ -182,7 +110,6 @@ export default function ChatWidget() {
                 <p className="text-sm text-slate-600">info@vritsol.com</p>
               </div>
             </a>
-            
             <a
               href="https://wa.me/919032734343?text=Hi%2C%20I%27m%20interested%20in%20your%20training%20courses."
               target="_blank"
@@ -200,7 +127,6 @@ export default function ChatWidget() {
               </div>
             </a>
           </div>
-          
           <div className="mt-4 pt-4 border-t border-slate-200">
             <p className="text-xs text-slate-500 text-center">
               Available Mon-Sat, 9AM-7PM IST
