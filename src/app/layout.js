@@ -222,11 +222,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="author" href="/humans.txt" />
         <link rel="help" href="/.well-known/security.txt" />
 
-        {/* Hreflang and Canonical Links */}
-        <link rel="canonical" href="https://www.vritsol.com/" />
-        <link rel="alternate" hrefLang="en-US" href="https://www.vritsol.com/" />
-        <link rel="alternate" hrefLang="en" href="https://www.vritsol.com/" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.vritsol.com/" />
 
         {/* Tawk.to Chat Script */}
         <Script id="tawk-to-script" strategy="afterInteractive">
