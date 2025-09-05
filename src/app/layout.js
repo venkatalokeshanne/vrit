@@ -117,7 +117,7 @@ export async function generateMetadata({ params: _params, searchParams: _searchP
     
     // Verification codes
     verification: {
-      google: 'your-google-verification-code', // Replace with your actual code
+      google: 'AKRqWmEWNbzpVdyE0jzqX1tyaNhLfczFbczd3cOsGfE',
     },
   };
 }
