@@ -109,7 +109,7 @@ export default function Home() {
       companies.push({ name: `Company ${i}`, image: `/file${i}.png` });
     }
   }
-  // Company slider settings optimized for all 50 logos on mobile
+  // Company slider settings with more compact boxes
   const companySliderSettings = {
     dots: false,
     infinite: true,
@@ -137,10 +137,19 @@ export default function Home() {
         } 
       },
       { 
+        breakpoint: 640, 
+        settings: { 
+          slidesToShow: 3.5,
+          speed: 2800,
+          centerMode: false
+        } 
+      },
+      { 
         breakpoint: 480, 
         settings: { 
           slidesToShow: 3,
-          speed: 2500
+          speed: 2500,
+          centerMode: false
         } 
       },
     ],
@@ -695,53 +704,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Company Partners Section - Professional & Mobile Optimized */}
-<section className="py-8 px-4 sm:px-6 lg:px-8 relative">
+      {/* Company Partners Section - Mobile Optimized */}
+<section className="py-6 px-3 sm:px-6 lg:px-8 relative">
   <div className="max-w-7xl mx-auto">
-    <div className="text-center mb-8">
-      <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4 border border-white/20">
-        <Building className="w-4 h-4 text-blue-400" />
-        <span className="text-sm font-medium">Trusted by Industry Leaders</span>
+    <div className="text-center mb-6">
+      <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-2 mb-3 border border-white/20">
+        <Building className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
+        <span className="text-xs sm:text-sm font-medium">Industry Partners</span>
       </div>
       
-      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3">
         <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
           Our Students Work At
         </span>
       </h3>
       
-      <p className="text-sm md:text-base text-gray-200 max-w-4xl mx-auto leading-relaxed">
-        VR IT Solutions has successfully trained and placed thousands of professionals in major MNC's including 
-        <span className="text-orange-300 font-semibold"> Infosys, Wipro, Accenture, Deloitte, Cognizant, Capgemini</span> and 
-        many other leading technology companies worldwide.
+      <p className="text-sm md:text-base text-gray-200 max-w-4xl mx-auto leading-relaxed px-4">
+        Successfully placed thousands of professionals in major MNC's including 
+        <span className="text-orange-300 font-semibold"> Infosys, Wipro, Accenture, Deloitte, Cognizant, Capgemini</span> and many more.
       </p>
     </div>
     
-    {/* Single Professional Row with Better Mobile Experience */}
+    {/* Mobile-Optimized Company Logos */}
     <div className="relative">
-      {/* Gradient fade edges for professional look */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none"></div>
+      {/* Subtle gradient edges */}
+      <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none"></div>
       
       <div className="overflow-hidden">
         <Slider {...companySliderSettings}>
           {companies.map((company, index) => (
-            <div key={`company-${index}`} className="px-2 py-3">
-              <div className="group relative bg-white/8 backdrop-blur-sm rounded-lg p-3 border border-white/10 hover:border-white/30 hover:bg-white/12 transition-all duration-300 hover:scale-105">
-                {/* Company Logo Container - No Names */}
-                <div className="relative w-full h-12 sm:h-16">
+            <div key={`company-${index}`} className="px-1 sm:px-1.5 py-2">
+              <div className="group relative bg-white/6 backdrop-blur-sm rounded-lg border border-white/8 hover:border-white/20 hover:bg-white/10 transition-all duration-300 overflow-hidden">
+                {/* Company Logo Container - Compact Size */}
+                <div className="relative w-full h-10 sm:h-12 md:h-14 flex items-center justify-center p-1.5">
                   <Image
                     src={company.image}
-                    alt={`Partner company logo - Where VR IT Solutions students work`}
-                    fill
-                    className="object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
-                    sizes="(max-width: 480px) 120px, (max-width: 768px) 150px, 180px"
+                    alt={`Partner company logo ${index + 1}`}
+                    width={80}
+                    height={40}
+                    className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                    sizes="(max-width: 480px) 80px, (max-width: 768px) 100px, 120px"
                     loading="lazy"
                   />
                 </div>
                 
-                {/* Subtle hover effect line */}
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                {/* Subtle hover effect */}
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-400 to-blue-400 opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
               </div>
             </div>
           ))}
@@ -749,23 +758,23 @@ export default function Home() {
       </div>
     </div>
     
-    {/* Professional Success Stats */}
-    <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+    {/* Simplified Mobile Stats */}
+    <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
       {[
-        { number: '5000+', label: 'Students Placed', icon: TrendingUp },
-        { number: '150+', label: 'Partner Companies', icon: Building },
-        { number: '95%', label: 'Placement Success', icon: Award },
-        { number: '15+', label: 'Years Experience', icon: Shield }
+        { number: '5000+', label: 'Students Placed', icon: TrendingUp, color: 'from-blue-500 to-cyan-500' },
+        { number: '150+', label: 'Partner Companies', icon: Building, color: 'from-green-500 to-teal-500' },
+        { number: '95%', label: 'Success Rate', icon: Award, color: 'from-orange-500 to-red-500' },
+        { number: '15+', label: 'Years Experience', icon: Shield, color: 'from-purple-500 to-pink-500' }
       ].map((stat, index) => (
         <div 
           key={stat.label}
-          className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10"
+          className="text-center bg-white/5 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/10 hover:bg-white/8 transition-all duration-300"
         >
-          <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-2">
-            <stat.icon className="w-5 h-5 text-white" />
+          <div className={`w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r ${stat.color} rounded-lg flex items-center justify-center mx-auto mb-2`}>
+            <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </div>
-          <div className="text-lg font-bold text-white">{stat.number}</div>
-          <div className="text-xs text-gray-300">{stat.label}</div>
+          <div className="text-base sm:text-lg font-bold text-white">{stat.number}</div>
+          <div className="text-xs sm:text-sm text-gray-300 leading-tight">{stat.label}</div>
         </div>
       ))}
     </div>
