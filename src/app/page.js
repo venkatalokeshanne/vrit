@@ -100,7 +100,7 @@ export default function Home() {
     { icon: Rocket, title: 'True Partnership', desc: 'Our goal is to build an honest relationship with our valuable students, corporate team and provide them best training and business solutions with lifetime support and placements.' }
   ];
 
-  // Generate companies array from file1.png to file50.png (excluding file37.png which appears to be named fle37.png)
+  // Show all 50 company logos without names - professional display
   const companies = [];
   for (let i = 1; i <= 50; i++) {
     if (i === 37) {
@@ -109,26 +109,40 @@ export default function Home() {
       companies.push({ name: `Company ${i}`, image: `/file${i}.png` });
     }
   }
-  // Split companies into two rows
-  const mid = Math.ceil(companies.length / 2);
-  const companiesRow1 = companies.slice(0, mid);
-  const companiesRow2 = companies.slice(mid);
+  // Company slider settings optimized for all 50 logos on mobile
   const companySliderSettings = {
     dots: false,
     infinite: true,
-    speed: 2000,
+    speed: 4000,
     slidesToShow: 8,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: 'linear',
     arrows: false,
-    pauseOnHover: false,
+    pauseOnHover: true,
     responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 6 } },
-      { breakpoint: 1024, settings: { slidesToShow: 5 } },
-      { breakpoint: 768, settings: { slidesToShow: 3 } },
-      { breakpoint: 480, settings: { slidesToShow: 2 } },
+      { 
+        breakpoint: 1024, 
+        settings: { 
+          slidesToShow: 6,
+          speed: 3500
+        } 
+      },
+      { 
+        breakpoint: 768, 
+        settings: { 
+          slidesToShow: 4,
+          speed: 3000
+        } 
+      },
+      { 
+        breakpoint: 480, 
+        settings: { 
+          slidesToShow: 3,
+          speed: 2500
+        } 
+      },
     ],
   };
 
@@ -681,54 +695,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Company Partners Section */}
-<section className="py-6 px-2 sm:px-6 lg:px-8 relative">
+      {/* Company Partners Section - Professional & Mobile Optimized */}
+<section className="py-8 px-4 sm:px-6 lg:px-8 relative">
   <div className="max-w-7xl mx-auto">
-    <div className="text-center mb-6">
-      <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
-        Our Students Work At
+    <div className="text-center mb-8">
+      <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4 border border-white/20">
+        <Building className="w-4 h-4 text-blue-400" />
+        <span className="text-sm font-medium">Trusted by Industry Leaders</span>
+      </div>
+      
+      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+        <span className="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">
+          Our Students Work At
+        </span>
       </h3>
-      <p className="text-sm text-gray-200">
-        VR IT Solutions is the best software training institute in Hyderabad. We are training professionals online &amp; classroom trainings from Hyderabad. VR IT Solutions has trained &amp; placed thousands of people in major MNC's like Infosys, Wipro, Accenture, Deloitte, Cognizant, Capgemini and other companies as well.
+      
+      <p className="text-sm md:text-base text-gray-200 max-w-4xl mx-auto leading-relaxed">
+        VR IT Solutions has successfully trained and placed thousands of professionals in major MNC's including 
+        <span className="text-orange-300 font-semibold"> Infosys, Wipro, Accenture, Deloitte, Cognizant, Capgemini</span> and 
+        many other leading technology companies worldwide.
       </p>
     </div>
-    <div className="space-y-2">
-      {/* Row 1 - horizontal scroll on mobile */}
-      <div className="scrollbar-hide -mx-2 sm:mx-0">
-        <Slider {...companySliderSettings} className="w-full min-w-[400px] sm:min-w-0">
-          {companiesRow1.map((company, index) => (
-            <div key={`company-row1-${index}`} className="flex items-center justify-center ">
-              <div className="relative w-24 h-14 sm:w-32 sm:h-20 bg-white/5 rounded-lg backdrop-blur-sm border border-white/10 overflow-hidden">
-                <Image
-                  src={company.image}
-                  alt={`${company.name} logo`}
-                  fill
-                  className="object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
-                  sizes="96px, (min-width: 640px) 128px"
-                />
+    
+    {/* Single Professional Row with Better Mobile Experience */}
+    <div className="relative">
+      {/* Gradient fade edges for professional look */}
+      <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none"></div>
+      
+      <div className="overflow-hidden">
+        <Slider {...companySliderSettings}>
+          {companies.map((company, index) => (
+            <div key={`company-${index}`} className="px-2 py-3">
+              <div className="group relative bg-white/8 backdrop-blur-sm rounded-lg p-3 border border-white/10 hover:border-white/30 hover:bg-white/12 transition-all duration-300 hover:scale-105">
+                {/* Company Logo Container - No Names */}
+                <div className="relative w-full h-12 sm:h-16">
+                  <Image
+                    src={company.image}
+                    alt={`Partner company logo - Where VR IT Solutions students work`}
+                    fill
+                    className="object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
+                    sizes="(max-width: 480px) 120px, (max-width: 768px) 150px, 180px"
+                    loading="lazy"
+                  />
+                </div>
+                
+                {/* Subtle hover effect line */}
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-orange-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
           ))}
         </Slider>
       </div>
-      {/* Row 2 - horizontal scroll on mobile, reverse direction */}
-      <div className="scrollbar-hide -mx-2 sm:mx-0">
-        <Slider {...companySliderSettings} rtl className="w-full min-w-[400px] sm:min-w-0">
-          {companiesRow2.map((company, index) => (
-            <div key={`company-row2-${index}`} className="flex items-center justify-center px-2">
-              <div className="relative w-24 h-14 sm:w-32 sm:h-20 bg-white/5 rounded-lg p-1 backdrop-blur-sm border border-white/10 overflow-hidden">
-                <Image
-                  src={company.image}
-                  alt={`${company.name} logo`}
-                  fill
-                  className="object-contain filter brightness-90 hover:brightness-100 transition-all duration-300"
-                  sizes="96px, (min-width: 640px) 128px"
-                />
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+    </div>
+    
+    {/* Professional Success Stats */}
+    <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+      {[
+        { number: '5000+', label: 'Students Placed', icon: TrendingUp },
+        { number: '150+', label: 'Partner Companies', icon: Building },
+        { number: '95%', label: 'Placement Success', icon: Award },
+        { number: '15+', label: 'Years Experience', icon: Shield }
+      ].map((stat, index) => (
+        <div 
+          key={stat.label}
+          className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10"
+        >
+          <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <stat.icon className="w-5 h-5 text-white" />
+          </div>
+          <div className="text-lg font-bold text-white">{stat.number}</div>
+          <div className="text-xs text-gray-300">{stat.label}</div>
+        </div>
+      ))}
     </div>
   </div>
 </section>
