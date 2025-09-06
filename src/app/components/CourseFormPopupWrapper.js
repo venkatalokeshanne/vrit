@@ -19,7 +19,8 @@ const CourseFormPopupWrapper = () => {
       '/terms-and-conditions',
       '/privacy-policy',
       '/add-testimonial',
-      '/admin'
+      '/admin',
+      '/deploy'
     ];
     // Exclude /blog/*
     const isBlog = pathname.startsWith('/blog/');
