@@ -7,7 +7,7 @@ const adminClient = createClient({
   dataset: 'production',
   apiVersion: '2023-05-03',
   token: process.env.SANITY_API_TOKEN, // This works on server-side
-  useCdn: false
+  useCdn: true
 })
 
 export async function POST(request) {
