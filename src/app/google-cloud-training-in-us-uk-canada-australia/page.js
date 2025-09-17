@@ -67,8 +67,8 @@ export default function GoogleCloudTrainingInUSUKCanadaAustralia() {
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   
   // Get structured data directly from courseMetadata
-  const structuredDataJson = courseMetadata?.structuredData ? 
-    JSON.stringify(courseMetadata.structuredData) : null;
+  const structuredDataArray = getStructuredDataStatic(COURSE_SLUG);
+  const structuredDataJson = structuredDataArray ? JSON.stringify(structuredDataArray) : null;
 
   // Get image directly from courseMetadata (multiple fallbacks)
   const _mainImageUrl = courseMetadata?.mainImage

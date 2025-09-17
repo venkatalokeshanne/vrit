@@ -25,8 +25,8 @@ export default function DynamicCoursePage({ course }) {
   const _mainImageUrl = courseMetadata?.mainImage || '/logo.png';
   
   // Use existing structured data from courseMetadata if available
-  const structuredDataJson = courseMetadata?.structuredData ? 
-    JSON.stringify(courseMetadata.structuredData) : null;
+  const structuredDataArray = getStructuredDataStatic(COURSE_SLUG);
+  const structuredDataJson = structuredDataArray ? JSON.stringify(structuredDataArray) : null;
 
   return (
     <>

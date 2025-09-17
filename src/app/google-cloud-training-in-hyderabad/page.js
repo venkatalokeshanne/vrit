@@ -24,8 +24,8 @@ export async function generateMetadata() {
 
 export default function GoogleCloudTrainingInHyderabad() {
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
-  const structuredDataJson = courseMetadata?.structuredData ? 
-    JSON.stringify(courseMetadata.structuredData) : null;
+  const structuredDataArray = getStructuredDataStatic(COURSE_SLUG);
+  const structuredDataJson = structuredDataArray ? JSON.stringify(structuredDataArray) : null;
   const _mainImageUrl = courseMetadata?.mainImage
 
   // Log the courseMetadata to see what we have

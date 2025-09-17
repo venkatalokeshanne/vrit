@@ -22,7 +22,8 @@ export async function generateMetadata() {
 
 
 export default async  function AzureDevOpsTrainingInChennai() {
-  const structuredDataJson = getStructuredDataStatic(COURSE_SLUG);
+    const structuredDataArray = getStructuredDataStatic(COURSE_SLUG);
+  const structuredDataJson = structuredDataArray ? JSON.stringify(structuredDataArray) : null;
   // Fetch metadata for dynamic hero image
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   const _mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';

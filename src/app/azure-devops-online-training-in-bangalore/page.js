@@ -28,8 +28,8 @@ export default function AzureDevOpsTraining() {
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   const _mainImageUrl = courseMetadata?.mainImage || '/azure-devops.jpg';
   // Get structured data directly from courseMetadata
-  const structuredDataJson = courseMetadata?.structuredData ? 
-    JSON.stringify(courseMetadata.structuredData) : null;
+  const structuredDataArray = getStructuredDataStatic(COURSE_SLUG);
+  const structuredDataJson = structuredDataArray ? JSON.stringify(structuredDataArray) : null;
 
   // Use only mainImage for _mainImageUrl
   
