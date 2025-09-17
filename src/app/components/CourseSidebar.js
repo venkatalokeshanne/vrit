@@ -3,7 +3,7 @@
 import { Phone, Mail, Users, Monitor, Briefcase, CheckCircle, TrendingUp, Globe, Star, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import CourseActionButtons from './CourseActionButtons';
-import { getCourseBySlugStatic } from '@/utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic  } from '@/utils/staticCourses';
 
 export default function CourseSidebar({ slug, courseName = "Course", phoneNumber = "+91-9032734343" }) {
   const courseMetadata = getCourseBySlugStatic(slug);

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic  } from '../../utils/staticCourses';
 import { getAllCourses } from '../../lib/courses';
 import { 
   Search,

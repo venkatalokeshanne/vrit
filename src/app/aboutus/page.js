@@ -1,7 +1,7 @@
 ﻿import { CheckCircle, MapPin, Mail, Phone, Code } from 'lucide-react';
 import FAQ from '../components/FAQ';
 import { EnquireNowButton, CallNowButton } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic } from '../../utils/staticCourses';
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'aboutus';

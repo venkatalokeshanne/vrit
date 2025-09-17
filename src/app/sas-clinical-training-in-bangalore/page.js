@@ -4,7 +4,7 @@ import Image from 'next/image';
 import CourseSidebar from '../components/CourseSidebar';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic  } from '../../utils/staticCourses';
 import {
   Clock,
   CheckCircle,

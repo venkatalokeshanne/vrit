@@ -2,7 +2,7 @@
 import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
 import FAQ from '../components/FAQ';
 import { CourseActionButtons } from '../components/CourseActionButtons';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic  } from '../../utils/staticCourses';
 import Image from 'next/image'
 import { 
   Award,

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, Send, User, MessageSquare, Building } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic  } from '../../utils/staticCourses';
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'contactus';

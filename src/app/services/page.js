@@ -1,6 +1,6 @@
 ﻿import Image from 'next/image';
 import DynamicSEOHeaders from '../components/DynamicSEOHeaders';
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic  } from '../../utils/staticCourses';
 import { 
   Monitor, 
   Users, 

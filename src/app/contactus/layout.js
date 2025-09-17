@@ -1,4 +1,4 @@
-import { getCourseBySlugStatic } from '../../utils/staticCourses';
+import { getCourseBySlugStatic, getStructuredDataStatic  } from '../../utils/staticCourses';
 
 // Define the course slug as a constant
 const COURSE_SLUG = 'contactus';
