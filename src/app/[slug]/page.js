@@ -1,5 +1,5 @@
 import { getCourseBySlug, getCourseSlugs } from '../../lib/courses';
-import { getCourseBySlugStatic, getStructuredDataStatic  } from '../../utils/staticCourses';
+import { getCourseBySlugStatic  } from '../../utils/staticCourses';
 import DynamicCoursePage from '../components/DynamicCoursePage';
 import { notFound } from 'next/navigation';
 
