@@ -279,38 +279,14 @@ export default function ContactUs() {
                   </label>
                   <div className="relative">
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <select 
+                    <input
+                      type="text"
                       name="courseInterest"
                       value={formData.courseInterest}
                       onChange={handleChange}
-                      className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent appearance-none cursor-pointer"
-                    >
-                      <option value="" className="bg-gray-800 text-white">Select a course</option>
-                      <option value="python" className="bg-gray-800 text-white">Python Training</option>
-                      <option value="data-science" className="bg-gray-800 text-white">Data Science Training</option>
-                      <option value="machine-learning" className="bg-gray-800 text-white">Machine Learning Training</option>
-                      <option value="aws" className="bg-gray-800 text-white">AWS Training</option>
-                      <option value="azure" className="bg-gray-800 text-white">Azure DevOps Training</option>
-                      <option value="devops" className="bg-gray-800 text-white">DevOps Training</option>
-                      <option value="salesforce" className="bg-gray-800 text-white">Salesforce Training</option>
-                      <option value="servicenow" className="bg-gray-800 text-white">ServiceNow Training</option>
-                      <option value="sap-basis" className="bg-gray-800 text-white">SAP BASIS Training</option>
-                      <option value="sap-central-finance" className="bg-gray-800 text-white">SAP Central Finance</option>
-                      <option value="sap-ewm" className="bg-gray-800 text-white">SAP EWM Training</option>
-                      <option value="informatica-mdm" className="bg-gray-800 text-white">Informatica MDM Training</option>
-                      <option value="edi-training" className="bg-gray-800 text-white">EDI Training</option>
-                      <option value="pega-training" className="bg-gray-800 text-white">Pega Training</option>
-                      <option value="mulesoft" className="bg-gray-800 text-white">MuleSoft Training</option>
-                      <option value="google-cloud" className="bg-gray-800 text-white">Google Cloud Training</option>
-                      <option value="hadoop" className="bg-gray-800 text-white">Hadoop Training</option>
-                      <option value="full-stack" className="bg-gray-800 text-white">Full Stack Development</option>
-                      <option value="other" className="bg-gray-800 text-white">Other</option>
-                    </select>
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                      <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
-                      </svg>
-                    </div>
+                      className="w-full pl-10 pr-4 py-3 bg-white/5 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent"
+                      placeholder="Enter course name (e.g., Python, AWS, Azure DevOps, etc.)"
+                    />
                   </div>
                 </div>
               </div>

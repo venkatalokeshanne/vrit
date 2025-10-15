@@ -29,7 +29,7 @@ import Portal from './Portal';
 const EnquiryModal = ({ 
   isOpen, 
   onClose, 
-  courseName = "Course",
+  courseName = "",
   onSubmit,
   title = "Course Enquiry"
 }) => {
@@ -38,7 +38,7 @@ const EnquiryModal = ({
     email: '',
     phone: '',
     message: '',
-    course: courseName,
+    course: '',
     trainingMode: 'online'
   });
 
@@ -62,14 +62,14 @@ const EnquiryModal = ({
         email: '',
         phone: '',
         message: '',
-        course: courseName,
+        course: '',
         trainingMode: 'online'
       });
       setErrors({});
       setIsSubmitting(false);
       setSubmitStatus(null);
     }
-  }, [isOpen, courseName]);
+  }, [isOpen]);
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -140,6 +140,10 @@ const EnquiryModal = ({
       newErrors.phone = 'Phone number is required';
     } else if (!/^[\d\+\-\s\(\)]{10,}$/.test(formData.phone.replace(/\s/g, ''))) {
       newErrors.phone = 'Please enter a valid phone number';
+    }
+
+    if (!formData.course.trim()) {
+      newErrors.course = 'Course interest is required';
     }
     
     setErrors(newErrors);
@@ -278,12 +282,24 @@ const EnquiryModal = ({
           <form onSubmit={handleSubmit} className="p-6 space-y-6">
             
             {/* Course Name */}
-            <div className="bg-blue-500/10 rounded-xl p-4 border border-blue-400/20">
-              <div className="flex items-center gap-2 mb-2">
-                <Calendar className="w-5 h-5 text-blue-400" />
-                <span className="text-blue-300 font-semibold">Course</span>
-              </div>
-              <p className="text-blue-100 font-medium">{courseName}</p>
+            <div>
+              <label className="block text-gray-300 font-medium mb-2">
+                <Calendar className="w-4 h-4 inline mr-1" />
+                Course Interest *
+              </label>
+              <input
+                type="text"
+                name="course"
+                value={formData.course}
+                onChange={handleChange}
+                className={`w-full px-4 py-3 bg-gray-700/50 border ${
+                  errors.course ? 'border-red-400' : 'border-gray-600'
+                } rounded-xl text-white placeholder-gray-400 focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors`}
+                placeholder="Enter course name (e.g., Python, AWS, Azure DevOps, etc.)"
+              />
+              {errors.course && (
+                <p className="text-red-400 text-sm mt-1">{errors.course}</p>
+              )}
             </div>
 
             {/* Personal Information */}

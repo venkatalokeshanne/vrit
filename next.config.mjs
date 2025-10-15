@@ -157,6 +157,151 @@ const nextConfig = {
       },
     ];
   },
+
+  // Redirects for old PHP URLs to new Next.js routes
+  async redirects() {
+    return [
+      // PHP page redirects to Next.js equivalents
+      {
+        source: '/aboutus.php',
+        destination: '/aboutus',
+        permanent: true,
+      },
+      {
+        source: '/contactus.php',
+        destination: '/contactus',
+        permanent: true,
+      },
+      {
+        source: '/courses.php',
+        destination: '/courses',
+        permanent: true,
+      },
+      {
+        source: '/index.php',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/services.php',
+        destination: '/courses',
+        permanent: true,
+      },
+      {
+        source: '/refund-and-course-rescheduling-policy.php',
+        destination: '/refund-and-course-rescheduling-policy',
+        permanent: true,
+      },
+      
+      // Course page PHP redirects
+      {
+        source: '/azure-devops-training-in-hyderabad.php',
+        destination: '/azure-devops-training-in-hyderabad',
+        permanent: true,
+      },
+      {
+        source: '/google-cloud-training.php',
+        destination: '/google-cloud-training-in-hyderabad',
+        permanent: true,
+      },
+      {
+        source: '/google-cloud-training',
+        destination: '/google-cloud-training-in-hyderabad',
+        permanent: true,
+      },
+      {
+        source: '/snowflake-training-in-hyderabad.php',
+        destination: '/snowflake-training-in-hyderabad',
+        permanent: true,
+      },
+      {
+        source: '/servicenow-training-in-hyderabad.php',
+        destination: '/servicenow-training-in-hyderabad',
+        permanent: true,
+      },
+      {
+        source: '/sas-clinical-online-training-in-us-uk-canada-australia.php',
+        destination: '/sas-clinical-online-training-in-us-uk-canada-australia',
+        permanent: true,
+      },
+      {
+        source: '/sas-clinical-training-in-pune.php',
+        destination: '/sas-clinical-training-in-pune',
+        permanent: true,
+      },
+      {
+        source: '/sap-central-finance-online-training.php',
+        destination: '/sap-central-finance-online-training',
+        permanent: true,
+      },
+      {
+        source: '/sap-mm-online-training.php',
+        destination: '/sap-mm-online-training',
+        permanent: true,
+      },
+      {
+        source: '/sap-security-training.php',
+        destination: '/sap-security-training',
+        permanent: true,
+      },
+      {
+        source: '/informatica-mdm-training.php',
+        destination: '/informatica-mdm-training',
+        permanent: true,
+      },
+      {
+        source: '/sap-basis-online-training.php',
+        destination: '/sap-basis-online-training',
+        permanent: true,
+      },
+      {
+        source: '/mulesoft-training-in-hyderabad.php',
+        destination: '/mulesoft-training-in-hyderabad',
+        permanent: true,
+      },
+      {
+        source: '/sap-leonardo-training-hyderabad.php',
+        destination: '/sap-leonardo-training-hyderabad',
+        permanent: true,
+      },
+      {
+        source: '/edi-training.php',
+        destination: '/edi-training',
+        permanent: true,
+      },
+      {
+        source: '/docker-with-kubernatees',
+        destination: '/devops-training-in-hyderabad',
+        permanent: true,
+      },
+      {
+        source: '/sap-s4hana-simple-logistics-training',
+        destination: '/sap-s4hana-simple-logistics-training',
+        permanent: true,
+      },
+
+      // Blog and dynamic PHP files - redirect to main pages
+      {
+        source: '/blogloadData_cat.php',
+        destination: '/blog',
+        permanent: true,
+      },
+
+      // PDF redirects - redirect to relevant course pages
+      {
+        source: '/studypdfs/:path*.pdf',
+        destination: '/courses',
+        permanent: true,
+      },
+      
+      // Catch-all for any remaining PHP files
+      {
+        source: '/:path*.php',
+        destination: '/courses',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
