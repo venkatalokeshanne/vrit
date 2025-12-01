@@ -132,7 +132,7 @@ export default async function BlogPage({ searchParams }) {
                 ) : (
                   <div className="text-center py-12">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-white text-xl">ðŸ“</span>
+                      <span className="text-white text-xl">📬</span>
                     </div>
                     <p className="text-slate-400">No articles published yet.</p>
                   </div>
@@ -204,7 +204,7 @@ function FeaturedPostCard({ post }) {
             </time>
             {post.readingTime && (
               <>
-                <span>Â·</span>
+                <span> · </span>
                 <span>{post.readingTime}m</span>
               </>
             )}
@@ -415,7 +415,7 @@ function BlogSidebar({ posts, currentCategory }) {
 
       {/* Newsletter Widget */}
       <div className="bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl shadow-lg p-6 text-white">
-        <h3 className="text-lg font-semibold mb-2">ðŸ“§ Stay Updated</h3>
+        <h3 className="text-lg font-semibold mb-2">📬 Stay Updated</h3>
         <p className="text-green-100 text-sm mb-4">Get the latest posts delivered to your inbox</p>
         <div className="space-y-3">
           <input 
@@ -456,7 +456,7 @@ function SidebarPostItem({ post, index }) {
             </time>
             {post.readingTime && (
               <>
-                <span>Â·</span>
+                <span> · </span>
                 <span>{post.readingTime}m</span>
               </>
             )}
