@@ -47,13 +47,14 @@ const privacyPolicyFaqs = [
 
 // Metadata for this page
 export const metadata = {
+  metadataBase: new URL('https://www.vritsol.com'),
   title: 'Privacy Policy | VR IT Solutions',
   description: 'Read the privacy policy for VR IT Solutions. Learn about our data collection, usage, and protection practices.',
   keywords: ['privacy policy', 'data protection', 'VR IT Solutions privacy'],
   openGraph: {
     title: 'Privacy Policy | VR IT Solutions',
     description: 'Read the privacy policy for VR IT Solutions. Learn about our data collection, usage, and protection practices.',
-    url: '/privacy-policy',
+    url: 'https://www.vritsol.com/privacy-policy',
     type: 'website',
     images: []
   },
@@ -63,7 +64,9 @@ export const metadata = {
     description: 'Read the privacy policy for VR IT Solutions. Learn about our data collection, usage, and protection practices.',
     images: []
   },
-  canonical: 'https://www.vritsol.com/privacy-policy'
+  alternates: {
+    canonical: 'https://www.vritsol.com/privacy-policy'
+  }
 };
 
 export default function PrivacyPolicy() {

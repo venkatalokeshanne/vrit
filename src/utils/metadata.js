@@ -260,29 +260,13 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /studio/
 
-# Disallow old PHP files (migrated to Next.js)
-Disallow: /*.php
-Disallow: /*.php$
-Disallow: /studypdfs/
-Disallow: *.pdf
-
-# Disallow legacy file types
-Disallow: /blogloadData_cat.php
-Disallow: /blogloadData.php
-
 # Allow important pages
 Allow: /courses
 Allow: /aboutus
 Allow: /contactus
 Allow: /blog
 Allow: /
-
-# Disallow specific old URLs that were migrated
-Disallow: /aboutus.php
-Disallow: /contactus.php
-Disallow: /courses.php
-Disallow: /index.php
-Disallow: /services.php`;
+`;
 }
 
 /**

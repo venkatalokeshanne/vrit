@@ -47,13 +47,14 @@ const termsAndConditionsFaqs = [
 
 // Metadata for this page
 export const metadata = {
+  metadataBase: new URL('https://www.vritsol.com'),
   title: 'Terms and Conditions | VR IT Solutions',
   description: 'Read the terms and conditions for VR IT Solutions. Learn about our policies, user guidelines, and service terms.',
   keywords: ['terms and conditions', 'user agreement', 'VR IT Solutions policy'],
   openGraph: {
     title: 'Terms and Conditions | VR IT Solutions',
     description: 'Read the terms and conditions for VR IT Solutions. Learn about our policies, user guidelines, and service terms.',
-    url: '/terms-and-conditions',
+    url: 'https://www.vritsol.com/terms-and-conditions',
     type: 'website',
     images: []
   },
@@ -63,7 +64,9 @@ export const metadata = {
     description: 'Read the terms and conditions for VR IT Solutions. Learn about our policies, user guidelines, and service terms.',
     images: []
   },
-  canonical: 'https://www.vritsol.com/terms-and-conditions'
+  alternates: {
+    canonical: 'https://www.vritsol.com/terms-and-conditions'
+  }
 };
 
 export default function TermsAndConditions() {

@@ -195,6 +195,12 @@ module.exports = {
         changefreq: 'monthly',
         priority: 0.9
       },
+      {
+        loc: '/sap-fico-online-training-in-us-uk-canada-australia',
+        lastmod: new Date().toISOString(),
+        changefreq: 'monthly',
+        priority: 0.9
+      },
 
       // High Priority Courses (Priority 0.8)
       {
@@ -277,6 +283,12 @@ module.exports = {
       },
       {
         loc: '/sap-ewm-training-in-us-uk-canada-australia',
+        lastmod: new Date().toISOString(),
+        changefreq: 'monthly',
+        priority: 0.8
+      },
+      {
+        loc: '/sap-ewm-online-training-in-us-uk-canada-australia',
         lastmod: new Date().toISOString(),
         changefreq: 'monthly',
         priority: 0.8

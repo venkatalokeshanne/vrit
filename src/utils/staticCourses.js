@@ -8,11 +8,59 @@ export function getAllCoursesStatic() {
   return coursesData;
 }
 
+const BASE_URL = 'https://www.vritsol.com';
+
+const toAbsoluteUrl = (value) => {
+  if (!value) {
+    return value;
+  }
+
+  if (value.startsWith('http://') || value.startsWith('https://')) {
+    return value;
+  }
+
+  if (value.startsWith('/')) {
+    return `${BASE_URL}${value}`;
+  }
+
+  return `${BASE_URL}/${value}`;
+};
+
+const normalizeCourseMetadata = (course) => {
+  if (!course?.metadata) {
+    return course;
+  }
+
+  const canonical =
+    course.metadata?.alternates?.canonical ||
+    course.metadata?.canonical ||
+    (course.slug ? `${BASE_URL}/${course.slug}` : undefined);
+
+  return {
+    ...course,
+    metadata: {
+      metadataBase: new URL(BASE_URL),
+      ...course.metadata,
+      alternates: {
+        ...course.metadata.alternates,
+        canonical: canonical ? toAbsoluteUrl(canonical) : undefined,
+      },
+      openGraph: course.metadata.openGraph
+        ? {
+            ...course.metadata.openGraph,
+            url: toAbsoluteUrl(course.metadata.openGraph.url),
+          }
+        : course.metadata.openGraph,
+    },
+  };
+};
+
 /**
  * Get a specific course by slug from static data
  */
 export function getCourseBySlugStatic(slug) {
-  return coursesData.find(course => course.slug === slug) || null;
+  const course = coursesData.find(course => course.slug === slug) || null;
+  return normalizeCourseMetadata(course);
 }
 
 /**
