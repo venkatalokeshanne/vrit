@@ -11,9 +11,8 @@ Great news! Your VR IT Solutions website already has most critical SEO elements 
 - ✅ Domain ownership verified
 
 ### 2. **Comprehensive Sitemap**
-- ✅ Static XML sitemap: `/public/sitemap.xml` (updated with all 57+ courses)
-- ✅ Dynamic Next.js sitemap: `/src/app/sitemap.js`
-- ✅ Priority-based course listing (homepage & courses = 1.0 priority)
+- ✅ Dynamic Next.js sitemap route: `/src/app/sitemap.js`
+- ✅ Includes static course pages, dynamic course slugs, and key site pages
 
 ### 3. **Robots.txt**
 - ✅ Dynamic robots.txt via `/src/app/robots.txt/route.js`
@@ -44,8 +43,9 @@ Great news! Your VR IT Solutions website already has most critical SEO elements 
 ## 🆕 New Enhancements Added
 
 ### 1. **Enhanced Sitemap Configuration**
-- Added `next-sitemap.config.js` for automated sitemap generation
-- Course-specific priority levels (Azure DevOps = 1.0, others tiered appropriately)
+- Added `/src/app/sitemap.js` for automated sitemap generation
+- Coverage merges static and dynamic course slugs in one source of truth
+- Removed `next-sitemap.config.js` to avoid duplicate sitemap sources
 
 ### 2. **Advanced Schema Markup**
 - Created `/src/utils/enhancedSchema.js` with:
