@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'sap-fico-online-training-in-hyderabad';// Generate metadata for this page using static data
+const COURSE_SLUG = 'sap-fico-training-in-hyderabad';// Generate metadata for this page using static data
 export async function generateMetadata() {
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   return courseMetadata?.metadata || {};

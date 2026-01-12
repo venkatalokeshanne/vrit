@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 // Define the course slug as a constant
-const COURSE_SLUG = 'machine-learning-with-python-training-in-hyderabad';// Generate metadata for this page using static data
+const COURSE_SLUG = 'machine-learning-with-python-online-training-in-hyderabad';// Generate metadata for this page using static data
 export async function generateMetadata() {
   const courseMetadata = getCourseBySlugStatic(COURSE_SLUG);
   return courseMetadata?.metadata || {};
