@@ -50,14 +50,14 @@ const PopupBanner = ({ imageUrl, bannerUrl, delay = 5000 }) => {
 
         {/* Image container */}
         <div 
-          className={`relative w-full h-64 md:h-80 overflow-hidden ${bannerUrl ? 'cursor-pointer' : ''}`}
+          className={`relative w-full aspect-[1200/630] overflow-hidden ${bannerUrl ? 'cursor-pointer' : ''}`}
           onClick={bannerUrl ? handleBannerClick : undefined}
         >
           <Image
             src={imageUrl}
             alt="VR IT Solutions Banner"
             fill
-            className="object-cover rounded-t-2xl transform transition-transform duration-3000 hover:scale-105 animate-pulse"
+            className="object-cover rounded-t-2xl transform transition-transform duration-500 hover:scale-105"
             sizes="(max-width: 768px) 100vw, 500px"
             priority
           />
