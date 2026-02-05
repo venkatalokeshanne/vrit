@@ -148,8 +148,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           rel="stylesheet"
         />
       </head>
-      <body
-        className="antialiased font-sans"
+      <body className="antialiased"
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>
