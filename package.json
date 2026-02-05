@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "npm run build:courses && next build",
-    "build:courses": "node scripts/build-courses-data.js",
+    "build:courses": "node scripts/build-courses-data-stub.js",
     "update:courses": "node scripts/update-all-course-pages.js",
     "add:simple-finance": "node scripts/add-simple-finance-metadata.js",
     "start": "next start",
