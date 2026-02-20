@@ -398,7 +398,12 @@ export default function SalesforceTrainingInUSUKCanadaAustralia() {
       </div>
       
       {/* Structured Data */}
-      {/* Structured Data for SEO */}
+            {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
       
       

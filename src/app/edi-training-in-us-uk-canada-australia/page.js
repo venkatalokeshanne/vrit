@@ -127,7 +127,12 @@ export default function EdiTrainingInUSUKCanadaAustralia() {
       {/* Dynamic SEO Headers from Sanity CMS */}
       <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
-      {/* Structured Data for SEO */}
+            {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
 
 

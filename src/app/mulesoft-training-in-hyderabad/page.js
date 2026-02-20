@@ -397,9 +397,19 @@ export default async  function MuleSoftTrainingInHyderabad() {
       </div>
 
       {/* JSON-LD Structured Data for SEO */}
-      {/* Structured Data for SEO */}
+            {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
-      {/* Structured Data for SEO */}
+            {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
     </>
   );

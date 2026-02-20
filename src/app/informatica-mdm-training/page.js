@@ -438,7 +438,12 @@ export default async  function InformaticaMDMTraining() {
       </div>
 
       {/* JSON-LD Structured Data for SEO */}
-      {/* Structured Data for SEO */}
+            {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
     </>
   );

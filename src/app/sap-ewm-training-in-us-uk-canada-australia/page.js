@@ -376,7 +376,12 @@ export default function SapEwmOnlineTrainingInUSUKCanadaAustralia() {
       </div>
       
       {/* Structured Data */}
-      {/* Structured Data for SEO */}
+            {structuredDataJson && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
+        />
+      )}
 
       
       
