@@ -13,6 +13,10 @@ const nextConfig = {
     scrollRestoration: true,
     // Enable CSS-in-JS optimization
     optimizeServerReact: true,
+    // Enable instrumentation for better bundle analysis
+    instrumentationHook: true,
+    // Optimize package imports
+    optimizePackageImports: ['lucide-react', '@headlessui/react'],
   },
   // Image optimization
   images: {
@@ -42,16 +46,20 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
+  // Optimize output for smaller bundles
+  output: 'standalone',
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
     // Enable tree shaking
     config.optimization.usedExports = true;
     config.optimization.sideEffects = false;
     
-    // Reduce bundle size
+    // Aggressive bundle splitting to reduce main bundle size
     if (!dev && !isServer) {
       config.optimization.splitChunks = {
         chunks: 'all',
+        minSize: 20000,
+        maxSize: 244000,
         cacheGroups: {
           default: {
             minChunks: 1,
@@ -62,6 +70,28 @@ const nextConfig = {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendors',
             priority: -10,
+            chunks: 'all',
+            maxSize: 244000,
+          },
+          // Split large libraries into separate chunks
+          react: {
+            test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
+            name: 'react',
+            priority: 10,
+            chunks: 'all',
+          },
+          // UI libraries
+          ui: {
+            test: /[\\/]node_modules[\\/](@headlessui|@heroicons|lucide-react)[\\/]/,
+            name: 'ui',
+            priority: 9,
+            chunks: 'all',
+          },
+          // Split common utilities
+          utils: {
+            test: /[\\/]node_modules[\\/](lodash|date-fns|classnames)[\\/]/,
+            name: 'utils',
+            priority: 8,
             chunks: 'all',
           },
         },
