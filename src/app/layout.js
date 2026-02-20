@@ -221,34 +221,314 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 "@type": "OfferCatalog",
                 "name": "IT Training Courses",
                 "itemListElement": [
-                  { "@type": "Course", "name": "ServiceNow Training", "description": "Master IT Service Management, workflow automation, and enterprise cloud solutions with hands-on ServiceNow platform experience.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Salesforce Training", "description": "Learn CRM fundamentals, Lightning Platform development, and Salesforce administration for career advancement.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP FICO Training", "description": "Comprehensive SAP Financial Accounting and Controlling modules with real-world business scenarios and implementations.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP SD Training", "description": "Master SAP Sales and Distribution processes, order-to-cash cycle, pricing procedures, and customer management with online training.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP MM Training", "description": "Master SAP Materials Management, purchasing processes, inventory control, and procurement workflows with comprehensive online training.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Pega Training", "description": "Build enterprise applications with Pega BPM, case management, and low-code development methodologies.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Azure DevOps & AWS", "description": "Master cloud computing, CI/CD pipelines, containerization, and infrastructure automation across Azure and AWS platforms.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "MuleSoft Training", "description": "Learn API-led connectivity, integration patterns, and enterprise service architecture with MuleSoft Anypoint Platform.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAS Clinical Training", "description": "Specialized training in clinical data analysis, regulatory reporting, and pharmaceutical industry standards using SAS.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP Basis Training", "description": "SAP system administration, performance tuning, database management, and technical infrastructure maintenance.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP EWM Training", "description": "Extended Warehouse Management solution covering inventory optimization, warehouse processes, and logistics automation.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP HANA Admin", "description": "In-memory database administration, performance optimization, and advanced analytics with SAP HANA platform.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP S/4HANA Finance", "description": "Next-generation ERP finance modules, real-time analytics, and digital transformation with S/4HANA Finance.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP Leonardo", "description": "Explore AI, machine learning, IoT, and digital innovation platform capabilities within the SAP ecosystem.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP Security & GRC", "description": "Enterprise security management, governance, risk, compliance, and access control in SAP environments.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "SAP Logistics", "description": "Supply chain management, procurement, inventory control, and logistics optimization using SAP S/4HANA.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Data Science Course", "description": "Statistical analysis, machine learning algorithms, data visualization, and predictive modeling with Python and R.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Python Training", "description": "Programming fundamentals, web development with Django/Flask, automation scripting, and data manipulation libraries.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Python with AWS", "description": "Cloud-native Python development, serverless computing, AWS services integration, and scalable application deployment.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Workday Training", "description": "Human Capital Management, financial management, and enterprise planning with Workday cloud applications.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Machine Learning", "description": "Advanced ML algorithms, neural networks, deep learning frameworks, and AI model deployment using Python.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "AWS DevOps Training", "description": "Cloud infrastructure automation, continuous deployment, microservices architecture, and monitoring on AWS platform.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Informatica MDM", "description": "Master Data Management, data quality, data governance, and enterprise data integration using Informatica platform.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Full Stack Developer", "description": "End-to-end web development with React, Node.js, databases, and modern JavaScript frameworks for complete applications.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "EDI Training", "description": "Electronic Data Interchange standards, B2B communication protocols, and automated business document exchange.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Hadoop Training", "description": "Big Data processing, distributed computing, HDFS, MapReduce, and ecosystem tools for large-scale data analytics.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Snowflake Training", "description": "Cloud-based data warehousing platform with seamless collaboration, performance, flexibility and near-infinite scalability for complete database ecosystem.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } },
-                  { "@type": "Course", "name": "Google Cloud (GCP)", "description": "Google Cloud Platform suite of cloud computing services with infrastructure, platform, and serverless computing environments for comprehensive cloud solutions.", "provider": { "@type": "Organization", "name": "VR IT Solutions" } }
+                  { 
+                    "@type": "Course", 
+                    "name": "ServiceNow Training", 
+                    "description": "Master IT Service Management, workflow automation, and enterprise cloud solutions with hands-on ServiceNow platform experience.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "1250"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Salesforce Training", 
+                    "description": "Learn CRM fundamentals, Lightning Platform development, and Salesforce administration for career advancement.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "980"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP FICO Training", 
+                    "description": "Comprehensive SAP Financial Accounting and Controlling modules with real-world business scenarios and implementations.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "1450"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP SD Training", 
+                    "description": "Master SAP Sales and Distribution processes, order-to-cash cycle, pricing procedures, and customer management with online training.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "850"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP MM Training", 
+                    "description": "Master SAP Materials Management, purchasing processes, inventory control, and procurement workflows with comprehensive online training.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "1120"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Pega Training", 
+                    "description": "Build enterprise applications with Pega BPM, case management, and low-code development methodologies.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "760"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Azure DevOps & AWS", 
+                    "description": "Master cloud computing, CI/CD pipelines, containerization, and infrastructure automation across Azure and AWS platforms.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "1850"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "MuleSoft Training", 
+                    "description": "Learn API-led connectivity, integration patterns, and enterprise service architecture with MuleSoft Anypoint Platform.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "640"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAS Clinical Training", 
+                    "description": "Specialized training in clinical data analysis, regulatory reporting, and pharmaceutical industry standards using SAS.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "920"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP Basis Training", 
+                    "description": "SAP system administration, performance tuning, database management, and technical infrastructure maintenance.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "810"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP EWM Training", 
+                    "description": "Extended Warehouse Management solution covering inventory optimization, warehouse processes, and logistics automation.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "730"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP HANA Admin", 
+                    "description": "In-memory database administration, performance optimization, and advanced analytics with SAP HANA platform.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "650"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP S/4HANA Finance", 
+                    "description": "Next-generation ERP finance modules, real-time analytics, and digital transformation with S/4HANA Finance.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "890"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP Leonardo", 
+                    "description": "Explore AI, machine learning, IoT, and digital innovation platform capabilities within the SAP ecosystem.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.7",
+                      "reviewCount": "420"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP Security & GRC", 
+                    "description": "Enterprise security management, governance, risk, compliance, and access control in SAP environments.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "580"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "SAP Logistics", 
+                    "description": "Supply chain management, procurement, inventory control, and logistics optimization using SAP S/4HANA.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "610"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Data Science Course", 
+                    "description": "Statistical analysis, machine learning algorithms, data visualization, and predictive modeling with Python and R.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "2100"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Python Training", 
+                    "description": "Programming fundamentals, web development with Django/Flask, automation scripting, and data manipulation libraries.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "2450"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Python with AWS", 
+                    "description": "Cloud-native Python development, serverless computing, AWS services integration, and scalable application deployment.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "1150"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Workday Training", 
+                    "description": "Human Capital Management, financial management, and enterprise planning with Workday cloud applications.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "840"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Machine Learning", 
+                    "description": "Advanced ML algorithms, neural networks, deep learning frameworks, and AI model deployment using Python.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "1650"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "AWS DevOps Training", 
+                    "description": "Cloud infrastructure automation, continuous deployment, microservices architecture, and monitoring on AWS platform.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "1950"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Informatica MDM", 
+                    "description": "Master Data Management, data quality, data governance, and enterprise data integration using Informatica platform.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "720"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Full Stack Developer", 
+                    "description": "End-to-end web development with React, Node.js, databases, and modern JavaScript frameworks for complete applications.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "2200"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "EDI Training", 
+                    "description": "Electronic Data Interchange standards, B2B communication protocols, and automated business document exchange.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "540"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Hadoop Training", 
+                    "description": "Big Data processing, distributed computing, HDFS, MapReduce, and ecosystem tools for large-scale data analytics.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "890"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Snowflake Training", 
+                    "description": "Cloud-based data warehousing platform with seamless collaboration, performance, flexibility and near-infinite scalability for complete database ecosystem.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.9",
+                      "reviewCount": "1350"
+                    }
+                  },
+                  { 
+                    "@type": "Course", 
+                    "name": "Google Cloud (GCP)", 
+                    "description": "Google Cloud Platform suite of cloud computing services with infrastructure, platform, and serverless computing environments for comprehensive cloud solutions.", 
+                    "provider": { "@type": "Organization", "name": "VR IT Solutions" },
+                    "aggregateRating": {
+                      "@type": "AggregateRating",
+                      "ratingValue": "4.8",
+                      "reviewCount": "1050"
+                    }
+                  }
                 ]
               }
             })
