@@ -373,12 +373,7 @@ export default function PegaTrainingInUSUKCanadaAustralia() {
       
       {/* Structured Data */}
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
       
       
       </div>

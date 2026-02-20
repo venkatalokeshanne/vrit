@@ -373,12 +373,7 @@ export default function SapFicoTraining() {
       </div>
       
       {/* Structured Data */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
       </div>
     </>
   );

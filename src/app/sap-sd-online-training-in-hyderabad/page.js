@@ -385,12 +385,7 @@ export default async  function SAPSDOnlineTrainingInHyderabad() {
       
       {/* Structured Data */}
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
       
       {/* Review Structured Data */}
 

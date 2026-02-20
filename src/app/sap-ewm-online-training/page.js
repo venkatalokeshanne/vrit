@@ -445,12 +445,7 @@ export default function SAPEWMTraining() {
       </div>
 
       {/* JSON-LD Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
     </>
   );
 }

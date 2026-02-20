@@ -412,12 +412,7 @@ export default function AzureDevOpsTraining() {
         </div>
       </div>
 
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
       </div>
     </>
   );

@@ -385,12 +385,7 @@ export default function SASClinicalTraining() {
         }}
       />
       
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
       </div>
     </>
   );

@@ -322,12 +322,7 @@ export default async  function PegaTrainingInHyderabad() {
 
       {/* JSON-LD Structured Data for SEO */}
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
 
     </>
   );

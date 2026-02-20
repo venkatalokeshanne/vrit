@@ -425,12 +425,7 @@ export default function AzureDevOpsTrainingInHyderabad() {
       </div>
 
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
       </div>
     </>
   );

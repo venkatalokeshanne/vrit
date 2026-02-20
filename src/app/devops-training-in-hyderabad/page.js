@@ -156,8 +156,8 @@ export default function DevOpsTraining() {
             "description": "Comprehensive 70-day AWS with DevOps training covering Jenkins, Docker, configuration management with 100% placement assistance",
             "provider": {
               "@type": "Organization",
-              "name": "VR IT Solutions",
-              "sameAs": "https://https://www.vritsol.com/"
+              "name": "VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training",
+              "sameAs": "https://www.vritsol.com/"
             },
             "educationalCredentialAwarded": "AWS with DevOps Certification",
             "courseMode": ["Online", "Classroom"],
@@ -467,12 +467,7 @@ export default function DevOpsTraining() {
 
       {/* JSON-LD Structured Data for SEO */}
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
     </>
   );
 }

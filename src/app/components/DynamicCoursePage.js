@@ -34,12 +34,7 @@ export default function DynamicCoursePage({ course }) {
       <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       
       {/* Structured Data */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

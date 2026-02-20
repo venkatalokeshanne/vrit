@@ -416,12 +416,7 @@ export default function SAPS4HANASimpleLogisticsTraining() {
       </div>
       
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
       </div>
     </>
   );

@@ -335,12 +335,7 @@ export default function AboutUs() {
       </section>
 
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
 
     </div>
   );

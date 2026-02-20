@@ -128,12 +128,7 @@ export default function EdiTrainingInUSUKCanadaAustralia() {
       <DynamicSEOHeaders seoHeaders={courseMetadata?.seoHeaders} />
       {/* JSON-LD Structured Data for SEO - Based on Your Successful Pattern */}
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
 
 
 

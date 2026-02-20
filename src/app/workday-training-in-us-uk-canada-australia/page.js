@@ -451,12 +451,7 @@ export default async  function WorkdayTrainingInHyderabad() {
 
       {/* Structured Data */}
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
       </div>
     </>
   );

@@ -263,12 +263,7 @@ export default function SalesforceTraining() {
       </div>
       </div>
       
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
       
 
     </>

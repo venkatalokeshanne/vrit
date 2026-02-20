@@ -349,12 +349,7 @@ export default function SAPHANAAdminTraining() {
       </div>
 
       {/* Structured Data */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
     </>
   );
 }

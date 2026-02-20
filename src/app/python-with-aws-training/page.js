@@ -265,12 +265,7 @@ export default function PythonWithAWSTraining() {
       </div>
 
       {/* JSON-LD Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
     </>
   );
 }

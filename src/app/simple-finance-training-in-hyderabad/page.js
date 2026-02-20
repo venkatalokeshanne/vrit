@@ -358,12 +358,7 @@ export default function SimpleFinanceTrainingInHyderabad() {
 
       {/* JSON-LD Structured Data for SEO */}
       {/* Structured Data for SEO */}
-      {structuredDataJson && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: structuredDataJson }}
-        />
-      )}
+
 
     </>
   );
