@@ -56,34 +56,34 @@ export default function Home() {
   }, [popupImage]);
 
   const staticCourses = [
-    { name: 'ServiceNow', duration: '40 Days', icon: Cloud, color: 'from-blue-500 to-cyan-500', image: '/logo.png', description: 'Master IT Service Management, workflow automation, and enterprise cloud solutions with hands-on ServiceNow platform experience.', link: '/servicenow-training-in-hyderabad' },
-    { name: 'Salesforce', duration: '70 Days', icon: Zap, color: 'from-green-500 to-teal-500', image: '/logo.png', description: 'Learn CRM fundamentals, Lightning Platform development, and Salesforce administration for career advancement.', link: '/salesforce-training-in-hyderabad' },
-    { name: 'SAP FICO', duration: '120 Days', icon: Database, color: 'from-purple-500 to-pink-500', image: '/logo.png', description: 'Comprehensive SAP Financial Accounting and Controlling modules with real-world business scenarios and implementations.', link: '/sap-fico-online-training-in-hyderabad' },
-    { name: 'SAP SD Online', duration: '90 Days', icon: Database, color: 'from-blue-500 to-purple-500', image: '/logo.png', description: 'Master SAP Sales and Distribution processes, order-to-cash cycle, pricing procedures, and customer management with online training.', link: '/sap-sd-online-training-in-hyderabad' },
-    { name: 'SAP MM Online', duration: '120 Days', icon: Database, color: 'from-green-500 to-blue-500', image: '/logo.png', description: 'Master SAP Materials Management, purchasing processes, inventory control, and procurement workflows with comprehensive online training.', link: '/sap-mm-online-training' },
-    { name: 'Pega', duration: '70 Days', icon: Zap, color: 'from-pink-500 to-rose-500', image: '/logo.png', description: 'Build enterprise applications with Pega BPM, case management, and low-code development methodologies.', link: '/pega-training-in-hyderabad' },
-    { name: 'Azure DevOps & AWS Cloud', duration: '75 Days', icon: Cpu, color: 'from-indigo-500 to-purple-500', image: '/logo.png', description: 'Master cloud computing, CI/CD pipelines, containerization, and infrastructure automation across Azure and AWS platforms.', link: '/azure-devops-training-in-hyderabad' },
-    { name: 'Mulesoft', duration: '45 Days', icon: Network, color: 'from-orange-500 to-red-500', image: '/logo.png', description: 'Learn API-led connectivity, integration patterns, and enterprise service architecture with MuleSoft Anypoint Platform.', link: '/mulesoft-training-in-hyderabad' },
-    { name: 'SAS Clinical', duration: '120 Days', icon: Database, color: 'from-blue-500 to-indigo-500', image: '/logo.png', description: 'Specialized training in clinical data analysis, regulatory reporting, and pharmaceutical industry standards using SAS.', link: '/sas-clinical-online-training-in-hyderabad' },
-    { name: 'SAP Basis', duration: '50 Days', icon: Database, color: 'from-orange-500 to-red-500', image: '/logo.png', description: 'SAP system administration, performance tuning, database management, and technical infrastructure maintenance.', link: '/sap-basis-online-training' },
-    { name: 'SAP EWM', duration: '70 Days', icon: Database, color: 'from-yellow-500 to-orange-500', image: '/logo.png', description: 'Extended Warehouse Management solution covering inventory optimization, warehouse processes, and logistics automation.', link: '/sap-ewm-online-training' },
-    { name: 'SAP HANA Admin', duration: '40 Days', icon: Database, color: 'from-purple-600 to-pink-600', image: '/logo.png', description: 'In-memory database administration, performance optimization, and advanced analytics with SAP HANA platform.', link: '/sap-hana-admin-training' },
-    { name: 'S/4 HANA Finance', duration: '40 Days', icon: Database, color: 'from-blue-600 to-cyan-600', image: '/logo.png', description: 'Next-generation ERP finance modules, real-time analytics, and digital transformation with S/4HANA Finance.', link: '/simple-finance-training-in-hyderabad' },
-    { name: 'SAP Leonardo', duration: '50 Days', icon: Brain, color: 'from-green-600 to-teal-600', image: '/logo.png', description: 'Explore AI, machine learning, IoT, and digital innovation platform capabilities within the SAP ecosystem.', link: '/sap-leonardo-training-hyderabad' },
-    { name: 'SAP Security & GRC', duration: '60 Days', icon: Shield, color: 'from-red-500 to-pink-500', image: '/logo.png', description: 'Enterprise security management, governance, risk, compliance, and access control in SAP environments.', link: '/sap-security-training' },
-    { name: 'SAP Logistics', duration: '40 Days', icon: Database, color: 'from-indigo-600 to-purple-600', image: '/logo.png', description: 'Supply chain management, procurement, inventory control, and logistics optimization using SAP S/4HANA.', link: '/sap-s4Hana-simple-logistics-training' },
-    { name: 'Data Science', duration: '100 Days', icon: Brain, color: 'from-orange-500 to-red-500', image: '/logo.png', description: 'Statistical analysis, machine learning algorithms, data visualization, and predictive modeling with Python and R.', link: '/data-science-training-in-hyderabad' },
-    { name: 'Python', duration: '45 Days', icon: Code, color: 'from-yellow-500 to-orange-500', image: '/logo.png', description: 'Programming fundamentals, web development with Django/Flask, automation scripting, and data manipulation libraries.', link: '/python-online-training' },
-    { name: 'Python With AWS', duration: '45 Days', icon: Code, color: 'from-green-500 to-blue-500', image: '/logo.png', description: 'Cloud-native Python development, serverless computing, AWS services integration, and scalable application deployment.', link: '/python-with-aws-training' },
-    { name: 'Workday', duration: '50 Days', icon: Users, color: 'from-purple-500 to-pink-500', image: '/logo.png', description: 'Human Capital Management, financial management, and enterprise planning with Workday cloud applications.', link: '/workday-training-in-hyderabad' },
-    { name: 'Machine Learning With Python', duration: '45 Days', icon: Brain, color: 'from-blue-500 to-purple-500', image: '/logo.png', description: 'Advanced ML algorithms, neural networks, deep learning frameworks, and AI model deployment using Python.', link: '/machine-learning-with-python-training-in-hyderabad' },
-    { name: 'AWS With DevOps', duration: '70 Days', icon: Cpu, color: 'from-teal-500 to-cyan-500', image: '/logo.png', description: 'Cloud infrastructure automation, continuous deployment, microservices architecture, and monitoring on AWS platform.', link: '/devops-training-in-hyderabad' },
-    { name: 'Informatica MDM', duration: '45 Days', icon: Database, color: 'from-pink-500 to-red-500', image: '/logo.png', description: 'Master Data Management, data quality, data governance, and enterprise data integration using Informatica platform.', link: '/informatica-mdm-training' },
-    { name: 'Full Stack Developer', duration: '75 Days', icon: Code, color: 'from-indigo-500 to-blue-500', image: '/logo.png', description: 'End-to-end web development with React, Node.js, databases, and modern JavaScript frameworks for complete applications.', link: '/full-stack-developer-training-in-hyderabad' },
-    { name: 'EDI Training', duration: '45 Days', icon: Code, color: 'from-emerald-500 to-teal-500', image: '/logo.png', description: 'Electronic Data Interchange standards, B2B communication protocols, and automated business document exchange.', link: '/edi-training' },
-    { name: 'Hadoop', duration: '60 Days', icon: Database, color: 'from-orange-600 to-yellow-600', image: '/logo.png', description: 'Big Data processing, distributed computing, HDFS, MapReduce, and ecosystem tools for large-scale data analytics.', link: '/hadoop-online-training' },
-    { name: 'Snowflake', duration: '45 Days', icon: Cloud, color: 'from-cyan-500 to-blue-500', image: '/logo.png', description: 'Cloud-based data warehousing platform with seamless collaboration, performance, flexibility and near-infinite scalability for complete database ecosystem.', link: '/snowflake-training-in-hyderabad' },
-    { name: 'Google Cloud', duration: '65 Days', icon: Cloud, color: 'from-blue-500 to-green-500', image: '/logo.png', description: 'Google Cloud Platform suite of cloud computing services with infrastructure, platform, and serverless computing environments for comprehensive cloud solutions.', link: '/google-cloud-training-in-hyderabad' }
+    { name: 'ServiceNow Training', duration: '40 Days', icon: Cloud, color: 'from-blue-500 to-cyan-500', image: '/logo.png', description: 'Best ServiceNow training in Hyderabad. Master ITSM, workflow automation, and enterprise cloud solutions with real-time projects and placement support.', link: '/servicenow-training-in-hyderabad' },
+    { name: 'Salesforce Training', duration: '70 Days', icon: Zap, color: 'from-green-500 to-teal-500', image: '/logo.png', description: 'Top Salesforce certification course. Learn CRM fundamentals, Lightning Platform development, and administration with 100% job assistance.', link: '/salesforce-training-in-hyderabad' },
+    { name: 'SAP FICO Training', duration: '120 Days', icon: Database, color: 'from-purple-500 to-pink-500', image: '/logo.png', description: 'Industry-leading SAP FICO online training in Hyderabad. Master Financial Accounting and Controlling modules with real-world business scenarios.', link: '/sap-fico-online-training-in-hyderabad' },
+    { name: 'SAP SD Training', duration: '90 Days', icon: Database, color: 'from-blue-500 to-purple-500', image: '/logo.png', description: 'Comprehensive SAP SD online training. Learn Sales and Distribution processes, order-to-cash cycles, and pricing procedures from expert trainers.', link: '/sap-sd-online-training-in-hyderabad' },
+    { name: 'SAP MM Training', duration: '120 Days', icon: Database, color: 'from-green-500 to-blue-500', image: '/logo.png', description: 'Expert SAP MM online training. Master Materials Management, inventory control, and procurement workflows with hands-on practical sessions.', link: '/sap-mm-online-training' },
+    { name: 'Pega Training', duration: '70 Days', icon: Zap, color: 'from-pink-500 to-rose-500', image: '/logo.png', description: 'Best Pega training in Hyderabad. Build enterprise applications with Pega BPM, case management, and low-code development methodologies.', link: '/pega-training-in-hyderabad' },
+    { name: 'Azure DevOps & AWS', duration: '75 Days', icon: Cpu, color: 'from-indigo-500 to-purple-500', image: '/logo.png', description: 'Advanced Azure DevOps and AWS Cloud training. Master CI/CD pipelines, containerization, and infrastructure automation with live projects.', link: '/azure-devops-training-in-hyderabad' },
+    { name: 'MuleSoft Training', duration: '45 Days', icon: Network, color: 'from-orange-500 to-red-500', image: '/logo.png', description: 'Top MuleSoft training institute. Learn API-led connectivity, integration patterns, and enterprise service architecture with Anypoint Platform.', link: '/mulesoft-training-in-hyderabad' },
+    { name: 'SAS Clinical Training', duration: '120 Days', icon: Database, color: 'from-blue-500 to-indigo-500', image: '/logo.png', description: 'Professional SAS Clinical online training. Specialized instruction in clinical data analysis, regulatory reporting, and pharma industry standards.', link: '/sas-clinical-online-training-in-hyderabad' },
+    { name: 'SAP Basis Training', duration: '50 Days', icon: Database, color: 'from-orange-500 to-red-500', image: '/logo.png', description: 'Comprehensive SAP Basis online training. Master system administration, performance tuning, and technical infrastructure maintenance.', link: '/sap-basis-online-training' },
+    { name: 'SAP EWM Training', duration: '70 Days', icon: Database, color: 'from-yellow-500 to-orange-500', image: '/logo.png', description: 'Expert SAP EWM online training. Learn Extended Warehouse Management, inventory optimization, and logistics automation with real-time scenarios.', link: '/sap-ewm-online-training' },
+    { name: 'SAP HANA Admin', duration: '40 Days', icon: Database, color: 'from-purple-600 to-pink-600', image: '/logo.png', description: 'Advanced SAP HANA Admin training. Master in-memory database administration, performance optimization, and analytics with placement support.', link: '/sap-hana-admin-training' },
+    { name: 'SAP S/4HANA Finance', duration: '40 Days', icon: Database, color: 'from-blue-600 to-cyan-600', image: '/logo.png', description: 'Leading SAP S/4HANA Finance training in Hyderabad. Learn next-gen ERP finance modules and real-time analytics for digital transformation.', link: '/simple-finance-training-in-hyderabad' },
+    { name: 'SAP Leonardo', duration: '50 Days', icon: Brain, color: 'from-green-600 to-teal-600', image: '/logo.png', description: 'Innovative SAP Leonardo training. Explore AI, machine learning, IoT, and digital innovation platform capabilities within the SAP ecosystem.', link: '/sap-leonardo-training-hyderabad' },
+    { name: 'SAP Security & GRC', duration: '60 Days', icon: Shield, color: 'from-red-500 to-pink-500', image: '/logo.png', description: 'Specialized SAP Security & GRC training. Master enterprise security management, governance, risk, compliance, and access control.', link: '/sap-security-training' },
+    { name: 'SAP Logistics', duration: '40 Days', icon: Database, color: 'from-indigo-600 to-purple-600', image: '/logo.png', description: 'Top SAP Logistics training. Learn supply chain management, procurement, and inventory control using SAP S/4HANA with expert guidance.', link: '/sap-s4Hana-simple-logistics-training' },
+    { name: 'Data Science Course', duration: '100 Days', icon: Brain, color: 'from-orange-500 to-red-500', image: '/logo.png', description: 'Best Data Science training in Hyderabad. Master statistical analysis, machine learning algorithms, and predictive modeling with Python and R.', link: '/data-science-training-in-hyderabad' },
+    { name: 'Python Training', duration: '45 Days', icon: Code, color: 'from-yellow-500 to-orange-500', image: '/logo.png', description: 'Comprehensive Python online training. Learn programming fundamentals, Django/Flask web development, and automation scripting with live projects.', link: '/python-online-training' },
+    { name: 'Python with AWS', duration: '45 Days', icon: Code, color: 'from-green-500 to-blue-500', image: '/logo.png', description: 'Advanced Python with AWS training. Master cloud-native development, serverless computing, and scalable application deployment.', link: '/python-with-aws-training' },
+    { name: 'Workday Training', duration: '50 Days', icon: Users, color: 'from-purple-500 to-pink-500', image: '/logo.png', description: 'Professional Workday training in Hyderabad. Learn Human Capital Management (HCM) and financial management with cloud applications.', link: '/workday-training-in-hyderabad' },
+    { name: 'Machine Learning', duration: '45 Days', icon: Brain, color: 'from-blue-500 to-purple-500', image: '/logo.png', description: 'Expert Machine Learning with Python training. Master advanced ML algorithms, deep learning frameworks, and AI model deployment.', link: '/machine-learning-with-python-training-in-hyderabad' },
+    { name: 'AWS DevOps Training', duration: '70 Days', icon: Cpu, color: 'from-teal-500 to-cyan-500', image: '/logo.png', description: 'Best AWS with DevOps training in Hyderabad. Learn cloud infrastructure automation, microservices architecture, and continuous deployment.', link: '/devops-training-in-hyderabad' },
+    { name: 'Informatica MDM', duration: '45 Days', icon: Database, color: 'from-pink-500 to-red-500', image: '/logo.png', description: 'Top Informatica MDM training. Master Data Management, data quality, governance, and enterprise data integration with hands-on practice.', link: '/informatica-mdm-training' },
+    { name: 'Full Stack Developer', duration: '75 Days', icon: Code, color: 'from-indigo-500 to-blue-500', image: '/logo.png', description: 'Complete Full Stack Developer training in Hyderabad. Build end-to-end web applications using React, Node.js, and modern JavaScript frameworks.', link: '/full-stack-developer-training-in-hyderabad' },
+    { name: 'EDI Training', duration: '45 Days', icon: Code, color: 'from-emerald-500 to-teal-500', image: '/logo.png', description: 'Professional EDI training. Master Electronic Data Interchange standards, B2B communication protocols, and automated document exchange.', link: '/edi-training' },
+    { name: 'Hadoop Training', duration: '60 Days', icon: Database, color: 'from-orange-600 to-yellow-600', image: '/logo.png', description: 'Best Hadoop online training. Learn Big Data processing, distributed computing, HDFS, and MapReduce with real-time analytics projects.', link: '/hadoop-online-training' },
+    { name: 'Snowflake Training', duration: '45 Days', icon: Cloud, color: 'from-cyan-500 to-blue-500', image: '/logo.png', description: 'Expert Snowflake training in Hyderabad. Master cloud-based data warehousing, seamless collaboration, and scalable database ecosystems.', link: '/snowflake-training-in-hyderabad' },
+    { name: 'Google Cloud (GCP)', duration: '65 Days', icon: Cloud, color: 'from-blue-500 to-green-500', image: '/logo.png', description: 'Comprehensive Google Cloud training in Hyderabad. Learn GCP infrastructure, serverless computing, and cloud solutions with certification support.', link: '/google-cloud-training-in-hyderabad' }
   ];
 
   // Transform dynamic courses to match static course structure
@@ -1125,62 +1125,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': ['LocalBusiness', 'EducationalOrganization'],
-            name: 'VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training',
-            description: 'Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses',
-            url: 'https://www.vritsol.com',
-            logo: 'https://www.vritsol.com/images/vritlogo.png',
-            image: 'https://www.vritsol.com/images/vritlogo.png',
-            telephone: '+91-9032734343',
-            priceRange: '$$',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: '506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana.',
-              addressLocality: 'Hyderabad',
-              addressRegion: 'Telangana',
-              postalCode: '500016',
-              addressCountry: 'IN'
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: '17.4374',
-              longitude: '78.4482'
-            },
-            contactPoint: {
-              '@type': 'ContactPoint',
-              telephone: '+91-9032734343',
-              email: 'info@vritsol.com',
-              contactType: 'customer service'
-            },
-            openingHours: ['Mo-Sa 08:00-21:30', 'Su 09:00-13:00'],
-            areaServed: { '@type': 'Place', name: 'Hyderabad, Telangana' },
-            sameAs: [
-              'https://www.facebook.com/vritsolutions/',
-              'https://twitter.com/vritsolutions',
-              'https://www.youtube.com/channel/UCwasTbRqeFPtreZdVdcRbuA'
-            ],
-            hasOfferCatalog: {
-              '@type': 'OfferCatalog',
-              name: 'IT Training Courses',
-              itemListElement: [
-                { '@type': 'Course', name: 'ServiceNow Training' },
-                { '@type': 'Course', name: 'Salesforce Training' },
-                { '@type': 'Course', name: 'SAP Training' },
-                { '@type': 'Course', name: 'Pega Training' },
-                { '@type': 'Course', name: 'Azure DevOps Training' },
-                { '@type': 'Course', name: 'AWS Cloud Training' }
-              ]
-            }
-          })
-        }}
-      />
     </div>
   );
 }
