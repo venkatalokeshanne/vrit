@@ -5,19 +5,14 @@ const nextConfig = {
     // Remove console logs in production
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Modern JavaScript target to reduce polyfills
-  swcMinify: true,
   // Target modern browsers to reduce polyfills (fixes 14KB legacy JS issue)
   target: 'server',
   // Enable experimental features for better performance
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
-    modernBrowsers: true,
     // Enable CSS-in-JS optimization
     optimizeServerReact: true,
-    // Reduce bundle size
-    optimizeCssLayer: true,
   },
   // Image optimization
   images: {
@@ -40,10 +35,6 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    // Quality setting for better compression
-    quality: 85,
-    // Responsive loader for better performance
-    loader: 'default',
     // Enable lazy loading optimization
     unoptimized: false,
   },
