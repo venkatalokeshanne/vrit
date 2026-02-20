@@ -26,14 +26,8 @@ const CourseFormPopupWrapper = dynamic(() => import('./components/CourseFormPopu
   ssr: false,
   loading: () => null,
 });
-const SpeedInsights = dynamic(() => import("@vercel/speed-insights/next").then(mod => ({ default: mod.SpeedInsights })), {
-  ssr: false,
-  loading: () => null,
-});
-const Analytics = dynamic(() => import("@vercel/analytics/next").then(mod => ({ default: mod.Analytics })), {
-  ssr: false,
-  loading: () => null,
-});
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
