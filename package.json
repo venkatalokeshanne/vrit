@@ -48,5 +48,11 @@
       "react": "$react",
       "react-dom": "$react-dom"
     }
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not op_mini all",
+    "not dead"
+  ]
 }

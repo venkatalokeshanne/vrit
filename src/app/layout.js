@@ -156,10 +156,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
         
         {/* Essential preconnects only (limit to 4) */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://cdn.sanity.io" />
-        <link rel="preconnect" href="https://3hir6j0e.apicdn.sanity.io" />
+        <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://3hir6j0e.apicdn.sanity.io" crossOrigin="anonymous" />
 
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
       </head>
@@ -186,6 +184,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "name": "VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training",
               "url": "https://www.vritsol.com",
               "logo": "https://www.vritsol.com/images/vritlogo.png",
+              "image": "https://www.vritsol.com/images/vritlogo.png",
+              "telephone": "+919032734343",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+919032734343",
@@ -207,22 +207,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="author" href="/humans.txt" />
         <link rel="help" href="/.well-known/security.txt" />
-
-
-        {/* Tawk.to Chat Script */}
-        <Script id="tawk-to-script" strategy="afterInteractive">
-          {`
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/5cef5effb534676f32ac84a7/default';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-          `}
-        </Script>
 
         <ScrollingBanner text={importantText} isVisible={!!importantText} />
         <div className="pt-[48px]">

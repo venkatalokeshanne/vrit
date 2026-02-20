@@ -100,6 +100,9 @@ function createCourseObject(courseData, isFromSanity = false) {
       "description": "Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses",
       "url": "https://www.vritsol.com",
       "logo": "https://www.vritsol.com/images/vritlogo.png",
+      "image": "https://www.vritsol.com/images/vritlogo.png",
+      "telephone": "+91-9032734343",
+      "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet",

@@ -8,28 +8,13 @@ const ScrollingCourses = () => {
     { title: "ServiceNow Training", slug: "servicenow-training-in-hyderabad", color: "from-blue-500 to-cyan-500", rating: 4.9, students: 2134, duration: "60 days", badge: "Popular" },
     { title: "Salesforce Training", slug: "salesforce-training-in-hyderabad", color: "from-green-500 to-teal-500", rating: 4.7, students: 3456, duration: "45 days", badge: "Hot" },
     { title: "SAP FICO Training", slug: "sap-fico-online-training-in-hyderabad", color: "from-purple-500 to-pink-500", rating: 4.6, students: 1987, duration: "120 days", badge: "Trending" },
-    { title: "Pega Training", slug: "pega-training-in-hyderabad", color: "from-pink-500 to-rose-500", rating: 4.8, students: 1543, duration: "75 days", badge: "New" },
     { title: "Azure DevOps Training", slug: "azure-devops-training-in-hyderabad", color: "from-indigo-500 to-purple-500", rating: 4.9, students: 2456, duration: "50 days", badge: "Popular" },
-    { title: "MuleSoft Training", slug: "mulesoft-training-in-hyderabad", color: "from-orange-500 to-red-500", rating: 4.7, students: 1876, duration: "40 days", badge: "Hot" },
-    { title: "SAS Clinical Training", slug: "sas-clinical-online-training-in-hyderabad", color: "from-blue-500 to-indigo-500", rating: 4.6, students: 1234, duration: "90 days", badge: "Trending" },
-    { title: "SAP Basis Training", slug: "sap-basis-online-training", color: "from-orange-500 to-red-500", rating: 4.5, students: 987, duration: "70 days", badge: "New" },
-    { title: "SAP EWM Training", slug: "sap-ewm-online-training", color: "from-yellow-500 to-orange-500", rating: 4.7, students: 1345, duration: "80 days", badge: "Popular" },
-    { title: "SAP HANA Admin", slug: "sap-hana-admin-training", color: "from-purple-600 to-pink-600", rating: 4.8, students: 1567, duration: "65 days", badge: "Hot" },
-    { title: "S/4 HANA Finance", slug: "simple-finance-training-in-hyderabad", color: "from-blue-600 to-cyan-600", rating: 4.9, students: 1789, duration: "85 days", badge: "Trending" },
-    { title: "SAP Leonardo", slug: "sap-leonardo-training-hyderabad", color: "from-green-600 to-teal-600", rating: 4.6, students: 945, duration: "55 days", badge: "New" },
-    { title: "SAP Security", slug: "sap-security-training", color: "from-red-600 to-pink-600", rating: 4.7, students: 1123, duration: "60 days", badge: "Popular" },
     { title: "Data Science", slug: "data-science-training-in-hyderabad", color: "from-orange-500 to-red-500", rating: 4.8, students: 3241, duration: "120 days", badge: "Hot" },
     { title: "Python Training", slug: "python-online-training", color: "from-yellow-500 to-orange-500", rating: 4.8, students: 5432, duration: "45 days", badge: "Popular" },
-    { title: "Python With AWS", slug: "python-with-aws-training", color: "from-green-500 to-blue-500", rating: 4.7, students: 2876, duration: "60 days", badge: "Trending" },
-    { title: "Workday Training", slug: "workday-training-in-hyderabad", color: "from-purple-500 to-pink-500", rating: 4.7, students: 1654, duration: "50 days", badge: "New" },
-    { title: "Machine Learning", slug: "machine-learning-with-python-training-in-hyderabad", color: "from-blue-500 to-purple-500", rating: 4.8, students: 2890, duration: "90 days", badge: "Hot" },
-    { title: "DevOps Training", slug: "devops-training-in-hyderabad", color: "from-teal-500 to-cyan-500", rating: 4.9, students: 2765, duration: "75 days", badge: "Popular" },
-    { title: "Informatica MDM", slug: "informatica-mdm-training", color: "from-pink-500 to-red-500", rating: 4.6, students: 1234, duration: "65 days", badge: "Trending" },
     { title: "Full Stack Developer", slug: "full-stack-developer-training-in-hyderabad", color: "from-indigo-500 to-blue-500", rating: 4.9, students: 4567, duration: "120 days", badge: "Hot" },
-    { title: "EDI Training", slug: "edi-training", color: "from-emerald-500 to-teal-500", rating: 4.5, students: 987, duration: "40 days", badge: "New" },
-    { title: "Hadoop Training", slug: "hadoop-online-training", color: "from-orange-600 to-yellow-600", rating: 4.7, students: 2143, duration: "80 days", badge: "Popular" },
-    { title: "Snowflake Training", slug: "snowflake-training-in-hyderabad", color: "from-cyan-500 to-blue-500", rating: 4.7, students: 1876, duration: "55 days", badge: "Trending" },
-    { title: "Google Cloud", slug: "google-cloud-training-in-hyderabad", color: "from-blue-500 to-green-500", rating: 4.6, students: 1432, duration: "70 days", badge: "Hot" }
+    { title: "DevOps Training", slug: "devops-training-in-hyderabad", color: "from-teal-500 to-cyan-500", rating: 4.9, students: 2765, duration: "75 days", badge: "Popular" },
+    { title: "Google Cloud", slug: "google-cloud-training-in-hyderabad", color: "from-blue-500 to-green-500", rating: 4.6, students: 1432, duration: "70 days", badge: "Hot" },
+    { title: "Machine Learning", slug: "machine-learning-with-python-training-in-hyderabad", color: "from-blue-500 to-purple-500", rating: 4.8, students: 2890, duration: "90 days", badge: "Hot" }
   ];
 
   // Duplicate the courses array for seamless scrolling
@@ -76,7 +61,7 @@ const ScrollingCourses = () => {
         {/* Scrolling Container */}
         <div className="relative overflow-hidden">
           {/* Scrolling Animation */}
-          <div className="flex animate-scroll-infinite hover:animate-scroll-paused whitespace-nowrap">
+          <div className="flex animate-scroll-infinite hover:animate-scroll-paused whitespace-nowrap" style={{ width: 'max-content' }}>
             {duplicatedCourses.map((course, index) => (
               <div
                 key={`${course.slug}-${index}`}
@@ -201,6 +186,7 @@ const ScrollingCourses = () => {
           backface-visibility: hidden;
           perspective: 1000px;
           transform: translateZ(0);
+          contain: layout paint;
         }
       `}</style>
     </section>

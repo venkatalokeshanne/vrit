@@ -206,6 +206,7 @@ function processCourseMetadata(courseData) {
       "url": DEFAULTS.baseUrl,
       "logo": `${DEFAULTS.baseUrl}${DEFAULTS.logo}`,
       "image": `${DEFAULTS.baseUrl}${DEFAULTS.logo}`,
+      "telephone": DEFAULTS.phone,
       "priceRange": "$$",
       "currenciesAccepted": "INR",
       "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, Bank Transfer",

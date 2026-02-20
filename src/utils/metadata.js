@@ -157,11 +157,13 @@ export async function getStructuredData(slug) {
       return {
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
-        name: 'VR IT Solutions',
+        name: 'VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training',
         url: `https://www.vritsol.com/${slug}`,
         logo: 'https://www.vritsol.com/images/vritlogo.png',
+        image: 'https://www.vritsol.com/images/vritlogo.png',
         description: 'Best software training institute in Hyderabad offering comprehensive IT courses with placement assistance.',
         telephone: '+919032734343',
+        priceRange: '$$',
         email: 'info@vritsol.com',
         address: {
           '@type': 'PostalAddress',
@@ -188,8 +190,10 @@ export async function getStructuredData(slug) {
       logo: pageData.structuredData.logo ? 
         (pageData.structuredData.logo.startsWith('http') ? pageData.structuredData.logo : `https://www.vritsol.com${pageData.structuredData.logo}`) :
         'https://www.vritsol.com/images/vritlogo.png',
+      image: pageData.structuredData.image || 'https://www.vritsol.com/images/vritlogo.png',
       description: pageData.description,
-      telephone: pageData.structuredData.contactPoint?.[0]?.telephone || '+919032734343',
+      telephone: pageData.structuredData.telephone || pageData.structuredData.contactPoint?.[0]?.telephone || '+919032734343',
+      priceRange: pageData.structuredData.priceRange || '$$',
       email: pageData.structuredData.contactPoint?.[0]?.email || 'info@vritsol.com',
       sameAs: pageData.structuredData.sameAs || [
         'https://www.facebook.com/vritsolutions/',

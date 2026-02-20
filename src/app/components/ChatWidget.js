@@ -8,8 +8,9 @@ export default function ChatWidget() {
 
   // Inject Tawk.to script with referrerPolicy
   useEffect(() => {
-    console.log("saibaba")
     if (typeof window !== 'undefined' && !window.Tawk_API) {
+      window.Tawk_API = window.Tawk_API || {};
+      window.Tawk_LoadStart = new Date();
       const script = document.createElement('script');
       script.src = 'https://embed.tawk.to/5cef5effb534676f32ac84a7/default';
       script.async = true;

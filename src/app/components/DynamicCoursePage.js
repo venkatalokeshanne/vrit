@@ -60,6 +60,9 @@ export default function DynamicCoursePage({ course }) {
                       height={630}
                       className="w-full object-cover border-2 border-blue-400/30"
                       style={{ aspectRatio: '1200/630' }}
+                      priority
+                      fetchPriority="high"
+                      sizes="(max-width: 1024px) 100vw, 66vw"
                       onError={(e) => {
                         e.target.src = '/logo.png';
                       }}

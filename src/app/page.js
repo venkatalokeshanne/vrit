@@ -744,7 +744,7 @@ export default function Home() {
                     width={80}
                     height={40}
                     className="max-w-full max-h-full object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-300"
-                    sizes="(max-width: 480px) 80px, (max-width: 768px) 100px, 120px"
+                    sizes="120px"
                     loading="lazy"
                   />
                 </div>
@@ -1137,6 +1137,9 @@ export default function Home() {
             description: 'Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses',
             url: 'https://www.vritsol.com',
             logo: 'https://www.vritsol.com/images/vritlogo.png',
+            image: 'https://www.vritsol.com/images/vritlogo.png',
+            telephone: '+91-9032734343',
+            priceRange: '$$',
             address: {
               '@type': 'PostalAddress',
               streetAddress: '506/A, Aditya Enclave, Nilagiri Block, 5th Floor, Ameerpet, Hyderabad Telangana.',
