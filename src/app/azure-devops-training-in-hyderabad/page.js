@@ -150,7 +150,19 @@ export default function AzureDevOpsTrainingInHyderabad() {
                 
                 {/* Course Image */}
                 <div className="relative w-full max-w-4xl mx-auto mb-8 overflow-hidden rounded-2xl shadow-2xl">
-                  <Image src={_mainImageUrl} alt="Azure DevOps Training Course in Hyderabad - VR IT Solutions" className="w-full object-cover border-2 border-indigo-400/30" style={{ aspectRatio: '1200/630' }} width={1200} height={630}  priority fetchPriority="high" />
+                  <Image 
+                    src={_mainImageUrl} 
+                    alt="Azure DevOps Training Course in Hyderabad - VR IT Solutions" 
+                    className="w-full object-cover border-2 border-indigo-400/30" 
+                    style={{ aspectRatio: '1200/630' }} 
+                    width={1200} 
+                    height={630} 
+                    priority 
+                    fetchPriority="high"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                    placeholder="blur"
+                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                  />
                 </div>
                 
                 <div className="inline-block bg-gradient-to-r from-indigo-500/25 to-blue-500/25 backdrop-blur-sm rounded-xl px-6 py-4 mb-6 border border-indigo-400/40">
@@ -174,18 +186,20 @@ export default function AzureDevOpsTrainingInHyderabad() {
                     Our Locations
                   </h3>
                   <div className="flex flex-wrap gap-3">
-                    <Link href="/azure-devops-online-training-in-bangalore" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
-                      Bangalore
-                    </Link>
-                    <Link href="/azure-devops-online-training-in-chennai" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
-                      Chennai
-                    </Link>
-                    <Link href="/azure-devops-online-training-in-pune" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
-                      Pune
-                    </Link>
-                    <Link href="/azure-devops-online-training-in-noida" className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium">
-                      Noida
-                    </Link>
+                    {[
+                      { href: "/azure-devops-online-training-in-bangalore", text: "Bangalore" },
+                      { href: "/azure-devops-online-training-in-chennai", text: "Chennai" },
+                      { href: "/azure-devops-online-training-in-pune", text: "Pune" },
+                      { href: "/azure-devops-online-training-in-noida", text: "Noida" }
+                    ].map((location, index) => (
+                      <Link 
+                        key={index}
+                        href={location.href} 
+                        className="bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 hover:text-white px-4 py-2 rounded-lg border border-indigo-400/40 hover:border-indigo-300/60 transition-all duration-300 text-sm font-medium"
+                      >
+                        {location.text}
+                      </Link>
+                    ))}
                   </div>
                 </div>
 

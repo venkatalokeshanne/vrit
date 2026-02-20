@@ -18,12 +18,16 @@ const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ['system-ui', 'arial'],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ['ui-monospace', 'monospace'],
 });
 
 // Viewport configuration
@@ -133,8 +137,8 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en-US">
       <head>
-        {/* Google Tag Manager - Move to head but change strategy */}
-        <Script id="google-tag-manager" strategy="beforeInteractive">
+        {/* Google Tag Manager - Defer for better performance */}
+        <Script id="google-tag-manager" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -144,6 +148,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         {/* Performance optimizations for LCP */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://cdn.sanity.io" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        
+        {/* DNS prefetch for other resources */}
+        <link rel="dns-prefetch" href="//cdn.sanity.io" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        
+        {/* Preload critical fonts */}
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        
+        {/* Inline critical CSS for above-the-fold content */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            body { margin: 0; padding: 0; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #111827 100%); }
+            .hero-gradient { background: linear-gradient(135deg, rgba(79, 70, 229, 0.15) 0%, rgba(37, 99, 235, 0.2) 50%, rgba(147, 51, 234, 0.15) 100%); }
+            .text-gradient { background: linear-gradient(to right, #60a5fa, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+          `
+        }} />
+        
+        {/* Preload critical images for LCP */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://cdn.sanity.io/images/3hir6j0e/production/3e959a83e889e9f99d9d7df0daba31d26cbe5eed-1279x720.jpg"
+          fetchPriority="high"
+        />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.sanity.io" />
         
