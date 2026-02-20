@@ -183,7 +183,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "VR IT Solutions",
+              "name": "VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training",
               "url": "https://www.vritsol.com",
               "logo": "https://www.vritsol.com/images/vritlogo.png",
               "contactPoint": {

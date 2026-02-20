@@ -15,8 +15,8 @@ export class RichSnippetsManager {
     return {
       "@context": "https://schema.org",
       "@type": ["EducationalOrganization", "LocalBusiness"],
-      "name": "VR IT Solutions",
-      "alternateName": ["VRIT Solutions", "VR IT Training Institute"],
+      "name": "VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training",
+      "alternateName": ["VRIT Solutions", "VR IT Training Institute", "VR IT Solutions"],
       "description": "Leading Software Training Institute in Hyderabad offering comprehensive IT courses with 100% placement assistance",
       "url": "https://www.vritsol.com",
       "logo": {
@@ -339,7 +339,7 @@ export class RichSnippetsManager {
     return {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "VR IT Solutions",
+      "name": "VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training",
       "image": "https://www.vritsol.com/images/vritlogo.png",
       "address": {
         "@type": "PostalAddress",

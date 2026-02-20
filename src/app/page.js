@@ -1133,7 +1133,7 @@ export default function Home() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': ['LocalBusiness', 'EducationalOrganization'],
-            name: 'VR IT SOL',
+            name: 'VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training',
             description: 'Leading IT Training Institute in Ameerpet, Hyderabad offering professional courses',
             url: 'https://www.vritsol.com',
             logo: 'https://www.vritsol.com/images/vritlogo.png',

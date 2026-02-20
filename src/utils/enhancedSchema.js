@@ -7,8 +7,8 @@ export function getOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": ["Organization", "EducationalOrganization", "LocalBusiness"],
-    "name": "VR IT Solutions",
-    "alternateName": ["VR IT SOL", "VRIT Solutions"],
+    "name": "VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training",
+    "alternateName": ["VR IT SOL", "VRIT Solutions", "VR IT Solutions"],
     "description": "Leading IT training institute in Hyderabad offering comprehensive courses in SAP, ServiceNow, Salesforce, Cloud Technologies, DevOps, Data Science, and more with 95% placement guarantee.",
     "url": "https://www.vritsol.com",
     "logo": {
@@ -148,7 +148,7 @@ export function getCourseSchema(courseData) {
         "name": "Expert Trainer",
         "worksFor": {
           "@type": "Organization", 
-          "name": "VR IT Solutions"
+          "name": "VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training"
         }
       }
     }
@@ -159,7 +159,7 @@ export function getLocalBusinessSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "VR IT Solutions",
+    "name": "VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training",
     "image": "https://www.vritsol.com/logo.png",
     "telephone": "+91-9032734343",
     "email": "info@vritsol.com",
