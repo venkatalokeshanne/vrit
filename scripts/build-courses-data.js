@@ -64,7 +64,7 @@ const allCoursesQuery = `
 // Constants to avoid repetition
 const DEFAULTS = {
   baseUrl: 'https://www.vritsol.com',
-  organizationName: 'VR IT Solutions',
+  organizationName: 'VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training',
   email: 'info@vritsol.com',
   phone: '+91-9032734343',
   address: 'Aditya enclave, Nilgiri block, 5th floor 506, a/a, Satyam Diature Road, Ameerpet',

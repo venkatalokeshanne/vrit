@@ -346,7 +346,7 @@ export async function getEnhancedStructuredData(slug, faqs = []) {
         },
         "provider": {
           "@type": "EducationalOrganization",
-          "name": "VR IT SOL"
+          "name": "VR IT SOLUTIONS Clinical Sas Training | Salesforce training | Servicenow Training | EDI Training"
         }
       });
     }

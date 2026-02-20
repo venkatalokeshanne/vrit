@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Script from 'next/script';
 import coursesData from '../data/courses-static.json';
-import { getPageMetadataStatic, getStructuredDataStatic } from '../utils/staticCourses';
+import { getPageMetadataStatic } from '../utils/staticCourses';
 import dynamic from 'next/dynamic';
 
 // Dynamic imports for non-critical components to reduce bundle size
@@ -15,15 +15,12 @@ const ScrollingBanner = dynamic(() => import('./components/ScrollingBanner'), {
   loading: () => null,
 });
 const ChatWidget = dynamic(() => import('./components/ChatWidget'), {
-  ssr: false,
   loading: () => null,
 });
 const CourseNotificationsWrapper = dynamic(() => import('./components/CourseNotificationsWrapper'), {
-  ssr: false,
   loading: () => null,
 });
 const CourseFormPopupWrapper = dynamic(() => import('./components/CourseFormPopupWrapper'), {
-  ssr: false,
   loading: () => null,
 });
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -142,9 +139,6 @@ export async function generateMetadata({ params: _params, searchParams: _searchP
 }
 
 export default async function RootLayout({ children }) {
-  // Get structured data for the homepage
-  const structuredData = getStructuredDataStatic('index');
-  
   // Get the importantText from the index data
   const indexData = coursesData.find(course => course.slug === 'index');
   const importantText = indexData?.importantText || '';
@@ -182,17 +176,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           ></iframe>
         </noscript>
         
-        {/* Structured Data Scripts */}
-        {structuredData && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(structuredData)
-            }}
-          />
-        )}
-        
-        {/* Additional Organization Schema */}
+        {/* Organization Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -218,17 +202,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             })
           }}
         />
-
-        {/* Enhanced Rich Snippets and Schema Markup */}
-        {RichSnippetsManager.generateCompleteSchema('home').map((schema, index) => (
-          <script
-            key={index}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(schema)
-            }}
-          />
-        ))}
 
         {/* Additional metadata links */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
